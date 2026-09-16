@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import Faceplate from './Faceplate.svelte';
-	import { formatPrice } from './data';
+	import { currency } from './currency.svelte';
 	import type { IndexEntry } from './types';
 	import { VENDOR_NAMES } from './types';
 
@@ -62,8 +62,8 @@
 					{#if !hideVendor}<td class="vendor">{VENDOR_NAMES[e.vendor]}</td>{/if}
 					<td class="enc mono">{e.enclosure || '—'}</td>
 					<td class="n knobs mono">{knobCount(e) || '—'}</td>
-					<td class="n mono">
-						{formatPrice(e.price, e.currency) || '—'}
+					<td class="n mono" title={e.price != null && currency.convert(e.price, e.currency).converted ? `${currency.native(e.price, e.currency)} at ${VENDOR_NAMES[e.vendor]}` : undefined}>
+						{currency.format(e.price, e.currency) || '—'}
 						{#if e.in_stock === false}<span class="oos" title="Out of stock at the vendor">out</span>{/if}
 					</td>
 					<td class="n bom mono">{e.bom_count || '—'}</td>
@@ -82,8 +82,12 @@
 </div>
 
 <style>
-	.wrap { overflow-x: auto; }
+	/* Only allow horizontal scrolling on narrow screens: an overflow container would
+	   otherwise trap the sticky column header and it would scroll away with the table. */
 	.circuits { min-width: 720px; }
+	@media (max-width: 1000px) {
+		.wrap { overflow-x: auto; }
+	}
 	.glyph { width: 40px; padding-right: 0; }
 	.name a { font-weight: 600; }
 	.name .sub { color: var(--ink-3); margin-left: 6px; }

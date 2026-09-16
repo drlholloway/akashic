@@ -41,6 +41,8 @@ VENDORS = {
     "madbean": ("Madbean Pedals", "https://www.madbeanpedals.com", ""),
     "guitarpcb": ("GuitarPCB", "https://guitarpcb.com", ""),
     "fuzzdog": ("Fuzz Dog", "https://shop.pedalparts.co.uk", ""),
+    "sheepylove": ("Sheepy Love", "https://sheepylove.com",
+                   "Build documents are © Sheepylove.com; indexed and linked, not redistributed."),
 }
 
 

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import Faceplate from '$lib/Faceplate.svelte';
-	import { formatPrice } from '$lib/data';
+	import { currency } from '$lib/currency.svelte';
 	import { normalizeOriginal } from '$lib/search';
 	import { PART_CATEGORY_NAMES, PART_ORDER, VENDOR_NAMES, type BomRow } from '$lib/types';
 
@@ -56,7 +56,7 @@
 				<div><dt class="label">Category</dt><dd><a href="{base}/?cat={encodeURIComponent(c.category)}">{c.category}</a>{#if c.effect_type && c.effect_type !== c.category} <span class="dim">· {c.effect_type}</span>{/if}</dd></div>
 				{#if knobs.length}<div><dt class="label">Controls</dt><dd>{knobs.join(' · ')}</dd></div>{/if}
 				{#if c.difficulty}<div><dt class="label">Difficulty</dt><dd>{c.difficulty}</dd></div>{/if}
-				<div><dt class="label">Price</dt><dd class="mono">{formatPrice(c.price, c.currency) || 'see vendor'}{#if c.in_stock === false}<span class="warn stock">out of stock</span>{:else if c.in_stock}<span class="dim stock">in stock</span>{/if}</dd></div>
+				<div><dt class="label">Price</dt><dd class="mono">{currency.format(c.price, c.currency) || 'see vendor'}{#if c.price != null && currency.convert(c.price, c.currency).converted}<span class="dim native">{currency.native(c.price, c.currency)} listed</span>{/if}{#if c.in_stock === false}<span class="warn stock">out of stock</span>{:else if c.in_stock}<span class="dim stock">in stock</span>{/if}</dd></div>
 				{#if c.tags.length}<div><dt class="label">Tags</dt><dd>{c.tags.join(', ')}</dd></div>{/if}
 			</dl>
 			<div class="actions">
@@ -128,7 +128,7 @@
 			<h2 class="label strong">Other boards based on the {c.based_on}</h2>
 			<ul>
 				{#each siblings as s}
-					<li><Faceplate enclosure={s.enclosure} controls={s.controls} size={26} /> <a href="{base}/circuit/{s.file_id}">{s.name}</a> <span class="dim">{VENDOR_NAMES[s.vendor]}{s.enclosure ? ` · ${s.enclosure}` : ''}{s.price != null ? ` · ${formatPrice(s.price, s.currency)}` : ''}</span></li>
+					<li><Faceplate enclosure={s.enclosure} controls={s.controls} size={26} /> <a href="{base}/circuit/{s.file_id}">{s.name}</a> <span class="dim">{VENDOR_NAMES[s.vendor]}{s.enclosure ? ` · ${s.enclosure}` : ''}{s.price != null ? ` · ${currency.format(s.price, s.currency)}` : ''}</span></li>
 				{/each}
 			</ul>
 		</section>
@@ -146,6 +146,7 @@
 	.based a { font-weight: 600; }
 	.dim { color: var(--ink-3); }
 	.stock { margin-left: 8px; }
+	.native { margin-left: 8px; font-size: 12px; }
 	.warn { color: var(--warn); font-family: var(--label); text-transform: uppercase; letter-spacing: 0.08em; font-size: 12px; }
 	.specs { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, max-content)); gap: 12px 32px; margin: 0 0 20px; }
 	.specs div { display: flex; flex-direction: column; gap: 2px; }

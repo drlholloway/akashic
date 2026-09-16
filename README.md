@@ -13,6 +13,7 @@ It ships as a static, offline-capable web app (PWA) that installs on macOS, Linu
 | Fuzz Dog | ~600 | parsed from the build-doc PDF | kit pages carry the docs; prices in GBP |
 | Madbean Pedals | ~120 | parsed from the build-doc PDF | single projects table, archived rows kept |
 | GuitarPCB | ~160 | OCR'd from the build-doc PDF (needs `tesseract`) | schematic and BOM are raster images in the PDF; ~85% of real boards parse |
+| Sheepy Love | ~70 | parsed from the build-doc PDF | Shopify catalog via `products.json`; KiCad-exported docs; prices in EUR |
 
 ### What is indexed and what is not
 
@@ -33,11 +34,13 @@ Requires Python 3.12+, [uv](https://docs.astral.sh/uv/), poppler (`brew install 
 ```sh
 cd scraper
 uv venv .venv && uv pip install -e .
-.venv/bin/pcblib scrape pedalpcb      # each vendor: pedalpcb aionfx madbean guitarpcb fuzzdog
+.venv/bin/pcblib scrape pedalpcb      # each vendor: pedalpcb aionfx madbean guitarpcb fuzzdog sheepylove
 .venv/bin/pcblib stats
 .venv/bin/pcblib export               # writes app/static/data/*.json
 .venv/bin/pcblib export --images      # also bundles cached schematic renders (local use only)
 ```
+
+`export` also fetches USD exchange rates for EUR and GBP from the European Central Bank feed (frankfurter.dev) into `rates.json`, so the app can show every vendor's price in one currency; the app defaults to USD and offers EUR, GBP, or the vendor's own listing.
 
 Every HTTP response and PDF is cached, so re-running a scrape after a parser change costs no network. Use `--reset` to drop a vendor's rows first, `--only <substring>` and `--limit N` to test on a few products, and `--refresh` to bypass the cache. Requests to each host are spaced 1.5 s apart.
 

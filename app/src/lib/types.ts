@@ -1,4 +1,4 @@
-export type Vendor = 'pedalpcb' | 'aionfx' | 'madbean' | 'guitarpcb' | 'fuzzdog';
+export type Vendor = 'pedalpcb' | 'aionfx' | 'madbean' | 'guitarpcb' | 'fuzzdog' | 'sheepylove';
 
 export interface IndexEntry {
 	id: string;
@@ -68,7 +68,8 @@ export const VENDOR_NAMES: Record<Vendor, string> = {
 	aionfx: 'Aion FX',
 	madbean: 'Madbean',
 	guitarpcb: 'GuitarPCB',
-	fuzzdog: 'Fuzz Dog'
+	fuzzdog: 'Fuzz Dog',
+	sheepylove: 'Sheepy Love'
 };
 
 export const PART_CATEGORY_NAMES: Record<string, string> = {

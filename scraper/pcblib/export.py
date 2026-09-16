@@ -27,6 +27,26 @@ def _row(r: sqlite3.Row) -> dict:
     return d
 
 
+def write_rates() -> None:
+    """Bundle USD-based exchange rates (ECB via frankfurter.app) so the app can show
+    every vendor's price in one currency offline. Keeps the previous file if offline."""
+    import httpx
+    out = EXPORT_DIR / "rates.json"
+    try:
+        r = httpx.get("https://api.frankfurter.dev/v1/latest", params={"base": "USD", "symbols": "GBP,EUR"},
+                      timeout=15, follow_redirects=True)
+        r.raise_for_status()
+        data = r.json()
+        out.write_text(json.dumps({"base": "USD", "date": data["date"], "rates": {"USD": 1.0, **data["rates"]}}))
+        print(f"rates as of {data['date']}: {data['rates']}")
+    except Exception as exc:  # noqa: BLE001
+        if out.exists():
+            print(f"rates fetch failed ({exc}); keeping previous rates.json")
+        else:
+            out.write_text(json.dumps({"base": "USD", "date": None, "rates": {"USD": 1.0}}))
+            print(f"rates fetch failed ({exc}); prices will show in vendor currency")
+
+
 def run(images: bool = False) -> None:
     """images=True also copies cached schematic PNGs into the bundle (local use only)."""
     import shutil
@@ -96,4 +116,5 @@ def run(images: bool = False) -> None:
     (EXPORT_DIR / "index.json").write_text(json.dumps(index, ensure_ascii=False))
     (EXPORT_DIR / "parts.json").write_text(json.dumps(parts_out, ensure_ascii=False))
     (EXPORT_DIR / "vendors.json").write_text(json.dumps(vendors, ensure_ascii=False))
+    write_rates()
     print(f"exported {len(index)} circuits, {len(parts_out)} indexed part values -> {EXPORT_DIR}")

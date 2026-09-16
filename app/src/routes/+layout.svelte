@@ -4,9 +4,31 @@
 	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
 	import type { Snippet } from 'svelte';
+	import { currency, type Currency } from '$lib/currency.svelte';
 
-	let { children }: { children: Snippet } = $props();
+	let { children, data }: { children: Snippet; data: { rates: import('$lib/currency.svelte').Rates | null } } = $props();
+	$effect.pre(() => {
+		currency.init(data.rates);
+	});
+	const currencyOptions: { value: Currency; label: string }[] = [
+		{ value: 'USD', label: 'USD $' },
+		{ value: 'EUR', label: 'EUR €' },
+		{ value: 'GBP', label: 'GBP £' },
+		{ value: 'native', label: 'As listed' }
+	];
 	let q = $state('');
+	let titleblock: HTMLElement | undefined = $state();
+	// Sticky table headers and the facet rail sit directly under the title block, so publish its
+	// real height instead of guessing it: fonts, wrapping and zoom all change it.
+	$effect(() => {
+		if (!titleblock) return;
+		const root = document.documentElement;
+		const apply = () => root.style.setProperty('--titleblock-h', `${Math.round(titleblock!.getBoundingClientRect().height)}px`);
+		apply();
+		const ro = new ResizeObserver(apply);
+		ro.observe(titleblock);
+		return () => ro.disconnect();
+	});
 	$effect(() => {
 		// keep the global field in sync with the index page's query
 		q = page.url.pathname === `${base}/` ? (page.url.searchParams.get('q') ?? '') : q;
@@ -29,7 +51,7 @@
 	<title>PCB Schematic Library</title>
 </svelte:head>
 
-<header class="titleblock">
+<header class="titleblock" bind:this={titleblock}>
 	<a class="brand" href="{base}/">
 		<span class="brand-name">PCB Schematic Library</span>
 		<span class="brand-sub">DIY pedal circuits, parts &amp; where to buy the board</span>
@@ -43,6 +65,14 @@
 		{#each nav as n}
 			<a href={n.href} aria-current={n.match(page.url.pathname) ? 'page' : undefined}>{n.label}</a>
 		{/each}
+		<label class="currency" title={currency.rates.date ? `Converted at ECB rates from ${currency.rates.date}` : 'No exchange rates loaded'}>
+			<span class="sr-only">Show prices in</span>
+			<select value={currency.selected} onchange={(e) => currency.set(e.currentTarget.value as Currency)} disabled={!currency.rates.date}>
+				{#each currencyOptions as o}
+					<option value={o.value}>{o.label}</option>
+				{/each}
+			</select>
+		</label>
 	</nav>
 </header>
 
@@ -51,7 +81,7 @@
 </main>
 
 <footer>
-	<p>Index of circuits published by PedalPCB, Aion FX, Madbean Pedals, GuitarPCB and Fuzz Dog. Names, part values and prices are indexed for reference; build documents and schematics belong to their vendors and are linked, not copied. Buy the board from the vendor.</p>
+	<p>Index of circuits published by PedalPCB, Aion FX, Madbean Pedals, GuitarPCB, Fuzz Dog and Sheepy Love. Names, part values and prices are indexed for reference; build documents and schematics belong to their vendors and are linked, not copied. Buy the board from the vendor.</p>
 </footer>
 
 <style>
@@ -83,7 +113,20 @@
 		background: var(--sheet-2);
 	}
 	.search input:focus { border-color: var(--coat); background: var(--sheet); outline: none; box-shadow: 0 0 0 3px var(--coat-tint); }
-	nav { grid-area: nav; display: flex; gap: 4px; }
+	nav { grid-area: nav; display: flex; gap: 4px; align-items: center; }
+	.currency select {
+		margin-left: 8px;
+		border: 1px solid var(--rule-strong);
+		border-radius: var(--radius);
+		background: var(--sheet);
+		padding: 5px 8px;
+		font-family: var(--label);
+		font-weight: 600;
+		font-size: 13px;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+	}
+	.currency select:disabled { opacity: 0.5; }
 	nav a {
 		font-family: var(--label);
 		font-weight: 600;

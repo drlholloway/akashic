@@ -64,6 +64,7 @@ _CATEGORY_BY_REF = [
     (re.compile(r"^(X|XT|XTAL|Y)\d+$", re.I), "XTAL"),
     (re.compile(r"^(LED|LD)\d*$", re.I), "LED"),
     (re.compile(r"^(SW|S|FS)\d*$", re.I), "SW"),
+    (re.compile(r"^(POT|P)\d+$", re.I), "POT"),
     (re.compile(r"^(TR|TRIM|VR|RV|T)\d+$", re.I), "TRIM"),
     (re.compile(r"^(LDR|OPTO|VTL|OC)\d*$", re.I), "OPTO"),
     (re.compile(r"^(J|JACK)\d*$", re.I), "CONN"),

@@ -6,6 +6,7 @@
 	import CircuitTable from '$lib/CircuitTable.svelte';
 	import { applyFilters, buildSearch, EMPTY_FILTERS, filtersFromParams, paramsFromFilters, type Filters } from '$lib/search';
 	import { VENDOR_NAMES, type IndexEntry } from '$lib/types';
+	import { currency } from '$lib/currency.svelte';
 
 	let { data } = $props();
 	$effect.pre(() => buildSearch(data.index));
@@ -34,7 +35,7 @@
 		const r = applyFilters(data.index, filters);
 		const by: Record<typeof sort, (a: IndexEntry, b: IndexEntry) => number> = {
 			name: (a, b) => a.name.localeCompare(b.name),
-			price: (a, b) => (a.price ?? 1e9) - (b.price ?? 1e9) || a.name.localeCompare(b.name),
+			price: (a, b) => currency.value(a.price, a.currency) - currency.value(b.price, b.currency) || a.name.localeCompare(b.name),
 			bom: (a, b) => b.bom_count - a.bom_count || a.name.localeCompare(b.name),
 			vendor: (a, b) => a.vendor.localeCompare(b.vendor) || a.name.localeCompare(b.name)
 		};

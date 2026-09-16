@@ -37,9 +37,3 @@ export function loadCircuit(fileId: string, fetchFn: Fetch = fetch): Promise<Cir
 	}
 	return p;
 }
-
-export function formatPrice(price: number | null, currency: string): string {
-	if (price == null) return '';
-	const sym = currency === 'GBP' ? '£' : currency === 'EUR' ? '€' : '$';
-	return `${sym}${price.toFixed(2)}`;
-}
