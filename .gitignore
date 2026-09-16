@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+scraper/.venv/
+*.egg-info/
+
+# Scraped raw material (vendor HTML, PDFs, images) is never committed
+data/raw/
+data/cache/
+data/library.sqlite
+data/library.sqlite-*
+
+# Node
+node_modules/
+app/.svelte-kit/
+app/build/
+app/dev-dist/
+
+# Generated data bundle (rebuilt by `pcblib export`)
+app/static/data/
+
+.DS_Store
+.env

@@ -1,0 +1,22 @@
+[project]
+name = "pcblib"
+version = "0.1.0"
+description = "Scrapers and database builder for the PCB Schematic Library"
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.28",
+    "selectolax>=0.3",
+    "pymupdf>=1.24",
+    "typer>=0.12",
+    "rich>=13",
+]
+
+[project.scripts]
+pcblib = "pcblib.cli:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["pcblib"]

@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-16T00:00:00Z",
+  "title": "Design System: PCB Schematic Library",
+  "extensions": {
+    "colorMeta": {
+      "sheet": { "role": "neutral", "displayName": "Drafting Sheet", "canonical": "#f4f2ee", "dark": "#1c1f22", "tonalRamp": ["oklch(15% 0.006 80)", "oklch(25% 0.006 80)", "oklch(38% 0.006 80)", "oklch(52% 0.007 80)", "oklch(66% 0.008 80)", "oklch(80% 0.009 80)", "oklch(90% 0.008 80)", "oklch(96% 0.006 80)"] },
+      "sheet-2": { "role": "neutral", "displayName": "Sheet, resting field", "canonical": "#ebe8e2", "dark": "#23272b", "tonalRamp": ["oklch(15% 0.006 80)", "oklch(25% 0.006 80)", "oklch(38% 0.006 80)", "oklch(52% 0.007 80)", "oklch(66% 0.008 80)", "oklch(80% 0.009 80)", "oklch(90% 0.008 80)", "oklch(96% 0.006 80)"] },
+      "sheet-3": { "role": "neutral", "displayName": "Sheet, unknown shell", "canonical": "#dfdbd3", "dark": "#2c3136", "tonalRamp": ["oklch(15% 0.006 80)", "oklch(25% 0.006 80)", "oklch(38% 0.006 80)", "oklch(52% 0.007 80)", "oklch(66% 0.008 80)", "oklch(80% 0.009 80)", "oklch(90% 0.008 80)", "oklch(96% 0.006 80)"] },
+      "ink": { "role": "neutral", "displayName": "Ink", "canonical": "#1c1f22", "dark": "#eef0ee", "tonalRamp": ["oklch(15% 0.008 240)", "oklch(23% 0.008 240)", "oklch(35% 0.008 240)", "oklch(48% 0.008 240)", "oklch(60% 0.008 240)", "oklch(74% 0.007 240)", "oklch(86% 0.006 240)", "oklch(95% 0.005 240)"] },
+      "ink-2": { "role": "neutral", "displayName": "Ink, labels", "canonical": "#4a4f55", "dark": "#c3c8c5", "tonalRamp": ["oklch(15% 0.008 240)", "oklch(23% 0.008 240)", "oklch(35% 0.008 240)", "oklch(48% 0.008 240)", "oklch(60% 0.008 240)", "oklch(74% 0.007 240)", "oklch(86% 0.006 240)", "oklch(95% 0.005 240)"] },
+      "ink-3": { "role": "neutral", "displayName": "Ink, dim", "canonical": "#7a8087", "dark": "#8f979a", "tonalRamp": ["oklch(15% 0.008 240)", "oklch(23% 0.008 240)", "oklch(35% 0.008 240)", "oklch(48% 0.008 240)", "oklch(60% 0.008 240)", "oklch(74% 0.007 240)", "oklch(86% 0.006 240)", "oklch(95% 0.005 240)"] },
+      "rule": { "role": "neutral", "displayName": "Hairline", "canonical": "#c9c4ba", "dark": "#3a4046", "tonalRamp": ["oklch(15% 0.01 85)", "oklch(25% 0.01 85)", "oklch(38% 0.011 85)", "oklch(52% 0.012 85)", "oklch(65% 0.012 85)", "oklch(76% 0.012 85)", "oklch(86% 0.011 85)", "oklch(95% 0.008 85)"] },
+      "rule-strong": { "role": "neutral", "displayName": "Structural Hairline", "canonical": "#8f8a80", "dark": "#5b636a", "tonalRamp": ["oklch(15% 0.01 85)", "oklch(25% 0.01 85)", "oklch(38% 0.011 85)", "oklch(52% 0.012 85)", "oklch(65% 0.012 85)", "oklch(76% 0.012 85)", "oklch(86% 0.011 85)", "oklch(95% 0.008 85)"] },
+      "coat": { "role": "primary", "displayName": "Surf Green Coat", "canonical": "#2f6b5e", "dark": "#3f8a79", "tonalRamp": ["oklch(15% 0.03 168)", "oklch(25% 0.045 168)", "oklch(35% 0.06 168)", "oklch(48% 0.07 168)", "oklch(60% 0.07 168)", "oklch(72% 0.06 168)", "oklch(84% 0.045 168)", "oklch(95% 0.02 168)"] },
+      "coat-ink": { "role": "primary", "displayName": "Print on Coat", "canonical": "#f4f2ee", "dark": "#0f1a17", "tonalRamp": ["oklch(15% 0.03 168)", "oklch(25% 0.045 168)", "oklch(35% 0.06 168)", "oklch(48% 0.07 168)", "oklch(60% 0.07 168)", "oklch(72% 0.06 168)", "oklch(84% 0.045 168)", "oklch(95% 0.02 168)"] },
+      "coat-2": { "role": "primary", "displayName": "Coat Edge", "canonical": "#244f46", "dark": "#2f6b5e", "tonalRamp": ["oklch(15% 0.03 168)", "oklch(25% 0.045 168)", "oklch(35% 0.06 168)", "oklch(48% 0.07 168)", "oklch(60% 0.07 168)", "oklch(72% 0.06 168)", "oklch(84% 0.045 168)", "oklch(95% 0.02 168)"] },
+      "coat-tint": { "role": "primary", "displayName": "Coat Focus Wash", "canonical": "#e2ece8", "dark": "#24352f", "tonalRamp": ["oklch(15% 0.03 168)", "oklch(25% 0.045 168)", "oklch(35% 0.06 168)", "oklch(48% 0.07 168)", "oklch(60% 0.07 168)", "oklch(72% 0.06 168)", "oklch(84% 0.045 168)", "oklch(95% 0.02 168)"] },
+      "warn": { "role": "tertiary", "displayName": "Out-of-Stock Orange", "canonical": "#a6431d", "dark": "#e0764c", "tonalRamp": ["oklch(15% 0.05 40)", "oklch(25% 0.08 40)", "oklch(35% 0.11 40)", "oklch(50% 0.14 40)", "oklch(62% 0.13 40)", "oklch(74% 0.1 40)", "oklch(85% 0.07 40)", "oklch(95% 0.03 40)"] },
+      "focus": { "role": "primary", "displayName": "Focus Outline", "canonical": "#2f6b5e", "dark": "#5fb3a0", "tonalRamp": ["oklch(15% 0.03 170)", "oklch(25% 0.045 170)", "oklch(35% 0.06 170)", "oklch(48% 0.07 170)", "oklch(60% 0.08 170)", "oklch(70% 0.09 170)", "oklch(84% 0.05 170)", "oklch(95% 0.02 170)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The circuit name in the circuit page title block; subtitle inline at weight 500 in ink-2." },
+      "headline": { "displayName": "Headline", "purpose": "Page h1 on the parts index and originals pages." },
+      "mono-display": { "displayName": "Mono Display", "purpose": "Part value as the h1 of a part detail page; a part number is data, not a name." },
+      "title": { "displayName": "Title", "purpose": "Brand name in the sticky title block; 17px under 860px." },
+      "body": { "displayName": "Body", "purpose": "Prose, table cells, spec values; tabular numerals globally; prose capped at 70 to 72ch." },
+      "label": { "displayName": "Label", "purpose": "Every h2, every dt, form prompts, glyph caption. The only heading style below h1. .strong switches color to ink." },
+      "label-nav": { "displayName": "Label Nav", "purpose": "Section links in the title block; 13px under 860px." },
+      "label-button": { "displayName": "Label Button", "purpose": "All .btn text." },
+      "label-chip": { "displayName": "Label Chip", "purpose": "Facet and applied-filter chips." },
+      "mono": { "displayName": "Mono", "purpose": "Inline data values: enclosure codes, SKUs, prices, counts, refs, part values, versions." }
+    },
+    "shadows": [
+      { "name": "focus-halo", "value": "0 0 0 3px var(--coat-tint)", "purpose": "The only box-shadow in the build: a ring on focused text inputs, paired with a coat border. Not a lift." }
+    ],
+    "motion": [],
+    "breakpoints": [
+      { "name": "facet-rail-collapse", "value": "1000px" },
+      { "name": "title-block-reflow", "value": "860px" },
+      { "name": "circuit-plate-stack", "value": "760px" },
+      { "name": "originals-category-hide", "value": "700px" }
+    ],
+    "unusedDeclaredTokens": [
+      { "name": "--shadow", "value": "0 1px 2px rgba(28, 31, 34, 0.08), 0 6px 18px -8px rgba(28, 31, 34, 0.25)", "note": "Declared in both modes in app.css, consumed nowhere. Not part of the system." },
+      { "name": "--row", "value": "40px", "note": "Declared in app.css, consumed nowhere. The 40px search input height is set literally." }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Ink-filled condensed-caps button for the one action that leaves the page: Search, Buy the PCB.",
+      "html": "<button class=\"ds-btn\" type=\"button\">Buy the PCB at PedalPCB</button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--ink, #1c1f22); border-radius: 4px; background: var(--ink, #1c1f22); color: var(--sheet, #f4f2ee); padding: 8px 14px; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; } .ds-btn:hover { background: var(--coat, #2f6b5e); border-color: var(--coat, #2f6b5e); color: var(--coat-ink, #f4f2ee); } .ds-btn:focus-visible { outline: 2px solid var(--focus, #2f6b5e); outline-offset: 2px; } .ds-btn:disabled { opacity: 0.45; cursor: not-allowed; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Outlined sibling of the primary button for secondary actions: build document, Copy as TSV, Show more.",
+      "html": "<button class=\"ds-btn-ghost\" type=\"button\">Build document <span class=\"ds-ver\">v1.2</span></button>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--ink, #1c1f22); border-radius: 4px; background: transparent; color: var(--ink, #1c1f22); padding: 8px 14px; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer; } .ds-btn-ghost:hover { background: var(--sheet-2, #ebe8e2); } .ds-btn-ghost:focus-visible { outline: 2px solid var(--focus, #2f6b5e); outline-offset: 2px; } .ds-ver { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; font-size: 11px; font-weight: 400; opacity: 0.8; text-transform: none; letter-spacing: 0; }"
+    },
+    {
+      "name": "Facet Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Screen-printed toggle label with a mono count; aria-pressed fills it with the coat.",
+      "html": "<div style=\"display:flex;gap:6px;flex-wrap:wrap\"><button class=\"ds-chip\" type=\"button\" aria-pressed=\"false\">Overdrive <span class=\"ds-chip-count\">312</span></button><button class=\"ds-chip\" type=\"button\" aria-pressed=\"true\">125B <span class=\"ds-chip-count\">740</span></button><button class=\"ds-chip\" type=\"button\" aria-pressed=\"false\">Clear all</button></div>",
+      "css": ".ds-chip { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--rule-strong, #8f8a80); border-radius: 999px; padding: 3px 10px; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; background: transparent; color: var(--ink, #1c1f22); cursor: pointer; line-height: 1.3; white-space: nowrap; } .ds-chip[aria-pressed='true'] { background: var(--coat, #2f6b5e); border-color: var(--coat, #2f6b5e); color: var(--coat-ink, #f4f2ee); } .ds-chip:hover { border-color: var(--ink, #1c1f22); } .ds-chip:focus-visible { outline: 2px solid var(--focus, #2f6b5e); outline-offset: 2px; } .ds-chip-count { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; font-weight: 400; font-size: 11px; opacity: 0.8; letter-spacing: 0; }"
+    },
+    {
+      "name": "Search Input",
+      "kind": "input",
+      "refersTo": "input-search",
+      "description": "The title-block search field: sheet-2 at rest, brightens to sheet with a coat border and 3px coat-tint halo on focus.",
+      "html": "<input class=\"ds-input\" type=\"search\" placeholder=\"Search: Rat, LM308, phaser, 125B, PedalPCB…\" />",
+      "css": ".ds-input { width: 100%; max-width: 480px; height: 40px; padding: 0 12px; border: 1px solid var(--rule-strong, #8f8a80); border-radius: 4px; background: var(--sheet-2, #ebe8e2); color: var(--ink, #1c1f22); font-family: 'Barlow', system-ui, sans-serif; font-size: 15px; } .ds-input:focus { outline: none; border-color: var(--coat, #2f6b5e); background: var(--sheet, #f4f2ee); box-shadow: 0 0 0 3px var(--coat-tint, #e2ece8); }"
+    },
+    {
+      "name": "Section Nav",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Three condensed-caps links; the current section carries a 2px coat underline.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Sections\"><a href=\"#\" aria-current=\"page\">Circuits</a><a href=\"#\">Originals</a><a href=\"#\">Parts</a></nav>",
+      "css": ".ds-nav { display: flex; gap: 4px; } .ds-nav a { font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 14px; letter-spacing: 0.1em; text-transform: uppercase; padding: 8px 10px; border-bottom: 2px solid transparent; color: var(--ink-2, #4a4f55); text-decoration: none; } .ds-nav a:hover { color: var(--ink, #1c1f22); } .ds-nav a[aria-current='page'] { color: var(--ink, #1c1f22); border-bottom-color: var(--coat, #2f6b5e); } .ds-nav a:focus-visible { outline: 2px solid var(--focus, #2f6b5e); outline-offset: 2px; }"
+    },
+    {
+      "name": "Label",
+      "kind": "custom",
+      "refersTo": "label",
+      "description": "The screen-print label: the only heading style below h1, also used for dt and form prompts.",
+      "html": "<div style=\"display:flex;flex-direction:column;gap:8px\"><h2 class=\"ds-label ds-label-strong\">Parts list <span class=\"ds-mono-dim\">42 rows</span></h2><p class=\"ds-label\">Category</p></div>",
+      "css": ".ds-label { margin: 0; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 12px; line-height: 1.05; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2, #4a4f55); } .ds-label-strong { color: var(--ink, #1c1f22); } .ds-mono-dim { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; font-size: 13px; font-weight: 400; letter-spacing: 0; text-transform: none; color: var(--ink-3, #7a8087); }"
+    },
+    {
+      "name": "Sheet Table",
+      "kind": "card",
+      "refersTo": "table-header",
+      "description": "The dimensioned table: caps column headers on a rule-strong edge, hairline rows, right-aligned tabular numbers, sheet-2 row hover.",
+      "html": "<table class=\"ds-table\"><thead><tr><th>Circuit</th><th>Based on</th><th>Box</th><th class=\"ds-n\">Knobs</th><th class=\"ds-n\">Price</th></tr></thead><tbody><tr><td><a href=\"#\" class=\"ds-name\">Arbitrator</a> <span class=\"ds-sub\">Fuzz</span></td><td>Fuzz Face</td><td class=\"ds-mono\">125B</td><td class=\"ds-n ds-mono\">2</td><td class=\"ds-n ds-mono\">$8.00</td></tr><tr><td><a href=\"#\" class=\"ds-name\">Informant</a></td><td>Rat</td><td class=\"ds-mono\">1590B</td><td class=\"ds-n ds-mono\">3</td><td class=\"ds-n ds-mono\">$9.00 <span class=\"ds-oos\">out</span></td></tr><tr><td><a href=\"#\" class=\"ds-name\">Sunflower</a></td><td><span class=\"ds-dim\">—</span></td><td class=\"ds-mono\">1590BB</td><td class=\"ds-n ds-mono\">5</td><td class=\"ds-n ds-mono\">£11.50</td></tr></tbody></table>",
+      "css": ".ds-table { border-collapse: collapse; width: 100%; font-family: 'Barlow', system-ui, sans-serif; font-size: 15px; line-height: 1.45; color: var(--ink, #1c1f22); font-feature-settings: 'tnum' 1; } .ds-table th { text-align: left; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2, #4a4f55); padding: 8px 10px; border-bottom: 1px solid var(--rule-strong, #8f8a80); white-space: nowrap; background: var(--sheet, #f4f2ee); } .ds-table td { padding: 6px 10px; border-bottom: 1px solid var(--rule, #c9c4ba); vertical-align: middle; } .ds-table tr:hover td { background: var(--sheet-2, #ebe8e2); } .ds-n { text-align: right; font-variant-numeric: tabular-nums; } .ds-mono { font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace; font-size: 13px; } .ds-name { font-weight: 600; color: inherit; text-decoration: none; } .ds-name:hover { text-decoration: underline; text-underline-offset: 2px; } .ds-sub, .ds-dim { color: var(--ink-3, #7a8087); } .ds-oos { margin-left: 6px; font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--warn, #a6431d); }"
+    },
+    {
+      "name": "Faceplate Glyph",
+      "kind": "custom",
+      "refersTo": "faceplate",
+      "description": "The signature: an SVG whose viewBox is the enclosure's real mm footprint (here a 1590B, 60 x 112) with knobs, LED and footswitch placed by the component's layout math. Shown at the two built sizes, 250px with labels and 30px without.",
+      "html": "<div style=\"display:flex;align-items:flex-end;gap:24px\"><svg width=\"133.9\" height=\"250\" viewBox=\"0 0 60 112\" role=\"img\" aria-label=\"1590B with 3 controls\" class=\"ds-faceplate\"><rect x=\"0.6\" y=\"0.6\" width=\"58.8\" height=\"110.8\" rx=\"3.6\" class=\"ds-shell\" style=\"stroke-width:0.45\"/><circle cx=\"10\" cy=\"29.68\" r=\"7.69\" class=\"ds-knob\" style=\"stroke-width:0.54\"/><line x1=\"10\" y1=\"29.68\" x2=\"10\" y2=\"23.68\" class=\"ds-pointer\" style=\"stroke-width:0.54\"/><text x=\"10\" y=\"44.9\" text-anchor=\"middle\" font-size=\"6.54\" class=\"ds-print\">GAIN</text><circle cx=\"30\" cy=\"29.68\" r=\"7.69\" class=\"ds-knob\" style=\"stroke-width:0.54\"/><line x1=\"30\" y1=\"29.68\" x2=\"30\" y2=\"23.68\" class=\"ds-pointer\" style=\"stroke-width:0.54\"/><text x=\"30\" y=\"44.9\" text-anchor=\"middle\" font-size=\"6.54\" class=\"ds-print\">TONE</text><circle cx=\"50\" cy=\"29.68\" r=\"7.69\" class=\"ds-knob\" style=\"stroke-width:0.54\"/><line x1=\"50\" y1=\"29.68\" x2=\"50\" y2=\"23.68\" class=\"ds-pointer\" style=\"stroke-width:0.54\"/><text x=\"50\" y=\"44.9\" text-anchor=\"middle\" font-size=\"6.54\" class=\"ds-print\">VOL</text><circle cx=\"30\" cy=\"73.92\" r=\"1.68\" class=\"ds-led\"/><circle cx=\"30\" cy=\"94.08\" r=\"6.6\" class=\"ds-switch\" style=\"stroke-width:0.54\"/></svg><svg width=\"16.07\" height=\"30\" viewBox=\"0 0 60 112\" role=\"img\" aria-label=\"1590B with 3 controls\" class=\"ds-faceplate\"><rect x=\"0.6\" y=\"0.6\" width=\"58.8\" height=\"110.8\" rx=\"3.6\" class=\"ds-shell\" style=\"stroke-width:3.73\"/><circle cx=\"10\" cy=\"29.68\" r=\"7.69\" class=\"ds-knob\" style=\"stroke-width:4.48\"/><line x1=\"10\" y1=\"29.68\" x2=\"10\" y2=\"23.68\" class=\"ds-pointer\" style=\"stroke-width:4.48\"/><circle cx=\"30\" cy=\"29.68\" r=\"7.69\" class=\"ds-knob\" style=\"stroke-width:4.48\"/><line x1=\"30\" y1=\"29.68\" x2=\"30\" y2=\"23.68\" class=\"ds-pointer\" style=\"stroke-width:4.48\"/><circle cx=\"50\" cy=\"29.68\" r=\"7.69\" class=\"ds-knob\" style=\"stroke-width:4.48\"/><line x1=\"50\" y1=\"29.68\" x2=\"50\" y2=\"23.68\" class=\"ds-pointer\" style=\"stroke-width:4.48\"/><circle cx=\"30\" cy=\"73.92\" r=\"1.68\" class=\"ds-led\"/><circle cx=\"30\" cy=\"94.08\" r=\"6.6\" class=\"ds-switch\" style=\"stroke-width:4.48\"/></svg></div>",
+      "css": ".ds-faceplate { display: block; flex: none; overflow: visible; } .ds-shell { fill: var(--coat, #2f6b5e); stroke: var(--coat-2, #244f46); } .ds-knob { fill: none; stroke: var(--coat-ink, #f4f2ee); } .ds-pointer { stroke: var(--coat-ink, #f4f2ee); stroke-linecap: round; } .ds-led { fill: var(--coat-ink, #f4f2ee); } .ds-switch { fill: none; stroke: var(--coat-ink, #f4f2ee); } .ds-print { fill: var(--coat-ink, #f4f2ee); font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif; font-weight: 600; letter-spacing: 0.06em; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Faceplate and the Drill Template",
+    "overview": "Two physical objects supply the whole visual vocabulary. The first is the finished pedal enclosure: a powder-coated box with screen-printed condensed capitals and knob, LED and footswitch positions drilled into it. The second is the paper drill template that made it: hairline rules, mono dimensions, and drafting white under workshop light. The screen sits between them. Page backgrounds are the drafting sheet, text is ink, separation is a hairline, every heading below the page title is a screen-printed label, and the one color on the page is the enclosure's coat.\n\nDensity is the point. The build has no hero, no cards, no illustrations, no icons and no motion. Lists are dimensioned tables with sticky column headers; filters are screen-printed toggle chips; page headers are title blocks. The signature element is the faceplate glyph, an SVG drawn from each circuit's real enclosure footprint and control list, rendered at 30px in table rows and 250px in the circuit page header using the same drawing. It is the only place the accent appears as a fill rather than a hairline.\n\nThe world is fully in scope: every route in the app (index, circuit, parts index, part detail, originals) and the shared layout speak it. There is no legacy surface to reconcile. The direction contract in app/src/app.html asked for crosshair centers on the template; the build draws pointer ticks on knobs instead and no crosshairs anywhere. The build wins.",
+    "keyCharacteristics": [
+      "Drafting-white sheet, near-black ink, three neutral steps each, and one surf-green coat.",
+      "Barlow Condensed caps for every label and heading; Barlow for prose; the system monospace for anything that came off a datasheet.",
+      "Separation by 1px hairline only. No zebra striping, no filled panels, no shadows at rest.",
+      "Sticky title block and sticky table headers on the same sheet color as the page.",
+      "Light by default; dark follows prefers-color-scheme with every token remapped, nothing else changing.",
+      "Instant state changes. No transitions or animations exist."
+    ],
+    "rules": [
+      { "name": "The One Coat Rule", "body": "coat is the only saturated color on any screen and it marks exactly two things: the enclosure itself (glyph fill) and the current selection (pressed chip, active nav, hovered button, focused field). If a new element is neither an enclosure nor a selection, it is a neutral.", "section": "colors" },
+      { "name": "The Hairline Rule", "body": "Regions are separated by a 1px line, never by a filled panel or a tint. rule for rows and soft edges, rule-strong for structural edges (header, plate, column heads, section underlines). Table rows are never striped; the comment in app.css says \"no zebra\" and the build honors it.", "section": "colors" },
+      { "name": "The Warn Is Text Rule", "body": "warn colors a short uppercase label (\"out\", \"out of stock\") and nothing else. It is not a background, a border or an icon.", "section": "colors" },
+      { "name": "The Screen-Print Rule", "body": "Below the page h1 there is no size hierarchy, only the 12px tracked-caps label. A section heading and a definition-list term are the same element. Do not introduce an intermediate 18px or 24px heading; the world does not print one.", "section": "typography" },
+      { "name": "The Mono Is Data Rule", "body": "Monospace marks a value that was read off a vendor sheet or a datasheet: enclosure code, SKU, price, count, designator, part value, version. Names, categories, vendors and prose are never mono. The part detail page sets its h1 in mono for exactly this reason.", "section": "typography" },
+      { "name": "The Tabular Rule", "body": "font-feature-settings: 'tnum' 1 is set on body; numeric columns are additionally right-aligned with .n. Numbers line up whether or not they are mono.", "section": "typography" },
+      { "name": "The Flat Sheet Rule", "body": "Nothing lifts off the page. If a new surface needs to be distinguished from the sheet, give it a hairline, a sheet-2 tint, or make it sticky; never a shadow.", "section": "elevation" },
+      { "name": "The Focus Ring Rule", "body": "Keyboard focus is a 2px focus outline offset 2px on everything except text inputs, which swap the outline for a coat border plus the 3px coat-tint halo and brighten from sheet-2 to sheet.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do set every heading below the page h1 as a 12px tracked-caps .label (.label.strong for ink); there is no other subheading style.",
+      "Do separate rows, sections and rails with a 1px rule and structural edges with rule-strong; never with a fill.",
+      "Do put any value that came off a datasheet or vendor sheet in .mono, and right-align numbers with .n.",
+      "Do build any new list as a .sheet-table with sticky column headers, or as a hairline-separated auto-fill grid; reuse the title-block header pattern above it.",
+      "Do render the faceplate glyph from real enclosure and controls data at 26 to 30px in rows and 250px in a header; pass labels only at the large size.",
+      "Do use coat for selection and enclosure fill only, and pull every color from the custom properties so dark mode follows for free.",
+      "Do keep hover and state changes instant; the build has no transitions and the reduced-motion block is already in place.",
+      "Do use 4px on fields and buttons and 999px on chips; leave everything else square."
+    ],
+    "donts": [
+      "Don't add hero sections, cards, tiles, or bordered panels; the world has none and the sheet is the only surface.",
+      "Don't stripe table rows or tint alternate rows; hover tint to sheet-2 is the only row state.",
+      "Don't add shadows. The declared --shadow token is unused and should stay unused; the only ring is the input focus halo.",
+      "Don't introduce a second accent, gradients, or colored category badges; warn is text-only and reserved for stock status.",
+      "Don't add icons, glyph fonts, or decorative SVG. The faceplate is data; nothing else is drawn.",
+      "Don't hardcode white, black or hex values in components (the schematic image background is the one deliberate exception).",
+      "Don't invent an intermediate heading size, a serif, or a system display face; the type system is Barlow Condensed caps, Barlow body, platform mono.",
+      "Don't shrink the circuit table below its 720px minimum to avoid horizontal scroll; hide columns at 860px as the build does instead."
+    ]
+  }
+}

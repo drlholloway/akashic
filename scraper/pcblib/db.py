@@ -1,0 +1,96 @@
+from __future__ import annotations
+
+import json
+import sqlite3
+from contextlib import contextmanager
+from datetime import datetime, timezone
+
+from .models import Circuit
+from .paths import DB_PATH
+
+SCHEMA = """
+CREATE TABLE IF NOT EXISTS vendors (
+  id TEXT PRIMARY KEY, name TEXT NOT NULL, url TEXT NOT NULL, license_note TEXT DEFAULT ''
+);
+CREATE TABLE IF NOT EXISTS circuits (
+  id TEXT PRIMARY KEY, vendor TEXT NOT NULL REFERENCES vendors(id), slug TEXT NOT NULL,
+  name TEXT NOT NULL, subtitle TEXT, based_on TEXT, description TEXT, category TEXT,
+  effect_type TEXT, tags TEXT, enclosure TEXT, controls TEXT, difficulty TEXT,
+  price REAL, currency TEXT, sku TEXT, in_stock INTEGER, url TEXT, doc_url TEXT,
+  doc_local TEXT, extra_docs TEXT, image_url TEXT, schematic_local TEXT,
+  schematic_page INTEGER, doc_version TEXT, kicad_path TEXT DEFAULT '',
+  scraped_at TEXT
+);
+CREATE TABLE IF NOT EXISTS bom (
+  circuit_id TEXT NOT NULL REFERENCES circuits(id) ON DELETE CASCADE,
+  position INTEGER NOT NULL, ref TEXT, value TEXT, part_type TEXT, notes TEXT,
+  category TEXT, norm_value TEXT, sort_key REAL,
+  PRIMARY KEY (circuit_id, position)
+);
+CREATE INDEX IF NOT EXISTS bom_norm ON bom(category, norm_value);
+CREATE INDEX IF NOT EXISTS circuits_vendor ON circuits(vendor);
+"""
+
+VENDORS = {
+    "pedalpcb": ("PedalPCB", "https://www.pedalpcb.com",
+                 "Build documents are © PedalPCB.com. Metadata and part values are indexed; "
+                 "schematic images are cached locally only and linked to the source document."),
+    "aionfx": ("Aion FX", "https://aionfx.com",
+               "Projects may be used commercially without attribution per the license page in each "
+               "build document; do not resell PCBs in kits or obfuscate the circuit."),
+    "madbean": ("Madbean Pedals", "https://www.madbeanpedals.com", ""),
+    "guitarpcb": ("GuitarPCB", "https://guitarpcb.com", ""),
+    "fuzzdog": ("Fuzz Dog", "https://shop.pedalparts.co.uk", ""),
+}
+
+
+@contextmanager
+def connect():
+    conn = sqlite3.connect(DB_PATH, timeout=60)
+    conn.row_factory = sqlite3.Row
+    conn.execute("PRAGMA busy_timeout = 60000")
+    try:
+        conn.execute("PRAGMA journal_mode = WAL")   # several vendor scrapers write concurrently
+    except sqlite3.OperationalError:
+        pass  # another process already switched it; WAL persists in the file
+    conn.execute("PRAGMA foreign_keys = ON")
+    conn.executescript(SCHEMA)
+    for vid, (name, url, note) in VENDORS.items():
+        conn.execute("INSERT OR IGNORE INTO vendors(id,name,url,license_note) VALUES (?,?,?,?)",
+                     (vid, name, url, note))
+    try:
+        yield conn
+        conn.commit()
+    finally:
+        conn.close()
+
+
+def upsert_circuit(conn: sqlite3.Connection, c: Circuit) -> None:
+    now = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    conn.execute(
+        """INSERT INTO circuits (id,vendor,slug,name,subtitle,based_on,description,category,
+             effect_type,tags,enclosure,controls,difficulty,price,currency,sku,in_stock,url,
+             doc_url,doc_local,extra_docs,image_url,schematic_local,schematic_page,doc_version,scraped_at)
+           VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+           ON CONFLICT(id) DO UPDATE SET
+             name=excluded.name, subtitle=excluded.subtitle, based_on=excluded.based_on,
+             description=excluded.description, category=excluded.category,
+             effect_type=excluded.effect_type, tags=excluded.tags, enclosure=excluded.enclosure,
+             controls=excluded.controls, difficulty=excluded.difficulty, price=excluded.price,
+             currency=excluded.currency, sku=excluded.sku, in_stock=excluded.in_stock,
+             url=excluded.url, doc_url=excluded.doc_url, doc_local=excluded.doc_local,
+             extra_docs=excluded.extra_docs, image_url=excluded.image_url,
+             schematic_local=excluded.schematic_local, schematic_page=excluded.schematic_page,
+             doc_version=excluded.doc_version, scraped_at=excluded.scraped_at""",
+        (c.id, c.vendor, c.slug, c.name, c.subtitle, c.based_on, c.description, c.category,
+         c.effect_type, json.dumps(c.tags), c.enclosure, json.dumps(c.controls), c.difficulty,
+         c.price, c.currency, c.sku, None if c.in_stock is None else int(c.in_stock), c.url,
+         c.doc_url, c.doc_local, json.dumps(c.extra_docs), c.image_url, c.schematic_local,
+         c.schematic_page, c.doc_version, now),
+    )
+    conn.execute("DELETE FROM bom WHERE circuit_id = ?", (c.id,))
+    conn.executemany(
+        "INSERT INTO bom VALUES (?,?,?,?,?,?,?,?,?)",
+        [(c.id, i, r.ref, r.value, r.part_type, r.notes, r.category, r.norm_value, r.sort_key)
+         for i, r in enumerate(c.bom)],
+    )
