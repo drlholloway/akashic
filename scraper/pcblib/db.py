@@ -43,6 +43,8 @@ VENDORS = {
     "fuzzdog": ("Fuzz Dog", "https://shop.pedalparts.co.uk", ""),
     "sheepylove": ("Sheepy Love", "https://sheepylove.com",
                    "Build documents are © Sheepylove.com; indexed and linked, not redistributed."),
+    "deadendfx": ("Dead End FX", "https://www.deadendfx.com",
+                  "Build documents are hosted by Dead End FX on Google Drive; indexed and linked, not redistributed."),
 }
 
 

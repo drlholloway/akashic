@@ -14,6 +14,7 @@ It ships as a static, offline-capable web app (PWA) that installs on macOS, Linu
 | Madbean Pedals | ~120 | parsed from the build-doc PDF | single projects table, archived rows kept |
 | GuitarPCB | ~160 | OCR'd from the build-doc PDF (needs `tesseract`) | schematic and BOM are raster images in the PDF; ~85% of real boards parse |
 | Sheepy Love | ~70 | parsed from the build-doc PDF | Shopify catalog via `products.json`; KiCad-exported docs; prices in EUR |
+| Dead End FX | ~125 | schematic labels + OCR'd table | Big Cartel catalog; build docs on Google Drive; R/C/D/Q/IC read exactly from the vector schematic, pots and switches from OCR |
 
 ### What is indexed and what is not
 
@@ -29,12 +30,12 @@ data/      library.sqlite plus raw/cache directories (all git-ignored)
 
 ## Building the data
 
-Requires Python 3.12+, [uv](https://docs.astral.sh/uv/), poppler (`brew install poppler` for `pdftotext`), and tesseract (`brew install tesseract`) for GuitarPCB's image-only parts lists.
+Requires Python 3.12+, [uv](https://docs.astral.sh/uv/), poppler (`brew install poppler` for `pdftotext`), and tesseract (`brew install tesseract`) for the image-only parts lists of GuitarPCB and Dead End FX.
 
 ```sh
 cd scraper
 uv venv .venv && uv pip install -e .
-.venv/bin/pcblib scrape pedalpcb      # each vendor: pedalpcb aionfx madbean guitarpcb fuzzdog sheepylove
+.venv/bin/pcblib scrape pedalpcb      # each vendor: pedalpcb aionfx madbean guitarpcb fuzzdog sheepylove deadendfx
 .venv/bin/pcblib stats
 .venv/bin/pcblib export               # writes app/static/data/*.json
 .venv/bin/pcblib export --images      # also bundles cached schematic renders (local use only)

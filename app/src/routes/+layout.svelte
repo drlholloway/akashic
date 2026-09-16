@@ -81,7 +81,7 @@
 </main>
 
 <footer>
-	<p>Index of circuits published by PedalPCB, Aion FX, Madbean Pedals, GuitarPCB, Fuzz Dog and Sheepy Love. Names, part values and prices are indexed for reference; build documents and schematics belong to their vendors and are linked, not copied. Buy the board from the vendor.</p>
+	<p>Index of circuits published by PedalPCB, Aion FX, Madbean Pedals, GuitarPCB, Fuzz Dog, Sheepy Love and Dead End FX. Names, part values and prices are indexed for reference; build documents and schematics belong to their vendors and are linked, not copied. Buy the board from the vendor.</p>
 </footer>
 
 <style>

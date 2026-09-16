@@ -7,13 +7,14 @@ shape:  LOCATION|PART   VALUE   TYPE   NOTES
 from __future__ import annotations
 
 import re
+import shutil
 import subprocess
 from pathlib import Path
 
 import pymupdf as fitz
 
 from .models import BomRow
-from .normalize import normalize_row, is_plausible
+from .normalize import normalize_row, is_plausible, categorize
 from .paths import CACHE_DIR, DATA_DIR
 
 _HEADER_RE = re.compile(r"^\s*(LOCATION|PART|REF(?:ERENCE)?|DESIGNATOR|PART\s*#?)\s+VALUE\s+(TYPE|DESCRIPTION|QUANTITY|QTY)", re.I)
@@ -175,6 +176,151 @@ def parse_bom_columns(pages: list[str], max_col: int | None = None) -> list[BomR
                 continue
             seen.add(ref)
             rows.append(normalize_row(BomRow(ref=ref, value=val.replace(" ", ""), part_type="Potentiometer", category="POT")))
+    return rows
+
+
+_OCR_POT = re.compile(r"(?<![A-Za-z0-9])([A-Z]{3,12})\s+(\d+(?:[.,]\d+)?[KM]?[ABCW]|[ABCW]\d+(?:[.,]\d+)?[KM]?)(?![A-Za-z0-9])")
+_RANGE = re.compile(r"\*?\b([RCDQ])(\d+)\s*[-–]\s*[RCDQ]?(\d+)\s+([A-Z0-9][A-Z0-9.]+)", re.I)
+
+
+def _clean_ocr_line(ln: str) -> str:
+    """Repair the OCR slips that recur in GuitarPCB parts tables."""
+    ln = re.sub(r"[_—–‘’'\"|&*]+", " ", ln)
+    # designators: c13 -> C13, RS -> R5, cs -> C8, cg -> C9, R8& -> R8
+    def fix_ref(m: re.Match) -> str:
+        letter = m.group(1).upper()
+        num = m.group(2).upper().replace("S", "5").replace("O", "0").replace("G", "9").replace("I", "1").replace("L", "1")
+        return f"{letter}{num}"
+    ln = re.sub(r"(?<![A-Za-z0-9])([RCDQrcdq])([0-9SOGILsogil]{1,3})(?![A-Za-z0-9])", fix_ref, ln)
+    ln = re.sub(r"(?<![A-Za-z0-9])(?:IC|ic|Ic)([0-9SO]{1,2})(?![A-Za-z0-9])", lambda m: "IC" + m.group(1).replace("S", "5").replace("O", "0"), ln)
+    # values: 'in' -> '1n', 'lk' -> '1k', 'O' as zero inside numbers
+    ln = re.sub(r"(?<![A-Za-z0-9])in(?![A-Za-z0-9])", "1n", ln)
+    ln = re.sub(r"(?<![A-Za-z0-9])l([kKnpuM])(?![A-Za-z0-9])", r"1\1", ln)
+    ln = re.sub(r"(?<=\d)O(?=\d|[kKnpuMR]\b)", "0", ln)
+    ln = re.sub(r"(?<![A-Za-z0-9])O(?=\d)", "0", ln)
+    ln = re.sub(r"\b(TL|LM|NE|RC|JRC|OP|LF|CA|MC)O(\d)", r"\g<1>0\2", ln)  # TLO72 -> TL072
+    ln = re.sub(r"\bTL[O0]V2\b", "TL072", ln)
+    ln = re.sub(r"\bIN(\d{4}[A-Z]?)\b", r"1N\1", ln)                        # IN4148 -> 1N4148
+    ln = re.sub(r"\b25([ABCDKJ]\d{3,}[A-Z0-9\-]*)\b", r"2S\1", ln)         # 25C1815 -> 2SC1815
+    ln = re.sub(r"\b([ABCW])([0-9IO]+)([KM]?)\b", lambda m: m.group(1) + m.group(2).replace("I", "1").replace("O", "0") + m.group(3), ln)  # BIM -> B1M
+    return ln
+
+
+def ocr_bom(pdf: Path, vendor: str, slug: str, max_pages: int = 9, min_rows: int = 12) -> list[BomRow]:
+    """OCR pages in order until one yields a real parts table, keeping the best.
+    For vendors whose parts list is an image (GuitarPCB, Dead End FX)."""
+    if not shutil.which("tesseract"):
+        return []
+    with fitz.open(pdf) as d:
+        n_pages = d.page_count
+    best: list[BomRow] = []
+    for page_no in range(1, min(n_pages, max_pages) + 1):
+        png = CACHE_DIR / vendor / f"{slug}-p{page_no}.png"
+        txt = png.with_suffix(".txt")
+        if txt.exists():
+            out = txt.read_text()
+        else:
+            if not png.exists():
+                render_page(pdf, page_no, png, dpi=300)
+            out = subprocess.run(["tesseract", str(png), "-", "--psm", "6"], capture_output=True, text=True).stdout
+            txt.write_text(out)
+        rows = _rows_from_ocr(out)
+        if len(rows) > len(best):
+            best = rows
+        if len(best) >= min_rows:
+            break
+    return best
+
+
+def _rows_from_ocr(out: str) -> list[BomRow]:
+    rows: list[BomRow] = []
+    seen: set[str] = set()
+
+    def add(ref: str, value: str, ptype: str = "", cat: str = "") -> None:
+        value = value.strip().rstrip(".,;:")
+        if ref in seen or ref[0] in "J":
+            return
+        if cat != "POT" and (not re.search(r"\d", value) or not re.fullmatch(r"[A-Za-z0-9.\-/µu]{1,12}", value)):
+            return
+        nr = normalize_row(BomRow(ref=ref, value=value.strip(), part_type=ptype, notes="OCR", category=cat))
+        if is_plausible(nr):
+            seen.add(ref)
+            rows.append(nr)
+
+    for raw in out.splitlines():
+        ln = _clean_ocr_line(raw)
+        for letter, a, b, val in _RANGE.findall(ln):
+            lo, hi = int(a), int(b)
+            if 0 < hi - lo < 40:
+                for i in range(lo, hi + 1):
+                    add(f"{letter.upper()}{i}", val)
+        pairs = _COL_DESIG.findall(ln)
+        # The board silkscreen also OCRs to stray pairs; the parts table has several per line.
+        starts_with_pair = bool(pairs) and re.match(r"\s*" + re.escape(pairs[0][0]) + r"\s+" + re.escape(pairs[0][1]), ln) is not None
+        if len(pairs) >= 2 or (len(pairs) == 1 and (starts_with_pair or re.search(r"\b(status|led|zener|ge)\b", ln, re.I))):
+            for ref, val in pairs:
+                if val.upper() in {"PNP", "NPN", "STATUS", "LED"}:
+                    continue
+                if re.search(r"\d", val) or len(val) >= 4:
+                    add(ref, val)
+        for ref, val in _OCR_POT.findall(ln):
+            ref = ref.strip()
+            if 3 <= len(ref) <= 12 and ref.isalpha() and ref.upper() not in {"AND", "THE", "FOR", "OUT", "GND"}:
+                add(ref, val.replace(" ", ""), "Potentiometer", "POT")
+    return rows
+
+
+_SCH_REF = re.compile(r"^(R|C|D|Q|IC|U|L|SW|FB|TRIM|VR|XFM|T|K|LED|LDR|Z|ZD)\d+[A-Z]?$")
+_SCH_VALUE: dict[str, re.Pattern] = {
+    "R": re.compile(r"^\d+(?:[.,]\d+)?[kKMR]?\d*(?:Ω|ohm)?$", re.I),
+    "TRIM": re.compile(r"^\d+(?:[.,]\d+)?[kKM]?\d*$", re.I),
+    "C": re.compile(r"^\d+(?:[.,]\d+)?[pnuµ]F?\d*$|^\d+(?:[.,]\d+)?[pnuµ]\d*$", re.I),
+    "L": re.compile(r"^\d+(?:[.,]\d+)?[munµ]?H?\d*$", re.I),
+    "D": re.compile(r"^(1N\d{3,4}[A-Z]?|BAT\d+[A-Z]?|LED|[A-Z]{1,3}\d{2,}[A-Z0-9\-/]*|\d[A-Z]\d{2,}[A-Z0-9]*)$", re.I),
+    "Q": re.compile(r"^(\d[A-Z]{1,2}\d{2,}[A-Z0-9\-]*|[A-Z]{2,4}\d{2,}[A-Z0-9\-]*|J\d{3}|BS\d{3}|P\d{3}[A-Za-z]?|AC\d{3}|OC\d{2,3}|NKT\d+|GT\d+[A-Z]?)$", re.I),
+    "IC": re.compile(r"^([A-Z]{1,5}\d{2,}[A-Z0-9\-/]*|\d{4}[A-Z]?)$", re.I),
+}
+_SCH_MAXDIST = {"R": 14.0, "C": 20.0, "L": 20.0, "TRIM": 14.0, "D": 18.0, "Q": 18.0, "IC": 22.0}
+_SCH_SKIP_WORDS = {"GND", "VCC", "VDD", "VEE", "VREF", "IN", "OUT", "+9V", "9V", "+V", "-V", "+VE", "-VE", "+5V", "N/C", "NC"}
+
+
+def schematic_bom(pdf: Path, page_no: int) -> list[BomRow]:
+    """Pair designator labels with their nearest value label on a vector schematic
+    page (Eagle / KiCad exports keep both as text). Reliable for R, C, D, Q, IC;
+    other parts need the parts list."""
+    rows: list[BomRow] = []
+    with fitz.open(pdf) as doc:
+        if page_no < 1 or page_no > doc.page_count:
+            return rows
+        words = doc[page_no - 1].get_text("words")
+    refs = [w for w in words if _SCH_REF.match(w[4])]
+    others = [w for w in words if not _SCH_REF.match(w[4]) and w[4] not in _SCH_SKIP_WORDS]
+    seen: set[str] = set()
+    for r in refs:
+        ref = re.sub(r"^((?:IC|U)\d+)[A-F]$", r"\1", r[4])  # IC1A..IC1F gates -> IC1
+        if ref in seen:
+            continue
+        cat = categorize(ref, "")
+        pat = _SCH_VALUE.get(cat)
+        if not pat:
+            continue
+        rx, ry = (r[0] + r[2]) / 2, (r[1] + r[3]) / 2
+        best: tuple[float, str] | None = None
+        for w in others:
+            txt = w[4].strip(",;")
+            if not pat.match(txt):
+                continue
+            if cat in ("D", "Q", "IC") and txt.isdigit():
+                continue  # pin numbers
+            d = ((w[0] + w[2]) / 2 - rx) ** 2 + ((w[1] + w[3]) / 2 - ry) ** 2
+            if best is None or d < best[0]:
+                best = (d, txt)
+        if best and best[0] ** 0.5 <= _SCH_MAXDIST[cat]:
+            seen.add(ref)
+            nr = normalize_row(BomRow(ref=ref, value=best[1], notes="from schematic"))
+            if is_plausible(nr):
+                rows.append(nr)
+    rows.sort(key=lambda b: (b.category, int(re.sub(r"\D", "", b.ref) or 0), b.ref))
     return rows
 
 

@@ -5,8 +5,6 @@ from __future__ import annotations
 
 import json
 import re
-import shutil
-import subprocess
 from typing import Iterable
 
 from selectolax.parser import HTMLParser
@@ -14,7 +12,7 @@ from selectolax.parser import HTMLParser
 from ..models import BomRow, Circuit
 from ..normalize import normalize_row, is_plausible
 from ..paths import CACHE_DIR, DATA_DIR
-from ..pdf import render_page, pdf_text_pages, _COL_DESIG, _COL_POT
+from ..pdf import render_page, pdf_text_pages, ocr_bom
 from ..taxonomy import classify, find_enclosure
 from . import register
 from .base import Adapter, clean_text, html_to_text
@@ -94,7 +92,7 @@ class GuitarPCB(Adapter):
                     render_page(pdf, page_no, png)
                 c.schematic_local = str(png.relative_to(DATA_DIR))
                 c.schematic_page = page_no
-            c.bom = _ocr_bom(pdf, slug, len(pages))
+            c.bom = ocr_bom(pdf, self.vendor, slug)
         return c
 
 
@@ -135,93 +133,6 @@ def _schematic_page(pdf, pages) -> int | None:
         if re.search(r"\bschematic\b", p, re.I) and i <= 3:
             return i
     return 2 if len(pages) >= 2 else None
-
-
-_OCR_POT = re.compile(r"(?<![A-Za-z0-9])([A-Z]{3,12})\s+(\d+(?:[.,]\d+)?[KM]?[ABCW])(?![A-Za-z0-9])")
-_RANGE = re.compile(r"\*?\b([RCDQ])(\d+)\s*[-–]\s*[RCDQ]?(\d+)\s+([A-Z0-9][A-Z0-9.]+)", re.I)
-
-
-def _clean_ocr_line(ln: str) -> str:
-    """Repair the OCR slips that recur in GuitarPCB parts tables."""
-    ln = re.sub(r"[_—–‘’'\"|&*]+", " ", ln)
-    # designators: c13 -> C13, RS -> R5, cs -> C8, cg -> C9, R8& -> R8
-    def fix_ref(m: re.Match) -> str:
-        letter = m.group(1).upper()
-        num = m.group(2).upper().replace("S", "5").replace("O", "0").replace("G", "9").replace("I", "1").replace("L", "1")
-        return f"{letter}{num}"
-    ln = re.sub(r"(?<![A-Za-z0-9])([RCDQrcdq])([0-9SOGILsogil]{1,3})(?![A-Za-z0-9])", fix_ref, ln)
-    ln = re.sub(r"(?<![A-Za-z0-9])(?:IC|ic|Ic)([0-9SO]{1,2})(?![A-Za-z0-9])", lambda m: "IC" + m.group(1).replace("S", "5").replace("O", "0"), ln)
-    # values: 'in' -> '1n', 'lk' -> '1k', 'O' as zero inside numbers
-    ln = re.sub(r"(?<![A-Za-z0-9])in(?![A-Za-z0-9])", "1n", ln)
-    ln = re.sub(r"(?<![A-Za-z0-9])l([kKnpuM])(?![A-Za-z0-9])", r"1\1", ln)
-    ln = re.sub(r"(?<=\d)O(?=\d|[kKnpuMR]\b)", "0", ln)
-    ln = re.sub(r"(?<![A-Za-z0-9])O(?=\d)", "0", ln)
-    ln = re.sub(r"\b(TL|LM|NE|RC|JRC|OP|LF|CA|MC)O(\d)", r"\g<1>0\2", ln)  # TLO72 -> TL072
-    return ln
-
-
-def _ocr_bom(pdf, slug: str, n_pages: int) -> list[BomRow]:
-    """OCR pages in order until one yields a real parts table (12+ rows), keeping
-    the best: GuitarPCB puts the table on page 1, 2, 3 or later depending on the doc's age."""
-    if not shutil.which("tesseract"):
-        return []
-    import pymupdf
-    with pymupdf.open(pdf) as d:
-        n_pages = d.page_count
-    best: list[BomRow] = []
-    for page_no in range(1, min(n_pages, 9) + 1):
-        png = CACHE_DIR / "guitarpcb" / f"{slug}-p{page_no}.png"
-        txt = png.with_suffix(".txt")
-        if txt.exists():
-            out = txt.read_text()
-        else:
-            if not png.exists():
-                render_page(pdf, page_no, png, dpi=300)
-            out = subprocess.run(["tesseract", str(png), "-", "--psm", "6"], capture_output=True, text=True).stdout
-            txt.write_text(out)
-        rows = _rows_from_ocr(out)
-        if len(rows) > len(best):
-            best = rows
-        if len(best) >= 12:
-            break
-    return best
-
-
-def _rows_from_ocr(out: str) -> list[BomRow]:
-    rows: list[BomRow] = []
-    seen: set[str] = set()
-
-    def add(ref: str, value: str, ptype: str = "", cat: str = "") -> None:
-        value = value.strip().rstrip(".,;:")
-        if ref in seen or ref[0] in "J":
-            return
-        if cat != "POT" and (not re.search(r"\d", value) or not re.fullmatch(r"[A-Za-z0-9.\-/µu]{1,12}", value)):
-            return
-        nr = normalize_row(BomRow(ref=ref, value=value.strip(), part_type=ptype, notes="OCR", category=cat))
-        if is_plausible(nr):
-            seen.add(ref)
-            rows.append(nr)
-
-    for raw in out.splitlines():
-        ln = _clean_ocr_line(raw)
-        for letter, a, b, val in _RANGE.findall(ln):
-            lo, hi = int(a), int(b)
-            if 0 < hi - lo < 40:
-                for i in range(lo, hi + 1):
-                    add(f"{letter.upper()}{i}", val)
-        pairs = _COL_DESIG.findall(ln)
-        # The board silkscreen also OCRs to stray pairs; the parts table has several per line.
-        if len(pairs) >= 2 or (len(pairs) == 1 and re.search(r"\b(status|led|zener|ge)\b", ln, re.I)):
-            for ref, val in pairs:
-                if val.upper() in {"PNP", "NPN", "STATUS", "LED"}:
-                    continue
-                if re.search(r"\d", val) or len(val) >= 4:
-                    add(ref, val)
-        for ref, val in _OCR_POT.findall(ln):
-            ref = ref.strip()
-            if 3 <= len(ref) <= 12 and ref.isalpha() and ref.upper() not in {"AND", "THE", "FOR", "OUT", "GND"}:
-                add(ref, val.replace(" ", ""), "Potentiometer", "POT")
-    return rows
 
 
 def _product_ld(html: str) -> dict:
