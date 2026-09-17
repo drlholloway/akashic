@@ -97,6 +97,8 @@ def categorize(ref: str, part_type: str, value: str = "") -> str:
         return "SW"
     if "LED" in v and not re.match(r"^(IC|U|Q)\d", r):
         return "LED"
+    if "TRIM" in r.upper():
+        return "TRIM"
     t0 = part_type.lower()
     for hint in _EARLY_HINTS:
         if hint in t0:

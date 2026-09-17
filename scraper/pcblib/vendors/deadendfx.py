@@ -152,7 +152,9 @@ class DeadEndFX(Adapter):
                 pre = re.sub(r"\d.*$", "", r.ref)
                 maxnum[pre] = max(maxnum.get(pre, 0), int(re.sub(r"\D", "", r.ref) or 0))
             ocr_rows = []
-            for r in ocr_bom(pdf, self.vendor, handle, max_pages=4):
+            bom_pages = [i for i, pg in enumerate(pages, 1)
+                         if re.search(r"\bBOM\b|Bill of Materials|Part\s+Value|Parts List", pg, re.I)]
+            for r in ocr_bom(pdf, self.vendor, handle, max_pages=4, pages=bom_pages or None):
                 if r.ref in have:
                     continue
                 pre = re.sub(r"\d.*$", "", r.ref)
@@ -164,7 +166,8 @@ class DeadEndFX(Adapter):
             c.bom = sch_rows + ocr_rows
             pots = [r for r in c.bom if r.category == "POT"]
             if pots:
-                c.controls = [r.ref.title() for r in pots] if all(r.ref.isalpha() for r in pots) else [f"{len(pots)} knobs"]
+                named = all(re.fullmatch(r"[A-Za-z][A-Za-z\-]+", r.ref) for r in pots)
+                c.controls = [r.ref.title() for r in pots] if named else [f"{len(pots)} knobs"]
         # "Power" is informational, not a document link
         c.extra_docs = {k: v for k, v in c.extra_docs.items() if v.startswith("http")}
         return c

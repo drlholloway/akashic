@@ -179,7 +179,7 @@ def parse_bom_columns(pages: list[str], max_col: int | None = None) -> list[BomR
     return rows
 
 
-_OCR_POT = re.compile(r"(?<![A-Za-z0-9])([A-Z]{3,12})\s+(\d+(?:[.,]\d+)?[KM]?[ABCW]|[ABCW]\d+(?:[.,]\d+)?[KM]?)(?![A-Za-z0-9])")
+_OCR_POT = re.compile(r"(?<![A-Za-z0-9])([A-Z][A-Z\-]{2,12})\s+(\d+(?:[.,]\d+)?[KM]?[ABCW]|[ABCWabcw][0-9IlO]+(?:[.,]\d+)?[kKmM]?)(?![A-Za-z0-9])")
 _RANGE = re.compile(r"\*?\b([RCDQ])(\d+)\s*[-–]\s*[RCDQ]?(\d+)\s+([A-Z0-9][A-Z0-9.]+)", re.I)
 
 
@@ -193,6 +193,8 @@ def _clean_ocr_line(ln: str) -> str:
         return f"{letter}{num}"
     ln = re.sub(r"(?<![A-Za-z0-9])([RCDQrcdq])([0-9SOGILsogil]{1,3})(?![A-Za-z0-9])", fix_ref, ln)
     ln = re.sub(r"(?<![A-Za-z0-9])(?:IC|ic|Ic)([0-9SO]{1,2})(?![A-Za-z0-9])", lambda m: "IC" + m.group(1).replace("S", "5").replace("O", "0"), ln)
+    ln = re.sub(r"(?<![A-Za-z0-9])(TRIM|POT|VR|SW)([0-9IlO]{1,2})(?![A-Za-z0-9])",
+                lambda m: m.group(1) + m.group(2).replace("I", "1").replace("l", "1").replace("O", "0"), ln, flags=re.I)
     # values: 'in' -> '1n', 'lk' -> '1k', 'O' as zero inside numbers
     ln = re.sub(r"(?<![A-Za-z0-9])in(?![A-Za-z0-9])", "1n", ln)
     ln = re.sub(r"(?<![A-Za-z0-9])l([kKnpuM])(?![A-Za-z0-9])", r"1\1", ln)
@@ -206,7 +208,8 @@ def _clean_ocr_line(ln: str) -> str:
     return ln
 
 
-def ocr_bom(pdf: Path, vendor: str, slug: str, max_pages: int = 9, min_rows: int = 12) -> list[BomRow]:
+def ocr_bom(pdf: Path, vendor: str, slug: str, max_pages: int = 9, min_rows: int = 12,
+            pages: list[int] | None = None) -> list[BomRow]:
     """OCR pages in order until one yields a real parts table, keeping the best.
     For vendors whose parts list is an image (GuitarPCB, Dead End FX)."""
     if not shutil.which("tesseract"):
@@ -214,22 +217,39 @@ def ocr_bom(pdf: Path, vendor: str, slug: str, max_pages: int = 9, min_rows: int
     with fitz.open(pdf) as d:
         n_pages = d.page_count
     best: list[BomRow] = []
+    if pages:
+        # Caller knows which pages hold parts tables (e.g. "MAIN BOARD BOM" + "DAUGHTERBOARD BOM"):
+        # OCR every one and merge, first occurrence of a designator wins.
+        merged: list[BomRow] = []
+        seen_refs: set[str] = set()
+        for page_no in pages:
+            if page_no < 1 or page_no > n_pages:
+                continue
+            for r in _ocr_page(pdf, vendor, slug, page_no):
+                if r.ref not in seen_refs:
+                    seen_refs.add(r.ref)
+                    merged.append(r)
+        return merged
     for page_no in range(1, min(n_pages, max_pages) + 1):
-        png = CACHE_DIR / vendor / f"{slug}-p{page_no}.png"
-        txt = png.with_suffix(".txt")
-        if txt.exists():
-            out = txt.read_text()
-        else:
-            if not png.exists():
-                render_page(pdf, page_no, png, dpi=300)
-            out = subprocess.run(["tesseract", str(png), "-", "--psm", "6"], capture_output=True, text=True).stdout
-            txt.write_text(out)
-        rows = _rows_from_ocr(out)
+        rows = _ocr_page(pdf, vendor, slug, page_no)
         if len(rows) > len(best):
             best = rows
         if len(best) >= min_rows:
             break
     return best
+
+
+def _ocr_page(pdf: Path, vendor: str, slug: str, page_no: int) -> list[BomRow]:
+    png = CACHE_DIR / vendor / f"{slug}-p{page_no}.png"
+    txt = png.with_suffix(".txt")
+    if txt.exists():
+        out = txt.read_text()
+    else:
+        if not png.exists():
+            render_page(pdf, page_no, png, dpi=300)
+        out = subprocess.run(["tesseract", str(png), "-", "--psm", "6"], capture_output=True, text=True).stdout
+        txt.write_text(out)
+    return _rows_from_ocr(out)
 
 
 def _rows_from_ocr(out: str) -> list[BomRow]:
@@ -263,10 +283,17 @@ def _rows_from_ocr(out: str) -> list[BomRow]:
                     continue
                 if re.search(r"\d", val) or len(val) >= 4:
                     add(ref, val)
+        for ref, val in re.findall(r"(?<![A-Za-z0-9])([A-Z]*TRIM[A-Z0-9]*)\s+(\d+(?:[.,]\d+)?[kKM]?)(?![A-Za-z0-9])", ln):
+            if ref not in seen and re.search(r"[1-9]", val):
+                add(ref, val.upper(), "Trimmer", "TRIM")
         for ref, val in _OCR_POT.findall(ln):
-            ref = ref.strip()
-            if 3 <= len(ref) <= 12 and ref.isalpha() and ref.upper() not in {"AND", "THE", "FOR", "OUT", "GND"}:
-                add(ref, val.replace(" ", ""), "Potentiometer", "POT")
+            ref = ref.strip("-")
+            val = val.replace(" ", "").upper().replace("I", "1").replace("L", "1").replace("O", "0")
+            val = re.sub(r"^([ABCW])0(?=[1-9])", r"\1", val)  # A0100K -> A100K never happens, but B01M guard
+            if not re.search(r"[1-9]", val):
+                continue  # "BOARD BOM" is not a pot
+            if 3 <= len(ref) <= 12 and re.fullmatch(r"[A-Z][A-Z\-]+", ref) and ref.upper() not in {"AND", "THE", "FOR", "OUT", "GND", "BOM", "MAIN", "BOARD", "NOTES"}:
+                add(ref, val, "Trimmer" if "TRIM" in ref else "Potentiometer", "TRIM" if "TRIM" in ref else "POT")
     return rows
 
 
