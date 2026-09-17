@@ -1,5 +1,5 @@
-# Akashic
-### Guitar Effects PCB Lookup
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="app/static/wordmark-dark.png"><img src="app/static/wordmark.png" width="372" alt="Akashic: Guitar Effects PCB Lookup"></picture></p>
+
 
 A searchable reference library of DIY guitar-pedal circuits, built from the build documents that PCB vendors publish. For every board it records what commercial pedal it is based on, the vendor and price with a link to buy the PCB, the build document, the controls and enclosure, and a fully parsed parts list with normalized values. Because every vendor's parts list lands in one database, the library can answer questions no vendor site can: every Rat derivative, every circuit that uses an LM308, every three-knob 125B board.
 

@@ -8,6 +8,7 @@
 
 	import type { VendorInfo } from '$lib/types';
 	import { COFFEE_URL } from '$lib/site';
+	import Mark from '$lib/Mark.svelte';
 
 	let { children, data }: { children: Snippet; data: { rates: import('$lib/currency.svelte').Rates | null; vendors: Record<string, VendorInfo> } } = $props();
 	const vendorList = $derived(Object.values(data.vendors ?? {}).sort((a, b) => a.name.localeCompare(b.name)));
@@ -57,8 +58,11 @@
 
 <header class="titleblock" bind:this={titleblock}>
 	<a class="brand" href="{base}/">
-		<span class="brand-name">Akashic</span>
-		<span class="brand-sub">Guitar effects PCB lookup</span>
+		<Mark size={34} />
+		<span class="brand-text">
+			<span class="brand-name">Akashic</span>
+			<span class="brand-sub">Guitar effects PCB lookup</span>
+		</span>
 	</a>
 	<form class="search" role="search" onsubmit={submit}>
 		<label class="sr-only" for="q">Search circuits, originals, parts</label>
@@ -113,7 +117,8 @@
 		top: 0;
 		z-index: 5;
 	}
-	.brand { grid-area: brand; display: flex; flex-direction: column; line-height: 1.1; }
+	.brand { grid-area: brand; display: flex; align-items: center; gap: 10px; line-height: 1.1; }
+	.brand-text { display: flex; flex-direction: column; }
 	.brand:hover { text-decoration: none; }
 	.brand-name { font-family: var(--label); font-weight: 700; font-size: 20px; letter-spacing: 0.06em; text-transform: uppercase; }
 	.brand-sub { font-size: 12px; color: var(--ink-3); }
