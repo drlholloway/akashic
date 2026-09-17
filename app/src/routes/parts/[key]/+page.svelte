@@ -5,7 +5,7 @@
 	let { data } = $props();
 </script>
 
-<svelte:head><title>{data.part.value} · circuits using it · PCB Schematic Library</title></svelte:head>
+<svelte:head><title>{data.part.value} · circuits using it · Akashic</title></svelte:head>
 
 <div class="part">
 	<header class="head">

@@ -18,7 +18,7 @@ import httpx
 from .paths import RAW_DIR
 
 USER_AGENT = (
-    "PCBSchematicLibrary/0.1 (personal DIY pedal reference; "
+    "Akashic/0.1 (personal DIY pedal reference; "
     "contact via github.com/laneholloway)"
 )
 

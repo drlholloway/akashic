@@ -1,4 +1,4 @@
-# Contributing to PCB Schematic Library
+# Contributing to Akashic
 
 Thanks for your interest. This is a small project maintained by one person, so the most
 useful contributions are focused ones: a vendor that should be indexed, a board whose

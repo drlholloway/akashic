@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to PCB Schematic Library. The section for a tagged version becomes the
+All notable changes to Akashic. The section for a tagged version becomes the
 GitHub Release notes.
 
 ## Unreleased

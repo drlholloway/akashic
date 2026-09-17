@@ -52,13 +52,13 @@
 </script>
 
 <svelte:head>
-	<title>PCB Schematic Library</title>
+	<title>Akashic: Guitar Effects PCB Lookup</title>
 </svelte:head>
 
 <header class="titleblock" bind:this={titleblock}>
 	<a class="brand" href="{base}/">
-		<span class="brand-name">PCB Schematic Library</span>
-		<span class="brand-sub">DIY pedal circuits, parts &amp; where to buy the board</span>
+		<span class="brand-name">Akashic</span>
+		<span class="brand-sub">Guitar effects PCB lookup</span>
 	</a>
 	<form class="search" role="search" onsubmit={submit}>
 		<label class="sr-only" for="q">Search circuits, originals, parts</label>

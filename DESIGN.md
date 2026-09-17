@@ -1,5 +1,5 @@
 ---
-name: PCB Schematic Library
+name: Akashic
 description: A dimensioned parts catalog drawn on the drill template that made the pedal
 colors:
   sheet: "#f4f2ee"
@@ -152,7 +152,7 @@ components:
     backgroundColor: "{colors.sheet-2}"
 ---
 
-# Design System: PCB Schematic Library
+# Design System: Akashic
 
 ## Overview
 

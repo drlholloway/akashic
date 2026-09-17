@@ -36,7 +36,7 @@
 </script>
 
 <svelte:head>
-	<title>{c.name}{c.based_on ? ` (${c.based_on})` : ''} · {VENDOR_NAMES[c.vendor]} · PCB Schematic Library</title>
+	<title>{c.name}{c.based_on ? ` (${c.based_on})` : ''} · {VENDOR_NAMES[c.vendor]} · Akashic</title>
 	<meta name="description" content="{c.name} by {VENDOR_NAMES[c.vendor]}{c.based_on ? `, based on the ${c.based_on}` : ''}. Parts list, controls, enclosure and where to buy the PCB." />
 </svelte:head>
 

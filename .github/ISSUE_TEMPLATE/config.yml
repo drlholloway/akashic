@@ -1,8 +1,8 @@
 blank_issues_enabled: true
 contact_links:
   - name: The library
-    url: https://pcb-schematic-library.lanetholloway.workers.dev
+    url: https://akashic.lanetholloway.workers.dev
     about: Search the circuits, parts and originals.
   - name: Report a security problem
-    url: https://github.com/drlholloway/pcb-schematic-library/security/advisories/new
+    url: https://github.com/drlholloway/akashic/security/advisories/new
     about: Please use private reporting rather than a public issue.

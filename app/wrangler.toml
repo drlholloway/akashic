@@ -1,6 +1,6 @@
 # Cloudflare Workers static-assets deploy (Pages is now part of Workers).
 # `npm run deploy` exports the data, builds, and runs `wrangler deploy`.
-name = "pcb-schematic-library"
+name = "akashic"
 compatibility_date = "2026-09-01"
 
 [assets]

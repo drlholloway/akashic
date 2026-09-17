@@ -8,9 +8,9 @@ export default defineConfig({
 		SvelteKitPWA({
 			registerType: 'autoUpdate',
 			manifest: {
-				name: 'PCB Schematic Library',
-				short_name: 'PCB Library',
-				description: 'Searchable reference of DIY guitar pedal circuits, BOMs, and where to buy the board.',
+				name: 'Akashic: Guitar Effects PCB Lookup',
+				short_name: 'Akashic',
+				description: 'Guitar effects PCB lookup: every DIY pedal circuit, its parts list, and where to buy the board.',
 				theme_color: '#1c1f22',
 				background_color: '#f4f2ee',
 				display: 'standalone',

@@ -73,7 +73,7 @@
 </script>
 
 <svelte:head>
-	<title>{filters.q ? `${filters.q} · ` : ''}Circuits · PCB Schematic Library</title>
+	<title>{filters.q ? `${filters.q} · ` : ''}Circuits · Akashic</title>
 </svelte:head>
 
 <div class="index">

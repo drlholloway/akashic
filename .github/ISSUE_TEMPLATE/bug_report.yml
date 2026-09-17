@@ -6,7 +6,7 @@ body:
     id: url
     attributes:
       label: Page URL
-      placeholder: https://pcb-schematic-library.lanetholloway.workers.dev/circuit/...
+      placeholder: https://akashic.lanetholloway.workers.dev/circuit/...
     validations:
       required: true
   - type: textarea

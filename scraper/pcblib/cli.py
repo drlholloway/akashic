@@ -11,7 +11,7 @@ from . import db as dbm
 from .fetch import Fetcher
 from .vendors import REGISTRY, load_all
 
-app = typer.Typer(help="PCB Schematic Library scraper")
+app = typer.Typer(help="Akashic scraper")
 con = Console()
 load_all()
 

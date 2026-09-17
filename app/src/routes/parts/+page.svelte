@@ -13,7 +13,7 @@
 	);
 </script>
 
-<svelte:head><title>Parts cross-reference · PCB Schematic Library</title></svelte:head>
+<svelte:head><title>Parts cross-reference · Akashic</title></svelte:head>
 
 <div class="parts-index">
 	<header class="head">

@@ -23,7 +23,7 @@
 	});
 </script>
 
-<svelte:head><title>Originals · PCB Schematic Library</title></svelte:head>
+<svelte:head><title>Originals · Akashic</title></svelte:head>
 
 <div class="originals">
 	<header class="head">

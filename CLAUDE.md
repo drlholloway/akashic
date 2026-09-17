@@ -1,10 +1,10 @@
-# PCB Schematic Library
+# Akashic
 
 A searchable reference library of DIY guitar-pedal circuits built from the build documents
 that PCB vendors publish, plus schematic-only sources (a blog, an archive, a PCBWay member).
 Every circuit has: what it is based on, the vendor and price with a buy link, the build
 document, controls and enclosure, and a parsed, value-normalized parts list. Live at
-https://pcb-schematic-library.lanetholloway.workers.dev.
+https://akashic.lanetholloway.workers.dev.
 
 Read `README.md` for the commands and the source table, `PRODUCT.md` for the product
 decisions and `DESIGN.md` for the visual system. `CHANGELOG.md` becomes the release notes.

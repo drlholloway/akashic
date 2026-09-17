@@ -30,7 +30,7 @@ Data is scraped on the owner's machine, cached, and exported as static JSON. Cir
 - Terminology: "circuit" (a vendor PCB project), "based on" (the commercial original), "BOM" (parts list), "ref" (designator).
 
 ## Brand Commitments
-Name: PCB Schematic Library. No logo or palette yet. Voice: plain, technical, terse.
+Name: Akashic, subtitle Guitar Effects PCB Lookup (formerly PCB Schematic Library). No logo yet. Voice: plain, technical, terse.
 
 ## Evidence on Hand
 Real scraped data in `data/library.sqlite` and `app/static/data/`. No testimonials, no user counts; do not fabricate any.

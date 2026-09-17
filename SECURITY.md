@@ -3,7 +3,7 @@
 ## Supported versions
 
 Only the current `main` branch and the live site at
-https://pcb-schematic-library.lanetholloway.workers.dev receive fixes. There are no
+https://akashic.lanetholloway.workers.dev receive fixes. There are no
 long-term support branches.
 
 ## What counts
@@ -24,7 +24,7 @@ scraper, which is polite by design.
 ## Reporting
 
 Please use GitHub's private vulnerability reporting rather than a public issue:
-https://github.com/drlholloway/pcb-schematic-library/security/advisories/new
+https://github.com/drlholloway/akashic/security/advisories/new
 
 You will get an acknowledgement within a week. Credit is given in the changelog unless
 you ask otherwise.

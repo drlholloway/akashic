@@ -1,1 +1,1 @@
-"""PCB Schematic Library scraper and database builder."""
+"""Akashic scraper and database builder."""

@@ -1,10 +1,11 @@
-# PCB Schematic Library
+# Akashic
+### Guitar Effects PCB Lookup
 
 A searchable reference library of DIY guitar-pedal circuits, built from the build documents that PCB vendors publish. For every board it records what commercial pedal it is based on, the vendor and price with a link to buy the PCB, the build document, the controls and enclosure, and a fully parsed parts list with normalized values. Because every vendor's parts list lands in one database, the library can answer questions no vendor site can: every Rat derivative, every circuit that uses an LM308, every three-knob 125B board.
 
 It ships as a static, offline-capable web app (PWA) that installs on macOS, Linux, Android and iOS.
 
-**Live:** https://pcb-schematic-library.lanetholloway.workers.dev
+**Live:** https://akashic.lanetholloway.workers.dev
 
 ## Sources
 
@@ -101,7 +102,7 @@ Deploy `app/build` to any other static host the same way. The search index is bu
 
 ## Contributing
 
-Vendor suggestions, wrong-parse reports and fixes are welcome; see [CONTRIBUTING.md](CONTRIBUTING.md). Security problems go through [private reporting](https://github.com/drlholloway/pcb-schematic-library/security/advisories/new).
+Vendor suggestions, wrong-parse reports and fixes are welcome; see [CONTRIBUTING.md](CONTRIBUTING.md). Security problems go through [private reporting](https://github.com/drlholloway/akashic/security/advisories/new).
 
 ## License
 
