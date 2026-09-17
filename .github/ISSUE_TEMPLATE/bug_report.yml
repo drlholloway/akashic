@@ -1,0 +1,23 @@
+name: Bug report
+description: Something on the site misbehaves, shows wrong data or does not load.
+labels: [bug]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Page URL
+      placeholder: https://pcb-schematic-library.lanetholloway.workers.dev/circuit/...
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What you did, what you saw, and what you expected instead.
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser and device
+      placeholder: Safari 26 on iPhone, Chrome on Linux, installed as a PWA...

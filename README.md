@@ -4,6 +4,8 @@ A searchable reference library of DIY guitar-pedal circuits, built from the buil
 
 It ships as a static, offline-capable web app (PWA) that installs on macOS, Linux, Android and iOS.
 
+**Live:** https://pcb-schematic-library.lanetholloway.workers.dev
+
 ## Sources
 
 | Vendor | Circuits | Parts list | Notes |
@@ -97,6 +99,14 @@ Deploy `app/build` to any other static host the same way. The search index is bu
 
 `circuits` holds one row per vendor board. `bom` holds one row per parts-list line with `category` (R, C, D, Q, IC, POT, TRIM, SW, LED, OPTO, CONN, HW) and `norm_value`, so `1K5`, `1.5k` and `1k5` all become `1.5k`, and `A100K`, `100KA` and `100k log` all become `A100k`. Categories are mapped to one shared taxonomy in `scraper/pcblib/taxonomy.py`.
 
+## Contributing
+
+Vendor suggestions, wrong-parse reports and fixes are welcome; see [CONTRIBUTING.md](CONTRIBUTING.md). Security problems go through [private reporting](https://github.com/drlholloway/pcb-schematic-library/security/advisories/new).
+
+## License
+
+[PolyForm Shield 1.0.0](LICENSE): free to use, copy, modify and share, but not to build a competing product. The vendors' documents remain theirs; see the source table above.
+
 ## Conclusion
 
-If this helps you out somehow, buy me a coffee. :)
+If this helps you out somehow, [buy me a coffee](https://buymeacoffee.com/drlholloway). :)

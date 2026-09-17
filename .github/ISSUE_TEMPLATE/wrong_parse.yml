@@ -1,0 +1,22 @@
+name: Wrong parts list
+description: A circuit's parts list, controls, original or enclosure does not match its build document.
+labels: [parser]
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Circuit URL in the library
+      placeholder: https://pcb-schematic-library.lanetholloway.workers.dev/circuit/...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What the build document says
+      description: The rows or fields that are wrong or missing, as they appear in the vendor's document.
+    validations:
+      required: true
+  - type: textarea
+    id: shown
+    attributes:
+      label: What the library shows

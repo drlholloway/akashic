@@ -1,0 +1,20 @@
+name: Vendor request
+description: A PCB vendor, project host or schematic archive that should be indexed.
+labels: [vendor]
+body:
+  - type: input
+    id: shop
+    attributes:
+      label: Shop or index URL
+    validations:
+      required: true
+  - type: input
+    id: doc
+    attributes:
+      label: Link to one build document or schematic
+      description: A PDF or image from that vendor, so the document layout can be checked.
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything to know?
+      description: Platform (WooCommerce, Shopify, Big Cartel, Wix...), roughly how many boards, licensing notes, whether the store is still open.

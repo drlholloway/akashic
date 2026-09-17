@@ -1,0 +1,52 @@
+name: test
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+# Least privilege: these jobs only read the repository.
+permissions:
+  contents: read
+
+jobs:
+  scraper:
+    name: Scraper (import, normalization, empty export)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: sudo apt-get update && sudo apt-get install -y poppler-utils
+      - run: cd scraper && uv venv .venv && uv pip install -e .
+      - name: adapters register and parsers import
+        run: cd scraper && .venv/bin/pcblib vendors
+      - name: value normalization smoke test
+        run: |
+          cd scraper && .venv/bin/python - <<'PY'
+          from pcblib.normalize import normalize_row
+          from pcblib.models import BomRow
+          cases = {("R1", "1K5"): "1.5k", ("R2", "1m"): "1M", ("C1", "4u7"): "4.7u", ("C2", "100nF"): "100n",
+                   ("VOL", "A100K"): "A100k", ("TONE", "100KB"): "B100k", ("IC1", "TL072"): "TL072"}
+          for (ref, val), want in cases.items():
+              got = normalize_row(BomRow(ref=ref, value=val)).norm_value
+              assert got == want, (ref, val, got, want)
+          print("ok")
+          PY
+      - name: export an empty library
+        run: cd scraper && .venv/bin/pcblib export
+
+  app:
+    name: App (check and build)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+      - uses: astral-sh/setup-uv@v6
+      - run: cd scraper && uv venv .venv && uv pip install -e . && .venv/bin/pcblib export
+      - run: cd app && npm ci
+      - run: cd app && npm run check
+      - run: cd app && npm run build
