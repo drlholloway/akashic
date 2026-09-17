@@ -7,6 +7,7 @@
 	import { currency, type Currency } from '$lib/currency.svelte';
 
 	import type { VendorInfo } from '$lib/types';
+	import { COFFEE_URL } from '$lib/site';
 
 	let { children, data }: { children: Snippet; data: { rates: import('$lib/currency.svelte').Rates | null; vendors: Record<string, VendorInfo> } } = $props();
 	const vendorList = $derived(Object.values(data.vendors ?? {}).sort((a, b) => a.name.localeCompare(b.name)));
@@ -91,6 +92,11 @@
 		{/each}
 	</ul>
 	<p>Names, part values and prices are indexed for reference; build documents and schematics belong to their authors and are linked, not copied. Buy the board from the vendor.</p>
+	<div class="coffee">
+		<p class="label strong">Kept going by coffee</p>
+		<p>This library is scraped, parsed and maintained on evenings and weekends. If it saved you a build, <a href={COFFEE_URL} target="_blank" rel="noopener">buy me a coffee</a>.</p>
+		<a class="btn ghost" href={COFFEE_URL} target="_blank" rel="noopener">Buy me a coffee</a>
+	</div>
 </footer>
 
 <style>
@@ -155,6 +161,9 @@
 	.vendors { list-style: none; margin: 0 0 20px; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 6px 24px; max-width: 1180px; }
 	.vendors a { color: var(--ink-2); font-family: var(--label); font-weight: 600; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; }
 	.vendors a:hover { color: var(--ink); }
+	.coffee { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--rule); }
+	.coffee p { margin-bottom: 10px; }
+	.coffee p a { color: var(--ink-2); text-decoration: underline; text-underline-offset: 2px; }
 	@media (max-width: 860px) {
 		.titleblock {
 			grid-template-columns: 1fr auto;
