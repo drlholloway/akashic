@@ -5,5 +5,5 @@ compatibility_date = "2026-09-01"
 
 [assets]
 directory = "./build"
-# Unknown routes fall back to the app shell, which client-side routes them.
-not_found_handling = "single-page-application"
+# Unknown routes get 404.html, the app shell, which client-side routes them (or shows the error).
+not_found_handling = "404-page"
