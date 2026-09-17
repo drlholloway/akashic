@@ -1,4 +1,4 @@
-export type Vendor = 'pedalpcb' | 'aionfx' | 'madbean' | 'guitarpcb' | 'fuzzdog' | 'sheepylove' | 'deadendfx' | 'moonn' | 'fivecats' | 'parasit' | 'pcbway-gtu' | 'pcbguitarmania' | 'deadastronaut' | 'bentfishbowl' | 'ggg' | 'lectricfx';
+export type Vendor = 'pedalpcb' | 'aionfx' | 'madbean' | 'guitarpcb' | 'fuzzdog' | 'sheepylove' | 'deadendfx' | 'moonn' | 'fivecats' | 'parasit' | 'pcbway-gtu' | 'pcbguitarmania' | 'deadastronaut' | 'bentfishbowl' | 'ggg' | 'lectricfx' | 'expanon';
 
 export interface IndexEntry {
 	id: string;
@@ -79,14 +79,15 @@ export const VENDOR_NAMES: Record<Vendor, string> = {
 	deadastronaut: 'Dead Astronaut FX',
 	bentfishbowl: 'Bent Fishbowl',
 	ggg: 'General Guitar Gadgets',
-	lectricfx: 'Lectric-FX'
+	lectricfx: 'Lectric-FX',
+	expanon: 'Experimentalists Anonymous'
 };
 
-export type VendorKind = 'shop' | 'projects' | 'blog';
-export const VENDOR_KIND: Partial<Record<Vendor, VendorKind>> = { 'pcbway-gtu': 'projects', bentfishbowl: 'blog' };
+export type VendorKind = 'shop' | 'projects' | 'blog' | 'archive';
+export const VENDOR_KIND: Partial<Record<Vendor, VendorKind>> = { 'pcbway-gtu': 'projects', bentfishbowl: 'blog', expanon: 'archive' };
 export function primaryAction(v: Vendor): string {
 	const k = VENDOR_KIND[v] ?? 'shop';
-	return k === 'blog' ? `Read the post at ${VENDOR_NAMES[v]}` : k === 'projects' ? `Order the board at ${VENDOR_NAMES[v]}` : `Buy the PCB at ${VENDOR_NAMES[v]}`;
+	return k === 'blog' ? `Read the post at ${VENDOR_NAMES[v]}` : k === 'archive' ? `Open the schematic at ${VENDOR_NAMES[v]}` : k === 'projects' ? `Order the board at ${VENDOR_NAMES[v]}` : `Buy the PCB at ${VENDOR_NAMES[v]}`;
 }
 
 export const PART_CATEGORY_NAMES: Record<string, string> = {

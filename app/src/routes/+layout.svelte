@@ -81,7 +81,7 @@
 </main>
 
 <footer>
-	<p>Index of circuits published by PedalPCB, Aion FX, Madbean Pedals, GuitarPCB, Fuzz Dog, Sheepy Love, Dead End FX, Moonn Electronics, Five Cats Pedals, Parasit Studio, PCB Guitar Mania, Dead Astronaut FX, General Guitar Gadgets, Lectric-FX, shared PCBWay projects, and the Bent Fishbowl schematic blog. Names, part values and prices are indexed for reference; build documents and schematics belong to their vendors and are linked, not copied. Buy the board from the vendor.</p>
+	<p>Index of circuits published by PedalPCB, Aion FX, Madbean Pedals, GuitarPCB, Fuzz Dog, Sheepy Love, Dead End FX, Moonn Electronics, Five Cats Pedals, Parasit Studio, PCB Guitar Mania, Dead Astronaut FX, General Guitar Gadgets, Lectric-FX, shared PCBWay projects, the Bent Fishbowl schematic blog, and the Experimentalists Anonymous schematic archive. Names, part values and prices are indexed for reference; build documents and schematics belong to their vendors and are linked, not copied. Buy the board from the vendor.</p>
 </footer>
 
 <style>

@@ -9,7 +9,7 @@ def register(cls: type[Adapter]) -> type[Adapter]:
 
 
 def load_all() -> None:
-    from . import pedalpcb, aionfx, madbean, guitarpcb, sheepylove, deadendfx, moonn, fivecats, parasit, pcbway, pcbguitarmania, deadastronaut, bentfishbowl, ggg, lectricfx  # noqa: F401
+    from . import pedalpcb, aionfx, madbean, guitarpcb, sheepylove, deadendfx, moonn, fivecats, parasit, pcbway, pcbguitarmania, deadastronaut, bentfishbowl, ggg, lectricfx, expanon  # noqa: F401
     try:
         from . import fuzzdog  # noqa: F401
     except ImportError:

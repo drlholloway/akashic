@@ -61,13 +61,15 @@ VENDORS = {
             "Project PDFs are © JD Sleep and may only be served from generalguitargadgets.com; indexed and linked, not redistributed."),
     "lectricfx": ("Lectric-FX", "https://lectric-fx.com/shop/",
                   "Build documents are © Lectric-FX; indexed and linked, not redistributed."),
+    "expanon": ("Experimentalists Anonymous", "https://www.experimentalistsanonymous.com/diy/index.php?dir=Schematics",
+                "A community archive of traced schematics; no PCB is sold. Images are cached locally and linked to the archive."),
     "pcbway-gtu": ("PCBWay: Glory to Ukraine", "https://www.pcbway.com/project/member/?bmbno=19C5FC6C-66B1-46",
                    "Shared projects are CC BY-SA 3.0; schematic images may be shown with attribution. BOM and gerbers need a PCBWay login."),
 }
 
 
 # What the vendor sells: "shop" (a PCB), "projects" (order the board from a fab), "blog" (a schematic to read).
-VENDOR_KIND = {"pcbway-gtu": "projects", "bentfishbowl": "blog"}
+VENDOR_KIND = {"pcbway-gtu": "projects", "bentfishbowl": "blog", "expanon": "archive"}
 
 
 @contextmanager
