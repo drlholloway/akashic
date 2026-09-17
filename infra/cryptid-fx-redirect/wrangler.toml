@@ -1,0 +1,10 @@
+# Redirect worker for the cryptid-fx.com typo domain. Deploy with `npx wrangler deploy`
+# from this directory (uses the same Cloudflare login as the app).
+name = "cryptid-fx-redirect"
+main = "worker.js"
+compatibility_date = "2026-09-01"
+workers_dev = false
+routes = [
+  { pattern = "cryptid-fx.com", custom_domain = true },
+  { pattern = "www.cryptid-fx.com", custom_domain = true }
+]

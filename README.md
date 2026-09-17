@@ -94,7 +94,9 @@ npm run deploy          # export data, build, publish
 
 `npm run deploy` runs `scripts/deploy.sh`, which exports the data bundle (never with `--images`), builds the site, and runs `wrangler deploy` with the config in `app/wrangler.toml`. The site is served at `https://pcb-schematic-library.<account>.workers.dev`; add a custom domain in the Cloudflare dashboard under the Worker's settings. `static/_headers` sets long cache lifetimes for the hashed assets and fonts and a short one for the data bundle.
 
-Deploy `app/build` to any other static host the same way. The search index is built in the browser from `data/index.json`; circuit pages load their own JSON on demand and are cached by the service worker for offline use.
+Deploy `app/build` to any other static host the same way.
+
+`infra/cryptid-fx-redirect/` is a two-line Worker that sends the typo domain cryptid-fx.com to www.cryptideffects.com; deploy it from that directory with `npx wrangler deploy`. The search index is built in the browser from `data/index.json`; circuit pages load their own JSON on demand and are cached by the service worker for offline use.
 
 ## Data model
 
