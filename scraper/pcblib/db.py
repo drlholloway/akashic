@@ -51,9 +51,19 @@ VENDORS = {
                  "PCB layouts are © Five Cats Pedals; build inserts and schematics are indexed and linked, not redistributed."),
     "parasit": ("Parasit Studio", "https://parasitstudio.com",
                 "Designs are for personal use only per the build docs; documents are indexed and linked, not redistributed."),
+    "pcbguitarmania": ("PCB Guitar Mania", "https://pcbguitarmania.com",
+                       "Build documents are © PCB Guitar Mania; indexed and linked, not redistributed."),
+    "deadastronaut": ("Dead Astronaut FX", "https://deadastronaut.wixsite.com/effects",
+                      "Build docs are marked not for commercial use; indexed and linked, not redistributed."),
+    "bentfishbowl": ("Bent Fishbowl", "https://bentfishbowl.wixsite.com/electronics/blog",
+                     "Schematics are CC BY-NC-SA by bentfishbowl; no PCB is sold, the post is the source."),
     "pcbway-gtu": ("PCBWay: Glory to Ukraine", "https://www.pcbway.com/project/member/?bmbno=19C5FC6C-66B1-46",
                    "Shared projects are CC BY-SA 3.0; schematic images may be shown with attribution. BOM and gerbers need a PCBWay login."),
 }
+
+
+# What the vendor sells: "shop" (a PCB), "projects" (order the board from a fab), "blog" (a schematic to read).
+VENDOR_KIND = {"pcbway-gtu": "projects", "bentfishbowl": "blog"}
 
 
 @contextmanager

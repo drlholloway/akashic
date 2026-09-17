@@ -151,7 +151,7 @@ def parse_bom(pages: list[str]) -> list[BomRow]:
 
 _COL_HEADERS = re.compile(r"RESISTORS|CAPACITORS|DIODES|TRANSISTORS|SEMICONDUCTORS|POTENTIOMETERS|\bICS?\b|SWITCHES|PARTS LIST|B\.?O\.?M\.?|BILL OF MATERIALS", re.I)
 _COL_DESIG = re.compile(r"(?<![A-Z0-9])((?:R|C|D|Q|IC|U|L|SW|Z|ZD|LED|VR|TR|OPTO|X|J)\d+[A-Z]?)[ \t]+(\S+(?:[ \t](?:Red|Green|Blue|Yellow|White|Amber)?[ \t]?(?:LED|Zener|zener|elec))?)")
-_COL_POT = re.compile(r"(?<![A-Z0-9])([A-Z][A-Z .\-/]{1,14}?)[ \t]{2,}([ABCW]\d+(?:[.,]\d+)?[KM]|[ABCW]\d{2,}|\d+(?:[.,]\d+)?[KM]?[ABCW])(?![A-Z0-9])")
+_COL_POT = re.compile(r"(?<![A-Z0-9])([A-Z][A-Z .\-/]{1,14}?)[ \t]{2,}([ABCW]\d+(?:[.,]\d+)?[KM]|[ABCW]\d{2,}|\d+(?:[.,]\d+)?[KM]? ?[ABCW])(?![A-Z0-9])")
 
 
 def parse_bom_columns(pages: list[str], max_col: int | None = None) -> list[BomRow]:
@@ -193,9 +193,12 @@ def _clean_ocr_line(ln: str) -> str:
     # designators: c13 -> C13, RS -> R5, cs -> C8, cg -> C9, R8& -> R8
     def fix_ref(m: re.Match) -> str:
         letter = m.group(1).upper()
-        num = m.group(2).upper().replace("S", "5").replace("O", "0").replace("G", "9").replace("I", "1").replace("L", "1")
+        num = (m.group(2).upper().replace("S", "5").replace("O", "0").replace("G", "9").replace("I", "1")
+               .replace("L", "1").replace("A", "4").replace("T", "7"))
         return f"{letter}{num}"
-    ln = re.sub(r"(?<![A-Za-z0-9])([RCDQrcdq])([0-9SOGILsogil]{1,3})(?![A-Za-z0-9])", fix_ref, ln)
+    ln = re.sub(r"(?<![A-Za-z0-9])([RCDQrcdq])([0-9SOGILsogil]{1,3}|[AaTtLl]|[0-9][AaTt])(?![A-Za-z0-9])", fix_ref, ln)
+    ln = re.sub(r"(?<![A-Za-z0-9])AT(?=[0-9]*[kKnpuµ]|[0-9])", "47", ln)   # "AT0k" -> 470k, "ATp" -> 47p
+    ln = re.sub(r"(?<![A-Za-z0-9])I(?=[0-9]*[MK][ABCW]?\b)", "1", ln)     # "IMA" -> 1MA
     ln = re.sub(r"(?<![A-Za-z0-9])(?:IC|ic|Ic)([0-9SO]{1,2})(?![A-Za-z0-9])", lambda m: "IC" + m.group(1).replace("S", "5").replace("O", "0"), ln)
     ln = re.sub(r"(?<![A-Za-z0-9])(TRIM|POT|VR|SW)([0-9IlO]{1,2})(?![A-Za-z0-9])",
                 lambda m: m.group(1) + m.group(2).replace("I", "1").replace("l", "1").replace("O", "0"), ln, flags=re.I)
@@ -315,20 +318,16 @@ _SCH_MAXDIST = {"R": 14.0, "C": 20.0, "L": 20.0, "TRIM": 14.0, "D": 18.0, "Q": 1
 _SCH_SKIP_WORDS = {"GND", "VCC", "VDD", "VEE", "VREF", "IN", "OUT", "+9V", "9V", "+V", "-V", "+VE", "-VE", "+5V", "N/C", "NC"}
 
 
-def schematic_bom(pdf: Path, page_no: int) -> list[BomRow]:
-    """Pair designator labels with their nearest value label on a vector schematic
-    page (Eagle / KiCad exports keep both as text). Reliable for R, C, D, Q, IC;
-    other parts need the parts list."""
+def _pair_labels(words: list, unit: float = 1.0) -> list[BomRow]:
+    """Pair designator labels with the nearest value label. `words` are
+    (x0, y0, x1, y1, text) boxes; `unit` scales the distance thresholds
+    (1.0 for PDF points, larger for pixel coordinates)."""
     rows: list[BomRow] = []
-    with fitz.open(pdf) as doc:
-        if page_no < 1 or page_no > doc.page_count:
-            return rows
-        words = doc[page_no - 1].get_text("words")
     refs = [w for w in words if _SCH_REF.match(w[4])]
     others = [w for w in words if not _SCH_REF.match(w[4]) and w[4] not in _SCH_SKIP_WORDS]
     seen: set[str] = set()
     for r in refs:
-        ref = re.sub(r"^((?:IC|U)\d+)[A-F]$", r"\1", r[4])  # IC1A..IC1F gates -> IC1
+        ref = re.sub(r"^((?:IC|U)\d+)[A-F]$", r"\1", r[4])
         if ref in seen:
             continue
         cat = categorize(ref, "")
@@ -342,11 +341,11 @@ def schematic_bom(pdf: Path, page_no: int) -> list[BomRow]:
             if not pat.match(txt):
                 continue
             if cat in ("D", "Q", "IC") and txt.isdigit():
-                continue  # pin numbers
+                continue
             d = ((w[0] + w[2]) / 2 - rx) ** 2 + ((w[1] + w[3]) / 2 - ry) ** 2
             if best is None or d < best[0]:
                 best = (d, txt)
-        if best and best[0] ** 0.5 <= _SCH_MAXDIST[cat]:
+        if best and best[0] ** 0.5 <= _SCH_MAXDIST[cat] * unit:
             seen.add(ref)
             nr = normalize_row(BomRow(ref=ref, value=best[1], notes="from schematic"))
             if is_plausible(nr):
@@ -355,53 +354,55 @@ def schematic_bom(pdf: Path, page_no: int) -> list[BomRow]:
     return rows
 
 
-_QVP_HEADER = re.compile(r"^\s*Qty\.?\s+Value\s+(?:Parts?|Devices?|Refs?|Designators?)(?:\s+Notes?)?\s*$", re.I)
-_QVP_ROW = re.compile(r"^\s*(\d{1,3})\s+(\S.*?\S|\S)\s{2,}([A-Za-z][A-Za-z0-9/\-]*(?:\s*,\s*[A-Za-z][A-Za-z0-9/\-]*)*)\s*,?(?:\s{2,}(\S.*?))?\s*$")
-_QVP_SECTION = re.compile(r"^\s*([A-Z][A-Za-z ,&/]{3,60})\s*$")
+def schematic_bom(pdf: Path, page_no: int) -> list[BomRow]:
+    """Pair designator labels with their nearest value label on a vector schematic
+    page (Eagle / KiCad exports keep both as text). Reliable for R, C, D, Q, IC;
+    other parts need the parts list."""
+    with fitz.open(pdf) as doc:
+        if page_no < 1 or page_no > doc.page_count:
+            return []
+        words = doc[page_no - 1].get_text("words")
+    return _pair_labels(words, unit=1.0)
 
 
-def parse_bom_qty_value_parts(pages: list[str]) -> list[BomRow]:
-    """'Qty  Value  Parts' tables (Moonn Electronics): one line per value with the
-    designators grouped, under section headings that name the part type."""
-    rows: list[BomRow] = []
-    seen: set[str] = set()
-    for page in pages:
-        lines = page.splitlines()
-        i = 0
-        while i < len(lines) and not _QVP_HEADER.match(lines[i]):
-            i += 1
-        if i >= len(lines):
+def ocr_schematic_bom(image: Path, scale: int = 2) -> list[BomRow]:
+    """Same pairing, but for a schematic *image*: OCR with word boxes (sparse
+    text mode) after upscaling. Good for clean KiCad-style exports."""
+    if not shutil.which("tesseract"):
+        return []
+    import csv
+    import io
+    with fitz.open(image) as d:
+        pix = d[0].get_pixmap(matrix=fitz.Matrix(scale, scale), alpha=False)
+        up = image.with_name(image.stem + f"-x{scale}.png")
+        pix.save(up)
+    tsv = subprocess.run(["tesseract", str(up), "-", "--psm", "11", "tsv"], capture_output=True, text=True).stdout
+    words = []
+    for r in csv.DictReader(io.StringIO(tsv), delimiter="\t"):
+        t = (r.get("text") or "").strip()
+        try:
+            conf = float(r.get("conf") or 0)
+            x, y, w, h = int(r["left"]), int(r["top"]), int(r["width"]), int(r["height"])
+        except (KeyError, ValueError):
             continue
-        section = ""
-        for ln in lines[i + 1:]:
-            if not ln.strip():
-                continue
-            m = _QVP_ROW.match(ln)
-            if m:
-                _, value, parts, notes = m.groups()
-                ptype = section
-                for ref in re.split(r"\s*,\s*", parts.strip(", ")):
-                    if not ref or ref in seen:
-                        continue
-                    seen.add(ref)
-                    nr = normalize_row(BomRow(ref=ref, value=value.strip(), part_type=ptype, notes=(notes or "").strip()))
-                    if is_plausible(nr):
-                        rows.append(nr)
-                continue
-            if re.match(r"^\s*(Schematic|Offboard|Wiring|Drill|Notes?)\b", ln, re.I):
-                break
-            s = _QVP_SECTION.match(ln)
-            if s:
-                section = s.group(1).strip().rstrip(":")
-    return rows
+        if not t or conf < 30:
+            continue
+        t = re.sub(r"^(\d+(?:\.\d+)?)Meg$", r"\1M", t)
+        words.append((x, y, x + w, y + h, t))
+    # 12px text at 2x -> ~24px glyphs; thresholds in PDF points were tuned for ~7pt labels
+    return _pair_labels(words, unit=3.0 * scale)
 
 
 def find_schematic_page(pages: list[str]) -> int | None:
     """1-based page index whose heading is SCHEMATIC (or 'Schematic Diagram'),
     or a KiCad-exported sheet (numbered column labels along the top edge)."""
     for idx, page in enumerate(pages, start=1):
+        head_lines = [ln.strip() for ln in page.strip().splitlines() if ln.strip()][:4]
+        if any(re.fullmatch(r"SCHEMATICS?(?: DIAGRAM)?:?", ln.upper()) for ln in head_lines):
+            return idx
+    for idx, page in enumerate(pages, start=1):
         head = "\n".join(page.strip().splitlines()[:4]).upper()
-        if re.search(r"\bSCHEMATIC\b", head) and "TABLE OF CONTENTS" not in head:
+        if re.search(r"\bSCHEMATIC\b", head) and not re.search(r"TABLE OF CONTENTS|INDEX|\d\.\s*SCHEMATIC", head):
             return idx
     for idx, page in enumerate(pages, start=1):
         first = next((ln for ln in page.splitlines() if ln.strip()), "")
@@ -433,11 +434,9 @@ def doc_version(pages: list[str]) -> str:
 def process_document(pdf: Path, vendor: str, slug: str) -> dict:
     """Return bom rows, schematic png (relative to data/), page number, version."""
     pages = pdf_text_pages(pdf)
-    bom = parse_bom(pages)
-    if len(bom) < 4:
-        bom = parse_bom_qty_value_parts(pages) or bom
-    if len(bom) < 4:
-        bom = parse_bom_columns(pages) or bom
+    # Vendors lay their parts lists out three ways; run every parser and keep the
+    # one that recovered the most designators (they never both succeed on one doc).
+    bom = max((parse_bom(pages), parse_bom_qty_value_parts(pages), parse_bom_columns(pages)), key=len)
     page_no = find_schematic_page(pages)
     schematic_rel = ""
     if page_no:

@@ -132,6 +132,7 @@ def normalize_row(row: BomRow) -> BomRow:
     row.sort_key = 0.0
 
     if row.category == "R" or row.category == "TRIM":
+        raw = re.sub(r"^(\d+(?:[.,]\d+)?)m$", r"\1M", raw)  # "1m" on a resistor means 1 megohm, never milliohm
         n = _parse_si(raw)
         if n is not None:
             row.norm_value = _fmt(n, _R_PREFIX)

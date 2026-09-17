@@ -3,7 +3,7 @@
 	import Faceplate from '$lib/Faceplate.svelte';
 	import { currency } from '$lib/currency.svelte';
 	import { normalizeOriginal } from '$lib/search';
-	import { PART_CATEGORY_NAMES, PART_ORDER, VENDOR_NAMES, type BomRow } from '$lib/types';
+	import { PART_CATEGORY_NAMES, PART_ORDER, VENDOR_NAMES, VENDOR_KIND, primaryAction, type BomRow } from '$lib/types';
 
 	let { data } = $props();
 	const c = $derived(data.circuit);
@@ -60,8 +60,8 @@
 				{#if c.tags.length}<div><dt class="label">Tags</dt><dd>{c.tags.join(', ')}</dd></div>{/if}
 			</dl>
 			<div class="actions">
-				<a class="btn" href={c.url} target="_blank" rel="noopener">Buy the PCB at {VENDOR_NAMES[c.vendor]}</a>
-				{#if c.doc_url}<a class="btn ghost" href={c.doc_url} target="_blank" rel="noopener">Build document{#if c.doc_version} <span class="mono ver">{c.doc_version}</span>{/if}</a>{/if}
+				<a class="btn" href={c.url} target="_blank" rel="noopener">{primaryAction(c.vendor)}</a>
+				{#if c.doc_url && c.doc_url !== c.url}<a class="btn ghost" href={c.doc_url} target="_blank" rel="noopener">Build document{#if c.doc_version} <span class="mono ver">{c.doc_version}</span>{/if}</a>{/if}
 				{#each Object.entries(c.extra_docs) as [label, href]}
 					<a class="btn ghost" {href} target="_blank" rel="noopener">{label}</a>
 				{/each}
@@ -87,7 +87,13 @@
 			<img src="{base}/data/{schematicImage}" alt="Schematic page from the {VENDOR_NAMES[c.vendor]} build document" loading="lazy" />
 			<p class="dim small">Cached from the vendor build document for local reference. Not for redistribution.</p>
 		{:else}
-			<p>The schematic is in the vendor's build document{#if c.schematic_page}, page {c.schematic_page}{/if}. <a href={c.doc_url} target="_blank" rel="noopener">Open the build document</a>. No KiCad fragment has been drawn for this circuit yet.</p>
+			{#if VENDOR_KIND[c.vendor] === 'blog'}
+				<p>The schematic is in the post. <a href={c.url} target="_blank" rel="noopener">Open it at {VENDOR_NAMES[c.vendor]}</a>. No KiCad fragment has been drawn for this circuit yet.</p>
+			{:else if VENDOR_KIND[c.vendor] === 'projects'}
+				<p>The schematic image is on the project page. <a href={c.url} target="_blank" rel="noopener">Open it at {VENDOR_NAMES[c.vendor]}</a>.</p>
+			{:else}
+				<p>The schematic is in the vendor's build document{#if c.schematic_page}, page {c.schematic_page}{/if}. <a href={c.doc_url} target="_blank" rel="noopener">Open the build document</a>. No KiCad fragment has been drawn for this circuit yet.</p>
+			{/if}
 		{/if}
 	</section>
 
@@ -97,7 +103,7 @@
 			{#if c.bom.length}<button type="button" class="btn ghost" onclick={copyBom}>{copied ? 'Copied' : 'Copy as TSV'}</button>{/if}
 		</div>
 		{#if c.bom.length === 0}
-			<p class="dim">No parts list could be extracted for this board{#if c.vendor === 'guitarpcb'} (GuitarPCB publishes its parts list as an image){/if}. The build document has it.</p>
+			<p class="dim">{#if VENDOR_KIND[c.vendor] === 'projects'}No parts list: the BOM download on this project needs an account at the fab.{:else if VENDOR_KIND[c.vendor] === 'blog'}No parts list could be read from the schematic image; the values are in the picture.{:else}No parts list could be extracted for this board{#if c.vendor === 'guitarpcb'} (GuitarPCB publishes its parts list as an image){/if}. The build document has it.{/if}</p>
 		{:else}
 			<table class="sheet-table parts">
 				<thead><tr><th>Ref</th><th>Value</th><th class="norm">Normalized</th><th>Type</th><th class="notes">Notes</th></tr></thead>
