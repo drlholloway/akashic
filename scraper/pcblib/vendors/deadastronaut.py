@@ -81,7 +81,7 @@ class DeadAstronaut(Adapter):
         pdf = self.f.get_file(doc_url, ".pdf")
         if pdf and pdf.read_bytes()[:5] == b"%PDF-":
             c.doc_local = str(pdf.relative_to(DATA_DIR))
-            c.bom = ocr_bom(pdf, self.vendor, slug, max_pages=8)
+            c.bom = ocr_bom(pdf, self.vendor, slug, max_pages=8, thorough=True)
             pots = [r for r in c.bom if r.category == "POT"]
             if pots:
                 named = all(re.fullmatch(r"[A-Za-z][A-Za-z \-/]+", r.ref) for r in pots)

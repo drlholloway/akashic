@@ -54,7 +54,10 @@ class BentFishbowl(Adapter):
                 continue
             if data.get("uri"):
                 figs.append((data["uri"], int(data.get("width") or 0), int(data.get("height") or 0)))
-        schem = next(((u, w, h) for u, w, h in figs if h and w / h < 2.6), figs[0] if figs else None)
+        # Schematics are PNG exports with a moderate aspect ratio; photos are JPEGs, plots are very wide.
+        candidates = [f for f in figs if f[0].lower().endswith(".png") and f[2] and f[1] / f[2] < 2.6]
+        candidates += [f for f in figs if f not in candidates and f[2] and f[1] / f[2] < 2.6]
+        schem = candidates[0] if candidates else (figs[0] if figs else None)
         published = ""
         m = re.search(r'"datePublished":"([^"]+)"', html)
         if m:
@@ -70,21 +73,24 @@ class BentFishbowl(Adapter):
             tags=[t for t in tags if t not in ("schematic", "pedals")] + [x.replace("-", " ") for x in cats],
             price=None, currency="USD", doc_url=url, doc_version=published, enclosure=find_enclosure(body),
         )
-        if schem:
-            uri, w, h = schem
+        # Try candidate figures in order until one OCRs like a schematic (3+ designators).
+        for uri, w, h in candidates[:3] or ([schem] if schem else []):
             img_url = f"https://static.wixstatic.com/media/{uri}"
-            c.image_url = img_url
-            c.extra_docs["Schematic image (CC BY-NC-SA)"] = img_url
             img = self.f.get_file(img_url, ".png")
-            if img:
-                png = CACHE_DIR / self.vendor / f"{slug}-schematic.png"
-                png.parent.mkdir(parents=True, exist_ok=True)
-                if not png.exists():
-                    png.write_bytes(img.read_bytes())
+            if not img:
+                continue
+            png = CACHE_DIR / self.vendor / f"{slug}-schematic.png"
+            png.parent.mkdir(parents=True, exist_ok=True)
+            png.write_bytes(img.read_bytes())
+            rows = ocr_schematic_bom(png)
+            if len(rows) >= 3 or (uri, w, h) == candidates[-1:][0] if candidates else True:
+                c.image_url = img_url
+                c.extra_docs["Schematic image (CC BY-NC-SA)"] = img_url
                 c.schematic_local = str(png.relative_to(DATA_DIR))
                 c.schematic_page = 1
-                c.bom = ocr_schematic_bom(png)
+                c.bom = rows
                 pots = [r for r in c.bom if r.category == "POT"]
                 if pots:
                     c.controls = [f"{len(pots)} knobs"]
+                break
         return c

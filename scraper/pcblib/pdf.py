@@ -217,7 +217,7 @@ def _clean_ocr_line(ln: str) -> str:
 
 
 def ocr_bom(pdf: Path, vendor: str, slug: str, max_pages: int = 9, min_rows: int = 12,
-            pages: list[int] | None = None) -> list[BomRow]:
+            pages: list[int] | None = None, thorough: bool = False) -> list[BomRow]:
     """OCR pages in order until one yields a real parts table, keeping the best.
     For vendors whose parts list is an image (GuitarPCB, Dead End FX)."""
     if not shutil.which("tesseract"):
@@ -233,13 +233,13 @@ def ocr_bom(pdf: Path, vendor: str, slug: str, max_pages: int = 9, min_rows: int
         for page_no in pages:
             if page_no < 1 or page_no > n_pages:
                 continue
-            for r in _ocr_page(pdf, vendor, slug, page_no):
+            for r in _ocr_page(pdf, vendor, slug, page_no, thorough):
                 if r.ref not in seen_refs:
                     seen_refs.add(r.ref)
                     merged.append(r)
         return merged
     for page_no in range(1, min(n_pages, max_pages) + 1):
-        rows = _ocr_page(pdf, vendor, slug, page_no)
+        rows = _ocr_page(pdf, vendor, slug, page_no, thorough)
         if len(rows) > len(best):
             best = rows
         if len(best) >= min_rows:
@@ -247,17 +247,82 @@ def ocr_bom(pdf: Path, vendor: str, slug: str, max_pages: int = 9, min_rows: int
     return best
 
 
-def _ocr_page(pdf: Path, vendor: str, slug: str, page_no: int) -> list[BomRow]:
-    png = CACHE_DIR / vendor / f"{slug}-p{page_no}.png"
-    txt = png.with_suffix(".txt")
+def _tesseract_cached(png: Path, psm: int, tag: str = "") -> str:
+    txt = png.with_name(f"{png.stem}{tag}{'' if psm == 6 else f'-psm{psm}'}.txt")
     if txt.exists():
-        out = txt.read_text()
-    else:
-        if not png.exists():
-            render_page(pdf, page_no, png, dpi=300)
-        out = subprocess.run(["tesseract", str(png), "-", "--psm", "6"], capture_output=True, text=True).stdout
-        txt.write_text(out)
-    return _rows_from_ocr(out)
+        return txt.read_text()
+    out = subprocess.run(["tesseract", str(png), "-", "--psm", str(psm)], capture_output=True, text=True).stdout
+    txt.write_text(out)
+    return out
+
+
+def _merge_ocr_rows(variants: list[list[BomRow]]) -> list[BomRow]:
+    """Union of several OCR passes: per designator keep the value most passes agree on,
+    preferring values that parse (a numeric R/C) over ones that don't."""
+    by_ref: dict[str, list[BomRow]] = {}
+    order: list[str] = []
+    for rows in variants:
+        for r in rows:
+            if r.ref not in by_ref:
+                order.append(r.ref)
+            by_ref.setdefault(r.ref, []).append(r)
+    out: list[BomRow] = []
+    for ref in order:
+        cands = by_ref[ref]
+        def score(r: BomRow) -> tuple:
+            parses = 1 if (r.category not in ("R", "C", "L") or r.sort_key > 0) else 0
+            votes = sum(1 for o in cands if o.norm_value == r.norm_value)
+            return (parses, votes)
+        out.append(max(cands, key=score))
+    return out
+
+
+def _ocr_page(pdf: Path, vendor: str, slug: str, page_no: int, thorough: bool = False) -> list[BomRow]:
+    png = CACHE_DIR / vendor / f"{slug}-p{page_no}.png"
+    if not png.exists():
+        render_page(pdf, page_no, png, dpi=300)
+    variants = [_rows_from_ocr(_tesseract_cached(png, 6))]
+    if not thorough:
+        return variants[0]
+    # Low-resolution scans (a BOM screenshot placed on a page): OCR the embedded
+    # image itself, upscaled to ~1400px wide, in two segmentation modes.
+    variants.append(_rows_from_ocr(_tesseract_cached(png, 4)))
+    with fitz.open(pdf) as d:
+        page = d[page_no - 1]
+        for i, im in enumerate(page.get_images(full=True)):
+            w, h = im[2], im[3]
+            if w < 400 or h < 300 or w * h < 150_000:
+                continue
+            try:
+                base = fitz.Pixmap(d, im[0])
+                if base.n > 3:
+                    base = fitz.Pixmap(fitz.csRGB, base)
+                ipng = CACHE_DIR / vendor / f"{slug}-p{page_no}-img{i}.png"
+                if not ipng.exists():
+                    s = max(1.0, min(4.0, 1440 / w))
+                    tmp = fitz.open("png", base.tobytes("png"))
+                    pix = tmp[0].get_pixmap(matrix=fitz.Matrix(s * w / tmp[0].rect.width, s * h / tmp[0].rect.height), alpha=False)
+                    pix.save(ipng)
+            except Exception:  # noqa: BLE001 - odd colour spaces etc.
+                continue
+            for psm in (6, 4):
+                variants.append(_rows_from_ocr(_tesseract_cached(ipng, psm)))
+    return _merge_ocr_rows(variants)
+
+
+_UNIT_TOKEN = re.compile(r"^[0-9ATtlIOoS?£.]{1,6}(?:[kKMrRnpuµ]F?|[uµ]F|nF|pF)$")
+_DIGIT_FIX = str.maketrans({"A": "4", "T": "7", "t": "7", "l": "1", "I": "1", "O": "0", "o": "0", "S": "5", "?": "2", "£": ""})
+
+
+def _repair_value(v: str) -> str:
+    """OCR of low-res tables swaps digits for look-alike letters: A7T0k -> 470k, 2?n -> 22n,
+    ATr -> 47r. Only touch tokens that end in a unit and contain a look-alike."""
+    if _UNIT_TOKEN.match(v) and re.search(r"[ATtlIOoS?£]", v[:-1]):
+        head, tail = re.match(r"^(.*?)([kKMrRnpuµ]F?|[uµ]F|nF|pF)$", v).groups()
+        fixed = head.translate(_DIGIT_FIX)
+        if re.fullmatch(r"\d+(?:\.\d+)?", fixed):
+            return fixed + tail
+    return v
 
 
 def _rows_from_ocr(out: str) -> list[BomRow]:
@@ -265,7 +330,7 @@ def _rows_from_ocr(out: str) -> list[BomRow]:
     seen: set[str] = set()
 
     def add(ref: str, value: str, ptype: str = "", cat: str = "") -> None:
-        value = value.strip().rstrip(".,;:")
+        value = _repair_value(value.strip().rstrip(".,;:"))
         if ref in seen or ref[0] in "J":
             return
         if cat != "POT" and (not re.search(r"\d", value) or not re.fullmatch(r"[A-Za-z0-9.\-/µu]{1,12}", value)):
@@ -373,8 +438,11 @@ def ocr_schematic_bom(image: Path, scale: int = 2) -> list[BomRow]:
         return []
     import csv
     import io
+    native = fitz.Pixmap(str(image))  # true pixel size; the file's dpi tag must not shrink it
     with fitz.open(image) as d:
-        pix = d[0].get_pixmap(matrix=fitz.Matrix(scale, scale), alpha=False)
+        rect = d[0].rect
+        to_native = native.width / rect.width if rect.width else 1.0
+        pix = d[0].get_pixmap(matrix=fitz.Matrix(to_native * scale, to_native * scale), alpha=False)
         up = image.with_name(image.stem + f"-x{scale}.png")
         pix.save(up)
     tsv = subprocess.run(["tesseract", str(up), "-", "--psm", "11", "tsv"], capture_output=True, text=True).stdout
