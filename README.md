@@ -79,7 +79,19 @@ npm run build      # static site in app/build (prerenders every circuit and part
 npm run preview    # serve the build locally
 ```
 
-Deploy `app/build` to any static host. The search index is built in the browser from `data/index.json`; circuit pages load their own JSON on demand and are cached by the service worker for offline use.
+## Deploying
+
+The build is static, so any static host works. A Cloudflare setup is included (Workers static assets, which is what Cloudflare Pages became):
+
+```sh
+cd app
+npx wrangler login      # once; opens the browser
+npm run deploy          # export data, build, publish
+```
+
+`npm run deploy` runs `scripts/deploy.sh`, which exports the data bundle (never with `--images`), builds the site, and runs `wrangler deploy` with the config in `app/wrangler.toml`. The site is served at `https://pcb-schematic-library.<account>.workers.dev`; add a custom domain in the Cloudflare dashboard under the Worker's settings. `static/_headers` sets long cache lifetimes for the hashed assets and fonts and a short one for the data bundle.
+
+Deploy `app/build` to any other static host the same way. The search index is built in the browser from `data/index.json`; circuit pages load their own JSON on demand and are cached by the service worker for offline use.
 
 ## Data model
 

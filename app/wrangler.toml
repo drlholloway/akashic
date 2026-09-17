@@ -1,0 +1,9 @@
+# Cloudflare Workers static-assets deploy (Pages is now part of Workers).
+# `npm run deploy` exports the data, builds, and runs `wrangler deploy`.
+name = "pcb-schematic-library"
+compatibility_date = "2026-09-01"
+
+[assets]
+directory = "./build"
+# Unknown routes fall back to the app shell, which client-side routes them.
+not_found_handling = "single-page-application"

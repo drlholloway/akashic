@@ -1,0 +1,11 @@
+# Hashed SvelteKit assets never change; cache them for a year.
+/_app/immutable/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Data bundle is regenerated on each deploy; let browsers revalidate.
+/data/*
+  Cache-Control: public, max-age=3600, must-revalidate
+
+# Fonts are self-hosted and stable.
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
