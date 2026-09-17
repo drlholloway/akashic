@@ -1,5 +1,6 @@
 import { base } from '$app/paths';
 import type { Rates } from '$lib/currency.svelte';
+import type { VendorInfo } from '$lib/types';
 import type { LayoutLoad } from './$types';
 
 export const prerender = true;
@@ -13,5 +14,12 @@ export const load: LayoutLoad = async ({ fetch }) => {
 	} catch {
 		/* offline without a cached copy: prices show as listed */
 	}
-	return { rates };
+	let vendors: Record<string, VendorInfo> = {};
+	try {
+		const res = await fetch(`${base}/data/vendors.json`);
+		if (res.ok) vendors = (await res.json()) as Record<string, VendorInfo>;
+	} catch {
+		/* footer just omits the vendor list */
+	}
+	return { rates, vendors };
 };

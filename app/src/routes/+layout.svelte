@@ -6,7 +6,10 @@
 	import type { Snippet } from 'svelte';
 	import { currency, type Currency } from '$lib/currency.svelte';
 
-	let { children, data }: { children: Snippet; data: { rates: import('$lib/currency.svelte').Rates | null } } = $props();
+	import type { VendorInfo } from '$lib/types';
+
+	let { children, data }: { children: Snippet; data: { rates: import('$lib/currency.svelte').Rates | null; vendors: Record<string, VendorInfo> } } = $props();
+	const vendorList = $derived(Object.values(data.vendors ?? {}).sort((a, b) => a.name.localeCompare(b.name)));
 	$effect.pre(() => {
 		currency.init(data.rates);
 	});
@@ -81,7 +84,13 @@
 </main>
 
 <footer>
-	<p>Index of circuits published by PedalPCB, Aion FX, Madbean Pedals, GuitarPCB, Fuzz Dog, Sheepy Love, Dead End FX, Moonn Electronics, Five Cats Pedals, Parasit Studio, PCB Guitar Mania, Dead Astronaut FX, General Guitar Gadgets, Lectric-FX, Zero G IOD, shared PCBWay projects, the Bent Fishbowl schematic blog, and the Experimentalists Anonymous schematic archive. Names, part values and prices are indexed for reference; build documents and schematics belong to their vendors and are linked, not copied. Buy the board from the vendor.</p>
+	<p class="label strong">Sources</p>
+	<ul class="vendors">
+		{#each vendorList as v (v.id)}
+			<li><a href={v.url} target="_blank" rel="noopener" title={v.license_note || v.name}>{v.name}</a></li>
+		{/each}
+	</ul>
+	<p>Names, part values and prices are indexed for reference; build documents and schematics belong to their authors and are linked, not copied. Buy the board from the vendor.</p>
 </footer>
 
 <style>
@@ -140,7 +149,12 @@
 	nav a:hover { text-decoration: none; color: var(--ink); }
 	nav a[aria-current='page'] { color: var(--ink); border-bottom-color: var(--coat); }
 	main { min-height: 70dvh; }
-	footer { padding: 32px var(--gutter) 48px; border-top: 1px solid var(--rule); color: var(--ink-3); font-size: 13px; max-width: 80ch; }
+	footer { padding: 32px var(--gutter) 48px; border-top: 1px solid var(--rule); color: var(--ink-3); font-size: 13px; }
+	footer p { max-width: 80ch; }
+	footer .label { margin-bottom: 10px; }
+	.vendors { list-style: none; margin: 0 0 20px; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 6px 24px; max-width: 1180px; }
+	.vendors a { color: var(--ink-2); font-family: var(--label); font-weight: 600; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; }
+	.vendors a:hover { color: var(--ink); }
 	@media (max-width: 860px) {
 		.titleblock {
 			grid-template-columns: 1fr auto;
