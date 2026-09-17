@@ -124,7 +124,7 @@ def normalize_row(row: BomRow) -> BomRow:
     row.category = row.category or categorize(row.ref, row.part_type, row.value)
     if row.category == "POT" and re.search(r"[SD]P[SD]T|3PDT|4PDT", row.value.upper()):
         row.category = "SW"
-    raw = row.value.strip()
+    raw = row.value.strip().replace("ų", "u").replace("μ", "u").replace("µ", "u")
     if row.category in ("D", "Q", "IC", "OPTO"):
         raw = re.sub(r"[*+†‡]+$", "", raw).strip()          # footnote markers: 2N5458**, 1N4148+
         raw = re.sub(r"\s+[A-Z]$", "", raw)                  # stray column bleed: "1N5817 S"

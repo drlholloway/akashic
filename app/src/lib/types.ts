@@ -1,4 +1,4 @@
-export type Vendor = 'pedalpcb' | 'aionfx' | 'madbean' | 'guitarpcb' | 'fuzzdog' | 'sheepylove' | 'deadendfx' | 'moonn' | 'fivecats' | 'parasit' | 'pcbway-gtu' | 'pcbguitarmania' | 'deadastronaut' | 'bentfishbowl';
+export type Vendor = 'pedalpcb' | 'aionfx' | 'madbean' | 'guitarpcb' | 'fuzzdog' | 'sheepylove' | 'deadendfx' | 'moonn' | 'fivecats' | 'parasit' | 'pcbway-gtu' | 'pcbguitarmania' | 'deadastronaut' | 'bentfishbowl' | 'ggg';
 
 export interface IndexEntry {
 	id: string;
@@ -77,7 +77,8 @@ export const VENDOR_NAMES: Record<Vendor, string> = {
 	'pcbway-gtu': 'PCBWay: Glory to Ukraine',
 	pcbguitarmania: 'PCB Guitar Mania',
 	deadastronaut: 'Dead Astronaut FX',
-	bentfishbowl: 'Bent Fishbowl'
+	bentfishbowl: 'Bent Fishbowl',
+	ggg: 'General Guitar Gadgets'
 };
 
 export type VendorKind = 'shop' | 'projects' | 'blog';

@@ -164,10 +164,11 @@ def parse_bom_columns(pages: list[str], max_col: int | None = None) -> list[BomR
             continue
         text = "\n".join(ln[:max_col] if max_col else ln for ln in page.splitlines())
         for ref, val in _COL_DESIG.findall(text):
-            if ref in seen or val.upper() in {"VALUE", "QTY", "TYPE"}:
+            val = val.strip().rstrip(",;")  # "2N5457, J201 or other FET" -> 2N5457
+            if ref in seen or val.upper() in {"VALUE", "QTY", "TYPE", "OR", "AND"}:
                 continue
             seen.add(ref)
-            nr = normalize_row(BomRow(ref=ref, value=val.strip()))
+            nr = normalize_row(BomRow(ref=ref, value=val))
             if is_plausible(nr):
                 rows.append(nr)
         for ref, val in re.findall(r"(?<![A-Za-z0-9])([A-Z]*TRIM[A-Z0-9]*)[ \t]+(\d+(?:[.,]\d+)?[kKM]?)(?![A-Za-z0-9])", text):

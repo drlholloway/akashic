@@ -57,6 +57,8 @@ VENDORS = {
                       "Build docs are marked not for commercial use; indexed and linked, not redistributed."),
     "bentfishbowl": ("Bent Fishbowl", "https://bentfishbowl.wixsite.com/electronics/blog",
                      "Schematics are CC BY-NC-SA by bentfishbowl; no PCB is sold, the post is the source."),
+    "ggg": ("General Guitar Gadgets", "https://store.generalguitargadgets.com/collections/pcbs",
+            "Project PDFs are © JD Sleep and may only be served from generalguitargadgets.com; indexed and linked, not redistributed."),
     "pcbway-gtu": ("PCBWay: Glory to Ukraine", "https://www.pcbway.com/project/member/?bmbno=19C5FC6C-66B1-46",
                    "Shared projects are CC BY-SA 3.0; schematic images may be shown with attribution. BOM and gerbers need a PCBWay login."),
 }
