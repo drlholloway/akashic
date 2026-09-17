@@ -58,7 +58,10 @@ def classify(*hints: str) -> str:
     return "Other"
 
 
-_ENCLOSURE_RE = re.compile(r"\b(1590A|1590B2?|1590BB2?|1590N1|1590XX|125B|1590DD|1590LB|1590G|1032L|1590A2|1550B)\b", re.I)
+# Hammond die-cast sizes builders actually specify, longest names first so 1590BB2 wins over 1590B.
+_ENCLOSURE_RE = re.compile(
+    r"\b(1590BB2|1590BBS|1590XX|1590DD|1590N1|1590P1|1590R1|1590B2|1590BS|1590LB|1590BB|1590A2|"
+    r"1590A|1590B|1590C|1590D|1590E|1590G|1590J|1590Q|1590S|1590T|1590X|1590Y|1590Z|125B|1032L|1550B)\b", re.I)
 
 
 def find_enclosure(*texts: str) -> str:
