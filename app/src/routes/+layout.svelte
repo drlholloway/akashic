@@ -156,13 +156,14 @@
 	nav a[aria-current='page'] { color: var(--ink); border-bottom-color: var(--coat); }
 	main { min-height: 70dvh; }
 	footer { padding: 32px var(--gutter) 48px; border-top: 1px solid var(--rule); color: var(--ink-3); font-size: 13px; }
-	footer p { max-width: 80ch; }
+	footer p { max-width: 1180px; }
 	footer .label { margin-bottom: 10px; }
 	.vendors { list-style: none; margin: 0 0 20px; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 6px 24px; max-width: 1180px; }
 	.vendors a { color: var(--ink-2); font-family: var(--label); font-weight: 600; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; }
 	.vendors a:hover { color: var(--ink); }
-	.coffee { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--rule); }
-	.coffee p { margin-bottom: 10px; }
+	.coffee { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--rule); max-width: 1180px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; }
+	.coffee .label { flex-basis: 100%; margin: 0; }
+	.coffee p { margin: 0; flex: 1 1 40ch; }
 	.coffee p a { color: var(--ink-2); text-decoration: underline; text-underline-offset: 2px; }
 	@media (max-width: 860px) {
 		.titleblock {
