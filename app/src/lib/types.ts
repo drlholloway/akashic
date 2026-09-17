@@ -1,4 +1,4 @@
-export type Vendor = 'pedalpcb' | 'aionfx' | 'madbean' | 'guitarpcb' | 'fuzzdog' | 'sheepylove' | 'deadendfx' | 'moonn' | 'fivecats' | 'parasit' | 'pcbway-gtu' | 'pcbguitarmania' | 'deadastronaut' | 'bentfishbowl' | 'ggg' | 'lectricfx' | 'expanon';
+export type Vendor = 'pedalpcb' | 'aionfx' | 'madbean' | 'guitarpcb' | 'fuzzdog' | 'sheepylove' | 'deadendfx' | 'moonn' | 'fivecats' | 'parasit' | 'pcbway-gtu' | 'pcbguitarmania' | 'deadastronaut' | 'bentfishbowl' | 'ggg' | 'lectricfx' | 'expanon' | 'zerogiod';
 
 export interface IndexEntry {
 	id: string;
@@ -80,7 +80,8 @@ export const VENDOR_NAMES: Record<Vendor, string> = {
 	bentfishbowl: 'Bent Fishbowl',
 	ggg: 'General Guitar Gadgets',
 	lectricfx: 'Lectric-FX',
-	expanon: 'Experimentalists Anonymous'
+	expanon: 'Experimentalists Anonymous',
+	zerogiod: 'Zero G IOD'
 };
 
 export type VendorKind = 'shop' | 'projects' | 'blog' | 'archive';

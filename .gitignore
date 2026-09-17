@@ -8,6 +8,8 @@ scraper/.venv/
 # Scraped raw material (vendor HTML, PDFs, images) is never committed
 data/raw/
 data/cache/
+# Closed vendors' documentation is kept in git so it outlives the store
+!data/archive/
 data/library.sqlite
 data/library.sqlite-*
 

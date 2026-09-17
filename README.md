@@ -24,6 +24,7 @@ It ships as a static, offline-capable web app (PWA) that installs on macOS, Linu
 | General Guitar Gadgets | ~77 | parsed from the project BOM PDF | Shopify store; per-version PDFs on the project pages; the BOM title gives the board's name and original; prices in USD |
 | Lectric-FX | ~40 | parsed from the build-doc PDF | WooCommerce Store API; multi-column B.O.M. with pots, trimmers and switches; prices in USD |
 | Experimentalists Anonymous | ~780 | positional OCR of the drawing where legible | a plain file archive of traced schematics in category folders; no board to buy; MIDI, power-supply, synth-book and misc folders skipped |
+| Zero G IOD | 16 | OCR'd from BOM and schematic images | closed Big Cartel store; every product image (BOM, drill guide, schematic) is committed under `data/archive/zerogiod/` for posterity |
 | PCBWay: Glory to Ukraine | ~337 | none (BOM needs a PCBWay login) | one member's shared projects via the member JSONP list; schematic PNGs are CC BY-SA; no prices |
 
 ### What is indexed and what is not
@@ -45,7 +46,7 @@ Requires Python 3.12+, [uv](https://docs.astral.sh/uv/), poppler (`brew install 
 ```sh
 cd scraper
 uv venv .venv && uv pip install -e .
-.venv/bin/pcblib scrape pedalpcb      # each vendor: pedalpcb aionfx madbean guitarpcb fuzzdog sheepylove deadendfx moonn fivecats parasit pcbguitarmania deadastronaut bentfishbowl ggg lectricfx expanon pcbway-gtu
+.venv/bin/pcblib scrape pedalpcb      # each vendor: pedalpcb aionfx madbean guitarpcb fuzzdog sheepylove deadendfx moonn fivecats parasit pcbguitarmania deadastronaut bentfishbowl ggg lectricfx expanon zerogiod pcbway-gtu
 .venv/bin/pcblib stats
 .venv/bin/pcblib export               # writes app/static/data/*.json
 .venv/bin/pcblib export --images      # also bundles cached schematic renders (local use only)

@@ -345,12 +345,46 @@ _DIGIT_FIX = str.maketrans({"A": "4", "T": "7", "t": "7", "l": "1", "I": "1", "O
 def _repair_value(v: str) -> str:
     """OCR of low-res tables swaps digits for look-alike letters: A7T0k -> 470k, 2?n -> 22n,
     ATr -> 47r. Only touch tokens that end in a unit and contain a look-alike."""
+    if re.match(r"^[ABCW]\d", v):
+        return v  # a pot value like A1M: the letter is the taper, not a misread digit
     if _UNIT_TOKEN.match(v) and re.search(r"[ATtlIOoS?£]", v[:-1]):
         head, tail = re.match(r"^(.*?)([kKMrRnpuµ]F?|[uµ]F|nF|pF)$", v).groups()
         fixed = head.translate(_DIGIT_FIX)
         if re.fullmatch(r"\d+(?:\.\d+)?", fixed):
             return fixed + tail
     return v
+
+
+def ocr_image_bom(image: Path, vendor: str, slug: str, tag: str = "bom") -> list[BomRow]:
+    """Thorough OCR of a standalone parts-list image (a BOM photo or screenshot):
+    two segmentation modes plus a thresholded pass, merged per designator."""
+    if not shutil.which("tesseract"):
+        return []
+    png = CACHE_DIR / vendor / f"{slug}-{tag}.png"
+    png.parent.mkdir(parents=True, exist_ok=True)
+    if not png.exists():
+        try:
+            from PIL import Image
+            Image.MAX_IMAGE_PIXELS = None
+            im = Image.open(image)
+            if im.mode not in ("RGB", "L"):
+                im = im.convert("RGB")
+            if im.width < 1400:
+                s = 1400 / im.width
+                im = im.resize((int(im.width * s), int(im.height * s)))
+            im.save(png)
+        except Exception:  # noqa: BLE001
+            return []
+    variants = [_rows_from_ocr(_tesseract_cached(png, psm)) for psm in (6, 4)]
+    try:
+        from PIL import Image
+        bpng = png.with_name(png.stem + "-bin.png")
+        if not bpng.exists():
+            Image.open(png).convert("L").point(lambda v: 255 if v > 110 else 0).save(bpng)
+        variants += [_rows_from_ocr(_tesseract_cached(bpng, psm)) for psm in (6, 4)]
+    except ImportError:
+        pass
+    return _merge_ocr_rows(variants)
 
 
 def _rows_from_ocr(out: str) -> list[BomRow]:
