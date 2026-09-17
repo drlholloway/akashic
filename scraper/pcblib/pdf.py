@@ -163,6 +163,21 @@ def parse_bom_columns(pages: list[str], max_col: int | None = None) -> list[BomR
         if len(_COL_HEADERS.findall(page)) < 2:
             continue
         text = "\n".join(ln[:max_col] if max_col else ln for ln in page.splitlines())
+        # "Q1-Q4   2N5457" ranges and "LEVEL tr  10K" trimmers
+        for letter, a, b, val in re.findall(r"(?<![A-Z0-9])([RCDQ])(\d+)\s*[-–]\s*[RCDQ]?(\d+)[ \t]+([A-Za-z0-9][A-Za-z0-9.\-/]*)", text):
+            lo, hi = int(a), int(b)
+            if 0 < hi - lo < 40:
+                for i in range(lo, hi + 1):
+                    ref = f"{letter}{i}"
+                    if ref not in seen:
+                        seen.add(ref)
+                        nr = normalize_row(BomRow(ref=ref, value=val))
+                        if is_plausible(nr):
+                            rows.append(nr)
+        for ref, val in re.findall(r"(?<![A-Za-z0-9])([A-Z]{3,12})\s+tr\.?\s+(\d+(?:[.,]\d+)?[kKM]?)(?![A-Za-z0-9])", text):
+            if ref not in seen:
+                seen.add(ref)
+                rows.append(normalize_row(BomRow(ref=ref, value=val.upper(), part_type="Trimmer", category="TRIM")))
         for ref, val in _COL_DESIG.findall(text):
             val = val.strip().rstrip(",;")  # "2N5457, J201 or other FET" -> 2N5457
             if ref in seen or val.upper() in {"VALUE", "QTY", "TYPE", "OR", "AND"}:
@@ -287,6 +302,19 @@ def _ocr_page(pdf: Path, vendor: str, slug: str, page_no: int, thorough: bool = 
     # Low-resolution scans (a BOM screenshot placed on a page): OCR the embedded
     # image itself, upscaled to ~1400px wide, in two segmentation modes.
     variants.append(_rows_from_ocr(_tesseract_cached(png, 4)))
+    # Coloured table grids and tinted cells confuse tesseract; a hard threshold keeps
+    # only the dark text. (Pillow is optional: skip silently without it.)
+    try:
+        from PIL import Image
+        bpng = png.with_name(png.stem + "-bin.png")
+        if not bpng.exists():
+            Image.MAX_IMAGE_PIXELS = None
+            im = Image.open(png).convert("L")
+            im.point(lambda v: 255 if v > 90 else 0).save(bpng)
+        for psm in (6, 4):
+            variants.append(_rows_from_ocr(_tesseract_cached(bpng, psm)))
+    except ImportError:
+        pass
     with fitz.open(pdf) as d:
         page = d[page_no - 1]
         for i, im in enumerate(page.get_images(full=True)):
@@ -462,6 +490,47 @@ def ocr_schematic_bom(image: Path, scale: int = 2) -> list[BomRow]:
     return _pair_labels(words, unit=3.0 * scale)
 
 
+_QVP_HEADER = re.compile(r"^\s*Qty\.?\s+Value\s+(?:Parts?|Devices?|Refs?|Designators?)(?:\s+Notes?)?\s*$", re.I)
+_QVP_ROW = re.compile(r"^\s*(\d{1,3})\s+(\S.*?\S|\S)\s{2,}([A-Za-z][A-Za-z0-9/\-]*(?:\s*,\s*[A-Za-z][A-Za-z0-9/\-]*)*)\s*,?(?:\s{2,}(\S.*?))?\s*$")
+_QVP_SECTION = re.compile(r"^\s*([A-Z][A-Za-z ,&/]{3,60})\s*$")
+
+
+def parse_bom_qty_value_parts(pages: list[str]) -> list[BomRow]:
+    """'Qty  Value  Parts' tables (Moonn Electronics): one line per value with the
+    designators grouped, under section headings that name the part type."""
+    rows: list[BomRow] = []
+    seen: set[str] = set()
+    for page in pages:
+        lines = page.splitlines()
+        i = 0
+        while i < len(lines) and not _QVP_HEADER.match(lines[i]):
+            i += 1
+        if i >= len(lines):
+            continue
+        section = ""
+        for ln in lines[i + 1:]:
+            if not ln.strip():
+                continue
+            m = _QVP_ROW.match(ln)
+            if m:
+                _, value, parts, notes = m.groups()
+                ptype = section
+                for ref in re.split(r"\s*,\s*", parts.strip(", ")):
+                    if not ref or ref in seen:
+                        continue
+                    seen.add(ref)
+                    nr = normalize_row(BomRow(ref=ref, value=value.strip(), part_type=ptype, notes=(notes or "").strip()))
+                    if is_plausible(nr):
+                        rows.append(nr)
+                continue
+            if re.match(r"^\s*(Schematic|Offboard|Wiring|Drill|Notes?)\b", ln, re.I):
+                break
+            s = _QVP_SECTION.match(ln)
+            if s:
+                section = s.group(1).strip().rstrip(":")
+    return rows
+
+
 def find_schematic_page(pages: list[str]) -> int | None:
     """1-based page index whose heading is SCHEMATIC (or 'Schematic Diagram'),
     or a KiCad-exported sheet (numbered column labels along the top edge)."""
@@ -480,11 +549,18 @@ def find_schematic_page(pages: list[str]) -> int | None:
     return None
 
 
-def render_page(pdf: Path, page_no: int, out_png: Path, dpi: int = 170) -> Path:
+def render_page(pdf: Path, page_no: int, out_png: Path, dpi: int = 170, max_px: int = 3600) -> Path:
+    """Render a page to PNG. Scanned docs sometimes declare huge page sizes (a 2550x3300
+    JPEG placed on a 35x45 inch page), so the longest side is capped at `max_px`:
+    tesseract reads ~300 dpi letter-size text well and giant glyphs badly."""
     out_png.parent.mkdir(parents=True, exist_ok=True)
     with fitz.open(pdf) as doc:
         page = doc[page_no - 1]
-        pix = page.get_pixmap(dpi=dpi, alpha=False)
+        scale = dpi / 72
+        longest = max(page.rect.width, page.rect.height) * scale
+        if longest > max_px:
+            scale *= max_px / longest
+        pix = page.get_pixmap(matrix=fitz.Matrix(scale, scale), alpha=False)
         pix.save(out_png)
     return out_png
 

@@ -22,6 +22,7 @@ It ships as a static, offline-capable web app (PWA) that installs on macOS, Linu
 | Dead Astronaut FX | ~19 | OCR'd from raster build docs | Wix site; pages named from the nav menu; PayPal prices in GBP |
 | Bent Fishbowl | ~40 | OCR'd from the schematic image | Wix blog of original and derivative schematics (CC BY-NC-SA); no board to buy; designators and values paired by position |
 | General Guitar Gadgets | ~77 | parsed from the project BOM PDF | Shopify store; per-version PDFs on the project pages; the BOM title gives the board's name and original; prices in USD |
+| Lectric-FX | ~40 | parsed from the build-doc PDF | WooCommerce Store API; multi-column B.O.M. with pots, trimmers and switches; prices in USD |
 | PCBWay: Glory to Ukraine | ~337 | none (BOM needs a PCBWay login) | one member's shared projects via the member JSONP list; schematic PNGs are CC BY-SA; no prices |
 
 ### What is indexed and what is not
@@ -43,7 +44,7 @@ Requires Python 3.12+, [uv](https://docs.astral.sh/uv/), poppler (`brew install 
 ```sh
 cd scraper
 uv venv .venv && uv pip install -e .
-.venv/bin/pcblib scrape pedalpcb      # each vendor: pedalpcb aionfx madbean guitarpcb fuzzdog sheepylove deadendfx moonn fivecats parasit pcbguitarmania deadastronaut bentfishbowl ggg pcbway-gtu
+.venv/bin/pcblib scrape pedalpcb      # each vendor: pedalpcb aionfx madbean guitarpcb fuzzdog sheepylove deadendfx moonn fivecats parasit pcbguitarmania deadastronaut bentfishbowl ggg lectricfx pcbway-gtu
 .venv/bin/pcblib stats
 .venv/bin/pcblib export               # writes app/static/data/*.json
 .venv/bin/pcblib export --images      # also bundles cached schematic renders (local use only)
