@@ -6,7 +6,9 @@ const config = {
 	preprocess: vitePreprocess(),
 	kit: {
 		adapter: adapter({ fallback: 'index.html' }),
-		prerender: { handleHttpError: 'warn', handleMissingId: 'ignore' }
+		// Circuit and part pages come from the exported data; an empty export (as in CI)
+		// legitimately produces none, so unseen dynamic routes are not an error.
+		prerender: { handleHttpError: 'warn', handleMissingId: 'ignore', handleUnseenRoutes: 'ignore' }
 	}
 };
 

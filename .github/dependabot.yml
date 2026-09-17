@@ -9,6 +9,10 @@ updates:
     groups:
       app:
         patterns: ["*"]
+    ignore:
+      # SvelteKit pins the TypeScript major it supports; bump it by hand with the kit.
+      - dependency-name: typescript
+        update-types: ["version-update:semver-major"]
   - package-ecosystem: pip
     directory: /scraper
     schedule:
