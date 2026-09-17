@@ -45,6 +45,14 @@ VENDORS = {
                    "Build documents are © Sheepylove.com; indexed and linked, not redistributed."),
     "deadendfx": ("Dead End FX", "https://www.deadendfx.com",
                   "Build documents are hosted by Dead End FX on Google Drive; indexed and linked, not redistributed."),
+    "moonn": ("Moonn Electronics", "https://moonnelectronics.bigcartel.com",
+              "Build documents are hosted by Moonn Electronics on Dropbox; indexed and linked, not redistributed."),
+    "fivecats": ("Five Cats Pedals", "https://www.five-cats-pedals.co.uk",
+                 "PCB layouts are © Five Cats Pedals; build inserts and schematics are indexed and linked, not redistributed."),
+    "parasit": ("Parasit Studio", "https://parasitstudio.com",
+                "Designs are for personal use only per the build docs; documents are indexed and linked, not redistributed."),
+    "pcbway-gtu": ("PCBWay: Glory to Ukraine", "https://www.pcbway.com/project/member/?bmbno=19C5FC6C-66B1-46",
+                   "Shared projects are CC BY-SA 3.0; schematic images may be shown with attribution. BOM and gerbers need a PCBWay login."),
 }
 
 

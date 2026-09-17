@@ -1,4 +1,4 @@
-export type Vendor = 'pedalpcb' | 'aionfx' | 'madbean' | 'guitarpcb' | 'fuzzdog' | 'sheepylove' | 'deadendfx';
+export type Vendor = 'pedalpcb' | 'aionfx' | 'madbean' | 'guitarpcb' | 'fuzzdog' | 'sheepylove' | 'deadendfx' | 'moonn' | 'fivecats' | 'parasit' | 'pcbway-gtu';
 
 export interface IndexEntry {
 	id: string;
@@ -70,7 +70,11 @@ export const VENDOR_NAMES: Record<Vendor, string> = {
 	guitarpcb: 'GuitarPCB',
 	fuzzdog: 'Fuzz Dog',
 	sheepylove: 'Sheepy Love',
-	deadendfx: 'Dead End FX'
+	deadendfx: 'Dead End FX',
+	moonn: 'Moonn Electronics',
+	fivecats: 'Five Cats Pedals',
+	parasit: 'Parasit Studio',
+	'pcbway-gtu': 'PCBWay: Glory to Ukraine'
 };
 
 export const PART_CATEGORY_NAMES: Record<string, string> = {

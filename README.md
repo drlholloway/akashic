@@ -15,6 +15,10 @@ It ships as a static, offline-capable web app (PWA) that installs on macOS, Linu
 | GuitarPCB | ~160 | OCR'd from the build-doc PDF (needs `tesseract`) | schematic and BOM are raster images in the PDF; ~85% of real boards parse |
 | Sheepy Love | ~70 | parsed from the build-doc PDF | Shopify catalog via `products.json`; KiCad-exported docs; prices in EUR |
 | Dead End FX | ~125 | schematic labels + OCR'd table | Big Cartel catalog; build docs on Google Drive; R/C/D/Q/IC read exactly from the vector schematic, pots and switches from OCR |
+| Moonn Electronics | ~170 | parsed from the build-doc PDF | Big Cartel catalog; build docs on Dropbox; Qty/Value/Parts tables; prices in EUR |
+| Five Cats Pedals | ~120 | KiCad interactive BOM (exact) | WooCommerce Store API; the ibom zip on each product gives every designator; inserts are raster and not OCR'd; prices in GBP |
+| Parasit Studio | ~33 | parsed from the build-doc PDF | shop is a JS widget, so circuits come from the static /pedals/ pages; no prices |
+| PCBWay: Glory to Ukraine | ~337 | none (BOM needs a PCBWay login) | one member's shared projects via the member JSONP list; schematic PNGs are CC BY-SA; no prices |
 
 ### What is indexed and what is not
 
@@ -35,7 +39,7 @@ Requires Python 3.12+, [uv](https://docs.astral.sh/uv/), poppler (`brew install 
 ```sh
 cd scraper
 uv venv .venv && uv pip install -e .
-.venv/bin/pcblib scrape pedalpcb      # each vendor: pedalpcb aionfx madbean guitarpcb fuzzdog sheepylove deadendfx
+.venv/bin/pcblib scrape pedalpcb      # each vendor: pedalpcb aionfx madbean guitarpcb fuzzdog sheepylove deadendfx moonn fivecats parasit pcbway-gtu
 .venv/bin/pcblib stats
 .venv/bin/pcblib export               # writes app/static/data/*.json
 .venv/bin/pcblib export --images      # also bundles cached schematic renders (local use only)

@@ -170,6 +170,10 @@ def parse_bom_columns(pages: list[str], max_col: int | None = None) -> list[BomR
             nr = normalize_row(BomRow(ref=ref, value=val.strip()))
             if is_plausible(nr):
                 rows.append(nr)
+        for ref, val in re.findall(r"(?<![A-Za-z0-9])([A-Z]*TRIM[A-Z0-9]*)[ \t]+(\d+(?:[.,]\d+)?[kKM]?)(?![A-Za-z0-9])", text):
+            if ref not in seen:
+                seen.add(ref)
+                rows.append(normalize_row(BomRow(ref=ref, value=val.upper(), part_type="Trimmer", category="TRIM")))
         for ref, val in _COL_POT.findall(text):
             ref = ref.strip()
             if ref in seen or ref.upper() in {"QTY", "TYPE", "VALUE", "PART", "LOCATION"} or _COL_HEADERS.fullmatch(ref):
@@ -351,6 +355,47 @@ def schematic_bom(pdf: Path, page_no: int) -> list[BomRow]:
     return rows
 
 
+_QVP_HEADER = re.compile(r"^\s*Qty\.?\s+Value\s+(?:Parts?|Devices?|Refs?|Designators?)(?:\s+Notes?)?\s*$", re.I)
+_QVP_ROW = re.compile(r"^\s*(\d{1,3})\s+(\S.*?\S|\S)\s{2,}([A-Za-z][A-Za-z0-9/\-]*(?:\s*,\s*[A-Za-z][A-Za-z0-9/\-]*)*)\s*,?(?:\s{2,}(\S.*?))?\s*$")
+_QVP_SECTION = re.compile(r"^\s*([A-Z][A-Za-z ,&/]{3,60})\s*$")
+
+
+def parse_bom_qty_value_parts(pages: list[str]) -> list[BomRow]:
+    """'Qty  Value  Parts' tables (Moonn Electronics): one line per value with the
+    designators grouped, under section headings that name the part type."""
+    rows: list[BomRow] = []
+    seen: set[str] = set()
+    for page in pages:
+        lines = page.splitlines()
+        i = 0
+        while i < len(lines) and not _QVP_HEADER.match(lines[i]):
+            i += 1
+        if i >= len(lines):
+            continue
+        section = ""
+        for ln in lines[i + 1:]:
+            if not ln.strip():
+                continue
+            m = _QVP_ROW.match(ln)
+            if m:
+                _, value, parts, notes = m.groups()
+                ptype = section
+                for ref in re.split(r"\s*,\s*", parts.strip(", ")):
+                    if not ref or ref in seen:
+                        continue
+                    seen.add(ref)
+                    nr = normalize_row(BomRow(ref=ref, value=value.strip(), part_type=ptype, notes=(notes or "").strip()))
+                    if is_plausible(nr):
+                        rows.append(nr)
+                continue
+            if re.match(r"^\s*(Schematic|Offboard|Wiring|Drill|Notes?)\b", ln, re.I):
+                break
+            s = _QVP_SECTION.match(ln)
+            if s:
+                section = s.group(1).strip().rstrip(":")
+    return rows
+
+
 def find_schematic_page(pages: list[str]) -> int | None:
     """1-based page index whose heading is SCHEMATIC (or 'Schematic Diagram'),
     or a KiCad-exported sheet (numbered column labels along the top edge)."""
@@ -389,6 +434,8 @@ def process_document(pdf: Path, vendor: str, slug: str) -> dict:
     """Return bom rows, schematic png (relative to data/), page number, version."""
     pages = pdf_text_pages(pdf)
     bom = parse_bom(pages)
+    if len(bom) < 4:
+        bom = parse_bom_qty_value_parts(pages) or bom
     if len(bom) < 4:
         bom = parse_bom_columns(pages) or bom
     page_no = find_schematic_page(pages)

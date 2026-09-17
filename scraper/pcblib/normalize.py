@@ -64,8 +64,8 @@ _CATEGORY_BY_REF = [
     (re.compile(r"^(X|XT|XTAL|Y)\d+$", re.I), "XTAL"),
     (re.compile(r"^(LED|LD)\d*$", re.I), "LED"),
     (re.compile(r"^(SW|S|FS)\d*$", re.I), "SW"),
-    (re.compile(r"^(POT|P)\d+$", re.I), "POT"),
-    (re.compile(r"^(TR|TRIM|VR|RV|T)\d+$", re.I), "TRIM"),
+    (re.compile(r"^(POT|P|RV|VR)\d+$", re.I), "POT"),
+    (re.compile(r"^(TR|TRIM|T)\d+$", re.I), "TRIM"),
     (re.compile(r"^(LDR|OPTO|VTL|OC)\d*$", re.I), "OPTO"),
     (re.compile(r"^(J|JACK)\d*$", re.I), "CONN"),
 ]
@@ -100,6 +100,10 @@ def categorize(ref: str, part_type: str, value: str = "") -> str:
     if "TRIM" in r.upper():
         return "TRIM"
     t0 = part_type.lower()
+    if re.match(r"^(IC|U)\d+[A-Z]?$", r, re.I):
+        return "IC"  # an IC in a socket footprint is still an IC
+    if re.match(r"^(RV|VR|POT|P|R)\d+$", r, re.I) and re.search(r"trim", t0):
+        return "TRIM"  # KiCad calls both pots and trimmers RVn; the footprint tells them apart
     for hint in _EARLY_HINTS:
         if hint in t0:
             return "CONN" if hint == "socket" else "HW"
