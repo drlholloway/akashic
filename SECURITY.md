@@ -3,7 +3,7 @@
 ## Supported versions
 
 Only the current `main` branch and the live site at
-https://akashic.lanetholloway.workers.dev receive fixes. There are no
+https://akashic.cryptideffects.com receive fixes. There are no
 long-term support branches.
 
 ## What counts

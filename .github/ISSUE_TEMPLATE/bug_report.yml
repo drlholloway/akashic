@@ -6,7 +6,7 @@ body:
     id: url
     attributes:
       label: Page URL
-      placeholder: https://akashic.lanetholloway.workers.dev/circuit/...
+      placeholder: https://akashic.cryptideffects.com/circuit/...
     validations:
       required: true
   - type: textarea

@@ -5,7 +5,7 @@ A searchable reference library of DIY guitar-pedal circuits, built from the buil
 
 It ships as a static, offline-capable web app (PWA) that installs on macOS, Linux, Android and iOS.
 
-**Live:** https://akashic.lanetholloway.workers.dev
+**Live:** https://akashic.cryptideffects.com
 
 ## Sources
 

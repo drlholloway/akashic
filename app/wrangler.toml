@@ -2,6 +2,12 @@
 # `npm run deploy` exports the data, builds, and runs `wrangler deploy`.
 name = "akashic"
 compatibility_date = "2026-09-01"
+workers_dev = false
+
+# Custom domain on the Cryptid Effects zone (Cloudflare creates the DNS record and certificate).
+routes = [
+  { pattern = "akashic.cryptideffects.com", custom_domain = true }
+]
 
 [assets]
 directory = "./build"

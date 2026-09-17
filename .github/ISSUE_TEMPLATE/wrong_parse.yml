@@ -6,7 +6,7 @@ body:
     id: url
     attributes:
       label: Circuit URL in the library
-      placeholder: https://akashic.lanetholloway.workers.dev/circuit/...
+      placeholder: https://akashic.cryptideffects.com/circuit/...
     validations:
       required: true
   - type: textarea

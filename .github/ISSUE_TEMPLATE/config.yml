@@ -1,7 +1,7 @@
 blank_issues_enabled: true
 contact_links:
   - name: The library
-    url: https://akashic.lanetholloway.workers.dev
+    url: https://akashic.cryptideffects.com
     about: Search the circuits, parts and originals.
   - name: Report a security problem
     url: https://github.com/drlholloway/akashic/security/advisories/new
