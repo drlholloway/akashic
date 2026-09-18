@@ -52,7 +52,9 @@ class ZeroGIOD(Adapter):
         price = pr.get("default_price")
         c = Circuit(
             vendor=self.vendor, slug=handle, name=name, url=f"{BASE}/product/{handle}", based_on=based_on,
-            description=body, category=classify(based_on, name, body[:300]), tags=["store closed"],
+            description=body, tags=["store closed"],
+            # Classify without the packing list ("1 3PDT bypass board" would read as a utility board).
+            category=classify(based_on, name, re.sub(r"(?im)^.*(?:you'll receive|bypass (?:pcb )?board|3pdt|faceplate).*$", "", body)[:300]),
             price=float(price) if price is not None else None, currency="USD", in_stock=False,
             doc_url=f"{BASE}/product/{handle}", enclosure=find_enclosure(body),
         )

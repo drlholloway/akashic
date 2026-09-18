@@ -16,6 +16,10 @@ GitHub Release notes.
   whose board quality builders widely report as inconsistent.
 
 ### Fixed
+- Add-on boards (daughterboards, clipping selectors) classify as Utility before any effect
+  word, so a "rotary clipping daughterboard" is no longer a rotary-speaker effect; a packing
+  list mentioning a bypass board no longer makes a fuzz a utility; `Fuzz`-prefixed names,
+  Bosstone and Acapulco Gold clones classify.
 - Five Cats enclosures: newer inserts stamp "minimum enclosure" as a graphic, so page one is
   OCR'd for the size (with the B this font turns into 6 or 8 repaired); 69 of 126 boards now
   carry one, up from 27.

@@ -11,7 +11,9 @@ CATEGORIES = [
 ]
 
 _RULES: list[tuple[re.Pattern, str]] = [(re.compile(p, re.I), c) for p, c in [
-    (r"\bfuzz\b|muff|tone ?bender|fuzz ?face|octavia", "Fuzz"),
+    (r"daughter ?board|clipping (?:board|switch|selector|daughter)|rotary clipping", "Utility"),  # add-on boards before any effect words
+    (r"\bfuzz|muff|tone ?bender|octavia|bosstone", "Fuzz"),
+    (r"acapulco|acupulco", "Distortion"),
     (r"\bdistortion\b|\bdist\b|\brat\b|metal|high ?gain", "Distortion"),
     (r"overdrive|\bod\b|screamer|klon|blues ?breaker|tube ?screamer|drive\b", "Overdrive"),
     (r"\bboost(er)?\b|\bclean\b", "Boost"),
@@ -20,7 +22,7 @@ _RULES: list[tuple[re.Pattern, str]] = [(re.compile(p, re.I), c) for p, c in [
     (r"\bwah\b|envelope|auto[- ]?wah|touch", "Wah / Envelope"),
     (r"\beq\b|equali[sz]er|\bfilter\b|tone ?control", "EQ / Filter"),
     (r"tremolo|trem\b", "Tremolo"),
-    (r"vibrato|vibe|chorus|uni-?vibe|rotary|leslie", "Vibrato / Chorus"),
+    (r"vibrato|vibe|chorus|uni-?vibe|rotary(?! (?:switch|clip|select))|leslie", "Vibrato / Chorus"),
     (r"phase|phasor|phaser", "Phaser"),
     (r"flang", "Flanger"),
     (r"delay|echo", "Delay"),
