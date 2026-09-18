@@ -40,6 +40,14 @@ at the bottom; re-run them after parser changes.
 | Mask Audio | Big Clang | Doc lists three variant specs (Classic, Big Clang, Ailbini); only the first is kept |
 | GuitarPCB | NostalgiTone 60s, NostalgiTone 60s Tremolo (single) | Cached PDF has no page 1 (`IndexError: page 1 not in document`); refetch with `--refresh` |
 | Fuzz Dog | Astrotone | MuPDF cannot open the embedded colour profile, so no page renders |
+| Effects Layouts | Schematic Fuzz | Build doc is drill templates only; the schematic is on the silkscreen |
+| Effects Layouts | Lawn Darts | Doc is a single scanned schematic image; positional OCR finds nothing |
+| Effects Layouts | Melody Malfunction, Cranky Speaker | Doc has only a shopping list (value, type, quantity), so rows are named by quantity (`×2`) and controls are a knob count |
+| Effects Layouts | Black & Tan, Transmogrifying Repeater | Build doc is a web page whose content is two images |
+| Effects Layouts | Six Shooter, Strider, Soil Slinger | Only a drill template or a blog post is linked; no parts list |
+| Effects Layouts | One-Knobber, Drivestortion | Old blog-era project PDFs with broken font encodings; OCR gives 13 and 18 rows, pots missing |
+| JMK PCBs | Big Bass Drive, AC/DC Drive, Level Up, 5 Knob Fuzz, Classic Tremolo, Blue Warbler 2, Super Phaser | Build notes describe the original without naming it; `based_on` left empty |
+| JMK PCBs | most boards | Docs rarely state an enclosure (8 of 38 found); drill templates are named by knob count, not size |
 | Mask Audio | Business Card | Doc says 1590BBM/BBS; the enclosure regex does not know 1590BBM |
 
 ## Parser wishes

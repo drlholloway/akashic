@@ -7,6 +7,7 @@
 
 	let { data } = $props();
 	const c = $derived(data.circuit);
+	const vendorWarning = $derived((data.vendors as Record<string, { warning?: string }> | undefined)?.[c.vendor]?.warning ?? '');
 	const siblings = $derived(
 		c.based_on
 			? data.index.filter((e) => e.id !== c.id && e.based_on && normalizeOriginal(e.based_on) === normalizeOriginal(c.based_on))
@@ -66,6 +67,9 @@
 					<a class="btn ghost" {href} target="_blank" rel="noopener">{label}</a>
 				{/each}
 			</div>
+			{#if vendorWarning}
+				<p class="vendor-warning"><span class="warn">Heads up</span> {vendorWarning}</p>
+			{/if}
 		</div>
 	</header>
 
@@ -160,6 +164,8 @@
 	.specs div { display: flex; flex-direction: column; gap: 2px; }
 	.specs dd { margin: 0; }
 	.actions { display: flex; flex-wrap: wrap; gap: 8px; }
+	.vendor-warning { margin: 10px 0 0; max-width: 62ch; font-size: 14px; line-height: 1.45; color: var(--ink-2); }
+	.vendor-warning .warn { margin-right: 6px; }
 	.ver { font-size: 11px; opacity: 0.8; text-transform: none; letter-spacing: 0; }
 	section { margin-top: 28px; }
 	section h2 { margin-bottom: 10px; }

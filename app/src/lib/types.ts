@@ -1,4 +1,4 @@
-export type Vendor = 'pedalpcb' | 'aionfx' | 'madbean' | 'guitarpcb' | 'fuzzdog' | 'sheepylove' | 'deadendfx' | 'moonn' | 'fivecats' | 'parasit' | 'pcbway-gtu' | 'pcbguitarmania' | 'deadastronaut' | 'bentfishbowl' | 'ggg' | 'lectricfx' | 'expanon' | 'zerogiod' | 'otrfx' | 'dirtmonger' | 'maskaudio';
+export type Vendor = 'pedalpcb' | 'aionfx' | 'madbean' | 'guitarpcb' | 'fuzzdog' | 'sheepylove' | 'deadendfx' | 'moonn' | 'fivecats' | 'parasit' | 'pcbway-gtu' | 'pcbguitarmania' | 'deadastronaut' | 'bentfishbowl' | 'ggg' | 'lectricfx' | 'expanon' | 'zerogiod' | 'otrfx' | 'dirtmonger' | 'maskaudio' | 'effectslayouts' | 'jmk';
 
 export interface IndexEntry {
 	id: string;
@@ -61,6 +61,8 @@ export interface VendorInfo {
 	name: string;
 	url: string;
 	license_note: string;
+	kind?: VendorKind;
+	warning?: string;
 }
 
 export const VENDOR_NAMES: Record<Vendor, string> = {
@@ -84,7 +86,9 @@ export const VENDOR_NAMES: Record<Vendor, string> = {
 	zerogiod: 'Zero G IOD',
 	otrfx: 'On The Road Effects',
 	dirtmonger: 'Dirt Monger Instruments',
-	maskaudio: 'Mask Audio Electronics'
+	maskaudio: 'Mask Audio Electronics',
+	effectslayouts: 'Effects Layouts',
+	jmk: 'JMK PCBs'
 };
 
 export type VendorKind = 'shop' | 'projects' | 'blog' | 'archive';

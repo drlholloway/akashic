@@ -173,7 +173,7 @@ def is_plausible(row: BomRow) -> bool:
     """Drop rows the table parsers picked up from prose (e.g. 'C10 is omitted')."""
     if _JUNK.match(row.value.strip()):
         return False
-    if row.category in ("D", "Q", "IC") and (re.fullmatch(r"[RCLDQ]\d+", row.value.strip().upper())
+    if row.category in ("D", "Q", "IC") and (re.fullmatch(r"(?:[RCLDQ]|IC|U|SW|LED|VR|TR)\d+", row.value.strip().upper())
                                              or (len(row.value.strip()) < 3 and row.value.strip().upper() not in ("GE", "SI"))):
         return False
     if row.category in ("R", "C", "L") and row.sort_key <= 0:

@@ -16,7 +16,7 @@ _RULES: list[tuple[re.Pattern, str]] = [(re.compile(p, re.I), c) for p, c in [
     (r"overdrive|\bod\b|screamer|klon|blues ?breaker|tube ?screamer|drive\b", "Overdrive"),
     (r"\bboost(er)?\b|\bclean\b", "Boost"),
     (r"preamp|amp[- ]?in[- ]a[- ]box|amp emul|amp sim|cab sim", "Preamp / Amp-in-a-box"),
-    (r"compress|limiter|sustain", "Compressor"),
+    (r"compress|limiter|sustain|\bcomp\b", "Compressor"),
     (r"\bwah\b|envelope|auto[- ]?wah|touch", "Wah / Envelope"),
     (r"\beq\b|equali[sz]er|\bfilter\b|tone ?control", "EQ / Filter"),
     (r"tremolo|trem\b", "Tremolo"),

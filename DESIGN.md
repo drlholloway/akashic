@@ -183,7 +183,7 @@ Two neutral ramps (sheet and ink), two hairline weights, one powder-coat accent 
 - **Drafting Sheet** (`sheet`, `sheet-2`, `sheet-3`): page background, sticky header background and table header background are all `sheet`; `sheet-2` is the resting search field, the hovered table row and the ghost button hover; `sheet-3` is the glyph shell fill when a circuit's controls are unknown.
 - **Ink** (`ink`, `ink-2`, `ink-3`): body text and primary button fill are `ink`; labels, table headers, resting nav links, BOM notes and ref designators are `ink-2`; subtitles, counts, lede text, footer text and every `.dim` span are `ink-3`.
 - **Hairline** (`rule`) and **Structural Hairline** (`rule-strong`): `rule` separates table rows, list items, the facet rail and the footer; `rule-strong` closes the title block, underlines table column headers, closes the circuit plate, underlines section headings on the parts index, and outlines chips, inputs and selects at rest.
-- **Warn** (`warn`): a burnt orange used for one thing, out-of-stock text. It never fills a surface.
+- **Warn** (`warn`): a burnt orange used for two short labels, out-of-stock text and the "Heads up" that opens a vendor caution. It never fills a surface.
 - **Focus** (`focus`): the 2px `:focus-visible` outline. Equal to `coat` in light mode and a brighter `#5fb3a0` in dark mode so it clears the dark sheet.
 
 ### Dark mode
@@ -202,7 +202,7 @@ Dark is a full remap under `@media (prefers-color-scheme: dark)`, opted out by a
 
 **The Hairline Rule.** Regions are separated by a 1px line, never by a filled panel or a tint. `rule` for rows and soft edges, `rule-strong` for structural edges (header, plate, column heads, section underlines). Table rows are never striped; the comment in `app.css` says "no zebra" and the build honors it.
 
-**The Warn Is Text Rule.** `warn` colors a short uppercase label ("out", "out of stock") and nothing else. It is not a background, a border or an icon.
+**The Warn Is Text Rule.** `warn` colors a short uppercase label ("out", "out of stock", "Heads up") and nothing else. It is not a background, a border or an icon. A vendor caution is that label followed by a plain sentence in `ink-2`.
 
 ## Typography
 

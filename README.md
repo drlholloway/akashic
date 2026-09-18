@@ -21,7 +21,7 @@ It ships as a static, offline-capable web app (PWA) that installs on macOS, Linu
 | Moonn Electronics | ~170 | parsed from the build-doc PDF | Big Cartel catalog; build docs on Dropbox; Qty/Value/Parts tables; prices in EUR |
 | Five Cats Pedals | ~120 | KiCad interactive BOM (exact) | WooCommerce Store API; the ibom zip on each product gives every designator; inserts are raster and not OCR'd; prices in GBP |
 | Parasit Studio | ~33 | parsed from the build-doc PDF | shop is a JS widget, so circuits come from the static /pedals/ pages; no prices |
-| PCB Guitar Mania | ~250 | parsed from the build-doc PDF | WooCommerce Store API; docs state the original, enclosure and difficulty; regional and gerber-only duplicates collapse onto the board; prices in EUR |
+| PCB Guitar Mania | ~250 | parsed from the build-doc PDF | WooCommerce Store API; docs state the original, enclosure and difficulty; regional and gerber-only duplicates collapse onto the board; prices in EUR; circuit pages carry a quality caution |
 | Dead Astronaut FX | ~19 | OCR'd from raster build docs | Wix site; pages named from the nav menu; PayPal prices in GBP |
 | Bent Fishbowl | ~40 | OCR'd from the schematic image | Wix blog of original and derivative schematics (CC BY-NC-SA); no board to buy; designators and values paired by position |
 | General Guitar Gadgets | ~77 | parsed from the project BOM PDF | Shopify store; per-version PDFs on the project pages; the BOM title gives the board's name and original; prices in USD |
@@ -31,6 +31,8 @@ It ships as a static, offline-capable web app (PWA) that installs on macOS, Linu
 | On The Road Effects | ~28 | parsed from the build-guide PDF | one WordPress page; boards sell on Etsy and Reverb; prices in USD |
 | Dirt Monger Instruments | ~15 | OCR'd from the build doc's parts image | Shopify collection; build docs on Google Drive; prices in CAD |
 | Mask Audio Electronics | ~26 | parsed from the Word build doc's table | Shopify collection; docs are .docx on Dropbox and Google Docs, read directly; one Eagle-schematic PDF paired by label; prices in USD |
+| Effects Layouts | ~80 | parsed from the build-doc PDF | WooCommerce Store API; two-column BOM with named pots; the doc's drill template names the enclosure; prices in USD |
+| JMK PCBs | ~39 | parsed from the build-doc PDF | WooCommerce with the REST API off, so products come from the sitemap and each page's JSON-LD; multi-column parts tables; prices in USD |
 | PCBWay: Glory to Ukraine | ~337 | none (BOM needs a PCBWay login) | one member's shared projects via the member JSONP list; schematic PNGs are CC BY-SA; no prices |
 
 ### What is indexed and what is not

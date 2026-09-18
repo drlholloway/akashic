@@ -149,9 +149,14 @@ def parse_bom(pages: list[str]) -> list[BomRow]:
     return rows
 
 
-_COL_HEADERS = re.compile(r"RESISTORS|CAPACITORS|DIODES|TRANSISTORS|SEMICONDUCTORS|POTENTIOMETERS|\bICS?\b|SWITCHES|PARTS LIST|B\.?O\.?M\.?|BILL OF MATERIALS", re.I)
-_COL_DESIG = re.compile(r"(?<![A-Z0-9])((?:R|C|D|Q|IC|U|L|SW|Z|ZD|LED|VR|TR|OPTO|X|J)\d+[A-Z]?)[ \t]+(\S+(?:[ \t](?:Red|Green|Blue|Yellow|White|Amber)?[ \t]?(?:LED|Zener|zener|elec))?)")
-_COL_POT = re.compile(r"(?<![A-Z0-9])([A-Z][A-Z .\-/]{1,14}?)[ \t]{2,}([ABCW]\d+(?:[.,]\d+)?[KM]|[ABCW]\d{2,}|\d+(?:[.,]\d+)?[KM]? ?[ABCW])(?![A-Z0-9])")
+_COL_HEADERS = re.compile(r"RESISTORS|CAPACITORS|DIODES|TRANSISTORS|SEMICONDUCTORS|ELECTROMECHANICAL|POTENTIOMETERS|\bICS?\b|SWITCHES|PARTS LIST|B\.?O\.?M\.?|BILL OF MATERIALS", re.I)
+_COL_DESIG = re.compile(r"(?<![A-Z0-9])((?:R|C|D|Q|IC|U|L|SW|Z|ZD|LED|VR|TR|OPTO|X|J)\d+[A-Z]?)[ \t]+(\S+(?:[ \t](?:Red|Green|Blue|Yellow|White|Amber)?[ \t]?(?:LED|LEDs|Zener|zener|elec)|[ \t]or[ \t]\d\S*)?)")
+_COL_POT = re.compile(r"(?<![A-Za-z0-9])([A-Z][A-Za-z .\-/]{2,14}?(?:,[ \t]*[A-Z][A-Za-z .\-/]{2,14}?)*)[ \t]{2,}([ABCW]\d+(?:[.,]\d+)?[KkMm]|[ABW]\d{2,}|\d+(?:[.,]\d+)?[KkMm]? ?[ABCW])(?:[ \t]?(?:DG|dual(?:[ \-]gang)?))?(?![A-Za-z0-9])")
+# Named pots and trimmers with no taper letter ("BIAS   10K") on pages that carry a Potentiometers heading.
+_COL_POT_PLAIN = re.compile(r"(?<![A-Za-z0-9])([A-Z]{3,12})[ \t]{2,}(\d+(?:[.,]\d+)?[KkMm])(?![A-Za-z0-9])")
+_COL_POT_STOP = {"QTY", "TYPE", "VALUE", "PART", "LOCATION", "NOTES", "REF", "AND", "FOR", "THE", "USE", "SET", "WITH", "ALL", "NOTE", "OTHER"}
+# "D1, D2, D5   3mm LED" and "D1, 2, 4   1N5817": a comma list of designators sharing one value.
+_COL_LIST = re.compile(r"(?<![A-Za-z0-9])((?:R|C|D|Q|IC|U|L|LED)\d+(?:,[ \t]*(?:R|C|D|Q|IC|U|L|LED)?\d+)+)[ \t]+(\S+(?:[ \t](?:Red|Green|Blue|Yellow|White|Amber)?[ \t]?(?:LED|LEDs|Zener|zener|elec))?)")
 
 
 def parse_bom_columns(pages: list[str], max_col: int | None = None) -> list[BomRow]:
@@ -160,11 +165,12 @@ def parse_bom_columns(pages: list[str], max_col: int | None = None) -> list[BomR
     rows: list[BomRow] = []
     seen: set[str] = set()
     for page in pages:
-        if len(_COL_HEADERS.findall(page)) < 2:
-            continue
+        heads = _COL_HEADERS.findall(page)
+        if len(heads) < 2 and not (len(heads) == 1 and re.match(r"B\.?O\.?M|PARTS LIST|BILL", heads[0], re.I) and len(_COL_DESIG.findall(page)) >= 8):
+            continue  # a lone "BOM" heading over a dense run of designators is still a parts table (Part / spec columns)
         text = "\n".join(ln[:max_col] if max_col else ln for ln in page.splitlines())
         # "Q1-Q4   2N5457" ranges and "LEVEL tr  10K" trimmers
-        for letter, a, b, val in re.findall(r"(?<![A-Z0-9])([RCDQ])(\d+)\s*[-–]\s*[RCDQ]?(\d+)[ \t]+([A-Za-z0-9][A-Za-z0-9.\-/]*)", text):
+        for letter, a, b, val in re.findall(r"(?<![A-Z0-9])([RCDQ])(\d+)\s*[-–]\s*[RCDQ]?(\d+)[ \t]+((?:\d|[A-Z])[A-Za-z0-9.\-/]*)", text):
             lo, hi = int(a), int(b)
             if 0 < hi - lo < 40:
                 for i in range(lo, hi + 1):
@@ -178,24 +184,42 @@ def parse_bom_columns(pages: list[str], max_col: int | None = None) -> list[BomR
             if ref not in seen:
                 seen.add(ref)
                 rows.append(normalize_row(BomRow(ref=ref, value=val.upper(), part_type="Trimmer", category="TRIM")))
+        for refs, val in _COL_LIST.findall(text):
+            val = val.strip().rstrip(",;")
+            prefix = re.match(r"[A-Z]+", refs).group(0)
+            for tok in re.split(r",\s*", refs):
+                ref = tok if re.match(r"[A-Z]", tok) else prefix + tok
+                if ref in seen:
+                    continue
+                nr = normalize_row(BomRow(ref=ref, value=val))
+                if is_plausible(nr):
+                    seen.add(ref)
+                    rows.append(nr)
         for ref, val in _COL_DESIG.findall(text):
             val = val.strip().rstrip(",;")  # "2N5457, J201 or other FET" -> 2N5457
             if ref in seen or val.upper() in {"VALUE", "QTY", "TYPE", "OR", "AND"}:
                 continue
-            seen.add(ref)
             nr = normalize_row(BomRow(ref=ref, value=val))
             if is_plausible(nr):
+                seen.add(ref)  # a junk pairing on a wiring page must not shadow the real row on the parts page
                 rows.append(nr)
         for ref, val in re.findall(r"(?<![A-Za-z0-9])([A-Z]*TRIM[A-Z0-9]*)[ \t]+(\d+(?:[.,]\d+)?[kKM]?)(?![A-Za-z0-9])", text):
             if ref not in seen:
                 seen.add(ref)
                 rows.append(normalize_row(BomRow(ref=ref, value=val.upper(), part_type="Trimmer", category="TRIM")))
-        for ref, val in _COL_POT.findall(text):
-            ref = ref.strip()
-            if ref in seen or ref.upper() in {"QTY", "TYPE", "VALUE", "PART", "LOCATION"} or _COL_HEADERS.fullmatch(ref):
-                continue
-            seen.add(ref)
-            rows.append(normalize_row(BomRow(ref=ref, value=val.replace(" ", ""), part_type="Potentiometer", category="POT")))
+        for refs, val in _COL_POT.findall(text):
+            for ref in re.split(r",\s*", refs):
+                ref = ref.strip()
+                if ref in seen or ref.upper() in _COL_POT_STOP or _COL_HEADERS.fullmatch(ref) or ref.upper() in seen:
+                    continue
+                seen.add(ref)
+                rows.append(normalize_row(BomRow(ref=ref.upper() if ref.istitle() else ref, value=val.replace(" ", "").upper(), part_type="Potentiometer", category="POT")))
+        if re.search(r"POTENTIOMETERS?|\bPOTS\b", text, re.I):
+            for ref, val in _COL_POT_PLAIN.findall(text):
+                if ref in seen or ref in _COL_POT_STOP or _COL_HEADERS.fullmatch(ref) or re.match(r"^(?:CLR|LED|REG|TRIM)", ref):
+                    continue
+                seen.add(ref)
+                rows.append(normalize_row(BomRow(ref=ref, value=val.upper(), part_type="Potentiometer", category="TRIM" if "TRIM" in ref else "POT")))
     return rows
 
 
@@ -567,6 +591,39 @@ def parse_bom_qty_value_parts(pages: list[str]) -> list[BomRow]:
     return rows
 
 
+_SHOP_ROW = re.compile(r"^\s*(\S[^\n]*?\S|\S)\s{2,}(\S[^\n]*?\S)\s{2,}(\d{1,2})\s*$", re.M)
+_SHOP_TYPES = [
+    (r"resistor|metal or carbon|carbon film|metal film|¼ ?watt|1/4 ?w", "R"),
+    (r"\bcap|electrolytic|ceramic|tantalum|mylar|polyester|^film$|film cap", "C"),
+    (r"trim", "TRIM"), (r"\bpot\b|potentiometer|pc mount|right angle", "POT"),
+    (r"\bled\b", "LED"), (r"diode|rectifier|schottky|zener|germanium", "D"),
+    (r"transistor|\bbjt\b|jfet|mosfet|\bnpn\b|\bpnp\b", "Q"),
+    (r"op ?amp|\bic\b|regulator|charge pump|chip|\bdip\b", "IC"),
+    (r"switch|toggle|footswitch", "SW"), (r"vactrol|\bldr\b|photocell|optocoupler", "OPTO"),
+    (r"inductor", "L"), (r"jack|socket|header", "CONN"),
+]
+
+
+def parse_shopping_list(pages: list[str]) -> list[BomRow]:
+    """Last resort for docs that give only a shopping list (value, suggested type,
+    quantity) and no designators. Rows are named by quantity ("×2") and categorized
+    from the type column, so they still feed the parts cross-reference."""
+    rows: list[BomRow] = []
+    # Join pages: the list can run onto the next page without repeating its heading.
+    for m in re.finditer(r"SHOPPING LIST\s*\n(.*?)(?=\n\s*(?:LAYOUT|DRILL TEMPLATE|NOTES?|SCHEMATIC|BOM)\b|\Z)", "\n".join(pages), re.S | re.I):
+        for value, ptype, qty in _SHOP_ROW.findall(m.group(1)):
+            if value.lower() in ("part", "value") or len(value) > 24:
+                continue
+            cat = next((c for rx, c in _SHOP_TYPES if re.search(rx, ptype, re.I)), "")
+            if not cat and re.match(r"^[ABCW]\d+(?:[.,]\d+)?[kKmM]?$", value):
+                cat = "POT"
+            cat = cat or categorize("", ptype, value)
+            nr = normalize_row(BomRow(ref=f"×{qty}", value=value, part_type=ptype, notes="shopping list", category=cat))
+            if is_plausible(nr) or cat in ("HW", "CONN", "SW", "OTHER"):
+                rows.append(nr)
+    return rows
+
+
 def find_schematic_page(pages: list[str]) -> int | None:
     """1-based page index whose heading is SCHEMATIC (or 'Schematic Diagram'),
     or a KiCad-exported sheet (numbered column labels along the top edge)."""
@@ -609,6 +666,9 @@ def doc_version(pages: list[str]) -> str:
     m = re.search(r"DOCUMENT VERSION\s*\n?.*?(\d+\.\d+\.\d+\s*\(\d{4}-\d{2}-\d{2}\))", text, re.S)
     if m:
         return m.group(1)
+    m = re.search(r"\bVersion\s+(\d+(?:\.\d+)+)", text)
+    if m:
+        return m.group(1)
     return ""
 
 
@@ -618,6 +678,8 @@ def process_document(pdf: Path, vendor: str, slug: str) -> dict:
     # Vendors lay their parts lists out three ways; run every parser and keep the
     # one that recovered the most designators (they never both succeed on one doc).
     bom = max((parse_bom(pages), parse_bom_qty_value_parts(pages), parse_bom_columns(pages)), key=len)
+    if not bom:
+        bom = parse_shopping_list(pages)
     page_no = find_schematic_page(pages)
     schematic_rel = ""
     if page_no:

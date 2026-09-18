@@ -71,6 +71,10 @@ VENDORS = {
                    "Build documents are hosted by Dirt Monger on Google Drive; indexed and linked, not redistributed."),
     "maskaudio": ("Mask Audio Electronics", "https://maskaudioelectronics.com/collections/diy-projects",
                   "Build documents are hosted by Mask Audio on Dropbox and Google Docs; indexed and linked, not redistributed."),
+    "effectslayouts": ("Effects Layouts", "https://effectslayouts.com/shop/",
+                       "Build documents are © Effects Layouts; indexed and linked, not redistributed."),
+    "jmk": ("JMK PCBs", "https://jmkpcbs.com/shop/",
+            "Build documents are © JMK Pedals, for personal use only; indexed and linked, not redistributed."),
     "pcbway-gtu": ("PCBWay: Glory to Ukraine", "https://www.pcbway.com/project/member/?bmbno=19C5FC6C-66B1-46",
                    "Shared projects are CC BY-SA 3.0; schematic images may be shown with attribution. BOM and gerbers need a PCBWay login."),
 }
@@ -78,6 +82,12 @@ VENDORS = {
 
 # What the vendor sells: "shop" (a PCB), "projects" (order the board from a fab), "blog" (a schematic to read).
 VENDOR_KIND = {"pcbway-gtu": "projects", "bentfishbowl": "blog", "expanon": "archive"}
+
+# A caution shown on every circuit page of a vendor, next to the buy link.
+VENDOR_WARNING = {
+    "pcbguitarmania": "Builders widely report inconsistent quality from PCB Guitar Mania boards, and whether a given "
+                      "board works is a gamble. Read recent forum reports before ordering.",
+}
 
 
 @contextmanager

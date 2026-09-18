@@ -59,7 +59,8 @@ def run(images: bool = False) -> None:
     index = []
     parts: dict[str, dict] = {}
     with dbm.connect() as conn:
-        vendors = {r["id"]: {**dict(r), "kind": dbm.VENDOR_KIND.get(r["id"], "shop")} for r in conn.execute("SELECT * FROM vendors")}
+        vendors = {r["id"]: {**dict(r), "kind": dbm.VENDOR_KIND.get(r["id"], "shop"), "warning": dbm.VENDOR_WARNING.get(r["id"], "")}
+                   for r in conn.execute("SELECT * FROM vendors")}
         circuits = [_row(r) for r in conn.execute("SELECT * FROM circuits ORDER BY vendor, name")]
         for c in circuits:
             bom = [dict(b) for b in conn.execute(

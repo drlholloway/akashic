@@ -9,11 +9,22 @@ GitHub Release notes.
 - Mask Audio Electronics (Shopify; Word build documents read straight from the .docx tables,
   no converter needed; the freebie bundle is split into its four boards).
 - `TODO.md`: a running list of documents that parse wrong or thin, per vendor.
+- Effects Layouts (WooCommerce Store API; two-column build docs) and JMK PCBs (sitemap plus
+  JSON-LD product pages; multi-column parts tables).
+
+- A per-vendor caution shown on circuit pages next to the buy link; set for PCB Guitar Mania,
+  whose board quality builders widely report as inconsistent.
 
 ### Fixed
 - Resistor values with a lowercase `r` suffix (`100r`) and capacitor values followed by a
   dielectric word (`100p Silver Mica`) now normalize; `Ge`/`Si` are accepted as diode and
   transistor values.
+- Column-layout parts tables: pot names no longer bleed into a preceding `100nF`, comma
+  lists of designators (`D1, D2, D5  3mm LED`) expand, lowercase taper units and
+  dual-gang suffixes parse, named trimmers without a taper (`BIAS  10K`) are kept, and
+  `Version 1.1` in a title block becomes the doc version.
+- Docs that give only a shopping list (value, suggested type, quantity) now yield a parts
+  list with rows named by quantity, as a last resort when no designator table exists.
 
 ## 0.1.0 — 2026-09-17
 
