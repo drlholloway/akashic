@@ -427,6 +427,8 @@ def _rows_from_ocr(out: str) -> list[BomRow]:
             val = re.sub(r"^([ABCW])0(?=[1-9])", r"\1", val)  # A0100K -> A100K never happens, but B01M guard
             if not re.search(r"[1-9]", val):
                 continue  # "BOARD BOM" is not a pot
+            if re.fullmatch(r"[RCDQL]\d+", val):
+                continue  # "OOK C16": a designator read as a pot value
             if 3 <= len(ref) <= 12 and re.fullmatch(r"[A-Z][A-Z\-]+", ref) and ref.upper() not in {"AND", "THE", "FOR", "OUT", "GND", "BOM", "MAIN", "BOARD", "NOTES"}:
                 add(ref, val, "Trimmer" if "TRIM" in ref else "Potentiometer", "TRIM" if "TRIM" in ref else "POT")
     return rows

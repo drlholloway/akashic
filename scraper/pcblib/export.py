@@ -33,7 +33,7 @@ def write_rates() -> None:
     import httpx
     out = EXPORT_DIR / "rates.json"
     try:
-        r = httpx.get("https://api.frankfurter.dev/v1/latest", params={"base": "USD", "symbols": "GBP,EUR"},
+        r = httpx.get("https://api.frankfurter.dev/v1/latest", params={"base": "USD", "symbols": "GBP,EUR,CAD"},
                       timeout=15, follow_redirects=True)
         r.raise_for_status()
         data = r.json()

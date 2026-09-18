@@ -29,6 +29,7 @@ It ships as a static, offline-capable web app (PWA) that installs on macOS, Linu
 | Experimentalists Anonymous | ~780 | positional OCR of the drawing where legible | a plain file archive of traced schematics in category folders; no board to buy; MIDI, power-supply, synth-book and misc folders skipped |
 | Zero G IOD | 16 | OCR'd from BOM and schematic images | closed Big Cartel store; every product image (BOM, drill guide, schematic) is committed under `data/archive/zerogiod/` for posterity |
 | On The Road Effects | ~28 | parsed from the build-guide PDF | one WordPress page; boards sell on Etsy and Reverb; prices in USD |
+| Dirt Monger Instruments | ~15 | OCR'd from the build doc's parts image | Shopify collection; build docs on Google Drive; prices in CAD |
 | PCBWay: Glory to Ukraine | ~337 | none (BOM needs a PCBWay login) | one member's shared projects via the member JSONP list; schematic PNGs are CC BY-SA; no prices |
 
 ### What is indexed and what is not
@@ -50,13 +51,13 @@ Requires Python 3.12+, [uv](https://docs.astral.sh/uv/), poppler (`brew install 
 ```sh
 cd scraper
 uv venv .venv && uv pip install -e .
-.venv/bin/pcblib scrape pedalpcb      # each vendor: pedalpcb aionfx madbean guitarpcb fuzzdog sheepylove deadendfx moonn fivecats parasit pcbguitarmania deadastronaut bentfishbowl ggg lectricfx expanon zerogiod otrfx pcbway-gtu
+.venv/bin/pcblib scrape pedalpcb      # each vendor: pedalpcb aionfx madbean guitarpcb fuzzdog sheepylove deadendfx moonn fivecats parasit pcbguitarmania deadastronaut bentfishbowl ggg lectricfx expanon zerogiod otrfx dirtmonger pcbway-gtu
 .venv/bin/pcblib stats
 .venv/bin/pcblib export               # writes app/static/data/*.json
 .venv/bin/pcblib export --images      # also bundles cached schematic renders (local use only)
 ```
 
-`export` also fetches USD exchange rates for EUR and GBP from the European Central Bank feed (frankfurter.dev) into `rates.json`, so the app can show every vendor's price in one currency; the app defaults to USD and offers EUR, GBP, or the vendor's own listing.
+`export` also fetches USD exchange rates for EUR, GBP and CAD from the European Central Bank feed (frankfurter.dev) into `rates.json`, so the app can show every vendor's price in one currency; the app defaults to USD and offers EUR, GBP, or the vendor's own listing.
 
 Every HTTP response and PDF is cached, so re-running a scrape after a parser change costs no network. Use `--reset` to drop a vendor's rows first, `--only <substring>` and `--limit N` to test on a few products, and `--refresh` to bypass the cache. Requests to each host are spaced 1.5 s apart.
 
