@@ -16,7 +16,7 @@ It ships as a static, offline-capable web app (PWA) that installs on macOS, Linu
 | Fuzz Dog | ~600 | parsed from the build-doc PDF | kit pages carry the docs; prices in GBP |
 | Madbean Pedals | ~120 | parsed from the build-doc PDF | single projects table, archived rows kept |
 | GuitarPCB | ~160 | OCR'd from the build-doc PDF (needs `tesseract`) | schematic and BOM are raster images in the PDF; ~85% of real boards parse |
-| Sheepy Love | ~70 | parsed from the build-doc PDF | Shopify catalog via `products.json`; KiCad-exported docs; prices in EUR |
+| Sheepylove | ~70 | parsed from the build-doc PDF | Shopify catalog via `products.json`; KiCad-exported docs; prices in EUR |
 | Dead End FX | ~125 | schematic labels + OCR'd table | Big Cartel catalog; build docs on Google Drive; R/C/D/Q/IC read exactly from the vector schematic, pots and switches from OCR |
 | Moonn Electronics | ~170 | parsed from the build-doc PDF | Big Cartel catalog; build docs on Dropbox; Qty/Value/Parts tables; prices in EUR |
 | Five Cats Pedals | ~120 | KiCad interactive BOM (exact) | WooCommerce Store API; the ibom zip on each product gives every designator; inserts are raster and not OCR'd; prices in GBP |

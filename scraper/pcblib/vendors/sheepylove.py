@@ -1,4 +1,4 @@
-"""Sheepy Love adapter. Shopify store: the public products.json lists the catalog,
+"""Sheepylove adapter. Shopify store: the public products.json lists the catalog,
 each product page links a build document PDF (KiCad-exported: text BOM + vector schematic)."""
 from __future__ import annotations
 

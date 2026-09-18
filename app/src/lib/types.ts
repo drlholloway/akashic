@@ -69,7 +69,7 @@ export const VENDOR_NAMES: Record<Vendor, string> = {
 	madbean: 'Madbean',
 	guitarpcb: 'GuitarPCB',
 	fuzzdog: 'Fuzz Dog',
-	sheepylove: 'Sheepy Love',
+	sheepylove: 'Sheepylove',
 	deadendfx: 'Dead End FX',
 	moonn: 'Moonn Electronics',
 	fivecats: 'Five Cats Pedals',

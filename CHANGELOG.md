@@ -11,7 +11,7 @@ Initial public release.
 
 ### Added
 - Scraper with adapters for eighteen sources: PedalPCB, Aion FX, Madbean, GuitarPCB,
-  Fuzz Dog, Sheepy Love, Dead End FX, Moonn Electronics, Five Cats Pedals, Parasit Studio,
+  Fuzz Dog, Sheepylove, Dead End FX, Moonn Electronics, Five Cats Pedals, Parasit Studio,
   PCB Guitar Mania, Dead Astronaut FX, General Guitar Gadgets, Lectric-FX, Zero G IOD, the
   Bent Fishbowl schematic blog, the Experimentalists Anonymous schematic archive and one
   PCBWay member's shared projects: 3,824 circuits.
