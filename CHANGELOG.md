@@ -5,6 +5,16 @@ GitHub Release notes.
 
 ## Unreleased
 
+### Added
+- Mask Audio Electronics (Shopify; Word build documents read straight from the .docx tables,
+  no converter needed; the freebie bundle is split into its four boards).
+- `TODO.md`: a running list of documents that parse wrong or thin, per vendor.
+
+### Fixed
+- Resistor values with a lowercase `r` suffix (`100r`) and capacitor values followed by a
+  dielectric word (`100p Silver Mica`) now normalize; `Ge`/`Si` are accepted as diode and
+  transistor values.
+
 ## 0.1.0 — 2026-09-17
 
 Initial public release.

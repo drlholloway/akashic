@@ -69,6 +69,8 @@ VENDORS = {
               "Build guides are © On The Road Effects; indexed and linked, not redistributed. Boards sell on Etsy and Reverb."),
     "dirtmonger": ("Dirt Monger Instruments", "https://dirtmongerinstruments.com/collections/diy-pcb-1",
                    "Build documents are hosted by Dirt Monger on Google Drive; indexed and linked, not redistributed."),
+    "maskaudio": ("Mask Audio Electronics", "https://maskaudioelectronics.com/collections/diy-projects",
+                  "Build documents are hosted by Mask Audio on Dropbox and Google Docs; indexed and linked, not redistributed."),
     "pcbway-gtu": ("PCBWay: Glory to Ukraine", "https://www.pcbway.com/project/member/?bmbno=19C5FC6C-66B1-46",
                    "Shared projects are CC BY-SA 3.0; schematic images may be shown with attribution. BOM and gerbers need a PCBWay login."),
 }

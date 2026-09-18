@@ -30,6 +30,7 @@ It ships as a static, offline-capable web app (PWA) that installs on macOS, Linu
 | Zero G IOD | 16 | OCR'd from BOM and schematic images | closed Big Cartel store; every product image (BOM, drill guide, schematic) is committed under `data/archive/zerogiod/` for posterity |
 | On The Road Effects | ~28 | parsed from the build-guide PDF | one WordPress page; boards sell on Etsy and Reverb; prices in USD |
 | Dirt Monger Instruments | ~15 | OCR'd from the build doc's parts image | Shopify collection; build docs on Google Drive; prices in CAD |
+| Mask Audio Electronics | ~26 | parsed from the Word build doc's table | Shopify collection; docs are .docx on Dropbox and Google Docs, read directly; one Eagle-schematic PDF paired by label; prices in USD |
 | PCBWay: Glory to Ukraine | ~337 | none (BOM needs a PCBWay login) | one member's shared projects via the member JSONP list; schematic PNGs are CC BY-SA; no prices |
 
 ### What is indexed and what is not

@@ -17,7 +17,7 @@ _SI = {"p": 1e-12, "n": 1e-9, "u": 1e-6, "µ": 1e-6, "μ": 1e-6, "m": 1e-3,
 
 # 1K5, 4k7, 2M2, 560R, 1n, 33pF, 4.7uF, 100n, 0.1uF, 1u, 10uF, 4u7
 _VAL_RE = re.compile(
-    r"^\s*(\d+(?:[.,]\d+)?)\s*([pnuµμmkKMR]?)\s*(\d*)\s*(?:[FfΩΩ]|ohm[s]?|H)?\s*$"
+    r"^\s*(\d+(?:[.,]\d+)?)\s*([pnuµμmkKMRr]?)\s*(\d*)\s*(?:[FfΩΩ]|ohm[s]?|H)?\s*$"
 )
 
 _POT_RE = re.compile(r"^\s*([ABCW])?\s*(\d+(?:[.,]\d+)?)\s*([kKM]?)\s*(?:ohm)?\s*([ABCW])?\s*(?:\(.*\))?\s*$")
@@ -128,6 +128,12 @@ def normalize_row(row: BomRow) -> BomRow:
     if row.category in ("D", "Q", "IC", "OPTO"):
         raw = re.sub(r"[*+†‡]+$", "", raw).strip()          # footnote markers: 2N5458**, 1N4148+
         raw = re.sub(r"\s+[A-Z]$", "", raw)                  # stray column bleed: "1N5817 S"
+    if row.category in ("R", "C", "L", "TRIM"):
+        m = re.match(r"^(\d+(?:[.,]\d+)?\s*[pnuµμmkKMRr]?\d*\s*(?:[Ff]|ohms?|H)?)\s+([A-Za-z(][^\n]*|\d+/\d+\s*W.*)$", raw)
+        if m and _parse_si(m.group(1)) is not None:   # "100p Silver Mica" -> value 100p, type "Silver Mica"
+            raw = m.group(1).strip()
+            row.value = raw
+            row.part_type = row.part_type or m.group(2).strip()
     row.norm_value = re.sub(r"\s+", " ", raw).upper()
     row.sort_key = 0.0
 
@@ -167,7 +173,8 @@ def is_plausible(row: BomRow) -> bool:
     """Drop rows the table parsers picked up from prose (e.g. 'C10 is omitted')."""
     if _JUNK.match(row.value.strip()):
         return False
-    if row.category in ("D", "Q", "IC") and (re.fullmatch(r"[RCLDQ]\d+", row.value.strip().upper()) or len(row.value.strip()) < 3):
+    if row.category in ("D", "Q", "IC") and (re.fullmatch(r"[RCLDQ]\d+", row.value.strip().upper())
+                                             or (len(row.value.strip()) < 3 and row.value.strip().upper() not in ("GE", "SI"))):
         return False
     if row.category in ("R", "C", "L") and row.sort_key <= 0:
         return False
