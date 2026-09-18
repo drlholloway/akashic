@@ -16,6 +16,9 @@ GitHub Release notes.
   whose board quality builders widely report as inconsistent.
 
 ### Fixed
+- Five Cats enclosures: newer inserts stamp "minimum enclosure" as a graphic, so page one is
+  OCR'd for the size (with the B this font turns into 6 or 8 repaired); 69 of 126 boards now
+  carry one, up from 27.
 - Resistor values with a lowercase `r` suffix (`100r`) and capacitor values followed by a
   dielectric word (`100p Silver Mica`) now normalize; `Ge`/`Si` are accepted as diode and
   transistor values.

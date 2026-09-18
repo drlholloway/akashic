@@ -624,6 +624,35 @@ def parse_shopping_list(pages: list[str]) -> list[BomRow]:
     return rows
 
 
+def ocr_enclosure(pdf: Path, vendor: str, slug: str, page_no: int = 1) -> str:
+    """Read an enclosure size printed as a graphic (Five Cats' "minimum enclosure"
+    stamp). OCRs the right-hand column of the page, then the whole page, and
+    repairs the B that condensed fonts turn into 6 or 8 before matching a size."""
+    from PIL import Image
+    from .taxonomy import find_enclosure
+    png = CACHE_DIR / vendor / f"{slug}-p{page_no}.png"
+    if not png.exists():
+        try:
+            render_page(pdf, page_no, png, dpi=200)
+        except Exception:  # noqa: BLE001
+            return ""
+    crop = png.with_name(f"{slug}-p{page_no}-right.png")
+    if not crop.exists():
+        im = Image.open(png)
+        w, h = im.size
+        part = im.crop((int(w * 0.50), int(h * 0.25), int(w * 0.98), int(h * 0.55))).convert("L")
+        part.resize((part.width * 2, part.height * 2)).save(crop)
+
+    def repair(t: str) -> str:
+        return re.sub(r"[1IL|]\s?(590|25)\s?([A-Z0-9]{1,3})\b", lambda m: "1" + m.group(1) + m.group(2).replace("8", "B").replace("6", "B"), t.upper())
+
+    for img, psm in ((crop, 11), (crop, 6), (crop, 4), (png, 11)):
+        found = find_enclosure(repair(_tesseract_cached(img, psm, "enc")))
+        if found:
+            return found
+    return ""
+
+
 def find_schematic_page(pages: list[str]) -> int | None:
     """1-based page index whose heading is SCHEMATIC (or 'Schematic Diagram'),
     or a KiCad-exported sheet (numbered column labels along the top edge)."""

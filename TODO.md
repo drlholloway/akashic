@@ -48,6 +48,7 @@ at the bottom; re-run them after parser changes.
 | Effects Layouts | One-Knobber, Drivestortion | Old blog-era project PDFs with broken font encodings; OCR gives 13 and 18 rows, pots missing |
 | JMK PCBs | Big Bass Drive, AC/DC Drive, Level Up, 5 Knob Fuzz, Classic Tremolo, Blue Warbler 2, Super Phaser | Build notes describe the original without naming it; `based_on` left empty |
 | JMK PCBs | most boards | Docs rarely state an enclosure (8 of 38 found); drill templates are named by knob count, not size |
+| Five Cats | 57 older inserts | No enclosure stamp on the insert (only newer layouts have the "minimum enclosure" badge); their parts tables are clean images that could be OCR'd for boards without an interactive BOM (Rattus, Echoes) |
 | Mask Audio | Business Card | Doc says 1590BBM/BBS; the enclosure regex does not know 1590BBM |
 
 ## Parser wishes

@@ -13,7 +13,7 @@ from selectolax.parser import HTMLParser
 from ..ibom import parse_ibom
 from ..models import Circuit
 from ..paths import CACHE_DIR, DATA_DIR
-from ..pdf import render_page
+from ..pdf import ocr_enclosure, render_page
 from ..taxonomy import classify, find_enclosure
 from . import register
 from .base import Adapter, clean_text, html_to_text
@@ -134,6 +134,8 @@ class FiveCats(Adapter):
                 c.doc_local = str(pdf.relative_to(DATA_DIR))
                 m = re.search(r"-V(\d+)-(\d+)", insert_pdf)
                 c.doc_version = f"V{m.group(1)}.{m.group(2)}" if m else ""
+                if not c.enclosure:
+                    c.enclosure = ocr_enclosure(pdf, self.vendor, slug)  # newer inserts stamp "minimum enclosure" as a graphic
                 # No OCR fallback: the inserts are low-resolution JPEG composites and the
                 # results were unreliable; boards without an interactive BOM link to the doc.
         if schematic_pdf:
