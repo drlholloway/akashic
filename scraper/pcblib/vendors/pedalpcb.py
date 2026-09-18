@@ -40,6 +40,8 @@ class PedalPCB(Adapter):
         pdfs = sorted(set(re.findall(r'https://docs\.pedalpcb\.com/[^"\' >]+\.pdf', html)))
         if not pdfs:
             return None  # not a documented PCB project (kits, parts, misc)
+        if ld and re.search(r"\bfaceplate\b", _unescape(ld.get("name", "")), re.I):
+            return None  # a faceplate for a board that is indexed on its own
 
         h1 = doc.css_first("h1.product_title")
         name = clean_text(h1.text()) if h1 else clean_text((doc.css_first("title").text() if doc.css_first("title") else "").split(" - ")[0])

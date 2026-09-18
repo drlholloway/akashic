@@ -16,6 +16,8 @@ GitHub Release notes.
   whose board quality builders widely report as inconsistent.
 
 ### Fixed
+- PedalPCB: the older `qty  value  ref` three-column parts list (Amentum Boost) parses, and
+  faceplate products are no longer indexed as circuits.
 - Fuzz Dog: the parts table is read from whichever page holds it (the 2023 doc layout puts
   it a few pages after the schematic) and the circuit's own doc is preferred over the shared
   FuzzPup guide; boards without a parts list fell from 32 to 4, and 451 boards now name their

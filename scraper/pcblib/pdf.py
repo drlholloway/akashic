@@ -651,7 +651,14 @@ def parse_shopping_list(pages: list[str]) -> list[BomRow]:
         found: list[tuple[str, str, str]] = []
         if header:
             # Read the column order from the header ("Value QTY Type ..." or "QTY Value Type ...") and split rows on 2+ spaces.
-            cols = [c.lower() for c in header.split()]  # header words are single ("QTY Value Type Rating Spacing")
+            # Columns are 2+ spaces apart, except single-spaced runs of column words ("QTY Value", "Rating Spacing").
+            cols: list[str] = []
+            for tok in re.split(r"\s{2,}", header.strip()):
+                words = tok.split()
+                if all(w.lower() in {"qty", "quantity", "value", "type", "rating", "spacing", "part", "notes"} for w in words):
+                    cols.extend(w.lower() for w in words)
+                else:
+                    cols.append(tok.lower())
             iv = next((i for i, c in enumerate(cols) if c.startswith("value")), None)
             iq = next((i for i, c in enumerate(cols) if c.startswith(("qty", "quantity"))), None)
             if iv is None or iq is None:
@@ -713,6 +720,34 @@ def ocr_enclosure(pdf: Path, vendor: str, slug: str, page_no: int = 1) -> str:
     return ""
 
 
+_QVR_TRIPLE = re.compile(r"(?<![A-Za-z0-9])(\d{1,2})[ \t]+([A-Za-z0-9.µ/+\-]{1,12}(?:[ \t](?!\d{1,2}[ \t])[A-Za-z0-9.µ/\-]{1,10})?)[ \t]+((?:R|C|D|Q|IC|U|L|SW|LED|VR|TR)\d{1,3}[A-Z]?)(?![A-Za-z0-9])")
+_QVR_POT = re.compile(r"(?<![A-Za-z0-9])(\d{1,2})[ \t]+([ABCW]\d+(?:[.,]\d+)?[kKM]?)[ \t]+([A-Z][A-Z\-]{2,12})(?![A-Za-z0-9])")
+
+
+def parse_bom_qty_value_ref(pages: list[str]) -> list[BomRow]:
+    """Older PedalPCB docs: 'qty  value  ref' triplets side by side under part-type
+    headings ('1  1K3  R2   1  100p  C1   1  2N5089  Q1'), pots as '1  B10K LEVEL'."""
+    rows: list[BomRow] = []
+    seen: set[str] = set()
+    for page in pages:
+        if not re.search(r"parts list|bill of materials", page, re.I):
+            continue
+        for ln in page.splitlines():
+            for _, value, ref in _QVR_TRIPLE.findall(ln):
+                if ref in seen:
+                    continue
+                nr = normalize_row(BomRow(ref=ref, value=value.strip()))
+                if is_plausible(nr):
+                    seen.add(ref)
+                    rows.append(nr)
+            for _, value, name in _QVR_POT.findall(ln):
+                if name in seen or name in _COL_POT_STOP:
+                    continue
+                seen.add(name)
+                rows.append(normalize_row(BomRow(ref=name, value=value.upper(), part_type="Potentiometer", category="POT")))
+    return rows
+
+
 def find_schematic_page(pages: list[str]) -> int | None:
     """1-based page index whose heading is SCHEMATIC (or 'Schematic Diagram'),
     or a KiCad-exported sheet (numbered column labels along the top edge)."""
@@ -766,7 +801,7 @@ def process_document(pdf: Path, vendor: str, slug: str) -> dict:
     pages = pdf_text_pages(pdf)
     # Vendors lay their parts lists out three ways; run every parser and keep the
     # one that recovered the most designators (they never both succeed on one doc).
-    bom = max((parse_bom(pages), parse_bom_qty_value_parts(pages), parse_bom_columns(pages)), key=len)
+    bom = max((parse_bom(pages), parse_bom_qty_value_parts(pages), parse_bom_columns(pages), parse_bom_qty_value_ref(pages)), key=len)
     if not bom:
         bom = parse_shopping_list(pages)
     page_no = find_schematic_page(pages)

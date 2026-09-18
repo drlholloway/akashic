@@ -28,7 +28,8 @@ at the bottom; re-run them after parser changes.
 - **Five Cats Pedals**: 6 without a BOM after OCR of the older inserts: three 3PDT
   daughterboards and the Transelector (no table), and the Vintage Style Fuzz Face, whose
   insert is a wiring diagram with values printed on the parts.
-- **PedalPCB**: 13 without a BOM, 5 thin (legacy doc layouts).
+- **PedalPCB**: complete for circuits. The boards without a parts list are utility items whose
+  docs have none (drill templates, the current-meter kit, the test platform, the ProtoBoard).
 
 ## Specific boards
 
