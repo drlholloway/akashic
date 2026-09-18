@@ -14,16 +14,18 @@ at the bottom; re-run them after parser changes.
   only works on clean traced drawings.
 - **Bent Fishbowl**: 8 of 33 schematics come back thin; busy drawings defeat the
   designator/value pairing.
-- **GuitarPCB**: 18 boards with no BOM and 17 thin (raster BOM tables; OCR misses
-  small type). 158 boards have no named controls because pot names live in the image.
+- **GuitarPCB**: 5 boards with no BOM and 7 thin after the thorough OCR pass; the rest
+  are selector and wiring boards with no BOM by design (Roto-Tone, 2 Knob Job, 3PDT
+  boards, Easy Order Switching). 27 boards still have no named controls.
 - **Madbean**: 120 boards without controls (the docs table them as `POT1..n`); 24 with
   no BOM (legacy projects whose PDFs are image-only or missing).
 - **Aion FX**: 55 boards without controls; 7 without a BOM.
 - **Fuzz Dog**: 32 boards without a BOM and 15 thin (kit pages whose doc link is a
   different layout, or docs that only carry a layout image).
 - **PCB Guitar Mania**: 14 without a BOM; 85 without controls.
-- **Five Cats Pedals**: 17 without a BOM (older boards ship a raster insert instead of the
-  KiCad interactive BOM zip), e.g. Rattus.
+- **Five Cats Pedals**: 6 without a BOM after OCR of the older inserts: three 3PDT
+  daughterboards and the Transelector (no table), and the Vintage Style Fuzz Face, whose
+  insert is a wiring diagram with values printed on the parts.
 - **PedalPCB**: 13 without a BOM, 5 thin (legacy doc layouts).
 
 ## Specific boards
@@ -35,9 +37,11 @@ at the bottom; re-run them after parser changes.
 | On The Road Effects | OmniMuff | Build guide has no parseable table; 0 rows |
 | On The Road Effects | Guerrero Oro | Same; 0 rows |
 | Dead Astronaut | Chasm Reverb, Ebe Delay, Timestream Reverb | Raster docs where thorough OCR still returns nothing |
-| Five Cats | Rattus | Insert is raster only; no ibom zip |
+| Five Cats | Rattus | Insert table has four variant columns (RAT, RAT2, Turbo, You Dirty); OCR keeps the first value per designator, so the list is the RAT spec |
+| Five Cats | Marshall Supa Fuzz, Vintage Style Fuzz Face | Insert is a wiring diagram with values on the parts, not a table; 1 and 0 rows |
 | Damnation Audio (via Mask Audio) | Parallel Drive | Eagle schematic PDF; R/C/D/IC paired from labels but the two pots (Drive 500kA, Dist. 100kA) are not, and the bass-version page is ignored |
 | Mask Audio | Big Clang | Doc lists three variant specs (Classic, Big Clang, Ailbini); only the first is kept |
+| GuitarPCB | G.B.O.F. (16-project fuzz board), NostalgiTone Dual Combo Creator | Variant matrix tables; OCR gets 1–2 rows |
 | GuitarPCB | NostalgiTone 60s, NostalgiTone 60s Tremolo (single) | Cached PDF has no page 1 (`IndexError: page 1 not in document`); refetch with `--refresh` |
 | Fuzz Dog | Astrotone | MuPDF cannot open the embedded colour profile, so no page renders |
 | Effects Layouts | Schematic Fuzz | Build doc is drill templates only; the schematic is on the silkscreen |
@@ -48,7 +52,7 @@ at the bottom; re-run them after parser changes.
 | Effects Layouts | One-Knobber, Drivestortion | Old blog-era project PDFs with broken font encodings; OCR gives 13 and 18 rows, pots missing |
 | JMK PCBs | Big Bass Drive, AC/DC Drive, Level Up, 5 Knob Fuzz, Classic Tremolo, Blue Warbler 2, Super Phaser | Build notes describe the original without naming it; `based_on` left empty |
 | JMK PCBs | most boards | Docs rarely state an enclosure (8 of 38 found); drill templates are named by knob count, not size |
-| Five Cats | 57 older inserts | No enclosure stamp on the insert (only newer layouts have the "minimum enclosure" badge); their parts tables are clean images that could be OCR'd for boards without an interactive BOM (Rattus, Echoes) |
+| Five Cats | 57 older inserts | No enclosure stamp on the insert (only newer layouts have the "minimum enclosure" badge) |
 | Mask Audio | Business Card | Doc says 1590BBM/BBS; the enclosure regex does not know 1590BBM |
 
 ## Parser wishes
@@ -58,6 +62,8 @@ at the bottom; re-run them after parser changes.
   and fall back to OCR only for pots and switches (Dead End FX does this; generalize).
 - OCR confuses `1` and `l`, `0` and `O`, `5` and `S` in pot values; `_repair_value` skips pots
   on purpose because `A1M` became `4.1M`. A pot-aware repair would recover a few boards.
+- OCR of tables with several variant columns (Rattus, G.B.O.F.) could keep every column as
+  a named variant instead of the first value.
 
 ## Query
 

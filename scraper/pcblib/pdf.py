@@ -223,7 +223,9 @@ def parse_bom_columns(pages: list[str], max_col: int | None = None) -> list[BomR
     return rows
 
 
-_OCR_POT = re.compile(r"(?<![A-Za-z0-9])([A-Z][A-Z\-]{2,12})\s+(\d+(?:[.,]\d+)?[KM]?[ABCW]|[ABCWabcw][0-9IlO]+(?:[.,]\d+)?[kKmM]?)(?![A-Za-z0-9])")
+_OCR_POT = re.compile(r"(?<![A-Za-z0-9])([A-Z][A-Za-z\-]{2,12})\s+(\d+(?:[.,]\d+)?[KM]?[ABCW]|[ABCWabcw][0-9IlO]+(?:[.,]\d+)?[kKmM]?)(?![A-Za-z0-9])")
+_OCR_POT_STOP = {"AND", "THE", "FOR", "OUT", "GND", "BOM", "MAIN", "BOARD", "NOTES", "TRANSISTORS", "RESISTORS", "CAPACITORS", "DIODES", "SWITCHES",
+                 "POTS", "TRIMMERS", "VALUE", "PART", "PARTS", "QTY", "USE", "SWAP", "WITH", "TRY", "ANY", "PUT", "ADD", "FIT", "SET", "PREFER", "LIKE", "FROM", "INTO", "ALSO", "STANDARD"}
 _RANGE = re.compile(r"\*?\b([RCDQ])(\d+)\s*[-–]\s*[RCDQ]?(\d+)\s+([A-Z0-9][A-Z0-9.]+)", re.I)
 
 
@@ -375,8 +377,33 @@ def _repair_value(v: str) -> str:
         head, tail = re.match(r"^(.*?)([kKMrRnpuµ]F?|[uµ]F|nF|pF)$", v).groups()
         fixed = head.translate(_DIGIT_FIX)
         if re.fullmatch(r"\d+(?:\.\d+)?", fixed):
-            return fixed + tail
+            v = fixed + tail
+    m = re.match(r"^([47])(\d*(?:\.\d+)?)([kKMrRnpuµ]F?|[uµ]F|nF|pF)$", v)
+    if m and not _is_e24(m.group(1) + m.group(2)) and _is_e24("1" + m.group(2)):
+        return "1" + m.group(2) + m.group(3)  # 700uF and 400uF are not values; 100uF is: the 1 was read as 7 or 4
+    m = re.match(r"^[^A-Za-z0-9]*[1IilTta]N([0-9A-Za-z]{3,5}[A-Z]?)$", v)
+    if m:  # 1N-series diodes: "-tN4oo4", "IN9L4", "iNg14" -> 1N4004, 1N914, 1N914
+        digits = m.group(1).translate(str.maketrans("oOlILgSsBq", "0011195869"))
+        if re.fullmatch(r"\d{3,4}[A-Z]?", digits):
+            return "1N" + digits
     return v
+
+
+_E24 = {10, 11, 12, 13, 15, 16, 18, 20, 22, 24, 27, 30, 33, 36, 39, 43, 47, 51, 56, 62, 68, 75, 82, 91}
+
+
+def _is_e24(num: str) -> bool:
+    try:
+        x = float(num)
+    except ValueError:
+        return False
+    if x <= 0:
+        return False
+    while x >= 100:
+        x /= 10
+    while x < 10:
+        x *= 10
+    return round(x) in _E24 and abs(x - round(x)) < 0.05
 
 
 def ocr_image_bom(image: Path, vendor: str, slug: str, tag: str = "bom") -> list[BomRow]:
@@ -416,9 +443,12 @@ def _rows_from_ocr(out: str) -> list[BomRow]:
     seen: set[str] = set()
 
     def add(ref: str, value: str, ptype: str = "", cat: str = "") -> None:
-        value = _repair_value(value.strip().rstrip(".,;:"))
+        value = _repair_value(value.strip().rstrip(".,;:").lstrip("-–—_ "))
         if ref in seen or ref[0] in "J":
             return
+        m_ref = re.match(r"^[A-Za-z]+(\d+)", ref)
+        if m_ref and (int(m_ref.group(1)) == 0 or int(m_ref.group(1)) > 999):
+            return  # R0 is never a real designator (big boards do reach R400)
         if cat != "POT" and (not re.search(r"\d", value) or not re.fullmatch(r"[A-Za-z0-9.\-/µu]{1,12}", value)):
             return
         nr = normalize_row(BomRow(ref=ref, value=value.strip(), part_type=ptype, notes="OCR", category=cat))
@@ -453,8 +483,9 @@ def _rows_from_ocr(out: str) -> list[BomRow]:
                 continue  # "BOARD BOM" is not a pot
             if re.fullmatch(r"[RCDQL]\d+", val):
                 continue  # "OOK C16": a designator read as a pot value
-            if 3 <= len(ref) <= 12 and re.fullmatch(r"[A-Z][A-Z\-]+", ref) and ref.upper() not in {"AND", "THE", "FOR", "OUT", "GND", "BOM", "MAIN", "BOARD", "NOTES", "TRANSISTORS", "RESISTORS", "CAPACITORS", "DIODES", "SWITCHES", "POTS", "TRIMMERS", "VALUE", "PART", "PARTS", "QTY"}:
-                add(ref, val, "Trimmer" if "TRIM" in ref else "Potentiometer", "TRIM" if "TRIM" in ref else "POT")
+            if 3 <= len(ref) <= 12 and re.fullmatch(r"[A-Z][A-Za-z\-]+", ref) and ref.upper() not in _OCR_POT_STOP \
+                    and (ref.isupper() or re.fullmatch(r"[ABCW]\d+[kKM]", val)):  # a Title-case name only counts with an explicit taper
+                add(ref.upper(), val, "Trimmer" if "TRIM" in ref.upper() else "Potentiometer", "TRIM" if "TRIM" in ref.upper() else "POT")
     return rows
 
 

@@ -15,11 +15,11 @@ It ships as a static, offline-capable web app (PWA) that installs on macOS, Linu
 | Aion FX | ~270 | parsed from the build-doc PDF | controls and difficulty from the doc |
 | Fuzz Dog | ~600 | parsed from the build-doc PDF | kit pages carry the docs; prices in GBP |
 | Madbean Pedals | ~120 | parsed from the build-doc PDF | single projects table, archived rows kept |
-| GuitarPCB | ~160 | OCR'd from the build-doc PDF (needs `tesseract`) | schematic and BOM are raster images in the PDF; ~85% of real boards parse |
+| GuitarPCB | ~148 | OCR'd from the build-doc PDF (needs `tesseract`) | schematic and BOM are raster images in the PDF; a thorough OCR pass (upscaled, thresholded) runs when the quick one is thin; ~92% of boards parse, pots named from the table |
 | Sheepylove | ~70 | parsed from the build-doc PDF | Shopify catalog via `products.json`; KiCad-exported docs; prices in EUR |
 | Dead End FX | ~125 | schematic labels + OCR'd table | Big Cartel catalog; build docs on Google Drive; R/C/D/Q/IC read exactly from the vector schematic, pots and switches from OCR |
 | Moonn Electronics | ~170 | parsed from the build-doc PDF | Big Cartel catalog; build docs on Dropbox; Qty/Value/Parts tables; prices in EUR |
-| Five Cats Pedals | ~120 | KiCad interactive BOM (exact) | WooCommerce Store API; the ibom zip on each product gives every designator; inserts are raster and not OCR'd; prices in GBP |
+| Five Cats Pedals | ~125 | KiCad interactive BOM (exact), else OCR of the insert | WooCommerce Store API; the ibom zip on each product gives every designator; older boards without one get their typeset insert table OCR'd; the insert's enclosure badge is OCR'd too; prices in GBP |
 | Parasit Studio | ~33 | parsed from the build-doc PDF | shop is a JS widget, so circuits come from the static /pedals/ pages; no prices |
 | PCB Guitar Mania | ~250 | parsed from the build-doc PDF | WooCommerce Store API; docs state the original, enclosure and difficulty; regional and gerber-only duplicates collapse onto the board; prices in EUR; circuit pages carry a quality caution |
 | Dead Astronaut FX | ~19 | OCR'd from raster build docs | Wix site; pages named from the nav menu; PayPal prices in GBP |

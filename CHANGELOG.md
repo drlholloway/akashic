@@ -16,6 +16,13 @@ GitHub Release notes.
   whose board quality builders widely report as inconsistent.
 
 ### Fixed
+- Older Five Cats inserts without an interactive BOM now get their typeset parts table
+  OCR'd (11 more boards with a list); GuitarPCB escalates to the thorough OCR pass when the
+  quick one is thin (12 more boards, and 121 of 148 now have named controls); component
+  packs sold by GuitarPCB are no longer indexed as circuits.
+- OCR repairs: a leading 7 that makes a non-E24 value is a misread 1 (`700uF` -> `100uF`),
+  1N-series diodes are rebuilt from look-alike letters (`iNg14` -> `1N914`), and impossible
+  designators (`R0`, `C412`) are dropped.
 - Add-on boards (daughterboards, clipping selectors) classify as Utility before any effect
   word, so a "rotary clipping daughterboard" is no longer a rotary-speaker effect; a packing
   list mentioning a bypass board no longer makes a fuzz a utility; `Fuzz`-prefixed names,

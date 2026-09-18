@@ -45,8 +45,8 @@ class GuitarPCB(Adapter):
         title_n = doc.css_first("h2.product_title, h1.product_title")
         full_title = clean_text(title_n.text()) if title_n else clean_text(ld.get("name", ""))
         full_title, sale_tags = _strip_prefixes(full_title)
-        if re.search(r"painted enclosure|gift card|t-shirt|sticker", full_title, re.I):
-            return None
+        if re.search(r"painted enclosure|gift card|t-shirt|sticker|^(?:NPN|PNP) Transistor|^Diode \S+|^SMD \S+ PCB|^SOT23|Adapter for|\(\d+\) Pack", full_title, re.I):
+            return None  # merch and component packs
         name, based_on = _split_title(full_title)
         slug = url.rstrip("/").rsplit("/", 1)[-1]
         short = doc.css_first(".woocommerce-product-details__short-description")
@@ -93,6 +93,12 @@ class GuitarPCB(Adapter):
                 c.schematic_local = str(png.relative_to(DATA_DIR))
                 c.schematic_page = page_no
             c.bom = ocr_bom(pdf, self.vendor, slug)
+            if len(c.bom) < 12:
+                thorough = ocr_bom(pdf, self.vendor, slug, thorough=True)  # upscaled, thresholded passes for small type
+                if len(thorough) > len(c.bom):
+                    c.bom = thorough
+            if not c.controls:
+                c.controls = [r.ref.title() for r in c.bom if r.category == "POT" and r.ref.isalpha()]
         return c
 
 

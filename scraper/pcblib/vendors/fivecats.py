@@ -13,7 +13,7 @@ from selectolax.parser import HTMLParser
 from ..ibom import parse_ibom
 from ..models import Circuit
 from ..paths import CACHE_DIR, DATA_DIR
-from ..pdf import ocr_enclosure, render_page
+from ..pdf import ocr_bom, ocr_enclosure, render_page
 from ..taxonomy import classify, find_enclosure
 from . import register
 from .base import Adapter, clean_text, html_to_text
@@ -136,8 +136,13 @@ class FiveCats(Adapter):
                 c.doc_version = f"V{m.group(1)}.{m.group(2)}" if m else ""
                 if not c.enclosure:
                     c.enclosure = ocr_enclosure(pdf, self.vendor, slug)  # newer inserts stamp "minimum enclosure" as a graphic
-                # No OCR fallback: the inserts are low-resolution JPEG composites and the
-                # results were unreliable; boards without an interactive BOM link to the doc.
+                if len(c.bom) < 8:
+                    # Older inserts have no interactive BOM but a clean typeset parts table as an image.
+                    ocr = ocr_bom(pdf, self.vendor, slug, max_pages=2, thorough=True)
+                    if len(ocr) > len(c.bom):
+                        c.bom = ocr
+                        if not c.controls:
+                            c.controls = [r.ref.title() for r in c.bom if r.category == "POT" and r.ref.isalpha()]
         if schematic_pdf:
             spdf = self.f.get_file(schematic_pdf, ".pdf")
             if spdf and spdf.read_bytes()[:5] == b"%PDF-":
