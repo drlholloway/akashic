@@ -81,7 +81,8 @@ class OTRFX(Adapter):
         slug = re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
         based_on = re.sub(r"^(?:modded|new!?)\s+", "", e["based_on"], flags=re.I)
         based_on = re.sub(r"\s*(?:pcb|pedal|version|circuit)\s*$", "", based_on, flags=re.I).strip(" -")
-        section_cat = next((c for k, c in _SECTION_CAT.items() if k in e["section"].lower()), "")
+        combined = bool(re.search(r"&|\+|\band\b", e["section"]))
+        section_cat = "" if combined else next((c for k, c in _SECTION_CAT.items() if k in e["section"].lower()), "")
         c = Circuit(
             vendor=self.vendor, slug=slug, name=name, url=e["etsy"] or e["reverb"] or PAGE, based_on=based_on,
             description=e["based_on"], category=classify(based_on, name, e["section"]) if not section_cat or section_cat in ("Fuzz", "Overdrive") else section_cat,
@@ -105,5 +106,5 @@ class OTRFX(Adapter):
             pots = [r for r in c.bom if r.category == "POT"]
             if pots:
                 named = all(re.fullmatch(r"[A-Za-z][A-Za-z \-/]+", r.ref) for r in pots)
-                c.controls = [r.ref.title() for r in pots] if named else [f"{len(pots)} knobs"]
+                c.controls = [re.sub(r"\s+Pot$", "", r.ref.title()) for r in pots] if named else [f"{len(pots)} knobs"]
         return c
