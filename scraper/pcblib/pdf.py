@@ -429,7 +429,7 @@ def _rows_from_ocr(out: str) -> list[BomRow]:
                 continue  # "BOARD BOM" is not a pot
             if re.fullmatch(r"[RCDQL]\d+", val):
                 continue  # "OOK C16": a designator read as a pot value
-            if 3 <= len(ref) <= 12 and re.fullmatch(r"[A-Z][A-Z\-]+", ref) and ref.upper() not in {"AND", "THE", "FOR", "OUT", "GND", "BOM", "MAIN", "BOARD", "NOTES"}:
+            if 3 <= len(ref) <= 12 and re.fullmatch(r"[A-Z][A-Z\-]+", ref) and ref.upper() not in {"AND", "THE", "FOR", "OUT", "GND", "BOM", "MAIN", "BOARD", "NOTES", "TRANSISTORS", "RESISTORS", "CAPACITORS", "DIODES", "SWITCHES", "POTS", "TRIMMERS", "VALUE", "PART", "PARTS", "QTY"}:
                 add(ref, val, "Trimmer" if "TRIM" in ref else "Potentiometer", "TRIM" if "TRIM" in ref else "POT")
     return rows
 

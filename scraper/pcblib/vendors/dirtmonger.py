@@ -11,7 +11,7 @@ from typing import Iterable
 
 from ..models import Circuit
 from ..paths import DATA_DIR
-from ..pdf import ocr_bom, pdf_text_pages
+from ..pdf import ocr_bom, pdf_text_pages, process_document
 from ..taxonomy import classify, find_enclosure
 from . import register
 from .base import Adapter, clean_text, html_to_text
@@ -52,7 +52,10 @@ class DirtMonger(Adapter):
         body = html_to_text(body_html)
         m = _ORIG.search(body)
         based_on = clean_text(m.group(1)) if m else ""
-        based_on = re.sub(r"\s+(?:clone|DIY)$", "", based_on, flags=re.I)
+        based_on = re.split(r",\s*Includes|\s+Includes\b|\s+from the\b", based_on)[0]
+        based_on = re.sub(r"\s+(?:clone|DIY)$", "", based_on, flags=re.I).strip(" ,")
+        if re.match(r"^(HM-?T?-?2|XT-2|PW-2|MT-2|DS-1|HM-2)\b", based_on) or re.search(r"\bBoss\b", body) and not re.match(r"^Boss", based_on) and re.match(r"^[A-Z]{2,3}-\d", based_on):
+            based_on = "Boss " + based_on
         if not based_on:
             based_on = re.sub(r"\s+(?:Clone|DIY|Combo)$", "", name, flags=re.I)
         variant = (pr.get("variants") or [{}])[0]
@@ -60,7 +63,7 @@ class DirtMonger(Adapter):
         c = Circuit(
             vendor=self.vendor, slug=handle, name=name, url=f"{BASE}/products/{handle}", based_on=based_on,
             description=re.sub(r"\s*(?:BUILD DOCUMENT(?:ATION)?|DRILL TEMPLATE[^\n]*|Complete .* available here|complete .* available here)\s*", " ", body).strip(),
-            category=classify(based_on, name, body[:300]), price=price, currency="CAD",
+            category=(lambda cat: "Distortion" if cat in ("Utility", "Other") else cat)(classify(based_on, name, body[:300])), price=price, currency="CAD",
             in_stock=variant.get("available"), doc_url=docs[0], enclosure=find_enclosure(body),
             image_url=(pr.get("images") or [{}])[0].get("src", "").split("?")[0],
         )
@@ -78,7 +81,12 @@ class DirtMonger(Adapter):
                 c.doc_version = m.group(1).replace(" ", "")
             if not c.enclosure:
                 c.enclosure = find_enclosure(*pages[:2])
-            c.bom = ocr_bom(pdf, self.vendor, handle, max_pages=4, thorough=True)
+            # Some docs carry a text parts table; the rest have it as an image.
+            c.__dict__.update({k: v for k, v in process_document(pdf, self.vendor, handle).items() if k in ("bom", "schematic_local", "schematic_page")})
+            if len(c.bom) < 8:
+                ocr = ocr_bom(pdf, self.vendor, handle, max_pages=5, thorough=True)
+                if len(ocr) > len(c.bom):
+                    c.bom = ocr
             pots = [r for r in c.bom if r.category == "POT"]
             if pots:
                 named = all(re.fullmatch(r"[A-Za-z][A-Za-z \-/]+", r.ref) for r in pots)
