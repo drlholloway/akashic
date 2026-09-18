@@ -64,9 +64,13 @@ def run(images: bool = False) -> None:
         circuits = [_row(r) for r in conn.execute("SELECT * FROM circuits ORDER BY vendor, name")]
         for c in circuits:
             bom = [dict(b) for b in conn.execute(
-                "SELECT ref,value,part_type,notes,category,norm_value,sort_key FROM bom "
+                "SELECT ref,value,part_type,notes,category,norm_value,sort_key,variant FROM bom "
                 "WHERE circuit_id=? ORDER BY position", (c["id"],))]
             c["bom"] = bom
+            variants = list(dict.fromkeys(b["variant"] for b in bom if b["variant"]))
+            c["variants"] = variants
+            # Counts and the cross-reference use the first variant only, so a four-column table is not four boards.
+            bom = [b for b in bom if not b["variant"] or b["variant"] == (variants[0] if variants else "")]
             has_schematic = bool(c.get("schematic_local"))
             # active-part signature for search: ICs, transistors, diodes, opto
             actives = sorted({b["norm_value"] for b in bom if b["category"] in ("IC", "Q", "OPTO")})

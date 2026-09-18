@@ -40,11 +40,11 @@ at the bottom; re-run them after parser changes.
 | On The Road Effects | OmniMuff | Build guide has no parseable table; 0 rows |
 | On The Road Effects | Guerrero Oro | Same; 0 rows |
 | Dead Astronaut | Chasm Reverb, Ebe Delay, Timestream Reverb | Raster docs where thorough OCR still returns nothing |
-| Five Cats | Rattus | Insert table has four variant columns (RAT, RAT2, Turbo, You Dirty); OCR keeps the first value per designator, so the list is the RAT spec |
 | Five Cats | Marshall Supa Fuzz, Vintage Style Fuzz Face | Insert is a wiring diagram with values on the parts, not a table; 1 and 0 rows |
 | Damnation Audio (via Mask Audio) | Parallel Drive | Eagle schematic PDF; R/C/D/IC paired from labels but the two pots (Drive 500kA, Dist. 100kA) are not, and the bass-version page is ignored |
-| Mask Audio | Big Clang | Doc lists three variant specs (Classic, Big Clang, Ailbini); only the first is kept |
-| GuitarPCB | G.B.O.F. (16-project fuzz board), NostalgiTone Dual Combo Creator | Variant matrix tables; OCR gets 1–2 rows |
+| GuitarPCB | G.B.O.F. (16-project fuzz board), NostalgiTone Dual Combo Creator | No parts table: the doc lists sixteen projects to build on one board and points to DIY Layout Creator drawings |
+| PedalPCB | LotLizard, SuperStevie | Single-part variants live in the parts-list notes ("Omitted in Nano version"); shown as notes, not as a variant selector. Muffin Fuzz's eight side-by-side versions are parsed |
+| Five Cats | Rattus | The four variant columns are OCR'd, but a noisy line drops a column: 16 / 14 / 13 / 12 rows across RAT / RAT2 / Turbo / You Dirty |
 | Effects Layouts | Schematic Fuzz | Build doc is drill templates only; the schematic is on the silkscreen |
 | Effects Layouts | Lawn Darts | Doc is a single scanned schematic image; positional OCR finds nothing |
 | Effects Layouts | Melody Malfunction, Cranky Speaker | Doc has only a shopping list (value, type, quantity), so rows are named by quantity (`×2`) and controls are a knob count |
@@ -62,8 +62,6 @@ at the bottom; re-run them after parser changes.
 - Named-pot tables where the taper is a separate column (`LOUD | A | 100k`).
 - Docs that put the parts list in an image but the schematic as vectors: pair the schematic
   and fall back to OCR only for pots and switches (Dead End FX does this; generalize).
-- OCR of tables with several variant columns (Rattus, G.B.O.F.) could keep every column as
-  a named variant instead of the first value.
 
 ## Query
 

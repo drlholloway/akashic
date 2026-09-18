@@ -15,6 +15,12 @@ GitHub Release notes.
 - A per-vendor caution shown on circuit pages next to the buy link; set for PCB Guitar Mania,
   whose board quality builders widely report as inconsistent.
 
+- Build variants: a parts table with one value column per version (Effects Layouts' Crempog
+  1977 / 2003 and Horde Howler's eight Tube Screamer specs, Mask Audio's Big Clang blocks, Five
+  Cats' Rattus RAT / RAT2 / Turbo / You Dirty columns, PedalPCB's Muffin Fuzz with eight Big Muff
+  versions side by side) keeps every column, and the circuit page gets a variant selector.
+  Counts and the parts cross-reference use the first variant.
+
 ### Fixed
 - Pot values read by OCR keep their taper letter and have only the digits repaired
   (`ASOOK` -> `A500K`, `BSOK` -> `B50K`, `8100K` -> `B100K`): 143 more pot rows across the OCR

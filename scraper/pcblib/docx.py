@@ -17,7 +17,7 @@ _W = "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
 _HEADERS = re.compile(
     r"^(resistors?|cap[ais]+[ist]+ors?|capacitors?|diodes?|transistors?|ics?|op-?amps?|pots?|"
     r"potentiometers?|switch(?:es)?|hardware|vactrol|transformer|active components|misc|other|"
-    r"classic|[a-z ]+ (?:parts list|bill of materials))$", re.I)
+    r"[a-z ]+ (?:parts list|bill of materials))$", re.I)
 _DESIGNATOR = re.compile(r"^(?:R|C|D|Q|L|IC|U|SW|LED|TR|VR|RV|POT|XFM|VACT|CLR)_?\d*[A-Z]?$", re.I)
 _LIST_SEP = re.compile(r"\s*[,/&]\s*")
 _POT_VALUE = re.compile(r"^[ABCW]?\s?\d+(?:[.,]\d+)?\s?[kKmM]?(?:\s?(?:ohm|trim|pot|dual|log|lin|rev|[ABCW]))*\s?$", re.I)
@@ -95,12 +95,30 @@ def _split_value(raw: str) -> tuple[str, str]:
 
 def docx_bom(tables: list[list[list[str]]]) -> list[BomRow]:
     """Extract designator/value rows from side-by-side parts tables. A designator
-    that repeats starts a second variant block; only the first block is kept."""
+    that repeats starts a new variant block, labelled by the one-cell title row
+    above it ("Classic", "BIG CLANG", "AILBINI"); rows carry that label when the
+    table has more than one block."""
     rows: list[BomRow] = []
     seen: set[str] = set()
+    block = 0
+    labels: list[str] = []
+    title = ""
     for table in tables:
         for cells in table:
             cells = [c.strip() for c in cells]
+            filled = [c for c in cells if c]
+            if len(filled) == 1 and not _HEADERS.match(filled[0]) and not _is_designators(filled[0]) and len(filled[0]) <= 24 \
+                    and not re.search(r"parts list|bill of materials", filled[0], re.I):
+                title = filled[0]  # a block title row
+                continue
+            if any(_is_designators(c) and c in seen for c in cells):
+                block += 1  # the designators start again: a new variant of the same board
+                seen.clear()
+                labels.append(title)
+                title = ""
+            elif block == 0 and not labels and filled and any(_is_designators(c) for c in cells):
+                labels.append(title)
+                title = ""
             i = 0
             while i < len(cells) - 1:
                 a, b = cells[i], cells[i + 1]
@@ -127,8 +145,15 @@ def docx_bom(tables: list[list[list[str]]]) -> list[BomRow]:
                     v, note = _split_value(value)
                     if cat == "" and re.match(r"^VACT", ref, re.I):
                         cat = "OPTO"
-                    nr = normalize_row(BomRow(ref=ref, value=v, notes=note, category=cat))
+                    nr = normalize_row(BomRow(ref=ref, value=v, notes=note, category=cat, variant=str(block)))
                     if is_plausible(nr):
                         rows.append(nr)
                 i += 2
+    if block == 0:
+        for r in rows:
+            r.variant = ""
+    else:
+        names = [lab or f"Variant {i + 1}" for i, lab in enumerate(labels)]
+        for r in rows:
+            r.variant = names[int(r.variant)] if int(r.variant) < len(names) else f"Variant {int(r.variant) + 1}"
     return rows

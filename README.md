@@ -37,6 +37,12 @@ It ships as a static, offline-capable web app (PWA) that installs on macOS, Linu
 
 ### What is indexed and what is not
 
+When a build document gives one value column per version of the circuit, every column is
+kept and the circuit page offers a variant selector; counts and the parts cross-reference use
+the first column. This covers per-column tables (Effects Layouts), repeated titled blocks
+(Mask Audio, PedalPCB's Muffin Fuzz with its eight Big Muff versions) and OCR'd tables with a
+piped header (Five Cats).
+
 Names, prices, part values, controls, enclosures and the original circuit are indexed as facts and every record links back to the vendor's product page and build document. Build documents and their schematic images are copyrighted by the vendors: the scraper caches them locally under `data/raw/` and `data/cache/` (git-ignored) for personal reference, and the public export does not include them. Aion FX explicitly permits commercial use of its projects; GuitarPCB and Fuzz Dog explicitly forbid republishing their documents. The redistributable schematic is the optional KiCad fragment you draw yourself (see below).
 
 ## Layout

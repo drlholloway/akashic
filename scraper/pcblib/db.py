@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS circuits (
 CREATE TABLE IF NOT EXISTS bom (
   circuit_id TEXT NOT NULL REFERENCES circuits(id) ON DELETE CASCADE,
   position INTEGER NOT NULL, ref TEXT, value TEXT, part_type TEXT, notes TEXT,
-  category TEXT, norm_value TEXT, sort_key REAL,
+  category TEXT, norm_value TEXT, sort_key REAL, variant TEXT DEFAULT '',
   PRIMARY KEY (circuit_id, position)
 );
 CREATE INDEX IF NOT EXISTS bom_norm ON bom(category, norm_value);
@@ -101,6 +101,8 @@ def connect():
         pass  # another process already switched it; WAL persists in the file
     conn.execute("PRAGMA foreign_keys = ON")
     conn.executescript(SCHEMA)
+    if 'variant' not in [r[1] for r in conn.execute('PRAGMA table_info(bom)')]:
+        conn.execute("ALTER TABLE bom ADD COLUMN variant TEXT DEFAULT ''")
     for vid, (name, url, note) in VENDORS.items():
         conn.execute("INSERT OR IGNORE INTO vendors(id,name,url,license_note) VALUES (?,?,?,?)",
                      (vid, name, url, note))
@@ -136,7 +138,7 @@ def upsert_circuit(conn: sqlite3.Connection, c: Circuit) -> None:
     )
     conn.execute("DELETE FROM bom WHERE circuit_id = ?", (c.id,))
     conn.executemany(
-        "INSERT INTO bom VALUES (?,?,?,?,?,?,?,?,?)",
-        [(c.id, i, r.ref, r.value, r.part_type, r.notes, r.category, r.norm_value, r.sort_key)
+        "INSERT INTO bom(circuit_id,position,ref,value,part_type,notes,category,norm_value,sort_key,variant) VALUES (?,?,?,?,?,?,?,?,?,?)",
+        [(c.id, i, r.ref, r.value, r.part_type, r.notes, r.category, r.norm_value, r.sort_key, r.variant)
          for i, r in enumerate(c.bom)],
     )

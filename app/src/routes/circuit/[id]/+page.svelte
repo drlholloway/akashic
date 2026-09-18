@@ -13,9 +13,15 @@
 			? data.index.filter((e) => e.id !== c.id && e.based_on && normalizeOriginal(e.based_on) === normalizeOriginal(c.based_on))
 			: []
 	);
+	const variants = $derived(c.variants ?? []);
+	let variant = $state('');
+	$effect(() => {
+		variant = variants[0] ?? '';
+	});
+	const rows = $derived(variants.length ? c.bom.filter((r) => !r.variant || r.variant === variant) : c.bom);
 	const groups = $derived.by(() => {
 		const m = new Map<string, BomRow[]>();
-		for (const r of c.bom) {
+		for (const r of rows) {
 			const k = r.category || 'OTHER';
 			if (!m.has(k)) m.set(k, []);
 			m.get(k)!.push(r);
@@ -27,7 +33,7 @@
 
 	let copied = $state(false);
 	async function copyBom() {
-		const tsv = ['Ref\tValue\tType\tNotes', ...c.bom.map((r) => [r.ref, r.value, r.part_type, r.notes].join('\t'))].join('\n');
+		const tsv = ['Ref\tValue\tType\tNotes', ...rows.map((r) => [r.ref, r.value, r.part_type, r.notes].join('\t'))].join('\n');
 		await navigator.clipboard.writeText(tsv);
 		copied = true;
 		setTimeout(() => (copied = false), 1500);
@@ -105,9 +111,17 @@
 
 	<section class="bom">
 		<div class="bom-head">
-			<h2 class="label strong">Parts list <span class="mono dim">{c.bom.length} rows</span></h2>
+			<h2 class="label strong">Parts list <span class="mono dim">{rows.length} rows</span></h2>
 			{#if c.bom.length}<button type="button" class="btn ghost" onclick={copyBom}>{copied ? 'Copied' : 'Copy as TSV'}</button>{/if}
 		</div>
+		{#if variants.length > 1}
+			<div class="variants" role="group" aria-label="Build variant">
+				<span class="label">Variant</span>
+				{#each variants as v}
+					<button type="button" class="btn ghost" class:on={v === variant} aria-pressed={v === variant} onclick={() => (variant = v)}>{v}</button>
+				{/each}
+			</div>
+		{/if}
 		{#if c.bom.length === 0}
 			<p class="dim">{#if VENDOR_KIND[c.vendor] === 'projects'}No parts list: the BOM download on this project needs an account at the fab.{:else if VENDOR_KIND[c.vendor] === 'blog' || VENDOR_KIND[c.vendor] === 'archive'}No parts list could be read from the schematic image; the values are in the picture.{:else}No parts list could be extracted for this board{#if c.vendor === 'guitarpcb'} (GuitarPCB publishes its parts list as an image){/if}. The build document has it.{/if}</p>
 		{:else}
@@ -164,6 +178,9 @@
 	.specs div { display: flex; flex-direction: column; gap: 2px; }
 	.specs dd { margin: 0; }
 	.actions { display: flex; flex-wrap: wrap; gap: 8px; }
+	.variants { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0 0 12px; }
+	.variants .label { margin-right: 4px; }
+	.variants .btn.on { background: var(--coat); color: var(--coat-ink); border-color: var(--coat); }
 	.vendor-warning { margin: 10px 0 0; max-width: 62ch; font-size: 14px; line-height: 1.45; color: var(--ink-2); }
 	.vendor-warning .warn { margin-right: 6px; }
 	.ver { font-size: 11px; opacity: 0.8; text-transform: none; letter-spacing: 0; }

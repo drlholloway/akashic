@@ -241,6 +241,7 @@ def _repair_pot(v: str) -> str:
         digits, unit, taper = m.groups()
         return f"{digits.translate(_POT_DIGITS)}{unit.upper()}{taper}"
     return v.upper()
+_OCR_VARIANT_STOP = {"PART", "VALUE", "REF", "TYPE", "NOTES", "QTY", "GND", "IN", "OUT", "LED", "PCB", "BOM", "PART VALUE", "GE", "SI"}
 _OCR_POT_STOP = {"AND", "THE", "FOR", "OUT", "GND", "BOM", "MAIN", "BOARD", "NOTES", "TRANSISTORS", "RESISTORS", "CAPACITORS", "DIODES", "SWITCHES",
                  "POTS", "TRIMMERS", "VALUE", "PART", "PARTS", "QTY", "USE", "SWAP", "WITH", "TRY", "ANY", "PUT", "ADD", "FIT", "SET", "PREFER", "LIKE", "FROM", "INTO", "ALSO", "STANDARD"}
 _RANGE = re.compile(r"\*?\b([RCDQ])(\d+)\s*[-–]\s*[RCDQ]?(\d+)\s+([A-Z0-9][A-Z0-9.]+)", re.I)
@@ -317,16 +318,21 @@ def _tesseract_cached(png: Path, psm: int, tag: str = "") -> str:
 def _merge_ocr_rows(variants: list[list[BomRow]]) -> list[BomRow]:
     """Union of several OCR passes: per designator keep the value most passes agree on,
     preferring values that parse (a numeric R/C) over ones that don't."""
-    by_ref: dict[str, list[BomRow]] = {}
-    order: list[str] = []
+    by_ref: dict[tuple[str, str], list[BomRow]] = {}
+    order: list[tuple[str, str]] = []
     for rows in variants:
         for r in rows:
-            if r.ref not in by_ref:
-                order.append(r.ref)
-            by_ref.setdefault(r.ref, []).append(r)
+            key = (r.variant, r.ref)
+            if key not in by_ref:
+                order.append(key)
+            by_ref.setdefault(key, []).append(r)
+    # A pass that read the variant columns beats one that did not: drop unlabelled rows for
+    # any designator that also has labelled ones, so R5 is not listed once per variant plus once more.
+    labelled = {ref for (var, ref) in by_ref if var}
+    order = [k for k in order if k[0] or k[1] not in labelled]
     out: list[BomRow] = []
-    for ref in order:
-        cands = by_ref[ref]
+    for key in order:
+        cands = by_ref[key]
         def score(r: BomRow) -> tuple:
             parses = 1 if (r.category not in ("R", "C", "L") or r.sort_key > 0) else 0
             votes = sum(1 for o in cands if o.norm_value == r.norm_value)
@@ -398,7 +404,7 @@ def _repair_value(v: str) -> str:
     m = re.match(r"^([47])(\d*(?:\.\d+)?)([kKMrRnpuµ]F?|[uµ]F|nF|pF)$", v)
     if m and not _is_e24(m.group(1) + m.group(2)) and _is_e24("1" + m.group(2)):
         return "1" + m.group(2) + m.group(3)  # 700uF and 400uF are not values; 100uF is: the 1 was read as 7 or 4
-    m = re.match(r"^[^A-Za-z0-9]*[1IilTta]N([0-9A-Za-z]{3,5}[A-Z]?)$", v)
+    m = re.match(r"^[^A-Za-z0-9]*[1IilTtaA]N([0-9A-Za-z]{3,5}[A-Z]?)$", v)
     if m:  # 1N-series diodes: "-tN4oo4", "IN9L4", "iNg14" -> 1N4004, 1N914, 1N914
         digits = m.group(1).translate(str.maketrans("oOlILgSsBq", "0011195869"))
         if re.fullmatch(r"\d{3,4}[A-Z]?", digits):
@@ -458,23 +464,33 @@ def ocr_image_bom(image: Path, vendor: str, slug: str, tag: str = "bom") -> list
 def _rows_from_ocr(out: str) -> list[BomRow]:
     rows: list[BomRow] = []
     seen: set[str] = set()
+    variants: list[str] = []
 
-    def add(ref: str, value: str, ptype: str = "", cat: str = "") -> None:
+    def add(ref: str, value: str, ptype: str = "", cat: str = "", variant: str = "") -> None:
         value = _repair_value(value.strip().rstrip(".,;:").lstrip("-–—_ "))
-        if ref in seen or ref[0] in "J":
+        key = f"{variant}|{ref}"
+        if key in seen or ref[0] in "J":
             return
         m_ref = re.match(r"^[A-Za-z]+(\d+)", ref)
         if m_ref and (int(m_ref.group(1)) == 0 or int(m_ref.group(1)) > 999):
             return  # R0 is never a real designator (big boards do reach R400)
         if cat != "POT" and (not re.search(r"\d", value) or not re.fullmatch(r"[A-Za-z0-9.\-/µu]{1,12}", value)):
             return
-        nr = normalize_row(BomRow(ref=ref, value=value.strip(), part_type=ptype, notes="OCR", category=cat))
+        nr = normalize_row(BomRow(ref=ref, value=value.strip(), part_type=ptype, notes="OCR", category=cat, variant=variant))
         if is_plausible(nr):
-            seen.add(ref)
+            seen.add(key)
             rows.append(nr)
 
     for raw in out.splitlines():
         ln = _clean_ocr_line(raw)
+        if raw.count("|") >= 2:
+            cols = [re.sub(r"^[^A-Za-z]+|[^A-Za-z0-9)]+$", "", c.strip()) for c in raw.split("|")]
+            cols = [c for c in cols if c]
+            # "| RAT | -RAT2 | Turbo RAT | You Dirty RAT '": short names, no values, one column per variant
+            if 2 <= len(cols) <= 6 and all(re.fullmatch(r"[A-Z][A-Za-z0-9 .\-']{1,18}", c) and re.search(r"[A-Z0-9]{2}|[A-Z][a-z]+ [A-Z]", c) for c in cols) \
+                    and not any(re.search(r"\d[kKMnpuµ]|^[RCDQ]\d|^\d?[NA]\d{3}", c) or c.upper() in _OCR_VARIANT_STOP for c in cols):
+                variants = cols
+                continue
         for letter, a, b, val in _RANGE.findall(ln):
             lo, hi = int(a), int(b)
             if 0 < hi - lo < 40:
@@ -484,11 +500,12 @@ def _rows_from_ocr(out: str) -> list[BomRow]:
         # The board silkscreen also OCRs to stray pairs; the parts table has several per line.
         starts_with_pair = bool(pairs) and re.match(r"\s*" + re.escape(pairs[0][0]) + r"\s+" + re.escape(pairs[0][1]), ln) is not None
         if len(pairs) >= 2 or (len(pairs) == 1 and (starts_with_pair or re.search(r"\b(status|led|zener|ge)\b", ln, re.I))):
-            for ref, val in pairs:
+            by_column = len(variants) >= 2 and len(pairs) == len(variants)  # one pair per variant column
+            for k, (ref, val) in enumerate(pairs):
                 if val.upper() in {"PNP", "NPN", "STATUS", "LED"}:
                     continue
                 if re.search(r"\d", val) or len(val) >= 4:
-                    add(ref, val)
+                    add(ref, val, variant=variants[k] if by_column else "")
         for ref, val in re.findall(r"(?<![A-Za-z0-9])([A-Z]*TRIM[A-Z0-9]*)\s+(\d+(?:[.,]\d+)?[kKM]?)(?![A-Za-z0-9])", ln):
             if ref not in seen and re.search(r"[1-9]", val):
                 add(ref, val.upper(), "Trimmer", "TRIM")
@@ -503,6 +520,20 @@ def _rows_from_ocr(out: str) -> list[BomRow]:
             if 3 <= len(ref) <= 12 and re.fullmatch(r"[A-Z][A-Za-z\-]+", ref) and ref.upper() not in _OCR_POT_STOP \
                     and (ref.isupper() or re.fullmatch(r"[ABCW]\d+[kKM]", val)):  # a Title-case name only counts with an explicit taper
                 add(ref.upper(), val, "Trimmer" if "TRIM" in ref.upper() else "Potentiometer", "TRIM" if "TRIM" in ref.upper() else "POT")
+    # Variant labels are kept only when the table really had columns: at least two variants with four rows each.
+    per: dict[str, int] = {}
+    for r in rows:
+        if r.variant:
+            per[r.variant] = per.get(r.variant, 0) + 1
+    if len(per) < 2 or min(per.values()) < 4:
+        kept: list[BomRow] = []
+        refs: set[str] = set()
+        for r in rows:
+            r.variant = ""
+            if r.ref not in refs:
+                refs.add(r.ref)
+                kept.append(r)
+        rows = kept
     return rows
 
 
@@ -741,6 +772,105 @@ _QVR_TRIPLE = re.compile(r"(?<![A-Za-z0-9])(\d{1,2})[ \t]+([A-Za-z0-9.µ/+\-]{1,
 _QVR_POT = re.compile(r"(?<![A-Za-z0-9])(\d{1,2})[ \t]+([ABCW]\d+(?:[.,]\d+)?[kKM]?)[ \t]+([A-Z][A-Z\-]{2,12})(?![A-Za-z0-9])")
 
 
+_VARIANT_HEADER = re.compile(r"^\s*(?:Part|Ref(?:erence)?|Location|Designator)\s{2,}(\S.*?\S)\s*$", re.I)
+_VARIANT_SKIP = {"omit", "jump", "jumper", "-", "n/a", "none", "empty", "x"}
+
+
+def parse_bom_variant_columns(pages: list[str]) -> list[BomRow]:
+    """Tables with one value column per build variant ('Part  1977 spec  2003 spec'):
+    every column is kept and each row is labelled with its column's name."""
+    rows: list[BomRow] = []
+    for page in pages:
+        lines = page.splitlines()
+        for i, ln in enumerate(lines):
+            m = _VARIANT_HEADER.match(ln)
+            if not m:
+                continue
+            labels = [c.strip() for c in re.split(r"\s{2,}", m.group(1)) if c.strip()]
+            if len(labels) < 2 or any(len(lab) > 24 for lab in labels) or "value" in " ".join(labels).lower():
+                continue
+            seen: set[tuple[str, str]] = set()
+            for row in lines[i + 1:]:
+                if not row.strip():
+                    continue
+                cells = re.split(r"\s{2,}", row.strip())
+                if not re.fullmatch(r"(?:R|C|D|Q|IC|U|L|SW|LED|VR|TR|CLR|TRIM)\d*[A-Z]?", cells[0], re.I) or len(cells) < 2:
+                    if rows and not re.match(r"^\s*[A-Za-z]", row):
+                        continue
+                    break  # the table has ended
+                ref = cells[0].upper()
+                for lab, val in zip(labels, cells[1:]):
+                    if (lab, ref) in seen or val.strip().lower() in _VARIANT_SKIP:
+                        continue
+                    nr = normalize_row(BomRow(ref=ref, value=val.strip(), variant=lab))
+                    if is_plausible(nr):
+                        seen.add((lab, ref))
+                        rows.append(nr)
+            if rows and len({r.variant for r in rows}) >= 2:
+                return rows
+            rows = []
+    return rows
+
+
+_BLOCK_STOP = re.compile(r"all trademarks|copyright ©|^\s*page \d|bill of materials|parts list", re.I)
+_BLOCK_COLHEAD = re.compile(r"^\s*(?:(?:part|ref|value|type|qty|notes)\s*)+$", re.I)  # "Part  Value  Part  Value" over each block
+_BLOCK_HEADING = re.compile(r"^(resistors?|capacitors?|semiconductors?|transistors?|diodes?|potentiometers?|integrated circuits?|ics?|switches|hardware|optical)\b", re.I)
+
+
+def parse_bom_version_blocks(pages: list[str]) -> list[BomRow]:
+    """PedalPCB version matrices (Muffin Fuzz): the same 'REF  VALUE' block printed two or
+    three times across the page, each under the version's name, over several pages."""
+    rows: list[BomRow] = []
+    for page in pages:
+        lines = page.splitlines()
+        first = next((i for i, ln in enumerate(lines) if len(re.findall(r"(?<![A-Za-z0-9])R1(?=\s)", ln)) >= 2), None)
+        if first is None:
+            continue
+        starts = [m.start() for m in re.finditer(r"(?<![A-Za-z0-9])R1(?=\s)", lines[first])]
+        spans = [(a, b) for a, b in zip(starts, starts[1:] + [10_000])]
+        k = first - 1
+        while k >= 0 and (not lines[k].strip() or _BLOCK_STOP.search(lines[k]) or _BLOCK_COLHEAD.match(lines[k])):
+            k -= 1
+        if k < 0:
+            continue
+        titles = [lines[k][a:b].strip() for a, b in spans]
+        if not all(titles) or any(_BLOCK_HEADING.match(t) for t in titles):
+            continue
+        for ln in lines[first:]:
+            if _BLOCK_STOP.search(ln):
+                break
+            for (a, b), title in zip(spans, titles):
+                seg = ln[a:b]
+                for ref, val in _COL_DESIG.findall(seg):
+                    val = val.strip().rstrip(",;")
+                    nr = normalize_row(BomRow(ref=ref, value=val, variant=title))
+                    if is_plausible(nr):
+                        rows.append(nr)
+                for ref, val in re.findall(r"(?<![A-Za-z0-9])(RLED|CLR|LEDR)\s+(\S+)", seg):
+                    nr = normalize_row(BomRow(ref=ref, value=val, variant=title))
+                    if is_plausible(nr):
+                        rows.append(nr)
+                for refs, val in _COL_POT.findall(seg):
+                    for ref in re.split(r",\s*", refs):
+                        if ref.strip().upper() not in _COL_POT_STOP and not _COL_HEADERS.fullmatch(ref.strip()):
+                            rows.append(normalize_row(BomRow(ref=ref.strip().upper(), value=val.replace(" ", "").upper(), part_type="Potentiometer", category="POT", variant=title)))
+                m = re.search(r"([A-Z][A-Z ]{2,24}?SWITCH)\s{2,}([1-4SD]P[DS]T\S*)", seg)
+                if m:
+                    rows.append(normalize_row(BomRow(ref=m.group(1).strip().title(), value=m.group(2), category="SW", variant=title)))
+    seen: set[tuple[str, str]] = set()
+    out: list[BomRow] = []
+    for r in rows:
+        if (r.variant, r.ref) not in seen:
+            seen.add((r.variant, r.ref))
+            out.append(r)
+    per: dict[str, int] = {}
+    for r in out:
+        per[r.variant] = per.get(r.variant, 0) + 1
+    if len(per) < 2 or min(per.values()) < 8:
+        return []
+    return out
+
+
 def parse_bom_qty_value_ref(pages: list[str]) -> list[BomRow]:
     """Older PedalPCB docs: 'qty  value  ref' triplets side by side under part-type
     headings ('1  1K3  R2   1  100p  C1   1  2N5089  Q1'), pots as '1  B10K LEVEL'."""
@@ -819,6 +949,11 @@ def process_document(pdf: Path, vendor: str, slug: str) -> dict:
     # Vendors lay their parts lists out three ways; run every parser and keep the
     # one that recovered the most designators (they never both succeed on one doc).
     bom = max((parse_bom(pages), parse_bom_qty_value_parts(pages), parse_bom_columns(pages), parse_bom_qty_value_ref(pages)), key=len)
+    variant_rows = parse_bom_variant_columns(pages) or parse_bom_version_blocks(pages)
+    if variant_rows and len({r.ref for r in variant_rows}) >= len({r.ref for r in bom}) * 0.8:
+        # A per-variant table names the same parts once per column; parts it does not cover stay unlabelled.
+        covered = {r.ref for r in variant_rows}
+        bom = variant_rows + [r for r in bom if r.ref not in covered]
     if not bom:
         bom = parse_shopping_list(pages)
     page_no = find_schematic_page(pages)

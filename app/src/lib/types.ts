@@ -33,6 +33,7 @@ export interface BomRow {
 	category: string;
 	norm_value: string;
 	sort_key: number;
+	variant?: string;
 }
 
 export interface Circuit extends IndexEntry {
@@ -43,6 +44,7 @@ export interface Circuit extends IndexEntry {
 	doc_version: string;
 	kicad_path: string;
 	bom: BomRow[];
+	variants?: string[];
 	scraped_at: string;
 }
 

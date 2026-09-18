@@ -12,6 +12,7 @@ class BomRow:
     category: str = ""       # R C D Q IC POT SW LED L XTAL OTHER  (filled by normalize)
     norm_value: str = ""     # canonical value string, e.g. "1.5k", "4.7u", "LM308"
     sort_key: float = 0.0    # numeric for R/C sorting, 0 otherwise
+    variant: str = ""        # "1977 spec", "Turbo RAT": the build variant this row belongs to, "" for all
 
 
 @dataclass
