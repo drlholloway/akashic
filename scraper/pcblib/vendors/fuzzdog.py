@@ -54,8 +54,8 @@ class FuzzDog(Adapter):
         html = self.f.get_text(url)
         if not html:
             return None
-        all_pdfs = [p for p in re.findall(r'href="(https?://pedalparts\.co\.uk/docs/[^"]+\.pdf)"', html)
-                    if "GeneralBuildGuide" not in p]
+        all_pdfs = [re.sub(r"\s+", "", p) for p in re.findall(r'href="(https?://pedalparts\.co\.uk/docs/[^"]+\.pdf)"', html)
+                    if "GeneralBuildGuide" not in p]  # one page wraps a link across a line break
         # The FuzzPup family guide (FuzzPups.pdf, FuzzPups-V2.pdf) is linked ahead of the circuit's own doc.
         general = [p for p in all_pdfs if re.search(r"/FuzzPups(?:-V\d)?\.pdf$", p, re.I)]
         pdfs = [p for p in all_pdfs if p not in general] or all_pdfs

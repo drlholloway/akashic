@@ -16,6 +16,13 @@ GitHub Release notes.
   whose board quality builders widely report as inconsistent.
 
 ### Fixed
+- Pot values read by OCR keep their taper letter and have only the digits repaired
+  (`ASOOK` -> `A500K`, `BSOK` -> `B50K`, `8100K` -> `B100K`): 143 more pot rows across the OCR
+  vendors, most on Dead End FX, GuitarPCB and Dead Astronaut, and 16 more boards with named
+  controls.
+- GuitarPCB parses the build doc rather than the faceplate-art PDF listed beside it, which
+  restores the NostalgiTone 60s and 60s Tremolo boards; Fuzz Dog's Astrotone doc link, which
+  wraps across a line break on the product page, is fetched.
 - PedalPCB: the older `qty  value  ref` three-column parts list (Amentum Boost) parses, and
   faceplate products are no longer indexed as circuits.
 - Fuzz Dog: the parts table is read from whichever page holds it (the 2023 doc layout puts

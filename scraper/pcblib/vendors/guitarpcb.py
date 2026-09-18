@@ -38,7 +38,8 @@ class GuitarPCB(Adapter):
         desc_html = desc_n.html if desc_n else ""
         pdfs = [a.attributes["href"] for a in HTMLParser(desc_html).css('a[href$=".pdf"]')
                 if "Tonmann" not in a.attributes.get("href", "")]
-        pdfs = [p for p in pdfs if re.search(r"build|BD_|doc", p + " ", re.I) or True]
+        # Faceplate art and drill PDFs sit beside the build doc; put them last so the doc is parsed.
+        pdfs = sorted(pdfs, key=lambda p: bool(re.search(r"final-?art|artwork|faceplate|drill|template", p, re.I)))
         if not pdfs:
             return None
         ld = _product_ld(html)

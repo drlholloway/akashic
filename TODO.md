@@ -45,8 +45,6 @@ at the bottom; re-run them after parser changes.
 | Damnation Audio (via Mask Audio) | Parallel Drive | Eagle schematic PDF; R/C/D/IC paired from labels but the two pots (Drive 500kA, Dist. 100kA) are not, and the bass-version page is ignored |
 | Mask Audio | Big Clang | Doc lists three variant specs (Classic, Big Clang, Ailbini); only the first is kept |
 | GuitarPCB | G.B.O.F. (16-project fuzz board), NostalgiTone Dual Combo Creator | Variant matrix tables; OCR gets 1–2 rows |
-| GuitarPCB | NostalgiTone 60s, NostalgiTone 60s Tremolo (single) | Cached PDF has no page 1 (`IndexError: page 1 not in document`); refetch with `--refresh` |
-| Fuzz Dog | Astrotone | MuPDF cannot open the embedded colour profile, so no page renders |
 | Effects Layouts | Schematic Fuzz | Build doc is drill templates only; the schematic is on the silkscreen |
 | Effects Layouts | Lawn Darts | Doc is a single scanned schematic image; positional OCR finds nothing |
 | Effects Layouts | Melody Malfunction, Cranky Speaker | Doc has only a shopping list (value, type, quantity), so rows are named by quantity (`×2`) and controls are a knob count |
@@ -64,8 +62,6 @@ at the bottom; re-run them after parser changes.
 - Named-pot tables where the taper is a separate column (`LOUD | A | 100k`).
 - Docs that put the parts list in an image but the schematic as vectors: pair the schematic
   and fall back to OCR only for pots and switches (Dead End FX does this; generalize).
-- OCR confuses `1` and `l`, `0` and `O`, `5` and `S` in pot values; `_repair_value` skips pots
-  on purpose because `A1M` became `4.1M`. A pot-aware repair would recover a few boards.
 - OCR of tables with several variant columns (Rattus, G.B.O.F.) could keep every column as
   a named variant instead of the first value.
 

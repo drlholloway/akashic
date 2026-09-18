@@ -223,7 +223,24 @@ def parse_bom_columns(pages: list[str], max_col: int | None = None) -> list[BomR
     return rows
 
 
-_OCR_POT = re.compile(r"(?<![A-Za-z0-9])([A-Z][A-Za-z\-]{2,12})\s+(\d+(?:[.,]\d+)?[KM]?[ABCW]|[ABCWabcw][0-9IlO]+(?:[.,]\d+)?[kKmM]?)(?![A-Za-z0-9])")
+_OCR_POT = re.compile(r"(?<![A-Za-z0-9])([A-Z][A-Za-z\-]{2,12})\s+([0-9IlOoS]+(?:[.,]\d+)?[KkMm]?[ABCW]|[ABCWabcw8][0-9IlOoS]+(?:[.,]\d+)?[kKmM]?)(?![A-Za-z0-9])")
+_POT_DIGITS = str.maketrans({"I": "1", "l": "1", "O": "0", "o": "0", "S": "5", "s": "5"})
+
+
+def _repair_pot(v: str) -> str:
+    """Pot values keep their taper letter; only the digit run is repaired (ASOOK -> A500K,
+    BSOK -> B50K, BIM -> B1M, 8100K -> B100K where an 8 stands in for the B)."""
+    v = v.replace(" ", "")
+    m = re.match(r"^([ABCWabcw8])([0-9IlOoS]+(?:[.,]\d+)?)([kKmM]?)$", v)
+    if m:
+        taper, digits, unit = m.groups()
+        taper = "B" if taper == "8" else taper.upper()
+        return f"{taper}{digits.translate(_POT_DIGITS)}{unit.upper()}"
+    m = re.match(r"^([0-9IlOoS]+(?:[.,]\d+)?)([kKmM]?)([ABCW])$", v)
+    if m:
+        digits, unit, taper = m.groups()
+        return f"{digits.translate(_POT_DIGITS)}{unit.upper()}{taper}"
+    return v.upper()
 _OCR_POT_STOP = {"AND", "THE", "FOR", "OUT", "GND", "BOM", "MAIN", "BOARD", "NOTES", "TRANSISTORS", "RESISTORS", "CAPACITORS", "DIODES", "SWITCHES",
                  "POTS", "TRIMMERS", "VALUE", "PART", "PARTS", "QTY", "USE", "SWAP", "WITH", "TRY", "ANY", "PUT", "ADD", "FIT", "SET", "PREFER", "LIKE", "FROM", "INTO", "ALSO", "STANDARD"}
 _RANGE = re.compile(r"\*?\b([RCDQ])(\d+)\s*[-–]\s*[RCDQ]?(\d+)\s+([A-Z0-9][A-Z0-9.]+)", re.I)
@@ -477,8 +494,8 @@ def _rows_from_ocr(out: str) -> list[BomRow]:
                 add(ref, val.upper(), "Trimmer", "TRIM")
         for ref, val in _OCR_POT.findall(ln):
             ref = ref.strip("-")
-            val = val.replace(" ", "").upper().replace("I", "1").replace("L", "1").replace("O", "0")
-            val = re.sub(r"^([ABCW])0(?=[1-9])", r"\1", val)  # A0100K -> A100K never happens, but B01M guard
+            val = _repair_pot(val)
+            val = re.sub(r"^([ABCW])0(?=[1-9])", r"\1", val)  # B01M guard
             if not re.search(r"[1-9]", val):
                 continue  # "BOARD BOM" is not a pot
             if re.fullmatch(r"[RCDQL]\d+", val):
