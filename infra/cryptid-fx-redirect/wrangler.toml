@@ -6,5 +6,6 @@ compatibility_date = "2026-09-01"
 workers_dev = false
 routes = [
   { pattern = "cryptid-fx.com", custom_domain = true },
-  { pattern = "www.cryptid-fx.com", custom_domain = true }
+  { pattern = "www.cryptid-fx.com", custom_domain = true },
+  { pattern = "akashic.cryptid-fx.com", custom_domain = true }
 ]
