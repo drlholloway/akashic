@@ -65,6 +65,8 @@ VENDORS = {
                 "A community archive of traced schematics; no PCB is sold. Images are cached locally and linked to the archive."),
     "zerogiod": ("Zero G IOD", "https://www.zerogiod.com/category/diy-pcbs",
                  "Closed store; its BOM, drill guide and schematic images are archived in data/archive/zerogiod for posterity."),
+    "otrfx": ("On The Road Effects", "https://ontheroadeffects.com/pcbs/",
+              "Build guides are © On The Road Effects; indexed and linked, not redistributed. Boards sell on Etsy and Reverb."),
     "pcbway-gtu": ("PCBWay: Glory to Ukraine", "https://www.pcbway.com/project/member/?bmbno=19C5FC6C-66B1-46",
                    "Shared projects are CC BY-SA 3.0; schematic images may be shown with attribution. BOM and gerbers need a PCBWay login."),
 }
