@@ -16,6 +16,11 @@ GitHub Release notes.
   whose board quality builders widely report as inconsistent.
 
 ### Fixed
+- Madbean controls come from the doc's "Controls" section (bulleted or plain `NAME: what it
+  does` lines, trimmers and switches filtered out) or from the named pots in the parts table:
+  101 of 120 boards, up from none. The parts table is no longer cut at column 66, which
+  hid the pots and semiconductors columns: 18% more rows. Legacy Aion FX docs without a
+  USAGE section take their controls from the parts table: 261 of 270 boards, up from 215.
 - Older Five Cats inserts without an interactive BOM now get their typeset parts table
   OCR'd (11 more boards with a list); GuitarPCB escalates to the thorough OCR pass when the
   quick one is thin (12 more boards, and 121 of 148 now have named controls); component

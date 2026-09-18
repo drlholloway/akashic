@@ -151,7 +151,7 @@ def parse_bom(pages: list[str]) -> list[BomRow]:
 
 _COL_HEADERS = re.compile(r"RESISTORS|CAPACITORS|DIODES|TRANSISTORS|SEMICONDUCTORS|ELECTROMECHANICAL|POTENTIOMETERS|\bICS?\b|SWITCHES|PARTS LIST|B\.?O\.?M\.?|BILL OF MATERIALS", re.I)
 _COL_DESIG = re.compile(r"(?<![A-Z0-9])((?:R|C|D|Q|IC|U|L|SW|Z|ZD|LED|VR|TR|OPTO|X|J)\d+[A-Z]?)[ \t]+(\S+(?:[ \t](?:Red|Green|Blue|Yellow|White|Amber)?[ \t]?(?:LED|LEDs|Zener|zener|elec)|[ \t]or[ \t]\d\S*)?)")
-_COL_POT = re.compile(r"(?<![A-Za-z0-9])([A-Z][A-Za-z .\-/]{2,14}?(?:,[ \t]*[A-Z][A-Za-z .\-/]{2,14}?)*)[ \t]{2,}([ABCW]\d+(?:[.,]\d+)?[KkMm]|[ABW]\d{2,}|\d+(?:[.,]\d+)?[KkMm]? ?[ABCW])(?:[ \t]?(?:DG|dual(?:[ \-]gang)?))?(?![A-Za-z0-9])")
+_COL_POT = re.compile(r"(?<![A-Za-z0-9])([A-Z][A-Za-z.\-/]{1,13}(?: [A-Za-z.\-/]{1,12}){0,2}(?:,[ \t]*[A-Z][A-Za-z.\-/]{1,13}(?: [A-Za-z.\-/]{1,12}){0,2})*)[ \t]{2,}([ABCW]\d+(?:[.,]\d+)?[KkMm]|[ABW]\d{2,}|\d+(?:[.,]\d+)?[KkMm]? ?[ABCW])(?:[ \t]?(?:DG|dual(?:[ \-]gang)?))?(?![A-Za-z0-9])")
 # Named pots and trimmers with no taper letter ("BIAS   10K") on pages that carry a Potentiometers heading.
 _COL_POT_PLAIN = re.compile(r"(?<![A-Za-z0-9])([A-Z]{3,12})[ \t]{2,}(\d+(?:[.,]\d+)?[KkMm])(?![A-Za-z0-9])")
 _COL_POT_STOP = {"QTY", "TYPE", "VALUE", "PART", "LOCATION", "NOTES", "REF", "AND", "FOR", "THE", "USE", "SET", "WITH", "ALL", "NOTE", "OTHER"}

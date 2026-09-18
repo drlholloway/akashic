@@ -94,6 +94,8 @@ class AionFX(Adapter):
             from ..pdf import pdf_text_pages
             pages = pdf_text_pages(pdf)
             c.controls = _controls_from_doc(pages)
+            if not c.controls:  # legacy docs have no USAGE section but name the pots in the parts table
+                c.controls = [r.ref.title() for r in c.bom if r.category == "POT" and r.ref.isalpha() and r.ref not in ("RPD", "LEDR", "CLR")]
             if not c.enclosure:
                 c.enclosure = find_enclosure(*pages)
         return c

@@ -90,7 +90,8 @@ class Madbean(Adapter):
         pdf = self.f.get_file(doc_url, ".pdf")
         if pdf:
             pages = pdf_text_pages(pdf)
-            c.bom = parse_bom_columns(pages, max_col=66)
+            c.bom = parse_bom_columns(pages)  # the pots and semiconductors sit in the right-hand columns
+            c.controls = _controls_from_doc(pages, [r.ref for r in c.bom if r.category == "POT"])
             c.doc_local = str(pdf.relative_to(DATA_DIR))
             page_no = find_schematic_page(pages)
             if page_no is None:
@@ -108,4 +109,47 @@ class Madbean(Adapter):
             c.doc_version = m.group(1) if m else ""
         return c
 
+
+_CTRL_BULLET = re.compile(r"^\s*•\s*([A-Za-z][A-Za-z0-9 /\-]{0,24}?)\s*(\([^)]*\))?\s*:\s*(.*)$")
+# Older docs drop the bullet: "LVL, TONE, DRIVE: Self-explanatory." at the left margin, names in caps.
+_CTRL_PLAIN = re.compile(r"^\s{0,4}([A-Z][A-Z0-9/\-]{1,12}(?:,\s*[A-Z][A-Z0-9/\-]{1,12})*)\s*(\([^)]*\))?:\s*(.*)$")
+# A control is not a knob when its description opens by calling it a trimmer, switch, jack or LED
+# ("This trimmer sets...", "Toggle between...", "3PDT foot-switches for..."); a knob whose text merely
+# mentions a switch later ("rate is fixed via the C.V switch") is still a knob.
+_NOT_A_KNOB = re.compile(r"^\s*(?:this is |it is |it's )?(?:the |an? |these |two )?(?:[\w.'’-]+,? ){0,5}"
+                         r"(?:trimmers?|trim ?pots?|switch(?:es)?|toggles?|rotary|foot-?switch(?:es)?|DIP|jumpers?|pads?|jacks?|LEDs?)\b"
+                         r"|^\s*(?:this )?(?:switches|toggles|selects|chooses|shorts)\b", re.I)
+_CTRL_STOP = {"CURRENT DRAW", "NOTE", "NOTES", "HTTP", "HTTPS", "INPUT", "OUTPUT", "RPD", "DIRECT OUT", "SEND", "RETURN"}
+
+
+def _controls_from_doc(pages: list[str], pot_refs: list[str]) -> list[str]:
+    """The doc's centered "Controls" heading is followed by '•  NAME: what it does' bullets
+    for knobs, trimmers and switches alike; keep the knobs, in the doc's order. Boards
+    without the section fall back to the named pots in the parts table."""
+    text = "\n".join(pages[:6])
+    m = re.search(r"^\s*Controls\s*$", text, re.M)
+    names: list[str] = []
+    if m:
+        seen_bullet = False
+        for line in text[m.end():].splitlines():
+            if seen_bullet and re.match(r"^\s{30,}[A-Z][A-Za-z ]{2,30}\s*$", line):
+                break  # next centered heading (Voltages, Notes, Wiring ...)
+            b = _CTRL_BULLET.match(line) or _CTRL_PLAIN.match(line)
+            if not b:
+                continue
+            seen_bullet = True
+            paren, desc = b.group(2) or "", b.group(3)
+            for name in re.split(r",\s*", b.group(1).strip()):
+                if name.upper() in _CTRL_STOP or re.fullmatch(r"T\d(?:/T\d)?", name) or _NOT_A_KNOB.search(paren + " " + desc[:140]) or re.search(r"switch|toggle|trim", paren, re.I) \
+                        or re.match(r"^(?:[RCDQL]|IC|SW)\d", name) or re.search(r"\bout\b|\bin\b", name, re.I):
+                    continue  # part-mod bullets ("R4: ...") and jacks are not knobs
+                names.append(name)
+    pots = [r for r in pot_refs if r.isalpha() and r.upper() not in _CTRL_STOP]
+    if names and pots:
+        matched = [n for n in names if n.upper() in {p.upper() for p in pots}]
+        if matched:
+            names = matched
+    if not names:
+        names = pots
+    return [n.title() if n.isupper() else n for n in names]
 

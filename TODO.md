@@ -17,12 +17,13 @@ at the bottom; re-run them after parser changes.
 - **GuitarPCB**: 5 boards with no BOM and 7 thin after the thorough OCR pass; the rest
   are selector and wiring boards with no BOM by design (Roto-Tone, 2 Knob Job, 3PDT
   boards, Easy Order Switching). 27 boards still have no named controls.
-- **Madbean**: 120 boards without controls (the docs table them as `POT1..n`); 24 with
-  no BOM (legacy projects whose PDFs are image-only or missing).
-- **Aion FX**: 55 boards without controls; 7 without a BOM.
+- **Madbean**: 24 boards with no BOM (the parts table is an image: White Horse, Blues King,
+  Focus, Flunkee, Fiery Red Horse, Tractor Beam, Triumvirate and the utility boards). 19
+  without controls, mostly bypass and switching boards with no knobs.
+- **Aion FX**: 9 boards without controls; 7 without a BOM.
 - **Fuzz Dog**: 32 boards without a BOM and 15 thin (kit pages whose doc link is a
   different layout, or docs that only carry a layout image).
-- **PCB Guitar Mania**: 14 without a BOM; 85 without controls.
+- **PCB Guitar Mania**: 14 without a BOM; 29 without controls, none of which have pot rows to name them from.
 - **Five Cats Pedals**: 6 without a BOM after OCR of the older inserts: three 3PDT
   daughterboards and the Transelector (no table), and the Vintage Style Fuzz Face, whose
   insert is a wiring diagram with values printed on the parts.
