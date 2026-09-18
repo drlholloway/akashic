@@ -623,10 +623,14 @@ def parse_bom_qty_value_parts(pages: list[str]) -> list[BomRow]:
 
 
 _SHOP_ROW = re.compile(r"^\s*(\S[^\n]*?\S|\S)\s{2,}(\S[^\n]*?\S)\s{2,}(\d{1,2})\s*$", re.M)
+_SHOP_VALUE_CAT = [
+    (r"^(?:1N|BA[TRV]?|MA|1n)\d{2,}", "D"), (r"^(?:2N|2SC|2SA|BC|MPSA|MPF|BS|J|PN)\d{3,}", "Q"),
+    (r"^(?:JRC|TL|NE|LM|CD|OP|TLE|CA|MC|PT|LT|MN|RC|UA|NJM)\d{3,}", "IC"), (r"^(?:[ABCW]\d+(?:[.,]\d+)?[kKmM]?|\d+(?:[.,]\d+)?[kKmM]?[ABCW])$", "POT"),
+]
 _SHOP_TYPES = [
     (r"resistor|metal or carbon|carbon film|metal film|¼ ?watt|1/4 ?w", "R"),
-    (r"\bcap|electrolytic|ceramic|tantalum|mylar|polyester|^film$|film cap", "C"),
-    (r"trim", "TRIM"), (r"\bpot\b|potentiometer|pc mount|right angle", "POT"),
+    (r"\bcap|electrolytic|ceramic|tantalum|mylar|polyester|^film$|film cap|mlcc|c0g|np0|x7r", "C"),
+    (r"trim|3362|3296", "TRIM"), (r"\bpot\b|potentiometer|pc mount|right angle|plastic shaft", "POT"),
     (r"\bled\b", "LED"), (r"diode|rectifier|schottky|zener|germanium", "D"),
     (r"transistor|\bbjt\b|jfet|mosfet|\bnpn\b|\bpnp\b", "Q"),
     (r"op ?amp|\bic\b|regulator|charge pump|chip|\bdip\b", "IC"),
@@ -641,13 +645,38 @@ def parse_shopping_list(pages: list[str]) -> list[BomRow]:
     from the type column, so they still feed the parts cross-reference."""
     rows: list[BomRow] = []
     # Join pages: the list can run onto the next page without repeating its heading.
-    for m in re.finditer(r"SHOPPING LIST\s*\n(.*?)(?=\n\s*(?:LAYOUT|DRILL TEMPLATE|NOTES?|SCHEMATIC|BOM)\b|\Z)", "\n".join(pages), re.S | re.I):
-        for value, ptype, qty in _SHOP_ROW.findall(m.group(1)):
+    for m in re.finditer(r"SHOPPING LIST\s*\n(.*?)(?=\n\s*(?:LAYOUT|DRILL TEMPLATE|NOTES?|SCHEMATIC|BOM|This list)\b|\Z)", "\n".join(pages), re.S | re.I):
+        block = m.group(1)
+        header = next((ln for ln in block.splitlines() if re.search(r"\bValue\b", ln, re.I) and re.search(r"\bQ(?:ty|uantity)\b", ln, re.I)), "")
+        found: list[tuple[str, str, str]] = []
+        if header:
+            # Read the column order from the header ("Value QTY Type ..." or "QTY Value Type ...") and split rows on 2+ spaces.
+            cols = [c.lower() for c in header.split()]  # header words are single ("QTY Value Type Rating Spacing")
+            iv = next((i for i, c in enumerate(cols) if c.startswith("value")), None)
+            iq = next((i for i, c in enumerate(cols) if c.startswith(("qty", "quantity"))), None)
+            if iv is None or iq is None:
+                continue
+            it = next((i for i, c in enumerate(cols) if c.startswith("type")), None)
+            for ln in block.splitlines()[block.splitlines().index(header) + 1:]:
+                cells = re.split(r"\s{2,}", ln.strip())
+                if len(cells) <= max(iv, iq) or not re.fullmatch(r"\d{1,2}", cells[iq]):
+                    continue
+                found.append((cells[iv], cells[it] if it is not None and it < len(cells) else "", cells[iq]))
+        else:
+            found = _SHOP_ROW.findall(block)
+        for value, ptype, qty in found:
             if value.lower() in ("part", "value") or len(value) > 24:
                 continue
+            ptype = re.split(r"\s{2,}", ptype.strip())[0]  # drop the rating / spacing columns
             cat = next((c for rx, c in _SHOP_TYPES if re.search(rx, ptype, re.I)), "")
-            if not cat and re.match(r"^[ABCW]\d+(?:[.,]\d+)?[kKmM]?$", value):
-                cat = "POT"
+            if not cat:
+                cat = next((c for rx, c in _SHOP_VALUE_CAT if re.match(rx, value, re.I)), "")
+            if not cat and re.search(r"3362|3296|trim", ptype, re.I):
+                cat = "TRIM"
+            if not cat and re.fullmatch(r"\d+(?:[.,]\d+)?[kKMR]?\d*(?:Ω|ohm)?", value):
+                cat = "R"  # "100R  *see notes": the value alone says resistor
+            if not cat and re.fullmatch(r"\d+(?:[.,]\d+)?[pnuµ]F?\d*", value):
+                cat = "C"
             cat = cat or categorize("", ptype, value)
             nr = normalize_row(BomRow(ref=f"×{qty}", value=value, part_type=ptype, notes="shopping list", category=cat))
             if is_plausible(nr) or cat in ("HW", "CONN", "SW", "OTHER"):

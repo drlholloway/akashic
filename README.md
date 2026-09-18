@@ -13,7 +13,7 @@ It ships as a static, offline-capable web app (PWA) that installs on macOS, Linu
 |---|---|---|---|
 | PedalPCB | ~540 | parsed from the build-doc PDF | current and legacy doc layouts |
 | Aion FX | ~270 | parsed from the build-doc PDF | controls and difficulty from the doc |
-| Fuzz Dog | ~600 | parsed from the build-doc PDF | kit pages carry the docs; prices in GBP |
+| Fuzz Dog | ~600 | parsed from the build-doc PDF | kit pages carry the docs; the parts table is found on whichever page holds it; prices in GBP |
 | Madbean Pedals | ~120 | parsed from the build-doc PDF | single projects table, archived rows kept; controls from the doc's Controls section |
 | GuitarPCB | ~148 | OCR'd from the build-doc PDF (needs `tesseract`) | schematic and BOM are raster images in the PDF; a thorough OCR pass (upscaled, thresholded) runs when the quick one is thin; ~92% of boards parse, pots named from the table |
 | Sheepylove | ~70 | parsed from the build-doc PDF | Shopify catalog via `products.json`; KiCad-exported docs; prices in EUR |

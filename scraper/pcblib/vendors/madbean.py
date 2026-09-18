@@ -10,7 +10,7 @@ from selectolax.parser import HTMLParser
 from ..models import BomRow, Circuit
 from ..normalize import normalize_row, is_plausible
 from ..paths import CACHE_DIR, DATA_DIR
-from ..pdf import pdf_text_pages, find_schematic_page, render_page, parse_bom_columns
+from ..pdf import pdf_text_pages, find_schematic_page, render_page, parse_bom_columns, parse_shopping_list
 from ..taxonomy import classify, find_enclosure
 from . import register
 from .base import Adapter, clean_text
@@ -91,7 +91,15 @@ class Madbean(Adapter):
         if pdf:
             pages = pdf_text_pages(pdf)
             c.bom = parse_bom_columns(pages)  # the pots and semiconductors sit in the right-hand columns
+            if len(c.bom) < 8:  # the VFE docs give a shopping list (value, qty, type) instead of a designator table
+                shop = parse_shopping_list(pages)
+                if len(shop) > len(c.bom):
+                    c.bom = shop
             c.controls = _controls_from_doc(pages, [r.ref for r in c.bom if r.category == "POT"])
+            if not c.controls:  # a shopping list names no pots, but it counts them
+                n = sum(int(r.ref[1:]) for r in c.bom if r.category == "POT" and r.ref.startswith("×"))
+                if n:
+                    c.controls = [f"{n} knobs" if n > 1 else "1 knob"]
             c.doc_local = str(pdf.relative_to(DATA_DIR))
             page_no = find_schematic_page(pages)
             if page_no is None:
@@ -113,13 +121,15 @@ class Madbean(Adapter):
 _CTRL_BULLET = re.compile(r"^\s*•\s*([A-Za-z][A-Za-z0-9 /\-]{0,24}?)\s*(\([^)]*\))?\s*:\s*(.*)$")
 # Older docs drop the bullet: "LVL, TONE, DRIVE: Self-explanatory." at the left margin, names in caps.
 _CTRL_PLAIN = re.compile(r"^\s{0,4}([A-Z][A-Z0-9/\-]{1,12}(?:,\s*[A-Z][A-Z0-9/\-]{1,12})*)\s*(\([^)]*\))?:\s*(.*)$")
+# VFE docs: "Level (100kA): Sets the output volume" - a Title-case name with the pot value in parentheses.
+_CTRL_TITLE = re.compile(r"^\s{0,4}([A-Z][a-z0-9/\-]{1,12}(?: [A-Z][a-z0-9/\-]{1,12})?)\s*(\([^)]*\d[kKM][ABCW]?\)):\s*([A-Z].*)$")
 # A control is not a knob when its description opens by calling it a trimmer, switch, jack or LED
 # ("This trimmer sets...", "Toggle between...", "3PDT foot-switches for..."); a knob whose text merely
 # mentions a switch later ("rate is fixed via the C.V switch") is still a knob.
 _NOT_A_KNOB = re.compile(r"^\s*(?:this is |it is |it's )?(?:the |an? |these |two )?(?:[\w.'’-]+,? ){0,5}"
                          r"(?:trimmers?|trim ?pots?|switch(?:es)?|toggles?|rotary|foot-?switch(?:es)?|DIP|jumpers?|pads?|jacks?|LEDs?)\b"
                          r"|^\s*(?:this )?(?:switches|toggles|selects|chooses|shorts)\b", re.I)
-_CTRL_STOP = {"CURRENT DRAW", "NOTE", "NOTES", "HTTP", "HTTPS", "INPUT", "OUTPUT", "RPD", "DIRECT OUT", "SEND", "RETURN"}
+_CTRL_STOP = {"CURRENT DRAW", "NOTE", "NOTES", "TIP", "HTTP", "HTTPS", "INPUT", "OUTPUT", "RPD", "DIRECT OUT", "SEND", "RETURN"}
 
 
 def _controls_from_doc(pages: list[str], pot_refs: list[str]) -> list[str]:
@@ -134,7 +144,7 @@ def _controls_from_doc(pages: list[str], pot_refs: list[str]) -> list[str]:
         for line in text[m.end():].splitlines():
             if seen_bullet and re.match(r"^\s{30,}[A-Z][A-Za-z ]{2,30}\s*$", line):
                 break  # next centered heading (Voltages, Notes, Wiring ...)
-            b = _CTRL_BULLET.match(line) or _CTRL_PLAIN.match(line)
+            b = _CTRL_BULLET.match(line) or _CTRL_PLAIN.match(line) or _CTRL_TITLE.match(line)
             if not b:
                 continue
             seen_bullet = True

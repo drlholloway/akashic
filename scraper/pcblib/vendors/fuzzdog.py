@@ -11,7 +11,7 @@ from selectolax.parser import HTMLParser
 from ..models import BomRow, Circuit
 from ..normalize import normalize_row, is_plausible
 from ..paths import CACHE_DIR, DATA_DIR
-from ..pdf import pdf_text_pages, render_page
+from ..pdf import parse_bom_columns, pdf_text_pages, render_page
 from ..taxonomy import classify, classify_within, find_enclosure
 from . import register
 from .base import Adapter, clean_text, html_to_text
@@ -54,8 +54,11 @@ class FuzzDog(Adapter):
         html = self.f.get_text(url)
         if not html:
             return None
-        pdfs = [p for p in re.findall(r'href="(https?://pedalparts\.co\.uk/docs/[^"]+\.pdf)"', html)
-                if "GeneralBuildGuide" not in p]
+        all_pdfs = [p for p in re.findall(r'href="(https?://pedalparts\.co\.uk/docs/[^"]+\.pdf)"', html)
+                    if "GeneralBuildGuide" not in p]
+        # The FuzzPup family guide (FuzzPups.pdf, FuzzPups-V2.pdf) is linked ahead of the circuit's own doc.
+        general = [p for p in all_pdfs if re.search(r"/FuzzPups(?:-V\d)?\.pdf$", p, re.I)]
+        pdfs = [p for p in all_pdfs if p not in general] or all_pdfs
         if not pdfs:
             return None  # PCB-only page or accessory; the kit page carries the doc
         doc = HTMLParser(html)
@@ -89,6 +92,8 @@ class FuzzDog(Adapter):
         )
         if m:
             c.controls = [f"{m.group(1)} knobs"]
+        for g in general:
+            c.extra_docs["FuzzPup build guide"] = g
         pdf = self.f.get_file(c.doc_url, ".pdf")
         if pdf:
             pages = pdf_text_pages(pdf)
@@ -100,7 +105,12 @@ class FuzzDog(Adapter):
                     render_page(pdf, page_no, png)
                 c.schematic_local = str(png.relative_to(DATA_DIR))
                 c.schematic_page = page_no
-                c.bom = _parse_fuzzdog_bom(pages[page_no - 1])
+            # The BOM is on the schematic page in older docs and a few pages later in the 2023 layout.
+            per_page = [_parse_fuzzdog_bom(p) for p in pages]
+            c.bom = max(per_page + [parse_bom_columns(pages)], key=len) if pages else []
+            pots = [r for r in c.bom if r.category == "POT" and r.ref.isalpha()]
+            if pots and (not c.controls or c.controls[0].endswith("knobs")):
+                c.controls = [r.ref.title() for r in pots]
             m = re.search(r"©\s*(\d{4})", "\n".join(pages))
             c.doc_version = m.group(1) if m else ""
         return c

@@ -16,6 +16,13 @@ GitHub Release notes.
   whose board quality builders widely report as inconsistent.
 
 ### Fixed
+- Fuzz Dog: the parts table is read from whichever page holds it (the 2023 doc layout puts
+  it a few pages after the schematic) and the circuit's own doc is preferred over the shared
+  FuzzPup guide; boards without a parts list fell from 32 to 4, and 451 boards now name their
+  knobs instead of counting them.
+- Madbean's VFE docs carry a shopping list (qty, value, type) instead of a designator table;
+  the shopping-list parser now reads the column order from the header, so 16 more boards
+  have parts and the VFE "Level (100kA): ..." control lines are read too.
 - Madbean controls come from the doc's "Controls" section (bulleted or plain `NAME: what it
   does` lines, trimmers and switches filtered out) or from the named pots in the parts table:
   101 of 120 boards, up from none. The parts table is no longer cut at column 66, which

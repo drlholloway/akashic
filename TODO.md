@@ -17,12 +17,13 @@ at the bottom; re-run them after parser changes.
 - **GuitarPCB**: 5 boards with no BOM and 7 thin after the thorough OCR pass; the rest
   are selector and wiring boards with no BOM by design (Roto-Tone, 2 Knob Job, 3PDT
   boards, Easy Order Switching). 27 boards still have no named controls.
-- **Madbean**: 24 boards with no BOM (the parts table is an image: White Horse, Blues King,
-  Focus, Flunkee, Fiery Red Horse, Tractor Beam, Triumvirate and the utility boards). 19
-  without controls, mostly bypass and switching boards with no knobs.
+- **Madbean**: 8 boards with no BOM: the utility boards (9mmBB, 14mm, MiniJack1, sProbe,
+  Strober, TrueSoft) and Flunkee, whose PDF link is a 404. The VFE series docs carry a
+  shopping list (qty, value, type) rather than a designator table, so their rows are named
+  by quantity.
 - **Aion FX**: 9 boards without controls; 7 without a BOM.
-- **Fuzz Dog**: 32 boards without a BOM and 15 thin (kit pages whose doc link is a
-  different layout, or docs that only carry a layout image).
+- **Fuzz Dog**: 4 boards without a BOM and 13 thin, all utility items (switchers, testers,
+  the ProtoBuddy breadboard, tails add-ons) whose docs have no parts table.
 - **PCB Guitar Mania**: 14 without a BOM; 29 without controls, none of which have pot rows to name them from.
 - **Five Cats Pedals**: 6 without a BOM after OCR of the older inserts: three 3PDT
   daughterboards and the Transelector (no table), and the Vintage Style Fuzz Face, whose
@@ -54,6 +55,7 @@ at the bottom; re-run them after parser changes.
 | JMK PCBs | Big Bass Drive, AC/DC Drive, Level Up, 5 Knob Fuzz, Classic Tremolo, Blue Warbler 2, Super Phaser | Build notes describe the original without naming it; `based_on` left empty |
 | JMK PCBs | most boards | Docs rarely state an enclosure (8 of 38 found); drill templates are named by knob count, not size |
 | Five Cats | 57 older inserts | No enclosure stamp on the insert (only newer layouts have the "minimum enclosure" badge) |
+| Madbean | Flunkee | Doc link returns 404 (`_folders/1590A/pdf/Flunkee.pdf`) |
 | Mask Audio | Business Card | Doc says 1590BBM/BBS; the enclosure regex does not know 1590BBM |
 
 ## Parser wishes
