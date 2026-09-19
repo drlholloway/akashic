@@ -43,6 +43,9 @@ GitHub Release notes.
   in two. Parenthesized alternates are kept as notes; pot names one space from their value
   are read.
 
+- Electronic Audio Experiments (Squarespace DIY collection; spreadsheet BOMs read by column
+  name, controls from the builder's guide).
+
 ### Fixed
 - OCR'd parts lists keep pots whose name ends in a digit (SEN1, SEN2) and switch rows
   (SW1 SPDT ON-ON, BYPASS 3PDT); Dead End FX's 'Zilla names its four knobs and its toggle.

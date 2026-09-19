@@ -1,4 +1,4 @@
-export type Vendor = 'pedalpcb' | 'aionfx' | 'madbean' | 'guitarpcb' | 'fuzzdog' | 'sheepylove' | 'deadendfx' | 'moonn' | 'fivecats' | 'parasit' | 'pcbway-gtu' | 'pcbguitarmania' | 'deadastronaut' | 'bentfishbowl' | 'ggg' | 'lectricfx' | 'expanon' | 'zerogiod' | 'otrfx' | 'dirtmonger' | 'maskaudio' | 'effectslayouts' | 'jmk';
+export type Vendor = 'pedalpcb' | 'aionfx' | 'madbean' | 'guitarpcb' | 'fuzzdog' | 'sheepylove' | 'deadendfx' | 'moonn' | 'fivecats' | 'parasit' | 'pcbway-gtu' | 'pcbguitarmania' | 'deadastronaut' | 'bentfishbowl' | 'ggg' | 'lectricfx' | 'expanon' | 'zerogiod' | 'otrfx' | 'dirtmonger' | 'maskaudio' | 'effectslayouts' | 'jmk' | 'eae';
 
 export interface IndexEntry {
 	id: string;
@@ -90,7 +90,8 @@ export const VENDOR_NAMES: Record<Vendor, string> = {
 	dirtmonger: 'Dirt Monger Instruments',
 	maskaudio: 'Mask Audio Electronics',
 	effectslayouts: 'Effects Layouts',
-	jmk: 'JMK PCBs'
+	jmk: 'JMK PCBs',
+	eae: 'Electronic Audio Experiments'
 };
 
 export type VendorKind = 'shop' | 'projects' | 'blog' | 'archive';

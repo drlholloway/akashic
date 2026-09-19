@@ -77,6 +77,8 @@ VENDORS = {
                        "Build documents are © Effects Layouts; indexed and linked, not redistributed."),
     "jmk": ("JMK PCBs", "https://jmkpcbs.com/shop/",
             "Build documents are © JMK Pedals, for personal use only; indexed and linked, not redistributed."),
+    "eae": ("Electronic Audio Experiments", "https://www.electronicaudioexperiments.com/diy",
+            "Builder's guides are © Electronic Audio Experiments and John W Snyder; indexed and linked, not redistributed. No build support is offered."),
     "pcbway-gtu": ("PCBWay: Glory to Ukraine", "https://www.pcbway.com/project/member/?bmbno=19C5FC6C-66B1-46",
                    "Shared projects are CC BY-SA 3.0; schematic images may be shown with attribution. BOM and gerbers need a PCBWay login."),
 }

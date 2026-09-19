@@ -157,6 +157,7 @@ def normalize_row(row: BomRow) -> BomRow:
             row.norm_value = _fmt(n, _L_PREFIX)
             row.sort_key = n
     elif row.category == "POT":
+        raw = re.sub(r"(?i)(\d)\s*meg\b", r"\1M", raw)  # C1Meg
         m = _POT_RE.match(raw)
         if m:
             t1, num, prefix, t2 = m.groups()

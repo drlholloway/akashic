@@ -33,6 +33,7 @@ It ships as a static, offline-capable web app (PWA) that installs on macOS, Linu
 | Mask Audio Electronics | ~26 | parsed from the Word build doc's table | Shopify collection; docs are .docx on Dropbox and Google Docs, read directly; one Eagle-schematic PDF paired by label; prices in USD |
 | Effects Layouts | ~80 | parsed from the build-doc PDF | WooCommerce Store API; two-column BOM with named pots; the doc's drill template names the enclosure; prices in USD |
 | JMK PCBs | ~39 | parsed from the build-doc PDF | WooCommerce with the REST API off, so products come from the sitemap and each page's JSON-LD; multi-column parts tables; prices in USD |
+| Electronic Audio Experiments | 4 | spreadsheet BOM (exact), else the builder's guide | Squarespace DIY collection of retired EAE pedals; LaTeX-set guides name the controls; prices in USD |
 | PCBWay: Glory to Ukraine | ~337 | none (BOM needs a PCBWay login) | one member's shared projects via the member JSONP list; schematic PNGs are CC BY-SA; no prices |
 
 ### Transistor substitutes
