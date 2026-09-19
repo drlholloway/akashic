@@ -1245,12 +1245,30 @@ def doc_version(pages: list[str]) -> str:
     return ""
 
 
+def _expand_range_rows(rows: list[BomRow]) -> list[BomRow]:
+    """'Q1-Q5  2N5088' is five transistors, not one part called Q1-Q5: expand any row whose
+    designator is a range or a comma list, whichever parser produced it."""
+    out: list[BomRow] = []
+    seen = {r.ref for r in rows}
+    for r in rows:
+        refs = expand_refs(r.ref) if re.search(r"\d\s*[-–,]\s*[A-Za-z]*\d", r.ref) else [r.ref]
+        if len(refs) <= 1:
+            out.append(r)
+            continue
+        for ref in refs:
+            if ref in seen and ref != r.ref:
+                continue  # the parser also listed this designator on its own
+            seen.add(ref)
+            out.append(normalize_row(BomRow(ref=ref, value=r.value, part_type=r.part_type, notes=r.notes, variant=r.variant)))
+    return out
+
+
 def process_document(pdf: Path, vendor: str, slug: str) -> dict:
     """Return bom rows, schematic png (relative to data/), page number, version."""
     pages = pdf_text_pages(pdf)
     # Vendors lay their parts lists out three ways; run every parser and keep the
     # one that recovered the most designators (they never both succeed on one doc).
-    bom = max((parse_bom(pages), parse_bom_qty_value_parts(pages), parse_bom_columns(pages), parse_bom_qty_value_ref(pages)), key=len)
+    bom = _expand_range_rows(max((parse_bom(pages), parse_bom_qty_value_parts(pages), parse_bom_columns(pages), parse_bom_qty_value_ref(pages)), key=len))
     variant_rows = max(parse_bom_variant_columns(pages), parse_bom_version_blocks(pages), key=len)
     if variant_rows and len({r.ref for r in variant_rows}) >= len({r.ref for r in bom}) * 0.8:
         # A per-variant table names the same parts once per column; parts it does not cover stay unlabelled.

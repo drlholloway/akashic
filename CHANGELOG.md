@@ -34,6 +34,8 @@ GitHub Release notes.
   listed first, then the closest by the numbers. `pcblib import-transistors` loads the database.
 
 ### Fixed
+- Designator ranges (`Q1-Q5  2N5088`, `R5-R8  47k`) expand to one row per part whichever table
+  parser wins; 24 Sheepylove and Aion FX boards had them stored as a single "other" part.
 - OCR'd tables with one column per variant (Five Cats' Rattus) are also read as vertical
   strips cut between the header words, so a noisy line can no longer drop a column; a stray
   digit before a 1N diode number is removed.
