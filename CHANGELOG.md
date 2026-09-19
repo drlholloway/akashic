@@ -37,7 +37,16 @@ GitHub Release notes.
   Cryptid Effects with a link to the main site and the source. Each circuit page has a
   "Report a wrong parse" link that opens the issue form with that page filled in.
 
+- Fuzz Dog builds: a doc with a BOM page per version (the Big Muff docs, PIG and BELLS, the
+  four Fuzz Face builds) yields one variant per page named from the page title, and a table
+  whose parenthesized values make a second named build (Southern Drive / 186,282Mps) splits
+  in two. Parenthesized alternates are kept as notes; pot names one space from their value
+  are read.
+
 ### Fixed
+- An original's name is stored without the adjectives a description wraps it in ("rare Last
+  Gasp Arts Green Monster", "old version of the Caroline Wave Cannon") or a trailing clause.
+- The price currency selector moved from the header to the results bar beside Sort.
 - Parts lists laid out as PART / QTY / TYPE / NOTES with no designators (Aion FX's 18V
   voltage doubler, whose values are printed on the PCB) are read as quantity-named rows; a
   designator in the value column takes its value from the notes (LEDR, "recommended value is

@@ -7,6 +7,7 @@
 	import { applyFilters, buildSearch, EMPTY_FILTERS, filtersFromParams, paramsFromFilters, type Filters } from '$lib/search';
 	import { VENDOR_NAMES, type IndexEntry } from '$lib/types';
 	import { currency } from '$lib/currency.svelte';
+	import CurrencySelect from '$lib/CurrencySelect.svelte';
 
 	let { data } = $props();
 	$effect.pre(() => buildSearch(data.index));
@@ -129,6 +130,7 @@
 				{#if filters.part}<button type="button" class="chip on" onclick={() => update({ part: '' })}>Uses {filters.part} ×</button>{/if}
 				{#if active || filters.q}<button type="button" class="chip" onclick={() => goto(`${base}/`)}>Clear all</button>{/if}
 			</div>
+			<CurrencySelect />
 			<label class="sort">
 				<span class="label">Sort</span>
 				<select bind:value={sort} disabled={!!filters.q.trim()}>

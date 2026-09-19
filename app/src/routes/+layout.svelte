@@ -4,7 +4,7 @@
 	import { goto } from '$app/navigation';
 	import { base } from '$app/paths';
 	import type { Snippet } from 'svelte';
-	import { currency, type Currency } from '$lib/currency.svelte';
+	import { currency } from '$lib/currency.svelte';
 
 	import type { VendorInfo } from '$lib/types';
 	import { COFFEE_URL, ISSUES_URL, MAKER_NAME, MAKER_URL, REPO_URL } from '$lib/site';
@@ -15,12 +15,6 @@
 	$effect.pre(() => {
 		currency.init(data.rates);
 	});
-	const currencyOptions: { value: Currency; label: string }[] = [
-		{ value: 'USD', label: 'USD $' },
-		{ value: 'EUR', label: 'EUR €' },
-		{ value: 'GBP', label: 'GBP £' },
-		{ value: 'native', label: 'As listed' }
-	];
 	let q = $state('');
 	let titleblock: HTMLElement | undefined = $state();
 	// Sticky table headers and the facet rail sit directly under the title block, so publish its
@@ -73,14 +67,6 @@
 		{#each nav as n}
 			<a href={n.href} aria-current={n.match(page.url.pathname) ? 'page' : undefined}>{n.label}</a>
 		{/each}
-		<label class="currency" title={currency.rates.date ? `Converted at ECB rates from ${currency.rates.date}` : 'No exchange rates loaded'}>
-			<span class="sr-only">Show prices in</span>
-			<select value={currency.selected} onchange={(e) => currency.set(e.currentTarget.value as Currency)} disabled={!currency.rates.date}>
-				{#each currencyOptions as o}
-					<option value={o.value}>{o.label}</option>
-				{/each}
-			</select>
-		</label>
 	</nav>
 </header>
 
@@ -140,19 +126,6 @@
 	}
 	.search input:focus { border-color: var(--coat); background: var(--sheet); outline: none; box-shadow: 0 0 0 3px var(--coat-tint); }
 	nav { grid-area: nav; display: flex; gap: 4px; align-items: center; }
-	.currency select {
-		margin-left: 8px;
-		border: 1px solid var(--rule-strong);
-		border-radius: var(--radius);
-		background: var(--sheet);
-		padding: 5px 8px;
-		font-family: var(--label);
-		font-weight: 600;
-		font-size: 13px;
-		letter-spacing: 0.06em;
-		text-transform: uppercase;
-	}
-	.currency select:disabled { opacity: 0.5; }
 	nav a {
 		font-family: var(--label);
 		font-weight: 600;

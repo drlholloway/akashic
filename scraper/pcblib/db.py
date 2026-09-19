@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import re
+
 import json
 import sqlite3
 from contextlib import contextmanager
@@ -134,8 +136,22 @@ def _dedupe_controls(names: list[str]) -> list[str]:
     return out
 
 
+_BASED_ON_FILLER = re.compile(r"^(?:(?:(?:old|early|later|newer|original|first|second) version of(?: the)?|now[- ]discontinued|long[- ]discontinued|discontinued|"
+                              r"the|an?|rare|classic|famous|legendary|iconic|popular|venerable|infamous|original|vintage|old)\s+)+", re.I)
+
+
+def _clean_based_on(text: str) -> str:
+    """'rare Last Gasp Arts Green Monster' -> 'Last Gasp Arts Green Monster': the original's
+    name without the adjectives a description wraps it in, and without a trailing clause."""
+    t = _BASED_ON_FILLER.sub("", text.strip())
+    t = re.split(r",\s*(?:which|that|but|and it|as )", t)[0]
+    t = re.sub(r"\s+(?:v|this|it|itself)$", "", t).strip(" ,.;")
+    return t
+
+
 def upsert_circuit(conn: sqlite3.Connection, c: Circuit) -> None:
     c.controls = _dedupe_controls(c.controls)
+    c.based_on = _clean_based_on(c.based_on) if c.based_on else c.based_on
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
     conn.execute(
         """INSERT INTO circuits (id,vendor,slug,name,subtitle,based_on,description,category,
