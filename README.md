@@ -25,7 +25,7 @@ It ships as a static, offline-capable web app (PWA) that installs on macOS, Linu
 | Dead Astronaut FX | ~19 | OCR'd from raster build docs | Wix site; pages named from the nav menu; PayPal prices in GBP |
 | Bent Fishbowl | ~40 | OCR'd from the schematic image | Wix blog of original and derivative schematics (CC BY-NC-SA); no board to buy; designators and values paired by position |
 | General Guitar Gadgets | ~77 | parsed from the project BOM PDF | Shopify store; per-version PDFs on the project pages; the BOM title gives the board's name and original; prices in USD |
-| Lectric-FX | ~40 | parsed from the build-doc PDF | WooCommerce Store API; multi-column B.O.M. with pots, trimmers and switches; prices in USD |
+| Lectric-FX | ~40 | parsed from the build-doc PDF, or grid OCR of scanned docs | WooCommerce Store API; multi-column B.O.M. with pots, trimmers and switches; older scanned docs have their ruled table read cell by cell; prices in USD |
 | Experimentalists Anonymous | ~780 | positional OCR of the drawing where legible | a plain file archive of traced schematics in category folders; no board to buy; MIDI, power-supply, synth-book and misc folders skipped |
 | Zero G IOD | 16 | OCR'd from BOM and schematic images | closed Big Cartel store; every product image (BOM, drill guide, schematic) is committed under `data/archive/zerogiod/` for posterity |
 | On The Road Effects | ~28 | parsed from the build-guide PDF | one WordPress page; boards sell on Etsy and Reverb; prices in USD |

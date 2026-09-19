@@ -49,6 +49,8 @@ at the bottom; re-run them after parser changes.
 | Effects Layouts | Melody Malfunction, Cranky Speaker | Doc has only a shopping list (value, type, quantity), so rows are named by quantity (`×2`) and controls are a knob count |
 | Effects Layouts | Six Shooter, Strider, Soil Slinger | Only a drill template or a blog post is linked; no parts list |
 | Effects Layouts | One-Knobber, Drivestortion | Old blog-era project PDFs with broken font encodings; OCR gives 13 and 18 rows, pots missing |
+| Lectric-FX | Double*Take, Betty Boost | Scanned grids read cell by cell, but the Double*Take's diode cells come out as junk (`INS1T4Z`) and Betty Boost's pot cell is unread, so no controls |
+| Lectric-FX | Mongrel | Grid OCR reads 45 of 47 parts; C8 and C21 cells are unreadable, R18 reads 1K for 4K7, D1 reads 1N40602 for 1N4002 |
 | JMK PCBs | Big Bass Drive, AC/DC Drive, Level Up, 5 Knob Fuzz, Classic Tremolo, Blue Warbler 2, Super Phaser | Build notes describe the original without naming it; `based_on` left empty |
 | JMK PCBs | most boards | Docs rarely state an enclosure (8 of 38 found); drill templates are named by knob count, not size |
 | Five Cats | 57 older inserts | No enclosure stamp on the insert (only newer layouts have the "minimum enclosure" badge) |

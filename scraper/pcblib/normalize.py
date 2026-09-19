@@ -144,6 +144,7 @@ def normalize_row(row: BomRow) -> BomRow:
             row.norm_value = _fmt(n, _R_PREFIX)
             row.sort_key = n
     elif row.category == "C":
+        raw = re.sub(r"(?<=\d)([UNP])(?=\d|F?$)", lambda m: m.group(1).lower(), raw)  # 2U2, 100N: an upper-case unit letter
         n = _parse_si(raw)
         if n is not None:
             # Bare numbers like "100" for caps are ambiguous; only accept with a prefix

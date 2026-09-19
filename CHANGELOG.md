@@ -30,6 +30,11 @@ GitHub Release notes.
   links (Black & Tan, Transmogrifying Repeater).
 
 ### Fixed
+- Scanned parts tables drawn as a ruled grid (Lectric-FX's Mongrel) are read cell by cell:
+  the rules give the cell boundaries, each cell is OCR'd on its own, and an unreadable
+  designator is inferred from its column's sequence. The Mongrel went from 3 junk rows to 45
+  of 47 parts. Value repairs learned a serifed 1 read as T, a 7 read as / or i, and
+  upper-case capacitor units (2U2).
 - Pot values read by OCR keep their taper letter and have only the digits repaired
   (`ASOOK` -> `A500K`, `BSOK` -> `B50K`, `8100K` -> `B100K`): 143 more pot rows across the OCR
   vendors, most on Dead End FX, GuitarPCB and Dead Astronaut, and 16 more boards with named

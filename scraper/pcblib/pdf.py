@@ -341,6 +341,113 @@ def _merge_ocr_rows(variants: list[list[BomRow]]) -> list[BomRow]:
     return out
 
 
+def _grid_lines(dark, axis: int, frac: float) -> list[tuple[int, int]]:
+    """Positions of ruled lines along one axis: rows (axis 0) or columns (axis 1) whose
+    longest unbroken dark run covers at least `frac` of the image, merged when adjacent."""
+    import numpy as np
+    arr = dark if axis == 0 else dark.T
+    n = arr.shape[1]
+    out: list[list[int]] = []
+    for i, line in enumerate(arr):
+        # longest run of True in `line`
+        padded = np.concatenate(([0], line.astype(np.int8), [0]))
+        edges = np.flatnonzero(np.diff(padded))
+        longest = int((edges[1::2] - edges[::2]).max()) if edges.size else 0
+        if longest >= frac * n:
+            if out and i - out[-1][-1] <= 3:
+                out[-1].append(i)
+            else:
+                out.append([i])
+    return [(g[0], g[-1]) for g in out]
+
+
+_GRID_REF = re.compile(r"^(?:(?:R|C|D|Q|IC|U|L|SW|LED|VR|TR)\d{1,3}[A-Z]?|CLR|TRIM\d?)$")
+
+
+def _ocr_grid_rows(bin_png: Path) -> list[BomRow]:
+    """Parts tables drawn as a ruled grid defeat page-level OCR: read the grid instead.
+    Ruled lines give the cell boundaries; each cell is OCR'd on its own as one line of
+    text, and adjacent cells pair up as designator (or pot name) and value."""
+    import json
+    import numpy as np
+    from PIL import Image
+    cache = bin_png.with_name(bin_png.stem + "-grid.json")
+    if cache.exists():
+        cells_rows = json.loads(cache.read_text())
+    else:
+        Image.MAX_IMAGE_PIXELS = None
+        img = np.array(Image.open(bin_png).convert("L"))
+        dark = img < 128
+        hl = _grid_lines(dark, 0, 0.12)
+        vl = _grid_lines(dark, 1, 0.08)
+        cells_rows = []
+        if len(hl) >= 4 and len(vl) >= 3:
+            tmp = bin_png.with_name(bin_png.stem + "-cell.png")
+            for (_, y1), (y2, _) in zip(hl, hl[1:]):
+                top, bot = y1 + 2, y2 - 2
+                if not 12 <= bot - top <= 120:
+                    continue
+                texts: list[str] = []
+                for (x0, x1), (x2, _) in zip(vl, vl[1:]):
+                    left, right = x1 + 2, x2 - 2
+                    if not 20 <= right - left <= 900 or dark[top:bot, x0:x1 + 1].max(axis=1).mean() <= 0.5:
+                        texts.append("")  # not a cell: the left rule does not span this row
+                        continue
+                    cell = img[top:bot, left:right]
+                    if (cell < 128).mean() < 0.004:
+                        texts.append("")
+                        continue
+                    big = Image.fromarray(cell).resize((cell.shape[1] * 3, cell.shape[0] * 3))
+                    Image.fromarray(np.pad(np.array(big), 15, constant_values=255)).save(tmp)
+                    texts.append(subprocess.run(["tesseract", str(tmp), "-", "--psm", "7"], capture_output=True, text=True).stdout.strip())
+                if any(texts):
+                    cells_rows.append(texts)
+            tmp.unlink(missing_ok=True)
+        cache.write_text(json.dumps(cells_rows))
+    rows: list[BomRow] = []
+    seen: set[str] = set()
+    last_in_col: dict[int, tuple[str, int]] = {}  # column -> (prefix, number) of the last designator read there
+
+    def clean_ref(raw: str, col: int) -> str:
+        ref = re.sub(r"[^A-Za-z0-9\-]", "", raw)
+        m = re.match(r"^(IC|LED|CLR|TRIM|SW|VR|TR|R|C|D|Q|U|L)([A-Za-z0-9\-]*)$", ref, re.I)
+        if not m:
+            return ref.upper()
+        prefix, rest = m.group(1).upper(), m.group(2).translate(str.maketrans("lIOo", "1100"))  # S is left alone: RS may be R5 or R8
+        if not rest and prefix in ("IC", "SW", "Q", "D"):
+            rest = "1"  # a bare IC or SW is the only one
+        if not re.fullmatch(r"\d{1,3}[A-Z]?", rest):
+            prev = last_in_col.get(col)
+            if prev and prev[0] == prefix:
+                rest = str(prev[1] + 1)  # R7, R?, R9: the unreadable one is R8
+            else:
+                return prefix + rest
+        return prefix + rest
+
+    for texts in cells_rows:
+        for k in range(len(texts) - 1):
+            ref_raw, val_raw = texts[k].strip(), texts[k + 1].strip()
+            if not ref_raw or not val_raw:
+                continue
+            ref = clean_ref(ref_raw, k)
+            val = _repair_value(val_raw.rstrip(" .:;|*").split("  ")[0])
+            if _GRID_REF.match(ref) and re.search(r"\d|Ge|Si|NPN|PNP|LED|SPDT|DPDT", val) and ref not in seen:
+                mm = re.match(r"^([A-Z]+)(\d+)", ref)
+                if mm:
+                    last_in_col[k] = (mm.group(1), int(mm.group(2)))
+                nr = normalize_row(BomRow(ref=ref, value=val, notes="OCR grid"))
+                if is_plausible(nr):
+                    seen.add(ref)
+                    rows.append(nr)
+            elif re.fullmatch(r"[A-Z][A-Z .\-]{2,12}", ref_raw.strip(" |")) and ref_raw.strip(" |") not in seen \
+                    and (re.fullmatch(r"[ABCW]?\d+(?:[.,]\d+)?[kKM]?[ABCW]?", val) or re.search(r"[SD]P[SD]T|3PDT|toggle", val, re.I)):
+                name = ref_raw.strip(" |")
+                seen.add(name)
+                cat = "SW" if re.search(r"[SD]P[SD]T|3PDT|toggle", val, re.I) else ("TRIM" if "TRIM" in name else "POT")
+                rows.append(normalize_row(BomRow(ref=name, value=val.upper(), part_type="Potentiometer" if cat != "SW" else "", category=cat, notes="OCR grid")))
+    return rows
+
+
 def _ocr_page(pdf: Path, vendor: str, slug: str, page_no: int, thorough: bool = False) -> list[BomRow]:
     png = CACHE_DIR / vendor / f"{slug}-p{page_no}.png"
     if not png.exists():
@@ -362,6 +469,27 @@ def _ocr_page(pdf: Path, vendor: str, slug: str, page_no: int, thorough: bool = 
             im.point(lambda v: 255 if v > 90 else 0).save(bpng)
         for psm in (6, 4):
             variants.append(_rows_from_ocr(_tesseract_cached(bpng, psm)))
+        grid = _ocr_grid_rows(bpng)
+        if len(grid) >= 8:
+            # A ruled table read cell by cell is more reliable than any page-level pass, but it may
+            # cover only some columns: keep every grid row and add the page-level rows for the
+            # designators it lacks. Within a prefix the grid did read, a number far past its last
+            # one (IC20 on a board whose grid stops at IC1) is silkscreen noise and is dropped.
+            have = {r.ref for r in grid}
+            top: dict[str, int] = {}
+            for r in grid:
+                mm = re.match(r"^([A-Z]+)(\d+)", r.ref)
+                if mm:
+                    top[mm.group(1)] = max(top.get(mm.group(1), 0), int(mm.group(2)))
+            extra = []
+            for r in _merge_ocr_rows(variants):
+                if r.ref in have:
+                    continue
+                mm = re.match(r"^([A-Z]+)(\d+)", r.ref)
+                if mm and mm.group(1) in top and int(mm.group(2)) > top[mm.group(1)] + 2:
+                    continue
+                extra.append(r)
+            return grid + extra
     except ImportError:
         pass
     with fitz.open(pdf) as d:
@@ -387,8 +515,8 @@ def _ocr_page(pdf: Path, vendor: str, slug: str, page_no: int, thorough: bool = 
     return _merge_ocr_rows(variants)
 
 
-_UNIT_TOKEN = re.compile(r"^[0-9ATtlIOoS?£.]{1,6}(?:[kKMrRnpuµ]F?|[uµ]F|nF|pF)$")
-_DIGIT_FIX = str.maketrans({"A": "4", "T": "7", "t": "7", "l": "1", "I": "1", "O": "0", "o": "0", "S": "5", "?": "2", "£": ""})
+_UNIT_TOKEN = re.compile(r"^[0-9ATtlIiOoS?£./]{1,6}(?:[kKMrRnpuµ]F?|[uµ]F|nF|pF)$")
+_DIGIT_FIX = str.maketrans({"A": "4", "T": "7", "t": "7", "l": "1", "I": "1", "i": "7", "O": "0", "o": "0", "S": "5", "?": "2", "£": "", "/": "7"})
 
 
 def _repair_value(v: str) -> str:
@@ -396,7 +524,8 @@ def _repair_value(v: str) -> str:
     ATr -> 47r. Only touch tokens that end in a unit and contain a look-alike."""
     if re.match(r"^[ABCW]\d", v):
         return v  # a pot value like A1M: the letter is the taper, not a misread digit
-    if _UNIT_TOKEN.match(v) and re.search(r"[ATtlIOoS?£]", v[:-1]):
+    v = re.sub(r"^T(?=[0-9OolI]|[kKMuµn])", "1", v)  # a leading T is a serifed 1 (TK5 -> 1K5, Tu -> 1u); an inner T stays a 7
+    if _UNIT_TOKEN.match(v) and re.search(r"[ATtlIiOoS?£/]", v[:-1]):
         head, tail = re.match(r"^(.*?)([kKMrRnpuµ]F?|[uµ]F|nF|pF)$", v).groups()
         fixed = head.translate(_DIGIT_FIX)
         if re.fullmatch(r"\d+(?:\.\d+)?", fixed):
@@ -406,7 +535,7 @@ def _repair_value(v: str) -> str:
         return "1" + m.group(2) + m.group(3)  # 700uF and 400uF are not values; 100uF is: the 1 was read as 7 or 4
     m = re.match(r"^[^A-Za-z0-9]*[1IilTtaA]N([0-9A-Za-z]{3,5}[A-Z]?)$", v)
     if m:  # 1N-series diodes: "-tN4oo4", "IN9L4", "iNg14" -> 1N4004, 1N914, 1N914
-        digits = m.group(1).translate(str.maketrans("oOlILgSsBq", "0011195869"))
+        digits = m.group(1).translate(str.maketrans("oOlILgGSsBq", "00111995869"))
         if re.fullmatch(r"\d{3,4}[A-Z]?", digits):
             return "1N" + digits
     return v
