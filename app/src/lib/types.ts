@@ -119,3 +119,31 @@ export const PART_CATEGORY_NAMES: Record<string, string> = {
 };
 
 export const PART_ORDER = ['R', 'C', 'D', 'Q', 'IC', 'OPTO', 'L', 'XTAL', 'POT', 'TRIM', 'SW', 'LED', 'CONN', 'HW', 'OTHER'];
+
+/** A transistor's key limits from the parameter database (BJT or FET fields apply). */
+export interface TransistorSpec {
+	pn: string;
+	boards?: number;
+	score?: number;
+	hfe?: number;
+	vce?: number;
+	ic?: number;
+	pc?: number;
+	ft?: number;
+	vds?: number;
+	vgs?: number;
+	vgsth?: number;
+	idmax?: number;
+	pd?: number;
+	rds?: number;
+}
+
+export interface SubsEntry {
+	kind: 'bjt' | 'jfet' | 'mosfet';
+	mat?: string;
+	pol?: string;
+	ch?: string;
+	spec: TransistorSpec;
+	used: TransistorSpec[];
+	closest: TransistorSpec[];
+}

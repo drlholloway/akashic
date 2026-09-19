@@ -29,6 +29,10 @@ GitHub Release notes.
 - Effects Layouts products that link a build-doc web page are followed to the PDF that page
   links (Black & Tan, Transmogrifying Repeater).
 
+- Transistor substitutes on part pages: material, polarity or channel and the key limits from a
+  transistor parameter database, ranked by closeness; parts other boards in the library use are
+  listed first, then the closest by the numbers. `pcblib import-transistors` loads the database.
+
 ### Fixed
 - Scanned parts tables drawn as a ruled grid (Lectric-FX's Mongrel) are read cell by cell:
   the rules give the cell boundaries, each cell is OCR'd on its own, and an unreadable

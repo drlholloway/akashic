@@ -118,8 +118,37 @@ def run(images: bool = False) -> None:
             p["slug"] = f"{p['slug']}-{seen[p['slug']]}"
         else:
             seen[p["slug"]] = 1
+    (EXPORT_DIR / "subs.json").write_text(json.dumps(_transistor_subs(conn), ensure_ascii=False))
     (EXPORT_DIR / "index.json").write_text(json.dumps(index, ensure_ascii=False))
     (EXPORT_DIR / "parts.json").write_text(json.dumps(parts_out, ensure_ascii=False))
     (EXPORT_DIR / "vendors.json").write_text(json.dumps(vendors, ensure_ascii=False))
     write_rates()
     print(f"exported {len(index)} circuits, {len(parts_out)} indexed part values -> {EXPORT_DIR}")
+
+
+def _transistor_subs(conn) -> dict:
+    """Substitutes for every transistor the parts lists name, from data/transistors.sqlite
+    (see `pcblib import-transistors`). Empty when that database is absent."""
+    from .paths import DB_PATH
+    from .transistors import TRANS_DB, lookup, substitutes
+    import sqlite3 as _sq
+    if not TRANS_DB.exists():
+        return {}
+    lib = _sq.connect(DB_PATH)  # the caller's connection may already be closed
+    popularity = {r[0].upper(): r[1] for r in lib.execute(
+        "SELECT norm_value, COUNT(DISTINCT circuit_id) FROM bom WHERE category='Q' AND norm_value<>'' GROUP BY 1")}
+    lib.close()
+    tdb = _sq.connect(TRANS_DB)
+    if not tdb.execute("SELECT name FROM sqlite_master WHERE name='specs'").fetchone():
+        return {}
+    out = {}
+    for value in sorted(popularity):
+        spec = lookup(tdb, value)
+        if not spec:
+            continue
+        subs = substitutes(tdb, spec, popularity)
+        fields = ("hfe", "vce", "ic", "pc", "ft", "vds", "vgs", "vgsth", "idmax", "pd", "rds")
+        out[value] = {"kind": spec["kind"], "mat": spec.get("mat"), "pol": spec.get("pol"), "ch": spec.get("ch"),
+                      "spec": {"pn": spec["partnum"], **{k: spec[k] for k in fields if spec.get(k) is not None}}, **subs}
+    tdb.close()
+    return out

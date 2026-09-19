@@ -20,9 +20,11 @@ decisions and `DESIGN.md` for the visual system. `CHANGELOG.md` becomes the rele
 - `app/` — SvelteKit static PWA (Svelte 5 runes, adapter-static, every page prerendered).
   `src/lib/search.ts` filters and the MiniSearch index; `Faceplate.svelte` the signature
   glyph; `currency.svelte.ts` the price selector; `types.ts` vendor names and kinds.
-- `data/` — `library.sqlite`, `raw/` (cached vendor responses and PDFs) and `cache/`
-  (renders and OCR text), all git-ignored; `archive/` is committed and holds the
-  documentation of closed stores.
+- `data/` — `library.sqlite`, `raw/` (cached vendor responses and PDFs), `cache/`
+  (renders and OCR text) and `transistors.sqlite` (the transistor parameter database, built
+  by `pcblib import-transistors` from the MySQL dump in `transistor-dump/`), all git-ignored;
+  `archive/` is committed and holds the documentation of closed stores. `transistors.py`
+  holds the import, the tolerant part-number lookup and the substitute scoring.
 
 ## Commands
 

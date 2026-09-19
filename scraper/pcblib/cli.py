@@ -119,3 +119,14 @@ def export(images: bool = False) -> None:
 
 if __name__ == "__main__":
     app()
+
+
+@app.command("import-transistors")
+def import_transistors(dump_dir: str):
+    """Load a MySQL dump of the transistor parameter database (parts, _assoc__part_props,
+    _dict__prop_names .sql files) into data/transistors.sqlite and build the spec table."""
+    from pathlib import Path
+    from .transistors import build_specs, import_dump
+    counts = import_dump(Path(dump_dir))
+    con.print(f"imported {counts}")
+    con.print(f"spec rows: {build_specs()}")

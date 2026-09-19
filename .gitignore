@@ -27,3 +27,4 @@ app/static/data/
 
 # Local data dumps, never committed
 transistor-dump/
+data/transistors.sqlite*

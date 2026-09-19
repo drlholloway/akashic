@@ -1,9 +1,10 @@
 import { base } from '$app/paths';
-import type { Circuit, IndexEntry, PartEntry, VendorInfo } from './types';
+import type { Circuit, IndexEntry, PartEntry, SubsEntry, VendorInfo } from './types';
 
 let indexPromise: Promise<IndexEntry[]> | null = null;
 let partsPromise: Promise<PartEntry[]> | null = null;
 let vendorsPromise: Promise<Record<string, VendorInfo>> | null = null;
+let subsPromise: Promise<Record<string, SubsEntry>> | null = null;
 const circuitCache = new Map<string, Promise<Circuit>>();
 
 type Fetch = typeof fetch;
@@ -36,4 +37,9 @@ export function loadCircuit(fileId: string, fetchFn: Fetch = fetch): Promise<Cir
 		circuitCache.set(fileId, p);
 	}
 	return p;
+}
+
+export function loadSubs(fetchFn: Fetch = fetch): Promise<Record<string, SubsEntry>> {
+	subsPromise ??= getJson<Record<string, SubsEntry>>(fetchFn, 'subs.json').catch(() => ({}));
+	return subsPromise;
 }

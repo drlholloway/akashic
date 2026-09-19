@@ -35,6 +35,24 @@ It ships as a static, offline-capable web app (PWA) that installs on macOS, Linu
 | JMK PCBs | ~39 | parsed from the build-doc PDF | WooCommerce with the REST API off, so products come from the sitemap and each page's JSON-LD; multi-column parts tables; prices in USD |
 | PCBWay: Glory to Ukraine | ~337 | none (BOM needs a PCBWay login) | one member's shared projects via the member JSONP list; schematic PNGs are CC BY-SA; no prices |
 
+### Transistor substitutes
+
+Every transistor a parts list names gets a substitutes section on its part page, drawn from
+a transistor parameter database (a MySQL dump of about 150,000 parts with material, polarity
+or channel, gain, voltage, current, power and frequency limits). Candidates share the
+material and polarity or channel, sit in the same class (a power device is never offered
+for a small-signal one), and are ranked by closeness of gain, voltage, power and speed.
+Two tiers are shown: parts other boards in the library use, then the closest by the
+numbers. The database has no package or pinout data, and the page says so.
+
+```sh
+cd scraper && .venv/bin/pcblib import-transistors ../transistor-dump   # once; builds data/transistors.sqlite
+.venv/bin/pcblib export                                                # writes app/static/data/subs.json
+```
+
+The dump and the SQLite file stay out of git (`transistor-dump/`, `data/transistors.sqlite`);
+the export ships only the limits of the few hundred transistors the library names.
+
 ### What is indexed and what is not
 
 When a build document gives one value column per version of the circuit, every column is

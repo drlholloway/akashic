@@ -57,6 +57,7 @@ at the bottom; re-run them after parser changes.
 | Madbean | Flunkee | Doc link returns 404 (`_folders/1590A/pdf/Flunkee.pdf`) |
 | PedalPCB | Parentheses (pcb237), Thermionic Deluxe, WarScythe | Control names are read from a doc section that also holds changelog lines ("Updated control layout") and footswitch labels ("Active / Bypass"), so a few non-knobs appear as controls |
 | several | Vol / Volume, Pres / Presence | Controls from two sources can name the same knob two ways; exact duplicates are removed, near-duplicates are not |
+| transistor subs | BS250, 2SK30A, 2N6027, OC139, LND150, CV7351, 1T308A, 2N2646 | Named in parts lists but absent from the transistor parameter database, so no substitutes; placeholders like `NPN`, `GE`, `your choice` are skipped on purpose |
 | Mask Audio | Business Card | Doc says 1590BBM/BBS; the enclosure regex does not know 1590BBM |
 
 ## Parser wishes
