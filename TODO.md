@@ -42,7 +42,7 @@ at the bottom; re-run them after parser changes.
 | Five Cats | Marshall Supa Fuzz, Vintage Style Fuzz Face | Insert is a wiring diagram with values on the parts, not a table; 1 and 0 rows |
 | GuitarPCB | G.B.O.F. (16-project fuzz board), NostalgiTone Dual Combo Creator | No parts table: the doc lists sixteen projects to build on one board and points to DIY Layout Creator drawings |
 | PedalPCB | LotLizard, SuperStevie | Single-part variants live in the parts-list notes ("Omitted in Nano version"); shown as notes, not as a variant selector. Muffin Fuzz's eight side-by-side versions are parsed |
-| Five Cats | Rattus | The four variant columns are OCR'd, but a noisy line drops a column: 16 / 14 / 13 / 12 rows across RAT / RAT2 / Turbo / You Dirty |
+| Five Cats | Rattus | Read as four column strips: 23 to 26 rows per variant of about 27; a few designators still carry a stray digit (R111 for R11) |
 | Effects Layouts | Schematic Fuzz | Build doc is drill templates only; the schematic is on the silkscreen |
 | Effects Layouts | Lawn Darts | Doc is a single scanned schematic image; thorough and positional OCR at 300 dpi both find nothing |
 | Effects Layouts | Melody Malfunction, Cranky Speaker | Doc has only a shopping list (value, type, quantity), so rows are named by quantity (`×2`) and controls are a knob count |

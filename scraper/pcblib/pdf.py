@@ -469,6 +469,14 @@ def _ocr_page(pdf: Path, vendor: str, slug: str, page_no: int, thorough: bool = 
             im.point(lambda v: 255 if v > 90 else 0).save(bpng)
         for psm in (6, 4):
             variants.append(_rows_from_ocr(_tesseract_cached(bpng, psm)))
+        names = _ocr_variant_names(_tesseract_cached(bpng, 6)) or _ocr_variant_names(_tesseract_cached(bpng, 4))
+        if len(names) >= 2:
+            strips = _ocr_column_strips(bpng, names)
+            if strips:
+                # Strip rows cannot mix columns; keep them and add what the page-level passes found beyond them.
+                have = {(r.variant, r.ref) for r in strips}
+                merged = _merge_ocr_rows(variants)
+                return strips + [r for r in merged if (r.variant, r.ref) not in have and (r.variant or r.ref not in {ref for _, ref in have})]
         grid = _ocr_grid_rows(bpng)
         if len(grid) >= 8:
             # A ruled table read cell by cell is more reliable than any page-level pass, but it may
@@ -533,6 +541,8 @@ def _repair_value(v: str) -> str:
     m = re.match(r"^([47])(\d*(?:\.\d+)?)([kKMrRnpuµ]F?|[uµ]F|nF|pF)$", v)
     if m and not _is_e24(m.group(1) + m.group(2)) and _is_e24("1" + m.group(2)):
         return "1" + m.group(2) + m.group(3)  # 700uF and 400uF are not values; 100uF is: the 1 was read as 7 or 4
+    v = re.sub(r"^[24](?=1N[0-9A-Za-z]{3,5}$)", "", v)  # "41N4001", "41N34e": a border read as a digit before the part number
+    v = re.sub(r"^4N(?=\d{4})", "1N", v)  # "4N4004" is 1N4004 (4N25-style optocouplers have two digits)
     m = re.match(r"^[^A-Za-z0-9]*[1IilTtaA]N([0-9A-Za-z]{3,5}[A-Z]?)$", v)
     if m:  # 1N-series diodes: "-tN4oo4", "IN9L4", "iNg14" -> 1N4004, 1N914, 1N914
         digits = m.group(1).translate(str.maketrans("oOlILgGSsBq", "00111995869"))
@@ -588,6 +598,66 @@ def ocr_image_bom(image: Path, vendor: str, slug: str, tag: str = "bom") -> list
     except ImportError:
         pass
     return _merge_ocr_rows(variants)
+
+
+def _ocr_variant_names(out: str) -> list[str]:
+    """Variant names from a piped header line ("| RAT | -RAT2 | Turbo RAT | You Dirty RAT")."""
+    for raw in out.splitlines():
+        if raw.count("|") < 2:
+            continue
+        cols = [re.sub(r"^[^A-Za-z]+|[^A-Za-z0-9)]+$", "", c.strip()) for c in raw.split("|")]
+        cols = [c for c in cols if c]
+        if 2 <= len(cols) <= 6 and all(re.fullmatch(r"[A-Z][A-Za-z0-9 .\-']{1,18}", c) and re.search(r"[A-Z0-9]{2}|[A-Z][a-z]+ [A-Z]", c) for c in cols) \
+                and not any(re.search(r"\d[kKMnpuµ]|^[RCDQ]\d|^\d?[NA]\d{3}", c) or c.upper() in _OCR_VARIANT_STOP for c in cols):
+            return cols
+    return []
+
+
+def _ocr_column_strips(png: Path, names: list[str]) -> list[BomRow]:
+    """A table with one column per variant: find the header words with tesseract's word
+    boxes, cut the page into vertical strips halfway between them, and OCR each strip on
+    its own so a line can never mix two columns. Rows carry their strip's variant name."""
+    from PIL import Image
+    Image.MAX_IMAGE_PIXELS = None
+    tsv_path = png.with_name(png.stem + "-words.tsv")
+    if not tsv_path.exists():
+        tsv_path.write_text(subprocess.run(["tesseract", str(png), "-", "--psm", "11", "tsv"], capture_output=True, text=True).stdout)
+    words = [(int(f[6]), int(f[7]), int(f[8]), f[11].strip()) for f in (ln.split("\t") for ln in tsv_path.read_text().splitlines()[1:])
+             if len(f) == 12 and f[11].strip()]
+    wanted = {re.sub(r"[^A-Za-z0-9]", "", t).upper() for n in names for t in n.split()}
+    cands = sorted((x, y, w, t) for x, y, w, t in words if re.sub(r"[^A-Za-z0-9]", "", t).upper() in wanted)
+    if len(cands) < 2:
+        return []
+    ys = [y for _, y, _, _ in cands]
+    row_y = max(set(ys), key=ys.count)
+    phrases: list[tuple[int, int]] = []
+    for x, y, w, t in cands:
+        if abs(y - row_y) > 25:
+            continue
+        if phrases and x - phrases[-1][1] < 80:
+            phrases[-1] = (phrases[-1][0], x + w)
+        else:
+            phrases.append((x, x + w))
+    if len(phrases) != len(names):
+        return []
+    im = Image.open(png).convert("L")
+    W, H = im.size
+    centers = [(a + b) / 2 for a, b in phrases]
+    cuts = [0] + [int((a + b) / 2) for a, b in zip(centers, centers[1:])] + [W]
+    rows: list[BomRow] = []
+    for i, ((x0, x1), name) in enumerate(zip(zip(cuts, cuts[1:]), names)):
+        spng = png.with_name(f"{png.stem}-strip{i}.png")
+        if not spng.exists():
+            im.crop((x0, max(0, row_y - 10), x1, H)).resize(((x1 - x0) * 2, (H - max(0, row_y - 10)) * 2)).save(spng)
+        best: list[BomRow] = []
+        for psm in (6, 4):
+            got = _rows_from_ocr(_tesseract_cached(spng, psm))
+            if len(got) > len(best):
+                best = got
+        for r in best:
+            r.variant = name
+            rows.append(r)
+    return rows
 
 
 def _rows_from_ocr(out: str) -> list[BomRow]:

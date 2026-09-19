@@ -34,6 +34,9 @@ GitHub Release notes.
   listed first, then the closest by the numbers. `pcblib import-transistors` loads the database.
 
 ### Fixed
+- OCR'd tables with one column per variant (Five Cats' Rattus) are also read as vertical
+  strips cut between the header words, so a noisy line can no longer drop a column; a stray
+  digit before a 1N diode number is removed.
 - Controls: a knob named two ways by two sources (Vol and Volume) keeps the longer name;
   PedalPCB's bold list no longer contributes changelog lines or footswitch labels; version
   blocks read Title-case pots written one space from their value (OmniMuff's Vol, Tone, Sus).
