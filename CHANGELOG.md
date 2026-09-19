@@ -38,6 +38,10 @@ GitHub Release notes.
   "Report a wrong parse" link that opens the issue form with that page filled in.
 
 ### Fixed
+- Parts lists laid out as PART / QTY / TYPE / NOTES with no designators (Aion FX's 18V
+  voltage doubler, whose values are printed on the PCB) are read as quantity-named rows; a
+  designator in the value column takes its value from the notes (LEDR, "recommended value is
+  4.7k").
 - Designator ranges (`Q1-Q5  2N5088`, `R5-R8  47k`) expand to one row per part whichever table
   parser wins; 24 Sheepylove and Aion FX boards had them stored as a single "other" part.
 - OCR'd tables with one column per variant (Five Cats' Rattus) are also read as vertical

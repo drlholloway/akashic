@@ -911,9 +911,15 @@ def parse_shopping_list(pages: list[str]) -> list[BomRow]:
     from the type column, so they still feed the parts cross-reference."""
     rows: list[BomRow] = []
     # Join pages: the list can run onto the next page without repeating its heading.
-    for m in re.finditer(r"SHOPPING LIST\s*\n(.*?)(?=\n\s*(?:LAYOUT|DRILL TEMPLATE|NOTES?|SCHEMATIC|BOM|This list)\b|\Z)", "\n".join(pages), re.S | re.I):
-        block = m.group(1)
-        header = next((ln for ln in block.splitlines() if re.search(r"\bValue\b", ln, re.I) and re.search(r"\bQ(?:ty|uantity)\b", ln, re.I)), "")
+    text = "\n".join(pages)
+    blocks = [m.group(1) for m in re.finditer(r"(?:SHOPPING LIST|PARTS LIST)\s*\n(.*?)(?=\n\s*(?:LAYOUT|DRILL TEMPLATE|NOTES?|SCHEMATIC|BOM|INSTALLATION|WIRING|This list)\b|\Z)", text, re.S | re.I)]
+    # A "Value  QTY  Type" header may also sit under prose that ends a heading block early: take it from wherever it is.
+    for hm in re.finditer(r"^[ \t]*(?:Value|Part)[ \t]+Q(?:ty|uantity)\b.*$", text, re.M | re.I):
+        blocks.append(text[hm.start():hm.start() + 4000])
+    for block in blocks:
+        # "Value Qty Type" or "PART QTY TYPE NOTES" (Aion FX modules: the values are printed on the PCB, so no designators)
+        header = next((ln for ln in block.splitlines() if re.search(r"\b(?:Value|Part)\b", ln, re.I) and re.search(r"\bQ(?:ty|uantity)\b", ln, re.I)
+                       and not re.search(r"\b(?:Location|Ref|Reference|Designator)\b", ln, re.I)), "")
         found: list[tuple[str, str, str]] = []
         if header:
             # Read the column order from the header ("Value QTY Type ..." or "QTY Value Type ...") and split rows on 2+ spaces.
@@ -925,21 +931,31 @@ def parse_shopping_list(pages: list[str]) -> list[BomRow]:
                     cols.extend(w.lower() for w in words)
                 else:
                     cols.append(tok.lower())
-            iv = next((i for i, c in enumerate(cols) if c.startswith("value")), None)
+            iv = next((i for i, c in enumerate(cols) if c.startswith(("value", "part"))), None)
             iq = next((i for i, c in enumerate(cols) if c.startswith(("qty", "quantity"))), None)
             if iv is None or iq is None:
                 continue
             it = next((i for i, c in enumerate(cols) if c.startswith("type")), None)
+            inote = next((i for i, c in enumerate(cols) if c.startswith("note")), None)
             for ln in block.splitlines()[block.splitlines().index(header) + 1:]:
                 cells = re.split(r"\s{2,}", ln.strip())
                 if len(cells) <= max(iv, iq) or not re.fullmatch(r"\d{1,2}", cells[iq]):
                     continue
-                found.append((cells[iv], cells[it] if it is not None and it < len(cells) else "", cells[iq]))
+                note = cells[inote] if inote is not None and inote < len(cells) else ""
+                found.append((cells[iv], cells[it] if it is not None and it < len(cells) else "", cells[iq], note))
         else:
-            found = _SHOP_ROW.findall(block)
-        for value, ptype, qty in found:
-            if value.lower() in ("part", "value") or len(value) > 24:
-                continue
+            found = [(v, t, q, "") for v, t, q in _SHOP_ROW.findall(block)]
+        for value, ptype, qty, note in found:
+            if value.lower() in ("part", "value") or len(value) > 24 or re.fullmatch(r"[\d.]+", value):
+                continue  # a bare number is a pin or a count, not a part
+            value = re.sub(r"\s*\(.*\)\s*$", "", value)  # "470n (0.47uF)"
+            ref = f"×{qty}"
+            if re.fullmatch(r"(?:LEDR|CLR|RLED|RPD)", value, re.I):
+                # A designator in the value column with the value in the notes ("Recommended value is 4.7k")
+                mv = re.search(r"\b(\d+(?:\.\d+)?[kKMR]?\d*)\b(?!\s*W)", note or "")
+                if not mv:
+                    continue
+                ref, value = value.upper(), mv.group(1)
             ptype = re.split(r"\s{2,}", ptype.strip())[0]  # drop the rating / spacing columns
             cat = next((c for rx, c in _SHOP_TYPES if re.search(rx, ptype, re.I)), "")
             if not cat:
@@ -951,8 +967,8 @@ def parse_shopping_list(pages: list[str]) -> list[BomRow]:
             if not cat and re.fullmatch(r"\d+(?:[.,]\d+)?[pnuµ]F?\d*", value):
                 cat = "C"
             cat = cat or categorize("", ptype, value)
-            nr = normalize_row(BomRow(ref=f"×{qty}", value=value, part_type=ptype, notes="shopping list", category=cat))
-            if is_plausible(nr) or cat in ("HW", "CONN", "SW", "OTHER"):
+            nr = normalize_row(BomRow(ref=ref, value=value, part_type=ptype, notes=(note.strip() or "shopping list") if ref.startswith("×") else note.strip(), category=cat))
+            if (is_plausible(nr) or cat in ("HW", "CONN", "SW", "OTHER")) and (nr.ref, nr.value, nr.part_type) not in {(r.ref, r.value, r.part_type) for r in rows}:
                 rows.append(nr)
     return rows
 
