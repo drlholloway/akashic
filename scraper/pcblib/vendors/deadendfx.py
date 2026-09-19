@@ -166,7 +166,7 @@ class DeadEndFX(Adapter):
             c.bom = sch_rows + ocr_rows
             pots = [r for r in c.bom if r.category == "POT"]
             if pots:
-                named = all(re.fullmatch(r"[A-Za-z][A-Za-z\-]+", r.ref) for r in pots)
+                named = all(re.fullmatch(r"[A-Za-z][A-Za-z\-]+\d?", r.ref) for r in pots)
                 c.controls = [r.ref.title() for r in pots] if named else [f"{len(pots)} knobs"]
         # "Power" is informational, not a document link
         c.extra_docs = {k: v for k, v in c.extra_docs.items() if v.startswith("http")}

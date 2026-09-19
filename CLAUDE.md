@@ -14,7 +14,8 @@ decisions and `DESIGN.md` for the visual system. `CHANGELOG.md` becomes the rele
 - `scraper/` — Python package `pcblib` (uv, Python 3.12). `vendors/` holds one adapter per
   source; `pdf.py` the shared parsers (text tables, column layouts, Qty/Value/Parts tables,
   KiCad interactive BOMs via `ibom.py`, vector schematic label pairing, OCR of scanned
-  tables and schematic images, cell-by-cell OCR of ruled grids); `normalize.py` value normalization and part categories;
+  tables and schematic images, cell-by-cell OCR of ruled grids; `gsheet.py` reads a
+  parts list kept in a Google Sheet); `normalize.py` value normalization and part categories;
   `taxonomy.py` the effect categories and enclosure sizes; `db.py` SQLite plus the vendor
   registry (name, URL, licence note, kind); `export.py` the JSON bundle and exchange rates.
 - `app/` — SvelteKit static PWA (Svelte 5 runes, adapter-static, every page prerendered).

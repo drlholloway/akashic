@@ -44,6 +44,11 @@ GitHub Release notes.
   are read.
 
 ### Fixed
+- OCR'd parts lists keep pots whose name ends in a digit (SEN1, SEN2) and switch rows
+  (SW1 SPDT ON-ON, BYPASS 3PDT); Dead End FX's 'Zilla names its four knobs and its toggle.
+- Lectric-FX boards whose parts list lives in a Google Sheet (Countdown Phaser, Disdis,
+  Dandy Horse) read it from the workbook's xlsx export: every tab, designator and value per
+  row, pots and trimmers and switches named. Adds openpyxl to the scraper.
 - An original's name is stored without the adjectives a description wraps it in ("rare Last
   Gasp Arts Green Monster", "old version of the Caroline Wave Cannon") or a trailing clause.
 - The price currency selector moved from the header to the results bar beside Sort.

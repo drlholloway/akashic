@@ -9,6 +9,7 @@ import re
 from typing import Iterable
 
 from ..models import Circuit
+from ..gsheet import sheet_bom
 from ..pdf import process_document, pdf_text_pages, ocr_bom, schematic_bom, render_page
 from ..paths import CACHE_DIR, DATA_DIR
 from ..taxonomy import classify, find_enclosure
@@ -90,8 +91,12 @@ class LectricFX(Adapter):
         )
         for u in docs[1:]:
             c.extra_docs[f"Older document: {u.rsplit('/', 1)[-1]}"] = u
+        sheet_url = ""
         for u in re.findall(r'href="(https?://(?:docs|drive)\.google\.com/[^"]+)"', desc_html):
-            c.extra_docs.setdefault("Google Drive document", u)
+            label = "Parts list (Google Sheet)" if "spreadsheets" in u else "Google Drive document"
+            c.extra_docs.setdefault(label, u)
+            if "spreadsheets" in u and not sheet_url:
+                sheet_url = u
         pdf = self.f.get_file(doc_url, ".pdf")
         if pdf and pdf.read_bytes()[:5] == b"%PDF-":
             c.__dict__.update(process_document(pdf, self.vendor, slug))
@@ -125,8 +130,13 @@ class LectricFX(Adapter):
                     c.based_on = _clean_orig(m.group(1))
             if not c.enclosure:
                 c.enclosure = find_enclosure(head)
+            if sheet_url:
+                # A parts list kept in a Google Sheet beats anything read off a scanned page.
+                sheet_rows = sheet_bom(self.f, sheet_url)
+                if len(sheet_rows) > len(c.bom):
+                    c.bom = sheet_rows
             pots = [r for r in c.bom if r.category == "POT"]
             if pots:
-                named = all(re.fullmatch(r"[A-Za-z][A-Za-z \-/]+", r.ref) for r in pots)
+                named = all(re.fullmatch(r"[A-Za-z][A-Za-z \-/]+\d?", r.ref) for r in pots)
                 c.controls = [r.ref.title() for r in pots] if named else [f"{len(pots)} knobs"]
         return c

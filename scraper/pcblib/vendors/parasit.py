@@ -97,6 +97,6 @@ class Parasit(Adapter):
                     c.based_on = _clean_based_on(m.group(1))
             pots = [r for r in c.bom if r.category == "POT"]
             if pots:
-                named = all(re.fullmatch(r"[A-Za-z][A-Za-z \-/]+", r.ref) for r in pots)
+                named = all(re.fullmatch(r"[A-Za-z][A-Za-z \-/]+\d?", r.ref) for r in pots)
                 c.controls = [r.ref.title() for r in pots] if named else [f"{len(pots)} knobs"]
         return c

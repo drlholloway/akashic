@@ -223,7 +223,9 @@ def parse_bom_columns(pages: list[str], max_col: int | None = None) -> list[BomR
     return rows
 
 
-_OCR_POT = re.compile(r"(?<![A-Za-z0-9])([A-Z][A-Za-z\-]{2,12})\s+([0-9IlOoS]+(?:[.,]\d+)?[KkMm]?[ABCW]|[ABCWabcw8][0-9IlOoS]+(?:[.,]\d+)?[kKmM]?)(?![A-Za-z0-9])")
+_OCR_POT = re.compile(r"(?<![A-Za-z0-9])([A-Z][A-Za-z\-]{2,12}[0-9?]?)\s+([0-9IlOoS]+(?:[.,]\d+)?[KkMm]?[ABCW]|[ABCWabcw8][0-9IlOoS]+(?:[.,]\d+)?[kKmM]?)(?![A-Za-z0-9])")
+# "SWI  SPDT ON-ON", "BYPASS 3PDT": a switch named on the parts list
+_OCR_SWITCH = re.compile(r"(?<![A-Za-z0-9])([A-Z][A-Za-z\-]{1,12}[0-9?I]?)\s+([1-4SD]P[DS]T(?:[ \-]*(?:ON|OFF|/))*)(?![A-Za-z0-9])")
 _POT_DIGITS = str.maketrans({"I": "1", "l": "1", "O": "0", "o": "0", "S": "5", "s": "5"})
 
 
@@ -543,7 +545,7 @@ def _repair_value(v: str) -> str:
         return "1" + m.group(2) + m.group(3)  # 700uF and 400uF are not values; 100uF is: the 1 was read as 7 or 4
     v = re.sub(r"^[24](?=1N[0-9A-Za-z]{3,5}$)", "", v)  # "41N4001", "41N34e": a border read as a digit before the part number
     v = re.sub(r"^4N(?=\d{4})", "1N", v)  # "4N4004" is 1N4004 (4N25-style optocouplers have two digits)
-    m = re.match(r"^[^A-Za-z0-9]*[1IilTtaA]N([0-9A-Za-z]{3,5}[A-Z]?)$", v)
+    m = re.match(r"^[^A-Za-z0-9]*[1IilTtaA][Nn]([0-9A-Za-z]{3,5}[A-Z]?)$", v)
     if m:  # 1N-series diodes: "-tN4oo4", "IN9L4", "iNg14" -> 1N4004, 1N914, 1N914
         digits = m.group(1).translate(str.maketrans("oOlILgGSsBq", "00111995869"))
         if re.fullmatch(r"\d{3,4}[A-Z]?", digits):
@@ -673,7 +675,7 @@ def _rows_from_ocr(out: str) -> list[BomRow]:
         m_ref = re.match(r"^[A-Za-z]+(\d+)", ref)
         if m_ref and (int(m_ref.group(1)) == 0 or int(m_ref.group(1)) > 999):
             return  # R0 is never a real designator (big boards do reach R400)
-        if cat != "POT" and (not re.search(r"\d", value) or not re.fullmatch(r"[A-Za-z0-9.\-/µu]{1,12}", value)):
+        if cat not in ("POT", "SW") and (not re.search(r"\d", value) or not re.fullmatch(r"[A-Za-z0-9.\-/µu]{1,12}", value)):
             return
         nr = normalize_row(BomRow(ref=ref, value=value.strip(), part_type=ptype, notes="OCR", category=cat, variant=variant))
         if is_plausible(nr):
@@ -708,15 +710,21 @@ def _rows_from_ocr(out: str) -> list[BomRow]:
         for ref, val in re.findall(r"(?<![A-Za-z0-9])([A-Z]*TRIM[A-Z0-9]*)\s+(\d+(?:[.,]\d+)?[kKM]?)(?![A-Za-z0-9])", ln):
             if ref not in seen and re.search(r"[1-9]", val):
                 add(ref, val.upper(), "Trimmer", "TRIM")
+        for ref, val in _OCR_SWITCH.findall(ln):
+            name = ref.strip("-")
+            name = re.sub(r"^(SW)[I?l]$", r"\g<1>1", name).replace("?", "2")
+            if name.upper() not in _OCR_POT_STOP and f"|{name.upper()}" not in seen:
+                add(name.upper() if not name.isupper() or len(name) <= 4 else name.title(), val.strip(), "", "SW")
         for ref, val in _OCR_POT.findall(ln):
             ref = ref.strip("-")
+            ref = re.sub(r"\?$", "2", ref)  # "SEN?" is SEN2: a 2 read as a question mark
             val = _repair_pot(val)
             val = re.sub(r"^([ABCW])0(?=[1-9])", r"\1", val)  # B01M guard
             if not re.search(r"[1-9]", val):
                 continue  # "BOARD BOM" is not a pot
             if re.fullmatch(r"[RCDQL]\d+", val):
                 continue  # "OOK C16": a designator read as a pot value
-            if 3 <= len(ref) <= 12 and re.fullmatch(r"[A-Z][A-Za-z\-]+", ref) and ref.upper() not in _OCR_POT_STOP \
+            if 3 <= len(ref) <= 13 and re.fullmatch(r"[A-Z][A-Za-z\-]+\d?", ref) and ref.upper() not in _OCR_POT_STOP \
                     and (ref.isupper() or re.fullmatch(r"[ABCW]\d+[kKM]", val)):  # a Title-case name only counts with an explicit taper
                 add(ref.upper(), val, "Trimmer" if "TRIM" in ref.upper() else "Potentiometer", "TRIM" if "TRIM" in ref.upper() else "POT")
     # Variant labels are kept only when the table really had columns: at least two variants with four rows each.
