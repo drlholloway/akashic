@@ -7,7 +7,7 @@
 	import { currency, type Currency } from '$lib/currency.svelte';
 
 	import type { VendorInfo } from '$lib/types';
-	import { COFFEE_URL } from '$lib/site';
+	import { COFFEE_URL, ISSUES_URL, MAKER_NAME, MAKER_URL, REPO_URL } from '$lib/site';
 	import Mark from '$lib/Mark.svelte';
 
 	let { children, data }: { children: Snippet; data: { rates: import('$lib/currency.svelte').Rates | null; vendors: Record<string, VendorInfo> } } = $props();
@@ -101,6 +101,12 @@
 		<p>This library is scraped, parsed and maintained on evenings and weekends. If it saved you a build, <a href={COFFEE_URL} target="_blank" rel="noopener">buy me a coffee</a>.</p>
 		<a class="btn ghost" href={COFFEE_URL} target="_blank" rel="noopener">Buy me a coffee</a>
 	</div>
+	<div class="report">
+		<p class="label strong">Something wrong?</p>
+		<p>A parts list that reads wrong, a vendor to add, a bug or an idea: open an issue on GitHub. Every circuit page has a link that fills in the board for you.</p>
+		<a class="btn ghost" href={ISSUES_URL} target="_blank" rel="noopener">Open an issue</a>
+	</div>
+	<p class="colophon">Made by <a href={MAKER_URL} target="_blank" rel="noopener">{MAKER_NAME}</a>. Source on <a href={REPO_URL} target="_blank" rel="noopener">GitHub</a>.</p>
 </footer>
 
 <style>
@@ -170,6 +176,11 @@
 	.coffee .label { flex-basis: 100%; margin: 0; }
 	.coffee p { margin: 0; flex: 1 1 40ch; }
 	.coffee p a { color: var(--ink-2); text-decoration: underline; text-underline-offset: 2px; }
+	.report { margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--rule); max-width: 1180px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; }
+	.report .label { flex-basis: 100%; margin: 0; }
+	.report p { margin: 0; flex: 1 1 40ch; }
+	.colophon { margin: 24px 0 0; padding-top: 16px; border-top: 1px solid var(--rule); max-width: 1180px; color: var(--ink-2); font-family: var(--label); font-weight: 600; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; }
+	.colophon a { color: var(--ink); text-decoration: underline; text-underline-offset: 2px; }
 	@media (max-width: 860px) {
 		.titleblock {
 			grid-template-columns: 1fr auto;

@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+	import { page } from '$app/state';
+	import { wrongParseUrl } from '$lib/site';
 	import Faceplate from '$lib/Faceplate.svelte';
 	import { currency } from '$lib/currency.svelte';
 	import { normalizeOriginal } from '$lib/search';
@@ -113,6 +115,7 @@
 		<div class="bom-head">
 			<h2 class="label strong">Parts list <span class="mono dim">{rows.length} rows</span></h2>
 			{#if c.bom.length}<button type="button" class="btn ghost" onclick={copyBom}>{copied ? 'Copied' : 'Copy as TSV'}</button>{/if}
+			<a class="btn ghost report-link" href={wrongParseUrl(c.name, page.url.href)} target="_blank" rel="noopener" title="Open a GitHub issue with this circuit filled in">Report a wrong parse</a>
 		</div>
 		{#if variants.length > 1}
 			<div class="variants" role="group" aria-label="Build variant">

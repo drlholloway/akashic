@@ -33,6 +33,10 @@ GitHub Release notes.
   transistor parameter database, ranked by closeness; parts other boards in the library use are
   listed first, then the closest by the numbers. `pcblib import-transistors` loads the database.
 
+- Footer: a "Something wrong?" section linking the GitHub issue forms, and a colophon naming
+  Cryptid Effects with a link to the main site and the source. Each circuit page has a
+  "Report a wrong parse" link that opens the issue form with that page filled in.
+
 ### Fixed
 - Designator ranges (`Q1-Q5  2N5088`, `R5-R8  47k`) expand to one row per part whichever table
   parser wins; 24 Sheepylove and Aion FX boards had them stored as a single "other" part.
