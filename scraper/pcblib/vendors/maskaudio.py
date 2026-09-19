@@ -184,6 +184,8 @@ class MaskAudio(Adapter):
                     c.bom = rows
         if not c.enclosure and any("125B" in t for _, t in drills):
             c.enclosure = "125B"
-        pots = [r for r in c.bom if r.category == "POT" and not re.match(r"^(?:POT|P|RV|VR)\d+$", r.ref, re.I)]
-        c.controls = [re.sub(r"^([A-Za-z]{3,})([AB])$", r"\1 \2", r.ref).title() if r.ref.isupper() else r.ref for r in pots]
+        first = next((r.variant for r in c.bom if r.variant), "")
+        pots = [r for r in c.bom if r.category == "POT" and not re.match(r"^(?:POT|P|RV|VR)\d+$", r.ref, re.I) and r.variant in ("", first)]
+        names = [re.sub(r"^([A-Za-z]{3,})([AB])$", r"\1 \2", r.ref).title() if r.ref.isupper() else r.ref for r in pots]
+        c.controls = list(dict.fromkeys(n.rstrip(".") for n in names))
         return c

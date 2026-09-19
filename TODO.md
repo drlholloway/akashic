@@ -37,24 +37,24 @@ at the bottom; re-run them after parser changes.
 |---|---|---|
 | Dirt Monger | Multi RAT 1995 | Parts table is an image laid out in a way neither the text parsers nor OCR read; 1 row |
 | Dirt Monger | Integrated Preamp | Same; 3 rows |
-| On The Road Effects | OmniMuff | Build guide has no parseable table; 0 rows |
+| On The Road Effects | OmniMuff | Six version blocks parse (38 rows each) but the pots sit outside the blocks, so no named controls |
 | On The Road Effects | Guerrero Oro | Same; 0 rows |
 | Dead Astronaut | Chasm Reverb, Ebe Delay, Timestream Reverb | Raster docs where thorough OCR still returns nothing |
 | Five Cats | Marshall Supa Fuzz, Vintage Style Fuzz Face | Insert is a wiring diagram with values on the parts, not a table; 1 and 0 rows |
-| Damnation Audio (via Mask Audio) | Parallel Drive | Eagle schematic PDF; R/C/D/IC paired from labels but the two pots (Drive 500kA, Dist. 100kA) are not, and the bass-version page is ignored |
 | GuitarPCB | G.B.O.F. (16-project fuzz board), NostalgiTone Dual Combo Creator | No parts table: the doc lists sixteen projects to build on one board and points to DIY Layout Creator drawings |
 | PedalPCB | LotLizard, SuperStevie | Single-part variants live in the parts-list notes ("Omitted in Nano version"); shown as notes, not as a variant selector. Muffin Fuzz's eight side-by-side versions are parsed |
 | Five Cats | Rattus | The four variant columns are OCR'd, but a noisy line drops a column: 16 / 14 / 13 / 12 rows across RAT / RAT2 / Turbo / You Dirty |
 | Effects Layouts | Schematic Fuzz | Build doc is drill templates only; the schematic is on the silkscreen |
-| Effects Layouts | Lawn Darts | Doc is a single scanned schematic image; positional OCR finds nothing |
+| Effects Layouts | Lawn Darts | Doc is a single scanned schematic image; thorough and positional OCR at 300 dpi both find nothing |
 | Effects Layouts | Melody Malfunction, Cranky Speaker | Doc has only a shopping list (value, type, quantity), so rows are named by quantity (`×2`) and controls are a knob count |
-| Effects Layouts | Black & Tan, Transmogrifying Repeater | Build doc is a web page whose content is two images |
 | Effects Layouts | Six Shooter, Strider, Soil Slinger | Only a drill template or a blog post is linked; no parts list |
 | Effects Layouts | One-Knobber, Drivestortion | Old blog-era project PDFs with broken font encodings; OCR gives 13 and 18 rows, pots missing |
 | JMK PCBs | Big Bass Drive, AC/DC Drive, Level Up, 5 Knob Fuzz, Classic Tremolo, Blue Warbler 2, Super Phaser | Build notes describe the original without naming it; `based_on` left empty |
 | JMK PCBs | most boards | Docs rarely state an enclosure (8 of 38 found); drill templates are named by knob count, not size |
 | Five Cats | 57 older inserts | No enclosure stamp on the insert (only newer layouts have the "minimum enclosure" badge) |
 | Madbean | Flunkee | Doc link returns 404 (`_folders/1590A/pdf/Flunkee.pdf`) |
+| PedalPCB | Parentheses (pcb237), Thermionic Deluxe, WarScythe | Control names are read from a doc section that also holds changelog lines ("Updated control layout") and footswitch labels ("Active / Bypass"), so a few non-knobs appear as controls |
+| several | Vol / Volume, Pres / Presence | Controls from two sources can name the same knob two ways; exact duplicates are removed, near-duplicates are not |
 | Mask Audio | Business Card | Doc says 1590BBM/BBS; the enclosure regex does not know 1590BBM |
 
 ## Parser wishes

@@ -583,6 +583,25 @@ def _pair_labels(words: list, unit: float = 1.0) -> list[BomRow]:
             nr = normalize_row(BomRow(ref=ref, value=best[1], notes="from schematic"))
             if is_plausible(nr):
                 rows.append(nr)
+    # Named pots: an upper-case label (DRIVE, DIST.) whose nearest neighbour is a taper value.
+    potval = re.compile(r"^(?:[ABCW]\d+(?:[.,]\d+)?[kKM]?|\d+(?:[.,]\d+)?[kKM]?[ABCW])$")
+    names = [w for w in words if re.fullmatch(r"[A-Z][A-Z.]{2,11}", w[4]) and w[4].rstrip(".") not in _SCH_SKIP_WORDS
+             and w[4].rstrip(".") not in {"GND", "VCC", "OUT", "IN", "PCB", "REV", "TITLE", "DATE", "SHEET", "DIY", "AUDIO"}]
+    for r in names:
+        name = r[4].rstrip(".")
+        if name in seen:
+            continue
+        rx, ry = (r[0] + r[2]) / 2, (r[1] + r[3]) / 2
+        best = None
+        for w in others:
+            if not potval.match(w[4]):
+                continue
+            d = ((w[0] + w[2]) / 2 - rx) ** 2 + ((w[1] + w[3]) / 2 - ry) ** 2
+            if best is None or d < best[0]:
+                best = (d, w[4])
+        if best and best[0] ** 0.5 <= 16.0 * unit:
+            seen.add(name)
+            rows.append(normalize_row(BomRow(ref=name.title(), value=best[1].upper(), part_type="Potentiometer", category="POT", notes="from schematic")))
     rows.sort(key=lambda b: (b.category, int(re.sub(r"\D", "", b.ref) or 0), b.ref))
     return rows
 
@@ -772,54 +791,134 @@ _QVR_TRIPLE = re.compile(r"(?<![A-Za-z0-9])(\d{1,2})[ \t]+([A-Za-z0-9.µ/+\-]{1,
 _QVR_POT = re.compile(r"(?<![A-Za-z0-9])(\d{1,2})[ \t]+([ABCW]\d+(?:[.,]\d+)?[kKM]?)[ \t]+([A-Z][A-Z\-]{2,12})(?![A-Za-z0-9])")
 
 
-_VARIANT_HEADER = re.compile(r"^\s*(?:Part|Ref(?:erence)?|Location|Designator)\s{2,}(\S.*?\S)\s*$", re.I)
+_BLOCK_HEADING = re.compile(r"^(resistors?|capacitors?|semiconductors?|transistors?|diodes?|potentiometers?|integrated circuits?|ics?|switches|hardware|optical|actives?)\b", re.I)
 _VARIANT_SKIP = {"omit", "jump", "jumper", "-", "n/a", "none", "empty", "x"}
+_VARIANT_LABEL = re.compile(r"^[A-Za-z0-9“\"][A-Za-z0-9 .'’“”\"/\-]{1,22}$")
+_VARIANT_REF = re.compile(r"^(?:R|C|D|Q|IC|U|L|SW|LED|VR|TR|CLR|TRIM)\d*[A-Z]?$", re.I)
+_VARIANT_POTVAL = re.compile(r"^(?:[ABCW]\d+(?:[.,]\d+)?[kKM]?|\d+(?:[.,]\d+)?[kKM]?[ABCW])(?:\s?(?:dual|trim))?$", re.I)
+_VARIANT_NAME = re.compile(r"^[A-Za-z][A-Za-z. ]{1,14}$")
+
+
+def _variant_label_ok(c: str) -> bool:
+    """A plausible version name: not a value, designator, column word, broken word or parts-row text."""
+    return bool(_VARIANT_LABEL.match(c)) and not re.search(r"\d[kKMnpuµ]", c) and c.lower() not in ("value", "qty", "quantity", "type", "notes") \
+        and not _VARIANT_REF.match(c) and not c.isdigit() and bool(re.search(r"[A-Z0-9]", c)) \
+        and not re.search(r"(?:^| )[a-z](?: |$)", c) \
+        and not re.search(r"switch|on/(?:off/)?on|\b[1-4SD]P[DS]T\b|\bpot\b|trim", c, re.I)
+
+
+def _variant_heading(c: str) -> bool:
+    return bool(re.fullmatch(r"(?:part|ref|reference|location|designator|component)s?", c, re.I) or _BLOCK_HEADING.match(c) or _COL_HEADERS.fullmatch(c))
+
+
+def _variant_header(cells: list[str]) -> list[str]:
+    """Column labels of a per-variant header. Two shapes: a part column name or part-type
+    heading followed by the labels ('Part | 1977 spec | 2003 spec', 'Resistors | Guitar Mod |
+    Bass Mod | Capacitors | Guitar Mod | Bass Mod'), or the label group alone, repeated once
+    per side-by-side part type ('Albini | Stock | Albini | Stock', 'II | III | IV | Capacitors |
+    II | III | IV'). Returns [] when the line is not such a header."""
+    ok, heading = _variant_label_ok, _variant_heading
+    cells = [c.strip("“”\"") for c in cells]
+    if len(cells) >= 3 and heading(cells[0]):
+        labels: list[str] = []
+        for c in cells[1:]:
+            if not ok(c) or heading(c) or (labels and c.lower() == labels[0].lower()):
+                break
+            labels.append(c)
+        return labels if len(labels) >= 2 else []
+    # No heading cell: the label group must repeat on the line.
+    if len(cells) >= 4 and not heading(cells[0]):
+        group: list[str] = []
+        for c in cells:
+            if group and (c.lower() == group[0].lower() or heading(c)):
+                break  # the group ends where it repeats or where the next part type's heading sits
+            group.append(c)
+        if len(group) >= 2 and all(ok(c) for c in group):
+            rest = [c for c in cells[len(group):] if not heading(c)]
+            n = len(group)
+            if rest and len(rest) % n == 0 and all(rest[i].lower() == group[i % n].lower() for i in range(len(rest))):
+                return group
+    return []
 
 
 def parse_bom_variant_columns(pages: list[str]) -> list[BomRow]:
-    """Tables with one value column per build variant ('Part  1977 spec  2003 spec'):
-    every column is kept and each row is labelled with its column's name."""
+    """Tables with one value column per build variant ('Part  1977 spec  2003 spec',
+    'Resistors  Guitar Mod  Bass Mod'): every column is kept and each row is labelled
+    with its column's name. Groups may sit side by side on a line, and a later header
+    with the same labels continues the table (a second board, the actives)."""
     rows: list[BomRow] = []
+    seen: set[tuple[str, str]] = set()
+    labels: list[str] = []
+
+    def accepted() -> bool:
+        per: dict[str, int] = {}
+        for r in rows:
+            per[r.variant] = per.get(r.variant, 0) + 1
+        return len(per) >= 2 and max(per.values()) >= 4 and min(per.values()) >= 1  # a version that omits most parts is still a version
+
     for page in pages:
-        lines = page.splitlines()
-        for i, ln in enumerate(lines):
-            m = _VARIANT_HEADER.match(ln)
-            if not m:
+        plines = page.splitlines()
+        for li, ln in enumerate(plines):
+            cells = [c.strip() for c in re.split(r"\s{2,}", ln.strip()) if c.strip()]
+            if not cells:
                 continue
-            labels = [c.strip() for c in re.split(r"\s{2,}", m.group(1)) if c.strip()]
-            if len(labels) < 2 or any(len(lab) > 24 for lab in labels) or "value" in " ".join(labels).lower():
+            hdr = _variant_header(cells)
+            if not hdr and not labels and 2 <= len(cells) <= 8 and all(_variant_label_ok(c) and not _variant_heading(c) for c in cells) \
+                    and not any(c.upper() in _SCH_SKIP_WORDS or c.upper() in _OCR_VARIANT_STOP or re.fullmatch(r"[A-Z +\-]{1,5}", c) for c in cells) \
+                    and not all(c.isupper() for c in cells):
+                # A bare line of version names ("Meathead  Meathead Dark  Ritual Fuzz") counts when a designator
+                # row with exactly that many values follows within three lines (a part-type heading may sit between).
+                for nxt in [x for x in plines[li + 1:li + 4] if x.strip()][:3]:
+                    ncells = [c.strip() for c in re.split(r"\s{2,}", nxt.strip()) if c.strip()]
+                    if ncells and _VARIANT_REF.match(ncells[0]):
+                        if len(ncells) - 1 == len(cells):
+                            hdr = cells
+                        break
+            if hdr:
+                if labels and [h.lower() for h in hdr] != [l.lower() for l in labels] and not accepted():
+                    rows, seen = [], set()  # the previous header led nowhere; start over with this one
+                    labels = []
+                labels = labels or hdr
                 continue
-            seen: set[tuple[str, str]] = set()
-            for row in lines[i + 1:]:
-                if not row.strip():
-                    continue
-                cells = re.split(r"\s{2,}", row.strip())
-                if not re.fullmatch(r"(?:R|C|D|Q|IC|U|L|SW|LED|VR|TR|CLR|TRIM)\d*[A-Z]?", cells[0], re.I) or len(cells) < 2:
-                    if rows and not re.match(r"^\s*[A-Za-z]", row):
-                        continue
-                    break  # the table has ended
-                ref = cells[0].upper()
-                for lab, val in zip(labels, cells[1:]):
-                    if (lab, ref) in seen or val.strip().lower() in _VARIANT_SKIP:
-                        continue
-                    nr = normalize_row(BomRow(ref=ref, value=val.strip(), variant=lab))
-                    if is_plausible(nr):
-                        seen.add((lab, ref))
-                        rows.append(nr)
-            if rows and len({r.variant for r in rows}) >= 2:
-                return rows
-            rows = []
-    return rows
+            if not labels:
+                continue
+            i = 0
+            n = len(labels)
+            while i < len(cells):
+                ref = cells[i]
+                vals = cells[i + 1:i + 1 + n]
+                is_ref = bool(_VARIANT_REF.match(ref))
+                is_pot = not is_ref and bool(_VARIANT_NAME.match(ref)) and len(vals) == n and all(_VARIANT_POTVAL.match(v) for v in vals)
+                if (is_ref or is_pot) and len(vals) == n:
+                    for lab, val in zip(labels, vals):
+                        val = val.strip()
+                        if val.lower() in _VARIANT_SKIP:
+                            continue
+                        note = ""
+                        m = re.match(r"^([^/*]+)/([^*]+)\*?$", val)
+                        if m:
+                            val, note = m.group(1), f"or {m.group(2)}"
+                        val = val.rstrip("*")
+                        r = BomRow(ref=ref.upper() if is_ref else ref.rstrip(".").title(), value=val, notes=note, variant=lab,
+                                   part_type="Potentiometer" if is_pot else "", category="POT" if is_pot else "")
+                        nr = normalize_row(r)
+                        if (lab, nr.ref) not in seen and is_plausible(nr):
+                            seen.add((lab, nr.ref))
+                            rows.append(nr)
+                    i += 1 + n
+                else:
+                    i += 1
+    return rows if accepted() else []
 
 
 _BLOCK_STOP = re.compile(r"all trademarks|copyright ©|^\s*page \d|bill of materials|parts list", re.I)
 _BLOCK_COLHEAD = re.compile(r"^\s*(?:(?:part|ref|value|type|qty|notes)\s*)+$", re.I)  # "Part  Value  Part  Value" over each block
-_BLOCK_HEADING = re.compile(r"^(resistors?|capacitors?|semiconductors?|transistors?|diodes?|potentiometers?|integrated circuits?|ics?|switches|hardware|optical)\b", re.I)
 
 
 def parse_bom_version_blocks(pages: list[str]) -> list[BomRow]:
-    """PedalPCB version matrices (Muffin Fuzz): the same 'REF  VALUE' block printed two or
-    three times across the page, each under the version's name, over several pages."""
+    """Version matrices (PedalPCB's Muffin Fuzz, OTRFX's OmniMuff): the same 'REF  VALUE'
+    block printed two or three times across the page, each under the version's name,
+    over several pages."""
     rows: list[BomRow] = []
     for page in pages:
         lines = page.splitlines()
@@ -949,11 +1048,11 @@ def process_document(pdf: Path, vendor: str, slug: str) -> dict:
     # Vendors lay their parts lists out three ways; run every parser and keep the
     # one that recovered the most designators (they never both succeed on one doc).
     bom = max((parse_bom(pages), parse_bom_qty_value_parts(pages), parse_bom_columns(pages), parse_bom_qty_value_ref(pages)), key=len)
-    variant_rows = parse_bom_variant_columns(pages) or parse_bom_version_blocks(pages)
+    variant_rows = max(parse_bom_variant_columns(pages), parse_bom_version_blocks(pages), key=len)
     if variant_rows and len({r.ref for r in variant_rows}) >= len({r.ref for r in bom}) * 0.8:
         # A per-variant table names the same parts once per column; parts it does not cover stay unlabelled.
-        covered = {r.ref for r in variant_rows}
-        bom = variant_rows + [r for r in bom if r.ref not in covered]
+        covered = {r.ref.upper().rstrip(".") for r in variant_rows}
+        bom = variant_rows + [r for r in bom if r.ref.upper().rstrip(".") not in covered]
     if not bom:
         bom = parse_shopping_list(pages)
     page_no = find_schematic_page(pages)

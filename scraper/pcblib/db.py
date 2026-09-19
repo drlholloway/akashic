@@ -114,6 +114,7 @@ def connect():
 
 
 def upsert_circuit(conn: sqlite3.Connection, c: Circuit) -> None:
+    c.controls = list(dict.fromkeys(x.strip() for x in c.controls if x.strip()))  # a pot listed twice is one knob
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
     conn.execute(
         """INSERT INTO circuits (id,vendor,slug,name,subtitle,based_on,description,category,

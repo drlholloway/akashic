@@ -19,7 +19,15 @@ GitHub Release notes.
   1977 / 2003 and Horde Howler's eight Tube Screamer specs, Mask Audio's Big Clang blocks, Five
   Cats' Rattus RAT / RAT2 / Turbo / You Dirty columns, PedalPCB's Muffin Fuzz with eight Big Muff
   versions side by side) keeps every column, and the circuit page gets a variant selector.
-  Counts and the parts cross-reference use the first variant.
+  Counts and the parts cross-reference use the first variant. Headers may start with a
+  part-type word and repeat per side-by-side group (the Damnation Audio Parallel Drive's
+  Guitar Mod / Bass Mod table, Effects Layouts' Light Land), or be the label group alone
+  repeated per part type (PCB Guitar Mania's Germanium Percolator Stock / Albini and Universal
+  Revolution II / III / IV).
+- Controls are deduplicated when a board is stored; a pot listed twice was two knobs before.
+- Named pots on vector schematics (DRIVE next to 500kA) are paired like designators.
+- Effects Layouts products that link a build-doc web page are followed to the PDF that page
+  links (Black & Tan, Transmogrifying Repeater).
 
 ### Fixed
 - Pot values read by OCR keep their taper letter and have only the digits repaired

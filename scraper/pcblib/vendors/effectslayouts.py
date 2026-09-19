@@ -77,6 +77,14 @@ class EffectsLayouts(Adapter):
         body = html_to_text(desc_html)
         body = clean_text(re.sub(r"^\s*Build Doc\s*$", "", body, flags=re.M))
         pdfs = [u for u in re.findall(r'href="([^"]+\.pdf(?:\?dl=\d)?)"', desc_html, re.I) if not re.search(r"drill", u, re.I)]
+        if not pdfs:
+            # Some products link a "build doc" page on the site instead; that page links the PDF (single-quoted href).
+            for page_url in re.findall(r'href="(https://effectslayouts\.com/[^"]*build-doc[^"]*)"', desc_html, re.I):
+                page = self.f.get_text(page_url) or ""
+                found = re.findall(r"""href=['"]([^'"]+\.pdf)['"]""", page, re.I)
+                if found:
+                    pdfs = [found[0]]
+                    break
         drills = [u for u in re.findall(r'href="([^"]+)"', desc_html) if re.search(r"drill", u, re.I)]
         name = _NAME.get(slug) or " ".join(w.title() if len(w) > 2 and not re.search(r"\d", w) else w
                                            for w in _html.unescape(pr["name"]).split())
@@ -126,7 +134,8 @@ class EffectsLayouts(Adapter):
                 specs = re.findall(r"^\s*Part\s+(.+?)\s{2,}(.+?)\s*$", text, re.M)
                 if specs:
                     c.description += f"\n\nThe parts list follows the {specs[0][0]} column of the build document; the doc also gives {specs[0][1]} values."
-            pots = [r for r in c.bom if r.category == "POT"]
+            first = next((r.variant for r in c.bom if r.variant), "")
+            pots = list({r.ref: r for r in c.bom if r.category == "POT" and r.variant in ("", first)}.values())
             if pots and all(r.ref.startswith("×") for r in pots):
                 n = sum(int(r.ref[1:]) for r in pots)
                 c.controls = [f"{n} knobs" if n > 1 else "1 knob"]

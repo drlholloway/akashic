@@ -24,3 +24,6 @@ app/static/data/
 
 .DS_Store
 .env
+
+# Local data dumps, never committed
+transistor-dump/
