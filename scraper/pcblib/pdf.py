@@ -1085,6 +1085,10 @@ def parse_bom_version_blocks(pages: list[str]) -> list[BomRow]:
                 m = re.search(r"([A-Z][A-Z ]{2,24}?SWITCH)\s{2,}([1-4SD]P[DS]T\S*)", seg)
                 if m:
                     rows.append(normalize_row(BomRow(ref=m.group(1).strip().title(), value=m.group(2), category="SW", variant=title)))
+                # "Vol B100K•": a pot named in Title case with its value one space away
+                for name, val in re.findall(r"(?<![A-Za-z0-9])([A-Z][a-z]{2,9}|[A-Z]{3,10})\s([ABCW]\d+(?:[.,]\d+)?[kKM]?)(?![A-Za-z0-9])", seg):
+                    if name.upper() not in _COL_POT_STOP and not _COL_HEADERS.fullmatch(name):
+                        rows.append(normalize_row(BomRow(ref=name.upper(), value=val.upper(), part_type="Potentiometer", category="POT", variant=title)))
     seen: set[tuple[str, str]] = set()
     out: list[BomRow] = []
     for r in rows:

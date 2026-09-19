@@ -113,8 +113,29 @@ def connect():
         conn.close()
 
 
+_CONTROL_ALIAS = {"vol": "volume", "lvl": "level", "lev": "level", "pres": "presence", "treb": "treble", "dist": "distortion",
+                  "sus": "sustain", "spd": "speed", "fdbk": "feedback", "rpt": "repeats", "dpth": "depth", "freq": "frequency",
+                  "res": "resonance", "bal": "balance", "att": "attack", "rel": "release", "thresh": "threshold"}
+
+
+def _dedupe_controls(names: list[str]) -> list[str]:
+    """One knob, one name: exact repeats go, and when a doc section and a parts table name the
+    same knob two ways (Vol and Volume) the longer spelling wins."""
+    out: list[str] = []
+    by_key: dict[str, int] = {}
+    for n in (x.strip() for x in names if x.strip()):
+        key = _CONTROL_ALIAS.get(n.lower(), n.lower())
+        if key in by_key:
+            if len(n) > len(out[by_key[key]]):
+                out[by_key[key]] = n
+            continue
+        by_key[key] = len(out)
+        out.append(n)
+    return out
+
+
 def upsert_circuit(conn: sqlite3.Connection, c: Circuit) -> None:
-    c.controls = list(dict.fromkeys(x.strip() for x in c.controls if x.strip()))  # a pot listed twice is one knob
+    c.controls = _dedupe_controls(c.controls)
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
     conn.execute(
         """INSERT INTO circuits (id,vendor,slug,name,subtitle,based_on,description,category,

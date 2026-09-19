@@ -34,6 +34,10 @@ GitHub Release notes.
   listed first, then the closest by the numbers. `pcblib import-transistors` loads the database.
 
 ### Fixed
+- Controls: a knob named two ways by two sources (Vol and Volume) keeps the longer name;
+  PedalPCB's bold list no longer contributes changelog lines or footswitch labels; version
+  blocks read Title-case pots written one space from their value (OmniMuff's Vol, Tone, Sus).
+- The 1590BBM enclosure is recognized (Mask Audio's Business Card).
 - Scanned parts tables drawn as a ruled grid (Lectric-FX's Mongrel) are read cell by cell:
   the rules give the cell boundaries, each cell is OCR'd on its own, and an unreadable
   designator is inferred from its column's sequence. The Mongrel went from 3 junk rows to 45

@@ -37,7 +37,6 @@ at the bottom; re-run them after parser changes.
 |---|---|---|
 | Dirt Monger | Multi RAT 1995 | Parts table is an image laid out in a way neither the text parsers nor OCR read; 1 row |
 | Dirt Monger | Integrated Preamp | Same; 3 rows |
-| On The Road Effects | OmniMuff | Six version blocks parse (38 rows each) but the pots sit outside the blocks, so no named controls |
 | On The Road Effects | Guerrero Oro | Same; 0 rows |
 | Dead Astronaut | Chasm Reverb, Ebe Delay, Timestream Reverb | Raster docs where thorough OCR still returns nothing |
 | Five Cats | Marshall Supa Fuzz, Vintage Style Fuzz Face | Insert is a wiring diagram with values on the parts, not a table; 1 and 0 rows |
@@ -49,16 +48,13 @@ at the bottom; re-run them after parser changes.
 | Effects Layouts | Melody Malfunction, Cranky Speaker | Doc has only a shopping list (value, type, quantity), so rows are named by quantity (`×2`) and controls are a knob count |
 | Effects Layouts | Six Shooter, Strider, Soil Slinger | Only a drill template or a blog post is linked; no parts list |
 | Effects Layouts | One-Knobber, Drivestortion | Old blog-era project PDFs with broken font encodings; OCR gives 13 and 18 rows, pots missing |
-| Lectric-FX | Double*Take, Betty Boost | Scanned grids read cell by cell, but the Double*Take's diode cells come out as junk (`INS1T4Z`) and Betty Boost's pot cell is unread, so no controls |
+| Lectric-FX | Double*Take, Betty Boost | Scanned grids read cell by cell, but the Double*Take's diode cells come out as junk (`INS1T4Z`) and Betty Boost's pot cells read as noise (`LEGKB`, `56EKC`), so no controls |
 | Lectric-FX | Mongrel | Grid OCR reads 45 of 47 parts; C8 and C21 cells are unreadable, R18 reads 1K for 4K7, D1 reads 1N40602 for 1N4002 |
 | JMK PCBs | Big Bass Drive, AC/DC Drive, Level Up, 5 Knob Fuzz, Classic Tremolo, Blue Warbler 2, Super Phaser | Build notes describe the original without naming it; `based_on` left empty |
 | JMK PCBs | most boards | Docs rarely state an enclosure (8 of 38 found); drill templates are named by knob count, not size |
 | Five Cats | 57 older inserts | No enclosure stamp on the insert (only newer layouts have the "minimum enclosure" badge) |
 | Madbean | Flunkee | Doc link returns 404 (`_folders/1590A/pdf/Flunkee.pdf`) |
-| PedalPCB | Parentheses (pcb237), Thermionic Deluxe, WarScythe | Control names are read from a doc section that also holds changelog lines ("Updated control layout") and footswitch labels ("Active / Bypass"), so a few non-knobs appear as controls |
-| several | Vol / Volume, Pres / Presence | Controls from two sources can name the same knob two ways; exact duplicates are removed, near-duplicates are not |
 | transistor subs | BS250, 2SK30A, 2N6027, OC139, LND150, CV7351, 1T308A, 2N2646 | Named in parts lists but absent from the transistor parameter database, so no substitutes; placeholders like `NPN`, `GE`, `your choice` are skipped on purpose |
-| Mask Audio | Business Card | Doc says 1590BBM/BBS; the enclosure regex does not know 1590BBM |
 
 ## Parser wishes
 

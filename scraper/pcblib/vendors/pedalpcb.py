@@ -65,6 +65,9 @@ class PedalPCB(Adapter):
         controls = [clean_text(_unescape(re.sub(r"<[^>]+>", "", m))) for m in
                     re.findall(r"<li>\s*<(?:b|strong)>(.*?)</(?:b|strong)>", desc_html)]
         controls = [c.strip(" –-") for c in controls if c.strip(" –-")]
+        # The same bold list can carry changelog lines and footswitch labels; a knob is a short name.
+        controls = [c for c in controls
+                    if len(c.split()) <= 3 and not re.search(r"bypass|footswitch|foot switch|updated|improved|added|fixed|new |version|layout|routing", c, re.I)]
         description = html_to_text(re.sub(r'<div class="icon-box.*$', "", desc_html, flags=re.S))
 
         based_on = ""
