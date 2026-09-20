@@ -29,7 +29,7 @@
 			<tr>
 				<th class="glyph"><span class="sr-only">Faceplate</span></th>
 				<th>Circuit</th>
-				<th>Based on</th>
+				<th class="based">Based on</th>
 				<th class="cat">Category</th>
 				{#if !hideVendor}<th class="vendor">Vendor</th>{/if}
 				<th class="enc">Box</th>
@@ -46,6 +46,7 @@
 						<a href="{base}/circuit/{e.file_id}">{e.name}</a>
 						{#if e.subtitle}<span class="sub">{e.subtitle}</span>{/if}
 						{#if e.actives.length}<span class="actives mono">{e.actives.slice(0, 4).join(' · ')}</span>{/if}
+						{#if e.based_on || e.enclosure}<span class="folded">{[e.based_on, e.enclosure].filter(Boolean).join(' · ')}</span>{/if}
 					</td>
 					<td class="based">
 						{#if e.based_on}
@@ -82,16 +83,14 @@
 </div>
 
 <style>
-	/* Only allow horizontal scrolling on narrow screens: an overflow container would
-	   otherwise trap the sticky column header and it would scroll away with the table. */
-	.circuits { min-width: 720px; }
-	@media (max-width: 1000px) {
-		.wrap { overflow-x: auto; }
-	}
+	/* The column header is sticky against the page, so the table is never put in a scroll
+	   container: on narrow screens columns fold into the name cell instead of scrolling sideways. */
+	.circuits { width: 100%; }
 	.glyph { width: 40px; padding-right: 0; }
 	.name a { font-weight: 600; }
 	.name .sub { color: var(--ink-3); margin-left: 6px; }
 	.name .actives { display: block; color: var(--ink-3); font-size: 11.5px; margin-top: 1px; }
+	.name .folded { display: none; color: var(--ink-2); font-size: 12px; margin-top: 2px; }
 	.based { max-width: 26ch; }
 	.linkish { background: none; border: 0; padding: 0; cursor: pointer; text-align: left; color: inherit; font: inherit; }
 	.linkish:hover { text-decoration: underline; text-underline-offset: 2px; }
@@ -99,7 +98,16 @@
 	.oos { margin-left: 6px; font-family: var(--label); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--warn); }
 	.empty { padding: 32px 10px; color: var(--ink-2); max-width: 60ch; }
 	.more { padding: 16px 10px; }
+	@media (max-width: 1000px) {
+		.based { max-width: 18ch; }
+	}
 	@media (max-width: 860px) {
 		.cat, .bom { display: none; }
+	}
+	@media (max-width: 640px) {
+		.based, .enc, .knobs { display: none; }
+		.name .folded { display: block; }
+		.circuits :global(td), .circuits :global(th) { padding-left: 6px; padding-right: 6px; }
+		.glyph { width: 34px; }
 	}
 </style>
