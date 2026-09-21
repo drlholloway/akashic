@@ -117,7 +117,19 @@ def categorize(ref: str, part_type: str, value: str = "") -> str:
     # Named pots: VOLUME, GAIN, TONE ... (PedalPCB style)
     if r.isalpha() and r.isupper() and len(r) >= 3:
         return "POT"
+    for rx, cat in _VALUE_HINTS:  # a shopping-list row ("×2") is known only by its part number
+        if rx.match(v):
+            return cat
     return "OTHER"
+
+
+_VALUE_HINTS = [
+    (re.compile(r"^(?:2N\d{3,4}|2S[ABCDJK]\d{2,4}|BC\d{3}|BF\d{3}|MPS[AW]?\d{2,3}|MMBT\d{4}|MMBF\d{4}|KSP\d{2}|PN\d{4}|J\d{3}\b|BS\d{3}|IRF\d{3}|MPF\d{3}|AC1\d{2}|OC\d{2,3}|NKT\d{3}|TIP\d{2})"), "Q"),
+    (re.compile(r"^(?:1N\d{3,4}|UF\d{4}|BAT\d{2}|BA\d{3}|1SS\d{2,3}|OA\d{2,3}|D9[A-Z]|SB\d{3})"), "D"),
+    (re.compile(r"^\d+(?:[.,]\d+)?\s*[pnuµμ]\d*F?$", re.I), "C"),
+    (re.compile(r"^\d+(?:[.,]\d+)?\s*(?:[kKMR]\d*|[kKM]?\s*(?:ohms?|Ω))$"), "R"),
+    (re.compile(r"^(?:TL0[678]\d|LM\d{3,4}|NE55\d|OP\d{2,3}|JRC\d{4}|RC4\d{3}|CD4\d{3}|PT2399|MC1\d{3}|TC1044|LT1054|ICL7660|CA30\d\d|LF35\d|MN30\d{2}|BBD|L78\d\d|78L\d\d|79L\d\d|7[89]\d\d|TDA\d{4}|MAX\d{3,4}|4558|1458|LM13700|SSM\d{4}|V3\d{3})"), "IC"),
+]
 
 
 def normalize_row(row: BomRow) -> BomRow:
@@ -175,7 +187,7 @@ def is_plausible(row: BomRow) -> bool:
     """Drop rows the table parsers picked up from prose (e.g. 'C10 is omitted')."""
     if _JUNK.match(row.value.strip()):
         return False
-    if row.category in ("D", "Q", "IC") and (re.fullmatch(r"(?:[RCLDQ]|IC|U|SW|LED|VR|TR)\d+", row.value.strip().upper())
+    if row.category in ("D", "Q", "IC") and (re.fullmatch(r"(?:[RCLDQ]|IC|U|SW|LED|VR|TR)\d{1,3}", row.value.strip().upper())  # L7805 is a regulator, not L7805
                                              or (len(row.value.strip()) < 3 and row.value.strip().upper() not in ("GE", "SI"))):
         return False
     if row.category in ("R", "C", "L") and row.sort_key <= 0:

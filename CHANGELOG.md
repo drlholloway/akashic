@@ -46,6 +46,10 @@ GitHub Release notes.
 - Electronic Audio Experiments (Squarespace DIY collection; spreadsheet BOMs read by column
   name, controls from the builder's guide).
 
+- C2C Electronics (Conspiracy to Commit Electronics): WooCommerce Store API, build documents
+  read from wrapped Comment / Description / Designator / Quantity tables; quantity-only lists
+  become ×n shopping-list rows with a knob count.
+
 ### Fixed
 - OCR'd parts lists keep pots whose name ends in a digit (SEN1, SEN2) and switch rows
   (SW1 SPDT ON-ON, BYPASS 3PDT); Dead End FX's 'Zilla names its four knobs and its toggle.

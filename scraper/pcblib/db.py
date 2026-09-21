@@ -79,6 +79,9 @@ VENDORS = {
             "Build documents are © JMK Pedals, for personal use only; indexed and linked, not redistributed."),
     "eae": ("Electronic Audio Experiments", "https://www.electronicaudioexperiments.com/diy",
             "Builder's guides are © Electronic Audio Experiments and John W Snyder; indexed and linked, not redistributed. No build support is offered."),
+    "c2c": ("C2C Electronics", "https://c2celectronics.com/product-category/diy-project/",
+            "Conspiracy to Commit Electronics (formerly Sushi Box FX) build documents are indexed and linked, not redistributed. "
+            "Every board is a high-voltage tube circuit; the vendor says none is a beginner project."),
     "pcbway-gtu": ("PCBWay: Glory to Ukraine", "https://www.pcbway.com/project/member/?bmbno=19C5FC6C-66B1-46",
                    "Shared projects are CC BY-SA 3.0; schematic images may be shown with attribution. BOM and gerbers need a PCBWay login."),
 }

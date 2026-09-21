@@ -63,59 +63,65 @@ def sheet_bom(fetcher, url: str) -> list[BomRow]:
 
 
 _XLSX_COLS = {"qty": "qty", "quantity": "qty", "ref": "ref", "refs": "ref", "reference": "ref", "references": "ref", "designator": "ref",
-              "designators": "ref", "value": "value", "description": "type", "type": "type", "package": "package", "notes": "notes", "note": "notes"}
+              "designators": "ref", "value": "value", "description": "type", "type": "type", "rating/package": "type", "package": "package", "notes": "notes", "note": "notes"}
+
+
+def grid_bom(grid: list[list[str]]) -> tuple[list[BomRow], str]:
+    """A parts table given as rows of cells with a header row naming its columns (Qty / Value /
+    Ref / Description, Value / Designator / Quantity ...): one row per designator, comma lists
+    split, named pots and switches kept, hardware rows skipped. Returns (rows, enclosure named
+    in a hardware row)."""
+    rows: list[BomRow] = []
+    seen: set[str] = set()
+    enclosure = ""
+    cols: dict[str, int] = {}
+    for raw in grid:
+        cells = ["" if c is None else str(c).strip() for c in raw]
+        if not any(cells):
+            continue
+        low = [c.lower() for c in cells]
+        if "value" in low and any(k in low for k in ("ref", "refs", "reference", "references", "designator", "designators")):
+            cols = {_XLSX_COLS[c]: i for i, c in enumerate(low) if c in _XLSX_COLS}
+            continue
+        if not cols or "ref" not in cols or "value" not in cols:
+            continue
+        refs, value = cells[cols["ref"]], cells[cols["value"]]
+        ptype = cells[cols["type"]] if "type" in cols and cols["type"] < len(cells) else ""
+        note = cells[cols["notes"]] if "notes" in cols and cols["notes"] < len(cells) else ""
+        if not refs or not value:
+            continue
+        if re.fullmatch(r"enclosure", refs, re.I):
+            from .taxonomy import find_enclosure
+            enclosure = enclosure or find_enclosure(value)
+            continue
+        if re.search(r"knob|jack|^in\b|^out\b|^9v|led|battery|wire|screw", refs, re.I) and not _REF.match(refs):
+            continue  # hardware
+        for ref in re.split(r"\s*,\s*", refs):
+            if not ref or ref.upper() in seen:
+                continue
+            if _REF.match(ref) or re.fullmatch(r"[A-Z]{1,4}\d{1,3}[A-Z]?", ref):
+                cat = ""
+            elif _POTVAL.match(value) or re.search(r"potentiometer", ptype, re.I):
+                cat = "TRIM" if re.search(r"trim", ptype + value, re.I) else "POT"
+            elif re.search(r"[SD]P[SD]T|\dP[SD]T|toggle|rotary|switch", value + " " + ptype, re.I):
+                cat = "SW"
+            else:
+                continue
+            v = re.sub(r"^A(\d+(?:\.\d+)?[kKM]?)\s+Rev(?:erse)?\.?$", r"C\1", value, flags=re.I)  # 'A10k Rev': reverse audio
+            nr = normalize_row(BomRow(ref=ref.upper() if cat != "SW" else ref.title(), value=v, part_type=ptype, notes=note, category=cat))
+            if is_plausible(nr) or cat in ("SW", "POT", "TRIM"):
+                seen.add(ref.upper())
+                rows.append(nr)
+    return rows, enclosure
 
 
 def xlsx_bom(path: Path) -> tuple[list[BomRow], str]:
-    """A spreadsheet BOM with a header row naming its columns (Qty / Value / Ref / Description
-    or Qty / Ref / Value / ...): one row per designator, comma lists split, named pots and
-    switches kept, hardware rows skipped. Returns (rows, enclosure named in a hardware row)."""
+    """Every sheet of a spreadsheet BOM through `grid_bom`."""
     try:
         import openpyxl
     except ImportError:
         return [], ""
-    rows: list[BomRow] = []
-    seen: set[str] = set()
-    enclosure = ""
     wb = openpyxl.load_workbook(path, read_only=True, data_only=True)
-    for ws in wb.worksheets:
-        cols: dict[str, int] = {}
-        for raw in ws.iter_rows(values_only=True):
-            cells = ["" if c is None else str(c).strip() for c in raw]
-            if not any(cells):
-                continue
-            low = [c.lower() for c in cells]
-            if "value" in low and any(k in low for k in ("ref", "refs", "reference", "references", "designator", "designators")):
-                cols = {_XLSX_COLS[c]: i for i, c in enumerate(low) if c in _XLSX_COLS}
-                continue
-            if not cols or "ref" not in cols or "value" not in cols:
-                continue
-            refs, value = cells[cols["ref"]], cells[cols["value"]]
-            ptype = cells[cols["type"]] if "type" in cols and cols["type"] < len(cells) else ""
-            note = cells[cols["notes"]] if "notes" in cols and cols["notes"] < len(cells) else ""
-            if not refs or not value:
-                continue
-            if re.fullmatch(r"enclosure", refs, re.I):
-                from .taxonomy import find_enclosure
-                enclosure = enclosure or find_enclosure(value)
-                continue
-            if re.search(r"knob|jack|^in\b|^out\b|^9v|led|battery|wire|screw", refs, re.I) and not _REF.match(refs):
-                continue  # hardware
-            for ref in re.split(r"\s*,\s*", refs):
-                if not ref or ref.upper() in seen:
-                    continue
-                if _REF.match(ref) or re.fullmatch(r"[A-Z]{1,4}\d{1,3}[A-Z]?", ref):
-                    cat = ""
-                elif _POTVAL.match(value) or re.search(r"potentiometer", ptype, re.I):
-                    cat = "TRIM" if re.search(r"trim", ptype + value, re.I) else "POT"
-                elif re.search(r"[SD]P[SD]T|\dP[SD]T|toggle|rotary|switch", value + " " + ptype, re.I):
-                    cat = "SW"
-                else:
-                    continue
-                v = re.sub(r"^A(\d+(?:\.\d+)?[kKM]?)\s+Rev(?:erse)?\.?$", r"C\1", value, flags=re.I)  # 'A10k Rev': reverse audio
-                nr = normalize_row(BomRow(ref=ref.upper() if cat != "SW" else ref.title(), value=v, part_type=ptype, notes=note, category=cat))
-                if is_plausible(nr) or cat in ("SW", "POT", "TRIM"):
-                    seen.add(ref.upper())
-                    rows.append(nr)
+    grid = [list(r) for ws in wb.worksheets for r in ws.iter_rows(values_only=True)]
     wb.close()
-    return rows, enclosure
+    return grid_bom(grid)
