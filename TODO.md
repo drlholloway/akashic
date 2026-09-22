@@ -30,6 +30,13 @@ at the bottom; re-run them after parser changes.
   insert is a wiring diagram with values printed on the parts.
 - **PedalPCB**: complete for circuits. The boards without a parts list are utility items whose
   docs have none (drill templates, the current-meter kit, the test platform, the ProtoBoard).
+- **Electronic Audio Experiments**: complete (4 boards); the guides' Qty / Value / Ref tables
+  and the spreadsheet BOMs both read in full.
+- **C2C Electronics**: complete for parts (16 boards), but the ten older docs (Ambassador,
+  Bassdude, Bathtub Reverb, Black Eye, Diplomat, King Nothing, Lab Rat, Mirage, Particle
+  Accelerator, Vampire Slayer, Wrecking Ball) list quantities without designators, so their
+  rows are named by quantity and the controls are a knob count. Pot names would have to
+  come from the schematic images.
 
 ## Specific boards
 
