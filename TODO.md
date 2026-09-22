@@ -16,15 +16,16 @@ at the bottom; re-run them after parser changes.
   designator/value pairing.
 - **GuitarPCB**: 5 boards with no BOM and 7 thin after the thorough OCR pass; the rest
   are selector and wiring boards with no BOM by design (Roto-Tone, 2 Knob Job, 3PDT
-  boards, Easy Order Switching). 27 boards still have no named controls.
+  boards, Easy Order Switching). 18 boards still have no named controls.
 - **Madbean**: 8 boards with no BOM: the utility boards (9mmBB, 14mm, MiniJack1, sProbe,
   Strober, TrueSoft) and Flunkee, whose PDF link is a 404. The VFE series docs carry a
   shopping list (qty, value, type) rather than a designator table, so their rows are named
   by quantity.
-- **Aion FX**: 9 boards without controls; 7 without a BOM.
+- **Aion FX**: 8 boards without controls; 7 without a BOM.
 - **Fuzz Dog**: 4 boards without a BOM and 13 thin, all utility items (switchers, testers,
   the ProtoBuddy breadboard, tails add-ons) whose docs have no parts table.
-- **PCB Guitar Mania**: 14 without a BOM; 29 without controls, none of which have pot rows to name them from.
+- **PCB Guitar Mania**: 14 without a BOM; 25 without controls after the schematic pairing (the rest have
+  watermarked or hand-drawn schematics).
 - **Five Cats Pedals**: 6 without a BOM after OCR of the older inserts: three 3PDT
   daughterboards and the Transelector (no table), and the Vintage Style Fuzz Face, whose
   insert is a wiring diagram with values printed on the parts.
@@ -32,11 +33,9 @@ at the bottom; re-run them after parser changes.
   docs have none (drill templates, the current-meter kit, the test platform, the ProtoBoard).
 - **Electronic Audio Experiments**: complete (4 boards); the guides' Qty / Value / Ref tables
   and the spreadsheet BOMs both read in full.
-- **C2C Electronics**: complete for parts (16 boards), but the ten older docs (Ambassador,
-  Bassdude, Bathtub Reverb, Black Eye, Diplomat, King Nothing, Lab Rat, Mirage, Particle
-  Accelerator, Vampire Slayer, Wrecking Ball) list quantities without designators, so their
-  rows are named by quantity and the controls are a knob count. Pot names would have to
-  come from the schematic images.
+- **C2C Electronics**: complete for parts (16 boards). Ten older docs list quantities without
+  designators, so their rows are named by quantity; the schematic pairing names the knobs on
+  eight of them (Bassdude and Mirage keep a knob count: OCR reads fewer names than knobs).
 
 ## Specific boards
 
@@ -66,8 +65,10 @@ at the bottom; re-run them after parser changes.
 ## Parser wishes
 
 - Named-pot tables where the taper is a separate column (`LOUD | A | 100k`).
-- Docs that put the parts list in an image but the schematic as vectors: pair the schematic
-  and fall back to OCR only for pots and switches (Dead End FX does this; generalize).
+- Schematic pairing now runs for every board whose parts list is thin, quantity-only or
+  names no controls (`enrich.py`): vector text first, then OCR at two resolutions and three
+  orientations. It reads clean KiCad and Altium exports; hand-drawn or watermarked
+  schematics and boards whose pots are designators (VR1) still get nothing from it.
 
 ## Query
 

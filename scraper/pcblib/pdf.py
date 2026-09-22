@@ -755,6 +755,13 @@ _SCH_VALUE: dict[str, re.Pattern] = {
     "IC": re.compile(r"^([A-Z]{1,5}\d{2,}[A-Z0-9\-/]*|\d{4}[A-Z]?)$", re.I),
 }
 _SCH_MAXDIST = {"R": 14.0, "C": 20.0, "L": 20.0, "TRIM": 14.0, "D": 18.0, "Q": 18.0, "IC": 22.0}
+_CONTROL_WORDS = {"VOLUME", "VOL", "LEVEL", "GAIN", "DRIVE", "TONE", "BASS", "TREBLE", "MID", "MIDS", "MIDDLE", "PRESENCE", "DEPTH", "RATE",
+                  "SPEED", "MIX", "BLEND", "FEEDBACK", "REGEN", "SUSTAIN", "FUZZ", "DIST", "MASTER", "OUTPUT", "FILTER", "CUT", "BOOST",
+                  "ATTACK", "RELEASE", "DECAY", "TIME", "DELAY", "REPEATS", "DWELL", "SHAPE", "BIAS", "COLOR", "COLOUR", "BODY", "BITE",
+                  "TEXTURE", "VOICE", "RANGE", "INTENSITY", "RESONANCE", "WIDTH", "SWEEP", "MANUAL", "SENS", "THRESHOLD", "RATIO", "COMP",
+                  "DRY", "WET", "LOW", "HIGH", "LOWS", "HIGHS", "PUNCH", "TOP", "GIRTH", "GRIT", "HEAT", "SAG", "STARVE", "VOLTAGE"}
+_SCH_NAME_STOP = {"BOM", "OOK", "TBD", "REF", "VAL", "PART", "PARTS", "QTY", "ALT", "ALTS", "SEE", "NOTE", "GND", "VCC", "OUT", "IN", "PCB", "REV", "TITLE", "DATE", "SHEET", "DIY", "AUDIO", "VIN", "VREF",
+                  "SUPPLY", "SCHEMATIC", "LED", "LAYOUT", "BOARD", "NOTES", "PAGE", "FILE", "DRAWN", "NAME", "OFF", "SWITCH", "THE", "AND", "FOR", "WITH", "ANY", "HERE", "USED", "ALL", "NOT"}
 _SCH_SKIP_WORDS = {"GND", "VCC", "VDD", "VEE", "VREF", "IN", "OUT", "+9V", "9V", "+V", "-V", "+VE", "-VE", "+5V", "N/C", "NC"}
 
 
@@ -790,25 +797,41 @@ def _pair_labels(words: list, unit: float = 1.0) -> list[BomRow]:
             nr = normalize_row(BomRow(ref=ref, value=best[1], notes="from schematic"))
             if is_plausible(nr):
                 rows.append(nr)
-    # Named pots: an upper-case label (DRIVE, DIST.) whose nearest neighbour is a taper value.
-    potval = re.compile(r"^(?:[ABCW]\d+(?:[.,]\d+)?[kKM]?|\d+(?:[.,]\d+)?[kKM]?[ABCW])$")
-    names = [w for w in words if re.fullmatch(r"[A-Z][A-Z.]{2,11}", w[4]) and w[4].rstrip(".") not in _SCH_SKIP_WORDS
-             and w[4].rstrip(".") not in {"GND", "VCC", "OUT", "IN", "PCB", "REV", "TITLE", "DATE", "SHEET", "DIY", "AUDIO"}]
+    # Named pots and switches: an upper-case label (DRIVE, DIST., CLIP) whose nearest
+    # neighbour is a taper value or a switch type.
+    potval = re.compile(r"^(?:[ABCW][0-9IlLO]+(?:[.,]\d+)?[kKM]|[ABCW][0-9IlLO]{3,}|\d+(?:[.,]\d+)?[kKM][ABCW])$", re.I)  # KiCad users write a10k; OCR reads A1M as AIM; A2 is a pin
+    swval = re.compile(r"^(?:[SD]P[SD]T|\dP\dT|SPST|ON-ON|ON-OFF-ON)$", re.I)
+    def fix_taper(v: str) -> str:  # OCR reads A1M as AIM or ALM, A10K as AL0K
+        return re.sub(r"^([ABCW])([0-9IlLO]+)", lambda m: m.group(1) + m.group(2).replace("I", "1").replace("l", "1").replace("L", "1").replace("O", "0"), v.upper())
+    names = [w for w in words if re.fullmatch(r"[A-Z][A-Z]{2,11}\.?", w[4]) and w[4].rstrip(".") not in _SCH_SKIP_WORDS
+             and w[4].rstrip(".") not in _SCH_NAME_STOP and not potval.match(w[4]) and not swval.match(w[4])]
     for r in names:
         name = r[4].rstrip(".")
+        if len(name) >= 4 and name[-1] in "ABC" and name[:-1] in _CONTROL_WORDS:
+            name = name[:-1]  # the taper letter of the value below glued on: BASSA, GAINA
         if name in seen:
             continue
         rx, ry = (r[0] + r[2]) / 2, (r[1] + r[3]) / 2
         best = None
         for w in others:
-            if not potval.match(w[4]):
-                continue
-            d = ((w[0] + w[2]) / 2 - rx) ** 2 + ((w[1] + w[3]) / 2 - ry) ** 2
+            is_pot, is_sw = bool(potval.match(w[4])), bool(swval.match(w[4]))
+            if not (is_pot or is_sw) or (is_pot and not re.search(r"[1-9]", fix_taper(w[4]))) or w is r:
+                continue  # B0M is "BOM", not a pot
+            dx, dy = (w[0] + w[2]) / 2 - rx, (w[1] + w[3]) / 2 - ry
+            if name not in _CONTROL_WORDS and abs(dx) > 6.0 * unit:
+                continue  # a word we do not know as a knob only counts when stacked over its value, as a label is; prose beside a value is not
+            d = dx ** 2 + dy ** 2
             if best is None or d < best[0]:
-                best = (d, w[4])
+                best = (d, w[4], is_sw)
         if best and best[0] ** 0.5 <= 16.0 * unit:
             seen.add(name)
-            rows.append(normalize_row(BomRow(ref=name.title(), value=best[1].upper(), part_type="Potentiometer", category="POT", notes="from schematic")))
+            if best[2]:
+                rows.append(normalize_row(BomRow(ref=name.title(), value=best[1].upper(), part_type="Switch", category="SW", notes="from schematic")))
+            else:
+                val = fix_taper(best[1])
+                if not re.search(r"[1-9]", val):
+                    continue
+                rows.append(normalize_row(BomRow(ref=name.title(), value=val, part_type="Potentiometer", category="POT", notes="from schematic")))
     rows.sort(key=lambda b: (b.category, int(re.sub(r"\D", "", b.ref) or 0), b.ref))
     return rows
 
@@ -824,21 +847,22 @@ def schematic_bom(pdf: Path, page_no: int) -> list[BomRow]:
     return _pair_labels(words, unit=1.0)
 
 
-def ocr_schematic_bom(image: Path, scale: int = 2) -> list[BomRow]:
-    """Same pairing, but for a schematic *image*: OCR with word boxes (sparse
-    text mode) after upscaling. Good for clean KiCad-style exports."""
-    if not shutil.which("tesseract"):
-        return []
+def _ocr_word_boxes(png: Path, rotate: int = 0) -> list[tuple[int, int, int, int, str]]:
+    """Tesseract word boxes (sparse text) for an image, optionally rotated first."""
     import csv
     import io
-    native = fitz.Pixmap(str(image))  # true pixel size; the file's dpi tag must not shrink it
-    with fitz.open(image) as d:
-        rect = d[0].rect
-        to_native = native.width / rect.width if rect.width else 1.0
-        pix = d[0].get_pixmap(matrix=fitz.Matrix(to_native * scale, to_native * scale), alpha=False)
-        up = image.with_name(image.stem + f"-x{scale}.png")
-        pix.save(up)
-    tsv = subprocess.run(["tesseract", str(up), "-", "--psm", "11", "tsv"], capture_output=True, text=True).stdout
+    src = png
+    if rotate:
+        pix = fitz.Pixmap(str(png))
+        # PyMuPDF has no rotate; go through a PDF page so the rotation is a real raster transform
+        with fitz.open() as tmp:
+            page = tmp.new_page(width=pix.width, height=pix.height)
+            page.insert_image(page.rect, pixmap=pix)
+            page.set_rotation(rotate)
+            out = page.get_pixmap(matrix=fitz.Matrix(1, 1), alpha=False)
+        src = png.with_name(png.stem + f"-r{rotate}.png")
+        out.save(src)
+    tsv = subprocess.run(["tesseract", str(src), "-", "--psm", "11", "tsv"], capture_output=True, text=True).stdout
     words = []
     for r in csv.DictReader(io.StringIO(tsv), delimiter="\t"):
         t = (r.get("text") or "").strip()
@@ -851,8 +875,33 @@ def ocr_schematic_bom(image: Path, scale: int = 2) -> list[BomRow]:
             continue
         t = re.sub(r"^(\d+(?:\.\d+)?)Meg$", r"\1M", t)
         words.append((x, y, x + w, y + h, t))
-    # 12px text at 2x -> ~24px glyphs; thresholds in PDF points were tuned for ~7pt labels
-    return _pair_labels(words, unit=3.0 * scale)
+    return words
+
+
+def ocr_schematic_bom(image: Path, scale: int = 2, px_per_pt: float = 170 / 72) -> list[BomRow]:
+    """Same pairing, but for a schematic *image*: OCR with word boxes (sparse text mode)
+    after upscaling. Good for clean KiCad-style exports. A drawing set sideways on the
+    page is read in every orientation and the one that pairs the most labels wins.
+    `px_per_pt` is the image's resolution relative to PDF points (a 170 dpi render is
+    170/72); the distance thresholds scale with it."""
+    if not shutil.which("tesseract"):
+        return []
+    native = fitz.Pixmap(str(image))  # true pixel size; the file's dpi tag must not shrink it
+    with fitz.open(image) as d:
+        rect = d[0].rect
+        to_native = native.width / rect.width if rect.width else 1.0
+        pix = d[0].get_pixmap(matrix=fitz.Matrix(to_native * scale, to_native * scale), alpha=False)
+        up = image.with_name(image.stem + f"-x{scale}.png")
+        pix.save(up)
+    unit = 1.27 * px_per_pt * scale  # thresholds in PDF points were tuned for ~7pt labels
+    best: list[BomRow] = []
+    for rotate in (0, 90, 270):
+        rows = _pair_labels(_ocr_word_boxes(up, rotate), unit=unit)
+        if len(rows) > len(best):
+            best = rows
+        if rotate == 0 and len(rows) >= 12:
+            break  # upright and readable; the sideways passes would only add noise
+    return best
 
 
 _QVP_HEADER = re.compile(r"^\s*Qty\.?\s+Value\s+(?:Parts?|Devices?|Refs?|Designators?)(?:\s+Notes?)?\s*$", re.I)

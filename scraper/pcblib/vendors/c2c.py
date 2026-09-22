@@ -231,9 +231,9 @@ class C2C(Adapter):
                 if len(rows) > len(c.bom):
                     c.bom = rows
                 c.enclosure = enc
-                if c.schematic_page is None:
-                    sch = [i for i, pg in enumerate(pages, 1) if re.search(r"^\s*Schematic", pg, re.M)]
-                    c.schematic_page = sch[-1] if sch else None  # the audio schematic follows the power supply's
+                sch = [i for i, pg in enumerate(pages, 1) if re.search(r"^\s*Schematic", pg, re.M)]
+                if sch:
+                    c.schematic_page = sch[-1]  # the audio schematic follows the power supply's
                 named = [r.ref.title() for r in c.bom if r.category == "POT" and not r.ref.startswith("×")]
                 if named:
                     c.controls = named + [r.ref for r in c.bom if r.category == "SW" and not r.ref.startswith("×")]

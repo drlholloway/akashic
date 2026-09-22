@@ -8,6 +8,7 @@ from rich.console import Console
 from rich.table import Table
 
 from . import db as dbm
+from .enrich import enrich_from_schematic
 from .fetch import Fetcher
 from .vendors import REGISTRY, load_all
 
@@ -50,6 +51,10 @@ def scrape(vendor: str, limit: int = 0, refresh: bool = False, only: str = "",
             if c is None:
                 n_skip += 1
                 continue
+            try:
+                enrich_from_schematic(c)
+            except Exception as exc:  # the schematic is a bonus; never lose the board over it
+                con.print(f"[yellow]schematic[/] {target[:60]}: {exc!r}")
             dbm.upsert_circuit(conn, c)
             conn.commit()  # short transactions so parallel vendor scrapes interleave
             n_ok += 1

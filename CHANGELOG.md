@@ -50,7 +50,14 @@ GitHub Release notes.
   read from wrapped Comment / Description / Designator / Quantity tables; quantity-only lists
   become ×n shopping-list rows with a knob count.
 
+- Schematic pairing for every vendor (`enrich.py`): a board whose parts list is thin,
+  quantity-only or names no controls gets its pot and switch names, and if need be its
+  designators, from the schematic page: vector text first, then OCR at two resolutions and
+  three orientations. Named pots replace knob counts when the schematic names them all.
+
 ### Fixed
+- Prose words that OCR paired with a nearby value ("Install", "Shown", "Such") no longer
+  appear as controls; pot values on schematics need a taper suffix (A2 was a pin).
 - OCR'd parts lists keep pots whose name ends in a digit (SEN1, SEN2) and switch rows
   (SW1 SPDT ON-ON, BYPASS 3PDT); Dead End FX's 'Zilla names its four knobs and its toggle.
 - Lectric-FX boards whose parts list lives in a Google Sheet (Countdown Phaser, Disdis,

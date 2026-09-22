@@ -125,12 +125,18 @@ _CONTROL_ALIAS = {"vol": "volume", "lvl": "level", "lev": "level", "pres": "pres
                   "res": "resonance", "bal": "balance", "att": "attack", "rel": "release", "thresh": "threshold"}
 
 
+_CONTROL_JUNK = {"the", "these", "that", "this", "such", "shown", "here", "with", "any", "all", "and", "for", "not", "option", "install",
+                 "connect", "convention", "boards", "board", "other", "used", "use", "works", "well", "remained", "touching", "transistor",
+                 "potentiometers", "potentiometer", "pots", "pot", "leds", "two leds", "six potentiometers", "one", "two", "three", "see", "note", "txt", "val"}
+
+
 def _dedupe_controls(names: list[str]) -> list[str]:
     """One knob, one name: exact repeats go, and when a doc section and a parts table name the
-    same knob two ways (Vol and Volume) the longer spelling wins."""
+    same knob two ways (Vol and Volume) the longer spelling wins. Prose words that OCR pairs
+    with a nearby value ("Install", "Shown") are dropped."""
     out: list[str] = []
     by_key: dict[str, int] = {}
-    for n in (x.strip() for x in names if x.strip()):
+    for n in (x.strip() for x in names if x.strip() and x.strip().lower() not in _CONTROL_JUNK):
         key = _CONTROL_ALIAS.get(n.lower(), n.lower())
         if key in by_key:
             if len(n) > len(out[by_key[key]]):
