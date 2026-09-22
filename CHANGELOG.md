@@ -55,7 +55,14 @@ GitHub Release notes.
   designators, from the schematic page: vector text first, then OCR at two resolutions and
   three orientations. Named pots replace knob counts when the schematic names them all.
 
+- Variant notes become variants: a parts-list note such as "Omitted in Nano version",
+  "B1M for High Gain version" or "220n in Bass Fuzz variant" now yields per-build rows and
+  a variant selector on the page. Notes phrased as mods keep a Standard build; notes
+  phrased as builds name the builds themselves.
+
 ### Fixed
+- The column parser reads no notes, so when it wins over the table parser the matching
+  rows' notes are carried across (Super Stevie's variant notes were lost this way).
 - Prose words that OCR paired with a nearby value ("Install", "Shown", "Such") no longer
   appear as controls; pot values on schematics need a taper suffix (A2 was a pin).
 - OCR'd parts lists keep pots whose name ends in a digit (SEN1, SEN2) and switch rows

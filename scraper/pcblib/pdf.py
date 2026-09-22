@@ -1318,6 +1318,105 @@ def doc_version(pages: list[str]) -> str:
     return ""
 
 
+_VNAME = r"((?:[A-Z][\w'&/.-]*|bass|guitar|vintage|stock|modern|early|late|original|standard|nano|bigbox|big box)(?:[ -](?:[A-Z][\w'&/.-]*|[a-z]{2,8}))?)"
+_VVAL = r"([0-9][\w.,/+]*|[A-Z]{1,3}\d[\w.,/+-]*|[ABCW]\d+[kKM]?|jumper|omit)"
+# Notes that tie one row to a build variant. Each pattern yields (variant, value) with value "" meaning "as listed".
+_VNOTE_MODS = [  # a mod of the standard build: "Use 10uF for bass version", "B1M for High Gain version"
+    re.compile(r"^\*?\s*(?:[A-Z][^.:;]{0,25}\.\s+)?(?:use\s+)?" + _VVAL + r"\s+for\s+(?:the\s+)?" + _VNAME + r"\s+(?:version|variant|build|mod)\b", re.I),
+    re.compile(r"^\*?\s*" + _VNAME + r"\s+(?:version|variant|build)\s+uses\s+" + _VVAL, re.I),
+    re.compile(r"^\*?\s*omit(?:ted)?(?:\s*\(leave empty\))?\s+for\s+(?:the\s+)?" + _VNAME + r"\s+(?:version|variant|build|mod)\b", re.I),
+    re.compile(r"^\*?\s*" + _VNAME + r"(?:\s+mod)?:\s*(?:omit|" + _VVAL + r")\b", re.I),
+]
+_VNOTE_BUILDS = [  # one of several builds the doc covers: "Omitted in Nano version", "C1K in Big Box version"
+    re.compile(r"^\*?\s*omit(?:ted)?\s+in\s+(?:the\s+)?" + _VNAME + r"\s+(?:version|variant|build)\b", re.I),
+    re.compile(r"^\*?\s*" + _VVAL + r"\s+in\s+(?:the\s+)?" + _VNAME + r"\s+(?:version|variant|build)\b", re.I),
+]
+
+
+_VNAME_STOP = {"alternate", "alternative", "alt", "alts", "sub", "subs", "substitute", "substitution", "substitutes", "replacement", "eg", "e.g.",
+               "ie", "i.e.", "note", "notes", "optional", "option", "example", "see", "tip", "or", "alternate part", "alternate parts", "socket",
+               "recommended", "suggested", "default", "stock value", "value", "part", "parts", "footprint", "pinout", "polarity"}
+
+
+def _variant_note(note: str) -> tuple[str, str, bool] | None:
+    """(variant, value or 'omit' or '' for as-listed-only-here, is_mod) from a row note, or None."""
+    r = _variant_note_raw(note)
+    if not r:
+        return None
+    name = re.split(r"[.;(]", r[0])[0].strip()  # "Original. See build notes" -> "Original"
+    return (name, r[1], r[2]) if name and name.lower() not in _VNAME_STOP else None
+
+
+def _variant_note_raw(note: str) -> tuple[str, str, bool] | None:
+    for i, rx in enumerate(_VNOTE_MODS):
+        m = rx.match(note)
+        if m:
+            g = m.groups()
+            if i == 0:
+                return g[1], g[0], True
+            if i == 1:
+                return g[0], g[1], True
+            if i == 2:
+                return g[0], "omit", True
+            return g[0], (g[1] or "omit"), True
+    for i, rx in enumerate(_VNOTE_BUILDS):
+        m = rx.match(note)
+        if m:
+            g = m.groups()
+            return (g[0], "omit", False) if i == 0 else (g[1], g[0], False)
+    return None
+
+
+def variants_from_notes(rows: list[BomRow]) -> list[BomRow]:
+    """Turn single-part variant notes ("Omitted in Nano version", "B1M for High Gain version")
+    into per-variant rows so the page gets a variant selector. Notes phrased as mods keep a
+    Standard build; notes phrased as builds ("in X version") name the builds themselves.
+    Rows without such a note stay shared. Returns the rows unchanged when nothing matches."""
+    found: dict[int, tuple[str, str, bool]] = {}
+    for i, r in enumerate(rows):
+        if r.variant or not r.notes:
+            continue
+        v = _variant_note(r.notes)
+        if v:
+            found[i] = v
+    if not found:
+        return rows
+    def nice(v: str) -> str:  # "bass" -> "Bass", "Flat EQ" stays
+        return " ".join(w if any(ch.isupper() for ch in w) else w.capitalize() for w in v.strip().split())
+    counts: dict[str, int] = {}
+    for var, _, _ in found.values():
+        counts[nice(var)] = counts.get(nice(var), 0) + 1
+    alias: dict[str, str] = {}  # a note with its first letter sliced off ("alaxie mod") is the same variant as "Galaxie mod"
+    for name in sorted(counts, key=lambda n: (-counts[n], n)):
+        for kept in [k for k in counts if k not in alias and k != name and alias.get(k, k) == k]:
+            if kept in alias.values() or kept == name:
+                continue
+            a, b = name.lower(), kept.lower()
+            if (b.endswith(a) and 0 < len(b) - len(a) <= 2) or (len(a) == len(b) and sum(x != y for x, y in zip(a, b)) == 1):
+                alias[name] = kept
+                break
+    found = {i: (alias.get(nice(var), nice(var)), val, mod) for i, (var, val, mod) in found.items()}
+    names = sorted({var for var, _, _ in found.values()})
+    if any(mod for _, _, mod in found.values()) or len(names) < 2:
+        names = ["Standard"] + names
+    out: list[BomRow] = []
+    for i, r in enumerate(rows):
+        if i not in found:
+            out.append(r)
+            continue
+        var, val, _ = found[i]
+        var = nice(var)
+        for name in names:
+            if name == var:
+                if val.lower() == "omit":
+                    continue  # the part is left out of this build
+                nr = normalize_row(BomRow(ref=r.ref, value=val, part_type=r.part_type, notes=r.notes, category=r.category, variant=name))
+                out.append(nr if is_plausible(nr) or nr.category in ("POT", "SW") else BomRow(**{**r.__dict__, "variant": name}))
+            else:
+                out.append(BomRow(**{**r.__dict__, "variant": name}))
+    return out
+
+
 def _expand_range_rows(rows: list[BomRow]) -> list[BomRow]:
     """'Q1-Q5  2N5088' is five transistors, not one part called Q1-Q5: expand any row whose
     designator is a range or a comma list, whichever parser produced it."""
@@ -1341,7 +1440,14 @@ def process_document(pdf: Path, vendor: str, slug: str) -> dict:
     pages = pdf_text_pages(pdf)
     # Vendors lay their parts lists out three ways; run every parser and keep the
     # one that recovered the most designators (they never both succeed on one doc).
-    bom = _expand_range_rows(max((parse_bom(pages), parse_bom_qty_value_parts(pages), parse_bom_columns(pages), parse_bom_qty_value_ref(pages)), key=len))
+    tabled = parse_bom(pages)
+    bom = _expand_range_rows(max((tabled, parse_bom_qty_value_parts(pages), parse_bom_columns(pages), parse_bom_qty_value_ref(pages)), key=len))
+    if bom is not tabled and tabled:
+        # The column parser reads no notes; carry them over from the table parser's matching rows.
+        noted = {(r.ref.upper(), r.norm_value): r.notes for r in tabled if r.notes}
+        for r in bom:
+            if not r.notes:
+                r.notes = noted.get((r.ref.upper(), r.norm_value), "")
     variant_rows = max(parse_bom_variant_columns(pages), parse_bom_version_blocks(pages), key=len)
     if variant_rows and len({r.ref for r in variant_rows}) >= len({r.ref for r in bom}) * 0.8:
         # A per-variant table names the same parts once per column; parts it does not cover stay unlabelled.
@@ -1349,6 +1455,8 @@ def process_document(pdf: Path, vendor: str, slug: str) -> dict:
         bom = variant_rows + [r for r in bom if r.ref.upper().rstrip(".") not in covered]
     if not bom:
         bom = parse_shopping_list(pages)
+    if not any(r.variant for r in bom):
+        bom = variants_from_notes(bom)
     page_no = find_schematic_page(pages)
     schematic_rel = ""
     if page_no:
