@@ -51,8 +51,8 @@ so restart it after rebuilding.
 - Adapters return `None` for products that are not circuits (kits, parts, faceplates,
   bundles) and dedupe regional or older-version listings of the same board.
 - New vendor: adapter, `vendors/__init__.py`, `db.py`, `app/src/lib/types.ts`, README table,
-  CHANGELOG line. Vendor kinds: `shop` (buy the PCB), `projects` (order at a fab), `blog`
-  (read the post), `archive` (open the schematic).
+  CHANGELOG line. Vendor kinds: `shop` (buy the PCB), `projects` (order at a fab), `repo` (download the
+  gerbers from a code repository), `blog` (read the post), `archive` (open the schematic).
 - OCR is best effort and marked `OCR` or `from schematic` in the row notes; never let it
   overwrite a row that came from a text table.
 - Commit only when asked. American spelling in the app.
