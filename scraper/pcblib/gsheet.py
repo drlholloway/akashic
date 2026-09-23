@@ -62,7 +62,7 @@ def sheet_bom(fetcher, url: str) -> list[BomRow]:
     return rows
 
 
-_XLSX_COLS = {"qty": "qty", "quantity": "qty", "ref": "ref", "refs": "ref", "reference": "ref", "references": "ref", "designator": "ref",
+_XLSX_COLS = {"qty": "qty", "quantity": "qty", "ref": "ref", "refs": "ref", "reference": "ref", "references": "ref", "designator": "ref", "refdes": "ref", "pattern": "package",
               "designators": "ref", "value": "value", "description": "type", "type": "type", "rating/package": "type", "package": "package", "notes": "notes", "note": "notes"}
 
 
@@ -80,7 +80,7 @@ def grid_bom(grid: list[list[str]]) -> tuple[list[BomRow], str]:
         if not any(cells):
             continue
         low = [c.lower() for c in cells]
-        if "value" in low and any(k in low for k in ("ref", "refs", "reference", "references", "designator", "designators", "part #", "part")):
+        if "value" in low and any(k in low for k in ("ref", "refs", "refdes", "reference", "references", "designator", "designators", "part #", "part")):
             cols = {_XLSX_COLS[c]: i for i, c in enumerate(low) if c in _XLSX_COLS}
             if "ref" not in cols:  # 'PART #' names the designator when nothing else does
                 cols["ref"] = next(i for i, c in enumerate(low) if c in ("part #", "part"))

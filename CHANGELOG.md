@@ -74,6 +74,9 @@ GitHub Release notes.
 - RWL Pedals: a GitHub repository of KiCad layouts with gerbers, the first source of the new
   `repo` kind ("Get the gerbers at"). Parts from the README tables, else the interactive BOM.
 
+- Sheepylove on GitHub: twelve layouts of dylan159 designs with gerbers, nine of them not in
+  the Sheepylove shop.
+
 ### Fixed
 - Transistor substitutes: a part the database knows only by a longer maker's spelling (BS250 as
   BS250P, 2SK30A as 2SK30ATM, LND150 as LND150K1) is now found, so those boards get substitutes. Three parts the database
