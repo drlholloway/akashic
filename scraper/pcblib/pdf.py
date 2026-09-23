@@ -1417,6 +1417,150 @@ def variants_from_notes(rows: list[BomRow]) -> list[BomRow]:
     return out
 
 
+_CHART_HEAD = re.compile(r"^\s*(?:Part|Parts|Component|Components|Ref|Designator)\s{2,}(\S.*)$", re.I)
+_CHART_LABEL_STOP = {"original value", "common substitute", "substitute", "value", "values", "notes", "note", "qty", "quantity",
+                     "description", "type", "location", "alternate", "suggested", "recommended", "function", "rating", "package"}
+_CHART_ROW_REF = re.compile(r"^(?:[A-Z]{1,4}\d{1,3}[A-Z]?|[A-Z][A-Z0-9]{2,11})(?:\s*[,\-]\s*[A-Z]*\d{1,3}[A-Z]?)*$")
+_CHART_PROSE_COLS = {"effect", "result", "purpose", "function", "change", "changes", "notes", "note", "comment", "comments", "description", "why"}
+_CHART_STANDARD = {"standard", "stock", "normal", "default", "std", "original", "as is"}
+_CHART_OMIT = object()
+
+
+def _chart_refs(cell: str) -> list[str]:
+    """'D1,2,6' -> D1 D2 D6; 'D3-5' -> D3 D4 D5; 'C9, C10' -> C9 C10; 'DRIVE' -> DRIVE."""
+    out: list[str] = []
+    pre = ""
+    for part in re.split(r"\s*,\s*", cell.strip()):
+        m = re.fullmatch(r"([A-Za-z]*)(\d+)\s*-\s*([A-Za-z]*)(\d+)", part)
+        if m:
+            pre = m.group(1) or pre
+            out.extend(f"{pre}{i}" for i in range(int(m.group(2)), int(m.group(4)) + 1))
+        elif re.fullmatch(r"\d+", part) and pre:
+            out.append(f"{pre}{part}")
+        elif part:
+            m2 = re.match(r"([A-Za-z]+)\d", part)
+            pre = m2.group(1) if m2 else pre
+            out.append(part)
+    return out
+
+
+def _chart_value(cell: str, refs: list[str]) -> dict[str, object]:
+    """One chart cell as {ref: value}: 'none' omits, 'All 1N4148' applies to every ref,
+    'D1,2,6 = 1N4148, D3-5 = jumper' assigns per ref, '47/22n' means as elsewhere (None)."""
+    c = cell.strip()
+    if "=" in c:
+        out: dict[str, object] = {}
+        for lhs, rhs in re.findall(r"([A-Za-z]*\d+(?:\s*[,\-]\s*[A-Za-z]*\d+)*)\s*=\s*([^,=]+?)(?=\s*,\s*[A-Za-z]*\d|$)", c):
+            for r in _chart_refs(lhs):
+                out[r] = _chart_value(rhs, [r])[r]
+        return {r: out.get(r) for r in refs}
+    c = re.sub(r"^(?:all|both)\s+", "", c, flags=re.I)
+    if re.fullmatch(r"(?:none|omit|omitted|n/?a|-|—|leave empty|empty)", c, re.I):
+        return {r: _CHART_OMIT for r in refs}
+    if re.fullmatch(r"jumper|link|wire", c, re.I):
+        return {r: "Jumper" for r in refs}
+    if "/" in c and not re.fullmatch(r"[A-Z0-9/-]+", c):
+        return {r: None for r in refs}  # "47/22n": whichever the other chart says
+    return {r: c for r in refs}
+
+
+def parse_mod_charts(pages: list[str]) -> list[tuple[list[str], list[tuple[list[str], list[dict[str, object]]]]]]:
+    """Small side tables in the build notes that give a handful of parts per build ('Part | DC |
+    AC', 'Part | Standard | Bass'): each chart is (labels, rows) with a row's values as one
+    {ref: value} per label. Only rows keyed by a designator, list, range or pot name count."""
+    charts = []
+    for page in pages:
+        lines = page.splitlines()
+        i = 0
+        while i < len(lines):
+            m = _CHART_HEAD.match(lines[i])
+            i += 1
+            if not m:
+                continue
+            labels = [c.strip() for c in re.split(r"\s{2,}", m.group(1).strip())]
+            keep = [k for k, lb in enumerate(labels) if lb.lower() not in _CHART_PROSE_COLS]  # "Effect: more gain" is commentary, not a build
+            if not 2 <= len(keep) <= 4 or any(labels[k].lower() in _CHART_LABEL_STOP or len(labels[k]) > 16 or re.search(r"\d[kKMnpuµ]|^\d+$", labels[k]) for k in keep):
+                continue
+            ncols = len(labels)
+            labels = [labels[k] for k in keep]
+            rows = []
+            blanks = 0
+            while i < len(lines):
+                ln = lines[i]
+                if not ln.strip():
+                    blanks += 1
+                    i += 1
+                    if blanks >= 3:
+                        break
+                    continue
+                blanks = 0
+                cells = [c.strip() for c in re.split(r"\s{2,}", ln.strip())]
+                if len(cells) != ncols + 1 or not _CHART_ROW_REF.match(cells[0]):
+                    break
+                refs = _chart_refs(cells[0])
+                vals = [cells[1 + k] for k in keep]
+                rows.append((refs, [_chart_value(c, refs) for c in vals]))
+                i += 1
+            flat = [c for _, vals in rows for v in vals for c in v.values() if isinstance(c, str)]
+            if len(rows) >= 2 and flat and sum(1 for c in flat if re.fullmatch(r"\d+(?:\.\d+)?", c)) <= len(flat) // 2:
+                charts.append((labels, rows))  # a chart of bare numbers is measured gains, not parts
+    return charts
+
+
+def apply_mod_charts(bom: list[BomRow], charts) -> list[BomRow]:
+    """Per-variant rows from the side charts: the builds are the cross product of the charts'
+    labels (a Standard column adds nothing to the name), parts the charts mention get one row
+    per build, everything else stays shared."""
+    import itertools
+    if not charts:
+        return bom
+    combos = list(itertools.product(*[range(len(labels)) for labels, _ in charts]))
+    if len(combos) > 8:
+        return bom
+    names: list[str] = []
+    for combo in combos:
+        parts = [charts[k][0][j] for k, j in enumerate(combo) if charts[k][0][j].lower() not in _CHART_STANDARD]
+        names.append(" ".join(parts) or "Standard")
+    if len(set(names)) != len(names):
+        return bom
+    by_ref: dict[str, BomRow] = {r.ref.upper(): r for r in bom}
+    charted: dict[str, dict[str, object]] = {}  # ref -> {variant name: value}
+    for combo, name in zip(combos, names):
+        for k, j in enumerate(combo):
+            for refs, values in charts[k][1]:
+                for ref in refs:
+                    v = values[j].get(ref)
+                    if v is None:
+                        continue  # as elsewhere: an earlier chart or the shared row decides
+                    charted.setdefault(ref.upper(), {})[name] = v
+    if not charted:
+        return bom
+    out: list[BomRow] = []
+    done: set[str] = set()
+    for r in bom:
+        key = r.ref.upper()
+        if key not in charted:
+            out.append(r)
+            continue
+        if key in done:
+            continue
+        done.add(key)
+        for name in names:
+            v = charted[key].get(name, r.value)
+            if v is _CHART_OMIT:
+                continue
+            out.append(normalize_row(BomRow(ref=r.ref, value=str(v), part_type=r.part_type, notes=r.notes, category=r.category, variant=name)))
+    for key, per in charted.items():  # a part only the chart names (C11: none / 100n)
+        if key in done:
+            continue
+        for name in names:
+            v = per.get(name)
+            if v is None or v is _CHART_OMIT:
+                continue
+            out.append(normalize_row(BomRow(ref=key, value=str(v), notes="from the build chart", variant=name)))
+    return out
+
+
 def _expand_range_rows(rows: list[BomRow]) -> list[BomRow]:
     """'Q1-Q5  2N5088' is five transistors, not one part called Q1-Q5: expand any row whose
     designator is a range or a comma list, whichever parser produced it."""
@@ -1457,6 +1601,8 @@ def process_document(pdf: Path, vendor: str, slug: str) -> dict:
         bom = parse_shopping_list(pages)
     if not any(r.variant for r in bom):
         bom = variants_from_notes(bom)
+    if not any(r.variant for r in bom):
+        bom = apply_mod_charts(bom, parse_mod_charts(pages))
     page_no = find_schematic_page(pages)
     schematic_rel = ""
     if page_no:

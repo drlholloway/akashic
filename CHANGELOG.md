@@ -60,6 +60,11 @@ GitHub Release notes.
   a variant selector on the page. Notes phrased as mods keep a Standard build; notes
   phrased as builds name the builds themselves.
 
+- Side charts in build notes become variants: a small "Part | DC | AC" or "Part | Standard |
+  Bass" table gives the parts it names one row per build, with the builds as the cross product
+  of the charts (JMK's AC/DC Drive: DC, AC, DC Bass, AC Bass). A Standard column adds nothing
+  to a build's name; "none" omits the part and "jumper" keeps it as one.
+
 ### Fixed
 - JMK PCBs: the seven boards whose notes describe the original without naming it now name
   it (Fuzz Factory, Xotic AC/RC Booster, Darkglass B3K, EA Tremolo, Ampeg Scrambler, Phase 90,

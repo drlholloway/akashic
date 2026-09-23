@@ -56,7 +56,6 @@ at the bottom; re-run them after parser changes.
 | Lectric-FX | Double*Take, Betty Boost | Scanned grids read cell by cell, but the Double*Take's diode cells come out as junk (`INS1T4Z`) and Betty Boost's pot cells read as noise (`LEGKB`, `56EKC`), so no controls |
 | Lectric-FX | Mongrel | Grid OCR reads 45 of 47 parts; C8 and C21 cells are unreadable, R18 reads 1K for 4K7, D1 reads 1N40602 for 1N4002 |
 | JMK PCBs | most boards | Docs rarely state an enclosure (8 of 38 found). The drill templates draw only the board and its pots, and the shop's categories carry no size, so there is no source to read one from |
-| JMK PCBs | AC/DC Drive | The DC / AC and Standard / Bass builds are side tables in the build notes (`Part DC AC`), not row notes, so no variant selector yet |
 | Five Cats | 57 older inserts | No enclosure stamp on the insert (only newer layouts have the "minimum enclosure" badge) |
 | Madbean | Flunkee | Doc link returns 404 (`_folders/1590A/pdf/Flunkee.pdf`) |
 | transistor subs | BS250, 2SK30A, 2N6027, OC139, LND150, CV7351, 1T308A, 2N2646 | Named in parts lists but absent from the transistor parameter database, so no substitutes; placeholders like `NPN`, `GE`, `your choice` are skipped on purpose |
