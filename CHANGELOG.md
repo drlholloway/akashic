@@ -68,6 +68,9 @@ GitHub Release notes.
 - Dead Air Studios (Big Cartel; Google Doc build guides with one part per paragraph, a
   Google Sheet keyed on PART #).
 
+- A shipping caution on Moonn Electronics: a one-person shop that can be slow to ship but
+  does ship everything.
+
 ### Fixed
 - Transistor substitutes: a part the database knows only by a longer maker's spelling (BS250 as
   BS250P, 2SK30A as 2SK30ATM, LND150 as LND150K1) is now found, so those boards get substitutes. Three parts the database

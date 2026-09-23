@@ -94,6 +94,7 @@ VENDOR_KIND = {"pcbway-gtu": "projects", "bentfishbowl": "blog", "expanon": "arc
 
 # A caution shown on every circuit page of a vendor, next to the buy link.
 VENDOR_WARNING = {
+    "moonn": "Moonn is a one-person shop and can be slow to ship, sometimes by weeks. Orders do arrive; allow for the wait.",
     "pcbguitarmania": "Builders widely report inconsistent quality from PCB Guitar Mania boards, and whether a given "
                       "board works is a gamble. Read recent forum reports before ordering.",
 }
