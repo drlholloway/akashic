@@ -47,7 +47,7 @@ at the bottom; re-run them after parser changes.
 | Dead Astronaut | Chasm Reverb, Ebe Delay, Timestream Reverb | Raster docs where thorough OCR still returns nothing |
 | Five Cats | Marshall Supa Fuzz, Vintage Style Fuzz Face | Insert is a wiring diagram with values on the parts, not a table; 1 and 0 rows |
 | GuitarPCB | G.B.O.F. (16-project fuzz board), NostalgiTone Dual Combo Creator | No parts table: the doc lists sixteen projects to build on one board and points to DIY Layout Creator drawings |
-| Five Cats | Rattus | Read as four column strips: 23 to 26 rows per variant of about 27; a few designators still carry a stray digit (R111 for R11) |
+| Five Cats | Rattus | Read as four column strips: 23 to 26 rows per variant of about 27 |
 | Effects Layouts | Schematic Fuzz | Build doc is drill templates only; the schematic is on the silkscreen |
 | Effects Layouts | Lawn Darts | Doc is a single scanned schematic image; thorough and positional OCR at 300 dpi both find nothing |
 | Effects Layouts | Melody Malfunction, Cranky Speaker | Doc has only a shopping list (value, type, quantity), so rows are named by quantity (`×2`) and controls are a knob count |
@@ -63,7 +63,6 @@ at the bottom; re-run them after parser changes.
 
 ## Parser wishes
 
-- Named-pot tables where the taper is a separate column (`LOUD | A | 100k`).
 - Schematic pairing now runs for every board whose parts list is thin, quantity-only or
   names no controls (`enrich.py`): vector text first, then OCR at two resolutions and three
   orientations. It reads clean KiCad and Altium exports; hand-drawn or watermarked

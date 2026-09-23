@@ -160,7 +160,40 @@ def _clean_based_on(text: str) -> str:
     return t
 
 
+def _fix_stray_digits(rows: list) -> None:
+    """OCR reads R11 as R111 and C14 as C141 now and then. An OCR row whose number sits far
+    outside the board's range for that prefix is renamed to the designator one dropped digit
+    gives, when that lands inside the range and is not already taken in the same variant."""
+    by_pre: dict[tuple[str, str], list[int]] = {}
+    for r in rows:
+        m = re.fullmatch(r"([A-Z]{1,3})(\d{1,3})", r.ref)
+        if m:
+            by_pre.setdefault((r.variant, m.group(1)), []).append(int(m.group(2)))
+    for r in rows:
+        if "OCR" not in r.notes:
+            continue
+        m = re.fullmatch(r"([A-Z]{1,3})(\d{3})", r.ref)
+        if not m:
+            continue
+        pre, num = m.group(1), int(m.group(2))
+        others = [n for n in by_pre.get((r.variant, pre), []) if n != num]
+        low = [n for n in others if n < 100]  # two strays must not vouch for each other (C141 and C412 on one board)
+        base = max(low) if len(low) >= 3 else (max(others) if others else 0)
+        if not base or num <= 3 * base:
+            continue
+        taken = set(by_pre.get((r.variant, pre), []))
+        digits = m.group(2)
+        for cand in (digits[:-1], digits[1:], digits[0] + digits[2]):
+            n = int(cand)
+            if 0 < n <= base + 2 and n not in taken:
+                r.ref = f"{pre}{n}"
+                r.notes = (r.notes + f"; read as {pre}{digits}").strip("; ")
+                taken.add(n)
+                break
+
+
 def upsert_circuit(conn: sqlite3.Connection, c: Circuit) -> None:
+    _fix_stray_digits(c.bom)
     c.controls = _dedupe_controls(c.controls)
     c.based_on = _clean_based_on(c.based_on) if c.based_on else c.based_on
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")

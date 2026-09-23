@@ -61,6 +61,9 @@ GitHub Release notes.
   phrased as builds name the builds themselves.
 
 ### Fixed
+- OCR designators with a stray digit (R111 for R11, C141 for C14) are renamed at upsert when
+  the number sits far outside the board's range and one dropped digit lands on an unused
+  designator inside it; the note keeps what was read. 28 boards had one.
 - The column parser reads no notes, so when it wins over the table parser the matching
   rows' notes are carried across (Super Stevie's variant notes were lost this way).
 - Prose words that OCR paired with a nearby value ("Install", "Shown", "Such") no longer
