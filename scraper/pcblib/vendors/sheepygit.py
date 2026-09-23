@@ -23,9 +23,9 @@ TREE = f"https://github.com/{REPO}/tree/main"
 _BULLET = re.compile(r"^\*\s+\[([^\]]+)\]\(/([^/)]+)/\)\s+is the\s+\[([^\]]+)\]\(([^)]+)\)(.*)$")
 # The classic each board goes back to, where the README names one; else the dylan159 circuit.
 _BASED_ON = {"argali": "EQD Plumes", "biggermuff": "EHX Big Muff", "bleepsheep": "", "bluesheep": "Boss BD-2 Blues Driver",
-             "coreshaper": "Dylan159 Core Shaper", "katahdin": "Fairfield Circuitry Barbershop", "pelota2": "Dylan159 Pelota 2",
-             "sarda": "Klon Centaur", "shornsheep": "Fuzz Face", "thatdrive": "Dylan159 that Overdrive",
-             "topazsheep": "Dylan159 Sapphire Amp", "uggsy": "Dylan159 Boot Boost"}
+             "coreshaper": "Bent Fishbowl Core Shaper", "katahdin": "Fairfield Circuitry Barbershop", "pelota2": "Bent Fishbowl Pelota 2",
+             "sarda": "Klon Centaur", "shornsheep": "Fuzz Face", "thatdrive": "Bent Fishbowl that Overdrive",
+             "topazsheep": "Bent Fishbowl Sapphire Amp", "uggsy": "Bent Fishbowl Boot Boost"}
 _CATEGORY = {"bleepsheep": "Utility", "coreshaper": "EQ / Filter", "topazsheep": "Preamp / Amp-in-a-box", "uggsy": "Boost", "pelota2": "Delay",
              "argali": "Overdrive", "katahdin": "Overdrive", "bluesheep": "Overdrive", "sarda": "Overdrive", "thatdrive": "Overdrive"}
 
@@ -116,9 +116,9 @@ class SheepyGit(Adapter):
             return None
         name = clean_text(meta["name"])
         circuit = clean_text(meta["circuit"])
-        desc = f"A layout of dylan159's {circuit}" + (f", {meta['rest']}" if meta["rest"] else "") + ". Designed for JLCPCB; verified working by the author."
+        desc = f"A layout of Bent Fishbowl's (dylan159's) {circuit}" + (f", {meta['rest']}" if meta["rest"] else "") + ". Designed for JLCPCB; verified working by the author."
         m = re.search(r"_v(\d+(?:\.\d+)*)", gerbers[0])
-        c = Circuit(vendor=self.vendor, slug=folder, name=name, url=f"{TREE}/{folder}", based_on=_BASED_ON.get(folder, f"Dylan159 {circuit}"),
+        c = Circuit(vendor=self.vendor, slug=folder, name=name, url=f"{TREE}/{folder}", based_on=_BASED_ON.get(folder, f"Bent Fishbowl {circuit}"),
                     description=desc, price=None, currency="USD", in_stock=None, doc_url=f"{TREE}/{folder}", doc_version=m.group(1) if m else "")
         c.extra_docs["Gerbers"] = f"https://github.com/{REPO}/raw/main/{gerbers[0]}"
         for p in files:

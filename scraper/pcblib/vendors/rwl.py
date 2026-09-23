@@ -173,6 +173,8 @@ class RWL(Adapter):
         circuit = _md_text(meta["circuit"]).replace('"', "")
         m = re.search(r"\((?:based on|Based on)\s+(?:the\s+)?([^)]+)\)", meta["circuit"])
         author = meta["author"].strip()
+        if author.lower() == "dylan159":
+            author = "Bent Fishbowl"  # dylan159 publishes as Bent Fishbowl, a source in this library
         if meta["commercial"]:
             based_on = circuit.split("/")[0].strip()
         elif m:
@@ -185,8 +187,8 @@ class RWL(Adapter):
         body = md.split("## ", 1)[0] if "## " in md else md
         paras = [p for p in re.split(r"\n\s*\n", body) if p.strip() and not p.strip().startswith(("#", "![", "[!"))]
         description = _md_text(paras[0]) if paras else ""
-        if not meta["commercial"] and meta["author"] and circuit and circuit.upper() != "N/A":
-            description = f"A layout of {meta['author']}'s {circuit}. " + description
+        if not meta["commercial"] and author and circuit and circuit.upper() != "N/A":
+            description = f"A layout of {author}'s {circuit}. " + description
         text = _md_text(md)
         c = Circuit(vendor=self.vendor, slug=slug, name=name, url=f"{TREE}/{path}", based_on=based_on, description=description,
                     price=None, currency="USD", in_stock=None, doc_url=f"{TREE}/{path}",
@@ -217,6 +219,14 @@ class RWL(Adapter):
             c.extra_docs["Gerbers"] = f"https://github.com/{REPO}/raw/refs/heads/main/{zips[0]}"
         if f"{path}/interactive_bom.html" in folder:
             c.extra_docs["Interactive BOM"] = f"https://html-preview.github.io/?url=https://github.com/{REPO}/blob/main/{path}/interactive_bom.html"
+        # The designer's own write-up: dylan159's posts at Bent Fishbowl, or a freestompboxes thread.
+        circuit_label = re.sub(r"\s*\(.*\)", "", circuit).strip() or "circuit"
+        bf = re.findall(r"\((https://bentfishbowl\.wixsite\.com/electronics/post/[^)\s]+)\)", md)
+        fsb = re.findall(r"\((https://www\.freestompboxes\.org/viewtopic\.php\?[^)\s]+)\)", md)
+        if bf:
+            c.extra_docs[f"{circuit_label} at Bent Fishbowl"] = bf[0]
+        elif fsb:
+            c.extra_docs[f"{circuit_label} thread at freestompboxes"] = fsb[0]
         pw = re.search(r"\((https://www\.pcbway\.com/project/shareproject/[^)]+)\)", md)
         if pw:
             c.extra_docs["Order at PCBWay"] = pw.group(1)
