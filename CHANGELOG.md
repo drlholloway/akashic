@@ -61,6 +61,9 @@ GitHub Release notes.
   phrased as builds name the builds themselves.
 
 ### Fixed
+- JMK PCBs: the seven boards whose notes describe the original without naming it now name
+  it (Fuzz Factory, Xotic AC/RC Booster, Darkglass B3K, EA Tremolo, Ampeg Scrambler, Phase 90,
+  Jon Patton's Blue Warbler); descriptions no longer start with the tab's HTML attributes.
 - OCR designators with a stray digit (R111 for R11, C141 for C14) are renamed at upsert when
   the number sits far outside the board's range and one dropped digit lands on an unused
   designator inside it; the note keeps what was read. 28 boards had one.

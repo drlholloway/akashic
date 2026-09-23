@@ -32,8 +32,10 @@ _BASED_ON = {
     "happy-birthday-overdrive": "BJFe Honey Bee Overdrive", "mini-comp": "Valve Wizard Engineer's Thumb",
     "engineers-thumb-compressor": "Valve Wizard Engineer's Thumb", "soft-sustain-drive": "Cornish SS-2", "hamlet": "Jon Patton Hamlet Delay",
     "little-angel": "Frequency Central Little Angel", "companion-fuzz": "Shin-ei FY-2 Companion Fuzz", "scuba-muff": "EHX Big Muff",
-    "si-fuzz": "Fuzz Face (silicon)", "expandora": "Bixonic Expandora", "big-bass-drive": "", "level-up": "", "acdc-drive": "",
-    "classic-tremolo": "", "5-knob-fuzz": "", "blue-warbler-2": "", "super-phaser": "", "headphone-amplifier": "",
+    "si-fuzz": "Fuzz Face (silicon)", "expandora": "Bixonic Expandora", "big-bass-drive": "Darkglass Microtubes B3K",
+    "level-up": "Ampeg Scrambler", "acdc-drive": "Xotic AC Booster / RC Booster",
+    "classic-tremolo": "EA Tremolo", "5-knob-fuzz": "ZVex Fuzz Factory", "blue-warbler-2": "Jon Patton Blue Warbler",
+    "super-phaser": "MXR Phase 90", "headphone-amplifier": "",
 }
 _CATEGORY = {"blue-warbler-2": "Tremolo", "panner": "Tremolo", "paralyzer": "Utility", "tiny-tester": "Utility",
              "level-up": "Octave / Pitch", "the-taptation": "Utility", "super-phaser": "Phaser", "flender-bender": "Fuzz",
@@ -65,6 +67,7 @@ class JMK(Adapter):
                 break
         name = clean_text(ld["name"]) if ld else clean_text(re.sub(r"<[^>]+>", "", (re.search(r'class="product_title[^"]*">(.*?)</h1>', page, re.S) or [None, slug])[1]))
         i = page.find('id="tab-description"')
+        i = page.find(">", i) + 1 if i > 0 else i  # past the tab's own attributes
         desc_html = page[i:page.find("</div>", page.find("Reviews", i))] if i > 0 else ""
         # Innermost anchors only: one page nests a dead localhost link around the real one.
         links = [(u, clean_text(t)) for u, t in re.findall(r'<a href="([^"]+)"[^>]*>([^<]*)</a>', desc_html)]
@@ -73,6 +76,7 @@ class JMK(Adapter):
             return None  # kits, parts and pages without a build document
         body = html_to_text(re.sub(r"<a [^>]*>.*?</a>", "", desc_html, flags=re.S))
         body = clean_text(re.sub(r"^\s*Description\s*$", "", body, flags=re.M))
+        body = re.sub(r"\s*Reviews\s+There are no reviews yet\.?\s*$", "", body)
         cats = sorted(set(re.findall(r"product_cat-([a-z0-9-]+)", page)))
         offer = (ld or {}).get("offers", [{}])
         offer = offer[0] if isinstance(offer, list) and offer else (offer if isinstance(offer, dict) else {})
