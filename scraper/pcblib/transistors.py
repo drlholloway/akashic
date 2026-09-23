@@ -195,11 +195,32 @@ def _digits(pn: str) -> str:
     return m.group(0) if m else pn.upper()
 
 
+# Parts the database does not list, anchored to the equivalent it does: the same die under
+# another register (CV7351 is the UK military number for the 2N1308; 1T308A is the Latin
+# spelling of the Soviet GT308A) or the closest listed equivalent (Mullard's OC139, an NPN
+# germanium type rated 20 V, 130 mW, hFE 30 minimum, against the ASY29's 15 V, 150 mW, hFE 30).
+_ALIASES = {"CV7351": "2N1308", "1T308A": "GT308A", "OC139": "ASY29", "OC140": "ASY29", "CV7112": "ASY29"}
+
+
 def lookup(conn: sqlite3.Connection, pn: str) -> dict | None:
-    for cand in _candidates(pn):
+    cols = [c[1] for c in conn.execute("PRAGMA table_info(specs)")]
+    cands = _candidates(pn)
+    for cand in cands:
+        if cand in _ALIASES:
+            row = conn.execute("SELECT * FROM specs WHERE partnum = ? COLLATE NOCASE", (_ALIASES[cand],)).fetchone()
+            if row:
+                return {**dict(zip(cols, row)), "anchor": _ALIASES[cand]}
+    for cand in cands:
         row = conn.execute("SELECT * FROM specs WHERE partnum = ? COLLATE NOCASE", (cand,)).fetchone()
         if row:
-            cols = [c[1] for c in conn.execute("PRAGMA table_info(specs)")]
+            return dict(zip(cols, row))
+    # The database often knows a part only by a longer maker's spelling: BS250 as BS250P,
+    # 2SK30A as 2SK30ATM. Take the shortest such name for the first spelling that has one.
+    for cand in cands:
+        if len(cand) < 5:
+            continue
+        row = conn.execute("SELECT * FROM specs WHERE partnum LIKE ? COLLATE NOCASE ORDER BY length(partnum), partnum LIMIT 1", (cand + "%",)).fetchone()
+        if row:
             return dict(zip(cols, row))
     return None
 

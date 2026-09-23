@@ -66,6 +66,10 @@ GitHub Release notes.
   to a build's name; "none" omits the part and "jumper" keeps it as one.
 
 ### Fixed
+- Transistor substitutes: a part the database knows only by a longer maker's spelling (BS250 as
+  BS250P, 2SK30A as 2SK30ATM, LND150 as LND150K1) is now found, so those boards get substitutes. Three parts the database
+  lacks are anchored to a listed equivalent and say so on the page: CV7351 to the 2N1308 (its
+  commercial number), 1T308A to the GT308A (its Latin spelling), OC139 to the ASY29.
 - JMK PCBs: the seven boards whose notes describe the original without naming it now name
   it (Fuzz Factory, Xotic AC/RC Booster, Darkglass B3K, EA Tremolo, Ampeg Scrambler, Phase 90,
   Jon Patton's Blue Warbler); descriptions no longer start with the tab's HTML attributes.

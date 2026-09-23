@@ -58,7 +58,7 @@ at the bottom; re-run them after parser changes.
 | JMK PCBs | most boards | Docs rarely state an enclosure (8 of 38 found). The drill templates draw only the board and its pots, and the shop's categories carry no size, so there is no source to read one from |
 | Five Cats | 57 older inserts | No enclosure stamp on the insert (only newer layouts have the "minimum enclosure" badge) |
 | Madbean | Flunkee | Doc link returns 404 (`_folders/1590A/pdf/Flunkee.pdf`) |
-| transistor subs | BS250, 2SK30A, 2N6027, OC139, LND150, CV7351, 1T308A, 2N2646 | Named in parts lists but absent from the transistor parameter database, so no substitutes; placeholders like `NPN`, `GE`, `your choice` are skipped on purpose |
+| transistor subs | 2N6027, 2N2646 | A PUT and a UJT, which the database lists without parameters, so no substitutes. OC139, 1T308A and CV7351 are anchored to listed equivalents (ASY29, GT308A, 2N1308). Placeholders like `NPN`, `GE`, `your choice` are skipped on purpose |
 
 ## Parser wishes
 

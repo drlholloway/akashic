@@ -149,6 +149,7 @@ def _transistor_subs(conn) -> dict:
         subs = substitutes(tdb, spec, popularity)
         fields = ("hfe", "vce", "ic", "pc", "ft", "vds", "vgs", "vgsth", "idmax", "pd", "rds")
         out[value] = {"kind": spec["kind"], "mat": spec.get("mat"), "pol": spec.get("pol"), "ch": spec.get("ch"),
-                      "spec": {"pn": spec["partnum"], **{k: spec[k] for k in fields if spec.get(k) is not None}}, **subs}
+                      "spec": {"pn": spec["partnum"], **{k: spec[k] for k in fields if spec.get(k) is not None}},
+                      **({"anchor": spec["anchor"]} if spec.get("anchor") else {}), **subs}
     tdb.close()
     return out

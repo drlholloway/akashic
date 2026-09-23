@@ -146,6 +146,7 @@ export interface SubsEntry {
 	pol?: string;
 	ch?: string;
 	spec: TransistorSpec;
+	anchor?: string; // the listed equivalent whose parameters stand in for a part the database lacks
 	used: TransistorSpec[];
 	closest: TransistorSpec[];
 }

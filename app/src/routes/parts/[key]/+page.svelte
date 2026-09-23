@@ -58,6 +58,9 @@
 				<div>
 					<h3 class="label">This part</h3>
 					{@render table([subs.spec], false)}
+					{#if subs.anchor}
+						<p class="note">The database does not list this number. The parameters and matches are those of the {subs.anchor}, its closest listed equivalent.</p>
+					{/if}
 				</div>
 				{#if subs.used.length}
 					<div>
