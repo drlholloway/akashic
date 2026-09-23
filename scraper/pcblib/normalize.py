@@ -114,6 +114,8 @@ def categorize(ref: str, part_type: str, value: str = "") -> str:
     for hint, cat in _TYPE_HINTS:
         if hint in t:
             return cat
+    if re.match(r"^(?:REG|VREG|U)\d*$", r, re.I):
+        return "IC"  # a voltage regulator
     # Named pots: VOLUME, GAIN, TONE ... (PedalPCB style)
     if r.isalpha() and r.isupper() and len(r) >= 3:
         return "POT"
@@ -137,6 +139,7 @@ def normalize_row(row: BomRow) -> BomRow:
     if row.category == "POT" and re.search(r"[SD]P[SD]T|3PDT|4PDT", row.value.upper()):
         row.category = "SW"
     raw = row.value.strip().replace("ų", "u").replace("μ", "u").replace("µ", "u")
+    raw = re.sub(r"^(\d+(?:[.,]\d+)?)\s+([kKMRpnu])([Ff])?(?=\s|$)", r"\1\2\3", raw)  # '1 K', '2.2 M', '100 uf': a space before the unit
     if row.category in ("D", "Q", "IC", "OPTO"):
         raw = re.sub(r"[*+†‡]+$", "", raw).strip()          # footnote markers: 2N5458**, 1N4148+
         raw = re.sub(r"\s+[A-Z]$", "", raw)                  # stray column bleed: "1N5817 S"

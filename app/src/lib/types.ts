@@ -1,4 +1,4 @@
-export type Vendor = 'pedalpcb' | 'aionfx' | 'madbean' | 'guitarpcb' | 'fuzzdog' | 'sheepylove' | 'deadendfx' | 'moonn' | 'fivecats' | 'parasit' | 'pcbway-gtu' | 'pcbguitarmania' | 'deadastronaut' | 'bentfishbowl' | 'ggg' | 'lectricfx' | 'expanon' | 'zerogiod' | 'otrfx' | 'dirtmonger' | 'maskaudio' | 'effectslayouts' | 'jmk' | 'eae' | 'c2c';
+export type Vendor = 'pedalpcb' | 'aionfx' | 'madbean' | 'guitarpcb' | 'fuzzdog' | 'sheepylove' | 'deadendfx' | 'moonn' | 'fivecats' | 'parasit' | 'pcbway-gtu' | 'pcbguitarmania' | 'deadastronaut' | 'bentfishbowl' | 'ggg' | 'lectricfx' | 'expanon' | 'zerogiod' | 'otrfx' | 'dirtmonger' | 'maskaudio' | 'effectslayouts' | 'jmk' | 'eae' | 'c2c' | 'deadair';
 
 export interface IndexEntry {
 	id: string;
@@ -92,7 +92,8 @@ export const VENDOR_NAMES: Record<Vendor, string> = {
 	effectslayouts: 'Effects Layouts',
 	jmk: 'JMK PCBs',
 	eae: 'Electronic Audio Experiments',
-	c2c: 'C2C Electronics'
+	c2c: 'C2C Electronics',
+	deadair: 'Dead Air Studios'
 };
 
 export type VendorKind = 'shop' | 'projects' | 'blog' | 'archive';

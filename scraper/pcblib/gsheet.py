@@ -80,8 +80,10 @@ def grid_bom(grid: list[list[str]]) -> tuple[list[BomRow], str]:
         if not any(cells):
             continue
         low = [c.lower() for c in cells]
-        if "value" in low and any(k in low for k in ("ref", "refs", "reference", "references", "designator", "designators")):
+        if "value" in low and any(k in low for k in ("ref", "refs", "reference", "references", "designator", "designators", "part #", "part")):
             cols = {_XLSX_COLS[c]: i for i, c in enumerate(low) if c in _XLSX_COLS}
+            if "ref" not in cols:  # 'PART #' names the designator when nothing else does
+                cols["ref"] = next(i for i, c in enumerate(low) if c in ("part #", "part"))
             continue
         if not cols or "ref" not in cols or "value" not in cols:
             continue
@@ -108,6 +110,9 @@ def grid_bom(grid: list[list[str]]) -> tuple[list[BomRow], str]:
             else:
                 continue
             v = re.sub(r"^A(\d+(?:\.\d+)?[kKM]?)\s+Rev(?:erse)?\.?$", r"C\1", value, flags=re.I)  # 'A10k Rev': reverse audio
+            if cat in ("POT", "SW", "TRIM") and re.search(r"\s{2,}", v):  # 'A500K    16MM POTENTIOMETER', 'SPDT    ON / ON TOGGLE SWITCH'
+                v, tail = re.split(r"\s{2,}", v, 1)
+                ptype = ptype or tail
             nr = normalize_row(BomRow(ref=ref.upper() if cat != "SW" else ref.title(), value=v, part_type=ptype, notes=note, category=cat))
             if is_plausible(nr) or cat in ("SW", "POT", "TRIM"):
                 seen.add(ref.upper())

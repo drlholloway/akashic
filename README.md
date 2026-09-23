@@ -35,6 +35,7 @@ It ships as a static, offline-capable web app (PWA) that installs on macOS, Linu
 | JMK PCBs | ~39 | parsed from the build-doc PDF | WooCommerce with the REST API off, so products come from the sitemap and each page's JSON-LD; multi-column parts tables; prices in USD |
 | Electronic Audio Experiments | 4 | spreadsheet BOM (exact), else the builder's guide | Squarespace DIY collection of retired EAE pedals; LaTeX-set guides name the controls; prices in USD |
 | C2C Electronics | 15 | build document (Comment / Description / Designator / Qty tables; older docs list quantities only) | WooCommerce store; all-tube high-voltage preamps and pedals, docs on the site or Google Drive; prices in USD |
+| Dead Air Studios | 5 | Google Doc build guide (one part per paragraph) or Google Sheet | Big Cartel shop; only the DIY PCB products are circuits; prices in USD |
 | PCBWay: Glory to Ukraine | ~337 | none (BOM needs a PCBWay login) | one member's shared projects via the member JSONP list; schematic PNGs are CC BY-SA; no prices |
 
 ### Transistor substitutes

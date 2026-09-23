@@ -82,6 +82,8 @@ VENDORS = {
     "c2c": ("C2C Electronics", "https://c2celectronics.com/product-category/diy-project/",
             "Conspiracy to Commit Electronics (formerly Sushi Box FX) build documents are indexed and linked, not redistributed. "
             "Every board is a high-voltage tube circuit; the vendor says none is a beginner project."),
+    "deadair": ("Dead Air Studios", "https://deadairstudios.bigcartel.com/products",
+                "Build guides are Google Docs by Dead Air Studios; indexed and linked, not redistributed. The shop is mostly finished pedals; only the DIY PCBs are listed here."),
     "pcbway-gtu": ("PCBWay: Glory to Ukraine", "https://www.pcbway.com/project/member/?bmbno=19C5FC6C-66B1-46",
                    "Shared projects are CC BY-SA 3.0; schematic images may be shown with attribution. BOM and gerbers need a PCBWay login."),
 }

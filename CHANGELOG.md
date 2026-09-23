@@ -65,6 +65,9 @@ GitHub Release notes.
   of the charts (JMK's AC/DC Drive: DC, AC, DC Bass, AC Bass). A Standard column adds nothing
   to a build's name; "none" omits the part and "jumper" keeps it as one.
 
+- Dead Air Studios (Big Cartel; Google Doc build guides with one part per paragraph, a
+  Google Sheet keyed on PART #).
+
 ### Fixed
 - Transistor substitutes: a part the database knows only by a longer maker's spelling (BS250 as
   BS250P, 2SK30A as 2SK30ATM, LND150 as LND150K1) is now found, so those boards get substitutes. Three parts the database
