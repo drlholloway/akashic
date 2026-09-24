@@ -1,4 +1,4 @@
-export type Vendor = 'pedalpcb' | 'aionfx' | 'madbean' | 'guitarpcb' | 'fuzzdog' | 'sheepylove' | 'deadendfx' | 'moonn' | 'fivecats' | 'parasit' | 'pcbway-gtu' | 'pcbguitarmania' | 'deadastronaut' | 'bentfishbowl' | 'ggg' | 'lectricfx' | 'expanon' | 'zerogiod' | 'otrfx' | 'dirtmonger' | 'maskaudio' | 'effectslayouts' | 'jmk' | 'eae' | 'c2c' | 'deadair' | 'rwlpedal' | 'sheepygit';
+export type Vendor = 'pedalpcb' | 'aionfx' | 'madbean' | 'guitarpcb' | 'fuzzdog' | 'sheepylove' | 'deadendfx' | 'moonn' | 'fivecats' | 'parasit' | 'pcbway-gtu' | 'pcbguitarmania' | 'deadastronaut' | 'bentfishbowl' | 'ggg' | 'lectricfx' | 'expanon' | 'zerogiod' | 'otrfx' | 'dirtmonger' | 'maskaudio' | 'effectslayouts' | 'jmk' | 'eae' | 'c2c' | 'deadair' | 'rwlpedal' | 'sheepygit' | 'otherpedals';
 
 export interface IndexEntry {
 	id: string;
@@ -95,7 +95,8 @@ export const VENDOR_NAMES: Record<Vendor, string> = {
 	c2c: 'C2C Electronics',
 	deadair: 'Dead Air Studios',
 	rwlpedal: 'RWL Pedals',
-	sheepygit: 'Sheepylove on GitHub'
+	sheepygit: 'Sheepylove on GitHub',
+	otherpedals: 'Other Pedals'
 };
 
 export type VendorKind = 'shop' | 'projects' | 'repo' | 'blog' | 'archive';

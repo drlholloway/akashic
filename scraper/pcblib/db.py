@@ -88,6 +88,8 @@ VENDORS = {
                  "Layouts shared on GitHub under CC BY-NC-SA 4.0; download the gerbers and order at a fab. Parts lists and schematics are indexed and linked."),
     "sheepygit": ("Sheepylove on GitHub", "https://github.com/szukalski/pedal-dylan159",
                   "Sheepylove's layouts for dylan159 designs, shared on GitHub under CC BY-NC-SA 4.0; download the gerbers and order at a fab. Schematics are on the Bent Fishbowl blog."),
+    "otherpedals": ("Other Pedals", "https://www.otherpedals.com/shop",
+                    "Other* DIY parts lists, schematics and drill guides are images on the product pages; indexed and linked, not redistributed."),
     "pcbway-gtu": ("PCBWay: Glory to Ukraine", "https://www.pcbway.com/project/member/?bmbno=19C5FC6C-66B1-46",
                    "Shared projects are CC BY-SA 3.0; schematic images may be shown with attribution. BOM and gerbers need a PCBWay login."),
 }

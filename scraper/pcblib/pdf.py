@@ -1561,6 +1561,51 @@ def apply_mod_charts(bom: list[BomRow], charts) -> list[BomRow]:
     return out
 
 
+_ND_HEADER = re.compile(r"^\s*Name\s+Designators?\s+(?:Footprint|Package)\s+(?:Quantity|Qty)\b", re.I)
+_ND_ROW = re.compile(r"^\s*(\S.*?\S|\S)\s{2,}((?:[A-Za-z]{1,4}\d{1,3}[A-Za-z]?|[A-Z][A-Z0-9_]{2,14})(?:\s*,\s*(?:[A-Za-z]{0,4}\d{1,3}[A-Za-z]?|[A-Z][A-Z0-9_]{2,14}))*)\s{2,}(\S.*?)\s{2,}(\d{1,3})\s*$")
+
+
+def parse_bom_name_designator(pages: list[str]) -> list[BomRow]:
+    """EasyEDA / JLCPCB-style exports: 'Name | Designator | Footprint | Quantity', one line per
+    value with the designators grouped ('B100k  DRIP,TONE  ALPHA16MMPOT  2'). Named pots and
+    switches keep their names; the footprint becomes the part type."""
+    rows: list[BomRow] = []
+    seen: set[str] = set()
+    on = False
+    for page in pages:
+        for ln in page.splitlines():
+            if _ND_HEADER.match(ln):
+                on = True
+                continue
+            if not on or not ln.strip():
+                continue
+            m = _ND_ROW.match(ln)
+            if not m:
+                if re.match(r"^\s*(Schematic|Drill|Wiring|Layout|Notes?)\b", ln, re.I):
+                    on = False
+                continue
+            value, refs, footprint, _qty = m.groups()
+            value = re.sub(r"\s+-\s+\S+$|\s+(?:NPN|PNP)$", "", value.strip())  # 'J201 - DSG', '2N5088 NPN'
+            ptype = footprint.strip()
+            for ref in re.split(r"\s*,\s*", refs):
+                if not ref or ref.upper() in seen:
+                    continue
+                if re.fullmatch(r"[A-Za-z]{1,4}\d{1,3}[A-Za-z]?", ref):
+                    cat, name = "", ref.upper()
+                elif re.fullmatch(r"[ABCW]\d+(?:[.,]\d+)?[kKM]?", value):
+                    cat, name = "POT", ref.replace("_", " ").title()
+                elif re.search(r"[SD]P[SD]T|\dP\dT|switch|toggle", value + " " + ptype, re.I):
+                    cat, name = "SW", ref.replace("_", " ").title()
+                else:
+                    continue
+                v = re.sub(r"^LED[-_].*$", "LED", value) if name.upper().startswith("LED") else value
+                nr = normalize_row(BomRow(ref=name, value=v, part_type=ptype, category=cat))
+                if cat or is_plausible(nr):
+                    seen.add(name.upper())
+                    rows.append(nr)
+    return rows
+
+
 def _expand_range_rows(rows: list[BomRow]) -> list[BomRow]:
     """'Q1-Q5  2N5088' is five transistors, not one part called Q1-Q5: expand any row whose
     designator is a range or a comma list, whichever parser produced it."""
@@ -1585,7 +1630,8 @@ def process_document(pdf: Path, vendor: str, slug: str) -> dict:
     # Vendors lay their parts lists out three ways; run every parser and keep the
     # one that recovered the most designators (they never both succeed on one doc).
     tabled = parse_bom(pages)
-    bom = _expand_range_rows(max((tabled, parse_bom_qty_value_parts(pages), parse_bom_columns(pages), parse_bom_qty_value_ref(pages)), key=len))
+    bom = _expand_range_rows(max((tabled, parse_bom_qty_value_parts(pages), parse_bom_columns(pages), parse_bom_qty_value_ref(pages),
+                                  parse_bom_name_designator(pages)), key=len))
     if bom is not tabled and tabled:
         # The column parser reads no notes; carry them over from the table parser's matching rows.
         noted = {(r.ref.upper(), r.norm_value): r.notes for r in tabled if r.notes}

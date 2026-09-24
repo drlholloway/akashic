@@ -77,6 +77,10 @@ GitHub Release notes.
 - Sheepylove on GitHub: twelve layouts of dylan159 designs with gerbers, nine of them not in
   the Sheepylove shop.
 
+- Other Pedals (Other* DIY): parts lists are images read by OCR in two columns; the two PDF
+  build docs use an EasyEDA-style Name / Designator / Footprint / Quantity table, which the
+  shared parsers now read for every vendor.
+
 ### Fixed
 - Transistor substitutes: a part the database knows only by a longer maker's spelling (BS250 as
   BS250P, 2SK30A as 2SK30ATM, LND150 as LND150K1) is now found, so those boards get substitutes. Three parts the database

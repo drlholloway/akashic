@@ -38,6 +38,7 @@ It ships as a static, offline-capable web app (PWA) that installs on macOS, Linu
 | Dead Air Studios | 5 | Google Doc build guide (one part per paragraph) or Google Sheet | Big Cartel shop; only the DIY PCB products are circuits; prices in USD |
 | RWL Pedals | 41 | README markdown parts table, else the KiCad interactive BOM | GitHub repository of KiCad layouts with gerbers (CC BY-NC-SA); every board fits a 125B; no prices |
 | Sheepylove on GitHub | 12 | CSV parts list where one exists; pot names read off the board render | Sheepylove's layouts for dylan159 designs with gerbers (CC BY-NC-SA); nine are not in the shop |
+| Other Pedals | 10 | OCR of the value-first parts-list image (two columns), or the Name / Designator export table in a PDF | Squarespace shop; documents are JPEG images bundled into one cached PDF per board; prices in USD |
 | PCBWay: Glory to Ukraine | ~337 | none (BOM needs a PCBWay login) | one member's shared projects via the member JSONP list; schematic PNGs are CC BY-SA; no prices |
 
 ### Transistor substitutes
