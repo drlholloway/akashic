@@ -58,7 +58,8 @@ at the bottom; re-run them after parser changes.
 | JMK PCBs | most boards | Docs rarely state an enclosure (8 of 38 found). The drill templates draw only the board and its pots, and the shop's categories carry no size, so there is no source to read one from |
 | Five Cats | 57 older inserts | No enclosure stamp on the insert (only newer layouts have the "minimum enclosure" badge) |
 | Sheepylove on GitHub | Katahdin, Sarda, Shorn Sheep | No parts list in the repository and the board render's labels do not OCR, so no controls; the schematics are on the Bent Fishbowl blog |
-| Frog Pedals, TH Custom Effects | all boards | No build documents are published (Frog sends them to buyers; TH Custom sells 'PCB only'), so the listings carry no parts |
+| Frog Pedals | all boards | No build documents are published (Frog sends them to buyers), so the listing carries no parts |
+| TH Custom Effects | ROG Umble | Its build-instructions link is a PNG sheet rather than the HTML documentation the other boards have; no parts read from it |
 | Tonepad | EA Tremolo, MXR Noise Gate, Purple Peaker, Rebote 3, Ross Phaser, Speaker Simulator, Tremulus Lune, DOD 250 | Layout PDFs with no text layer (or, for the DOD 250, no file on the project page), so no parts list; the other 47 layouts parse |
 | WRAA Labs | Retroflect, Inkcap II | The Retroflect guide has no parts list; the Inkcap page's description is cut before its pots, so no controls |
 | Madbean | Flunkee | Doc link returns 404 (`_folders/1590A/pdf/Flunkee.pdf`) |

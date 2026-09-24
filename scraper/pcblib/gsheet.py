@@ -10,7 +10,7 @@ from .normalize import is_plausible, normalize_row
 
 _ID = re.compile(r"docs\.google\.com/spreadsheets/d/([A-Za-z0-9_-]{20,})")
 _REF = re.compile(r"^(?:R|C|D|Q|IC|U|L|SW|LED|VR|TR|CLR|LEDR|RPD)\d{0,3}[A-Z]?$", re.I)
-_POTVAL = re.compile(r"^(?:[ABCW]\s?\d+(?:[.,]\d+)?[kKM]?|\d+(?:[.,]\d+)?[kKM]?\s?[ABCW]|\d+(?:[.,]\d+)?[kKM]?\s*trim)(?:\s.*)?$", re.I)
+_POTVAL = re.compile(r"^(?:[ABCW]\s?\d+(?:[.,]\d+)?[kKM]?|\d+(?:[.,]\d+)?[kKM]?\s?-?\s?[ABCW]|\d+(?:[.,]\d+)?[kKM]?\s*trim)(?:\s.*)?$", re.I)
 
 
 def sheet_id(url: str) -> str:
@@ -62,6 +62,8 @@ def sheet_bom(fetcher, url: str) -> list[BomRow]:
     return rows
 
 
+_POTWORD = re.compile(r"^(\d+(?:[.,]\d+)?[kKM]?)\s*(?:Ω|ohms?)?\s+(linear|lin|log|audio|logarithmic|rev-?log|reverse(?: log| audio)?|anti-?log)\b", re.I)
+_TAPERS = {"linear": "B", "lin": "B", "log": "A", "audio": "A", "logarithmic": "A", "revlog": "C", "reverse": "C", "reverselog": "C", "reverseaudio": "C", "antilog": "C"}
 _XLSX_COLS = {"qty": "qty", "quantity": "qty", "ref": "ref", "refs": "ref", "reference": "ref", "references": "ref", "designator": "ref", "refdes": "ref", "pattern": "package",
               "designators": "ref", "value": "value", "description": "type", "type": "type", "rating/package": "type", "package": "package", "notes": "notes", "note": "notes"}
 
@@ -87,9 +89,12 @@ def grid_bom(grid: list[list[str]]) -> tuple[list[BomRow], str]:
             if "ref" not in cols:  # 'PART #' names the designator when nothing else does
                 cols["ref"] = next(i for i, c in enumerate(low) if c in ("part #", "part"))
             continue
-        if not cols or "ref" not in cols or "value" not in cols:
-            continue
+        if not cols or "ref" not in cols or "value" not in cols or len(cells) <= max(cols["ref"], cols["value"]):
+            continue  # a section heading spanning the table is a short row
         refs, value = cells[cols["ref"]], cells[cols["value"]]
+        value = re.sub(r"\s*\([^)]*\)\s*$", "", value)  # '10 kΩ log (A10K)', '100 k log (A)'
+        value = re.sub(r"^(\d+(?:[.,]\d+)?)\s+([kKM])(?=\s|Ω|$|-)", r"\1\2", value)  # '10 kΩ' -> '10kΩ'
+        value = re.sub(r"^(\d+(?:[.,]\d+)?[kKM]?)(?:Ω|ohms?)?-(?=[A-Za-z])", r"\1 ", value)  # '50k-lin' -> '50k lin'; '1k-B' is handled below
         ptype = cells[cols["type"]] if "type" in cols and cols["type"] < len(cells) else ""
         note = cells[cols["notes"]] if "notes" in cols and cols["notes"] < len(cells) else ""
         if not refs or not value:
@@ -105,13 +110,17 @@ def grid_bom(grid: list[list[str]]) -> tuple[list[BomRow], str]:
                 continue
             if _REF.match(ref) or re.fullmatch(r"[A-Z]{1,4}\d{1,3}[A-Z]?", ref):
                 cat = ""
-            elif _POTVAL.match(value) or re.search(r"potentiometer", ptype, re.I):
+            elif _POTVAL.match(value) or re.search(r"potentiometer", ptype, re.I) or _POTWORD.match(value):
                 cat = "TRIM" if re.search(r"trim", ptype + value, re.I) else "POT"
+                mw = _POTWORD.match(value)
+                if mw:  # '10kΩ linear', '500kΩ rev-log' -> B10k, C500k
+                    value = _TAPERS[re.sub(r"[^a-z]", "", mw.group(2).lower())] + mw.group(1)
             elif re.search(r"[SD]P[SD]T|\dP[SD]T|toggle|rotary|switch", value + " " + ptype, re.I):
                 cat = "SW"
             else:
                 continue
             v = re.sub(r"^A(\d+(?:\.\d+)?[kKM]?)\s+Rev(?:erse)?\.?$", r"C\1", value, flags=re.I)  # 'A10k Rev': reverse audio
+            v = re.sub(r"^(\d+(?:[.,]\d+)?[kKM]?)\s?-\s?([ABCW])$", r"\2\1", v, flags=re.I)  # '1k-B' -> B1k
             if cat in ("POT", "SW", "TRIM") and re.search(r"\s{2,}", v):  # 'A500K    16MM POTENTIOMETER', 'SPDT    ON / ON TOGGLE SWITCH'
                 v, tail = re.split(r"\s{2,}", v, 1)
                 ptype = ptype or tail

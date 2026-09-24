@@ -46,7 +46,7 @@ It ships as a static, offline-capable web app (PWA) that installs on macOS, Linu
 | Tonepad | 55 | parts list on the layout page ('R1, R2 – 1M' or 'qty - value' per section) | Classic ASP catalog; layouts served only with the project page as referer; prices in USD |
 | WRAA Labs | 4 | inline list in the build guide's page text ('R1 = 1k') | Big Cartel; lo-fi digital kits; prices in GBP |
 | Frog Pedals | 5 | none: documentation is sent to buyers | WooCommerce behind a browser-agent check; listing only; prices in USD |
-| TH Custom Effects | 10 | none: 'PCB only', no documents published | WooCommerce; listing only; prices in EUR |
+| TH Custom Effects | 22 | HTML build documentation with a Ref / Qty / Value / Notes table (linked from the shop table and product pages) | WooCommerce; prices in EUR |
 | PCBWay: Glory to Ukraine | ~337 | none (BOM needs a PCBWay login) | one member's shared projects via the member JSONP list; schematic PNGs are CC BY-SA; no prices |
 
 ### Transistor substitutes

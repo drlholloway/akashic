@@ -82,8 +82,8 @@ GitHub Release notes.
   shared parsers now read for every vendor.
 
 - Eight sources at once: God City Instruments, 1776 Effects, Rullywow Industries, MAS Effects,
-  Tonepad, WRAA Labs, Frog Pedals and TH Custom Effects. Frog and TH Custom publish no build
-  documents, so they are listing-only.
+  Tonepad, WRAA Labs, Frog Pedals and TH Custom Effects. Frog publishes no build documents, so
+  it is listing-only; TH Custom's shop table links HTML build documentation per board.
 - Shared parsers learned three layouts on the way: Word tables exported one cell per line, a
   table that continues onto the next page without its header, and a grouped
   Designator / Qty / Name export; spreadsheet readers accept a Name column as the value.
