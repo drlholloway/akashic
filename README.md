@@ -39,6 +39,14 @@ It ships as a static, offline-capable web app (PWA) that installs on macOS, Linu
 | RWL Pedals | 41 | README markdown parts table, else the KiCad interactive BOM | GitHub repository of KiCad layouts with gerbers (CC BY-NC-SA); every board fits a 125B; no prices |
 | Sheepylove on GitHub | 12 | CSV parts list where one exists; pot names read off the board render | Sheepylove's layouts for dylan159 designs with gerbers (CC BY-NC-SA); nine are not in the shop |
 | Other Pedals | 10 | OCR of the value-first parts-list image (two columns), or the Name / Designator export table in a PDF | Squarespace shop; documents are JPEG images bundled into one cached PDF per board; prices in USD |
+| God City Instruments | 24 | build guide (text table; older guides put each cell on its own line) | Shopify; Kurt Ballou's boards, guides on kurtballou.com; prices in USD |
+| 1776 Effects | 17 | build document (text table, named pots) | Shopify; prices in USD |
+| Rullywow Industries | 26 | build document (text table) | WooCommerce; originals named in the product titles; prices in USD |
+| MAS Effects | 6 | PDFs and a CSV on mas-effects.com and GitHub; schematic images paired by OCR | Shopify DIY collection, mostly kits; only the circuit PCBs are listed; prices in USD |
+| Tonepad | 55 | parts list on the layout page ('R1, R2 – 1M' or 'qty - value' per section) | Classic ASP catalog; layouts served only with the project page as referer; prices in USD |
+| WRAA Labs | 4 | inline list in the build guide's page text ('R1 = 1k') | Big Cartel; lo-fi digital kits; prices in GBP |
+| Frog Pedals | 5 | none: documentation is sent to buyers | WooCommerce behind a browser-agent check; listing only; prices in USD |
+| TH Custom Effects | 10 | none: 'PCB only', no documents published | WooCommerce; listing only; prices in EUR |
 | PCBWay: Glory to Ukraine | ~337 | none (BOM needs a PCBWay login) | one member's shared projects via the member JSONP list; schematic PNGs are CC BY-SA; no prices |
 
 ### Transistor substitutes

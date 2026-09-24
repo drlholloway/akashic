@@ -56,8 +56,9 @@ class Fetcher:
             time.sleep(wait)
         self._last_hit[host] = time.monotonic()
 
-    def get_bytes(self, url: str, ext: str = ".bin") -> bytes | None:
-        """Fetch a URL, returning bytes (cached). Returns None on 404/errors."""
+    def get_bytes(self, url: str, ext: str = ".bin", headers: dict | None = None) -> bytes | None:
+        """Fetch a URL, returning bytes (cached). Returns None on 404/errors. `headers` adds
+        or overrides request headers (a Referer, a browser User-Agent) for hosts that need them."""
         path = self._cache_path(url, ext)
         meta = path.with_suffix(path.suffix + ".json")
         if path.exists() and not self.refresh:
@@ -69,7 +70,7 @@ class Fetcher:
                 return None
         self._throttle(url)
         try:
-            r = self.client.get(url)
+            r = self.client.get(url, headers=headers)
         except httpx.HTTPError as exc:
             meta.write_text(json.dumps({"url": url, "error": str(exc)}))
             return None
@@ -80,12 +81,12 @@ class Fetcher:
         path.write_bytes(r.content)
         return r.content
 
-    def get_text(self, url: str, ext: str = ".html") -> str | None:
-        data = self.get_bytes(url, ext)
+    def get_text(self, url: str, ext: str = ".html", headers: dict | None = None) -> str | None:
+        data = self.get_bytes(url, ext, headers)
         return data.decode("utf-8", errors="replace") if data is not None else None
 
-    def get_file(self, url: str, ext: str) -> Path | None:
+    def get_file(self, url: str, ext: str, headers: dict | None = None) -> Path | None:
         """Fetch and return the cached file path (for PDFs / images)."""
-        if self.get_bytes(url, ext) is None:
+        if self.get_bytes(url, ext, headers) is None:
             return None
         return self._cache_path(url, ext)

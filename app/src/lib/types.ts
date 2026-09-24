@@ -1,4 +1,4 @@
-export type Vendor = 'pedalpcb' | 'aionfx' | 'madbean' | 'guitarpcb' | 'fuzzdog' | 'sheepylove' | 'deadendfx' | 'moonn' | 'fivecats' | 'parasit' | 'pcbway-gtu' | 'pcbguitarmania' | 'deadastronaut' | 'bentfishbowl' | 'ggg' | 'lectricfx' | 'expanon' | 'zerogiod' | 'otrfx' | 'dirtmonger' | 'maskaudio' | 'effectslayouts' | 'jmk' | 'eae' | 'c2c' | 'deadair' | 'rwlpedal' | 'sheepygit' | 'otherpedals';
+export type Vendor = 'pedalpcb' | 'aionfx' | 'madbean' | 'guitarpcb' | 'fuzzdog' | 'sheepylove' | 'deadendfx' | 'moonn' | 'fivecats' | 'parasit' | 'pcbway-gtu' | 'pcbguitarmania' | 'deadastronaut' | 'bentfishbowl' | 'ggg' | 'lectricfx' | 'expanon' | 'zerogiod' | 'otrfx' | 'dirtmonger' | 'maskaudio' | 'effectslayouts' | 'jmk' | 'eae' | 'c2c' | 'deadair' | 'rwlpedal' | 'sheepygit' | 'otherpedals' | 'godcity' | 'effects1776' | 'rullywow' | 'mas' | 'tonepad' | 'wraa' | 'frog' | 'thcustom';
 
 export interface IndexEntry {
 	id: string;
@@ -96,7 +96,15 @@ export const VENDOR_NAMES: Record<Vendor, string> = {
 	deadair: 'Dead Air Studios',
 	rwlpedal: 'RWL Pedals',
 	sheepygit: 'Sheepylove on GitHub',
-	otherpedals: 'Other Pedals'
+	otherpedals: 'Other Pedals',
+	godcity: 'God City Instruments',
+	effects1776: '1776 Effects',
+	rullywow: 'Rullywow Industries',
+	mas: 'MAS Effects',
+	tonepad: 'Tonepad',
+	wraa: 'WRAA Labs',
+	frog: 'Frog Pedals',
+	thcustom: 'TH Custom Effects'
 };
 
 export type VendorKind = 'shop' | 'projects' | 'repo' | 'blog' | 'archive';

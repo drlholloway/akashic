@@ -64,15 +64,27 @@ def parse_bom(pages: list[str]) -> list[BomRow]:
     """Find every parts-list table in the document and parse its rows."""
     rows: list[BomRow] = []
     seen: set[str] = set()
+    carried: dict | None = None  # the column layout of a table that ran off the previous page
     for page in pages:
         lines = page.splitlines()
         i = 0
         while i < len(lines):
             line = lines[i]
+            if carried and not _HEADER_RE.match(line):
+                # No header on this page: continue the previous page's table if the first rows fit its columns.
+                probe = [ln for ln in lines[:12] if ln.strip()]
+                v0p = carried["v0"]
+                fits = sum(1 for ln in probe if v0p and _REFS_RE.fullmatch(ln[:v0p].strip() or "-") and ln[v0p:].strip())
+                if fits >= 2:
+                    line = carried["header"]
+                    lines.insert(i, line)
+                else:
+                    carried = None
             if not _HEADER_RE.match(line):
                 i += 1
                 continue
             cols = _col_starts(line)
+            carried = {"header": line, "v0": cols.get("VALUE")}
             v0 = cols.get("VALUE")
             t0 = cols.get("TYPE", cols.get("DESCRIPTION"))
             n0 = cols.get("NOTES")
@@ -151,10 +163,10 @@ def parse_bom(pages: list[str]) -> list[BomRow]:
 
 _COL_HEADERS = re.compile(r"RESISTORS|CAPACITORS|DIODES|TRANSISTORS|SEMICONDUCTORS|ELECTROMECHANICAL|POTENTIOMETERS|\bICS?\b|SWITCHES|PARTS LIST|B\.?O\.?M\.?|BILL OF MATERIALS", re.I)
 _COL_DESIG = re.compile(r"(?<![A-Z0-9])((?:R|C|D|Q|IC|U|L|SW|Z|ZD|LED|VR|TR|OPTO|X|J)\d+[A-Z]?)[ \t]+(\S+(?:[ \t](?:Red|Green|Blue|Yellow|White|Amber)?[ \t]?(?:LED|LEDs|Zener|zener|elec)|[ \t]or[ \t]\d\S*)?)")
-_COL_POT = re.compile(r"(?<![A-Za-z0-9])([A-Z][A-Za-z.\-/]{1,13}(?: [A-Za-z.\-/]{1,12}){0,2}(?:,[ \t]*[A-Z][A-Za-z.\-/]{1,13}(?: [A-Za-z.\-/]{1,12}){0,2})*)[ \t]{2,}([ABCW]\d+(?:[.,]\d+)?[KkMm]|[ABW]\d{2,}|\d+(?:[.,]\d+)?[KkMm]? ?[ABCW])(?:[ \t]?(?:DG|dual(?:[ \-]gang)?))?(?![A-Za-z0-9])")
+_COL_POT = re.compile(r"(?<![A-Za-z0-9])([A-Z][A-Za-z.\-/]{1,13}\d?(?: [A-Za-z.\-/]{1,12}\d?){0,2}(?:,[ \t]*[A-Z][A-Za-z.\-/]{1,13}\d?(?: [A-Za-z.\-/]{1,12}\d?){0,2})*)[ \t]{2,}([ABCW]\d+(?:[.,]\d+)?[KkMm]|[ABW]\d{2,}|\d+(?:[.,]\d+)?[KkMm]? ?[ABCW])(?:[ \t]?(?:DG|dual(?:[ \-]gang)?))?(?![A-Za-z0-9])")
 # Named pots and trimmers with no taper letter ("BIAS   10K") on pages that carry a Potentiometers heading.
 _COL_POT_PLAIN = re.compile(r"(?<![A-Za-z0-9])([A-Z]{3,12})[ \t]{2,}(\d+(?:[.,]\d+)?[KkMm])(?![A-Za-z0-9])")
-_COL_POT_STOP = {"QTY", "TYPE", "VALUE", "PART", "LOCATION", "NOTES", "REF", "AND", "FOR", "THE", "USE", "SET", "WITH", "ALL", "NOTE", "OTHER"}
+_COL_POT_STOP = {"QTY", "TYPE", "VALUE", "PART", "LOCATION", "NOTES", "REF", "AND", "FOR", "THE", "USE", "SET", "WITH", "ALL", "NOTE", "OTHER", "RPD", "CLR", "LEDR", "RPU", "GCI"}
 # "D1, D2, D5   3mm LED" and "D1, 2, 4   1N5817": a comma list of designators sharing one value.
 _COL_LIST = re.compile(r"(?<![A-Za-z0-9])((?:R|C|D|Q|IC|U|L|LED)\d+(?:,[ \t]*(?:R|C|D|Q|IC|U|L|LED)?\d+)+)[ \t]+(\S+(?:[ \t](?:Red|Green|Blue|Yellow|White|Amber)?[ \t]?(?:LED|LEDs|Zener|zener|elec))?)")
 
@@ -1606,6 +1618,76 @@ def parse_bom_name_designator(pages: list[str]) -> list[BomRow]:
     return rows
 
 
+_CELL_ROW_START = re.compile(r"^(?:[A-Z]{1,4}\d{1,3}[A-Z]?|[A-Z][A-Z_]{2,11}|LED|CLR)$")
+
+
+def parse_bom_cells(pages: list[str]) -> list[BomRow]:
+    """Word tables that the PDF exporter wrote one cell per line: a 'Part' cell, then 'Value',
+    then the description words each on its own line, with a lone non-breaking space between
+    rows. Rows are split at those separators; the first two cells are the designator and value,
+    the rest the description (God City's older guides)."""
+    rows: list[BomRow] = []
+    seen: set[str] = set()
+    text = "\n".join(pages)
+    if not re.search(r"^\s*Part\t\s*\n\s*\xa0\s*Value\t", text, re.M):
+        return rows
+    records: list[list[str]] = [[]]
+    for ln in text.splitlines():
+        cell = ln.replace("\xa0", " ").replace("\t", " ").strip()
+        if not cell:
+            if records[-1]:
+                records.append([])
+            continue
+        records[-1].append(cell)
+    for rec in records:
+        if len(rec) < 2 or not _CELL_ROW_START.match(rec[0]) or rec[0].upper() in ("PART", "LED"):
+            continue
+        ref, value, rest = rec[0], rec[1], rec[2:]
+        # a pot's own cells: 'LEVEL', 'A100k', 'POT16MM'
+        desc = " ".join(w for w in rest[:3] if not re.match(r"^[\d.]+[a-zA-Z]*\s*-", w))
+        if ref.upper() in seen:
+            continue
+        is_desig = bool(re.fullmatch(r"[A-Z]{1,4}\d{1,3}[A-Z]?", ref))
+        cat = "POT" if re.fullmatch(r"[ABCW]\d+(?:[.,]\d+)?[kKM]?", value) and not is_desig else ""
+        if not is_desig and not cat:
+            continue  # a heading cell ('GCI', 'GOD') is not a named part
+        nr = normalize_row(BomRow(ref=ref.title() if cat == "POT" else ref, value=value, part_type=desc[:40], category=cat))
+        if cat or is_plausible(nr):
+            seen.add(ref.upper())
+            rows.append(nr)
+    return rows
+
+
+_DQN_HEADER = re.compile(r"^\s*Designator\s+Qty\s+Name\b", re.I | re.M)
+_DQN_ROW = re.compile(r"^\s*([A-Z]{1,3}\d{1,3}(?:\s*,\s*[A-Z]{0,3}\d{1,3})*)\s{2,}(\d{1,3})\s{2,}(\S+(?: [A-Z][A-Za-z]+)?)")
+
+
+def parse_bom_designator_qty_name(pages: list[str]) -> list[BomRow]:
+    """A grouped export ('Designator | Qty | Name': 'C4,C11  2  10u'), read from the first such
+    group on each page; ordered duplicate columns to the right repeat the same parts."""
+    rows: list[BomRow] = []
+    seen: set[str] = set()
+    for page in pages:
+        if not _DQN_HEADER.search(page):
+            continue
+        for ln in page.splitlines():
+            m = _DQN_ROW.match(ln)
+            if not m:
+                continue
+            refs, _qty, value = m.groups()
+            pre = re.match(r"[A-Z]+", refs).group(0)
+            for ref in re.split(r"\s*,\s*", refs):
+                if not re.match(r"[A-Z]", ref):
+                    ref = pre + ref
+                if ref in seen:
+                    continue
+                nr = normalize_row(BomRow(ref=ref, value=value.strip()))
+                if is_plausible(nr):
+                    seen.add(ref)
+                    rows.append(nr)
+    return rows
+
+
 def _expand_range_rows(rows: list[BomRow]) -> list[BomRow]:
     """'Q1-Q5  2N5088' is five transistors, not one part called Q1-Q5: expand any row whose
     designator is a range or a comma list, whichever parser produced it."""
@@ -1631,7 +1713,7 @@ def process_document(pdf: Path, vendor: str, slug: str) -> dict:
     # one that recovered the most designators (they never both succeed on one doc).
     tabled = parse_bom(pages)
     bom = _expand_range_rows(max((tabled, parse_bom_qty_value_parts(pages), parse_bom_columns(pages), parse_bom_qty_value_ref(pages),
-                                  parse_bom_name_designator(pages)), key=len))
+                                  parse_bom_name_designator(pages), parse_bom_cells(pages), parse_bom_designator_qty_name(pages)), key=len))
     if bom is not tabled and tabled:
         # The column parser reads no notes; carry them over from the table parser's matching rows.
         noted = {(r.ref.upper(), r.norm_value): r.notes for r in tabled if r.notes}

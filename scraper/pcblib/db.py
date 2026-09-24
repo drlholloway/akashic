@@ -90,6 +90,22 @@ VENDORS = {
                   "Sheepylove's layouts for dylan159 designs, shared on GitHub under CC BY-NC-SA 4.0; download the gerbers and order at a fab. Schematics are on the Bent Fishbowl blog."),
     "otherpedals": ("Other Pedals", "https://www.otherpedals.com/shop",
                     "Other* DIY parts lists, schematics and drill guides are images on the product pages; indexed and linked, not redistributed."),
+    "godcity": ("God City Instruments", "https://www.godcityinstruments.com/collections/diy-pcbs",
+                "Kurt Ballou's build guides are indexed and linked, not redistributed."),
+    "effects1776": ("1776 Effects", "https://1776effects.com/collections/all",
+                    "Build documents are indexed and linked, not redistributed."),
+    "rullywow": ("Rullywow Industries", "https://rullywow.com/shop/",
+                 "Build documents are indexed and linked, not redistributed."),
+    "mas": ("MAS Effects", "https://shop.mas-effects.com/collections/diy",
+            "Documents on mas-effects.com and GitHub are indexed and linked, not redistributed."),
+    "tonepad": ("Tonepad", "https://www.tonepad.com/catalog2.asp",
+                "Layouts are © their authors and served by tonepad.com only from the project page; indexed and linked, not redistributed."),
+    "wraa": ("WRAA Labs", "https://wraa.bigcartel.com/category/pedal-kit",
+             "Build guides on the WRAA blog are indexed and linked, not redistributed."),
+    "frog": ("Frog Pedals", "https://frogpedals.com/index.php/product-category/pcb-products/",
+             "Documentation is sent to buyers and not published; only the listing is indexed."),
+    "thcustom": ("TH Custom Effects", "https://diy.thcustom.com/the-main-shop/",
+                 "No build documents are published; only the listing is indexed."),
     "pcbway-gtu": ("PCBWay: Glory to Ukraine", "https://www.pcbway.com/project/member/?bmbno=19C5FC6C-66B1-46",
                    "Shared projects are CC BY-SA 3.0; schematic images may be shown with attribution. BOM and gerbers need a PCBWay login."),
 }
@@ -136,7 +152,7 @@ _CONTROL_ALIAS = {"vol": "volume", "lvl": "level", "lev": "level", "pres": "pres
 
 _CONTROL_JUNK = {"the", "these", "that", "this", "such", "shown", "here", "with", "any", "all", "and", "for", "not", "option", "install",
                  "connect", "convention", "boards", "board", "other", "used", "use", "works", "well", "remained", "touching", "transistor",
-                 "potentiometers", "potentiometer", "pots", "pot", "leds", "two leds", "six potentiometers", "one", "two", "three", "see", "note", "txt", "val"}
+                 "potentiometers", "potentiometer", "pots", "pot", "alpha", "bourns", "leds", "two leds", "six potentiometers", "one", "two", "three", "see", "note", "txt", "val"}
 
 
 def _dedupe_controls(names: list[str]) -> list[str]:

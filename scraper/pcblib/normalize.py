@@ -116,6 +116,8 @@ def categorize(ref: str, part_type: str, value: str = "") -> str:
             return cat
     if re.match(r"^(?:REG|VREG|U)\d*$", r, re.I):
         return "IC"  # a voltage regulator
+    if re.match(r"^(?:RPD|CLR|LEDR|RLED|RPU)$", r, re.I):
+        return "R"  # pull-down and LED resistors named by role
     # Named pots: VOLUME, GAIN, TONE ... (PedalPCB style)
     if r.isalpha() and r.isupper() and len(r) >= 3:
         return "POT"

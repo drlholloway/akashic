@@ -80,8 +80,10 @@ def grid_bom(grid: list[list[str]]) -> tuple[list[BomRow], str]:
         if not any(cells):
             continue
         low = [c.lower() for c in cells]
-        if "value" in low and any(k in low for k in ("ref", "refs", "refdes", "reference", "references", "designator", "designators", "part #", "part")):
+        if ("value" in low or "name" in low) and any(k in low for k in ("ref", "refs", "refdes", "reference", "references", "designator", "designators", "part #", "part")):
             cols = {_XLSX_COLS[c]: i for i, c in enumerate(low) if c in _XLSX_COLS}
+            if "value" not in cols and "name" in low:  # EasyEDA exports call the value 'Name'
+                cols["value"] = low.index("name")
             if "ref" not in cols:  # 'PART #' names the designator when nothing else does
                 cols["ref"] = next(i for i, c in enumerate(low) if c in ("part #", "part"))
             continue

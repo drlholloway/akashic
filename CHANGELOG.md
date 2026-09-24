@@ -81,6 +81,13 @@ GitHub Release notes.
   build docs use an EasyEDA-style Name / Designator / Footprint / Quantity table, which the
   shared parsers now read for every vendor.
 
+- Eight sources at once: God City Instruments, 1776 Effects, Rullywow Industries, MAS Effects,
+  Tonepad, WRAA Labs, Frog Pedals and TH Custom Effects. Frog and TH Custom publish no build
+  documents, so they are listing-only.
+- Shared parsers learned three layouts on the way: Word tables exported one cell per line, a
+  table that continues onto the next page without its header, and a grouped
+  Designator / Qty / Name export; spreadsheet readers accept a Name column as the value.
+
 ### Fixed
 - Transistor substitutes: a part the database knows only by a longer maker's spelling (BS250 as
   BS250P, 2SK30A as 2SK30ATM, LND150 as LND150K1) is now found, so those boards get substitutes. Three parts the database
