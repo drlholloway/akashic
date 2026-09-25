@@ -75,7 +75,7 @@
 </main>
 
 <footer>
-	<p class="label strong">Sources</p>
+	<p class="label strong">Sources{#if vendorList.length} ({vendorList.length} total){/if}</p>
 	<ul class="vendors">
 		{#each vendorList as v (v.id)}
 			<li><a href={v.url} target="_blank" rel="noopener" title={v.license_note || v.name}>{v.name}</a></li>

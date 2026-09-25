@@ -68,6 +68,8 @@
 		}
 		return [...m.entries()].sort((a, b) => a[0] - b[0]);
 	});
+	const totalVendors = $derived(new Set(data.index.map((e) => e.vendor)).size);
+	const shownVendors = $derived(new Set(results.map((e) => e.vendor)).size);
 	const active = $derived(
 		filters.vendor.length + filters.category.length + filters.enclosure.length + (filters.basedOn ? 1 : 0) + (filters.part ? 1 : 0) + (filters.knobs != null ? 1 : 0) + (filters.inStock ? 1 : 0)
 	);
@@ -122,7 +124,7 @@
 	<section class="results">
 		<div class="bar">
 			<p class="label strong count" aria-live="polite">
-				{#if ready}{results.length.toLocaleString()} of {data.index.length.toLocaleString()} circuits{:else}{data.index.length.toLocaleString()} circuits{/if}
+				{#if ready}{results.length.toLocaleString()} of {data.index.length.toLocaleString()} circuits · {shownVendors} of {totalVendors} vendors{:else}{data.index.length.toLocaleString()} circuits · {totalVendors} vendors{/if}
 			</p>
 			<div class="applied">
 				{#if filters.q}<button type="button" class="chip on" onclick={() => update({ q: '' })}>“{filters.q}” ×</button>{/if}
