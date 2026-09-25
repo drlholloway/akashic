@@ -38,13 +38,14 @@ at the bottom; re-run them after parser changes.
   eight of them (Bassdude and Mirage keep a knob count: OCR reads fewer names than knobs).
 
 - **Tayda (DHEA)**: nine SMD boards come pre-populated, so their component page lists only
-  the pot and switches; the store page carries the price but no readable stock state.
+  the pot and switches; prices come from the store's category listing, which has no stock
+  state, and Amp Eleven and Super Six Stevie are no longer listed there, so they have none.
 - **OP Electronics**: three older datasheets (MOSFET Booster, LPB Booster, Distortion+) are
   rotated layout drawings whose text extracts as fragments and whose OCR finds no table;
   the Tap Tempo board and Octaverb have no document. Zip and rar document sets are read
   with bsdtar; the .ods BOMs inside go through the spreadsheet reader.
 - **Griffin Effects**: five boards announced as coming soon have no project file and are
-  skipped; the SCH-1 Chorus points only at an interactive BOM whose page has no pcbdata.
+  skipped; the SCH-1 Chorus reads from its interactive BOM instead of a project PDF.
   Schematic pages are found by their 'N. Schematic:' heading, but the drawings name pots
   RVn, so controls stay knob counts.
 - **delyk PCBs**: six boards have no BOM in the media library (Fussy Valve 809, Lightning
