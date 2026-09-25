@@ -205,3 +205,88 @@ def is_plausible(row: BomRow) -> bool:
     if row.category in ("R", "C") and not re.search(r"\d", row.value):
         return False
     return True
+
+
+# --- parts cross-reference keys -------------------------------------------------------------
+_CATALOG_WORDS = {
+    "GE": "GE", "GERM": "GE", "GERMANIUM": "GE", "GERMANIUM DIODE": "GE", "GERMANIUM DIODES": "GE", "GERMANIUMDIODER": "GE",
+    "SI": "SI", "SILICON": "SI", "SILICON DIODE": "SI", "SILICON DIODES": "SI",
+    "NPN": "NPN", "PNP": "PNP", "NPN GE": "NPN GE", "GE NPN": "NPN GE", "NPN GERMANIUM": "NPN GE", "GERMANIUM NPN": "NPN GE",
+    "PNP GE": "PNP GE", "GE PNP": "PNP GE", "PNP GERMANIUM": "PNP GE", "GERMANIUM PNP": "PNP GE", "NPN SI": "NPN SI", "PNP SI": "PNP SI",
+    "NPN SILICON": "NPN SI", "PNP SILICON": "PNP SI", "JFET": "JFET", "FET": "JFET", "N-CHANNEL JFET": "JFET", "MOSFET": "MOSFET",
+    "LDR": "LDR", "PHOTOCELL": "LDR", "VACTROL": "VACTROL", "BBD": "BBD", "ZENER": "ZENER", "SCHOTTKY": "SCHOTTKY",
+}
+_CATALOG_PARTNO = re.compile(r"^(?=.*\d)[A-Z0-9][A-Z0-9.+-]{1,15}$")
+_CATALOG_SPLIT = re.compile(r"\s*(?:/|\bOR\b|,|\+)\s*")
+_CATALOG_NOISE = re.compile(r"^(?:DIP|SOIC|SOT|TO|SIP|TSSOP)-?\d+|^\d+-POS$|^GEN-IC|^\d+(?:\.\d+)?(?:MM|W|A|X\d+)$|^\d+[KMRUN]\d{0,2}$|^\d+(?:\.\d+)?[KMRUN]$|^[ABCW]\d+K$|^C\d+K$", re.I)
+_CATALOG_SHORT = re.compile(r"^([A-Z]{1,2})\d{1,2}[A-Z]?$")
+_CATALOG_SHORT_OK = {"OA", "OC", "AC", "AD", "AF", "GT", "MP", "KT", "KP", "D", "BA", "BC", "BF", "BS", "NK", "TI", "ZT", "MJ", "BD", "GC", "GA"}
+_CATALOG_FIX = [
+    (re.compile(r"^IN(\d{3,4}[A-Z]?)$"), r"1N\1"), (re.compile(r"^[4I]N(\d{4}[A-Z]?)$"), r"1N\1"), (re.compile(r"^INS(\d{4})$"), r"1N\1"),
+    (re.compile(r"^TLO(\d\d)"), r"TL0\1"), (re.compile(r"^LMI(\d{3})"), r"LM\1"), (re.compile(r"^JRRC"), "JRC"), (re.compile(r"^NJZ"), "NJM"),
+    (re.compile(r"^2[58]([CKA])(\d{2,4})"), r"2S\1\2"), (re.compile(r"^8C(\d{3})"), r"BC\1"), (re.compile(r"^BC5S(\d{2})"), r"BC5\1"), (re.compile(r"^BCS(\d{2})"), r"BC5\1"),
+    (re.compile(r"^1N4O0"), "1N400"), (re.compile(r"^TC10445"), "TC1044S"), (re.compile(r"^L78LO"), "L78L0"), (re.compile(r"^MAXX"), "MAX"),
+    (re.compile(r"^LWI13700"), "LM13700"), (re.compile(r"^LMIC660"), "LMC660"), (re.compile(r"^(?:AND|I)MN(\d)"), r"MN\1"), (re.compile(r"-+$"), ""),
+]
+
+
+def catalog_category(category: str, key: str) -> str:
+    """A part filed under the wrong category by its designator (a TL072 as D3) goes where its
+    part number says: the value hints decide for diodes, transistors and ICs."""
+    if re.match(r"^(?:VTL|NSL|VACTROL|LDR)", key):
+        return "OPTO"
+    if re.search(r"\d(?:K|M)?HZ$", key):
+        return "XTAL"
+    if category in ("D", "Q", "IC"):
+        for rx, cat in _VALUE_HINTS:
+            if cat in ("D", "Q", "IC") and rx.match(key):
+                return cat
+    return category
+
+
+def catalog_keys(category: str, value: str) -> list[str]:
+    """The part identities a parts-list value contributes to the cross-reference: part
+    numbers (one per alternative in '2N5088 or 2N5089', '7660S/LT1054'), a few generic
+    descriptors (Ge, NPN, JFET), canonical pot and switch forms. Prose, colours, 'optional'
+    and the like contribute nothing."""
+    v = re.sub(r"\s+", " ", value.strip().upper().strip("*"))
+    if category in ("D", "Q", "IC", "OPTO", "L", "XTAL"):
+        v = re.sub(r"\s*\([^)]*\)?\s*", " ", v).strip()  # "(optional)", "(wired in reverse)", "J201(IDSS>Q1)"
+        if v in _CATALOG_WORDS:
+            return [_CATALOG_WORDS[v]]
+        keys: list[str] = []
+        for piece in _CATALOG_SPLIT.split(v):
+            piece = piece.strip(" *.")
+            if not piece:
+                continue
+            if piece in _CATALOG_WORDS:
+                keys.append(_CATALOG_WORDS[piece])
+                continue
+            tokens = [t.strip("*.,;") for t in piece.split()]
+            partnos = [t for t in tokens if _CATALOG_PARTNO.match(t) and (not t.isdigit() or (category == "IC" and 3 <= len(t) <= 5))
+                       and not re.fullmatch(r"\d+(?:MM|V|W|A|HZ|MHZ|KHZ|PIN|X\d+)", t)]
+            partnos = [t for t in partnos if not _CATALOG_NOISE.match(t) or (category == "D" and re.fullmatch(r"\d+V\d*|\d+(?:\.\d+)?V", t))]
+            partnos = [t for t in partnos if not (_CATALOG_SHORT.match(t) and _CATALOG_SHORT.match(t).group(1) not in _CATALOG_SHORT_OK)]
+            if partnos:
+                t = partnos[0]
+                for rx, rep in _CATALOG_FIX:
+                    t = rx.sub(rep, t)
+                if t and not re.search(r"\d\.[A-Z]|^[A-Z]\d{3}$", t) and not re.fullmatch(r"\dATA|[A-Z]0\d\d", t):
+                    keys.append(t)
+            elif category == "XTAL" and (m := re.search(r"\d+(?:\.\d+)?\s*[KM]?HZ", piece)):
+                keys.append(m.group(0).replace(" ", ""))
+        return list(dict.fromkeys(keys))
+    if category in ("POT", "TRIM"):
+        m = re.search(r"(?<![A-Z0-9])([ABCW])?(\d+(?:\.\d+)?)([KM]?)\s?([ABCW])?(?![A-Z0-9])", v.replace("*", ""))
+        if not m or (not m.group(3) and float(m.group(2)) < 100):
+            return []  # a bare '1' or '10' is a quantity, not a pot
+        taper = m.group(1) or m.group(4) or ""
+        return [f"{taper}{m.group(2)}{m.group(3).replace('K', 'k')}"]
+    if category == "SW":
+        m = re.search(r"\b([1-4SD]P[1-4SD]T)\b", v)
+        if not m:
+            return []
+        base = m.group(1).replace("1P", "SP").replace("2P", "DP")
+        centre = bool(re.search(r"OFF|CNTR|CENTER|CENTRE", v))
+        return [base + (" ON-OFF-ON" if centre and base in ("SPDT", "DPDT") else "")]
+    return [v] if v else []

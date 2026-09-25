@@ -15,6 +15,7 @@ import sqlite3
 from collections import defaultdict
 
 from . import db as dbm
+from .normalize import catalog_category, catalog_keys
 from .paths import EXPORT_DIR
 
 
@@ -85,15 +86,17 @@ def run(images: bool = False) -> None:
                 "has_kicad": bool(c.get("kicad_path")),
             })
             for b in bom:
-                if b["category"] in ("R", "C", "HW", "CONN", "OTHER", ""):
-                    continue  # passives are too common to be a useful cross-reference
-                key = f"{b['category']}:{b['norm_value']}"
-                p = parts.setdefault(key, {"key": key, "category": b["category"],
-                                           "value": b["norm_value"], "circuits": set(),
-                                           "types": set()})
-                p["circuits"].add(c["id"])
-                if b["part_type"]:
-                    p["types"].add(b["part_type"])
+                if b["category"] in ("R", "C", "LED", "HW", "CONN", "OTHER", ""):
+                    continue  # passives and indicator LEDs are too common to be a useful cross-reference
+                for val in catalog_keys(b["category"], b["norm_value"] or b["value"]):
+                    cat = catalog_category(b["category"], val)
+                    key = f"{cat}:{val}"
+                    p = parts.setdefault(key, {"key": key, "category": cat,
+                                               "value": val, "circuits": set(),
+                                               "types": set()})
+                    p["circuits"].add(c["id"])
+                    if b["part_type"]:
+                        p["types"].add(b["part_type"])
             if images and c.get("schematic_local"):
                 src = DATA_DIR / c["schematic_local"]
                 if src.exists():
