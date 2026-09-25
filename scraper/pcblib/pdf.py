@@ -1059,8 +1059,11 @@ def parse_bom_qty_value_parts(pages: list[str]) -> list[BomRow]:
                 continue
             if re.match(r"^\s*(Schematic|Offboard|Wiring|Drill|Notes?)\b", ln, re.I):
                 break
+            if _QVP_HEADER.match(ln):
+                section = ""  # the table's header repeated over a second part type is not a part type
+                continue
             s = _QVP_SECTION.match(ln)
-            if s:
+            if s and not re.search(r"\b(?:Qty|Value|Parts)\b", s.group(1)):
                 section = s.group(1).strip().rstrip(":")
     return rows
 

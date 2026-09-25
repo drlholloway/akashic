@@ -93,10 +93,10 @@ def run(images: bool = False) -> None:
                     key = f"{cat}:{val}"
                     p = parts.setdefault(key, {"key": key, "category": cat,
                                                "value": val, "circuits": set(),
-                                               "types": set()})
+                                               "types": {}})
                     p["circuits"].add(c["id"])
-                    if b["part_type"]:
-                        p["types"].add(b["part_type"])
+                    if b["part_type"] and not re.search(r"\b(?:qty|quantity|value|description|designator)\b", b["part_type"], re.I):
+                        p["types"][b["part_type"]] = p["types"].get(b["part_type"], 0) + 1
             if images and c.get("schematic_local"):
                 src = DATA_DIR / c["schematic_local"]
                 if src.exists():
@@ -109,7 +109,7 @@ def run(images: bool = False) -> None:
             c["has_schematic"] = has_schematic
             (EXPORT_DIR / "circuits" / f"{c['file_id']}.json").write_text(json.dumps(c, ensure_ascii=False))
     parts_out = sorted(
-        ({**p, "circuits": sorted(p["circuits"]), "types": sorted(p["types"])[:5],
+        ({**p, "circuits": sorted(p["circuits"]), "types": [t for t, _ in sorted(p["types"].items(), key=lambda kv: (-kv[1], kv[0]))][:5],
           "count": len(p["circuits"]),
           "slug": re.sub(r"[^a-z0-9.]+", "-", p["key"].lower())} for p in parts.values()),
         key=lambda p: (-p["count"], p["key"]))

@@ -271,7 +271,7 @@ def catalog_keys(category: str, value: str) -> list[str]:
                 t = partnos[0]
                 for rx, rep in _CATALOG_FIX:
                     t = rx.sub(rep, t)
-                if t and not re.search(r"\d\.[A-Z]|^[A-Z]\d{3}$", t) and not re.fullmatch(r"\dATA|[A-Z]0\d\d", t):
+                if t and not re.search(r"\d\.[A-Z]|^[ABOPQSTUX]\d{3}$", t) and not re.fullmatch(r"\dATA|[A-Z]0\d\d", t):
                     keys.append(t)
             elif category == "XTAL" and (m := re.search(r"\d+(?:\.\d+)?\s*[KM]?HZ", piece)):
                 keys.append(m.group(0).replace(" ", ""))
