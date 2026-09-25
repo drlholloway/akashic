@@ -161,8 +161,8 @@ def parse_bom(pages: list[str]) -> list[BomRow]:
     return rows
 
 
-_COL_HEADERS = re.compile(r"RESISTORS|CAPACITORS|DIODES|TRANSISTORS|SEMICONDUCTORS|ELECTROMECHANICAL|POTENTIOMETERS|\bICS?\b|SWITCHES|PARTS LIST|B\.?O\.?M\.?|BILL OF MATERIALS", re.I)
-_COL_DESIG = re.compile(r"(?<![A-Z0-9])((?:R|C|D|Q|IC|U|L|SW|Z|ZD|LED|VR|TR|OPTO|X|J)\d+[A-Z]?)[ \t]+(\S+(?:[ \t](?:Red|Green|Blue|Yellow|White|Amber)?[ \t]?(?:LED|LEDs|Zener|zener|elec)|[ \t]or[ \t]\d\S*)?)")
+_COL_HEADERS = re.compile(r"RESISTORS|CAPACITORS|DIODES|TRANSISTORS|SEMICONDUCTORS|ELECTROMECHANICAL|POTENTIOMETERS|\bICS?\b|SWITCHES|PARTS LIST|B\.?O\.?M\.?|BILL OF MATERIALS|COMPONENT LIST|PARTS CHECKLIST", re.I)
+_COL_DESIG = re.compile(r"(?<![A-Z0-9])((?:R|C|D|Q|IC|U|L|SW|Z|ZD|LED|VR|RV|TR|OPTO|X|J)\d+[A-Z]?)[ \t]+(\S+(?:[ \t](?:Red|Green|Blue|Yellow|White|Amber)?[ \t]?(?:LED|LEDs|Zener|zener|elec)|[ \t]or[ \t]\d\S*)?)")
 _COL_POT = re.compile(r"(?<![A-Za-z0-9])([A-Z][A-Za-z.\-/]{1,13}\d?(?: [A-Za-z.\-/]{1,12}\d?){0,2}(?:,[ \t]*[A-Z][A-Za-z.\-/]{1,13}\d?(?: [A-Za-z.\-/]{1,12}\d?){0,2})*)[ \t]{2,}([ABCW]\d+(?:[.,]\d+)?[KkMm]|[ABW]\d{2,}|\d+(?:[.,]\d+)?[KkMm]? ?[ABCW])(?:[ \t]?(?:DG|dual(?:[ \-]gang)?))?(?![A-Za-z0-9])")
 # Named pots and trimmers with no taper letter ("BIAS   10K") on pages that carry a Potentiometers heading.
 _COL_POT_PLAIN = re.compile(r"(?<![A-Za-z0-9])([A-Z]{3,12})[ \t]{2,}(\d+(?:[.,]\d+)?[KkMm])(?![A-Za-z0-9])")
@@ -178,7 +178,7 @@ def parse_bom_columns(pages: list[str], max_col: int | None = None) -> list[BomR
     seen: set[str] = set()
     for page in pages:
         heads = _COL_HEADERS.findall(page)
-        if len(heads) < 2 and not (len(heads) == 1 and re.match(r"B\.?O\.?M|PARTS LIST|BILL", heads[0], re.I) and len(_COL_DESIG.findall(page)) >= 8):
+        if len(heads) < 2 and not (len(heads) == 1 and re.match(r"B\.?O\.?M|PARTS LIST|BILL|COMPONENT LIST|PARTS CHECKLIST", heads[0], re.I) and len(_COL_DESIG.findall(page)) >= 8):
             continue  # a lone "BOM" heading over a dense run of designators is still a parts table (Part / spec columns)
         text = "\n".join(ln[:max_col] if max_col else ln for ln in page.splitlines())
         # "Q1-Q4   2N5457" ranges and "LEVEL tr  10K" trimmers

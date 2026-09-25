@@ -64,7 +64,7 @@ def sheet_bom(fetcher, url: str) -> list[BomRow]:
 
 _POTWORD = re.compile(r"^(\d+(?:[.,]\d+)?[kKM]?)\s*(?:Ω|ohms?)?\s+(linear|lin|log|audio|logarithmic|rev-?log|reverse(?: log| audio)?|anti-?log)\b", re.I)
 _TAPERS = {"linear": "B", "lin": "B", "log": "A", "audio": "A", "logarithmic": "A", "revlog": "C", "reverse": "C", "reverselog": "C", "reverseaudio": "C", "antilog": "C"}
-_XLSX_COLS = {"qty": "qty", "quantity": "qty", "ref": "ref", "refs": "ref", "reference": "ref", "references": "ref", "designator": "ref", "refdes": "ref", "pattern": "package",
+_XLSX_COLS = {"qty": "qty", "quantity": "qty", "ref": "ref", "refs": "ref", "parts": "ref", "reference": "ref", "references": "ref", "designator": "ref", "refdes": "ref", "pattern": "package",
               "designators": "ref", "value": "value", "description": "type", "type": "type", "rating/package": "type", "package": "package", "notes": "notes", "note": "notes"}
 
 
@@ -82,7 +82,7 @@ def grid_bom(grid: list[list[str]]) -> tuple[list[BomRow], str]:
         if not any(cells):
             continue
         low = [c.lower() for c in cells]
-        if ("value" in low or "name" in low) and any(k in low for k in ("ref", "refs", "refdes", "reference", "references", "designator", "designators", "part #", "part")):
+        if ("value" in low or "name" in low) and any(k in low for k in ("ref", "refs", "refdes", "reference", "references", "designator", "designators", "part #", "part", "parts")):
             cols = {_XLSX_COLS[c]: i for i, c in enumerate(low) if c in _XLSX_COLS}
             if "value" not in cols and "name" in low:  # EasyEDA exports call the value 'Name'
                 cols["value"] = low.index("name")

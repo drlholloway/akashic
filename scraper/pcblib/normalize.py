@@ -20,7 +20,9 @@ _VAL_RE = re.compile(
     r"^\s*(\d+(?:[.,]\d+)?)\s*([pnuµμmkKMRr]?)\s*(\d*)\s*(?:[FfΩΩ]|ohm[s]?|H)?\s*$"
 )
 
-_POT_RE = re.compile(r"^\s*([ABCW])?\s*(\d+(?:[.,]\d+)?)\s*([kKM]?)\s*(?:ohm)?\s*([ABCW])?\s*(?:\(.*\))?\s*$")
+_POT_RE = re.compile(r"^\s*([ABCW])?\s*(\d+(?:[.,]\d+)?)\s*([kKM]?)\s*(?:ohms?|Ω)?\s*-?\s*([ABCW])?\s*(?:\(.*\))?\s*$")
+_POT_WORDS = re.compile(r"^(\d+(?:[.,]\d+)?\s*[kKM]?)\s*(?:Ω|ohms?)?\s*[- ]\s*(linear|lin|log|audio|logarithmic|rev\.?-?\s?log|reverse(?:[- ](?:log|audio))?|anti-?log)\.?\s*(?:pot(?:entiometer)?s?)?$", re.I)
+_TAPER_WORD = {"linear": "B", "lin": "B", "log": "A", "audio": "A", "logarithmic": "A", "revlog": "C", "reverse": "C", "reverselog": "C", "reverseaudio": "C", "antilog": "C"}
 
 
 def _parse_si(text: str) -> float | None:
@@ -128,7 +130,7 @@ def categorize(ref: str, part_type: str, value: str = "") -> str:
 
 
 _VALUE_HINTS = [
-    (re.compile(r"^(?:2N\d{3,4}|2S[ABCDJK]\d{2,4}|BC\d{3}|BF\d{3}|MPS[AW]?\d{2,3}|MMBT\d{4}|MMBF\d{4}|KSP\d{2}|PN\d{4}|J\d{3}\b|BS\d{3}|IRF\d{3}|MPF\d{3}|AC1\d{2}|OC\d{2,3}|NKT\d{3}|TIP\d{2})"), "Q"),
+    (re.compile(r"^(?:2N\d{3,4}|2S[ABCDJK]\d{2,4}|BC\d{3}|BF\d{3}|MPS[AW]?\d{2,3}|MMBT\d{4}|MMBFJ?\d{3,4}|KSP\d{2}|PN\d{4}|J\d{3}\b|BS\d{3}|IRF\d{3}|MPF\d{3}|AC1\d{2}|OC\d{2,3}|NKT\d{3}|TIP\d{2})"), "Q"),
     (re.compile(r"^(?:1N\d{3,4}|UF\d{4}|BAT\d{2}|BA\d{3}|1SS\d{2,3}|OA\d{2,3}|D9[A-Z]|SB\d{3})"), "D"),
     (re.compile(r"^\d+(?:[.,]\d+)?\s*[pnuµμ]\d*F?$", re.I), "C"),
     (re.compile(r"^\d+(?:[.,]\d+)?\s*(?:[kKMR]\d*|[kKM]?\s*(?:ohms?|Ω))$"), "R"),
@@ -175,6 +177,9 @@ def normalize_row(row: BomRow) -> BomRow:
             row.sort_key = n
     elif row.category == "POT":
         raw = re.sub(r"(?i)(\d)\s*meg\b", r"\1M", raw)  # C1Meg
+        mw = _POT_WORDS.match(raw)
+        if mw:  # '500K REV LOG', '10K Lin', '100k-log': the taper as a word
+            raw = _TAPER_WORD.get(re.sub(r"[^a-z]", "", mw.group(2).lower()), "") + mw.group(1).replace(" ", "")
         m = _POT_RE.match(raw)
         if m:
             t1, num, prefix, t2 = m.groups()

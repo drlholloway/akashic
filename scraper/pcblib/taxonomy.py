@@ -12,10 +12,10 @@ CATEGORIES = [
 
 _RULES: list[tuple[re.Pattern, str]] = [(re.compile(p, re.I), c) for p, c in [
     (r"daughter ?board|clipping (?:board|switch|selector|daughter)|rotary clipping", "Utility"),  # add-on boards before any effect words
-    (r"\bfuzz|muff|tone ?bender|octavia|bosstone", "Fuzz"),
+    (r"\bfuzz|muff|tone ?bender|octavia|bosstone|swollen pickle|fuzzrite", "Fuzz"),
     (r"acapulco|acupulco", "Distortion"),
     (r"\bdistortion\b|\bdist\b|\brat\b|metal|high ?gain", "Distortion"),
-    (r"overdrive|\bod\b|screamer|klon|blues ?breaker|tube ?screamer|drive\b", "Overdrive"),
+    (r"overdrive|\bod\b|screamer|klon|blues ?breaker|tube ?screamer|drive\b|guv'?nor|\bocd\b|timmy|hot ?tubes|bsiab|brown sound|centaur|king of tone|jan ray|superbolt|honey|plexi", "Overdrive"),
     (r"\bboost(er)?\b|\bclean\b", "Boost"),
     (r"preamp|amp[- ]?in[- ]a[- ]box|amp emul|amp sim|cab sim", "Preamp / Amp-in-a-box"),
     (r"compress|limiter|sustain|\bcomp\b", "Compressor"),

@@ -6,6 +6,13 @@ GitHub Release notes.
 ## Unreleased
 
 ### Added
+- Ten sources from GitHub issue #6: Guitar-Electronics.eu, OP Electronics, Griffin Effects,
+  Coda Effects, delyk PCBs, Tayda Electronics (DHEA's Instruction Center pages), Schalltechnik_04
+  (discontinued kits whose instructions stay online), Electric Druid, Zeppelin Design Labs and
+  Moody Sounds (kits in SEK, including the BYOC kits it still sells and its archive of
+  discontinued kits). Tayda prices come from the store's category listing.
+- Pot values with a dashed taper ('10K-A', '2M-B') or a taper word ('500K REV LOG', '10K Lin')
+  now normalize for every vendor; the column parser reads 'RVn' designators.
 - Mask Audio Electronics (Shopify; Word build documents read straight from the .docx tables,
   no converter needed; the freebie bundle is split into its four boards).
 - `TODO.md`: a running list of documents that parse wrong or thin, per vendor.

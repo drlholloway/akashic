@@ -47,6 +47,16 @@ It ships as a static, offline-capable web app (PWA) that installs on macOS, Linu
 | WRAA Labs | 4 | inline list in the build guide's page text ('R1 = 1k') | Big Cartel; lo-fi digital kits; prices in GBP |
 | Frog Pedals | 5 | none: documentation is sent to buyers | WooCommerce behind a browser-agent check; listing only; prices in USD |
 | TH Custom Effects | 22 | HTML build documentation with a Ref / Qty / Value / Notes table (linked from the shop table and product pages) | WooCommerce; prices in EUR |
+| Guitar-Electronics.eu | 66 | short PDF: placement list ('R1 1M') and a bill of materials by value ('330R 1pcs. "R3"') | Polish Shoper store; boards named after the originals; prices in EUR |
+| OP Electronics | 39 | datasheet PDF with a Qty / Value / Parts / Description list (two side by side for a two-circuit board become builds); zipped document sets are opened | Italian PrestaShop store; prices in EUR |
+| Griffin Effects | 27 | project PDF with a three-column parts list; the schematic page is read for pot names | PrestaShop 1.6; every board 'compares to' a named original; prices in USD |
+| Coda Effects | 6 | Google Drive build document (Name / Value columns; the Dolmen Fuzz has six Big Muff builds) | WooCommerce shop; documents linked from the old Blogger product pages; prices in EUR |
+| delyk PCBs | 41 | '<Name>-BOM.pdf' from the WordPress media library (P/N / Value / Notes per section), matched to products by name | WooCommerce; based-on, difficulty and enclosure are product attributes; prices in USD |
+| Tayda Electronics (DHEA) | 68 | Instruction Center 'Designators and components' page ('C1 47n' plus the Tayda part) with named pots and switches | taydakits.com; the store is behind Cloudflare, so no prices; buy link is the PCB's store page |
+| Schalltechnik_04 | 10 | 'Required Parts' page: quantity / type shortcode tables per section (no designators) | kits discontinued in 2022, instructions still online; listed as read-the-post |
+| Electric Druid | 4 | construction guide PDF (Order / Ref / Description / Value / Quantity table) | WooCommerce; Tom Wiltshire's stompbox boards; prices in GBP |
+| Zeppelin Design Labs | 1 | assembly-instructions PDF (kit bill of materials with designators in the notes column) | Shopify; the Quaverato harmonic tremolo kit; prices in USD |
+| Moody Sounds | 121 | kit instruction PDFs: Moody's own packing lists ('R1, R7 = 4k7') read by OCR because the text layer is shattered; BYOC checklists ('2 - 1k', '3 - A100k (VOLUME, ...)') from the text | Swedish WooCommerce kit shop; own, BJFE, Carlin, Vallhagen and Lehle-clone kits, resold BYOC kits and an archive of discontinued kits kept for their documentation; prices in SEK |
 | PCBWay: Glory to Ukraine | ~337 | none (BOM needs a PCBWay login) | one member's shared projects via the member JSONP list; schematic PNGs are CC BY-SA; no prices |
 
 ### Transistor substitutes

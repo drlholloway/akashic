@@ -19,7 +19,10 @@ def _pcbdata_from_html(html: str) -> dict | None:
         return json.loads(lzstring.LZString().decompressFromBase64(m.group(1)))
     m = re.search(r"var pcbdata = (\{.*?\});\s*\n", html, re.S)
     if m:
-        return json.loads(m.group(1))
+        try:
+            return json.loads(m.group(1))
+        except json.JSONDecodeError:  # the capture ran past the object (a newer ibom puts more script after it)
+            return json.JSONDecoder().raw_decode(m.group(1))[0]
     return None
 
 

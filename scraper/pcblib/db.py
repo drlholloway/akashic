@@ -106,13 +106,33 @@ VENDORS = {
              "Documentation is sent to buyers and not published; only the listing is indexed."),
     "thcustom": ("TH Custom Effects", "https://diy.thcustom.com/the-main-shop/",
                  "No build documents are published; only the listing is indexed."),
+    "guitarelectronics": ("Guitar-Electronics.eu", "https://guitar-electronics.eu/en_US/c/KITs-PCBs/13",
+                          "Build documents are indexed and linked, not redistributed."),
+    "opelectronics": ("OP Electronics", "https://www.op-electronics.com/en/169-pcbs-for-assembly",
+                      "Datasheets are indexed and linked, not redistributed."),
+    "griffin": ("Griffin Effects", "https://griffineffects.com/byo-pcbs",
+                "Project files are © Griffin Effects; indexed and linked, not redistributed."),
+    "coda": ("Coda Effects", "https://shop.coda-effects.com/en/shop/",
+             "Build documents on Google Drive are indexed and linked, not redistributed."),
+    "delyk": ("delyk PCBs", "https://www.delykpcb.com/shop/",
+              "Build documents in the site's media library are indexed and linked, not redistributed."),
+    "tayda": ("Tayda Electronics (DHEA)", "https://www.taydakits.com/categories/diy-guitar-effects",
+              "Instruction Center pages are indexed and linked, not redistributed; prices are not readable (Cloudflare)."),
+    "schalltechnik": ("Schalltechnik_04", "https://schalltechnik04.de/en/instructions",
+                      "Kits discontinued in 2022; the instructions stay online and are indexed and linked, not redistributed."),
+    "electricdruid": ("Electric Druid", "https://electricdruid.net/product-category/stomp-box-parts/",
+                      "Construction guides are indexed and linked, not redistributed."),
+    "zeppelin": ("Zeppelin Design Labs", "https://zeppelindesignlabs.com/collections/diy-kits",
+                 "Assembly instructions are indexed and linked, not redistributed."),
+    "moody": ("Moody Sounds", "https://en.moodysounds.com/produkt-kategori/byggsatser/",
+              "Kit instructions (Moody's own, BJFE, Carlin, Vallhagen and BYOC) are indexed and linked, not redistributed."),
     "pcbway-gtu": ("PCBWay: Glory to Ukraine", "https://www.pcbway.com/project/member/?bmbno=19C5FC6C-66B1-46",
                    "Shared projects are CC BY-SA 3.0; schematic images may be shown with attribution. BOM and gerbers need a PCBWay login."),
 }
 
 
 # What the vendor sells: "shop" (a PCB), "projects" (order the board from a fab), "blog" (a schematic to read).
-VENDOR_KIND = {"pcbway-gtu": "projects", "rwlpedal": "repo", "sheepygit": "repo", "bentfishbowl": "blog", "expanon": "archive"}
+VENDOR_KIND = {"pcbway-gtu": "projects", "rwlpedal": "repo", "sheepygit": "repo", "bentfishbowl": "blog", "expanon": "archive", "schalltechnik": "blog"}
 
 # A caution shown on every circuit page of a vendor, next to the buy link.
 VENDOR_WARNING = {

@@ -8,7 +8,7 @@ export interface Rates {
 }
 
 const KEY = 'pcblib.currency';
-const SYMBOL: Record<string, string> = { USD: '$', EUR: '€', GBP: '£', CAD: 'CA$' };
+const SYMBOL: Record<string, string> = { USD: '$', EUR: '€', GBP: '£', CAD: 'CA$', SEK: 'kr' };
 
 function readPref(): Currency {
 	if (!browser) return 'USD';

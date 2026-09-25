@@ -37,6 +37,37 @@ at the bottom; re-run them after parser changes.
   designators, so their rows are named by quantity; the schematic pairing names the knobs on
   eight of them (Bassdude and Mirage keep a knob count: OCR reads fewer names than knobs).
 
+- **Tayda (DHEA)**: nine SMD boards come pre-populated, so their component page lists only
+  the pot and switches; the store page carries the price but no readable stock state.
+- **OP Electronics**: three older datasheets (MOSFET Booster, LPB Booster, Distortion+) are
+  rotated layout drawings whose text extracts as fragments and whose OCR finds no table;
+  the Tap Tempo board and Octaverb have no document. Zip and rar document sets are read
+  with bsdtar; the .ods BOMs inside go through the spreadsheet reader.
+- **Griffin Effects**: five boards announced as coming soon have no project file and are
+  skipped; the SCH-1 Chorus points only at an interactive BOM whose page has no pcbdata.
+  Schematic pages are found by their 'N. Schematic:' heading, but the drawings name pots
+  RVn, so controls stay knob counts.
+- **delyk PCBs**: six boards have no BOM in the media library (Fussy Valve 809, Lightning
+  Bolt, TranqDrive, LB-Fuzz, Buzz Box, Conductor's Hand); named trimpots (DEPTH, RATE) are
+  read from their 'Trimpot' note.
+- **Schalltechnik_04**: parts pages are quantity / type tables without designators, so rows
+  are quantity-named; controls come from the pots named in the intro prose.
+- **Guitar-Electronics.eu**: the PDFs name pots only on the wiring drawing (values under the
+  pot, names on the next line), so controls stay knob counts; boards are named after their
+  originals, so based-on is a slug map.
+- **Moody Sounds**: the text layer of Moody's own PDFs is shattered into one-letter lines, so
+  their packing lists are OCR'd from the first four pages (psm 6); OCR digit slips (R9 read as
+  RQ) lose a row here and there. Kits with no PDF (Moodytron, Hypnodrone, Strange Devil Echo,
+  Octafuzz) are listing-only. BYOC checklists have no designators, so those rows are
+  quantity-named. The 'PCB' category the issue pointed at is PCB-mount potentiometers.
+- **Das Musikding** (issue #6): its own kits are mostly other indexed vendors' boards
+  (Griffin, Parasit, TH Custom, GCI, Schalltechnik) and every documentation link on
+  musikding.de returns the shop home page (404 behind a 200), so nothing to parse.
+- **Sushi Box FX** (issue #6): the shop sells finished pedals only; the DIY tube boards moved
+  to C2C Electronics, which is indexed. **ToneHeroPCB**: one out-of-stock board, no document.
+  **ElectroSmash** and **Carcharias Effects**: the domains no longer resolve.
+  **EffectPedalKits**: the site times out (502).
+
 ## Specific boards
 
 | Vendor | Board | Problem |

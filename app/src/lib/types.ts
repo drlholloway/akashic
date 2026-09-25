@@ -1,4 +1,4 @@
-export type Vendor = 'pedalpcb' | 'aionfx' | 'madbean' | 'guitarpcb' | 'fuzzdog' | 'sheepylove' | 'deadendfx' | 'moonn' | 'fivecats' | 'parasit' | 'pcbway-gtu' | 'pcbguitarmania' | 'deadastronaut' | 'bentfishbowl' | 'ggg' | 'lectricfx' | 'expanon' | 'zerogiod' | 'otrfx' | 'dirtmonger' | 'maskaudio' | 'effectslayouts' | 'jmk' | 'eae' | 'c2c' | 'deadair' | 'rwlpedal' | 'sheepygit' | 'otherpedals' | 'godcity' | 'effects1776' | 'rullywow' | 'mas' | 'tonepad' | 'wraa' | 'frog' | 'thcustom';
+export type Vendor = 'pedalpcb' | 'aionfx' | 'madbean' | 'guitarpcb' | 'fuzzdog' | 'sheepylove' | 'deadendfx' | 'moonn' | 'fivecats' | 'parasit' | 'pcbway-gtu' | 'pcbguitarmania' | 'deadastronaut' | 'bentfishbowl' | 'ggg' | 'lectricfx' | 'expanon' | 'zerogiod' | 'otrfx' | 'dirtmonger' | 'maskaudio' | 'effectslayouts' | 'jmk' | 'eae' | 'c2c' | 'deadair' | 'rwlpedal' | 'sheepygit' | 'otherpedals' | 'godcity' | 'effects1776' | 'rullywow' | 'mas' | 'tonepad' | 'wraa' | 'frog' | 'thcustom' | 'guitarelectronics' | 'opelectronics' | 'griffin' | 'coda' | 'delyk' | 'tayda' | 'schalltechnik' | 'electricdruid' | 'zeppelin' | 'moody';
 
 export interface IndexEntry {
 	id: string;
@@ -104,11 +104,21 @@ export const VENDOR_NAMES: Record<Vendor, string> = {
 	tonepad: 'Tonepad',
 	wraa: 'WRAA Labs',
 	frog: 'Frog Pedals',
-	thcustom: 'TH Custom Effects'
+	thcustom: 'TH Custom Effects',
+	guitarelectronics: 'Guitar-Electronics.eu',
+	opelectronics: 'OP Electronics',
+	griffin: 'Griffin Effects',
+	coda: 'Coda Effects',
+	delyk: 'delyk PCBs',
+	tayda: 'Tayda Electronics (DHEA)',
+	schalltechnik: 'Schalltechnik_04',
+	electricdruid: 'Electric Druid',
+	zeppelin: 'Zeppelin Design Labs',
+	moody: 'Moody Sounds'
 };
 
 export type VendorKind = 'shop' | 'projects' | 'repo' | 'blog' | 'archive';
-export const VENDOR_KIND: Partial<Record<Vendor, VendorKind>> = { 'pcbway-gtu': 'projects', rwlpedal: 'repo', sheepygit: 'repo', bentfishbowl: 'blog', expanon: 'archive' };
+export const VENDOR_KIND: Partial<Record<Vendor, VendorKind>> = { 'pcbway-gtu': 'projects', rwlpedal: 'repo', sheepygit: 'repo', bentfishbowl: 'blog', expanon: 'archive', schalltechnik: 'blog' };
 export function primaryAction(v: Vendor): string {
 	const k = VENDOR_KIND[v] ?? 'shop';
 	return k === 'blog' ? `Read the post at ${VENDOR_NAMES[v]}` : k === 'archive' ? `Open the schematic at ${VENDOR_NAMES[v]}` : k === 'projects' ? `Order the board at ${VENDOR_NAMES[v]}` : k === 'repo' ? `Get the gerbers at ${VENDOR_NAMES[v]}` : `Buy the PCB at ${VENDOR_NAMES[v]}`;
