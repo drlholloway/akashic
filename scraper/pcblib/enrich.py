@@ -14,6 +14,39 @@ from .paths import CACHE_DIR, DATA_DIR
 from .pdf import _CONTROL_WORDS, ocr_schematic_bom, render_page, schematic_bom
 
 
+def find_schematic_page_scan(pdf: Path, cache: Path) -> int | None:
+    """The schematic page of a document the text parsers could not place: a page whose own
+    text (PyMuPDF reads fonts pdftotext cannot) is headed SCHEMATIC, else, for a scanned
+    document of up to six pages, the page whose OCR pairs the most designators with values.
+    Cached, including a miss."""
+    import fitz
+    if cache.exists():
+        return json.loads(cache.read_text()).get("page")
+    page_no = None
+    with fitz.open(pdf) as d:
+        n = d.page_count
+        texts = [d[i].get_text() for i in range(min(n, 12))]
+    for i, t in enumerate(texts, start=1):
+        head = "\n".join(ln for ln in t.splitlines() if ln.strip())[:200].upper()
+        if re.search(r"\bSCHEMATIC\b", head) and not re.search(r"TABLE OF CONTENTS|INDEX|\d\.\s*SCHEMATIC", head):
+            page_no = i
+            break
+    if page_no is None and n <= 6 and not any(len(t.strip()) > 40 for t in texts):
+        best = 0
+        for i in range(1, n + 1):
+            png = cache.with_name(cache.stem + f"-p{i}-170.png")
+            if not png.exists():
+                render_page(pdf, i, png, dpi=170, max_px=6000)
+            rows = [r for r in ocr_schematic_bom(png, scale=2, px_per_pt=170 / 72) if not r.ref.startswith("×")]
+            if len(rows) > best:
+                best, page_no = len(rows), i
+        if best < 6:
+            page_no = None
+    cache.parent.mkdir(parents=True, exist_ok=True)
+    cache.write_text(json.dumps({"page": page_no}))
+    return page_no
+
+
 def _one_off(a: str, b: str) -> bool:
     """Same length, exactly one character different: an OCR misread of the other."""
     return len(a) == len(b) and sum(x != y for x, y in zip(a, b)) == 1
@@ -49,7 +82,7 @@ def schematic_parts(pdf: Path, page_no: int, cache: Path) -> list[BomRow]:
 def enrich_from_schematic(c: Circuit) -> None:
     """Apply the schematic pairs to a parsed circuit when its parts list is thin, names no
     pots, or its controls are missing or only a knob count."""
-    if not c.doc_local or not c.schematic_page or VENDOR_KIND.get(c.vendor) in ("archive", "projects"):
+    if not c.doc_local or VENDOR_KIND.get(c.vendor) in ("archive", "projects"):
         return  # an archive's scans are already OCR'd by its own adapter; the pairing would cost hours for little
     pdf = DATA_DIR / c.doc_local
     if not pdf.exists() or pdf.suffix.lower() != ".pdf":
@@ -59,6 +92,14 @@ def enrich_from_schematic(c: Circuit) -> None:
     no_names = not c.controls or all(_KNOBS.match(x) for x in c.controls)
     if not (thin or quantity_only or (no_names and not _named(c.bom))):
         return
+    if not c.schematic_page:
+        c.schematic_page = find_schematic_page_scan(pdf, CACHE_DIR / c.vendor / f"{c.slug}-schsearch.json")
+        if not c.schematic_page:
+            return
+        png = CACHE_DIR / c.vendor / f"{c.slug}-schematic.png"
+        if not png.exists():
+            render_page(pdf, c.schematic_page, png)
+        c.schematic_local = str(png.relative_to(DATA_DIR))
     rows = schematic_parts(pdf, c.schematic_page, CACHE_DIR / c.vendor / f"{c.slug}-schparts.json")
     if not rows:
         return

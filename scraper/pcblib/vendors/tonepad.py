@@ -11,7 +11,8 @@ from typing import Iterable
 from ..models import BomRow, Circuit
 from ..normalize import is_plausible, normalize_row
 from ..paths import DATA_DIR
-from ..pdf import pdf_text_pages
+from ..paths import CACHE_DIR
+from ..pdf import _tesseract_cached, pdf_text_pages, render_page
 from ..taxonomy import classify, find_enclosure
 from . import register
 from .base import Adapter, clean_text
@@ -154,6 +155,17 @@ class Tonepad(Adapter):
                 c.doc_version = mv.group(1).strip("._") if mv else ""
                 c.enclosure = find_enclosure(ptext)
                 c.bom, knobs = parse_layout_list(ptext)
+                if len(c.bom) < 8 and len(ptext.strip()) < 200:  # an image-only layout: OCR it with the columns kept
+                    png = CACHE_DIR / self.vendor / f"{c.slug}-p1.png"
+                    if not png.exists():
+                        render_page(pdf, 1, png, dpi=300)
+                    for psm in (4, 6):
+                        rows, k = parse_layout_list(_tesseract_cached(png, psm, preserve=True))
+                        rows = [r for r in rows if not r.ref.startswith("×") or r.sort_key > 0 or r.category in ("D", "Q", "IC", "POT")]
+                        if len(rows) > len(c.bom):
+                            c.bom, knobs = rows, k
+                    for r in c.bom:
+                        r.notes = (r.notes + "; OCR").strip("; ")
                 named = [r.ref.title() for r in c.bom if r.category == "POT" and re.fullmatch(r"[A-Za-z][A-Za-z /\-]{2,15}", r.ref)]
                 knobs = knobs or sum(int(r.ref[1:]) for r in c.bom if r.category == "POT" and r.ref.startswith("×"))
                 c.controls = named or ([f"{knobs} knobs" if knobs > 1 else "1 knob"] if knobs else [])

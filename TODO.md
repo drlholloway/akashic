@@ -73,26 +73,25 @@ at the bottom; re-run them after parser changes.
 
 | Vendor | Board | Problem |
 |---|---|---|
-| Dirt Monger | Multi RAT 1995 | Parts table is an image laid out in a way neither the text parsers nor OCR read; 1 row |
-| Dirt Monger | Integrated Preamp | Same; 3 rows |
+| Dirt Monger | Integrated Preamp | The parts table's text layer uses a broken font, so it is OCR'd with the columns kept; 11 of about 40 rows read (the Multi RAT now reads 23 with its three pots named) |
 | On The Road Effects | Guerrero Oro | Same; 0 rows |
 | Dead Astronaut | Chasm Reverb, Ebe Delay, Timestream Reverb | Raster docs where thorough OCR still returns nothing |
 | Five Cats | Marshall Supa Fuzz, Vintage Style Fuzz Face | Insert is a wiring diagram with values on the parts, not a table; 1 and 0 rows |
 | GuitarPCB | G.B.O.F. (16-project fuzz board), NostalgiTone Dual Combo Creator | No parts table: the doc lists sixteen projects to build on one board and points to DIY Layout Creator drawings |
 | Five Cats | Rattus | Read as four column strips: 23 to 26 rows per variant of about 27 |
 | Effects Layouts | Schematic Fuzz | Build doc is drill templates only; the schematic is on the silkscreen |
-| Effects Layouts | Lawn Darts | Doc is a single scanned schematic image; thorough and positional OCR at 300 dpi both find nothing |
+| Effects Layouts | Lawn Darts | Doc is a single scanned schematic image; the schematic-page search pairs 8 of its 10 labels, no pot name |
 | Effects Layouts | Melody Malfunction, Cranky Speaker | Doc has only a shopping list (value, type, quantity), so rows are named by quantity (`×2`) and controls are a knob count |
 | Effects Layouts | Six Shooter, Strider, Soil Slinger | Only a drill template or a blog post is linked; no parts list |
-| Effects Layouts | One-Knobber, Drivestortion | Old blog-era project PDFs with broken font encodings; OCR gives 13 and 18 rows, pots missing |
-| Lectric-FX | Double*Take, Betty Boost | Scanned grids read cell by cell, but the Double*Take's diode cells come out as junk (`INS1T4Z`) and Betty Boost's pot cells read as noise (`LEGKB`, `56EKC`), so no controls |
+| Effects Layouts | Drivestortion | Old blog-era project PDF with a broken font encoding; the aligned OCR gives 23 rows but two pot names come out as 'Cim' and 'Ccim' (the One-Knobber now reads its five-build table in full) |
+| Lectric-FX | Double*Take, Betty Boost | Scanned grids read cell by cell, but the Double*Take's diode cells come out as junk (`INS1T4Z`). The scanned, sideways schematics are found and paired now, but OCR reads only a third of their labels, so Betty Boost gets its Tone and not its Level |
 | Lectric-FX | Mongrel | Grid OCR reads 45 of 47 parts; C8 and C21 cells are unreadable, R18 reads 1K for 4K7, D1 reads 1N40602 for 1N4002 |
 | JMK PCBs | most boards | Docs rarely state an enclosure (8 of 38 found). The drill templates draw only the board and its pots, and the shop's categories carry no size, so there is no source to read one from |
 | Five Cats | 57 older inserts | No enclosure stamp on the insert (only newer layouts have the "minimum enclosure" badge) |
 | Sheepylove on GitHub | Katahdin, Sarda, Shorn Sheep | No parts list in the repository and the board render's labels do not OCR, so no controls; the schematics are on the Bent Fishbowl blog |
 | Frog Pedals | all boards | No build documents are published (Frog sends them to buyers), so the listing carries no parts |
 | TH Custom Effects | ROG Umble | Its build-instructions link is a PNG sheet rather than the HTML documentation the other boards have; no parts read from it |
-| Tonepad | EA Tremolo, MXR Noise Gate, Purple Peaker, Rebote 3, Ross Phaser, Speaker Simulator, Tremulus Lune, DOD 250 | Layout PDFs with no text layer (or, for the DOD 250, no file on the project page), so no parts list; the other 47 layouts parse |
+| Tonepad | MXR Noise Gate, Purple Peaker, Tremulus Lune, DOD 250, Ross Phaser | No file on the project page, or (Ross Phaser) a layout whose values sit only in the drawing. Image-only layouts with a parts box (EA Tremolo, Rebote 3, Speaker Simulator) are OCR'd now |
 | WRAA Labs | Retroflect, Inkcap II | The Retroflect guide has no parts list; the Inkcap page's description is cut before its pots, so no controls |
 | Madbean | Flunkee | Doc link returns 404 (`_folders/1590A/pdf/Flunkee.pdf`) |
 | transistor subs | 2N6027, 2N2646 | A PUT and a UJT, which the database lists without parameters, so no substitutes. OC139, 1T308A and CV7351 are anchored to listed equivalents (ASY29, GT308A, 2N1308). Placeholders like `NPN`, `GE`, `your choice` are skipped on purpose |
@@ -100,9 +99,16 @@ at the bottom; re-run them after parser changes.
 ## Parser wishes
 
 - Schematic pairing now runs for every board whose parts list is thin, quantity-only or
-  names no controls (`enrich.py`): vector text first, then OCR at two resolutions and three
-  orientations. It reads clean KiCad and Altium exports; hand-drawn or watermarked
-  schematics and boards whose pots are designators (VR1) still get nothing from it.
+  names no controls (`enrich.py`): vector text first, then OCR at two resolutions, three
+  orientations and two segmentation modes. A scanned document with no schematic heading is
+  searched page by page for the one that pairs the most labels. It reads clean KiCad and
+  Altium exports; hand-drawn or watermarked schematics and boards whose pots are
+  designators (VR1) still get nothing from it, and scanned Eagle schematics (Lectric-FX) give
+  up only a third of their labels.
+- OCR of a parts table now also runs with the word gaps preserved, so the same table parsers
+  that read text PDFs read the OCR (per-variant tables, side-by-side Qty / Value / Parts
+  lists, Part / Value columns). Tables printed white-on-colour on a PCB render (Five Cats
+  wiring diagrams) still defeat tesseract.
 
 ## Query
 

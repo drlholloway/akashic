@@ -320,13 +320,43 @@ def ocr_bom(pdf: Path, vendor: str, slug: str, max_pages: int = 9, min_rows: int
     return best
 
 
-def _tesseract_cached(png: Path, psm: int, tag: str = "") -> str:
-    txt = png.with_name(f"{png.stem}{tag}{'' if psm == 6 else f'-psm{psm}'}.txt")
-    if txt.exists():
+def _tesseract_cached(png: Path, psm: int, tag: str = "", preserve: bool = False) -> str:
+    """Page text by tesseract. `preserve` keeps the gaps between words proportional to the
+    page, so a table comes out with its columns aligned and the text parsers can read it."""
+    txt = png.with_name(f"{png.stem}{tag}{'' if psm == 6 else f'-psm{psm}'}{'-sp' if preserve else ''}.txt")
+    if txt.exists() and txt.stat().st_mtime >= png.stat().st_mtime:  # an adapter may rewrite the image under the same name
         return txt.read_text()
-    out = subprocess.run(["tesseract", str(png), "-", "--psm", str(psm)], capture_output=True, text=True).stdout
+    args = ["tesseract", str(png), "-", "--psm", str(psm)] + (["-c", "preserve_interword_spaces=1"] if preserve else [])
+    proc = subprocess.run(args, capture_output=True, text=True)
+    out = proc.stdout
+    if proc.returncode != 0 or not out.strip():
+        return out  # a failed or empty run is not worth remembering
     txt.write_text(out)
     return out
+
+
+def _ocr_layout_rows(png: Path) -> list[BomRow]:
+    """OCR with the columns kept in place, read by the same parsers that handle text PDFs
+    (a designator table, a per-variant table, a Qty / Value / Parts list, side-by-side
+    columns). The pass that recovers the most designators wins; rows are marked OCR."""
+    best: list[BomRow] = []
+    for psm in (6, 4):
+        pages = [_tesseract_cached(png, psm, preserve=True)]
+        cands = [parse_bom(pages), parse_bom_qty_value_parts(pages), parse_bom_columns(pages), parse_bom_qty_value_ref(pages),
+                 parse_bom_variant_columns(pages), parse_bom_name_designator(pages), parse_bom_designator_qty_name(pages)]
+        rows = _expand_range_rows(max(cands, key=len))
+        if len(rows) > len(best):
+            best = rows
+    for r in best:
+        r.value = _repair_value(r.value) if r.category in ("R", "C") else r.value
+        normalize_row(r)
+        r.notes = (r.notes + "; OCR").strip("; ") if "OCR" not in r.notes else r.notes
+    def named_ok(r: BomRow) -> bool:  # a pot or switch named by the OCR must be a known knob word or a real word, not a fragment or a switch type
+        if r.category not in ("POT", "SW") or re.fullmatch(r"[A-Z]{1,3}\d{1,3}|×\d+", r.ref):
+            return True
+        name = r.ref.upper().rstrip(".")
+        return name in _CONTROL_WORDS or (len(name) >= 4 and name.isalpha() and not re.fullmatch(r"[SD]P[SD]T|\dP\dT", name))
+    return [r for r in best if named_ok(r) and (is_plausible(r) or r.category in ("POT", "SW", "LED", "D", "Q", "IC"))]
 
 
 def _merge_ocr_rows(variants: list[list[BomRow]]) -> list[BomRow]:
@@ -469,6 +499,21 @@ def _ocr_page(pdf: Path, vendor: str, slug: str, page_no: int, thorough: bool = 
     variants = [_rows_from_ocr(_tesseract_cached(png, 6))]
     if not thorough:
         return variants[0]
+    layout = _ocr_layout_rows(png)
+    if len(layout) >= 8 and any(r.variant for r in layout):
+        return layout  # a per-variant table read from the aligned OCR beats every word-level pass
+
+    designated = [r for r in layout if re.fullmatch(r"[A-Z]{1,3}\d{1,3}", r.ref.upper())]
+    table_like = len(layout) >= 8 and len(designated) >= 6 and len({r.ref.upper() for r in designated}) == len(designated)
+
+    def fill(result: list[BomRow]) -> list[BomRow]:
+        """Add the designators the aligned-OCR table read that the word-level passes missed. Only
+        when that text really parsed as a table: a schematic page also yields 'rows' (a repeated
+        IC4 with three values), and letting those in would make a drawing outscore the parts page."""
+        if not table_like:
+            return result
+        have = {r.ref.upper() for r in result}
+        return result + [r for r in layout if r.ref.upper() not in have and not r.variant and (re.fullmatch(r"[A-Z]{1,3}\d{1,3}", r.ref.upper()) or r.category in ("POT", "SW"))]
     # Low-resolution scans (a BOM screenshot placed on a page): OCR the embedded
     # image itself, upscaled to ~1400px wide, in two segmentation modes.
     variants.append(_rows_from_ocr(_tesseract_cached(png, 4)))
@@ -490,7 +535,7 @@ def _ocr_page(pdf: Path, vendor: str, slug: str, page_no: int, thorough: bool = 
                 # Strip rows cannot mix columns; keep them and add what the page-level passes found beyond them.
                 have = {(r.variant, r.ref) for r in strips}
                 merged = _merge_ocr_rows(variants)
-                return strips + [r for r in merged if (r.variant, r.ref) not in have and (r.variant or r.ref not in {ref for _, ref in have})]
+                return fill(strips + [r for r in merged if (r.variant, r.ref) not in have and (r.variant or r.ref not in {ref for _, ref in have})])
         grid = _ocr_grid_rows(bpng)
         if len(grid) >= 8:
             # A ruled table read cell by cell is more reliable than any page-level pass, but it may
@@ -511,7 +556,7 @@ def _ocr_page(pdf: Path, vendor: str, slug: str, page_no: int, thorough: bool = 
                 if mm and mm.group(1) in top and int(mm.group(2)) > top[mm.group(1)] + 2:
                     continue
                 extra.append(r)
-            return grid + extra
+            return fill(grid + extra)
     except ImportError:
         pass
     with fitz.open(pdf) as d:
@@ -534,7 +579,7 @@ def _ocr_page(pdf: Path, vendor: str, slug: str, page_no: int, thorough: bool = 
                 continue
             for psm in (6, 4):
                 variants.append(_rows_from_ocr(_tesseract_cached(ipng, psm)))
-    return _merge_ocr_rows(variants)
+    return fill(_merge_ocr_rows(variants)) if thorough else _merge_ocr_rows(variants)
 
 
 _UNIT_TOKEN = re.compile(r"^[0-9ATtlIiOoS?£./]{1,6}(?:[kKMrRnpuµ]F?|[uµ]F|nF|pF)$")
@@ -547,6 +592,7 @@ def _repair_value(v: str) -> str:
     if re.match(r"^[ABCW]\d", v):
         return v  # a pot value like A1M: the letter is the taper, not a misread digit
     v = re.sub(r"^T(?=[0-9OolI]|[kKMuµn])", "1", v)  # a leading T is a serifed 1 (TK5 -> 1K5, Tu -> 1u); an inner T stays a 7
+    v = re.sub(r"^[til](?=[kKMuµnp]F?$)", "1", v)  # "in", "tu", "lk": a lone 1 before the unit read as a letter
     if _UNIT_TOKEN.match(v) and re.search(r"[ATtlIiOoS?£/]", v[:-1]):
         head, tail = re.match(r"^(.*?)([kKMrRnpuµ]F?|[uµ]F|nF|pF)$", v).groups()
         fixed = head.translate(_DIGIT_FIX)
@@ -777,7 +823,7 @@ _SCH_NAME_STOP = {"BOM", "OOK", "TBD", "REF", "VAL", "PART", "PARTS", "QTY", "AL
 _SCH_SKIP_WORDS = {"GND", "VCC", "VDD", "VEE", "VREF", "IN", "OUT", "+9V", "9V", "+V", "-V", "+VE", "-VE", "+5V", "N/C", "NC"}
 
 
-def _pair_labels(words: list, unit: float = 1.0) -> list[BomRow]:
+def _pair_labels(words: list, unit: float = 1.0, wide: bool = False) -> list[BomRow]:
     """Pair designator labels with the nearest value label. `words` are
     (x0, y0, x1, y1, text) boxes; `unit` scales the distance thresholds
     (1.0 for PDF points, larger for pixel coordinates)."""
@@ -809,6 +855,34 @@ def _pair_labels(words: list, unit: float = 1.0) -> list[BomRow]:
             nr = normalize_row(BomRow(ref=ref, value=best[1], notes="from schematic"))
             if is_plausible(nr):
                 rows.append(nr)
+    # Eagle puts a part's name and value at opposite ends of its symbol, farther apart than the
+    # thresholds allow. A second pass lets an unpaired designator reach 2.5x as far, but only for a
+    # value that is nearest to it and to which it is the nearest designator (mutual), and not yet taken.
+    taken = {id(w) for w in others if any(w[4].strip(",;") == r.value and r.ref in seen for r in rows)}
+    for r in (refs if wide and len(rows) < 12 else []):
+        ref = re.sub(r"^((?:IC|U)\d+)[A-F]$", r"\1", r[4])
+        if ref in seen:
+            continue
+        cat = categorize(ref, "")
+        pat = _SCH_VALUE.get(cat)
+        if not pat:
+            continue
+        rx, ry = (r[0] + r[2]) / 2, (r[1] + r[3]) / 2
+        cands = [w for w in others if id(w) not in taken and pat.match(w[4].strip(",;")) and not (cat in ("D", "Q", "IC") and w[4].isdigit())]
+        if not cands:
+            continue
+        w = min(cands, key=lambda w: ((w[0] + w[2]) / 2 - rx) ** 2 + ((w[1] + w[3]) / 2 - ry) ** 2)
+        wx, wy = (w[0] + w[2]) / 2, (w[1] + w[3]) / 2
+        if ((wx - rx) ** 2 + (wy - ry) ** 2) ** 0.5 > 2.5 * _SCH_MAXDIST[cat] * unit:
+            continue
+        nearest_ref = min(refs, key=lambda q: ((q[0] + q[2]) / 2 - wx) ** 2 + ((q[1] + q[3]) / 2 - wy) ** 2)
+        if nearest_ref is not r:
+            continue
+        nr = normalize_row(BomRow(ref=ref, value=w[4].strip(",;"), notes="from schematic"))
+        if is_plausible(nr):
+            seen.add(ref)
+            taken.add(id(w))
+            rows.append(nr)
     # Named pots and switches: an upper-case label (DRIVE, DIST., CLIP) whose nearest
     # neighbour is a taper value or a switch type.
     potval = re.compile(r"^(?:[ABCW][0-9IlLO]+(?:[.,]\d+)?[kKM]|[ABCW][0-9IlLO]{3,}|\d+(?:[.,]\d+)?[kKM][ABCW])$", re.I)  # KiCad users write a10k; OCR reads A1M as AIM; A2 is a pin
@@ -859,7 +933,7 @@ def schematic_bom(pdf: Path, page_no: int) -> list[BomRow]:
     return _pair_labels(words, unit=1.0)
 
 
-def _ocr_word_boxes(png: Path, rotate: int = 0) -> list[tuple[int, int, int, int, str]]:
+def _ocr_word_boxes(png: Path, rotate: int = 0, psm: int = 11) -> list[tuple[int, int, int, int, str]]:
     """Tesseract word boxes (sparse text) for an image, optionally rotated first."""
     import csv
     import io
@@ -874,7 +948,14 @@ def _ocr_word_boxes(png: Path, rotate: int = 0) -> list[tuple[int, int, int, int
             out = page.get_pixmap(matrix=fitz.Matrix(1, 1), alpha=False)
         src = png.with_name(png.stem + f"-r{rotate}.png")
         out.save(src)
-    tsv = subprocess.run(["tesseract", str(src), "-", "--psm", "11", "tsv"], capture_output=True, text=True).stdout
+    cache = src.with_name(f"{src.stem}-psm{psm}.tsv")
+    if cache.exists() and cache.stat().st_mtime >= src.stat().st_mtime:  # an adapter may rewrite the image under the same name
+        tsv = cache.read_text()
+    else:
+        proc = subprocess.run(["tesseract", str(src), "-", "--psm", str(psm), "tsv"], capture_output=True, text=True)
+        tsv = proc.stdout
+        if proc.returncode == 0 and tsv.count("\n") > 3:
+            cache.write_text(tsv)
     words = []
     for r in csv.DictReader(io.StringIO(tsv), delimiter="\t"):
         t = (r.get("text") or "").strip()
@@ -908,7 +989,10 @@ def ocr_schematic_bom(image: Path, scale: int = 2, px_per_pt: float = 170 / 72) 
     unit = 1.27 * px_per_pt * scale  # thresholds in PDF points were tuned for ~7pt labels
     best: list[BomRow] = []
     for rotate in (0, 90, 270):
-        rows = _pair_labels(_ocr_word_boxes(up, rotate), unit=unit)
+        rows = _pair_labels(_ocr_word_boxes(up, rotate), unit=unit, wide=True)
+        if 0 < len(rows) < 12:  # a scan: sparse text with OSD (psm 12) reads a different subset of its labels; union by designator
+            have = {r.ref for r in rows}
+            rows += [r for r in _pair_labels(_ocr_word_boxes(up, rotate, psm=12), unit=unit, wide=True) if r.ref not in have]
         if len(rows) > len(best):
             best = rows
         if rotate == 0 and len(rows) >= 12:
@@ -921,11 +1005,28 @@ _QVP_ROW = re.compile(r"^\s*(\d{1,3})\s+(\S.*?\S|\S)\s{2,}([A-Za-z][A-Za-z0-9/\-
 _QVP_SECTION = re.compile(r"^\s*([A-Z][A-Za-z ,&/]{3,60})\s*$")
 
 
+def _split_twin_tables(page: str, header: re.Pattern) -> list[str]:
+    """A page whose header line carries the same table header twice (two part types side by
+    side) becomes two pages, cut at the column where the second header starts."""
+    lines = page.splitlines()
+    for ln in lines:
+        hits = [m.start() for m in header.finditer(ln)]
+        if len(hits) >= 2:
+            cut = hits[1]
+            return [_split_twin_tables("\n".join(l[:cut] for l in lines), header)[0], "\n".join(l[cut:] for l in lines)]
+    return [page]
+
+
+_QVP_TWIN = re.compile(r"Qty\.?\s+Value\s+(?:Parts?|Devices?|Refs?|Designators?)", re.I)
+
+
 def parse_bom_qty_value_parts(pages: list[str]) -> list[BomRow]:
     """'Qty  Value  Parts' tables (Moonn Electronics): one line per value with the
-    designators grouped, under section headings that name the part type."""
+    designators grouped, under section headings that name the part type. Two tables
+    printed side by side are read as two."""
     rows: list[BomRow] = []
     seen: set[str] = set()
+    pages = [half for page in pages for half in _split_twin_tables(page, _QVP_TWIN)]
     for page in pages:
         lines = page.splitlines()
         i = 0
@@ -945,8 +1046,15 @@ def parse_bom_qty_value_parts(pages: list[str]) -> list[BomRow]:
                     if not ref or ref in seen:
                         continue
                     seen.add(ref)
-                    nr = normalize_row(BomRow(ref=ref, value=value.strip(), part_type=ptype, notes=(notes or "").strip()))
-                    if is_plausible(nr):
+                    note = (notes or "").strip()
+                    cat = ""
+                    if not re.fullmatch(r"(?:R|C|D|Q|IC|U|L|SW|LED|VR|RV|TR|X|J|Z|ZD|K|T|FB|OPTO|P|POT)\d{1,3}[A-Za-z]?", ref, re.I):
+                        if re.fullmatch(r"(?:[ABCW]\s?\d+(?:[.,]\d+)?[kKM]?|\d+(?:[.,]\d+)?[kKM]?\s?[ABCW])(?:\s*\(.*\))?", value.strip()) or re.search(r"\bpot", ptype, re.I):
+                            cat = "POT"
+                        elif re.search(r"[SD]P[SD]T|\dP\dT|switch|toggle", value + " " + ptype, re.I):
+                            cat = "SW"
+                    nr = normalize_row(BomRow(ref=ref, value=value.strip(), part_type=ptype, notes="" if note.isdigit() else note, category=cat))
+                    if cat or is_plausible(nr):
                         rows.append(nr)
                 continue
             if re.match(r"^\s*(Schematic|Offboard|Wiring|Drill|Notes?)\b", ln, re.I):
@@ -1085,8 +1193,9 @@ _VARIANT_NAME = re.compile(r"^[A-Za-z][A-Za-z. ]{1,14}$")
 
 def _variant_label_ok(c: str) -> bool:
     """A plausible version name: not a value, designator, column word, broken word or parts-row text."""
-    return bool(_VARIANT_LABEL.match(c)) and not re.search(r"\d[kKMnpuµ]", c) and c.lower() not in ("value", "qty", "quantity", "type", "notes") \
-        and not _VARIANT_REF.match(c) and not c.isdigit() and bool(re.search(r"[A-Z0-9]", c)) \
+    return bool(_VARIANT_LABEL.match(c)) and not re.search(r"\d[kKMnpuµ]", c) \
+        and c.lower() not in ("value", "qty", "quantity", "type", "notes", "note", "device", "package", "footprint", "description", "desc", "part number", "part no", "rating", "tolerance", "voltage", "comment", "comments", "supplier", "mouser", "tayda") \
+        and not _VARIANT_REF.match(c) and (not c.isdigit() or bool(re.fullmatch(r"(?:19|20)\d\d", c))) and bool(re.search(r"[A-Z0-9]", c)) \
         and not re.search(r"(?:^| )[a-z](?: |$)", c) \
         and not re.search(r"switch|on/(?:off/)?on|\b[1-4SD]P[DS]T\b|\bpot\b|trim", c, re.I)
 
@@ -1149,6 +1258,7 @@ def parse_bom_variant_columns(pages: list[str]) -> list[BomRow]:
             hdr = _variant_header(cells)
             if not hdr and not labels and 2 <= len(cells) <= 8 and all(_variant_label_ok(c) and not _variant_heading(c) for c in cells) \
                     and not any(c.upper() in _SCH_SKIP_WORDS or c.upper() in _OCR_VARIANT_STOP or re.fullmatch(r"[A-Z +\-]{1,5}", c) for c in cells) \
+                    and not any(re.fullmatch(r"[A-Za-z]{0,4}\d[\dA-Za-z./-]*", c) for c in cells) \
                     and not all(c.isupper() for c in cells):
                 # A bare line of version names ("Meathead  Meathead Dark  Ritual Fuzz") counts when a designator
                 # row with exactly that many values follows within three lines (a part-type heading may sit between).

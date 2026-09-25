@@ -13,6 +13,12 @@ GitHub Release notes.
   discontinued kits). Tayda prices come from the store's category listing.
 - Pot values with a dashed taper ('10K-A', '2M-B') or a taper word ('500K REV LOG', '10K Lin')
   now normalize for every vendor; the column parser reads 'RVn' designators.
+- OCR pass for image-only parts tables: tesseract runs with the word gaps preserved and the
+  text-table parsers read the result, so per-variant tables (Effects Layouts One-Knobber, five
+  builds), side-by-side Qty / Value / Parts lists (Dirt Monger) and Tonepad's image layouts
+  parse. Scanned documents with no schematic heading are searched for their schematic page
+  and paired (Lectric-FX, Effects Layouts Lawn Darts); OCR word boxes are cached. 363 boards
+  gained rows, 245 of them Experimentalists Anonymous schematics.
 - Mask Audio Electronics (Shopify; Word build documents read straight from the .docx tables,
   no converter needed; the freebie bundle is split into its four boards).
 - `TODO.md`: a running list of documents that parse wrong or thin, per vendor.
