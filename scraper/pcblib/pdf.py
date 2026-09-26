@@ -938,7 +938,7 @@ _SCH_REF = re.compile(r"^(R|C|D|Q|IC|U|L|SW|FB|TRIM|VR|XFM|T|K|LED|LDR|Z|ZD)\d+[
 _SCH_VALUE: dict[str, re.Pattern] = {
     "R": re.compile(r"^\d+(?:[.,]\d+)?[kKMR]?\d*(?:Ω|ohm)?$", re.I),
     "TRIM": re.compile(r"^\d+(?:[.,]\d+)?[kKM]?\d*$", re.I),
-    "C": re.compile(r"^\d+(?:[.,]\d+)?[pnuµ]F?\d*$|^\d+(?:[.,]\d+)?[pnuµ]\d*$", re.I),
+    "C": re.compile(r"^(?!1N\d{3})(?:\d+(?:[.,]\d+)?[pnuµ]F?\d*|\d+(?:[.,]\d+)?[pnuµ]\d*)$", re.I),  # 1N4003 is a diode, not 1n
     "L": re.compile(r"^\d+(?:[.,]\d+)?[munµ]?H?\d*$", re.I),
     "D": re.compile(r"^(1N\d{3,4}[A-Z]?|BAT\d+[A-Z]?|LED|[A-Z]{1,3}\d{2,}[A-Z0-9\-/]*|\d[A-Z]\d{2,}[A-Z0-9]*)$", re.I),
     "Q": re.compile(r"^(\d[A-Z]{1,2}\d{2,}[A-Z0-9\-]*|[A-Z]{2,4}\d{2,}[A-Z0-9\-]*|J\d{3}|BS\d{3}|P\d{3}[A-Za-z]?|AC\d{3}|OC\d{2,3}|NKT\d+|GT\d+[A-Z]?)$", re.I),
@@ -1054,15 +1054,16 @@ def _pair_labels(words: list, unit: float = 1.0, wide: bool = False) -> list[Bom
     return rows
 
 
-def schematic_bom(pdf: Path, page_no: int) -> list[BomRow]:
+def schematic_bom(pdf: Path, page_no: int, wide: bool = False) -> list[BomRow]:
     """Pair designator labels with their nearest value label on a vector schematic
     page (Eagle / KiCad exports keep both as text). Reliable for R, C, D, Q, IC;
-    other parts need the parts list."""
+    other parts need the parts list. `wide` adds the mutual-nearest pass for labels set
+    further from their part (hand-traced archive drawings)."""
     with fitz.open(pdf) as doc:
         if page_no < 1 or page_no > doc.page_count:
             return []
         words = doc[page_no - 1].get_text("words")
-    return _pair_labels(words, unit=1.0)
+    return _pair_labels(words, unit=1.0, wide=wide)
 
 
 def _ocr_word_boxes(png: Path, rotate: int = 0, psm: int = 11) -> list[tuple[int, int, int, int, str]]:
@@ -1103,6 +1104,23 @@ def _ocr_word_boxes(png: Path, rotate: int = 0, psm: int = 11) -> list[tuple[int
     return words
 
 
+def _diode_words(words: list) -> list:
+    """IN4148, lN34: tesseract reads the 1 of a 1N-series diode as a letter."""
+    return [(*w[:4], re.sub(r"^[iIl]N(?=\d{2,4}[A-Z]?$)", "1N", w[4])) for w in words]
+
+
+def _drop_symbol_digit(t: str) -> str:
+    """Vision reads the end of a resistor's zigzag beside its value as a 3: '32.2K' for 2.2K.
+    Drop a leading 3 when the value without it is a standard one and the value with it is not."""
+    m = re.fullmatch(r"[iIl]N(\d{2,4}[A-Z]?)", t)
+    if m:
+        return "1N" + m.group(1)  # IN34, iN34: a 1N-series diode
+    m = re.fullmatch(r"3(\d+(?:\.\d+)?)([kKMR]?)", t)
+    if m and not m.group(1).startswith("0") and not _is_e24("3" + m.group(1)) and _is_e24(m.group(1)):
+        return m.group(1) + m.group(2)
+    return t
+
+
 def ocr_schematic_bom(image: Path, scale: int = 2, px_per_pt: float = 170 / 72) -> list[BomRow]:
     """Same pairing, but for a schematic *image*: OCR with word boxes (sparse text mode)
     after upscaling. Good for clean KiCad-style exports. A drawing set sideways on the
@@ -1121,17 +1139,19 @@ def ocr_schematic_bom(image: Path, scale: int = 2, px_per_pt: float = 170 / 72) 
     unit = 1.27 * px_per_pt * scale  # thresholds in PDF points were tuned for ~7pt labels
     best: list[BomRow] = []
     for rotate in (0, 90, 270):
-        rows = _pair_labels(_ocr_word_boxes(up, rotate), unit=unit, wide=True)
+        rows = _pair_labels(_diode_words(_ocr_word_boxes(up, rotate)), unit=unit, wide=True)
         upright = rotate == 0 and len(rows) >= 12  # judged on tesseract alone: Vision also reads sideways labels upright
         if vision.available():
             # Vision reads more of a scan's small labels; its pairs lead and tesseract adds the designators it missed
             src = up.with_name(up.stem + f"-r{rotate}.png") if rotate else up
-            seen = _pair_labels(vision.words(src), unit=unit, wide=True)
+            seen = _pair_labels([(*w[:4], _drop_symbol_digit(w[4])) for w in vision.words(src)], unit=unit, wide=True)
             have = {r.ref for r in seen}
             rows = seen + [r for r in rows if r.ref not in have]
+        # Judged on the combined pairs: filling in with psm 12 whenever tesseract alone is thin, or
+        # picking the orientation on tesseract alone, both lose more boards than they save.
         if 0 < len(rows) < 12:  # a scan: sparse text with OSD (psm 12) reads a different subset of its labels; union by designator
             have = {r.ref for r in rows}
-            rows += [r for r in _pair_labels(_ocr_word_boxes(up, rotate, psm=12), unit=unit, wide=True) if r.ref not in have]
+            rows += [r for r in _pair_labels(_diode_words(_ocr_word_boxes(up, rotate, psm=12)), unit=unit, wide=True) if r.ref not in have]
         if len(rows) > len(best):
             best = rows
         if upright:

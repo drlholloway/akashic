@@ -66,8 +66,10 @@ class ExpAnon(Adapter):
                 rows = schematic_bom(blob, 1)
                 if not png.exists():
                     render_page(blob, 1, png, dpi=200)
-                if len(rows) < 3:
+                if len(rows) < 3:  # decided on the strict pairing: a scan's stray text layer should still go to OCR
                     rows = ocr_schematic_bom(png)
+                else:
+                    rows = schematic_bom(blob, 1, wide=True)  # traced drawings often set a label well off its part
             else:
                 if not png.exists():
                     from PIL import Image

@@ -16,6 +16,10 @@ GitHub Release notes.
 - Column tables read strip by strip are cut just before the next column's header, not halfway,
   since headers sit at the left of their columns; a run of values whose designators OCR lost
   (R1-R5 before R6) is numbered when the count fits the gap exactly.
+- Schematic pairing: Experimentalists Anonymous vector PDFs take the wider pass for labels set
+  off their part (the PT2399 echo reads 21 rows, not 7); 1N-series diodes read as IN4148 or
+  iN34 are repaired; the 3 Vision reads from a resistor's zigzag ('32.2K', '3100K') is dropped;
+  and a diode number is no longer taken as a capacitor value ('1N4004' as 1n).
 - OCR'd pot names: capacitor types and pot makers (Tantalum, Piher) and words in a sentence are
   no longer read as knob names, and one knob spelled two ways by two engines (Output and
   Qutput) is listed once. A Title-case name with a taper after the value (Suppressor 500KA) counts.
