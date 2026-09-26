@@ -6,6 +6,9 @@ GitHub Release notes.
 ## Unreleased
 
 ### Added
+- Gigahearts FX (UK Shopify shop, five boards in GBP): the GIG BUFF versions of the EHX/JHS Big
+  Muff 2, a Broadcast with mods and the Full Moon (Moon Rock / Coyote). One build doc is public;
+  GIG BUFF v2.0 is read from its schematic image.
 - Apple Vision OCR beside tesseract on macOS (`pcblib/vision.py`, a small Swift helper compiled
   on first use). It reads thin, small and coloured type that tesseract garbles, and joins every
   thorough OCR pass, the column-strip reader for per-variant tables and schematic label pairing.

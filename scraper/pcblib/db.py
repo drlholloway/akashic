@@ -126,6 +126,8 @@ VENDORS = {
                  "Assembly instructions are indexed and linked, not redistributed."),
     "moody": ("Moody Sounds", "https://en.moodysounds.com/produkt-kategori/byggsatser/",
               "Kit instructions (Moody's own, BJFE, Carlin, Vallhagen and BYOC) are indexed and linked, not redistributed."),
+    "gigahearts": ("Gigahearts FX", "https://www.gigaheartsfx.com/collections/pcb-products",
+                   "Build documents are © Gigahearts FX; indexed and linked, not redistributed. Schematic images are read locally, not served."),
     "pcbway-gtu": ("PCBWay: Glory to Ukraine", "https://www.pcbway.com/project/member/?bmbno=19C5FC6C-66B1-46",
                    "Shared projects are CC BY-SA 3.0; schematic images may be shown with attribution. BOM and gerbers need a PCBWay login."),
 }

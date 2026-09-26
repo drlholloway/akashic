@@ -61,6 +61,10 @@ at the bottom; re-run them after parser changes.
   RQ) lose a row here and there. Kits with no PDF (Moodytron, Hypnodrone, Strange Devil Echo,
   Octafuzz) are listing-only. BYOC checklists have no designators, so those rows are
   quantity-named. The 'PCB' category the issue pointed at is PCB-mount potentiometers.
+- **Gigahearts FX**: only GIG BUFF v1.3 links its build doc; the others ship the doc with the
+  board. GIG BUFF v2.0 is read from the product page's schematic image (23 rows, vertical labels
+  and the pots missed, R2 10r read as 106); GIG BUFF v3.0, Broadcast and Full Moon show only board
+  renders, so they are listing-only.
 - **Das Musikding** (issue #6): its own kits are mostly other indexed vendors' boards
   (Griffin, Parasit, TH Custom, GCI, Schalltechnik) and every documentation link on
   musikding.de returns the shop home page (404 behind a 200), so nothing to parse.

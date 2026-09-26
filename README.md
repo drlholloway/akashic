@@ -57,6 +57,7 @@ It ships as a static, offline-capable web app (PWA) that installs on macOS, Linu
 | Electric Druid | 4 | construction guide PDF (Order / Ref / Description / Value / Quantity table) | WooCommerce; Tom Wiltshire's stompbox boards; prices in GBP |
 | Zeppelin Design Labs | 1 | assembly-instructions PDF (kit bill of materials with designators in the notes column) | Shopify; the Quaverato harmonic tremolo kit; prices in USD |
 | Moody Sounds | 121 | kit instruction PDFs: Moody's own packing lists ('R1, R7 = 4k7') read by OCR because the text layer is shattered; BYOC checklists ('2 - 1k', '3 - A100k (VOLUME, ...)') from the text | Swedish WooCommerce kit shop; own, BJFE, Carlin, Vallhagen and Lehle-clone kits, resold BYOC kits and an archive of discontinued kits kept for their documentation; prices in SEK |
+| Gigahearts FX | 5 | the build doc's parts table where the product links one (GIG BUFF v1.3); otherwise the schematic image on the product page, paired by OCR (GIG BUFF v2.0) | UK Shopify shop; the PCB collection only (the rest of the store is finished pedals); build docs for the other boards come with the board; prices in GBP |
 | PCBWay: Glory to Ukraine | ~337 | none (BOM needs a PCBWay login) | one member's shared projects via the member JSONP list; schematic PNGs are CC BY-SA; no prices |
 
 ### Transistor substitutes
