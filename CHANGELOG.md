@@ -102,6 +102,9 @@ GitHub Release notes.
   Designator / Qty / Name export; spreadsheet readers accept a Name column as the value.
 
 ### Fixed
+- Dirt Monger Integrated Preamp: its two-column 'value - refs' parts list ('100K - R7, R20',
+  'C50K anti log - Treble, Bass') is read from the text layer: 47 rows with the three pots named,
+  where OCR had read 11 wrong ones.
 - Transistor substitutes: a part the database knows only by a longer maker's spelling (BS250 as
   BS250P, 2SK30A as 2SK30ATM, LND150 as LND150K1) is now found, so those boards get substitutes. Three parts the database
   lacks are anchored to a listed equivalent and say so on the page: CV7351 to the 2N1308 (its

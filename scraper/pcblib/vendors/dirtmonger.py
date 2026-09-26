@@ -9,9 +9,10 @@ import json
 import re
 from typing import Iterable
 
-from ..models import Circuit
+from ..models import BomRow, Circuit
+from ..normalize import is_plausible, normalize_row
 from ..paths import DATA_DIR
-from ..pdf import ocr_bom, pdf_text_pages, process_document
+from ..pdf import expand_refs, ocr_bom, pdf_text_pages, process_document
 from ..taxonomy import classify, find_enclosure
 from . import register
 from .base import Adapter, clean_text, html_to_text
@@ -20,6 +21,37 @@ from .deadendfx import _drive_download
 BASE = "https://dirtmongerinstruments.com"
 COLLECTION = f"{BASE}/collections/diy-pcb-1/products.json?limit=250"
 _ORIG = re.compile(r"(?:DIY clone of (?:the |an? )?|Circuit board for (?:the |an? )?|(?:to )?build (?:either |of )?(?:the |an? )?|clone of (?:the |an? )?)([A-Z][^.\n]{2,70}?)(?:\s+DIY build|\s+build\b|\s+depending\b|\s+with\b|[.\n]|$)")
+
+_REF = r"[A-Z]{1,3}\d{1,3}"
+_VALUE_REFS = re.compile(rf"^(.+?)\s+[-–]\s+((?:{_REF}|[A-Z][a-z]+)(?:\s*,\s*(?:{_REF}|[A-Z][a-z]+))*)\s*$")
+_REF_VALUE = re.compile(rf"^({_REF})\s+[-–]\s+(\S+)")
+
+
+def parse_value_list(pages: list[str]) -> list[BomRow]:
+    """Newer docs list parts in two columns as 'value - refs' ('100K - R7, R20',
+    'C50K anti log - Treble, Bass') and 'ref - value' for ICs and transistors."""
+    rows: list[BomRow] = []
+    seen: set[str] = set()
+    for page in pages:
+        if not re.search(r"^\s*Parts List\s*$", page, re.M):
+            continue
+        cells = [c.strip() for ln in page.splitlines() for c in re.split(r"\s{3,}", ln) if c.strip()]
+        for cell in cells:
+            if m := _REF_VALUE.match(cell):
+                pairs = [(m.group(1), m.group(2))]
+            elif m := _VALUE_REFS.match(cell):
+                value = re.sub(r",?\s+\d+V$|\s+(?:anti[ -]?)?log$|\s+lin$", "", m.group(1), flags=re.I).rstrip(",")
+                value = re.sub(r"\s*ohm$", "R", value, flags=re.I)
+                pairs = [(r, value) for part in m.group(2).split(",") for r in expand_refs(part.strip())]
+            else:
+                continue
+            for ref, value in pairs:
+                pot = not re.fullmatch(_REF, ref)
+                r = normalize_row(BomRow(ref=ref, value=value, category="POT" if pot else ""))
+                if ref not in seen and (pot or is_plausible(r)):
+                    seen.add(ref)
+                    rows.append(r)
+    return rows
 
 
 @register
@@ -83,6 +115,9 @@ class DirtMonger(Adapter):
                 c.enclosure = find_enclosure(*pages[:2])
             # Some docs carry a text parts table; the rest have it as an image.
             c.__dict__.update({k: v for k, v in process_document(pdf, self.vendor, handle).items() if k in ("bom", "schematic_local", "schematic_page")})
+            listed = parse_value_list(pages)
+            if len(listed) > len(c.bom):
+                c.bom = listed
             if len(c.bom) < 8:
                 ocr = ocr_bom(pdf, self.vendor, handle, max_pages=5, thorough=True)
                 if len(ocr) > len(c.bom):
