@@ -6,6 +6,19 @@ GitHub Release notes.
 ## Unreleased
 
 ### Added
+- Apple Vision OCR beside tesseract on macOS (`pcblib/vision.py`, a small Swift helper compiled
+  on first use). It reads thin, small and coloured type that tesseract garbles, and joins every
+  thorough OCR pass, the column-strip reader for per-variant tables and schematic label pairing.
+  A page tesseract reads thin but Vision reads well gets the thorough passes. Five Cats' Rattus
+  (blue type on a dotted grid) reads 128 rows across its four RATs, where it read 103 with slips;
+  327 boards gained rows in all (GuitarPCB's NostalgiTone docs, Dead End FX, Bent Fishbowl,
+  Lectric-FX, Dead Astronaut), and OCR slips such as TLC2274, 9V1 and 2SC1815-GR now read right.
+- Column tables read strip by strip are cut just before the next column's header, not halfway,
+  since headers sit at the left of their columns; a run of values whose designators OCR lost
+  (R1-R5 before R6) is numbered when the count fits the gap exactly.
+- OCR'd pot names: capacitor types and pot makers (Tantalum, Piher) and words in a sentence are
+  no longer read as knob names, and one knob spelled two ways by two engines (Output and
+  Qutput) is listed once. A Title-case name with a taper after the value (Suppressor 500KA) counts.
 - Ten sources from GitHub issue #6: Guitar-Electronics.eu, OP Electronics, Griffin Effects,
   Coda Effects, delyk PCBs, Tayda Electronics (DHEA's Instruction Center pages), Schalltechnik_04
   (discontinued kits whose instructions stay online), Electric Druid, Zeppelin Design Labs and

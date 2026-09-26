@@ -14,7 +14,8 @@ decisions and `DESIGN.md` for the visual system. `CHANGELOG.md` becomes the rele
 - `scraper/` — Python package `pcblib` (uv, Python 3.12). `vendors/` holds one adapter per
   source; `pdf.py` the shared parsers (text tables, column layouts, Qty/Value/Parts tables,
   KiCad interactive BOMs via `ibom.py`, vector schematic label pairing, OCR of scanned
-  tables and schematic images, cell-by-cell OCR of ruled grids; `gsheet.py` reads a
+  tables and schematic images, cell-by-cell OCR of ruled grids; `vision.py` adds Apple Vision
+  as a second OCR engine on macOS, beside tesseract; `gsheet.py` reads a
   parts list kept in a Google Sheet); `normalize.py` value normalization and part categories;
   `taxonomy.py` the effect categories and enclosure sizes; `db.py` SQLite plus the vendor
   registry (name, URL, licence note, kind); `export.py` the JSON bundle and exchange rates.

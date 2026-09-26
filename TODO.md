@@ -9,9 +9,9 @@ at the bottom; re-run them after parser changes.
 
 - **PCBWay (Glory to Ukraine)**: no parts lists at all (337 boards). BOM and gerbers sit
   behind a PCBWay login; only name, original and the CC BY-SA schematic image are indexed.
-- **Experimentalists Anonymous**: 519 of 770 schematics have no readable designators
-  (hand-drawn or low-resolution scans); 158 more have fewer than 8 rows. Positional OCR
-  only works on clean traced drawings.
+- **Experimentalists Anonymous**: 331 of 770 schematics have no readable designators
+  (hand-drawn or low-resolution scans; 415 before Vision); 235 more have fewer than 8 rows.
+  Positional OCR only works on clean traced drawings.
 - **Bent Fishbowl**: 8 of 33 schematics come back thin; busy drawings defeat the
   designator/value pairing.
 - **GuitarPCB**: 5 boards with no BOM and 7 thin after the thorough OCR pass; the rest
@@ -77,7 +77,7 @@ at the bottom; re-run them after parser changes.
 | Dead Astronaut | Chasm Reverb, Ebe Delay, Timestream Reverb | Raster docs where thorough OCR still returns nothing |
 | Five Cats | Marshall Supa Fuzz, Vintage Style Fuzz Face | Insert is a wiring diagram with values on the parts, not a table; 1 and 0 rows |
 | GuitarPCB | G.B.O.F. (16-project fuzz board), NostalgiTone Dual Combo Creator | No parts table: the doc lists sixteen projects to build on one board and points to DIY Layout Creator drawings |
-| Five Cats | Rattus | Read as four column strips: 23 to 26 rows per variant of 35, with slips. The table is thin blue type on a dotted grid that tesseract misreads however it is scaled; macOS Vision reads nearly every row |
+| Five Cats | Rattus | Vision reads 30 to 33 of 35 rows per variant; cells that are not plain values ('47r or 100r', '5mm Red LED') are skipped, and the RAT's C13 reads 1pF for 1µF (Vision reads µ as p when no other column confirms it) |
 | Effects Layouts | Schematic Fuzz | Build doc is drill templates only; the schematic is on the silkscreen |
 | Effects Layouts | Lawn Darts | Doc is a single scanned schematic image; the schematic-page search pairs 8 of its 10 labels, no pot name |
 | Effects Layouts | Melody Malfunction, Cranky Speaker | Doc has only a shopping list (value, type, quantity), so rows are named by quantity (`×2`) and controls are a knob count |
@@ -104,6 +104,10 @@ at the bottom; re-run them after parser changes.
   Altium exports; hand-drawn or watermarked schematics and boards whose pots are
   designators (VR1) still get nothing from it, and scanned Eagle schematics (Lectric-FX) give
   up only a third of their labels.
+- Apple Vision OCR (macOS only) runs beside tesseract. It drops some short designators in
+  multi-column tables and reads µ as p now and then; a table with one designator column is
+  numbered from the readable ones, but a multi-column table still leans on tesseract for the
+  labels Vision misses. Off macOS the library would lose the Vision readings on a rescrape.
 - OCR of a parts table now also runs with the word gaps preserved, so the same table parsers
   that read text PDFs read the OCR (per-variant tables, side-by-side Qty / Value / Parts
   lists, Part / Value columns). Tables printed white-on-colour on a PCB render (Five Cats

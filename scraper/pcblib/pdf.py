@@ -16,6 +16,7 @@ import pymupdf as fitz
 from .models import BomRow
 from .normalize import normalize_row, is_plausible, categorize
 from .paths import CACHE_DIR, DATA_DIR
+from . import vision
 
 _HEADER_RE = re.compile(r"^\s*(LOCATION|PART|REF(?:ERENCE)?|DESIGNATOR|PART\s*#?)\s+VALUE\s+(TYPE|DESCRIPTION|QUANTITY|QTY)", re.I)
 _PAGE_BREAK = "\f"
@@ -257,7 +258,10 @@ def _repair_pot(v: str) -> str:
     return v.upper()
 _OCR_VARIANT_STOP = {"PART", "VALUE", "REF", "TYPE", "NOTES", "QTY", "GND", "IN", "OUT", "LED", "PCB", "BOM", "PART VALUE", "GE", "SI"}
 _OCR_POT_STOP = {"AND", "THE", "FOR", "OUT", "GND", "BOM", "MAIN", "BOARD", "NOTES", "TRANSISTORS", "RESISTORS", "CAPACITORS", "DIODES", "SWITCHES",
-                 "POTS", "TRIMMERS", "VALUE", "PART", "PARTS", "QTY", "USE", "SWAP", "WITH", "TRY", "ANY", "PUT", "ADD", "FIT", "SET", "PREFER", "LIKE", "FROM", "INTO", "ALSO", "STANDARD"}
+                 "POTS", "TRIMMERS", "VALUE", "PART", "PARTS", "QTY", "USE", "SWAP", "WITH", "TRY", "ANY", "PUT", "ADD", "FIT", "SET", "PREFER", "LIKE", "FROM", "INTO", "ALSO", "STANDARD",
+                 # a capacitor's type or a pot's maker next to a pot value whose name OCR lost ("4u7 Tantalum | B10k", "PIHER B22K DUAL GANG")
+                 "TANTALUM", "CERAMIC", "FILM", "ELECTROLYTIC", "MLCC", "POLY", "BOX", "DUAL", "GANG", "PIHER", "ALPHA", "BOURNS", "OMEG", "IMEG"}
+_PROSE_WORD = re.compile(r"\b[A-Za-z]{4,}\b")
 _RANGE = re.compile(r"\*?\b([RCDQ])(\d+)\s*[-–]\s*[RCDQ]?(\d+)\s+([A-Z0-9][A-Z0-9.]+)", re.I)
 
 
@@ -340,8 +344,11 @@ def _ocr_layout_rows(png: Path) -> list[BomRow]:
     (a designator table, a per-variant table, a Qty / Value / Parts list, side-by-side
     columns). The pass that recovers the most designators wins; rows are marked OCR."""
     best: list[BomRow] = []
-    for psm in (6, 4):
-        pages = [_tesseract_cached(png, psm, preserve=True)]
+    readings = [_tesseract_cached(png, psm, preserve=True) for psm in (6, 4)]
+    if vision.available():
+        readings.insert(0, vision.text(png, layout=True))
+    for reading in readings:
+        pages = [reading]
         cands = [parse_bom(pages), parse_bom_qty_value_parts(pages), parse_bom_columns(pages), parse_bom_qty_value_ref(pages),
                  parse_bom_variant_columns(pages), parse_bom_name_designator(pages), parse_bom_designator_qty_name(pages)]
         rows = _expand_range_rows(max(cands, key=len))
@@ -382,7 +389,25 @@ def _merge_ocr_rows(variants: list[list[BomRow]]) -> list[BomRow]:
             votes = sum(1 for o in cands if o.norm_value == r.norm_value)
             return (parses, votes)
         out.append(max(cands, key=score))
-    return out
+    # Two engines spell one knob two ways (OUTPUT and QUTPUT, STEP5 and STEPS): a named pot or switch
+    # one look-alike letter off an earlier one with the same value is the same part.
+    kept: list[BomRow] = []
+    for r in out:
+        if r.category in ("POT", "SW") and not re.fullmatch(r"[A-Z]{1,3}\d{1,3}", r.ref) and any(
+                k.category == r.category and k.norm_value == r.norm_value and _one_letter_off(k.ref.upper(), r.ref.upper()) for k in kept):
+            continue
+        kept.append(r)
+    return kept
+
+
+def _one_letter_off(a: str, b: str) -> bool:
+    if len(a) != len(b) or len(a) < 3:
+        return False
+    diff = [(x, y) for x, y in zip(a, b) if x != y]
+    return len(diff) == 1 and frozenset(diff[0]) in _OCR_CONFUSABLE  # L-DEPTH and R-DEPTH are two knobs
+
+
+_OCR_CONFUSABLE = {frozenset(p) for p in ("OQ", "O0", "Q0", "OG", "QG", "GS", "I1", "L1", "IL", "S5", "VW", "B8", "Z2")}
 
 
 def _grid_lines(dark, axis: int, frac: float) -> list[tuple[int, int]]:
@@ -492,16 +517,31 @@ def _ocr_grid_rows(bin_png: Path) -> list[BomRow]:
     return rows
 
 
+def _vision_rows(png: Path) -> list[list[BomRow]]:
+    """Vision's reading of an image as OCR passes for _merge_ocr_rows: listed first so it wins
+    a tie, and twice so tesseract's passes only outvote it when several agree."""
+    if not vision.available():
+        return []
+    rows = _rows_from_ocr(_fill_designator_runs(vision.text(png)))
+    return [rows, rows] if rows else []
+
+
 def _ocr_page(pdf: Path, vendor: str, slug: str, page_no: int, thorough: bool = False) -> list[BomRow]:
     png = CACHE_DIR / vendor / f"{slug}-p{page_no}.png"
     if not png.exists():
         render_page(pdf, page_no, png, dpi=300)
-    variants = [_rows_from_ocr(_tesseract_cached(png, 6))]
+    variants = _vision_rows(png) + [_rows_from_ocr(_tesseract_cached(png, 6))]
     if not thorough:
-        return variants[0]
+        if variants[0] and len(variants[-1]) < 12:
+            # Vision read a table that tesseract's quick pass could not. Vision drops some short
+            # designators in multi-column tables, and its reading alone would look complete enough
+            # to stop a caller from running the thorough passes that recover them: run them here.
+            return _ocr_page(pdf, vendor, slug, page_no, thorough=True)
+        return _merge_ocr_rows(variants)
     layout = _ocr_layout_rows(png)
-    if len(layout) >= 8 and any(r.variant for r in layout):
-        return layout  # a per-variant table read from the aligned OCR beats every word-level pass
+    if len(layout) >= 8 and any(r.variant for r in layout) \
+            and len({r.ref for r in layout}) >= 0.8 * len(_merge_ocr_rows(variants)):
+        return layout  # a per-variant table read from the aligned OCR beats every word-level pass, if it covers the parts
 
     designated = [r for r in layout if re.fullmatch(r"[A-Z]{1,3}\d{1,3}", r.ref.upper())]
     table_like = len(layout) >= 8 and len(designated) >= 6 and len({r.ref.upper() for r in designated}) == len(designated)
@@ -530,7 +570,9 @@ def _ocr_page(pdf: Path, vendor: str, slug: str, page_no: int, thorough: bool = 
             variants.append(_rows_from_ocr(_tesseract_cached(bpng, psm)))
         names = _ocr_variant_names(_tesseract_cached(bpng, 6)) or _ocr_variant_names(_tesseract_cached(bpng, 4))
         if len(names) >= 2:
-            strips = _ocr_column_strips(bpng, names)
+            strips, vision_read = _ocr_column_strips(bpng, names)
+            if strips and vision_read:
+                return strips  # Vision read the columns; the page-level passes would only add misreads
             if strips:
                 # Strip rows cannot mix columns; keep them and add what the page-level passes found beyond them.
                 have = {(r.variant, r.ref) for r in strips}
@@ -577,6 +619,7 @@ def _ocr_page(pdf: Path, vendor: str, slug: str, page_no: int, thorough: bool = 
                     pix.save(ipng)
             except Exception:  # noqa: BLE001 - odd colour spaces etc.
                 continue
+            variants += _vision_rows(ipng)
             for psm in (6, 4):
                 variants.append(_rows_from_ocr(_tesseract_cached(ipng, psm)))
     return fill(_merge_ocr_rows(variants)) if thorough else _merge_ocr_rows(variants)
@@ -648,7 +691,7 @@ def ocr_image_bom(image: Path, vendor: str, slug: str, tag: str = "bom") -> list
             im.save(png)
         except Exception:  # noqa: BLE001
             return []
-    variants = [_rows_from_ocr(_tesseract_cached(png, psm)) for psm in (6, 4)]
+    variants = _vision_rows(png) + [_rows_from_ocr(_tesseract_cached(png, psm)) for psm in (6, 4)]
     try:
         from PIL import Image
         bpng = png.with_name(png.stem + "-bin.png")
@@ -673,10 +716,11 @@ def _ocr_variant_names(out: str) -> list[str]:
     return []
 
 
-def _ocr_column_strips(png: Path, names: list[str]) -> list[BomRow]:
+def _ocr_column_strips(png: Path, names: list[str]) -> tuple[list[BomRow], bool]:
     """A table with one column per variant: find the header words with tesseract's word
     boxes, cut the page into vertical strips halfway between them, and OCR each strip on
-    its own so a line can never mix two columns. Rows carry their strip's variant name."""
+    its own so a line can never mix two columns. Rows carry their strip's variant name.
+    Also returns whether Vision read the columns."""
     from PIL import Image
     Image.MAX_IMAGE_PIXELS = None
     tsv_path = png.with_name(png.stem + "-words.tsv")
@@ -687,7 +731,7 @@ def _ocr_column_strips(png: Path, names: list[str]) -> list[BomRow]:
     wanted = {re.sub(r"[^A-Za-z0-9]", "", t).upper() for n in names for t in n.split()}
     cands = sorted((x, y, w, t) for x, y, w, t in words if re.sub(r"[^A-Za-z0-9]", "", t).upper() in wanted)
     if len(cands) < 2:
-        return []
+        return [], False
     ys = [y for _, y, _, _ in cands]
     row_y = max(set(ys), key=ys.count)
     phrases: list[tuple[int, int]] = []
@@ -699,12 +743,17 @@ def _ocr_column_strips(png: Path, names: list[str]) -> list[BomRow]:
         else:
             phrases.append((x, x + w))
     if len(phrases) != len(names):
-        return []
+        return [], False
     im = Image.open(png).convert("L")
     W, H = im.size
-    centers = [(a + b) / 2 for a, b in phrases]
-    cuts = [0] + [int((a + b) / 2) for a, b in zip(centers, centers[1:])] + [W]
-    rows: list[BomRow] = []
+    original = png.with_name(png.stem.removesuffix("-bin") + ".png")
+    source = Image.open(original).convert("L").point(lambda v: 255 if v > 100 else v) if original != png and original.exists() else None
+    if source is not None and source.size != im.size:
+        source = None
+    # Headers sit at the left of their columns, so a column's values run past its header: cut
+    # just before the next header rather than halfway between the two.
+    cuts = [0] + [int(nxt[0] - 0.15 * (nxt[0] - cur[1])) for cur, nxt in zip(phrases, phrases[1:])] + [W]
+    columns: list[tuple[str, list[BomRow], list[BomRow]]] = []  # (variant, Vision rows, tesseract rows)
     for i, ((x0, x1), name) in enumerate(zip(zip(cuts, cuts[1:]), names)):
         spng = png.with_name(f"{png.stem}-strip{i}.png")
         if not spng.exists():
@@ -714,10 +763,91 @@ def _ocr_column_strips(png: Path, names: list[str]) -> list[BomRow]:
             got = _rows_from_ocr(_tesseract_cached(spng, psm))
             if len(got) > len(best):
                 best = got
+        seen: list[BomRow] = []
+        if vision.available() and source is not None:
+            # Vision reads thin type far better, but from a smooth upscale of the original, not the
+            # hard-thresholded strip: grey grid dots and tints are whitened and the text keeps its edges.
+            vpng = png.with_name(f"{png.stem}-strip{i}-v.png")
+            if not vpng.exists():
+                crop = source.crop((x0, max(0, row_y - 10), x1, H))
+                crop.resize((crop.width * 3, crop.height * 3), Image.BICUBIC).save(vpng)
+            seen = _rows_from_ocr(_fill_designator_runs(vision.text(vpng)))
+        columns.append((name, seen, best))
+    # Every column lists the same designators, so when Vision read the columns, tesseract only
+    # fills a designator Vision found in some other column (its extras are misreads: C410, Q7).
+    vision_refs = {r.ref for _, seen, _ in columns for r in seen}
+    vision_read = sum(len(seen) for _, seen, _ in columns) >= 0.8 * sum(len(best) for _, _, best in columns) > 0
+    rows: list[BomRow] = []
+    for name, seen, best in columns:
+        if vision_read:
+            have = {r.ref for r in seen}
+            best = seen + [r for r in best if r.ref not in have and r.ref in vision_refs]
         for r in best:
             r.variant = name
             rows.append(r)
-    return rows
+    # OCR reads the micro sign as a p far more often than the reverse: where one column reads
+    # 4.7pF and another 4.7uF for the same part, it is 4.7uF.
+    micro: dict[str, set[str]] = {}
+    for r in rows:
+        m = re.fullmatch(r"(\d+(?:\.\d+)?)[uµ]F?", r.value, re.I)
+        if r.category == "C" and m:
+            micro.setdefault(r.ref, set()).add(m.group(1))
+    for r in rows:
+        m = re.fullmatch(r"(\d+(?:\.\d+)?)pF?", r.value)
+        if r.category == "C" and m and m.group(1) in micro.get(r.ref, ()):
+            r.value = m.group(1) + "µF"
+            normalize_row(r)
+    return rows, vision_read
+
+
+_SEQ_REF = re.compile(r"^([A-Z]{1,3})(\d{1,3})$")
+_SEQ_VALUE = re.compile(r"^(?:\d+(?:\.\d+)?\s?[kKMrRΩpnuµ]?F?\d*|[A-Z]{0,4}\d[A-Z0-9\-]{2,11}|omit\*?)$")
+
+
+def _fill_designator_runs(text: str) -> str:
+    """A one-column parts list printed in designator order (R1..R14, C1..C13) where OCR read
+    some values without their designator (Vision drops short labels like 'R1'; 'C2' comes out
+    'CZ'). A run of value-only lines between two readable designators of the same letter is
+    numbered in between, but only when the count fits the gap exactly; a run before the first
+    readable one is numbered down from it only when it reaches exactly 1."""
+    lines = text.splitlines()
+    parsed: list[tuple[str, int] | None | str] = []  # (prefix, n) for a designated row, "v" for a value-only row, None otherwise
+    for ln in lines:
+        toks = ln.split()
+        m = _SEQ_REF.match(toks[0]) if toks else None
+        if m and len(toks) >= 2:
+            parsed.append((m.group(1), int(m.group(2))))
+        elif toks and _SEQ_VALUE.match(toks[-1]) and len(toks) <= 3:
+            parsed.append("v")
+        else:
+            parsed.append(None)
+    out = list(lines)
+    labelled = [i for i, p in enumerate(parsed) if isinstance(p, tuple)]
+    for i, j in zip([-1] + labelled, labelled):
+        run = list(range(i + 1, j))
+        if not run or any(parsed[k] != "v" for k in run):
+            if i < 0 and run:  # leading run: only the value-only lines right before the first designator
+                tail = []
+                for k in reversed(run):
+                    if parsed[k] != "v":
+                        break
+                    tail.insert(0, k)
+                run = tail
+            else:
+                continue
+        prefix, n = parsed[j]
+        if i >= 0:
+            prev_prefix, prev_n = parsed[i]
+            if prev_prefix != prefix or n - prev_n != len(run) + 1:
+                continue
+            start = prev_n + 1
+        else:
+            if not run or n - len(run) != 1:
+                continue
+            start = 1
+        for off, k in enumerate(run):
+            out[k] = f"{prefix}{start + off} {lines[k].split()[-1]}"
+    return "\n".join(out)
 
 
 def _rows_from_ocr(out: str) -> list[BomRow]:
@@ -768,6 +898,8 @@ def _rows_from_ocr(out: str) -> list[BomRow]:
         for ref, val in re.findall(r"(?<![A-Za-z0-9])([A-Z]*TRIM[A-Z0-9]*)\s+(\d+(?:[.,]\d+)?[kKM]?)(?![A-Za-z0-9])", ln):
             if ref not in seen and re.search(r"[1-9]", val):
                 add(ref, val.upper(), "Trimmer", "TRIM")
+        if sum(1 for w in _PROSE_WORD.findall(ln) if w.upper() not in _CONTROL_WORDS) >= 6:
+            continue  # a sentence ("... used a simple B22K dual gang ...") names no control
         for ref, val in _OCR_SWITCH.findall(ln):
             name = ref.strip("-")
             name = re.sub(r"^(SW)[I?l]$", r"\g<1>1", name).replace("?", "2")
@@ -783,7 +915,7 @@ def _rows_from_ocr(out: str) -> list[BomRow]:
             if re.fullmatch(r"[RCDQL]\d+", val):
                 continue  # "OOK C16": a designator read as a pot value
             if 3 <= len(ref) <= 13 and re.fullmatch(r"[A-Z][A-Za-z\-]+\d?", ref) and ref.upper() not in _OCR_POT_STOP \
-                    and (ref.isupper() or re.fullmatch(r"[ABCW]\d+[kKM]", val)):  # a Title-case name only counts with an explicit taper
+                    and (ref.isupper() or re.fullmatch(r"[ABCW]\d+[kKM]|\d+[kKM][ABCW]", val)):  # a Title-case name only counts with an explicit taper (A500K or 500KA)
                 add(ref.upper(), val, "Trimmer" if "TRIM" in ref.upper() else "Potentiometer", "TRIM" if "TRIM" in ref.upper() else "POT")
     # Variant labels are kept only when the table really had columns: at least two variants with four rows each.
     per: dict[str, int] = {}
@@ -990,12 +1122,19 @@ def ocr_schematic_bom(image: Path, scale: int = 2, px_per_pt: float = 170 / 72) 
     best: list[BomRow] = []
     for rotate in (0, 90, 270):
         rows = _pair_labels(_ocr_word_boxes(up, rotate), unit=unit, wide=True)
+        upright = rotate == 0 and len(rows) >= 12  # judged on tesseract alone: Vision also reads sideways labels upright
+        if vision.available():
+            # Vision reads more of a scan's small labels; its pairs lead and tesseract adds the designators it missed
+            src = up.with_name(up.stem + f"-r{rotate}.png") if rotate else up
+            seen = _pair_labels(vision.words(src), unit=unit, wide=True)
+            have = {r.ref for r in seen}
+            rows = seen + [r for r in rows if r.ref not in have]
         if 0 < len(rows) < 12:  # a scan: sparse text with OSD (psm 12) reads a different subset of its labels; union by designator
             have = {r.ref for r in rows}
             rows += [r for r in _pair_labels(_ocr_word_boxes(up, rotate, psm=12), unit=unit, wide=True) if r.ref not in have]
         if len(rows) > len(best):
             best = rows
-        if rotate == 0 and len(rows) >= 12:
+        if upright:
             break  # upright and readable; the sideways passes would only add noise
     return best
 
