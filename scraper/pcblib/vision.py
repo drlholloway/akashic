@@ -3,7 +3,8 @@ coloured type that tesseract garbles (Five Cats' blue tables on a dotted grid), 
 passes in pdf.py add it as one more reading when it is available. Elsewhere every function
 here returns nothing and tesseract works alone.
 
-The helper is `vision.swift`, compiled on first use into data/cache/_bin. Word boxes are
+The helper is `vision_ocr/main.swift`, compiled with swiftc on first use into data/cache/_bin
+(the repository's Package.swift builds the same file for `swift build` and code scanning). Word boxes are
 cached next to the image as `<stem>-vision.tsv`."""
 from __future__ import annotations
 
@@ -16,7 +17,7 @@ from pathlib import Path
 
 from .paths import CACHE_DIR
 
-_SOURCE = Path(__file__).with_name("vision.swift")
+_SOURCE = Path(__file__).with_name("vision_ocr") / "main.swift"
 _BINARY = CACHE_DIR / "_bin" / "vision-ocr"
 
 Word = tuple[int, int, int, int, str]

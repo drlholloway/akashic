@@ -28,3 +28,7 @@ app/static/data/
 # Local data dumps, never committed
 transistor-dump/
 data/transistors.sqlite*
+
+# Swift build output (Package.swift builds the Vision OCR helper)
+.build/
+.swiftpm/

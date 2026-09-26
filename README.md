@@ -97,7 +97,7 @@ data/      library.sqlite plus raw/cache directories (all git-ignored)
 
 ## Building the data
 
-Requires Python 3.12+, [uv](https://docs.astral.sh/uv/), poppler (`brew install poppler` for `pdftotext`), and tesseract (`brew install tesseract`) for the image-only parts lists of GuitarPCB and Dead End FX. On macOS the OCR passes also use Apple's Vision text recognizer, which reads thin and small type that tesseract garbles: `pcblib/vision.swift` is compiled with `swiftc` (Xcode command-line tools) into `data/cache/_bin` on first use. Without it tesseract works alone.
+Requires Python 3.12+, [uv](https://docs.astral.sh/uv/), poppler (`brew install poppler` for `pdftotext`), and tesseract (`brew install tesseract`) for the image-only parts lists of GuitarPCB and Dead End FX. On macOS the OCR passes also use Apple's Vision text recognizer, which reads thin and small type that tesseract garbles: `pcblib/vision_ocr/main.swift` is compiled with `swiftc` (Xcode command-line tools) into `data/cache/_bin` on first use. Without it tesseract works alone.
 
 ```sh
 cd scraper
