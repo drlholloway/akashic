@@ -122,6 +122,14 @@ GitHub Release notes.
   Designator / Qty / Name export; spreadsheet readers accept a Name column as the value.
 
 ### Fixed
+- Five Cats One Knob Fuzz: its insert's five-build table (ColorSound, 1996, Meathead, Dark
+  Meathead, Ritual) reads as five variants, 77 rows, where a flat list of 20 with junk stood. Vision
+  now also reads a copy of the page with a grey dot grid whitened, which had made it drop cells.
+  Five Cats boards listed once per pack size (One Knob Fuzz x1 and x5, 3PDT daughter board x1, x5
+  and x10) are one circuit each, and a generic 'Pot' line in a variant table is kept as the knob.
+- OCR'd variant tables: a line of knob labels (a board's FUZZ / TONE / BOOST silkscreen) is no
+  longer taken for build names, which had split GuitarPCB's Guitar/Bass Driver into bogus 'GAIN',
+  'BASS', 'TREB' and 'BOOST' variants.
 - Dirt Monger Integrated Preamp: its two-column 'value - refs' parts list ('100K - R7, R20',
   'C50K anti log - Treble, Bass') is read from the text layer: 47 rows with the three pots named,
   where OCR had read 11 wrong ones.

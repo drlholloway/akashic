@@ -347,6 +347,14 @@ def _ocr_layout_rows(png: Path) -> list[BomRow]:
     readings = [_tesseract_cached(png, psm, preserve=True) for psm in (6, 4)]
     if vision.available():
         readings.insert(0, vision.text(png, layout=True))
+        # Grey dot grids behind a table (Five Cats' variant charts) make Vision drop cells, which
+        # breaks a row's column count; a copy with the mid-greys whitened reads them all.
+        clean = png.with_name(png.stem + "-clean.png")
+        if not clean.exists() or clean.stat().st_mtime < png.stat().st_mtime:
+            from PIL import Image
+            Image.MAX_IMAGE_PIXELS = None
+            Image.open(png).convert("L").point(lambda v: 255 if v > 140 else v).save(clean)
+        readings.insert(1, vision.text(clean, layout=True))
     for reading in readings:
         pages = [reading]
         cands = [parse_bom(pages), parse_bom_qty_value_parts(pages), parse_bom_columns(pages), parse_bom_qty_value_ref(pages),
@@ -359,8 +367,8 @@ def _ocr_layout_rows(png: Path) -> list[BomRow]:
         normalize_row(r)
         r.notes = (r.notes + "; OCR").strip("; ") if "OCR" not in r.notes else r.notes
     def named_ok(r: BomRow) -> bool:  # a pot or switch named by the OCR must be a known knob word or a real word, not a fragment or a switch type
-        if r.category not in ("POT", "SW") or re.fullmatch(r"[A-Z]{1,3}\d{1,3}|×\d+", r.ref):
-            return True
+        if r.category not in ("POT", "SW") or re.fullmatch(r"[A-Z]{1,3}\d{1,3}|×\d+|POT\d?", r.ref.upper()):
+            return True  # a designator, a quantity, or a table's generic 'Pot' line
         name = r.ref.upper().rstrip(".")
         return name in _CONTROL_WORDS or (len(name) >= 4 and name.isalpha() and not re.fullmatch(r"[SD]P[SD]T|\dP\dT", name))
     return [r for r in best if named_ok(r) and (is_plausible(r) or r.category in ("POT", "SW", "LED", "D", "Q", "IC"))]
@@ -711,7 +719,7 @@ def _ocr_variant_names(out: str) -> list[str]:
         cols = [re.sub(r"^[^A-Za-z]+|[^A-Za-z0-9)]+$", "", c.strip()) for c in raw.split("|")]
         cols = [c for c in cols if c]
         if 2 <= len(cols) <= 6 and all(re.fullmatch(r"[A-Z][A-Za-z0-9 .\-']{1,18}", c) and re.search(r"[A-Z0-9]{2}|[A-Z][a-z]+ [A-Z]", c) for c in cols) \
-                and not any(re.search(r"\d[kKMnpuµ]|^[RCDQ]\d|^\d?[NA]\d{3}", c) or c.upper() in _OCR_VARIANT_STOP for c in cols):
+                and not any(re.search(r"\d[kKMnpuµ]|^[RCDQ]\d|^\d?[NA]\d{3}", c) or c.upper() in _OCR_VARIANT_STOP or c.upper() in _CONTROL_WORDS for c in cols):
             return cols
     return []
 
@@ -877,7 +885,7 @@ def _rows_from_ocr(out: str) -> list[BomRow]:
             cols = [c for c in cols if c]
             # "| RAT | -RAT2 | Turbo RAT | You Dirty RAT '": short names, no values, one column per variant
             if 2 <= len(cols) <= 6 and all(re.fullmatch(r"[A-Z][A-Za-z0-9 .\-']{1,18}", c) and re.search(r"[A-Z0-9]{2}|[A-Z][a-z]+ [A-Z]", c) for c in cols) \
-                    and not any(re.search(r"\d[kKMnpuµ]|^[RCDQ]\d|^\d?[NA]\d{3}", c) or c.upper() in _OCR_VARIANT_STOP for c in cols):
+                    and not any(re.search(r"\d[kKMnpuµ]|^[RCDQ]\d|^\d?[NA]\d{3}", c) or c.upper() in _OCR_VARIANT_STOP or c.upper() in _CONTROL_WORDS for c in cols):
                 variants = cols
                 continue
         for letter, a, b, val in _RANGE.findall(ln):

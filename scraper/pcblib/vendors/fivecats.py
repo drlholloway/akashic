@@ -43,6 +43,7 @@ class FiveCats(Adapter):
         pcb_slugs = {c["slug"] for c in cats if c["id"] == parent_id or c["parent"] == parent_id}
         non_pcb = {c["slug"] for c in cats if c["parent"] == 0 and c["slug"] != PCB_CATEGORY}
         page = 1
+        keep: list[dict] = []
         while True:
             raw = self.f.get_text(f"{BASE}/wp-json/wc/store/v1/products?per_page=100&page={page}", ".json")
             items = json.loads(raw) if raw else []
@@ -52,9 +53,17 @@ class FiveCats(Adapter):
                 slugs = {c["slug"] for c in pr.get("categories", [])}
                 if not (slugs & pcb_slugs) or (slugs & non_pcb) or "bundles" in slugs or re.search(r"-pack\b|bundle", pr["slug"]):
                     continue
-                self.products[pr["slug"]] = pr
-                yield pr["slug"]
+                keep.append(pr)
             page += 1
+        # Some boards are listed once per pack size ('...-qty-1', '...-qty-5', '...-qty-10'): one
+        # circuit, so keep the single board and skip the packs when it is listed.
+        singles = {re.sub(r"-qty-1$", "", pr["slug"]) for pr in keep if pr["slug"].endswith("-qty-1")}
+        for pr in keep:
+            m = re.match(r"^(.*)-qty-(\d+)$", pr["slug"])
+            if m and m.group(2) != "1" and m.group(1) in singles:
+                continue
+            self.products[pr["slug"]] = pr
+            yield pr["slug"]
 
     def parse(self, slug: str) -> Circuit | None:
         pr = self.products.get(slug)
@@ -155,8 +164,9 @@ class FiveCats(Adapter):
                 if png:
                     c.schematic_local = str(png.relative_to(DATA_DIR))
                     c.schematic_page = 1
-        pots = [r for r in c.bom if r.category == "POT"]
+        pots = list({r.ref.upper(): r for r in c.bom if r.category == "POT"}.values())  # once per part, not once per build variant
         if pots:
             names = [re.sub(r"\d+$", "", r.ref) for r in pots]
-            c.controls = [n.title() for n in names] if all(re.fullmatch(r"[A-Za-z][A-Za-z\-/]+", n) for n in names) else [f"{len(pots)} knobs"]
+            named = all(re.fullmatch(r"[A-Za-z][A-Za-z\-/]+", n) and n.upper() != "POT" for n in names)
+            c.controls = [n.title() for n in names] if named else [f"{len(pots)} knob{'s' if len(pots) != 1 else ''}"]
         return c

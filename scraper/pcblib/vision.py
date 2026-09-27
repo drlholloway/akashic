@@ -12,6 +12,7 @@ import re
 import shutil
 import subprocess
 import sys
+import unicodedata
 from functools import lru_cache
 from pathlib import Path
 
@@ -51,8 +52,26 @@ _LATIN = str.maketrans({
 })
 
 
+# After the look-alikes are mapped, a letter outside ASCII (other than µ and Ω) inside a word is
+# an accent Vision added to a real letter ('FUŽZ', 'BÕOST'); one stuck to a value or standing
+# alone is a grid dot or speck ('BC109ął') and is dropped.
+_STRAY = re.compile(r"[\u00c0-\u024f\u0400-\u04ff]")
+
+
+def _speck(text: str) -> bool:
+    """A non-ASCII letter that is not inside a word: the mark of a grid dot or speck."""
+    return any(_unaccent(m) == "" for m in _STRAY.finditer(_MICRO.sub("µ", text).translate(_LATIN)))
+
+
+def _unaccent(m: re.Match) -> str:
+    s, i = m.string, m.start()
+    inside = 0 < i < len(s) - 1 and s[i - 1].isascii() and s[i - 1].isalpha() and s[i + 1].isascii() and s[i + 1].isalpha()
+    base = unicodedata.normalize("NFKD", m.group())[0]
+    return base if inside and base.isascii() else ""
+
+
 def latin(text: str) -> str:
-    return _MICRO.sub("µ", text).translate(_LATIN)
+    return _STRAY.sub(_unaccent, _MICRO.sub("µ", text).translate(_LATIN))
 
 
 def _size(png: Path) -> tuple[int, int]:
@@ -79,8 +98,10 @@ def _tsv(png: Path) -> str:
     return proc.stdout
 
 
-def words_by_line(png: Path) -> list[list[Word]]:
-    """Word boxes in pixels, grouped by the text line Vision found them in."""
+def words_by_line(png: Path, drop_specks: bool = False) -> list[list[Word]]:
+    """Word boxes in pixels, grouped by the text line Vision found them in. With `drop_specks`
+    a word carrying a speck is left out rather than cleaned: on a schematic a value with a
+    character lost ('2N390' for 2N3904) reads as plausible and would beat tesseract's."""
     tsv = _tsv(png)
     if not tsv.strip():
         return []
@@ -89,6 +110,8 @@ def words_by_line(png: Path) -> list[list[Word]]:
     for ln in tsv.splitlines():
         f = ln.split("\t")
         if len(f) != 7:
+            continue
+        if drop_specks and _speck(f[6]):
             continue
         text = latin(f[6]).strip()
         if not text:
@@ -115,7 +138,8 @@ def _overlap(a: Word, b: Word) -> float:
 
 
 def words(png: Path) -> list[Word]:
-    return [w for line in words_by_line(png) for w in line]
+    """Word boxes for label pairing on a schematic: words carrying a speck are left out."""
+    return [w for line in words_by_line(png, drop_specks=True) for w in line]
 
 
 def text(png: Path, layout: bool = False) -> str:
