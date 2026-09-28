@@ -63,6 +63,10 @@ def parse_ibom(path: Path) -> list[BomRow]:
 
 
 def _add(rows: list[BomRow], seen: set[str], ref: str, value: str, footprint: str) -> None:
+    # Some designers type the part into the reference field ('U1 - LM386'): keep the designator.
+    m = re.match(r"^([A-Za-z]{1,4}\d{1,3}[A-Za-z]?)\s*[-–:]\s*(\S.*)$", ref)
+    if m and re.sub(r"\W", "", m.group(2)).upper() in re.sub(r"\W", "", value).upper():
+        ref = m.group(1)
     if ref in seen or not value or value.upper() in ("DNP", "NC", "~"):
         return
     seen.add(ref)

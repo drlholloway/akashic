@@ -122,6 +122,8 @@ GitHub Release notes.
   Designator / Qty / Name export; spreadsheet readers accept a Name column as the value.
 
 ### Fixed
+- KiCad interactive BOMs whose designer typed the part into the reference ('U1 - LM386') keep
+  the designator, so Five Cats' Not So Clear lists its LM386 and PT2399 as ICs, not sockets.
 - Resistors written '2m2' read as 2.2M, not 2.2 milliohms (143 rows).
 - Transistors numbered T1, T2 in European docs (Moody's Carlin and BJF kits) are transistors,
   not trimmers (87 rows).
