@@ -121,6 +121,10 @@ GitHub Release notes.
   table that continues onto the next page without its header, and a grouped
   Designator / Qty / Name export; spreadsheet readers accept a Name column as the value.
 
+### Changed
+- Parts cross-reference: each category is listed alphabetically (numbers compared as numbers),
+  and pots are grouped by taper (A, B, C, W, none) and ordered by resistance.
+
 ### Fixed
 - KiCad interactive BOMs whose designer typed the part into the reference ('U1 - LM386') keep
   the designator, so Five Cats' Not So Clear lists its LM386 and PT2399 as ICs, not sockets.

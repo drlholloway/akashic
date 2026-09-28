@@ -8,9 +8,33 @@
 		const t = q.trim().toLowerCase();
 		return t ? data.parts.filter((p) => p.value.toLowerCase().includes(t) || p.types.some((x) => x.toLowerCase().includes(t))) : data.parts;
 	});
+	// Alphabetical within each category, numbers compared as numbers: A10k before A100k, 2N3904 before 2N5088.
+	const byValue = new Intl.Collator('en', { numeric: true, sensitivity: 'base' });
 	const groups = $derived(
-		PART_ORDER.map((k) => ({ key: k, name: PART_CATEGORY_NAMES[k] ?? k, items: filtered.filter((p) => p.category === k) })).filter((g) => g.items.length)
+		PART_ORDER.map((k) => ({
+			key: k,
+			name: PART_CATEGORY_NAMES[k] ?? k,
+			items: filtered.filter((p) => p.category === k).sort((a, b) => byValue.compare(a.value, b.value))
+		})).filter((g) => g.items.length)
 	);
+
+	// Pots are grouped by taper, then ordered by resistance: A1k, A10k, A100k, A1M.
+	const TAPERS: [string, string][] = [['A', 'A · log'], ['B', 'B · linear'], ['C', 'C · reverse log'], ['W', 'W'], ['', 'No taper given']];
+	const POT_VALUE = /^([A-Z]?)(\d+(?:\.\d+)?)(k|M)?$/;
+	function potGroups<T extends { value: string }>(items: T[]) {
+		const ohms = (v: string) => {
+			const m = v.match(POT_VALUE);
+			return m ? parseFloat(m[2]) * (m[3] === 'M' ? 1e6 : m[3] === 'k' ? 1e3 : 1) : Infinity;
+		};
+		const taper = (v: string) => v.match(POT_VALUE)?.[1] ?? null;
+		const groups = TAPERS.map(([t, name]) => ({
+			name,
+			items: items.filter((p) => taper(p.value) === t).sort((a, b) => ohms(a.value) - ohms(b.value))
+		}));
+		const other = items.filter((p) => taper(p.value) === null);  // already alphabetical
+		if (other.length) groups.push({ name: 'Other', items: other });
+		return groups.filter((g) => g.items.length);
+	}
 </script>
 
 <svelte:head><title>Parts cross-reference · Akashic</title></svelte:head>
@@ -27,14 +51,28 @@
 	{#each groups as g}
 		<section>
 			<h2 class="label strong">{g.name} <span class="mono dim">{g.items.length}</span></h2>
-			<ul>
-				{#each g.items as p}
-					<li>
-						<a href="{base}/parts/{p.slug}"><span class="mono val">{p.value}</span><span class="mono n">{p.count}</span></a>
-						{#if p.types[0]}<span class="type">{p.types[0]}</span>{/if}
-					</li>
+			{#if g.key === 'POT'}
+				{#each potGroups(g.items) as sub}
+					<h3 class="label sub">{sub.name} <span class="mono dim">{sub.items.length}</span></h3>
+					<ul>
+						{#each sub.items as p}
+							<li>
+								<a href="{base}/parts/{p.slug}"><span class="mono val">{p.value}</span><span class="mono n">{p.count}</span></a>
+								{#if p.types[0]}<span class="type">{p.types[0]}</span>{/if}
+							</li>
+						{/each}
+					</ul>
 				{/each}
-			</ul>
+			{:else}
+				<ul>
+					{#each g.items as p}
+						<li>
+							<a href="{base}/parts/{p.slug}"><span class="mono val">{p.value}</span><span class="mono n">{p.count}</span></a>
+							{#if p.types[0]}<span class="type">{p.types[0]}</span>{/if}
+						</li>
+					{/each}
+				</ul>
+			{/if}
 		</section>
 	{/each}
 </div>
@@ -49,6 +87,7 @@
 	section { margin-top: 28px; }
 	section h2 { padding-bottom: 6px; border-bottom: 1px solid var(--rule-strong); margin-bottom: 4px; }
 	.dim { color: var(--ink-3); }
+	h3.sub { margin: 14px 0 2px; color: var(--ink-2); }
 	ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0 24px; }
 	li { display: flex; align-items: baseline; gap: 10px; border-bottom: 1px solid var(--rule); padding: 5px 0; min-width: 0; }
 	li a { display: inline-flex; gap: 10px; align-items: baseline; }
