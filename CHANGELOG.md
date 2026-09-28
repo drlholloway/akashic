@@ -6,6 +6,9 @@ GitHub Release notes.
 ## Unreleased
 
 ### Added
+- Gigahearts FX: PIP BOY, a triangle Big Muff after the Fallout Cloud with bass and treble
+  controls, a 3-way clipping switch and a clean blend (listing only; the build doc ships with the
+  board).
 - A changelog page (/changes): what changed each week, built from the commit history at export,
   each change opening to its description and linking to its commit. The footer's Sources list
   now opens and closes, and the colophon links the changelog in place of the GitHub link.

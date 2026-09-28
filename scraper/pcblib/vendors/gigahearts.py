@@ -27,6 +27,7 @@ _BASED_ON = [
     (re.compile(r"gig-buff"), "EHX/JHS Big Muff 2", "Fuzz"),
     (re.compile(r"broadcast"), "Hudson Broadcast", "Overdrive"),
     (re.compile(r"full-moon"), "G.S. Wyllie Moon Rock / JHS Coyote", "Fuzz"),
+    (re.compile(r"pipboy|pip-boy"), "Fallout Cloud", "Fuzz"),  # a triangle Big Muff with bass and treble controls
 ]
 
 
