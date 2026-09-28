@@ -122,6 +122,13 @@ GitHub Release notes.
   Designator / Qty / Name export; spreadsheet readers accept a Name column as the value.
 
 ### Fixed
+- Resistors written '2m2' read as 2.2M, not 2.2 milliohms (143 rows).
+- Transistors numbered T1, T2 in European docs (Moody's Carlin and BJF kits) are transistors,
+  not trimmers (87 rows).
+- Pot values carry their type: 'B100K DUAL' is a B100K dual-gang pot, '100K Trim' a trimmer, and
+  footnote marks, lower-case or trailing tapers ('c100K', '25kb', '1m C') parse (about 200 rows).
+- Designator ranges ('Q1-4', 'D1-2') become one row per part for every parser, per build variant
+  (Fuzz Dog, 145 rows).
 - Five Cats One Knob Fuzz: its insert's five-build table (ColorSound, 1996, Meathead, Dark
   Meathead, Ritual) reads as five variants, 77 rows, where a flat list of 20 with junk stood. Vision
   now also reads a copy of the page with a grey dot grid whitened, which had made it drop cells.

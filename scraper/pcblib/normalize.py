@@ -22,6 +22,27 @@ _VAL_RE = re.compile(
 
 _POT_RE = re.compile(r"^\s*([ABCW])?\s*(\d+(?:[.,]\d+)?)\s*([kKM]?)\s*(?:ohms?|Ω)?\s*-?\s*([ABCW])?\s*(?:\(.*\))?\s*$")
 _POT_WORDS = re.compile(r"^(\d+(?:[.,]\d+)?\s*[kKM]?)\s*(?:Ω|ohms?)?\s*[- ]\s*(linear|lin|log|audio|logarithmic|rev\.?-?\s?log|reverse(?:[- ](?:log|audio))?|anti-?log)\.?\s*(?:pot(?:entiometer)?s?)?$", re.I)
+_POT_DUAL = re.compile(r"\(?\b(?:dual(?:[- ]?gang(?:ed)?)?|stereo|ganged)\b\)?", re.I)
+_POT_TWO = re.compile(r"^2\s*[x×]\s*", re.I)
+_POT_TRIM = re.compile(r"\b(?:trim(?:mer|pot)?|preset)\b", re.I)
+
+
+def _pot_parts(value: str) -> tuple[str, bool, bool]:
+    """Split a pot value from the words written beside it: 'B100K DUAL' is a B100K dual-gang pot,
+    '100K Trim' a trimmer, 'A500K **' a footnoted A500K. Also takes a lower-case or trailing taper
+    ('c100K', '25kb', '1m C'). Returns the bare value, whether it is dual, whether it is a trimmer."""
+    raw = re.sub(r"[*†‡]+", "", value).strip()
+    raw = re.sub(r"\s{3,}\S{1,4}$", "", raw)  # column bleed: '25kB        16'
+    dual = bool(_POT_DUAL.search(raw) or _POT_TWO.match(raw))
+    trim = bool(_POT_TRIM.search(raw))
+    raw = _POT_TWO.sub("", _POT_TRIM.sub(" ", _POT_DUAL.sub(" ", raw)))
+    raw = re.sub(r"\s+", " ", raw).strip(" -,")
+    raw = re.sub(r"^([abcw])(?=\s*\d)", lambda m: m.group(1).upper(), raw)
+    raw = re.sub(r"(?<=\d)\s*m(?=\s*[ABCWabcw]?$)", "M", raw)  # '1m C': a pot is never milliohms
+    raw = re.sub(r"(?<=[kKM])\s*([abcw])$", lambda m: m.group(1).upper(), raw)
+    return raw, dual, trim
+
+
 _TAPER_WORD = {"linear": "B", "lin": "B", "log": "A", "audio": "A", "logarithmic": "A", "revlog": "C", "reverse": "C", "reverselog": "C", "reverseaudio": "C", "antilog": "C"}
 
 
@@ -109,6 +130,8 @@ def categorize(ref: str, part_type: str, value: str = "") -> str:
     for hint in _EARLY_HINTS:
         if hint in t0:
             return "CONN" if hint == "socket" else "HW"
+    if re.match(r"^T\d+$", r, re.I) and (_VALUE_HINTS[0][0].match(v) or re.search(r"TRANSISTOR|\b[NP]PN\b|JFET|MOSFET", v)):
+        return "Q"  # European docs number transistors T1, T2 (Carlin, BJF); a trimmer never carries a BC547B
     for rx, cat in _CATEGORY_BY_REF:
         if rx.match(r):
             return cat
@@ -142,6 +165,15 @@ def normalize_row(row: BomRow) -> BomRow:
     row.category = row.category or categorize(row.ref, row.part_type, row.value)
     if row.category == "POT" and re.search(r"[SD]P[SD]T|3PDT|4PDT", row.value.upper()):
         row.category = "SW"
+    if row.category in ("POT", "TRIM"):
+        bare, dual, trim = _pot_parts(row.value)
+        if bare != row.value.strip() and (_POT_RE.match(bare) or _POT_WORDS.match(bare)):
+            if trim and row.category == "POT":
+                row.category = "TRIM"
+                row.part_type = row.part_type or "Trimmer"
+            if dual and "dual" not in row.part_type.lower():
+                row.part_type = f"{row.part_type}, dual" if row.part_type else "Dual"
+            row.value = bare
     raw = row.value.strip().replace("ų", "u").replace("μ", "u").replace("µ", "u")
     raw = re.sub(r"^(\d+(?:[.,]\d+)?)\s+([kKMRpnu])([Ff])?(?=\s|$)", r"\1\2\3", raw)  # '1 K', '2.2 M', '100 uf': a space before the unit
     if row.category in ("D", "Q", "IC", "OPTO"):
@@ -158,6 +190,7 @@ def normalize_row(row: BomRow) -> BomRow:
 
     if row.category == "R" or row.category == "TRIM":
         raw = re.sub(r"^(\d+(?:[.,]\d+)?)m$", r"\1M", raw)  # "1m" on a resistor means 1 megohm, never milliohm
+        raw = re.sub(r"^(\d+)m(\d+)$", r"\1M\2", raw)  # and "2m2" is 2.2 megohms
         n = _parse_si(raw)
         if n is not None:
             row.norm_value = _fmt(n, _R_PREFIX)

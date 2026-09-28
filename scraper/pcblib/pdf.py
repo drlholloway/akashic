@@ -1972,16 +1972,16 @@ def _expand_range_rows(rows: list[BomRow]) -> list[BomRow]:
     """'Q1-Q5  2N5088' is five transistors, not one part called Q1-Q5: expand any row whose
     designator is a range or a comma list, whichever parser produced it."""
     out: list[BomRow] = []
-    seen = {r.ref for r in rows}
+    seen = {(r.variant, r.ref) for r in rows}  # per build variant: Q1 in one build does not hide Q1-4 in another
     for r in rows:
         refs = expand_refs(r.ref) if re.search(r"\d\s*[-–,]\s*[A-Za-z]*\d", r.ref) else [r.ref]
         if len(refs) <= 1:
             out.append(r)
             continue
         for ref in refs:
-            if ref in seen and ref != r.ref:
+            if (r.variant, ref) in seen and ref != r.ref:
                 continue  # the parser also listed this designator on its own
-            seen.add(ref)
+            seen.add((r.variant, ref))
             out.append(normalize_row(BomRow(ref=ref, value=r.value, part_type=r.part_type, notes=r.notes, variant=r.variant)))
     return out
 

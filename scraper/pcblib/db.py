@@ -240,6 +240,8 @@ def _fix_stray_digits(rows: list) -> None:
 
 
 def upsert_circuit(conn: sqlite3.Connection, c: Circuit) -> None:
+    from .pdf import _expand_range_rows
+    c.bom = _expand_range_rows(c.bom)  # 'Q1-2 2N5088' is Q1 and Q2, whichever parser read it
     _fix_stray_digits(c.bom)
     c.controls = _dedupe_controls(c.controls)
     c.based_on = _clean_based_on(c.based_on) if c.based_on else c.based_on
