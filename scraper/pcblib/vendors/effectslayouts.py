@@ -14,7 +14,7 @@ from ..paths import DATA_DIR
 from ..pdf import ocr_bom, pdf_text_pages, process_document
 from ..taxonomy import classify_within, find_enclosure
 from . import register
-from .base import Adapter, clean_text, html_to_text
+from .base import Adapter, clean_text, html_to_text, on_host
 
 BASE = "https://effectslayouts.com"
 API = f"{BASE}/wp-json/wc/store/v1/products?per_page=100&page={{page}}"
@@ -121,7 +121,7 @@ class EffectsLayouts(Adapter):
             c.doc_local = res["doc_local"]
             c.bom, c.schematic_local, c.schematic_page, c.doc_version = res["bom"], res["schematic_local"], res["schematic_page"], res["doc_version"]
             text = "\n".join(pdf_text_pages(pdf))
-            if len(c.bom) < 8 and "dropbox.com" in c.doc_url:
+            if len(c.bom) < 8 and on_host(c.doc_url, "dropbox.com", "dropboxusercontent.com"):
                 ocr = ocr_bom(pdf, self.vendor, slug, max_pages=4, thorough=True)  # old blog-era project PDFs have unreadable font encodings
                 if len(ocr) > len(c.bom):
                     c.bom = ocr

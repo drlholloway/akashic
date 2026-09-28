@@ -13,7 +13,7 @@ from ..models import Circuit
 from ..pdf import process_document, pdf_text_pages
 from ..taxonomy import classify, find_enclosure
 from . import register
-from .base import Adapter, clean_text
+from .base import Adapter, clean_text, on_host
 
 PAGE = "https://ontheroadeffects.com/pcbs/"
 _SECTION_CAT = {"compress": "Compressor", "boost": "Boost", "fuzz": "Fuzz", "overdrive": "Overdrive",
@@ -62,9 +62,9 @@ class OTRFX(Adapter):
                 href = node.attributes.get("href", "") or ""
                 if href.lower().endswith(".pdf") and not cur["pdf"]:
                     cur["pdf"] = href.replace("https://www.", "https://")
-                elif "reverb.com" in href and not cur["reverb"]:
+                elif on_host(href, "reverb.com") and not cur["reverb"]:
                     cur["reverb"] = href
-                elif "etsy.com" in href and not cur["etsy"]:
+                elif on_host(href, "etsy.com") and not cur["etsy"]:
                     cur["etsy"] = href
             elif tag == "img" and cur and not cur["image"]:
                 src = node.attributes.get("data-tf-src") or node.attributes.get("src") or ""

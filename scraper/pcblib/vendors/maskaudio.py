@@ -16,7 +16,7 @@ from ..paths import CACHE_DIR, DATA_DIR
 from ..pdf import process_document, schematic_bom
 from ..taxonomy import classify, find_enclosure
 from . import register
-from .base import Adapter, clean_text, html_to_text
+from .base import Adapter, clean_text, html_to_text, on_host
 
 BASE = "https://maskaudioelectronics.com"
 COLLECTION = f"{BASE}/collections/diy-projects/products.json?limit=250"
@@ -147,7 +147,7 @@ class MaskAudio(Adapter):
                 c.extra_docs["Variations"] = u
             elif re.search(r"mod notes", t, re.I):
                 c.extra_docs["Mod notes"] = u
-            elif re.search(r"demo", t, re.I) or "instagram.com" in u:
+            elif re.search(r"demo", t, re.I) or on_host(u, "instagram.com"):
                 c.extra_docs["Demo"] = u
         if sub:
             c.description += "\n\nFree with any PCB order, or all of the freebies together as a bundle."

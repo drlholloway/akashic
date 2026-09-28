@@ -3,6 +3,7 @@ from __future__ import annotations
 import re
 from abc import ABC, abstractmethod
 from typing import Iterable
+from urllib.parse import urlparse
 
 from ..fetch import Fetcher
 from ..models import Circuit
@@ -21,6 +22,13 @@ class Adapter(ABC):
     @abstractmethod
     def parse(self, target: str) -> Circuit | None:
         """Parse one target into a Circuit, or None if it is not a PCB project."""
+
+
+def on_host(url: str, *domains: str) -> bool:
+    """Whether the URL's host is one of `domains` or a subdomain of one. Parses the URL, so a
+    domain named in a path or query string ('evil.example/?drive.google.com') does not count."""
+    host = (urlparse(url).hostname or "").lower()
+    return any(host == d or host.endswith("." + d) for d in domains)
 
 
 def clean_text(s: str | None) -> str:

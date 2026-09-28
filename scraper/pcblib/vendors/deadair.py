@@ -16,7 +16,7 @@ from ..normalize import is_plausible, normalize_row
 from ..paths import DATA_DIR
 from ..taxonomy import classify, find_enclosure
 from . import register
-from .base import Adapter, clean_text, html_to_text
+from .base import Adapter, clean_text, html_to_text, on_host
 
 BASE = "https://deadairstudios.bigcartel.com"
 _BASED_ON = {"face-disaster-pcb": "Tim Escobedo Ugly Face", "sawzall-diy-hm2-eq-overdrive-pcb": "Boss HM-2 / MXR Distortion+",
@@ -142,7 +142,7 @@ class DeadAir(Adapter):
                     in_stock=p.get("status") == "active", image_url=((p.get("images") or [{}])[0].get("url") or "").split("?")[0],
                     based_on=_BASED_ON.get(slug, ""), enclosure=find_enclosure(link_text))
         for u, t in links:
-            if "drive.google.com" in u or "docs.google.com" in u or "taydakits" in u:
+            if on_host(u, "drive.google.com", "docs.google.com", "taydakits.com"):
                 label = re.sub(r"^\s*\[\s*", "", t.split("]")[0]).strip() or "Document"  # one anchor can wrap two bracketed labels
                 c.extra_docs.setdefault(label[:60], u)
         text = ""

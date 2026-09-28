@@ -15,7 +15,7 @@ from ..paths import DATA_DIR
 from ..pdf import expand_refs, ocr_bom, pdf_text_pages, process_document
 from ..taxonomy import classify, find_enclosure
 from . import register
-from .base import Adapter, clean_text, html_to_text
+from .base import Adapter, clean_text, html_to_text, on_host
 from .deadendfx import _drive_download
 
 BASE = "https://dirtmongerinstruments.com"
@@ -75,8 +75,8 @@ class DirtMonger(Adapter):
         body_html = pr.get("body_html") or ""
         links = [(u, clean_text(_html.unescape(re.sub(r"<[^>]+>", "", t)))) for u, t in
                  re.findall(r'<a[^>]+href="(https?://[^"]+)"[^>]*>(.*?)</a>', body_html, re.S)]
-        docs = [u for u, t in links if "drive.google.com" in u and re.search(r"build|doc", t, re.I)]
-        drills = [u for u, t in links if re.search(r"drill", t, re.I) or "taydakits" in u]
+        docs = [u for u, t in links if on_host(u, "drive.google.com") and re.search(r"build|doc", t, re.I)]
+        drills = [u for u, t in links if re.search(r"drill", t, re.I) or on_host(u, "taydakits.com")]
         if not docs:
             return None  # picks, covers, sockets and other non-PCB items
         title = _html.unescape(pr["title"])
@@ -102,7 +102,7 @@ class DirtMonger(Adapter):
         for u in drills:
             c.extra_docs["Drill template"] = u
         for u, t in links:
-            if BASE in u and "products/" in u and "utm_" in u:
+            if on_host(u, "dirtmongerinstruments.com") and "products/" in u and "utm_" in u:
                 c.extra_docs["Complete pedal"] = u.split("?")[0]
         pdf = self.f.get_file(_drive_download(c.doc_url), ".pdf")
         if pdf and pdf.stat().st_size > 2000 and pdf.read_bytes()[:5] == b"%PDF-":
