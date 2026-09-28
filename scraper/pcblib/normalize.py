@@ -118,7 +118,7 @@ def categorize(ref: str, part_type: str, value: str = "") -> str:
     v = value.upper()
     if re.search(r"\b[SD]P[SD]T\b|3PDT|4PDT", v):
         return "SW"
-    if "LED" in v and not re.match(r"^(IC|U|Q)\d", r):
+    if ("LED" in v or "LYSDIOD" in v) and not re.match(r"^(IC|U|Q)\d", r):  # Lysdiod: Swedish for LED (Moody)
         return "LED"
     if "TRIM" in r.upper():
         return "TRIM"

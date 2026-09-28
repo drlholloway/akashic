@@ -13,7 +13,7 @@ from pathlib import Path
 from typing import Iterable
 
 from ..models import BomRow, Circuit
-from ..normalize import is_plausible, normalize_row
+from ..normalize import categorize, is_plausible, normalize_row
 from ..paths import CACHE_DIR, DATA_DIR
 from ..pdf import _tesseract_cached, pdf_text_pages, process_document, render_page
 from ..taxonomy import classify, find_enclosure
@@ -37,7 +37,7 @@ _SWEDISH = {"Volym": "Volume", "Nivå": "Level", "Ton": "Tone", "Hastighet": "Sp
 _DOC_BAD = re.compile(r"schem|artwork|drill|info|mod|recesion|modifieringar|datasheet|Installation|Bygger|-fra-|manual", re.I)
 _EQ = re.compile(r"(?<![A-Za-z0-9])([A-Z]{1,3}\d{1,3}(?:\s*,\s*[A-Z]{1,3}\d{1,3})*)\s*=\s*([^=()\n]{1,40}?)\s*(?:\(([^()\n]*)\))?\s*(?=[A-Z]{1,3}\d{1,3}\s*[,=]|$|\n)", re.M)
 _QTY = re.compile(r"^\s*(\d+)\s*[-–]\s*(.+?)\s*$", re.M)
-_SECTION = re.compile(r"^\s*(Resistors|Capacitors|Diodes|Transistors|ICs?|Sockets|Potentiometers|Switches|Hardware|Other)\s*:", re.I | re.M)
+_SECTION = re.compile(r"^\s*(Resistors|Capacitors|Diodes|Transistors|IC'?s?|Sockets|Potentiometers|Switches|Hardware|Other)\b[^:\n]{0,25}:", re.I | re.M)
 
 
 _VALUE_TOKEN = re.compile(r"(?<![A-Za-z0-9])(\d+(?:[.,]\d+)?\s?(?:[pnuµ]F?|[kKM](?:\d+)?|[RΩ]|ohm)?\d*|(?=[A-Z0-9-]*\d)(?=[A-Z0-9-]*[A-Z])[A-Z0-9][A-Z0-9-]{2,}|LED|Ge|Si)(?![A-Za-z0-9])")
@@ -81,6 +81,26 @@ def parse_eq_list(text: str) -> list[BomRow]:
     return rows
 
 
+_PARTNO = re.compile(r"^[A-Za-z0-9./-]*\d[A-Za-z0-9./-]*,?$")
+
+
+def _part_numbers(value: str) -> str:
+    """'78L05 5volt regulator' -> 78L05, '1N4148 or 1N914' stays, '2SC1849 transistors' -> 2SC1849:
+    keep leading part numbers and the 'or' / '/' between them, drop the description after."""
+    kept: list[str] = []
+    for tok in value.split():
+        if _PARTNO.match(tok) and not re.search(r"[a-z]{3,}", tok) and len(tok.rstrip(",")) >= 3 \
+                and not re.fullmatch(r"\d+(?:\.\d+)?[vV],?|\d+mm,?", tok):  # '5V' and '5mm' describe, they do not name a part
+            kept.append(tok)
+        elif tok.lower() in ("or", "/") and kept:
+            kept.append(tok)
+        else:
+            break
+    while kept and kept[-1].lower() in ("or", "/"):
+        kept.pop()
+    return " ".join(kept).rstrip(",") if kept else value
+
+
 def parse_checklist(text: str) -> list[BomRow]:
     """BYOC 'Parts Checklist': quantity - value lines under section headings."""
     m = re.search(r"Parts Checklist for[^\n]*\n(.*?)(?:\n\s*Hardware:|\nPopulating|\Z)", text, re.S)
@@ -91,7 +111,7 @@ def parse_checklist(text: str) -> list[BomRow]:
     for ln in m.group(1).splitlines():
         sm = _SECTION.match(ln)
         if sm:
-            section = sm.group(1).lower()
+            section = sm.group(1).lower().replace("'", "")  # "IC's:" is the ICs heading
             continue
         qm = _QTY.match(ln)
         if not qm or section in ("hardware", "sockets", "other"):
@@ -101,10 +121,26 @@ def parse_checklist(text: str) -> list[BomRow]:
         note = (re.search(r"\(([^)]*)\)", rest) or [None, ""])[1]
         if section.startswith("pot"):
             names = [n.strip().title() for n in note.split(",") if re.fullmatch(r"[A-Za-z][A-Za-z /-]{1,15}", n.strip())]
+            ptype = "Dual" if re.search(r"\bdual\b|\bstereo\b", value, re.I) else ""  # 'B10k Dual Gang'
             for n in names or [f"×{qty}"]:
-                rows.append(normalize_row(BomRow(ref=n, value=value.split()[0], category="POT")))
+                rows.append(normalize_row(BomRow(ref=n, value=value.split()[0], category="POT", part_type=ptype)))
             continue
+        if re.search(r"\bsockets?\b", value, re.I):
+            continue  # '8 pin sockets' listed among the ICs
+        if re.search(r"zener", value, re.I):
+            value = re.sub(r"\s+diodes?$", "", value, flags=re.I)  # '5.1v Zener diode' -> '5.1v Zener'
+        elif section in ("ic", "ics", "diodes", "transistors") and not re.search(r"crystal|oscillat|transformer|module|charge pump|\bLEDs?\b", value, re.I):
+            value = _part_numbers(value)
         value = re.sub(r"\s+(?:ohm|film|ceramic disc|aluminum electrolytic|electrolytic|tantalum|or similar.*|\(.*)$", "", value, flags=re.I)
+        section_kind = {"ic": "IC", "ics": "IC", "diodes": "D", "transistors": "Q"}.get(section)
+        by_value = categorize("×1", "", value.upper())
+        if re.match(r"^1N\d{2}", value, re.I):
+            by_value = "D"  # 1N60 is a diode, not 1n (60)
+        # Move a part out of its heading only when the value plainly names another kind: a 2N3904 or a
+        # 25k under IC's. A chip whose number looks like a diode's (BA6110) stays under its heading.
+        moves = {"IC": ("Q", "R", "C"), "D": ("Q", "R", "C"), "Q": ("D", "R", "C", "IC")}  # a TO-92 regulator under Transistors
+        if section_kind and by_value in moves[section_kind]:
+            section = {"Q": "transistors", "D": "diodes", "R": "resistors", "C": "capacitors", "IC": "ics"}[by_value]  # a 2N3904 listed under IC's
         ptype = {"resistors": "Resistor", "capacitors": "Capacitor", "diodes": "Diode", "transistors": "Transistor", "ic": "IC", "ics": "IC", "switches": "Switch"}.get(section, "")
         value = re.sub(r"^\.(\d)", r"0.\1", value).replace("pf", "pF").replace("uf", "uF")
         r = normalize_row(BomRow(ref=f"×{qty}", value=value, part_type=ptype, notes="shopping list"))

@@ -126,6 +126,13 @@ GitHub Release notes.
   and pots are grouped by taper (A, B, C, W, none) and ordered by resistance.
 
 ### Fixed
+- Moody kit shopping lists: an 'IC's:' or 'IC's and IC sockets:' heading is read, so ICs no
+  longer inherit the Diodes or Transistors heading above them (Spring Reverb, Flanger, Analog
+  Delay and about 50 more kits). Sockets are skipped, a part number keeps its 'or' alternatives
+  and drops the description after it ('78L05 5volt regulator' -> 78L05), a transistor or
+  regulator listed under the wrong heading is filed by its value, and 'Dual Gang' pots keep
+  their type.
+- 'Lysdiod' (Swedish for LED) in Moody's own kit lists is filed as an LED, not a diode.
 - KiCad interactive BOMs whose designer typed the part into the reference ('U1 - LM386') keep
   the designator, so Five Cats' Not So Clear lists its LM386 and PT2399 as ICs, not sockets.
 - Resistors written '2m2' read as 2.2M, not 2.2 milliohms (143 rows).
