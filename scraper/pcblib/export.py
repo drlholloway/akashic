@@ -12,7 +12,9 @@ from __future__ import annotations
 import json
 import re
 import sqlite3
+import subprocess
 from collections import defaultdict
+from datetime import date, timedelta
 
 from . import db as dbm
 from .normalize import catalog_category, catalog_keys
@@ -46,6 +48,31 @@ def write_rates() -> None:
         else:
             out.write_text(json.dumps({"base": "USD", "date": None, "rates": {"USD": 1.0}}))
             print(f"rates fetch failed ({exc}); prices will show in vendor currency")
+
+
+def write_changes() -> None:
+    """The commit history grouped by week (Monday to Sunday), newest first, for the changelog page:
+    each change is its commit subject and the first paragraph of its message. Merge commits are left
+    out (their changes are already listed), and so are the co-author and session trailer lines."""
+    repo = EXPORT_DIR.parents[2]
+    try:
+        out = subprocess.run(["git", "-C", str(repo), "log", "--no-merges", "--date=short", "--format=%H%x1f%ad%x1f%s%x1f%b%x1e"],
+                             capture_output=True, text=True, check=True).stdout
+    except (OSError, subprocess.CalledProcessError):
+        return  # no git here: keep whatever changes.json the last export wrote
+    weeks: dict[str, list[dict]] = defaultdict(list)
+    for rec in out.split("\x1e"):
+        f = rec.strip("\n").split("\x1f")
+        if len(f) < 4:
+            continue
+        sha, day, subject, body = f
+        detail = "\n".join(ln for ln in body.strip().split("\n\n")[0].splitlines()
+                           if not re.match(r"^(?:Co-Authored-By|Claude-Session|Signed-off-by):", ln, re.I)).strip()
+        d = date.fromisoformat(day)
+        monday = (d - timedelta(days=d.weekday())).isoformat()
+        weeks[monday].append({"sha": sha[:7], "date": day, "subject": subject.strip(), "detail": re.sub(r"\s*\n\s*", " ", detail)})
+    changes = [{"week": w, "items": weeks[w]} for w in sorted(weeks, reverse=True)]
+    (EXPORT_DIR / "changes.json").write_text(json.dumps(changes, ensure_ascii=False))
 
 
 def run(images: bool = False) -> None:
@@ -126,6 +153,7 @@ def run(images: bool = False) -> None:
     (EXPORT_DIR / "parts.json").write_text(json.dumps(parts_out, ensure_ascii=False))
     (EXPORT_DIR / "vendors.json").write_text(json.dumps(vendors, ensure_ascii=False))
     write_rates()
+    write_changes()
     print(f"exported {len(index)} circuits, {len(parts_out)} indexed part values -> {EXPORT_DIR}")
 
 

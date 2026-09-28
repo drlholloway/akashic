@@ -6,6 +6,9 @@ GitHub Release notes.
 ## Unreleased
 
 ### Added
+- A changelog page (/changes): what changed each week, built from the commit history at export,
+  each change opening to its description and linking to its commit. The footer's Sources list
+  now opens and closes, and the colophon links the changelog in place of the GitHub link.
 - Gigahearts FX (UK Shopify shop, five boards in GBP): the GIG BUFF versions of the EHX/JHS Big
   Muff 2, a Broadcast with mods and the Full Moon (Moon Rock / Coyote). One build doc is public;
   GIG BUFF v2.0 is read from its schematic image.

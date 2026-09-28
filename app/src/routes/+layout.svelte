@@ -7,7 +7,7 @@
 	import { currency } from '$lib/currency.svelte';
 
 	import type { VendorInfo } from '$lib/types';
-	import { COFFEE_URL, ISSUES_URL, MAKER_NAME, MAKER_URL, REPO_URL } from '$lib/site';
+	import { COFFEE_URL, ISSUES_URL, MAKER_NAME, MAKER_URL } from '$lib/site';
 	import Mark from '$lib/Mark.svelte';
 
 	let { children, data }: { children: Snippet; data: { rates: import('$lib/currency.svelte').Rates | null; vendors: Record<string, VendorInfo> } } = $props();
@@ -75,12 +75,14 @@
 </main>
 
 <footer>
-	<p class="label strong">Sources{#if vendorList.length} ({vendorList.length} total){/if}</p>
-	<ul class="vendors">
-		{#each vendorList as v (v.id)}
-			<li><a href={v.url} target="_blank" rel="noopener" title={v.license_note || v.name}>{v.name}</a></li>
-		{/each}
-	</ul>
+	<details class="sources">
+		<summary class="label strong">Sources{#if vendorList.length} ({vendorList.length} total){/if}</summary>
+		<ul class="vendors">
+			{#each vendorList as v (v.id)}
+				<li><a href={v.url} target="_blank" rel="noopener" title={v.license_note || v.name}>{v.name}</a></li>
+			{/each}
+		</ul>
+	</details>
 	<p>Names, part values and prices are indexed for reference; build documents and schematics belong to their authors and are linked, not copied. Buy the board from the vendor.</p>
 	<div class="coffee">
 		<p class="label strong">Kept going by coffee</p>
@@ -92,7 +94,7 @@
 		<p>A parts list that reads wrong, a vendor to add, a bug or an idea: open an issue on GitHub. Every circuit page has a link that fills in the board for you.</p>
 		<a class="btn ghost" href={ISSUES_URL} target="_blank" rel="noopener">Open an issue</a>
 	</div>
-	<p class="colophon">Made by <a href={MAKER_URL} target="_blank" rel="noopener">{MAKER_NAME}</a>. Source on <a href={REPO_URL} target="_blank" rel="noopener">GitHub</a>.</p>
+	<p class="colophon">Made by <a href={MAKER_URL} target="_blank" rel="noopener">{MAKER_NAME}</a>. <a href="{base}/changes">Changelog</a>.</p>
 </footer>
 
 <style>
@@ -142,7 +144,15 @@
 	footer { padding: 32px var(--gutter) 48px; border-top: 1px solid var(--rule); color: var(--ink-3); font-size: 13px; }
 	footer p { max-width: 1180px; }
 	footer .label { margin-bottom: 10px; }
-	.vendors { list-style: none; margin: 0 0 20px; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 6px 24px; max-width: 1180px; }
+	.sources { max-width: 1180px; margin-bottom: 20px; }
+	.sources summary { cursor: pointer; display: inline-flex; align-items: center; gap: 8px; margin-bottom: 0; list-style: none; }
+	.sources summary::-webkit-details-marker { display: none; }
+	.sources summary::before { content: ''; width: 6px; height: 6px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(-45deg); transition: transform 0.15s; }
+	.sources[open] summary::before { transform: rotate(45deg); }
+	.sources summary:hover { color: var(--ink); }
+	.sources[open] summary { margin-bottom: 10px; }
+	@media (prefers-reduced-motion: reduce) { .sources summary::before { transition: none; } }
+	.vendors { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 6px 24px; max-width: 1180px; }
 	.vendors a { color: var(--ink-2); font-family: var(--label); font-weight: 600; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; }
 	.vendors a:hover { color: var(--ink); }
 	.coffee { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--rule); max-width: 1180px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; }

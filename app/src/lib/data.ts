@@ -1,5 +1,5 @@
 import { base } from '$app/paths';
-import type { Circuit, IndexEntry, PartEntry, SubsEntry, VendorInfo } from './types';
+import type { ChangeWeek, Circuit, IndexEntry, PartEntry, SubsEntry, VendorInfo } from './types';
 
 let indexPromise: Promise<IndexEntry[]> | null = null;
 let partsPromise: Promise<PartEntry[]> | null = null;
@@ -23,6 +23,10 @@ export function loadIndex(fetchFn: Fetch = fetch): Promise<IndexEntry[]> {
 export function loadParts(fetchFn: Fetch = fetch): Promise<PartEntry[]> {
 	partsPromise ??= getJson<PartEntry[]>(fetchFn, 'parts.json');
 	return partsPromise;
+}
+
+export function loadChanges(fetchFn: Fetch = fetch): Promise<ChangeWeek[]> {
+	return getJson<ChangeWeek[]>(fetchFn, 'changes.json');
 }
 
 export function loadVendors(fetchFn: Fetch = fetch): Promise<Record<string, VendorInfo>> {

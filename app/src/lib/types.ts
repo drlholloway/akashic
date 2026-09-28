@@ -173,3 +173,9 @@ export interface SubsEntry {
 	used: TransistorSpec[];
 	closest: TransistorSpec[];
 }
+
+/** One week of the changelog (Monday to Sunday), built from the commit history at export. */
+export interface ChangeWeek {
+	week: string;
+	items: { sha: string; date: string; subject: string; detail: string }[];
+}
