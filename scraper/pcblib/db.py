@@ -265,6 +265,8 @@ def upsert_circuit(conn: sqlite3.Connection, c: Circuit) -> None:
     c.bom = _expand_range_rows(c.bom)  # 'Q1-2 2N5088' is Q1 and Q2, whichever parser read it
     c.bom = apply_corrections(c.id, c.bom)
     c.bom = _dedupe_named_knobs(c.bom)
+    from .normalize import is_prose_value
+    c.bom = [r for r in c.bom if not is_prose_value(r.category, r.value)]  # 'for', 'Clipping', 'empty or your choice' as a part
     _fix_stray_digits(c.bom)
     c.controls = _dedupe_controls(c.controls)
     c.based_on = _clean_based_on(c.based_on) if c.based_on else c.based_on

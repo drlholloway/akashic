@@ -132,6 +132,12 @@ GitHub Release notes.
   and pots are grouped by taper (A, B, C, W, none) and ordered by resistance.
 
 ### Fixed
+- Semiconductor rows that carry a word or placeholder instead of a part ('for', 'Clipping',
+  'empty or your choice', 'Jumper', '(optional)') are dropped (about 200 rows); descriptions such
+  as 'Germanium', 'NPN JFET' or 'Dual op amp' stay.
+- OCR and typing slips in well-known parts are repaired where the slip spells no real part:
+  TLO72/TLQ72 -> TL072, ZN3904 -> 2N3904, 14001 -> 1N4001, BAT-41 -> BAT41, CO4047 -> CD4047,
+  LM9324/XM324 -> LM324, RCY558 -> RC4558, WA741 -> uA741, pt2395 -> PT2399 (31 rows).
 - A knob read twice (Level from the schematic, LEVEL from the parts-table OCR) is listed once,
   keeping the reading whose value parses and, between two, the text table over the schematic over
   OCR (332 rows on 92 Dead End FX boards and a few others).

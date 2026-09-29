@@ -182,6 +182,10 @@ def normalize_row(row: BomRow) -> BomRow:
     if row.category == "Q" and re.match(r"^2[58][ABCDJK]\d{2,4}", row.value.strip()):
         row.value = "2S" + row.value.strip()[2:]  # OCR reads 2S as 25 or 28: 25K30A-Y is 2SK30A-Y (no part number starts 25K)
         raw = row.value
+    if row.category in ("D", "Q", "IC"):
+        fixed = _repair_part_number(row.category, row.value.strip())
+        if fixed != row.value.strip():
+            row.value = raw = fixed
     if row.category in ("D", "Q", "IC", "OPTO"):
         raw = re.sub(r"[*+†‡]+$", "", raw).strip()          # footnote markers: 2N5458**, 1N4148+
         raw = re.sub(r"\s+[A-Z]$", "", raw)                  # stray column bleed: "1N5817 S"
@@ -230,6 +234,51 @@ def normalize_row(row: BomRow) -> BomRow:
 
 
 _JUNK = re.compile(r"^(omit|omitted|jumper|link|wire|none|n/?a|empty|—|-|your choice|see notes?|see text|optional|tbd|\?+)$", re.I)
+
+
+# OCR and typing slips in well-known part families, each unambiguous: no real part is spelled the
+# slipped way. (category, pattern, replacement)
+_PART_SLIPS = [
+    ("Q", re.compile(r"^ZN(\d{4}[A-Z]?)$"), r"2N\1"),                  # ZN3904: a 2 read as Z
+    ("IC", re.compile(r"^TL[QDO](\d\d[A-Z]?)$", re.I), r"TL0\1"),      # TLQ72, TLD82, TLO72
+    ("IC", re.compile(r"^CO4(\d{3}[A-Z]*)$", re.I), r"CD4\1"),          # CO4047
+    ("IC", re.compile(r"^(?:[XL]M|LM9)324([A-Z]*)$", re.I), r"LM324\1"), # XM324, LM9324
+    ("IC", re.compile(r"^RC[Y4]558([A-Z]*)$", re.I), r"RC4558\1"),       # RCY558
+    ("IC", re.compile(r"^WA741([A-Z]*)$", re.I), r"uA741\1"),            # WA741 (uA741 is already right)
+    ("IC", re.compile(r"^PT239[59]$", re.I), "PT2399"),                   # pt2395
+    ("D", re.compile(r"^1(4[01]\d\d|4148|581[789]|914)$"), r"1N\1"),       # 14001: the N dropped
+    ("D", re.compile(r"^BAT[- ](\d\d[A-Z]?)\b", re.I), r"BAT\1"),        # BAT-41, BAT 41
+]
+
+
+def _repair_part_number(category: str, value: str) -> str:
+    for cat, rx, rep in _PART_SLIPS:
+        if cat == category and rx.search(value):
+            return rx.sub(rep, value, count=1)
+    return value
+
+
+# Words a semiconductor row may carry without a part number ('Germanium', 'NPN JFET', 'Dual op amp').
+# Any other digit-free value is prose or a placeholder picked up as a part: 'for', 'are', 'Clipping',
+# 'empty or your choice', 'Jumper*', '(optional'.
+_PART_WORDS = {"ge", "si", "germanium", "germ", "silicon", "schottky", "led", "leds", "zener", "npn", "pnp", "jfet", "fet",
+               "mosfet", "bjt", "bjet", "transistor", "transistors", "diode", "diodes", "red", "green", "blue", "yellow", "white",
+               "amber", "orange", "clear", "diffused", "bicolor", "bi-color", "bicolour", "rgb", "status", "ldr", "vactrol", "opamp",
+               "op", "amp", "op-amp", "opamps", "dual", "quad", "single", "bbd", "pic", "microcontroller", "regulator", "charge", "pump",
+               "low", "gain", "high", "medium", "noise", "matched", "pair", "n-channel", "p-channel", "channel", "small", "signal",
+               "general", "purpose", "rectifier", "lysdiod", "germaniumdioder", "germaniumdiod", "photocell", "optocoupler", "flat", "top",
+               "photo", "pinout", "ebc", "ecb", "cbe", "bce", "bec", "ceb", "spin"}
+
+
+def is_prose_value(category: str, value: str) -> bool:
+    """A diode, transistor or IC row whose value is a word or placeholder, not a part."""
+    if category not in ("D", "Q", "IC", "OPTO"):
+        return False
+    v = value.strip(" *†‡()[].,:;-")
+    if not v or re.search(r"\d", v):
+        return False
+    words = re.findall(r"[a-z]+", v.lower())  # 'low-gain' is two words
+    return bool(words) and any(w not in _PART_WORDS for w in words)
 
 
 def is_plausible(row: BomRow) -> bool:
