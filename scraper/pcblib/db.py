@@ -239,9 +239,32 @@ def _fix_stray_digits(rows: list) -> None:
                 break
 
 
+def _dedupe_named_knobs(bom: list) -> list:
+    """One knob read twice ('Level' from the schematic, 'LEVEL' from the parts table OCR) is one row.
+    Within a build variant, pots and trimmers with the same name (ignoring case, spaces and
+    underscores) collapse to the reading whose value parses, preferring a text table, then the
+    schematic, then OCR. Quantity-named shopping-list rows ('×1') are different parts and stay."""
+    def source_rank(r) -> int:
+        n = (r.notes or "").lower()
+        return 2 if "ocr" in n else 1 if "from schematic" in n else 0
+    best: dict[tuple[str, str], object] = {}
+    for r in bom:
+        if r.category not in ("POT", "TRIM") or r.ref.startswith("×"):
+            continue
+        key = (r.variant or "", re.sub(r"[\s_]+", "", r.ref).upper())
+        cur = best.get(key)
+        if cur is None or ((r.sort_key or 0) > 0, -source_rank(r)) > ((cur.sort_key or 0) > 0, -source_rank(cur)):
+            best[key] = r
+    keep = {id(r) for r in best.values()}
+    return [r for r in bom if r.category not in ("POT", "TRIM") or r.ref.startswith("×") or id(r) in keep]
+
+
 def upsert_circuit(conn: sqlite3.Connection, c: Circuit) -> None:
+    from .corrections import apply as apply_corrections
     from .pdf import _expand_range_rows
     c.bom = _expand_range_rows(c.bom)  # 'Q1-2 2N5088' is Q1 and Q2, whichever parser read it
+    c.bom = apply_corrections(c.id, c.bom)
+    c.bom = _dedupe_named_knobs(c.bom)
     _fix_stray_digits(c.bom)
     c.controls = _dedupe_controls(c.controls)
     c.based_on = _clean_based_on(c.based_on) if c.based_on else c.based_on

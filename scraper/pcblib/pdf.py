@@ -927,6 +927,8 @@ def _rows_from_ocr(out: str) -> list[BomRow]:
                 continue  # "BOARD BOM" is not a pot
             if re.fullmatch(r"[RCDQL]\d+", val):
                 continue  # "OOK C16": a designator read as a pot value
+            if re.fullmatch(r"\d{1,2}[ABCW]", val):
+                continue  # 'MONO 5W', 'RSW 55W': a jack's pin label (MONO_SW), not a pot; a pot value has a k or M
             if 3 <= len(ref) <= 13 and re.fullmatch(r"[A-Z][A-Za-z\-]+\d?", ref) and ref.upper() not in _OCR_POT_STOP \
                     and (ref.isupper() or re.fullmatch(r"[ABCW]\d+[kKM]|\d+[kKM][ABCW]", val)):  # a Title-case name only counts with an explicit taper (A500K or 500KA)
                 add(ref.upper(), val, "Trimmer" if "TRIM" in ref.upper() else "Potentiometer", "TRIM" if "TRIM" in ref.upper() else "POT")

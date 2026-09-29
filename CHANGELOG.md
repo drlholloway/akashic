@@ -132,6 +132,13 @@ GitHub Release notes.
   and pots are grouped by taper (A, B, C, W, none) and ordered by resistance.
 
 ### Fixed
+- A knob read twice (Level from the schematic, LEVEL from the parts-table OCR) is listed once,
+  keeping the reading whose value parses and, between two, the text table over the schematic over
+  OCR (332 rows on 92 Dead End FX boards and a few others).
+- OCR's '25K30A-Y' reads 2SK30A-Y (no part number starts 25K or 28C), and a jack's pin label read
+  as a pot ('MONO 5W', 'STEREO 5W' for MONO_SW) is not a knob.
+- Hand corrections (scraper/pcblib/corrections.py) for what no rule can read, checked against the
+  source and marked 'corrected by hand': Dead End FX Zuul IC3 is an LM324.
 - Dirt Monger parts lists read from the text layer in both of their layouts, 'value - refs' and
   value beside its designators in two columns, with or without a 'Parts List' title: Distortion H,
   Bigger Muff, XT-2, Bass Grunge, Dual Octave and American Metal no longer carry OCR rows that paired

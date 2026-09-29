@@ -179,6 +179,9 @@ def normalize_row(row: BomRow) -> BomRow:
             row.value = bare
     raw = row.value.strip().replace("ų", "u").replace("μ", "u").replace("µ", "u")
     raw = re.sub(r"^(\d+(?:[.,]\d+)?)\s+([kKMRpnu])([Ff])?(?=\s|$)", r"\1\2\3", raw)  # '1 K', '2.2 M', '100 uf': a space before the unit
+    if row.category == "Q" and re.match(r"^2[58][ABCDJK]\d{2,4}", row.value.strip()):
+        row.value = "2S" + row.value.strip()[2:]  # OCR reads 2S as 25 or 28: 25K30A-Y is 2SK30A-Y (no part number starts 25K)
+        raw = row.value
     if row.category in ("D", "Q", "IC", "OPTO"):
         raw = re.sub(r"[*+†‡]+$", "", raw).strip()          # footnote markers: 2N5458**, 1N4148+
         raw = re.sub(r"\s+[A-Z]$", "", raw)                  # stray column bleed: "1N5817 S"
