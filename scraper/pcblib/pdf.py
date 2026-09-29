@@ -111,8 +111,8 @@ def parse_bom(pages: list[str]) -> list[BomRow]:
                         break
                     continue
                 ref = ln[:v0].strip() if v0 else ""
-                # Running page footer: "HEXATRON OPTICAL PHASER          4"
-                if re.search(r"\s{4,}\d{1,2}\s*$", ln) and not re.search(r"\d", ref):
+                # Running page footer: "HEXATRON OPTICAL PHASER          4", "DZ4 PREAMP          6"
+                if re.search(r"\s{4,}\d{1,2}\s*$", ln) and (not re.search(r"\d", ref) or (" " in ref and not re.fullmatch(rf"{_ONE_REF}(?:\s*,\s*{_ONE_REF})*", ref))):
                     continue
                 tokens = re.split(r"\s{2,}", ln.strip())
                 # Columns that are centred or right-aligned don't line up with the header
@@ -135,6 +135,11 @@ def parse_bom(pages: list[str]) -> list[BomRow]:
                             if is_plausible(nr):
                                 rows.append(nr)
                     continue
+                # Prose after the table sliced at the table's columns cuts a word in two ('accommod|ate
+                # surface-mount'); a table cell never runs into the next column. (A long designator that
+                # overruns its column was taken by the whitespace fallback above.)
+                if v0 and 0 < v0 < len(ln) and ln[v0 - 1].isalpha() and ln[v0].isalpha():
+                    continue
                 grouped = "," in ref and _REFS_RE.fullmatch(ref) is not None
                 if not ref or " " in ref or (len(ref) > 12 and not grouped) or len(ref) > 60:
                     # continuation of a notes cell, append to previous row
@@ -149,8 +154,8 @@ def parse_bom(pages: list[str]) -> list[BomRow]:
                     ptype = ""
                     value = re.sub(r"\s+\d{1,3}$", "", value)  # quantity bled into the value slice
                 notes = ln[n0:].strip() if n0 else ""
-                if not value:
-                    continue
+                if not value or re.fullmatch(r"PART\s*#|PART NO\.?|NAME|DESCR\w*|VALUE|TYPE|QTY", value, re.I):
+                    continue  # a second table's header row ('BRAND   PART #')
                 key = f"{ref}|{value}|{ptype}"
                 if key in seen:
                     continue

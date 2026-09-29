@@ -116,8 +116,8 @@ _EARLY_HINTS = ("socket", "enclosure", "knob", "standoff")
 def categorize(ref: str, part_type: str, value: str = "") -> str:
     r = re.sub(r"-\d+$", "", ref.strip())  # D1-2 -> D1 (ranges)
     v = value.upper()
-    if re.search(r"\b[SD]P[SD]T\b|3PDT|4PDT", v):
-        return "SW"
+    if re.search(r"\b[SD]P[SD]T\b|3PDT|4PDT|\b[SD]P3T\b", v) or re.fullmatch(r"ON[-/ ]?(?:OFF[-/ ]?)?ON", v.strip()) or re.fullmatch(r"[SD]P[SD]T|[34]PDT", r.upper()):
+        return "SW"  # 'DP3T ON-ON-ON', a switch named 'SPDT' whose value is 'On-off-on'
     if ("LED" in v or "LYSDIOD" in v) and not re.match(r"^(IC|U|Q)\d", r):  # Lysdiod: Swedish for LED (Moody)
         return "LED"
     if "TRIM" in r.upper():
@@ -130,7 +130,7 @@ def categorize(ref: str, part_type: str, value: str = "") -> str:
     for hint in _EARLY_HINTS:
         if hint in t0:
             return "CONN" if hint == "socket" else "HW"
-    if re.match(r"^T\d+$", r, re.I) and (_VALUE_HINTS[0][0].match(v) or re.search(r"TRANSISTOR|\b[NP]PN\b|JFET|MOSFET", v)):
+    if re.match(r"^T\d+$", r, re.I) and (_Q_HINT.match(v) or re.search(r"TRANSISTOR|\b[NP]PN\b|JFET|MOSFET", v)):
         return "Q"  # European docs number transistors T1, T2 (Carlin, BJF); a trimmer never carries a BC547B
     for rx, cat in _CATEGORY_BY_REF:
         if rx.match(r):
@@ -143,8 +143,9 @@ def categorize(ref: str, part_type: str, value: str = "") -> str:
         return "IC"  # a voltage regulator
     if re.match(r"^(?:RPD|CLR|LEDR|RLED|RPU)$", r, re.I):
         return "R"  # pull-down and LED resistors named by role
-    # Named pots: VOLUME, GAIN, TONE ... (PedalPCB style)
-    if r.isalpha() and r.isupper() and len(r) >= 3:
+    # Named pots: VOLUME, GAIN, TONE ... (PedalPCB style), but only with a pot value: in a hardware
+    # table 'CUI  PQMC3-D1' is a DC jack and 'BRAND  PART #' a header, not knobs.
+    if r.isalpha() and r.isupper() and len(r) >= 3 and (not v.strip() or re.match(r"^\s*(?:(?:DUAL|STEREO)(?:[- ]GANG(?:ED)?)?\s+)?[ABCWLG]?\s?\d", v) or re.search(r"\bPOT|LIN|LOG", v)):
         return "POT"
     for rx, cat in _VALUE_HINTS:  # a shopping-list row ("×2") is known only by its part number
         if rx.match(v):
@@ -153,12 +154,14 @@ def categorize(ref: str, part_type: str, value: str = "") -> str:
 
 
 _VALUE_HINTS = [
+    (re.compile(r"^(?:VTL\d|NSL-?\d{2,}|VT\d{3})", re.I), "OPTO"),  # vactrols and LDR optocouplers
     (re.compile(r"^(?:2N\d{3,4}|2S[ABCDJK]\d{2,4}|BC\d{3}|BF\d{3}|MPS[AW]?\d{2,3}|MMBT\d{4}|MMBFJ?\d{3,4}|KSP\d{2}|PN\d{4}|J\d{3}\b|BS\d{3}|IRF\d{3}|MPF\d{3}|AC1\d{2}|OC\d{2,3}|NKT\d{3}|TIP\d{2})"), "Q"),
     (re.compile(r"^(?:1N\d{3,4}|UF\d{4}|BAT\d{2}|BA\d{3}|1SS\d{2,3}|OA\d{2,3}|D9[A-Z]|SB\d{3})"), "D"),
     (re.compile(r"^\d+(?:[.,]\d+)?\s*[pnuµμ]\d*F?$", re.I), "C"),
     (re.compile(r"^\d+(?:[.,]\d+)?\s*(?:[kKMR]\d*|[kKM]?\s*(?:ohms?|Ω))$"), "R"),
     (re.compile(r"^(?:TL0[678]\d|LM\d{3,4}|NE55\d|OP\d{2,3}|JRC\d{4}|RC4\d{3}|CD4\d{3}|PT2399|MC1\d{3}|TC1044|LT1054|ICL7660|CA30\d\d|LF35\d|MN30\d{2}|BBD|L78\d\d|78L\d\d|79L\d\d|7[89]\d\d|TDA\d{4}|MAX\d{3,4}|4558|1458|LM13700|SSM\d{4}|V3\d{3})"), "IC"),
 ]
+_Q_HINT = next(rx for rx, cat in _VALUE_HINTS if cat == "Q")
 
 
 def normalize_row(row: BomRow) -> BomRow:

@@ -27,30 +27,85 @@ _VALUE_REFS = re.compile(rf"^(.+?)\s+[-–]\s+((?:{_REF}|[A-Z][a-z]+)(?:\s*,\s*(
 _REF_VALUE = re.compile(rf"^({_REF})\s+[-–]\s+(\S+)")
 
 
+_REFS_CELL = re.compile(rf"^{_REF}[A-Z]?(?:\s*,\s*{_REF}[A-Z]?)*,?$")
+_NAMES_CELL = re.compile(r"^[A-Z][A-Za-z]{0,11}(?:\s*,\s*[A-Z][A-Za-z]{0,11})*$")
+_POT_LIKE = re.compile(r"^(?:[ABCW]\d+(?:[.,]\d+)?\s*[kKM]?|\d+(?:[.,]\d+)?\s*[kKM][ABCW]?)\b", re.I)  # 'B100' when a font drops the K
+
+
+def _clean_value(v: str) -> str:
+    v = re.sub(r",?\s+\d+V$|\s+(?:anti[ -]?)?log$|\s+lin$", "", v.strip("* "), flags=re.I).rstrip(",")
+    v = re.sub(r"^([12]) (\d{3,4}[A-Z]?)$", r"\1N\2", v)  # a font that drops the N: '2 5088', '1 4001'
+    return re.sub(r"\s*ohm$", "R", v, flags=re.I)
+
+
 def parse_value_list(pages: list[str]) -> list[BomRow]:
-    """Newer docs list parts in two columns as 'value - refs' ('100K - R7, R20',
-    'C50K anti log - Treble, Bass') and 'ref - value' for ICs and transistors."""
+    """Dirt Monger's text parts lists run in two columns, value first: either 'value - refs' in one
+    cell ('100K - R7, R20', 'C50K anti log - Treble, Bass') or the value and its designators in
+    neighbouring cells ('1k   R4, R17   1n   C17'). A pot's refs may be its knob names
+    ('B10k   L, ML, M, MH, H'). ICs and transistors may read 'ref - value'."""
     rows: list[BomRow] = []
     seen: set[str] = set()
+
+    trim = False  # past a 'Trimmer' heading, name-first entries are trimmers ('*BIAS   20k')
+
+    def add(ref: str, value: str) -> None:
+        pot = not re.fullmatch(_REF + "[A-Z]?", ref)
+        if pot and re.fullmatch(r"[ABCW]\d+", value):
+            value += "K"  # 'B100' where the font dropped the K: pedal pots are never 100 ohms
+        cat = ("TRIM" if trim else "POT") if pot else ""
+        r = normalize_row(BomRow(ref=ref, value=value, category=cat, part_type="Trimmer" if cat == "TRIM" else ""))
+        if ref not in seen and (pot or is_plausible(r)):
+            seen.add(ref)
+            rows.append(r)
+
     for page in pages:
-        if not re.search(r"^\s*Parts List\s*$", page, re.M):
-            continue
-        cells = [c.strip() for ln in page.splitlines() for c in re.split(r"\s{3,}", ln) if c.strip()]
-        for cell in cells:
-            if m := _REF_VALUE.match(cell):
-                pairs = [(m.group(1), m.group(2))]
-            elif m := _VALUE_REFS.match(cell):
-                value = re.sub(r",?\s+\d+V$|\s+(?:anti[ -]?)?log$|\s+lin$", "", m.group(1), flags=re.I).rstrip(",")
-                value = re.sub(r"\s*ohm$", "R", value, flags=re.I)
-                pairs = [(r, value) for part in m.group(2).split(",") for r in expand_refs(part.strip())]
-            else:
-                continue
-            for ref, value in pairs:
-                pot = not re.fullmatch(_REF, ref)
-                r = normalize_row(BomRow(ref=ref, value=value, category="POT" if pot else ""))
-                if ref not in seen and (pot or is_plausible(r)):
-                    seen.add(ref)
-                    rows.append(r)
+        if not re.search(r"^\s*(?:.*\bPARTS\s?LIST|Parts List)\s*$|^\W*Resistors\W*\s{3,}Capacitors?\W*$", page, re.M | re.I):
+            continue  # a titled parts list, or the 'Resistors   Capacitors' heading row that starts one
+        for ln in page.splitlines():
+            if re.search(r"b\S?pass buffer|offboard|wiring", ln, re.I):
+                break  # the bypass-buffer board and the wiring drawing follow the list
+            cells = [c.strip() for c in re.split(r"\s{3,}", ln) if c.strip()]
+            if any(re.fullmatch(r"trimmers?", c, re.I) for c in cells):
+                trim = True
+            if len(cells) >= 2 and re.fullmatch(_REF + "[A-Z]?\\*?", cells[0]) and not _REFS_CELL.match(cells[1]) \
+                    and not re.fullmatch(r"[ABCW]\d+", cells[0]):  # 'A50   DRIVE, LEVEL' is a pot value whose K the font dropped
+                break  # designator first ('IC1   TL071'): the bypass-buffer board's table, not this list
+            i = 0
+            while i < len(cells):
+                cell = cells[i]
+                if re.fullmatch(r"(?:Resistors?|Capacitors?|Diodes?|Transistors?|ICs?|Potentiometers?|Pots|Switch(?:es)?|S\S?itches)", cell, re.I):
+                    i += 1  # a section heading sitting in the left column
+                    continue
+                if m := _REF_VALUE.match(cell):
+                    add(m.group(1), m.group(2))
+                elif m := _VALUE_REFS.match(cell):
+                    value = _clean_value(m.group(1))
+                    for part in m.group(2).split(","):
+                        for ref in expand_refs(part.strip()):
+                            add(ref, value)
+                elif i + 1 < len(cells) and re.fullmatch(r"\*?[A-Z][A-Z ]{2,14}", cell) and _POT_LIKE.match(cells[i + 1]):
+                    add(cell.lstrip("*"), _POT_LIKE.match(cells[i + 1]).group(0).strip())  # 'BASS   B100K Dual': name first
+                    i += 2
+                    continue
+                # A value with the designators beside it. TL074 looks like a designator itself, but a single
+                # cell right before a designator list is always its value: the columns alternate value, refs.
+                elif i + 1 < len(cells) and (not _REFS_CELL.match(cell) or ("," not in cell and _REFS_CELL.match(cells[i + 1]))) and len(cell) <= 30 and (
+                        _REFS_CELL.match(cells[i + 1]) or (_POT_LIKE.match(cell) and _NAMES_CELL.match(cells[i + 1]))):
+                    value = _clean_value(cell)
+                    for part in cells[i + 1].rstrip(",").split(","):
+                        part = part.strip()
+                        for ref in (expand_refs(part) if re.fullmatch(_REF + "[A-Z]?", part) else [part]):
+                            add(ref, value)
+                    i += 2
+                    continue
+                i += 1
+    # Some docs use a font that drops letters from the text layer: resistor units ('1 5' for 1k5,
+    # '10' for 10k) and zener letters ('5 3 E E'). When the resistors show it, leave out every value
+    # made only of digits and stray capitals rather than list wrong numbers; the rest read fine.
+    bare = re.compile(r"\d+(?: \d+)*(?: [A-Z])*")
+    res = [r for r in rows if r.category == "R"]
+    if len(res) >= 5 and sum(1 for r in res if bare.fullmatch(r.value)) >= 0.3 * len(res):
+        rows = [r for r in rows if not bare.fullmatch(r.value)]
     return rows
 
 
@@ -116,14 +171,15 @@ class DirtMonger(Adapter):
             # Some docs carry a text parts table; the rest have it as an image.
             c.__dict__.update({k: v for k, v in process_document(pdf, self.vendor, handle).items() if k in ("bom", "schematic_local", "schematic_page")})
             listed = parse_value_list(pages)
-            if len(listed) > len(c.bom):
-                c.bom = listed
+            if listed:
+                c.bom = listed  # the document's own list; the table parsers read the same (sometimes broken) text worse
             if len(c.bom) < 8:
                 ocr = ocr_bom(pdf, self.vendor, handle, max_pages=5, thorough=True)
                 if len(ocr) > len(c.bom):
                     c.bom = ocr
             pots = [r for r in c.bom if r.category == "POT"]
             if pots:
-                named = all(re.fullmatch(r"[A-Za-z][A-Za-z \-/]+\d?", r.ref) for r in pots)
-                c.controls = [r.ref.title() for r in pots] if named else [f"{len(pots)} knobs"]
+                named = all(re.fullmatch(r"[A-Za-z][A-Za-z \-/]*\d?", r.ref) for r in pots)
+                # EQ bands named L, ML, M, MH, H stay as printed; longer names are title-cased
+                c.controls = [r.ref if len(r.ref) <= 2 else r.ref.title() for r in pots] if named else [f"{len(pots)} knobs"]
         return c

@@ -132,6 +132,18 @@ GitHub Release notes.
   and pots are grouped by taper (A, B, C, W, none) and ordered by resistance.
 
 ### Fixed
+- Dirt Monger parts lists read from the text layer in both of their layouts, 'value - refs' and
+  value beside its designators in two columns, with or without a 'Parts List' title: Distortion H,
+  Bigger Muff, XT-2, Bass Grunge, Dual Octave and American Metal no longer carry OCR rows that paired
+  each designator with the wrong column (R1 = 100n). Knob names are kept (L, ML, M, MH, H), a
+  'Trimmer' entry is a trimmer, and the bypass-buffer board printed below the list is left out.
+  Where a doc's font drops letters (PW-2, HMT-2), values that lost their units are left out rather
+  than listed wrong, and '2 5088' reads 2N5088.
+- Table parsers: prose after a parts table no longer turns into parts ('accommod = ate surface-'),
+  a running page footer with a digit in the title is skipped ('DZ4 PREAMP  6'), and a second
+  table's header row ('BRAND  PART #') is not a part (Aion FX, God City, PedalPCB).
+- An all-caps name is a knob only when its value is a pot value: 'CUI  PQMC3-D1' is a DC jack and a
+  'MODE  ON/OFF/ON' or 'MIDS  DP3T' entry is a switch. Vactrols (VTL5C3) are optocouplers.
 - Moody kit shopping lists: an 'IC's:' or 'IC's and IC sockets:' heading is read, so ICs no
   longer inherit the Diodes or Transistors heading above them (Spring Reverb, Flanger, Analog
   Delay and about 50 more kits). Sockets are skipped, a part number keeps its 'or' alternatives

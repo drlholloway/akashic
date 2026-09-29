@@ -65,6 +65,10 @@ at the bottom; re-run them after parser changes.
   board. GIG BUFF v2.0 is read from the product page's schematic image (23 rows, vertical labels
   and the pots missed, R2 10r read as 106); GIG BUFF v3.0, Broadcast, Full Moon and PIP BOY show only
   board renders, so they are listing-only.
+- **Dirt Monger**: PW-2 and HMT-2 use a font whose text layer drops letters (resistor units, the N in
+  2N5088), and American Metal's drops capacitor units; those passive values are left out rather than
+  guessed, so the three boards list their semiconductors and pots but only some passives. OCR of the
+  list image would recover them.
 - **Das Musikding** (issue #6): its own kits are mostly other indexed vendors' boards
   (Griffin, Parasit, TH Custom, GCI, Schalltechnik) and every documentation link on
   musikding.de returns the shop home page (404 behind a 200), so nothing to parse.
