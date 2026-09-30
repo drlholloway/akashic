@@ -66,7 +66,7 @@ def find_flags(db: sqlite3.Connection, tdb: sqlite3.Connection) -> tuple[list[di
     IC_OK = re.compile(r"^(?:[A-Z]{1,6}-?\d{2,}[A-Z0-9\-/.()]*|\d{2,5}[A-Z]{0,6}\d{0,5}[A-Z]{0,4}(?:[-/][A-Z0-9]+)*|CD4\d{3}[A-Z()]*|FV-?1|V\d{4}|THAT\d+.*|SPIN.*|BTDR-\d+H?|.*OP-?AMP.*|.*REGULATOR.*|VTL\d.*|NSL-?\d+.*|.*\bMODULE\b.*|.*CHARGE PUMP.*)$", re.I)
     KNOWN_IC = {"TL081", "TL082", "TL071", "TL072", "TL074", "TL084", "OP2134", "OPA2134", "7660SCPA", "7660S", "LM308", "LM741", "NE5532", "NE5534", "LM386", "CA3080", "LM13700", "PT2399", "MN3007", "MN3207", "MN3005", "MN3205", "MN3101", "MN3102", "V3207", "V3102", "LT1054", "MAX1044", "TC1044S", "ICL7660", "LM1458", "RC4558", "JRC4558", "NJM4558", "4558", "4580", "LF353", "TLC2272", "TLC2274", "OPA2604", "OPA1642", "LM324", "LM358", "LM833", "MC1458", "CD4049", "CD4069", "CD4013", "CD4066", "CD4046", "CD4007", "CD4040", "SA571", "NE570", "NE571", "V571", "LM311", "LM393", "TDA2003", "LM1036", "SSM2166",
                 # real parts that sit one character from a commoner one
-                "LF351", "LF356", "4066", "CD4066", "4066N", "4046A", "MN3001", "MN3004", "MN3008", "MN3204", "MN3205", "MN3206", "MN3214",
+                "LF351", "LF356", "NE5534A", "4066", "CD4066", "4066N", "4046A", "MN3001", "MN3004", "MN3008", "MN3204", "MN3205", "MN3206", "MN3214",
                 "TLC272", "5534", "NE5534", "CA741", "LM307", "LM301", "4559", "RC4559", "MC33174", "MC33178", "TLP222", "TLP222A",
                 "LM741DIP", "LT1054/", "MAX1044S", "78L05Z", "TL061", "TL062", "TL064", "TL031", "OPA2134", "LM386N", "CD4024", "CD4029"}
     KNOWN_Q = {"BC264D", "BC264C", "BC264B", "2N6027", "2N2646", "CV7353", "CV7351", "FS36999", "2N2222A_CEB", "NP4124", "TI592", "A02650"}
@@ -267,7 +267,7 @@ def find_flags(db: sqlite3.Connection, tdb: sqlite3.Connection) -> tuple[list[di
             elif not all(IC_OK.match(MARKS.sub("", a).replace(" ", "")) for a in alternatives(v) or [v]):
                 s = near("IC", V)
                 flag(r, "high" if s else "medium", "IC part number does not look like one", s)
-            elif pn_count[("IC", V)] == 1 and V not in KNOWN_IC:
+            elif pn_count[("IC", V)] == 1 and V not in KNOWN_IC and re.sub(r"(?:[A-Z]{1,3}|-\w+)$", "", V) not in KNOWN_IC:  # NE5534A, TL072CP
                 s = near("IC", V)
                 if s:
                     flag(r, "high", "One-off IC part number, one character from a common one", s)
@@ -313,6 +313,11 @@ def run(out_dir: Path = AUDIT_DIR) -> dict:
     last = out_dir / "audit.json"
     previous = json.loads(last.read_text()) if last.exists() else None
     last.write_text(json.dumps(flags, ensure_ascii=False))
+    # The boards that existed at each run, so flags on a board a refresh just found are told apart
+    # from flags a parser change added to a board that was already there.
+    boards_file = out_dir / "boards.json"
+    known = set(json.loads(boards_file.read_text())) if boards_file.exists() else None
+    boards_file.write_text(json.dumps(sorted(r[0] for r in db.execute("select id from circuits"))))
     with open(out_dir / "audit.csv", "w", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=list(flags[0].keys()) if flags else ["circuit"])
         w.writeheader()
@@ -325,7 +330,9 @@ def run(out_dir: Path = AUDIT_DIR) -> dict:
         before = {_key(f): f for f in previous}
         now = {_key(f): f for f in flags}
         result["previous"] = {"flags": len(previous), "boards": len({f["circuit"] for f in previous})}
-        result["added"] = [now[k] for k in now.keys() - before.keys()]
+        added = [now[k] for k in now.keys() - before.keys()]
+        result["added"] = [f for f in added if known is None or f["circuit"] in known]
+        result["added_new_boards"] = [f for f in added if known is not None and f["circuit"] not in known]
         result["cleared"] = [before[k] for k in before.keys() - now.keys()]
         result["reasons_before"] = collections.Counter(f["reason"].split(" (")[0] for f in previous)
     return result

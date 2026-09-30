@@ -107,6 +107,7 @@ def run(images: bool = False) -> None:
                 "subtitle": c["subtitle"], "based_on": c["based_on"], "category": c["category"],
                 "effect_type": c["effect_type"], "enclosure": c["enclosure"], "difficulty": c["difficulty"],
                 "price": c["price"], "currency": c["currency"], "in_stock": c["in_stock"],
+                "delisted": c.get("delisted") or "", "last_listed": c.get("last_listed") or "",
                 "url": c["url"], "doc_url": c["doc_url"], "image_url": c["image_url"],
                 "controls": c["controls"], "tags": c["tags"], "actives": actives,
                 "bom_count": len(bom), "has_schematic": has_schematic,

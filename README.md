@@ -110,9 +110,18 @@ uv venv .venv && uv pip install -e .
 .venv/bin/pcblib export --images      # also bundles cached schematic renders (local use only)
 ```
 
+### Keeping it current
+
+`scripts/refresh.sh` re-fetches every vendor's pages (`scrape --refresh-pages`: prices, stock and
+new boards; cached build documents are kept), runs `stats` and `audit`, and deploys only when the
+audit found no new problems on boards that were already there. A board a vendor stops listing is
+kept and shown as no longer listed, with the date. `scripts/install-refresh.sh` installs it as a
+launchd agent that runs Sundays at 04:00 (or at the next wake); logs go to `data/cache/refresh/`.
+Remove it with `launchctl bootout gui/$(id -u)/com.cryptideffects.akashic-refresh`.
+
 `export` also fetches USD exchange rates for EUR, GBP and CAD from the European Central Bank feed (frankfurter.dev) into `rates.json`, so the app can show every vendor's price in one currency; the app defaults to USD and offers EUR, GBP, or the vendor's own listing.
 
-Every HTTP response and PDF is cached, so re-running a scrape after a parser change costs no network. Use `--reset` to drop a vendor's rows first, `--only <substring>` and `--limit N` to test on a few products, and `--refresh` to bypass the cache. Requests to each host are spaced 1.5 s apart.
+Every HTTP response and PDF is cached, so re-running a scrape after a parser change costs no network. Use `--reset` to drop a vendor's rows first, `--only <substring>` and `--limit N` to test on a few products, `--refresh-pages` to re-fetch the vendor's pages but keep cached documents, and `--refresh` to bypass the cache entirely. Requests to each host are spaced 1.5 s apart.
 
 Running all five scrapers in parallel is fine: the database is in WAL mode and each circuit commits on its own.
 

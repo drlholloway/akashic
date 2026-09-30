@@ -65,7 +65,7 @@
 					<td class="n knobs mono">{knobCount(e) || '—'}</td>
 					<td class="n mono" title={e.price != null && currency.convert(e.price, e.currency).converted ? `${currency.native(e.price, e.currency)} at ${VENDOR_NAMES[e.vendor]}` : undefined}>
 						{currency.format(e.price, e.currency) || '—'}
-						{#if e.in_stock === false}<span class="oos" title="Out of stock at the vendor">out</span>{/if}
+						{#if e.delisted}<span class="oos" title="No longer listed by the vendor (since {e.delisted})">delisted</span>{:else if e.in_stock === false}<span class="oos" title="Out of stock at the vendor">out</span>{/if}
 					</td>
 					<td class="n bom mono">{e.bom_count || '—'}</td>
 				</tr>

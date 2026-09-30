@@ -31,11 +31,12 @@ decisions and `DESIGN.md` for the visual system. `CHANGELOG.md` becomes the rele
 ## Commands
 
 ```sh
-cd scraper && .venv/bin/pcblib scrape <vendor> [--only slug] [--limit N] [--reset] [--refresh]
+cd scraper && .venv/bin/pcblib scrape <vendor> [--only slug] [--limit N] [--reset] [--refresh-pages|--refresh]
 .venv/bin/pcblib stats && .venv/bin/pcblib audit          # audit: flags added since the last run
 .venv/bin/pcblib export                                  # never --images for a public deploy
 cd app && npm run check && npm run build && npm run preview   # restart preview after each build
 npm run deploy                                             # export, build, wrangler deploy
+scripts/refresh.sh                                         # weekly: refresh pages, audit, deploy if clean
 ```
 
 Scrapes are cached, so re-running a vendor after a parser change costs no network. Several
@@ -52,6 +53,9 @@ so restart it after rebuilding.
   deploying. The three table parsers all run and the one with the most designators wins, so a
   new layout should not regress an old one. Hand fixes for one-off misreads go in
   `scraper/pcblib/corrections.py`.
+- Boards are never deleted when a vendor stops listing them: a full scrape marks them `delisted`
+  (with the date) and the site says so. `--refresh-pages` re-fetches listings and product pages but
+  keeps cached documents; a scrape that finds far fewer boards than before marks nothing.
 - Adapters return `None` for products that are not circuits (kits, parts, faceplates,
   bundles) and dedupe regional or older-version listings of the same board.
 - New vendor: adapter, `vendors/__init__.py`, `db.py`, `app/src/lib/types.ts`, README table,

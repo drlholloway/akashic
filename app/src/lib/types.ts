@@ -14,6 +14,10 @@ export interface IndexEntry {
 	price: number | null;
 	currency: string;
 	in_stock: boolean | null;
+	/** The date a vendor refresh first found the board no longer listed; '' while listed. Such boards are kept. */
+	delisted?: string;
+	/** The date of the last vendor refresh that found the board listed. */
+	last_listed?: string;
 	url: string;
 	doc_url: string;
 	image_url: string;

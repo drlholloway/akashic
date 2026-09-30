@@ -6,6 +6,16 @@ GitHub Release notes.
 ## Unreleased
 
 ### Added
+- Boards a vendor stops listing are kept and marked 'no longer listed' with the date they were last
+  seen, on the circuit page and in the results table (and left out of the in-stock filter). A board
+  is only marked when its own page is gone too, and a scrape that finds far fewer boards than before
+  marks nothing.
+- Weekly refresh: scripts/refresh.sh re-fetches every vendor's pages (`scrape --refresh-pages`:
+  prices, stock and new boards, keeping cached documents), runs `audit`, and deploys only when the
+  audit found no new problems on boards that were already there. scripts/install-refresh.sh
+  installs it as a launchd agent (Sundays 04:00). The first refresh added 98 boards (85 PedalPCB,
+  8 Sheepylove, 2 GuitarPCB, one each at Five Cats, Fuzz Dog and Other Pedals) and updated 98 prices
+  and 34 stock states.
 - `pcblib audit`: flags parts rows that do not look like valid parts (values off the standard
   series or out of range, parts filed as the wrong kind, one-off part numbers a character from a
   common one, unknown transistors, mangled designators), writes a filterable report to
@@ -137,6 +147,8 @@ GitHub Release notes.
   and pots are grouped by taper (A, B, C, W, none) and ordered by resistance.
 
 ### Fixed
+- PedalPCB: its product sitemap leaves out part of the catalogue, a different part each time, so
+  boards already in the library are also read from their own pages.
 - Dirt Monger PW-2, HMT-2 and American Metal: where the doc's font drops the units from the text
   layer, the resistors and capacitors are read from the parts list's image (PW-2 21 -> 87 rows,
   HMT-2 29 -> 58, American Metal 62 -> 81).

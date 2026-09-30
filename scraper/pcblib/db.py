@@ -157,6 +157,14 @@ def connect():
     conn.executescript(SCHEMA)
     if 'variant' not in [r[1] for r in conn.execute('PRAGMA table_info(bom)')]:
         conn.execute("ALTER TABLE bom ADD COLUMN variant TEXT DEFAULT ''")
+    # last_listed: the date of the last full vendor scrape that found the board; delisted: the date a
+    # full scrape first found it gone ('' while listed). A board the vendor drops is kept, not deleted.
+    cols = [r[1] for r in conn.execute('PRAGMA table_info(circuits)')]
+    if 'last_listed' not in cols:
+        conn.execute("ALTER TABLE circuits ADD COLUMN last_listed TEXT DEFAULT ''")
+        conn.execute("UPDATE circuits SET last_listed = substr(scraped_at, 1, 10)")
+    if 'delisted' not in cols:
+        conn.execute("ALTER TABLE circuits ADD COLUMN delisted TEXT DEFAULT ''")
     for vid, (name, url, note) in VENDORS.items():
         conn.execute("INSERT OR IGNORE INTO vendors(id,name,url,license_note) VALUES (?,?,?,?)",
                      (vid, name, url, note))
@@ -257,6 +265,49 @@ def _dedupe_named_knobs(bom: list) -> list:
             best[key] = r
     keep = {id(r) for r in best.values()}
     return [r for r in bom if r.category not in ("POT", "TRIM") or r.ref.startswith("×") or id(r) in keep]
+
+
+def mark_listing(conn: sqlite3.Connection, vendor: str, seen: set[str], today: str) -> tuple[int, int, bool]:
+    """After a full scrape of a vendor: boards it listed are marked listed today, boards it no longer
+    lists are marked delisted (first date missing kept) and kept in the library. A scrape that found
+    far fewer boards than the library holds as listed is a broken scrape (site down, layout changed),
+    not a closing-down sale, so nothing is marked then. Returns (listed, newly delisted, applied)."""
+    listed_before = conn.execute("SELECT COUNT(*) FROM circuits WHERE vendor=? AND COALESCE(delisted,'')=''", (vendor,)).fetchone()[0]
+    if listed_before >= 10 and len(seen) < 0.5 * listed_before:
+        return len(seen), 0, False
+    ids = list(seen)
+    for i in range(0, len(ids), 500):
+        chunk = ids[i:i + 500]
+        conn.execute(f"UPDATE circuits SET last_listed=?, delisted='' WHERE id IN ({','.join('?' * len(chunk))})", (today, *chunk))
+    candidates = [(r[0], r[1]) for r in conn.execute("SELECT id, url FROM circuits WHERE vendor=? AND COALESCE(delisted,'')=''", (vendor,))
+                  if r[0] not in seen]
+    # A listing can leave out live boards (an incomplete sitemap, a paginated catalogue that shifted),
+    # so a board is only marked when its own page is gone as well.
+    gone = [cid for cid, url in candidates if not _page_alive(url)]
+    for cid in gone:
+        conn.execute("UPDATE circuits SET delisted=? WHERE id=?", (today, cid))
+    return len(seen), len(gone), True
+
+
+def _page_alive(url: str) -> bool:
+    """Whether a product page still answers: a 404 or 410, or a redirect to a page without the
+    product's path (a shop's home or category page), means it is gone. A network error counts as
+    alive, since one failed request should not delist a board."""
+    import time
+    import httpx
+    from urllib.parse import urlparse
+    if not url:
+        return False
+    try:
+        time.sleep(1.0)
+        r = httpx.get(url, headers={"User-Agent": "Mozilla/5.0 (akashic parts library; +https://akashic.cryptideffects.com)"},
+                      follow_redirects=True, timeout=30)
+    except httpx.HTTPError:
+        return True
+    if r.status_code in (404, 410):
+        return False
+    path = urlparse(url).path.rstrip("/").rsplit("/", 1)[-1].lower()
+    return not path or path in str(r.url).lower()
 
 
 def upsert_circuit(conn: sqlite3.Connection, c: Circuit) -> None:

@@ -25,14 +25,16 @@ def vendors() -> None:
 
 
 @app.command()
-def scrape(vendor: str, limit: int = 0, refresh: bool = False, only: str = "",
+def scrape(vendor: str, limit: int = 0, refresh: bool = False, refresh_pages: bool = False, only: str = "",
            dump: bool = False, reset: bool = False) -> None:
     """Scrape one vendor into data/library.sqlite (network responses are cached).
-    --reset drops the vendor's existing rows first (use after parser changes)."""
+    --refresh-pages re-fetches the vendor's pages (prices, stock, new boards) but keeps cached
+    documents; --refresh re-fetches everything. --reset drops the vendor's existing rows first."""
     if vendor not in REGISTRY:
         raise typer.BadParameter(f"unknown vendor {vendor!r}; choose from {list(REGISTRY)}")
-    adapter = REGISTRY[vendor](Fetcher(vendor=vendor, refresh=refresh))
-    n_ok = n_skip = 0
+    adapter = REGISTRY[vendor](Fetcher(vendor=vendor, refresh=refresh, refresh_pages=refresh_pages))
+    n_ok = n_skip = n_err = 0
+    seen: set[str] = set()
     with dbm.connect() as conn:
         if reset and not only and not limit:
             conn.execute("DELETE FROM bom WHERE circuit_id IN (SELECT id FROM circuits WHERE vendor=?)", (vendor,))
@@ -47,6 +49,7 @@ def scrape(vendor: str, limit: int = 0, refresh: bool = False, only: str = "",
                 c = adapter.parse(target)
             except Exception as exc:  # keep going; report at the end
                 con.print(f"[red]error[/] {target[:80]}: {exc!r}")
+                n_err += 1
                 continue
             if c is None:
                 n_skip += 1
@@ -58,10 +61,21 @@ def scrape(vendor: str, limit: int = 0, refresh: bool = False, only: str = "",
             dbm.upsert_circuit(conn, c)
             conn.commit()  # short transactions so parallel vendor scrapes interleave
             n_ok += 1
+            seen.add(c.id)
             con.print(f"[green]{c.id}[/] {c.name!r} based_on={c.based_on!r} "
                       f"bom={len(c.bom)} sch_page={c.schematic_page} price={c.price}")
             if dump:
                 con.print_json(json.dumps(c.to_dict(), default=str))
+        if not only and not limit and not n_err:
+            # A full, clean run knows the vendor's whole listing: mark what is still listed and what is gone.
+            from datetime import date
+            listed, gone, applied = dbm.mark_listing(conn, vendor, seen, date.today().isoformat())
+            conn.commit()
+            if not applied:
+                con.print(f"[red]{vendor}: found {listed} boards, far fewer than the library lists; not marking any delisted "
+                          f"(check the scrape)[/]")
+            elif gone:
+                con.print(f"[yellow]{vendor}: {gone} boards no longer listed (kept, marked delisted)[/]")
     con.print(f"[bold]{vendor}[/]: {n_ok} circuits stored, {n_skip} targets skipped")
 
 
@@ -127,10 +141,13 @@ if __name__ == "__main__":
 
 
 @app.command()
-def audit(show: int = 20) -> None:
+def audit(show: int = 20, fail_on_added: bool = False) -> None:
     """Flag parts rows that do not look like valid parts and compare with the last run. Writes a
     filterable report to data/cache/audit/parts-audit.html. Run it after a rescrape and read the
-    added flags before deploying: a parser change that makes rows worse shows up there."""
+    added flags before deploying: a parser change that makes rows worse shows up there.
+    --fail-on-added exits with code 3 when the run added flags to boards that were already there
+    (a parser regression); flags on boards new since the last run do not count. Used by
+    scripts/refresh.sh."""
     from .audit import AUDIT_DIR, run
     r = run()
     con.print(f"{r['rows']:,} rows checked: [bold]{r['flags']:,}[/] flags on {r['boards']:,} boards "
@@ -138,7 +155,8 @@ def audit(show: int = 20) -> None:
     if r["previous"]:
         p = r["previous"]
         con.print(f"previous run: {p['flags']:,} flags on {p['boards']:,} boards; "
-                  f"[green]{len(r['cleared'])} cleared[/], [{'red' if r['added'] else 'green'}]{len(r['added'])} added[/]")
+                  f"[green]{len(r['cleared'])} cleared[/], [{'red' if r['added'] else 'green'}]{len(r['added'])} added[/] on existing boards"
+                  + (f", {len(r['added_new_boards'])} on boards new since then" if r.get("added_new_boards") else ""))
         changes = sorted((reason for reason in set(r["reasons"]) | set(r["reasons_before"]) if r["reasons"][reason] != r["reasons_before"][reason]),
                          key=lambda reason: r["reasons"][reason] - r["reasons_before"][reason])
         for reason in changes[:15]:
@@ -148,6 +166,8 @@ def audit(show: int = 20) -> None:
     else:
         con.print("no previous run to compare with; this run is the baseline")
     con.print(f"report: {AUDIT_DIR / 'parts-audit.html'}")
+    if fail_on_added and r["added"]:
+        raise typer.Exit(code=3)  # the refresh routine stops here instead of deploying
 
 
 @app.command("import-transistors")

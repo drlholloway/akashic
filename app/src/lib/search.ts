@@ -77,7 +77,7 @@ export function applyFilters(entries: IndexEntry[], f: Filters): IndexEntry[] {
 		if (f.basedOn && normalizeOriginal(e.based_on) !== normalizeOriginal(f.basedOn)) return false;
 		if (f.part && !e.actives.includes(f.part)) return false;
 		if (f.knobs != null && knobsOf(e) !== f.knobs) return false;
-		if (f.inStock && e.in_stock !== true) return false;
+		if (f.inStock && (e.in_stock !== true || e.delisted)) return false;
 		return true;
 	});
 	if (rank) out.sort((a, b) => rank!.get(a.id)! - rank!.get(b.id)!);

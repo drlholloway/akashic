@@ -65,9 +65,12 @@
 				<div><dt class="label">Category</dt><dd><a href="{base}/?cat={encodeURIComponent(c.category)}">{c.category}</a>{#if c.effect_type && c.effect_type !== c.category} <span class="dim">· {c.effect_type}</span>{/if}</dd></div>
 				{#if knobs.length}<div><dt class="label">Controls</dt><dd>{knobs.join(' · ')}</dd></div>{/if}
 				{#if c.difficulty}<div><dt class="label">Difficulty</dt><dd>{c.difficulty}</dd></div>{/if}
-				<div><dt class="label">Price</dt><dd class="mono">{currency.format(c.price, c.currency) || 'see vendor'}{#if c.price != null && currency.convert(c.price, c.currency).converted}<span class="dim native">{currency.native(c.price, c.currency)} listed</span>{/if}{#if c.in_stock === false}<span class="warn stock">out of stock</span>{:else if c.in_stock}<span class="dim stock">in stock</span>{/if}</dd></div>
+				<div><dt class="label">Price</dt><dd class="mono">{currency.format(c.price, c.currency) || 'see vendor'}{#if c.price != null && currency.convert(c.price, c.currency).converted}<span class="dim native">{currency.native(c.price, c.currency)} listed</span>{/if}{#if c.delisted}<span class="warn stock">no longer listed</span>{:else if c.in_stock === false}<span class="warn stock">out of stock</span>{:else if c.in_stock}<span class="dim stock">in stock</span>{/if}</dd></div>
 				{#if c.tags.length}<div><dt class="label">Tags</dt><dd>{c.tags.join(', ')}</dd></div>{/if}
 			</dl>
+			{#if c.delisted}
+				<p class="delisted"><span class="warn">No longer listed</span> {VENDOR_NAMES[c.vendor] ?? c.vendor} stopped listing this board{#if c.last_listed} after {c.last_listed}{/if}. It stays here for reference; the vendor page and build document links may no longer work.</p>
+			{/if}
 			<div class="actions">
 				<a class="btn" href={c.url} target="_blank" rel="noopener">{primaryAction(c.vendor)}</a>
 				{#if c.doc_url && c.doc_url !== c.url && VENDOR_KIND[c.vendor] !== 'archive'}<a class="btn ghost" href={c.doc_url} target="_blank" rel="noopener">Build document{#if c.doc_version} <span class="mono ver">{c.doc_version}</span>{/if}</a>{/if}
@@ -175,6 +178,8 @@
 	.based a { font-weight: 600; }
 	.dim { color: var(--ink-3); }
 	.stock { margin-left: 8px; }
+	.delisted { margin: 12px 0 0; padding: 8px 12px; border: 1px solid var(--rule-strong); border-radius: var(--radius); color: var(--ink-2); max-width: 70ch; }
+	.delisted .warn { margin-right: 6px; }
 	.native { margin-left: 8px; font-size: 12px; }
 	.warn { color: var(--warn); font-family: var(--label); text-transform: uppercase; letter-spacing: 0.08em; font-size: 12px; }
 	.specs { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, max-content)); gap: 12px 32px; margin: 0 0 20px; }

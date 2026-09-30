@@ -22,10 +22,26 @@ class PedalPCB(Adapter):
     vendor = "pedalpcb"
 
     def list_targets(self) -> Iterable[str]:
+        import sqlite3
+        from ..paths import DB_PATH
+        known: list[str] = []
+        if DB_PATH.exists():  # read before the scrape writes: a plain read-only query, closed at once
+            ro = sqlite3.connect(f"file:{DB_PATH}?mode=ro", uri=True, timeout=60)
+            known = [r[0] for r in ro.execute("SELECT url FROM circuits WHERE vendor=? AND url LIKE 'https://www.pedalpcb.com/product/%'", (self.vendor,))]
+            ro.close()
+        seen: set[str] = set()
         idx = self.f.get_text(SITEMAP_INDEX, ".xml") or ""
         for sm in re.findall(r"<loc>(https://www\.pedalpcb\.com/product-sitemap\d+\.xml)</loc>", idx):
             xml = self.f.get_text(sm, ".xml") or ""
             for url in re.findall(r"<loc>(https://www\.pedalpcb\.com/product/[^<]+)</loc>", xml):
+                seen.add(url)
+                yield url
+        # The product sitemap leaves out part of the catalog, a different part each time it is rebuilt
+        # (live boards like the Oxide Distortion go missing), so boards already in the library are read
+        # from their own pages too: a board drops out only when its page is gone.
+        for url in known:
+            if url not in seen and url.rstrip("/") + "/" not in seen:
+                seen.add(url)
                 yield url
 
     def parse(self, url: str) -> Circuit | None:

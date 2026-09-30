@@ -28,6 +28,9 @@ class Fetcher:
     vendor: str
     min_interval: float = 1.5
     refresh: bool = False
+    # Re-fetch pages (listings, product pages, JSON) but keep cached documents and images: prices,
+    # stock and new boards live in the pages, and a build document rarely changes at the same URL.
+    refresh_pages: bool = False
     timeout: float = 60.0
     _last_hit: dict[str, float] = field(default_factory=dict)
     _client: httpx.Client | None = None
@@ -56,14 +59,15 @@ class Fetcher:
             time.sleep(wait)
         self._last_hit[host] = time.monotonic()
 
-    def get_bytes(self, url: str, ext: str = ".bin", headers: dict | None = None) -> bytes | None:
+    def get_bytes(self, url: str, ext: str = ".bin", headers: dict | None = None, page: bool = False) -> bytes | None:
         """Fetch a URL, returning bytes (cached). Returns None on 404/errors. `headers` adds
         or overrides request headers (a Referer, a browser User-Agent) for hosts that need them."""
         path = self._cache_path(url, ext)
         meta = path.with_suffix(path.suffix + ".json")
-        if path.exists() and not self.refresh:
+        stale = self.refresh or (self.refresh_pages and page)
+        if path.exists() and not stale:
             return path.read_bytes()
-        if meta.exists() and not self.refresh:
+        if meta.exists() and not stale:
             # A previous attempt recorded a permanent failure (e.g. 404).
             info = json.loads(meta.read_text())
             if info.get("status") in (404, 410):
@@ -72,8 +76,12 @@ class Fetcher:
         try:
             r = self.client.get(url, headers=headers)
         except httpx.HTTPError as exc:
+            if path.exists():
+                return path.read_bytes()  # a network hiccup during a refresh: keep the cached copy
             meta.write_text(json.dumps({"url": url, "error": str(exc)}))
             return None
+        if r.status_code != 200 and r.status_code not in (404, 410) and path.exists():
+            return path.read_bytes()  # a server error or rate limit is not a removed page
         meta.write_text(json.dumps({"url": url, "status": r.status_code,
                                     "content_type": r.headers.get("content-type")}))
         if r.status_code != 200:
@@ -82,7 +90,7 @@ class Fetcher:
         return r.content
 
     def get_text(self, url: str, ext: str = ".html", headers: dict | None = None) -> str | None:
-        data = self.get_bytes(url, ext, headers)
+        data = self.get_bytes(url, ext, headers, page=True)
         return data.decode("utf-8", errors="replace") if data is not None else None
 
     def get_file(self, url: str, ext: str, headers: dict | None = None) -> Path | None:
