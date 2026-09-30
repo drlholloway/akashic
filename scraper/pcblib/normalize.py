@@ -130,6 +130,8 @@ def categorize(ref: str, part_type: str, value: str = "") -> str:
     for hint in _EARLY_HINTS:
         if hint in t0:
             return "CONN" if hint == "socket" else "HW"
+    if re.match(r"^(?:XFM|XFMR|TRANS|TX)\d*$", r, re.I) or (re.match(r"^(?:T|TR)\d+$", r, re.I) and _XFM_HINT.match(v)) or _XFM_HINT.match(v):
+        return "XFM"  # audio transformers: 42TM022, TY-141P, LT44, OEP1200 (European docs number them T1, TR1)
     if re.match(r"^T\d+$", r, re.I) and (_Q_HINT.match(v) or re.search(r"TRANSISTOR|\b[NP]PN\b|JFET|MOSFET", v)):
         return "Q"  # European docs number transistors T1, T2 (Carlin, BJF); a trimmer never carries a BC547B
     for rx, cat in _CATEGORY_BY_REF:
@@ -162,9 +164,30 @@ _VALUE_HINTS = [
     (re.compile(r"^(?:TL0[678]\d|LM\d{3,4}|NE55\d|OP\d{2,3}|JRC\d{4}|RC4\d{3}|CD4\d{3}|PT2399|MC1\d{3}|TC1044|LT1054|ICL7660|CA30\d\d|LF35\d|MN30\d{2}|BBD|L78\d\d|78L\d\d|79L\d\d|7[89]\d\d|TDA\d{4}|MAX\d{3,4}|4558|1458|LM13700|SSM\d{4}|V3\d{3})"), "IC"),
 ]
 _Q_HINT = next(rx for rx, cat in _VALUE_HINTS if cat == "Q")
+_XFM_HINT = re.compile(r"^(?:42T[ML]\d{3}|TM0\d\d|TY-?\d{3}|LT-?4\d\b|OEP\d|LM-NP|\S*\s*(?:audio )?transformer)", re.I)
+
+
+_ZERO_WIDTH = re.compile("[\u200b\u200c\u200d\u2060\ufeff]")
+_E24_3 = {v * 10 for v in (10, 11, 12, 13, 15, 16, 18, 20, 22, 24, 27, 30, 33, 36, 39, 43, 47, 51, 56, 62, 68, 75, 82, 91)}
+
+
+def _resistor_code(raw: str) -> str:
+    """'1002' in a resistor column is the 4-digit code (100 x 10^2 = 10k), not 1,002 ohms. Decoded only
+    when the plain number is not a standard value and the code's three digits are (4700 stays 4700)."""
+    m = re.fullmatch(r"([1-9]\d\d)([1-4])", raw)
+    if not m or int(m.group(1)) not in _E24_3:
+        return raw
+    ohms = int(m.group(1)) * 10 ** int(m.group(2))
+    for unit, div in (("M", 1_000_000), ("k", 1000)):
+        if ohms >= div:
+            n = ohms / div
+            return f"{n:g}".replace(".", unit) if n != int(n) else f"{int(n)}{unit}"  # 2k2, 10k
+    return str(ohms)
 
 
 def normalize_row(row: BomRow) -> BomRow:
+    row.value = _ZERO_WIDTH.sub("", row.value)  # '\u200bTC1044SCPA' from a copied web page
+    row.ref = _ZERO_WIDTH.sub("", row.ref)
     row.category = row.category or categorize(row.ref, row.part_type, row.value)
     if row.category == "POT" and re.search(r"[SD]P[SD]T|3PDT|4PDT", row.value.upper()):
         row.category = "SW"
@@ -201,6 +224,10 @@ def normalize_row(row: BomRow) -> BomRow:
     if row.category == "R" or row.category == "TRIM":
         raw = re.sub(r"^(\d+(?:[.,]\d+)?)m$", r"\1M", raw)  # "1m" on a resistor means 1 megohm, never milliohm
         raw = re.sub(r"^(\d+)m(\d+)$", r"\1M\2", raw)  # and "2m2" is 2.2 megohms
+        if row.category == "R":
+            coded = _resistor_code(raw)
+            if coded != raw:
+                row.value = raw = coded
         n = _parse_si(raw)
         if n is not None:
             row.norm_value = _fmt(n, _R_PREFIX)

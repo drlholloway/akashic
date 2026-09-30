@@ -132,6 +132,14 @@ GitHub Release notes.
   and pots are grouped by taper (A, B, C, W, none) and ordered by resistance.
 
 ### Fixed
+- Audio transformers (42TM022, TY-141P, LT44, OEP1200) have their own Transformers category instead
+  of being filed as trimmers, pots or 'other' (40 rows); European docs number them T1 or TR1.
+- A 4-digit resistor code reads as its value (1002 -> 10k, 2201 -> 2k2) when the plain number is not
+  a standard value; 4700 stays 4700.
+- Pot and trimmer rows whose value is a bare small number or a taper with no unit ('A5', '16', '1')
+  are dropped: OCR prose ('WORKS  A5') or schematic pin numbers. Zero-width characters copied from web
+  pages are stripped, and Guitar-Electronics' 'BC550  1pcs. "Q1"' lines are no longer also read the
+  wrong way round.
 - Semiconductor rows that carry a word or placeholder instead of a part ('for', 'Clipping',
   'empty or your choice', 'Jumper', '(optional)') are dropped (about 200 rows); descriptions such
   as 'Germanium', 'NPN JFET' or 'Dual op amp' stay.

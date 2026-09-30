@@ -61,7 +61,7 @@ def parse_layout_lists(pages: list[str]) -> list[BomRow]:
         if not m or m.group(1) in rows:
             continue
         value = m.group(2).rstrip("*").strip()
-        if len(value) > 24 or re.search(r"\b(?:pcs|and|the|to)\b", value):
+        if len(value) > 24 or re.search(r"\d\s*pcs\b|\b(?:pcs|and|the|to)\b", value):  # 'BC550  1pcs. "Q1"' is the BOM line, not a placement
             continue
         r = normalize_row(BomRow(ref=m.group(1), value=value))
         if is_plausible(r):

@@ -138,12 +138,13 @@ export const PART_CATEGORY_NAMES: Record<string, string> = {
 	L: 'Inductors',
 	XTAL: 'Crystals',
 	OPTO: 'Opto',
+	XFM: 'Transformers',
 	CONN: 'Jacks & sockets',
 	HW: 'Hardware',
 	OTHER: 'Other'
 };
 
-export const PART_ORDER = ['R', 'C', 'D', 'Q', 'IC', 'OPTO', 'L', 'XTAL', 'POT', 'TRIM', 'SW', 'LED', 'CONN', 'HW', 'OTHER'];
+export const PART_ORDER = ['R', 'C', 'D', 'Q', 'IC', 'OPTO', 'L', 'XFM', 'XTAL', 'POT', 'TRIM', 'SW', 'LED', 'CONN', 'HW', 'OTHER'];
 
 /** A transistor's key limits from the parameter database (BJT or FET fields apply). */
 export interface TransistorSpec {
