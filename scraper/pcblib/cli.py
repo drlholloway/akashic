@@ -126,6 +126,30 @@ if __name__ == "__main__":
     app()
 
 
+@app.command()
+def audit(show: int = 20) -> None:
+    """Flag parts rows that do not look like valid parts and compare with the last run. Writes a
+    filterable report to data/cache/audit/parts-audit.html. Run it after a rescrape and read the
+    added flags before deploying: a parser change that makes rows worse shows up there."""
+    from .audit import AUDIT_DIR, run
+    r = run()
+    con.print(f"{r['rows']:,} rows checked: [bold]{r['flags']:,}[/] flags on {r['boards']:,} boards "
+              f"({r['severity'].get('high', 0)} high, {r['severity'].get('medium', 0)} medium, {r['severity'].get('low', 0)} low)")
+    if r["previous"]:
+        p = r["previous"]
+        con.print(f"previous run: {p['flags']:,} flags on {p['boards']:,} boards; "
+                  f"[green]{len(r['cleared'])} cleared[/], [{'red' if r['added'] else 'green'}]{len(r['added'])} added[/]")
+        changes = sorted((reason for reason in set(r["reasons"]) | set(r["reasons_before"]) if r["reasons"][reason] != r["reasons_before"][reason]),
+                         key=lambda reason: r["reasons"][reason] - r["reasons_before"][reason])
+        for reason in changes[:15]:
+            con.print(f"  {r['reasons_before'][reason]:5} -> {r['reasons'][reason]:5}  {reason}")
+        for f in sorted(r["added"], key=lambda f: {"high": 0, "medium": 1, "low": 2}[f["severity"]])[:show]:
+            con.print(f"  [red]+[/] {f['severity']:6} {f['circuit']} {f['ref']} = {f['value']!r}: {f['reason']}")
+    else:
+        con.print("no previous run to compare with; this run is the baseline")
+    con.print(f"report: {AUDIT_DIR / 'parts-audit.html'}")
+
+
 @app.command("import-transistors")
 def import_transistors(dump_dir: str):
     """Load a MySQL dump of the transistor parameter database (parts, _assoc__part_props,

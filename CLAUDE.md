@@ -32,7 +32,8 @@ decisions and `DESIGN.md` for the visual system. `CHANGELOG.md` becomes the rele
 
 ```sh
 cd scraper && .venv/bin/pcblib scrape <vendor> [--only slug] [--limit N] [--reset] [--refresh]
-.venv/bin/pcblib stats && .venv/bin/pcblib export        # never --images for a public deploy
+.venv/bin/pcblib stats && .venv/bin/pcblib audit          # audit: flags added since the last run
+.venv/bin/pcblib export                                  # never --images for a public deploy
 cd app && npm run check && npm run build && npm run preview   # restart preview after each build
 npm run deploy                                             # export, build, wrangler deploy
 ```
@@ -47,8 +48,10 @@ so restart it after rebuilding.
   Metadata, part values and links do. `data/archive/` is the one exception, for stores that
   have closed.
 - Every parser change: re-run the affected vendors from cache and compare `pcblib stats`
-  before and after. The three table parsers all run and the one with the most designators
-  wins, so a new layout should not regress an old one.
+  before and after, then run `pcblib audit` and read the flags it says were added before
+  deploying. The three table parsers all run and the one with the most designators wins, so a
+  new layout should not regress an old one. Hand fixes for one-off misreads go in
+  `scraper/pcblib/corrections.py`.
 - Adapters return `None` for products that are not circuits (kits, parts, faceplates,
   bundles) and dedupe regional or older-version listings of the same board.
 - New vendor: adapter, `vendors/__init__.py`, `db.py`, `app/src/lib/types.ts`, README table,

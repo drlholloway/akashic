@@ -6,6 +6,11 @@ GitHub Release notes.
 ## Unreleased
 
 ### Added
+- `pcblib audit`: flags parts rows that do not look like valid parts (values off the standard
+  series or out of range, parts filed as the wrong kind, one-off part numbers a character from a
+  common one, unknown transistors, mangled designators), writes a filterable report to
+  data/cache/audit/ and lists the flags added and cleared since the last run. Run after a rescrape,
+  before deploying.
 - Gigahearts FX: PIP BOY, a triangle Big Muff after the Fallout Cloud with bass and treble
   controls, a 3-way clipping switch and a clean blend (listing only; the build doc ships with the
   board).
@@ -132,6 +137,9 @@ GitHub Release notes.
   and pots are grouped by taper (A, B, C, W, none) and ordered by resistance.
 
 ### Fixed
+- Dirt Monger PW-2, HMT-2 and American Metal: where the doc's font drops the units from the text
+  layer, the resistors and capacitors are read from the parts list's image (PW-2 21 -> 87 rows,
+  HMT-2 29 -> 58, American Metal 62 -> 81).
 - Audio transformers (42TM022, TY-141P, LT44, OEP1200) have their own Transformers category instead
   of being filed as trimmers, pots or 'other' (40 rows); European docs number them T1 or TR1.
 - A 4-digit resistor code reads as its value (1002 -> 10k, 2201 -> 2k2) when the plain number is not

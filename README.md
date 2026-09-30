@@ -105,6 +105,7 @@ cd scraper
 uv venv .venv && uv pip install -e .
 .venv/bin/pcblib scrape pedalpcb      # each vendor: pedalpcb aionfx madbean guitarpcb fuzzdog sheepylove deadendfx moonn fivecats parasit pcbguitarmania deadastronaut bentfishbowl ggg lectricfx expanon zerogiod otrfx dirtmonger pcbway-gtu
 .venv/bin/pcblib stats
+.venv/bin/pcblib audit                # flags parts rows that look invalid; report in data/cache/audit/, compared with the last run
 .venv/bin/pcblib export               # writes app/static/data/*.json
 .venv/bin/pcblib export --images      # also bundles cached schematic renders (local use only)
 ```

@@ -38,7 +38,10 @@ def _clean_value(v: str) -> str:
     return re.sub(r"\s*ohm$", "R", v, flags=re.I)
 
 
-def parse_value_list(pages: list[str]) -> list[BomRow]:
+_LIST_PAGE = re.compile(r"^\s*(?:.*\bPARTS\s?LIST|Parts List)\s*$|^\W*Resistors\W*\s{3,}Capacitors?\W*$", re.M | re.I)
+
+
+def parse_value_list(pages: list[str], drop_bare: bool = True) -> list[BomRow]:
     """Dirt Monger's text parts lists run in two columns, value first: either 'value - refs' in one
     cell ('100K - R7, R20', 'C50K anti log - Treble, Bass') or the value and its designators in
     neighbouring cells ('1k   R4, R17   1n   C17'). A pot's refs may be its knob names
@@ -59,7 +62,7 @@ def parse_value_list(pages: list[str]) -> list[BomRow]:
             rows.append(r)
 
     for page in pages:
-        if not re.search(r"^\s*(?:.*\bPARTS\s?LIST|Parts List)\s*$|^\W*Resistors\W*\s{3,}Capacitors?\W*$", page, re.M | re.I):
+        if not _LIST_PAGE.search(page):
             continue  # a titled parts list, or the 'Resistors   Capacitors' heading row that starts one
         for ln in page.splitlines():
             if re.search(r"b\S?pass buffer|offboard|wiring", ln, re.I):
@@ -104,9 +107,23 @@ def parse_value_list(pages: list[str]) -> list[BomRow]:
     # made only of digits and stray capitals rather than list wrong numbers; the rest read fine.
     bare = re.compile(r"\d+(?: \d+)*(?: [A-Z])*")
     res = [r for r in rows if r.category == "R"]
-    if len(res) >= 5 and sum(1 for r in res if bare.fullmatch(r.value)) >= 0.3 * len(res):
+    if drop_bare and len(res) >= 5 and sum(1 for r in res if bare.fullmatch(r.value)) >= 0.3 * len(res):
         rows = [r for r in rows if not bare.fullmatch(r.value)]
     return rows
+
+
+def _ocr_list(pdf, pages: list[str], slug: str) -> list[BomRow]:
+    """The parts list read from the rendered page by OCR (Vision keeps the column layout)."""
+    from .. import vision
+    from ..paths import CACHE_DIR
+    from ..pdf import render_page
+    page_no = next((i for i, p in enumerate(pages, 1) if _LIST_PAGE.search(p)), None)
+    if not page_no or not vision.available():
+        return []
+    png = CACHE_DIR / "dirtmonger" / f"{slug}-list-p{page_no}.png"
+    if not png.exists():
+        render_page(pdf, page_no, png, dpi=300)
+    return parse_value_list([vision.text(png, layout=True)])
 
 
 @register
@@ -173,6 +190,14 @@ class DirtMonger(Adapter):
             listed = parse_value_list(pages)
             if listed:
                 c.bom = listed  # the document's own list; the table parsers read the same (sometimes broken) text worse
+                if any(_LIST_PAGE.search(p) and re.search(r"(?:^|\s{3,})\d+(?: \d+)?\s{3,}[RC]\d", p, re.M) for p in pages):
+                    # A bare number beside resistor or capacitor designators ('120   C7, C10'): the font dropped
+                    # the units from the text layer. Read the list page's image and take the passives from it.
+                    have = {r.ref for r in c.bom}
+                    for r in _ocr_list(pdf, pages, handle):
+                        if r.category in ("R", "C") and r.ref not in have:
+                            r.notes = "OCR"
+                            c.bom.append(r)
             if len(c.bom) < 8:
                 ocr = ocr_bom(pdf, self.vendor, handle, max_pages=5, thorough=True)
                 if len(ocr) > len(c.bom):
