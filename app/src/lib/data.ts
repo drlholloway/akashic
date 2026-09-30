@@ -25,6 +25,19 @@ export function loadParts(fetchFn: Fetch = fetch): Promise<PartEntry[]> {
 	return partsPromise;
 }
 
+export interface LibraryMeta {
+	generated_at: string;
+	circuits: number;
+	sources: number;
+	parts_rows: number;
+	part_values: number;
+	delisted: number;
+}
+
+export function loadMeta(fetchFn: Fetch = fetch): Promise<LibraryMeta> {
+	return getJson<LibraryMeta>(fetchFn, 'meta.json');
+}
+
 export function loadChanges(fetchFn: Fetch = fetch): Promise<ChangeWeek[]> {
 	return getJson<ChangeWeek[]>(fetchFn, 'changes.json');
 }

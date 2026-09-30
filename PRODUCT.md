@@ -8,7 +8,7 @@ web
 SvelteKit static PWA (user's choice), data as a prebuilt JSON bundle with client-side search (MiniSearch). Python scraper pipeline under `scraper/` builds `data/library.sqlite` and exports to `app/static/data/`.
 
 ## Users
-Primary: the owner, a DIY guitar-pedal builder and KiCad user, at the bench or desk while designing, choosing, or building a circuit. Secondary (later): the wider DIY pedal community browsing for what to build next. Personal use is optimized first; the result should stay presentable enough to share.
+Primary: the owner, a DIY guitar-pedal builder and KiCad user, at the bench or desk while designing, choosing, or building a circuit. Secondary: the wider DIY pedal community browsing for what to build next; the site is open to them and in use (September 2026), with an About page that explains the sources, the machine-read values and how to report errors. Personal use is still optimized first; public visitors need the data to be explained, not simplified.
 
 ## Product Purpose
 A searchable reference library of guitar-pedal circuits aggregated from DIY PCB vendors (PedalPCB, Aion FX, Madbean, GuitarPCB, Fuzz Dog). For each circuit: what commercial pedal it clones, the vendor, price and buy link, the build document, controls, enclosure, a schematic preview (local only), and a fully parsed, value-normalized bill of materials. Success: any circuit or part can be found in seconds, and the cross-reference "which circuits use part X" answers questions no vendor site can.

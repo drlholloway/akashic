@@ -155,6 +155,15 @@ def run(images: bool = False) -> None:
     (EXPORT_DIR / "vendors.json").write_text(json.dumps(vendors, ensure_ascii=False))
     write_rates()
     write_changes()
+    # Counts and the export time for the About page, so it stays true after every refresh.
+    from datetime import datetime, timezone
+    (EXPORT_DIR / "meta.json").write_text(json.dumps({
+        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "circuits": len(index), "sources": len(vendors),
+        "parts_rows": sum(c.get("bom_count", 0) for c in index),
+        "part_values": len(parts_out),
+        "delisted": sum(1 for c in index if c.get("delisted")),
+    }))
     print(f"exported {len(index)} circuits, {len(parts_out)} indexed part values -> {EXPORT_DIR}")
 
 

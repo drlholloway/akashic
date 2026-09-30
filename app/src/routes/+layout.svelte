@@ -42,7 +42,8 @@
 	const nav = [
 		{ href: `${base}/`, label: 'Circuits', match: (p: string) => p === `${base}/` || p.startsWith(`${base}/circuit/`) },
 		{ href: `${base}/originals`, label: 'Originals', match: (p: string) => p.startsWith(`${base}/originals`) },
-		{ href: `${base}/parts`, label: 'Parts', match: (p: string) => p.startsWith(`${base}/parts`) }
+		{ href: `${base}/parts`, label: 'Parts', match: (p: string) => p.startsWith(`${base}/parts`) },
+		{ href: `${base}/about`, label: 'About', match: (p: string) => p.startsWith(`${base}/about`) }
 	];
 </script>
 
@@ -94,7 +95,7 @@
 		<p>A parts list that reads wrong, a vendor to add, a bug or an idea: open an issue on GitHub. Every circuit page has a link that fills in the board for you.</p>
 		<a class="btn ghost" href={ISSUES_URL} target="_blank" rel="noopener">Open an issue</a>
 	</div>
-	<p class="colophon">Made by <a href={MAKER_URL} target="_blank" rel="noopener">{MAKER_NAME}</a>. <a href="{base}/changes">Changelog</a>.</p>
+	<p class="colophon">Made by <a href={MAKER_URL} target="_blank" rel="noopener">{MAKER_NAME}</a>. <a href="{base}/about">About</a> · <a href="{base}/changes">Changelog</a>.</p>
 </footer>
 
 <style>

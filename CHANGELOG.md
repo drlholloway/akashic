@@ -6,6 +6,10 @@ GitHub Release notes.
 ## Unreleased
 
 ### Added
+- An About page (/about, in the header and footer): what the library holds, where the parts lists
+  come from and how to read the ocr / sch / fixed markers, how prices and delisted boards work, what
+  is linked rather than copied, and how to report an error. Its counts and last-refreshed date come
+  from a meta.json the export writes, so they stay current with every weekly refresh.
 - Circuit pages mark where a value came from: 'ocr' (read from an image), 'sch' (paired from the
   schematic drawing) and 'fixed' (corrected by hand), with a one-line legend above the parts list,
   so builders know which values to check against the build document. Text tables and interactive
