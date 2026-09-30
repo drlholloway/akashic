@@ -16,6 +16,8 @@ CORRECTIONS: dict[str, dict[str, str | None]] = {
     "deadendfx:zuul": {"IC3": "LM324"},
     # Dead End FX 2952: the schematic prints CLEAN A15K, the parts table A20K; A20K is right (reported 2026-09-29).
     "deadendfx:2952": {"CLEAN": "A20K"},
+    # Moonn Kloppe Gerät: the build doc itself prints 1A34A, a typo for the 1N34A germanium diode (reported 2026-09-30).
+    "moonn:kloppe-gerat": {"D1": "1N34A**", "D2": "1N34A**"},
 }
 
 

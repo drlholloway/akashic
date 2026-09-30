@@ -170,7 +170,8 @@ GitHub Release notes.
   as 'Germanium', 'NPN JFET' or 'Dual op amp' stay.
 - OCR and typing slips in well-known parts are repaired where the slip spells no real part:
   TLO72/TLQ72 -> TL072, ZN3904 -> 2N3904, 14001 -> 1N4001, BAT-41 -> BAT41, CO4047 -> CD4047,
-  LM9324/XM324 -> LM324, RCY558 -> RC4558, WA741 -> uA741, pt2395 -> PT2399 (31 rows).
+  LM9324/XM324 -> LM324, RCY558 -> RC4558, WA741 -> uA741, pt2395 -> PT2399 (31 rows), and a
+  diode read as 1M34A -> 1N34A (Guitar-Electronics OCD).
 - A knob read twice (Level from the schematic, LEVEL from the parts-table OCR) is listed once,
   keeping the reading whose value parses and, between two, the text table over the schematic over
   OCR (332 rows on 92 Dead End FX boards and a few others).
@@ -178,7 +179,8 @@ GitHub Release notes.
   as a pot ('MONO 5W', 'STEREO 5W' for MONO_SW) is not a knob.
 - Hand corrections (scraper/pcblib/corrections.py) for what no rule can read, checked against the
   source and marked 'corrected by hand': Dead End FX Zuul IC3 is an LM324, and the 2952's Clean
-  knob is A20K (its schematic prints A15K).
+  knob is A20K (its schematic prints A15K), and Moonn's Kloppe Gerät D1/D2 are 1N34A (the doc prints
+  1A34A).
 - Dirt Monger parts lists read from the text layer in both of their layouts, 'value - refs' and
   value beside its designators in two columns, with or without a 'Parts List' title: Distortion H,
   Bigger Muff, XT-2, Bass Grunge, Dual Octave and American Metal no longer carry OCR rows that paired

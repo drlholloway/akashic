@@ -274,6 +274,7 @@ _PART_SLIPS = [
     ("IC", re.compile(r"^WA741([A-Z]*)$", re.I), r"uA741\1"),            # WA741 (uA741 is already right)
     ("IC", re.compile(r"^PT239[59]$", re.I), "PT2399"),                   # pt2395
     ("D", re.compile(r"^1(4[01]\d\d|4148|581[789]|914)$"), r"1N\1"),       # 14001: the N dropped
+    ("D", re.compile(r"^1M(\d{2,4}[A-Z]?)$", re.I), r"1N\1"),              # 1M34A: an N read as M (no diode is 1M...)
     ("D", re.compile(r"^BAT[- ](\d\d[A-Z]?)\b", re.I), r"BAT\1"),        # BAT-41, BAT 41
 ]
 
