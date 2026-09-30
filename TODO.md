@@ -68,6 +68,9 @@ at the bottom; re-run them after parser changes.
 - **Dirt Monger**: PW-2, HMT-2 and American Metal use a font whose text layer drops letters; their
   resistors and capacitors are read from the list page's image instead (PW-2 and HMT-2 in full).
   American Metal gets 19 of about 30 capacitors: OCR misses the rest ('10', '1' with the unit lost).
+- **Scientific Guitarist**: TBR has only its build document's shopping list (no designators); EchoWreck,
+  Alternate Dimension, T60, KDLA and Wobble Box are paired from the schematic PDF, so their pots
+  show as a knob count. Some trimmers and pots have no value in the Eagle export.
 - **Das Musikding** (issue #6): its own kits are mostly other indexed vendors' boards
   (Griffin, Parasit, TH Custom, GCI, Schalltechnik) and every documentation link on
   musikding.de returns the shop home page (404 behind a 200), so nothing to parse.

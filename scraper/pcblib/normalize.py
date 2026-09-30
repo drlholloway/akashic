@@ -89,7 +89,7 @@ _CATEGORY_BY_REF = [
     (re.compile(r"^(SW|S|FS)\d*$", re.I), "SW"),
     (re.compile(r"^(POT|P|RV|VR)\d+$", re.I), "POT"),
     (re.compile(r"^(TR|TRIM|T)\d+$", re.I), "TRIM"),
-    (re.compile(r"^(LDR|OPTO|VTL|OC)\d*$", re.I), "OPTO"),
+    (re.compile(r"^(LDR|OPTO|VTL|OC|OK)\d*$", re.I), "OPTO"),  # OK: Optokoppler
     (re.compile(r"^(J|JACK)\d*$", re.I), "CONN"),
 ]
 
@@ -156,7 +156,7 @@ def categorize(ref: str, part_type: str, value: str = "") -> str:
 
 
 _VALUE_HINTS = [
-    (re.compile(r"^(?:VTL\d|NSL-?\d{2,}|VT\d{3})", re.I), "OPTO"),  # vactrols and LDR optocouplers
+    (re.compile(r"^(?:VTL\d|NSL-?\d{2,}|VT\d{3}|[46]N\d{2,3}\b|H11[A-Z]\d|PC8\d\d|TLP\d{3})", re.I), "OPTO"),  # vactrols, LDR and IC optocouplers (6N138 is not 6n)
     (re.compile(r"^(?:2N\d{3,4}|2S[ABCDJK]\d{2,4}|BC\d{3}|BF\d{3}|MPS[AW]?\d{2,3}|MMBT\d{4}|MMBFJ?\d{3,4}|KSP\d{2}|PN\d{4}|J\d{3}\b|BS\d{3}|IRF\d{3}|MPF\d{3}|AC1\d{2}|OC\d{2,3}|NKT\d{3}|TIP\d{2})"), "Q"),
     (re.compile(r"^(?:1N\d{3,4}|UF\d{4}|BAT\d{2}|BA\d{3}|1SS\d{2,3}|OA\d{2,3}|D9[A-Z]|SB\d{3})"), "D"),
     (re.compile(r"^\d+(?:[.,]\d+)?\s*[pnuµμ]\d*F?$", re.I), "C"),

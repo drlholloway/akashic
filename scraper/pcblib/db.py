@@ -126,6 +126,8 @@ VENDORS = {
                  "Assembly instructions are indexed and linked, not redistributed."),
     "moody": ("Moody Sounds", "https://en.moodysounds.com/produkt-kategori/byggsatser/",
               "Kit instructions (Moody's own, BJFE, Carlin, Vallhagen and BYOC) are indexed and linked, not redistributed."),
+    "scientificguitarist": ("Scientific Guitarist", "https://scientificguitarist.wixsite.com/home/projects",
+                            "Eagle projects (gerbers, BOM, schematic) published on GitHub by the author; indexed and linked, not redistributed."),
     "gigahearts": ("Gigahearts FX", "https://www.gigaheartsfx.com/collections/pcb-products",
                    "Build documents are © Gigahearts FX; indexed and linked, not redistributed. Schematic images are read locally, not served."),
     "pcbway-gtu": ("PCBWay: Glory to Ukraine", "https://www.pcbway.com/project/member/?bmbno=19C5FC6C-66B1-46",
@@ -134,7 +136,7 @@ VENDORS = {
 
 
 # What the vendor sells: "shop" (a PCB), "projects" (order the board from a fab), "blog" (a schematic to read).
-VENDOR_KIND = {"pcbway-gtu": "projects", "rwlpedal": "repo", "sheepygit": "repo", "bentfishbowl": "blog", "expanon": "archive", "schalltechnik": "blog"}
+VENDOR_KIND = {"pcbway-gtu": "projects", "rwlpedal": "repo", "scientificguitarist": "repo", "sheepygit": "repo", "bentfishbowl": "blog", "expanon": "archive", "schalltechnik": "blog"}
 
 # A caution shown on every circuit page of a vendor, next to the buy link.
 VENDOR_WARNING = {

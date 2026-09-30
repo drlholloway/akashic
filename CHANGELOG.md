@@ -6,6 +6,11 @@ GitHub Release notes.
 ## Unreleased
 
 ### Added
+- Scientific Guitarist: 30 open-source DIY projects (delays, reverbs, choruses, a through-zero
+  flanger, a MIDI switcher) whose GitHub repositories carry the Eagle project. Parts come from the
+  BOM exports, with named knobs and dual-gang pots; boards without one are read from their vector
+  schematic or the build document's parts table. Optocouplers such as the 6N138 are filed as
+  optocouplers everywhere, not as capacitors.
 - Boards a vendor stops listing are kept and marked 'no longer listed' with the date they were last
   seen, on the circuit page and in the results table (and left out of the in-stock filter). A board
   is only marked when its own page is gone too, and a scrape that finds far fewer boards than before
