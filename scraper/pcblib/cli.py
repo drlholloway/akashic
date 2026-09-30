@@ -150,11 +150,12 @@ def audit(show: int = 20, fail_on_added: bool = False) -> None:
     scripts/refresh.sh."""
     from .audit import AUDIT_DIR, run
     r = run()
+    con.print(f"audit run {r['run_at']}")
     con.print(f"{r['rows']:,} rows checked: [bold]{r['flags']:,}[/] flags on {r['boards']:,} boards "
               f"({r['severity'].get('high', 0)} high, {r['severity'].get('medium', 0)} medium, {r['severity'].get('low', 0)} low)")
     if r["previous"]:
         p = r["previous"]
-        con.print(f"previous run: {p['flags']:,} flags on {p['boards']:,} boards; "
+        con.print(f"previous run{' ' + r['previous_run_at'] if r['previous_run_at'] else ''}: {p['flags']:,} flags on {p['boards']:,} boards; "
                   f"[green]{len(r['cleared'])} cleared[/], [{'red' if r['added'] else 'green'}]{len(r['added'])} added[/] on existing boards"
                   + (f", {len(r['added_new_boards'])} on boards new since then" if r.get("added_new_boards") else ""))
         changes = sorted((reason for reason in set(r["reasons"]) | set(r["reasons_before"]) if r["reasons"][reason] != r["reasons_before"][reason]),

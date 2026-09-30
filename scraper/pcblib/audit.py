@@ -14,7 +14,7 @@ import csv
 import json
 import re
 import sqlite3
-from datetime import date
+from datetime import datetime
 from pathlib import Path
 
 from . import transistors
@@ -284,7 +284,7 @@ def _key(f: dict) -> tuple:
     return (f["circuit"], f["variant"], f["ref"], f["value"], f["reason"])
 
 
-def write_report(flags: list[dict], rows_checked: int, boards_total: int, out: Path) -> None:
+def write_report(flags: list[dict], rows_checked: int, boards_total: int, out: Path, run_at: str = "") -> None:
     """The filterable HTML report: flags grouped by board, linked to the board page and its build doc."""
     vendors = sorted({f["vendor"] for f in flags})
     vname = {f["vendor"]: f["vendor_name"] for f in flags}
@@ -297,7 +297,7 @@ def write_report(flags: list[dict], rows_checked: int, boards_total: int, out: P
                        reasons.index(f["reason"]), f["suggestion"], {"text": 0, "OCR": 1, "schematic": 2}[f["source"]], f["category"]])
     data = {"vendors": [[v, vname[v]] for v in vendors], "kinds": KINDS, "reasons": reasons, "boards": list(boards.values()),
             "stats": {"rows": rows_checked, "boards": boards_total, "flags": len(flags), "flagged": len(boards),
-                      "date": date.today().isoformat()}}
+                      "date": run_at or datetime.now().strftime("%Y-%m-%d %H:%M")}}
     tpl = (Path(__file__).with_name("audit_report.html")).read_text()
     out.write_text(tpl.replace("/*DATA*/null", json.dumps(data, separators=(",", ":"), ensure_ascii=False)))
 
@@ -310,6 +310,9 @@ def run(out_dir: Path = AUDIT_DIR) -> dict:
     flags, rows_checked = find_flags(db, tdb)
     boards_total = db.execute("select count(*) from circuits").fetchone()[0]
     out_dir.mkdir(parents=True, exist_ok=True)
+    run_at = datetime.now().astimezone().strftime("%Y-%m-%d %H:%M %Z")
+    meta_file = out_dir / "meta.json"
+    previous_at = json.loads(meta_file.read_text()).get("run_at", "") if meta_file.exists() else ""
     last = out_dir / "audit.json"
     previous = json.loads(last.read_text()) if last.exists() else None
     last.write_text(json.dumps(flags, ensure_ascii=False))
@@ -322,8 +325,9 @@ def run(out_dir: Path = AUDIT_DIR) -> dict:
         w = csv.DictWriter(fh, fieldnames=list(flags[0].keys()) if flags else ["circuit"])
         w.writeheader()
         w.writerows(flags)
-    write_report(flags, rows_checked, boards_total, out_dir / "parts-audit.html")
-    result = {"rows": rows_checked, "flags": len(flags), "boards": len({f["circuit"] for f in flags}),
+    write_report(flags, rows_checked, boards_total, out_dir / "parts-audit.html", run_at)
+    meta_file.write_text(json.dumps({"run_at": run_at, "previous_run_at": previous_at, "flags": len(flags), "rows": rows_checked}))
+    result = {"run_at": run_at, "previous_run_at": previous_at, "rows": rows_checked, "flags": len(flags), "boards": len({f["circuit"] for f in flags}),
               "severity": dict(collections.Counter(f["severity"] for f in flags)), "previous": None, "added": [], "cleared": [],
               "reasons": collections.Counter(f["reason"].split(" (")[0] for f in flags)}
     if previous is not None:
