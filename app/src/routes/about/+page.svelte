@@ -97,15 +97,14 @@
 </div>
 
 <style>
-	.about { padding: 24px var(--gutter) 48px; max-width: 900px; }
+	.about { padding: 24px var(--gutter) 48px; max-width: 1180px; }
 	.head h1 { font-size: clamp(28px, 4vw, 40px); margin-bottom: 8px; }
-	.lede { max-width: 70ch; color: var(--ink-2); margin: 0 0 18px; }
+	.lede { color: var(--ink-2); margin: 0 0 18px; }
 	.figures { display: flex; flex-wrap: wrap; gap: 8px 32px; margin: 0; padding-bottom: 18px; border-bottom: 1px solid var(--rule-strong); }
 	.figures div { display: grid; gap: 2px; }
 	.figures dd { margin: 0; font-size: 20px; font-weight: 600; }
 	section { margin-top: 28px; }
 	section h2 { padding-bottom: 6px; border-bottom: 1px solid var(--rule-strong); margin-bottom: 10px; }
-	section p, section li { max-width: 70ch; }
 	section p { margin: 0 0 10px; }
 	section ul { margin: 0 0 10px; padding-left: 18px; }
 	section li { margin-bottom: 4px; }
