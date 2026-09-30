@@ -7,11 +7,12 @@
 	import { applyFilters, buildSearch, EMPTY_FILTERS, filtersFromParams, paramsFromFilters, type Filters } from '$lib/search';
 	import { VENDOR_NAMES, type IndexEntry } from '$lib/types';
 	import { currency } from '$lib/currency.svelte';
+	import { untrack } from 'svelte';
 	import CurrencySelect from '$lib/CurrencySelect.svelte';
 
 	let { data } = $props();
 	$effect.pre(() => buildSearch(data.index));
-	buildSearch(data.index); // also during SSR so the first render is searchable
+	untrack(() => buildSearch(data.index)); // also during SSR so the first render is searchable (the effect above keeps it current)
 
 	let filters = $state<Filters>({ ...EMPTY_FILTERS });
 	let sort = $state<'name' | 'price' | 'bom' | 'vendor'>('name');

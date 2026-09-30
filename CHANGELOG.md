@@ -6,6 +6,10 @@ GitHub Release notes.
 ## Unreleased
 
 ### Added
+- Circuit pages mark where a value came from: 'ocr' (read from an image), 'sch' (paired from the
+  schematic drawing) and 'fixed' (corrected by hand), with a one-line legend above the parts list,
+  so builders know which values to check against the build document. Text tables and interactive
+  BOMs are exact and unmarked.
 - Scientific Guitarist: 30 open-source DIY projects (delays, reverbs, choruses, a through-zero
   flanger, a MIDI switcher) whose GitHub repositories carry the Eagle project. Parts come from the
   BOM exports, with named knobs and dual-gang pots; boards without one are read from their vector

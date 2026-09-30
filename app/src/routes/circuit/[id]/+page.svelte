@@ -42,6 +42,26 @@
 	}
 	const knobs = $derived(c.controls.filter((x) => !/^\d+ knobs?$/.test(x)));
 	const schematicImage = $derived((c as unknown as { schematic_image?: string }).schematic_image);
+
+	// Where a value came from, from the row's notes: OCR of an image, pairing labels on a schematic, or a
+	// hand correction. Text tables and interactive BOMs are exact and carry no marker.
+	const SOURCES = [
+		{ key: 'ocr', token: /\bOCR\b;?\s*/, label: 'ocr', title: 'Read from an image by OCR: check it against the build document' },
+		{ key: 'sch', token: /\bfrom schematic\b;?\s*/, label: 'sch', title: 'Paired from the schematic drawing, not a parts list: check it against the build document' },
+		{ key: 'fixed', token: /\bcorrected by hand\b;?\s*/, label: 'fixed', title: 'Corrected by hand: the source had a typo or the reading was wrong' }
+	] as const;
+	function source(notes: string) {
+		let rest = notes || '';
+		let found: (typeof SOURCES)[number] | undefined;
+		for (const s of SOURCES) {
+			if (s.token.test(rest)) {
+				found = s.key === 'fixed' || !found ? s : found; // a hand correction outranks how it was first read
+				rest = rest.replace(s.token, '');
+			}
+		}
+		return { src: found, rest: rest.replace(/^[;\s]+|[;\s]+$/g, '') };
+	}
+	const marked = $derived(c.bom.some((r) => source(r.notes).src));
 </script>
 
 <svelte:head>
@@ -131,22 +151,26 @@
 		{#if c.bom.length === 0}
 			<p class="dim">{#if VENDOR_KIND[c.vendor] === 'projects'}No parts list: the BOM download on this project needs an account at the fab.{:else if VENDOR_KIND[c.vendor] === 'blog' || VENDOR_KIND[c.vendor] === 'archive'}No parts list could be read from the schematic image; the values are in the picture.{:else}No parts list could be extracted for this board{#if c.vendor === 'guitarpcb'} (GuitarPCB publishes its parts list as an image){/if}. The build document has it.{/if}</p>
 		{:else}
+			{#if marked}
+				<p class="src-legend dim"><span class="src">ocr</span> read from an image · <span class="src">sch</span> paired from the schematic · <span class="src fixed">fixed</span> corrected by hand. Check marked values against the build document.</p>
+			{/if}
 			<table class="sheet-table parts">
 				<thead><tr><th>Ref</th><th>Value</th><th class="norm">Normalized</th><th>Type</th><th class="notes">Notes</th></tr></thead>
 				{#each groups as g}
 					<tbody>
 						<tr class="group"><th scope="rowgroup" colspan="5">{g.name} <span class="mono dim">{g.rows.length}</span></th></tr>
 						{#each g.rows as r}
+							{@const s = source(r.notes)}
 							<tr>
 								<td class="mono ref">{r.ref}</td>
-								<td class="mono val">{r.value}</td>
+								<td class="mono val">{r.value}{#if s.src}<span class="src" class:fixed={s.src.key === 'fixed'} title={s.src.title}>{s.src.label}</span>{/if}</td>
 								<td class="mono norm">
 									{#if XREF.has(r.category) && r.norm_value}
 										<a href="{base}/parts/{partSlug(r)}" title="Every circuit using {r.norm_value}">{r.norm_value}</a>
 									{:else}{r.norm_value}{/if}
 								</td>
 								<td>{r.part_type}</td>
-								<td class="notes">{r.notes}</td>
+								<td class="notes">{s.rest}</td>
 							</tr>
 						{/each}
 					</tbody>
@@ -203,6 +227,10 @@
 	.parts td.ref { width: 7ch; color: var(--ink-2); }
 	.parts td.val { font-weight: 600; }
 	.parts td.notes { color: var(--ink-2); }
+	.src { margin-left: 6px; padding: 0 4px; border: 1px solid var(--rule-strong); border-radius: 3px; font-family: var(--label); font-weight: 600; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); vertical-align: 1px; cursor: help; }
+	.src.fixed { border-color: var(--coat); color: var(--coat); }
+	.src-legend { font-size: 12.5px; margin: 0 0 8px; }
+	.src-legend .src { margin-left: 0; cursor: default; }
 	.parts .norm a { text-decoration: underline; text-decoration-color: var(--rule-strong); text-underline-offset: 3px; }
 	.sibs ul { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 6px 24px; }
 	.sibs li { display: flex; align-items: center; gap: 10px; padding: 4px 0; border-bottom: 1px solid var(--rule); }
