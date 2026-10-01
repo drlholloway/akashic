@@ -1,4 +1,4 @@
-export type Vendor = 'pedalpcb' | 'aionfx' | 'madbean' | 'guitarpcb' | 'fuzzdog' | 'sheepylove' | 'deadendfx' | 'moonn' | 'fivecats' | 'parasit' | 'pcbway-gtu' | 'pcbguitarmania' | 'deadastronaut' | 'bentfishbowl' | 'ggg' | 'lectricfx' | 'expanon' | 'zerogiod' | 'otrfx' | 'dirtmonger' | 'maskaudio' | 'effectslayouts' | 'jmk' | 'eae' | 'c2c' | 'deadair' | 'rwlpedal' | 'sheepygit' | 'otherpedals' | 'godcity' | 'effects1776' | 'rullywow' | 'mas' | 'tonepad' | 'wraa' | 'frog' | 'thcustom' | 'guitarelectronics' | 'opelectronics' | 'griffin' | 'coda' | 'delyk' | 'tayda' | 'schalltechnik' | 'electricdruid' | 'zeppelin' | 'moody' | 'gigahearts' | 'scientificguitarist';
+export type Vendor = 'pedalpcb' | 'aionfx' | 'madbean' | 'guitarpcb' | 'fuzzdog' | 'sheepylove' | 'deadendfx' | 'moonn' | 'fivecats' | 'parasit' | 'pcbway-gtu' | 'pcbguitarmania' | 'deadastronaut' | 'bentfishbowl' | 'ggg' | 'lectricfx' | 'expanon' | 'zerogiod' | 'otrfx' | 'dirtmonger' | 'maskaudio' | 'effectslayouts' | 'jmk' | 'eae' | 'c2c' | 'deadair' | 'rwlpedal' | 'sheepygit' | 'otherpedals' | 'godcity' | 'effects1776' | 'rullywow' | 'mas' | 'tonepad' | 'wraa' | 'frog' | 'thcustom' | 'guitarelectronics' | 'opelectronics' | 'griffin' | 'coda' | 'delyk' | 'tayda' | 'schalltechnik' | 'electricdruid' | 'zeppelin' | 'moody' | 'gigahearts' | 'scientificguitarist' | 'holyisland';
 
 export interface IndexEntry {
 	id: string;
@@ -120,7 +120,8 @@ export const VENDOR_NAMES: Record<Vendor, string> = {
 	zeppelin: 'Zeppelin Design Labs',
 	moody: 'Moody Sounds',
 	gigahearts: 'Gigahearts FX',
-	scientificguitarist: 'Scientific Guitarist'
+	scientificguitarist: 'Scientific Guitarist',
+	holyisland: 'Holy Island Audio'
 };
 
 export type VendorKind = 'shop' | 'projects' | 'repo' | 'blog' | 'archive';

@@ -130,6 +130,9 @@ VENDORS = {
                             "Eagle projects (gerbers, BOM, schematic) published on GitHub by the author; indexed and linked, not redistributed."),
     "gigahearts": ("Gigahearts FX", "https://www.gigaheartsfx.com/collections/pcb-products",
                    "Build documents are © Gigahearts FX; indexed and linked, not redistributed. Schematic images are read locally, not served."),
+    "holyisland": ("Holy Island Audio", "https://holyislandaudio.bigcartel.com/product/diy-pcbs",
+                   "Build guides are Google Docs by Holy Island Audio; indexed and linked, not redistributed. "
+                   "The shop is mostly finished pedals; the vendor recommends the DIY boards for experienced builders and offers no build support."),
     "pcbway-gtu": ("PCBWay: Glory to Ukraine", "https://www.pcbway.com/project/member/?bmbno=19C5FC6C-66B1-46",
                    "Shared projects are CC BY-SA 3.0; schematic images may be shown with attribution. BOM and gerbers need a PCBWay login."),
 }

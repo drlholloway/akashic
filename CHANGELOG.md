@@ -6,6 +6,10 @@ GitHub Release notes.
 ## Unreleased
 
 ### Added
+- Holy Island Audio: four DIY PCBs from a UK Big Cartel shop (Phantom Coil spring reverb, Sun Swallower
+  solar drone synth, EMF Sniffer, Harmonic Percolator), sold as options of one product with their own
+  price and stock. Parts come from each board's Google Doc build guide, with named knobs and the Tayda
+  drill templates linked.
 - An About page (/about, in the header and footer): what the library holds, where the parts lists
   come from and how to read the ocr / sch / fixed markers, how prices and delisted boards work, what
   is linked rather than copied, and how to report an error. Its counts and last-refreshed date come
@@ -160,6 +164,12 @@ GitHub Release notes.
   and pots are grouped by taper (A, B, C, W, none) and ordered by resistance.
 
 ### Fixed
+- Hand corrections can target one build variant and add rows the parsers missed, not only change
+  or drop them. Used for Five Cats Rattus (the RAT's C13 is 1µF, not 1pF; RAT2 R1 and the Turbo
+  RAT's C7, C9 and LED clippers added), Lectric-FX Mongrel (D1 1N4002, R18 4K7, C10 100uF, two
+  junk IC rows dropped) and three Experimentalists Anonymous drawings: the BOSS OC-2 (R48 470K,
+  R52 10k, and pin numbers and pin names read as values), the Tau 1010 (R7 12K, the ladder caps)
+  and the Univox Microphaser (14 rows to its full 54).
 - PedalPCB: its product sitemap leaves out part of the catalogue, a different part each time, so
   boards already in the library are also read from their own pages.
 - Dirt Monger PW-2, HMT-2 and American Metal: where the doc's font drops the units from the text
