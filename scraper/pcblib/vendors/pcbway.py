@@ -1,7 +1,10 @@
 """PCBWay shared-project adapter for one community member's catalogue of
 guitar-pedal boards. The member page lists projects through a JSONP endpoint;
-each project page carries a public schematic PNG (CC BY-SA) but the BOM and
-gerbers need a PCBWay login, so no parts list is indexed."""
+each project page carries a public schematic PNG (CC BY-SA). The member uploads no
+BOM (a login only adds a PDF of the same drawing and a layout render), and the
+drawings print values without designators, so the parts list is the schematic's
+value labels counted ('×4 470k') with its named knobs. Fetched slowly: ten seconds
+between any two requests to PCBWay's hosts."""
 from __future__ import annotations
 
 import json
@@ -12,6 +15,7 @@ from typing import Iterable
 from selectolax.parser import HTMLParser
 
 from ..models import Circuit
+from ..pdf import schematic_value_bom
 from ..paths import CACHE_DIR, DATA_DIR
 from ..taxonomy import classify
 from . import register
@@ -31,6 +35,8 @@ class _PCBWayMember(Adapter):
 
     def __init__(self, fetcher):
         super().__init__(fetcher)
+        self.f.min_interval = max(self.f.min_interval, 10.0)
+        self.f.one_clock = True
         self.items: dict[str, dict] = {}
 
     def list_targets(self) -> Iterable[str]:
@@ -92,6 +98,8 @@ class _PCBWayMember(Adapter):
                     png.write_bytes(img.read_bytes())
                 c.schematic_local = str(png.relative_to(DATA_DIR))
                 c.schematic_page = 1
+                c.bom = schematic_value_bom(png)
+                c.controls = [r.ref for r in c.bom if r.category == "POT"]
         return c
 
 

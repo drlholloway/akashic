@@ -60,7 +60,7 @@ It ships as a static, offline-capable web app (PWA) that installs on macOS, Linu
 | Gigahearts FX | 6 | the build doc's parts table where the product links one (GIG BUFF v1.3); otherwise the schematic image on the product page, paired by OCR (GIG BUFF v2.0) | UK Shopify shop; the PCB collection only (the rest of the store is finished pedals); build docs for the other boards come with the board; prices in GBP |
 | Scientific Guitarist | 30 | Eagle BOM exports from each project's GitHub repository (per-designator CSV, grouped CSV, or KiCad's designator list), top-level or inside the project zip; else the Eagle schematic PDF's labels paired, or the build document's parts table | Wix site of DIY projects, each linking a GitHub repository with gerbers, BOM, schematic and build document; open-source, order the PCB from a fab |
 | Holy Island Audio | 4 | Google Doc build guides exported as .docx; parts one per paragraph as 'VALUE - R1, R2' (with or without a leading quantity) or 'R1 - VALUE', named pots as 'A100K - VOLUME' | Big Cartel shop of finished pedals with one DIY PCB product whose options are the boards; GBP, per-board price and stock |
-| PCBWay: Glory to Ukraine | ~337 | none (BOM needs a PCBWay login) | one member's shared projects via the member JSONP list; schematic PNGs are CC BY-SA; no prices |
+| PCBWay: Glory to Ukraine | ~337 | the CC BY-SA schematic PNG's value labels, OCR'd and counted ('×4 470k'; the drawings carry no designators and the member uploads no BOM), with named knobs; fetched with 10 s between requests | one member's shared projects via the member JSONP list; schematic PNGs are CC BY-SA; no prices |
 
 ### Transistor substitutes
 

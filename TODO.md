@@ -7,8 +7,9 @@ at the bottom; re-run them after parser changes.
 
 ## Whole-vendor gaps
 
-- **PCBWay (Glory to Ukraine)**: no parts lists at all (337 boards). BOM and gerbers sit
-  behind a PCBWay login; only name, original and the CC BY-SA schematic image are indexed.
+- **PCBWay (Glory to Ukraine)**: parts are the schematic's value labels counted by OCR ('×4 470k'):
+  the drawings carry no designators and the member uploads no BOM (a login adds only a PDF of
+  the same drawing and a layout render). Counts are best effort where OCR misses a small label.
 - **Experimentalists Anonymous**: 331 of 770 schematics have no readable designators
   (hand-drawn or low-resolution scans; 415 before Vision); 235 more have fewer than 8 rows.
   Positional OCR only works on clean traced drawings.

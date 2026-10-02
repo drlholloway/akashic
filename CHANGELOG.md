@@ -6,6 +6,11 @@ GitHub Release notes.
 ## Unreleased
 
 ### Added
+- PCBWay (Glory to Ukraine): parts lists for the member's boards, read from each project's CC BY-SA
+  schematic. The drawings print values but no designators, and the member uploads no BOM (a login adds
+  only a PDF of the same drawing and a layout render), so every value label is OCR'd, typed by its shape
+  and counted ('×4 470k', '×6 1N914'), ICs once each, with the named knobs and their tapers (Sustain
+  A10k). PCBWay is fetched with ten seconds between any two requests, across all its hosts.
 - Holy Island Audio: four DIY PCBs from a UK Big Cartel shop (Phantom Coil spring reverb, Sun Swallower
   solar drone synth, EMF Sniffer, Harmonic Percolator), sold as options of one product with their own
   price and stock. Parts come from each board's Google Doc build guide, with named knobs and the Tayda
@@ -164,6 +169,9 @@ GitHub Release notes.
   and pots are grouped by taper (A, B, C, W, none) and ordered by resistance.
 
 ### Fixed
+- OCR word boxes: a word tesseract reads as a quote mark no longer swallows the words after it. The
+  reader took the quote for the start of a quoted field, so 31% of cached schematic and table scans
+  (1,801 of 5,842; most of them Experimentalists Anonymous) lost every label after their first quote.
 - The last Experimentalists Anonymous candidates checked on their drawings: Danelectro PBJ, Carl Martin Heavy
   Drive, DOD FX96, Ibanez AD9 and PQL, both EHX Micro Synths; the Nobels DT-1, Distortion Xtreme and Fu-Z and
   the Ross Phaser are clean drawings and have their misreads (R14 '4148', R64 '062', U1 AM9709CN for RC4558P)

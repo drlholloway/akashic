@@ -1105,7 +1105,9 @@ def _ocr_word_boxes(png: Path, rotate: int = 0, psm: int = 11) -> list[tuple[int
         if proc.returncode == 0 and tsv.count("\n") > 3:
             cache.write_text(tsv)
     words = []
-    for r in csv.DictReader(io.StringIO(tsv), delimiter="\t"):
+    # QUOTE_NONE: tesseract writes a word that is a quote mark ('"') bare, and the default dialect
+    # would read it as the start of a quoted field and swallow every word up to the next one.
+    for r in csv.DictReader(io.StringIO(tsv), delimiter="\t", quoting=csv.QUOTE_NONE):
         t = (r.get("text") or "").strip()
         try:
             conf = float(r.get("conf") or 0)
@@ -1172,6 +1174,103 @@ def ocr_schematic_bom(image: Path, scale: int = 2, px_per_pt: float = 170 / 72) 
         if upright:
             break  # upright and readable; the sideways passes would only add noise
     return best
+
+
+_VAL_R = re.compile(r"^(?:\d+(?:[.,]\d+)?[kKMR]\d*|\d+[kKMR]\d+|[1-9]\d{1,2})$")   # 470k, 4k7, 1M, 22R, a bare 47
+# A bare number is a resistor only when it is a standard value from 18 up: below that it is an IC pin
+# (op-amp pins run to 16), and '474', '224' or '29' are fragments and capacitor codes, not resistors.
+_BARE_R = {18, 22, 27, 33, 39, 47, 56, 68, 82, 100, 120, 150, 180, 220, 270, 330, 390, 470, 560, 680, 820}
+_VAL_C = re.compile(r"^\d+(?:[.,]\d+)?[pnuµ]F?\d*$")                              # 100n, 4u7, 33p, 10uF
+_VAL_D = re.compile(r"^(?:1N\d{3,4}[A-Z]?|BAT\d{2}|OA\d{2,3}|BA\d{3})\*?$", re.I)
+_VAL_Q = re.compile(r"^(?:2N\d{4}[A-Z]?|2S[ABCJK]\d{2,4}[A-Z\-]*|BC\d{3}[A-C]?|BS\d{3}|MPSA?\d{2}|J\d{3}|MPF\d{3}|AC\d{3}|OC\d{2,3}|NKT\d+|BF\d{3}[A-C]?|IRF\d+)$", re.I)
+_VAL_IC = re.compile(r"^(?:TL0\d\d[A-Z]*|LM\d{3,4}[A-Z]*|NE5\d{3}[A-Z]*|J?RC\d{4}[A-Z]*|NJM\d{4}[A-Z]*|4558[A-Z]*|OP\d{2,3}[A-Z]*|CD40\d\d[A-Z]*|CA30\d\d[A-Z]*|MN3\d{3}|PT2399|78L\d\d|LM78\w+|TC1044\w*|LT\d{4}\w*|OPA\d+\w*|74HC\w+)$", re.I)
+
+
+_COMMON_DIODES = ("1N914", "1N4148", "1N4001", "1N4002", "1N4004", "1N4007", "1N5817", "1N5818", "1N5819",
+                  "1N34A", "1N270", "1N60", "1N5711", "1N4733", "1N4739", "1N4742")
+
+
+def _one_edit(a: str, b: str) -> bool:
+    if a == b or abs(len(a) - len(b)) > 1:
+        return a == b
+    if len(a) == len(b):
+        return sum(x != y for x, y in zip(a, b)) == 1
+    short, long_ = (a, b) if len(a) < len(b) else (b, a)
+    return any(long_[:i] + long_[i + 1:] == short for i in range(len(long_)))
+
+
+def _value_token(t: str) -> str:
+    """OCR slips in a value label: IN4I148 / INS8I7 for 1N4148 / 1N5817, IM for 1M, I00n for 100n,
+    TLO72 for TL072, BIOOk for B100k."""
+    t = t.strip(",;:()|")
+    m = re.fullmatch(r"[iIl1]N([\dIlOoS]{2,5})([A-Z]?)(\*?)", t)
+    if m:
+        d = "1N" + m.group(1).translate(str.maketrans("IlOoS", "11005")) + m.group(2)
+        if d not in _COMMON_DIODES:  # 1N514 / 1N41148: one slip from a diode every pedal uses
+            d = next((k for k in _COMMON_DIODES if _one_edit(d, k)), d)
+        return d + m.group(3)
+    if re.fullmatch(r"[\dIlO]*\d[\dIlO]*[kKMRpnuµ][\dIlO]*|[IlO][\dIlO]*[kKMRpnuµ][\dIlO]*", t) and re.search(r"[1-9]|[Il]", t):
+        return t.translate(str.maketrans("IlO", "110"))
+    m = re.fullmatch(r"([ABCW])([\dIlOS]+[kKM])", t)
+    if m and re.search(r"\d|I|l", m.group(2)[:1]) or (m and m.group(2)[0] == "S"):  # ASOOK, BIk
+        return m.group(1) + m.group(2).translate(str.maketrans("IlOS", "1105"))
+    m = re.fullmatch(r"(TL|LM|NE|OP|CD|CA)([\dO]{3,4}[A-Z]*)", t, re.I)
+    if m:
+        return m.group(1).upper() + m.group(2).replace("O", "0")
+    return t
+
+
+def _value_counts(words: list) -> dict[tuple[str, str], int]:
+    counts: dict[tuple[str, str], int] = {}
+    for w in words:
+        t = _value_token(w[4])
+        cat = ("D" if _VAL_D.match(t) else "Q" if _VAL_Q.match(t) else "IC" if _VAL_IC.match(t)
+               else "C" if _VAL_C.match(t) else "R" if _VAL_R.match(t) else "")
+        if cat == "R" and t.isdigit() and int(t) not in _BARE_R:
+            continue
+        if cat:
+            key = (cat, t.rstrip("*"))
+            counts[key] = counts.get(key, 0) + 1
+    return counts
+
+
+def schematic_value_bom(png: Path) -> list[BomRow]:
+    """A parts list from a clean schematic drawing that prints values but no designators (one
+    PCBWay member's catalogue): every value label is read, typed by its shape (470k a resistor,
+    100n a capacitor, 1N4148 a diode, 2N5088 a transistor) and counted, giving quantity-named rows
+    ('×4 470k'). An IC is listed once: a dual op-amp is drawn once per half. Knobs come from the
+    named-pot pairing (SUSTAIN over A10k). Labels OCR misses make counts best effort.
+
+    Three readings are made: Vision on the upright image (it reads sideways labels too), and
+    tesseract upright plus turned a quarter each way for the vertical labels. A value's count is
+    the larger of Vision's and tesseract's upright count plus its better sideways count, so a
+    label two passes both read is not counted twice."""
+    vis = [(*w[:4], _value_token(w[4])) for w in vision.words(png)] if vision.available() else []
+    tess = {rot: [(*w[:4], _value_token(w[4])) for w in _diode_words(_ocr_word_boxes(png, rot))] for rot in (0, 90, 270)}
+    cv, t0, t90, t270 = _value_counts(vis), _value_counts(tess[0]), _value_counts(tess[90]), _value_counts(tess[270])
+    keys = list(dict.fromkeys([*t0, *cv, *t90, *t270]))
+    counts = {k: max(cv.get(k, 0), t0.get(k, 0) + max(t90.get(k, 0), t270.get(k, 0))) for k in keys}
+    named: dict[str, BomRow] = {}
+    for ws in (vis, tess[0], tess[90], tess[270]):
+        # The pairing distances were tuned for 7 pt labels: scale them by this drawing's label size
+        # (the short side of its value labels, which is their height whichever way they run).
+        sizes = sorted(min(w[2] - w[0], w[3] - w[1]) for w in ws if _value_counts([w]))
+        unit = max(1.0, sizes[len(sizes) // 2] / 7) if sizes else 4.0
+        for r in _pair_labels(ws, unit=unit):
+            if r.category in ("POT", "SW"):
+                k = r.ref.upper()
+                if k not in named:
+                    r.notes = "from schematic; OCR"
+                    named[k] = r
+    rows: list[BomRow] = []
+    for cat, val in keys:
+        r = normalize_row(BomRow(ref=f"×{1 if cat == 'IC' else counts[(cat, val)]}", value=val, category=cat,
+                                 notes="from schematic; OCR"))
+        if is_plausible(r):
+            rows.append(r)
+    order_cat = {"IC": 0, "Q": 1, "D": 2, "C": 3, "R": 4}
+    rows.sort(key=lambda r: (order_cat.get(r.category, 9), r.sort_key or 0))
+    return rows + list(named.values())
 
 
 _QVP_HEADER = re.compile(r"^\s*Qty\.?\s+Value\s+(?:Parts?|Devices?|Refs?|Designators?)(?:\s+Notes?)?\s*$", re.I)

@@ -37,6 +37,8 @@ CORRECTIONS: dict[str, dict[Key, str | None]] = {
     },
     # Lectric-FX Betty Boost: the scanned grid misreads four values and invents R0 and C0 (checked 2026-10-02).
     "lectricfx:betty-boost": {"R1": "10M", "R2": "10K", "R7": "18k", "R9": "18k", "R0": None, "C0": None},
+    # PCBWay Fuzz Face (Silicon): 'Asc' is a garbled second reading of the Volume A500K label (checked 2026-10-02).
+    "pcbway-gtu:arbiter-fuzz-face-silicon-5ffff957": {"Asc": None},
     # Five Cats Rattus: Vision reads the RAT's C13 1µF as 1pF and skips cells that are not plain
     # values: RAT2 R1, Turbo RAT C7, C9 and its LED clippers (checked 2026-10-01).
     "fivecats:rattus-rat-rat2-you-dirty-rat-turbo-rat-clone": {

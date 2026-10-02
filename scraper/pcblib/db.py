@@ -135,7 +135,8 @@ VENDORS = {
                    "Build guides are Google Docs by Holy Island Audio; indexed and linked, not redistributed. "
                    "The shop is mostly finished pedals; the vendor recommends the DIY boards for experienced builders and offers no build support."),
     "pcbway-gtu": ("PCBWay: Glory to Ukraine", "https://www.pcbway.com/project/member/?bmbno=19C5FC6C-66B1-46",
-                   "Shared projects are CC BY-SA 3.0; schematic images may be shown with attribution. BOM and gerbers need a PCBWay login."),
+                   "Shared projects are CC BY-SA 3.0; schematic images may be shown with attribution. Parts are counted from the schematic's value labels "
+                   "(the drawings name no designators); gerbers need a PCBWay login."),
 }
 
 

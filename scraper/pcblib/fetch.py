@@ -32,6 +32,9 @@ class Fetcher:
     # stock and new boards live in the pages, and a build document rarely changes at the same URL.
     refresh_pages: bool = False
     timeout: float = 60.0
+    # One clock for every host (pages, the list endpoint and the image CDN alike), for a vendor
+    # that asks to be fetched slowly; cache hits never wait.
+    one_clock: bool = False
     _last_hit: dict[str, float] = field(default_factory=dict)
     _client: httpx.Client | None = None
 
@@ -52,7 +55,7 @@ class Fetcher:
         return d / f"{digest}{ext}"
 
     def _throttle(self, url: str) -> None:
-        host = urlparse(url).netloc
+        host = "*" if self.one_clock else urlparse(url).netloc
         last = self._last_hit.get(host, 0.0)
         wait = self.min_interval - (time.monotonic() - last)
         if wait > 0:
