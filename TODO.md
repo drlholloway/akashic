@@ -18,16 +18,16 @@ at the bottom; re-run them after parser changes.
 - **GuitarPCB**: most NostalgiTone docs carry their tables in the text layer and read exactly; OCR fills
   only parts the text does not list. 5 boards with no BOM and 7 thin after the thorough OCR pass; the rest
   are selector and wiring boards with no BOM by design (Roto-Tone, 2 Knob Job, 3PDT
-  boards, Easy Order Switching). 18 boards still have no named controls.
+  boards, Easy Order Switching); those and the knobless Emerald Ring are the only boards with no controls.
 - **Madbean**: 8 boards with no BOM: the utility boards (9mmBB, 14mm, MiniJack1, sProbe,
   Strober, TrueSoft) and Flunkee, whose PDF link is a 404. The VFE series docs carry a
   shopping list (qty, value, type) rather than a designator table, so their rows are named
   by quantity.
-- **Aion FX**: 8 boards without controls; 7 without a BOM.
+- **Aion FX**: 7 boards without a BOM; the boards without controls are bypass and utility modules.
 - **Fuzz Dog**: 4 boards without a BOM and 13 thin, all utility items (switchers, testers,
   the ProtoBuddy breadboard, tails add-ons) whose docs have no parts table.
-- **PCB Guitar Mania**: 14 without a BOM; 25 without controls after the schematic pairing (the rest have
-  watermarked or hand-drawn schematics).
+- **PCB Guitar Mania**: 14 without a BOM. Controls are named on every circuit board except the knobless
+  Green Octaver; the rest without are switching and buffer boards.
 - **Five Cats Pedals**: 6 without a BOM after OCR of the older inserts: three 3PDT
   daughterboards and the Transelector (no table), and the Vintage Style Fuzz Face, whose
   insert is a wiring diagram with values printed on the parts.
@@ -64,12 +64,11 @@ at the bottom; re-run them after parser changes.
   Octafuzz) are listing-only. BYOC checklists have no designators, so those rows are
   quantity-named. The 'PCB' category the issue pointed at is PCB-mount potentiometers.
 - **Gigahearts FX**: only GIG BUFF v1.3 links its build doc; the others ship the doc with the
-  board. GIG BUFF v2.0 is read from the product page's schematic image (23 rows, vertical labels
-  and the pots missed, R2 10r read as 106); GIG BUFF v3.0, Broadcast, Full Moon and PIP BOY show only
+  board. GIG BUFF v2.0 is read from the product page's schematic image and completed by hand; GIG BUFF v3.0, Broadcast, Full Moon and PIP BOY show only
   board renders, so they are listing-only.
 - **Dirt Monger**: PW-2, HMT-2 and American Metal use a font whose text layer drops letters; their
   resistors and capacitors are read from the list page's image instead (PW-2 and HMT-2 in full).
-  American Metal gets 19 of about 30 capacitors: OCR misses the rest ('10', '1' with the unit lost).
+  American Metal's capacitors whose unit OCR drops ('10', '1') are filled in by hand.
 - **Scientific Guitarist**: TBR has only its build document's shopping list (no designators); EchoWreck,
   Alternate Dimension, T60, KDLA and Wobble Box are paired from the schematic PDF, so their pots
   show as a knob count. Some trimmers and pots have no value in the Eagle export.
@@ -87,15 +86,11 @@ at the bottom; re-run them after parser changes.
 |---|---|---|
 | On The Road Effects | Guerrero Oro | The build-guide link is a 'Build Guide Coming Soon' placeholder; nothing to parse until the guide is published |
 | Dead Astronaut | Chasm Reverb, Ebe Delay, Timestream Reverb | Raster docs where thorough OCR still returns nothing |
-| Five Cats | Marshall Supa Fuzz, Vintage Style Fuzz Face | Insert is a wiring diagram with values on the parts, not a table; 1 and 0 rows |
 | GuitarPCB | G.B.O.F. (16-project fuzz board), NostalgiTone Dual Combo Creator | No parts table: the doc lists sixteen projects to build on one board and points to DIY Layout Creator drawings |
-| Experimentalists Anonymous | Moog 901B | 22 rows where the live export had 30: with Vision the upright pairs pass 12, so tesseract's second segmentation mode (psm 12) no longer fills in the scan; running it on tesseract's count alone, or picking the orientation on tesseract alone, lost rows on 52 and 90 other boards. It also keeps a phantom R312 |
 | Experimentalists Anonymous | Scans in general | Junk pairs survive: bare one-digit resistor values ('R38 = 8'), mangled designators (the Obesifier's are fixed by hand) |
 | Effects Layouts | Schematic Fuzz | Build doc is drill templates only; the schematic is on the silkscreen |
-| Effects Layouts | Lawn Darts | Doc is a single scanned schematic image; the schematic-page search pairs 8 of its 10 labels, no pot name |
 | Effects Layouts | Melody Malfunction, Cranky Speaker | Doc has only a shopping list (value, type, quantity), so rows are named by quantity (`×2`) and controls are a knob count |
 | Effects Layouts | Six Shooter, Strider, Soil Slinger | Only a drill template or a blog post is linked; no parts list |
-| Effects Layouts | Drivestortion | Old blog-era project PDF with a broken font encoding; the aligned OCR gives 23 rows but two pot names come out as 'Cim' and 'Ccim' (the One-Knobber now reads its five-build table in full) |
 | JMK PCBs | most boards | Docs rarely state an enclosure (8 of 38 found). The drill templates draw only the board and its pots, and the shop's categories carry no size, so there is no source to read one from |
 | Five Cats | 57 older inserts | No enclosure stamp on the insert (only newer layouts have the "minimum enclosure" badge) |
 | Sheepylove on GitHub | Katahdin, Sarda, Shorn Sheep | No parts list in the repository and the board render's labels do not OCR, so no controls; the schematics are on the Bent Fishbowl blog |

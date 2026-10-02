@@ -7,6 +7,11 @@ from; remove it when a parser learns to read the board right.
     CORRECTIONS[circuit_id][designator] = corrected value, or None to drop the row
     CORRECTIONS[circuit_id][(variant, designator)] = the same, for one build variant only
     (designators match regardless of case: 'CLEAN' corrects a knob stored as 'Clean')
+
+A document no parser can read (values printed on the parts of a wiring drawing) can be transcribed
+whole instead: TRANSCRIBED[circuit_id] is its parts list, which replaces whatever the parsers found.
+Rows without designators are named by quantity ('×2'), as the shopping-list parser names them. A
+five-field row carries its build variant ('DOD \u201977 Grey 250').
 """
 from __future__ import annotations
 
@@ -39,6 +44,31 @@ CORRECTIONS: dict[str, dict[Key, str | None]] = {
     "lectricfx:betty-boost": {"R1": "10M", "R2": "10K", "R7": "18k", "R9": "18k", "R0": None, "C0": None},
     # PCBWay Fuzz Face (Silicon): 'Asc' is a garbled second reading of the Volume A500K label (checked 2026-10-02).
     "pcbway-gtu:arbiter-fuzz-face-silicon-5ffff957": {"Asc": None},
+    # Dirt Monger American Metal: OCR loses the capacitors whose unit drops ('10', '1'); from the list page (2026-10-02).
+    "dirtmonger:american-metal-thrash-master-combo-diy-pcb": {
+        "C18": "10n", "C20": "150n", "C31": "150n", "C3": "1u", "C13": "1u", "C15": "1u", "C25": "1u",
+        "C9": "10u", "C23": "10u", "C2": "100u", "C4": "47u", "C6": "47u",
+    },
+    # Gigahearts GIG BUFF v2.0: a clean KiCad schematic image; OCR missed the vertical labels and pots (2026-10-02).
+    "gigahearts:gig-buff-v2-0": {
+        "R2": "10r", "R4": "470K", "R9": "47K", "R10": "470K", "R14": "47K", "R15": "470K", "R18": "27K", "R20": "10K",
+        "R21": "10K", "RPD1": "1M", "LEDR1": "220r", "C1": "47p", "C2": "100n", "C3": "470p", "C5": "4n7", "C6": "4u7",
+        "C7": "470p", "C8": "4n7", "C9": "4u7", "C10": "470p", "C11": "4n7", "C13": "10n", "C14": "100n", "C16": "47u",
+        "C21": "100n", "C22": "47u", "D2": "LED", "D3": "1N4148", "D4": "1N4148", "D5": "1N4148", "D6": "1N4148",
+        "D7": "1N4148", "D8": "1N4148", "U1": "4558", "U2": "TL071", "U3": "4558", "LEDR2": "10K trim",
+        "SUSTAIN": "B100K", "TONE": "B100K", "VOLUME": "B10K",
+    },
+    # GuitarPCB boards whose docs list knobs as 'DRIVE 100k Lin' / 'VOL 100k Log', which no parser reads (2026-10-02).
+    "guitarpcb:3-time-champ": {"DRIVE": "B100k", "VOL": "A100k"},
+    "guitarpcb:after-blaster": {"VOL": "100k", "BIAS": "20k trim"},
+    "guitarpcb:morc": {"LEVEL": "C500k", "VOL": "A100k"},
+    "guitarpcb:xx-double-shot-dual-boost": {"VOL1": "A100k", "VOL2": "A100k"},
+    # PCB Guitar Mania pots written 'A 500k' / 'A- 100K' / '500k Log', which no parser reads (2026-10-02).
+    "pcbguitarmania:pineapple-drive": {"GAIN": "A500k", "CONTOUR": "C50k", "TONE": "B100k", "VOL": "A100k"},
+    "pcbguitarmania:tv-channel-dual-channel-overdrive": {"VOL": "A100k", "VOL1": "A100k", "GAIN": "B1M", "GAIN1": "B1M"},
+    "pcbguitarmania:no-noise-gate": {"THRESHOLD": "A500k"},
+    "pcbguitarmania:no-noise-gate-smd": {"THRESHOLD": "A500k"},
+    "pcbguitarmania:noise-terminator": {"THRESHOLD": "B10k"},
     # Five Cats Rattus: Vision reads the RAT's C13 1µF as 1pF and skips cells that are not plain
     # values: RAT2 R1, Turbo RAT C7, C9 and its LED clippers (checked 2026-10-01).
     "fivecats:rattus-rat-rat2-you-dirty-rat-turbo-rat-clone": {
@@ -178,7 +208,9 @@ CORRECTIONS: dict[str, dict[Key, str | None]] = {
     "expanon:oscillators-lfos-and-signal-generators-e-music-vcdo": {"R9": "100k", "R14": "1M5"},
     "expanon:oscillators-lfos-and-signal-generators-ehx-lfo": {"D1": "1N4001", "R9": "27k"},
     "expanon:oscillators-lfos-and-signal-generators-moog-901a": {"R4": "680K", "R5": "4.7M"},
-    "expanon:oscillators-lfos-and-signal-generators-moog-901b": {"Q10": "2N2646"},
+    "expanon:oscillators-lfos-and-signal-generators-moog-901b": {
+        "Q10": "2N2646", "R312": None, "R32": "22K", "R29": "13K", "R30": "43K", "R2": None,  # R312 is R32 misread; R2 '4' a fragment
+    },
     "expanon:phasers-dod-fx20c": {"R27": "10K"},
     "expanon:phasers-ibanez-pt909": {"C106": "100P", "R134": "4.7K"},
     "expanon:phasers-nobels-ph-d": {
@@ -201,6 +233,75 @@ CORRECTIONS: dict[str, dict[Key, str | None]] = {
     "expanon:tone-control-and-eqs-korg-parametric-eq": {"R23": "470K"},
     "expanon:tremolos-and-panners-dean-hazelwater-anderton-panner": {"R15": "470K"},
     "expanon:vibrato-and-pitch-shift-korg-oct-1": {"R19": "1K", "R43": "22M"},
+}
+
+# circuit_id -> [(ref, value, category, note)], read off the document by a person.
+_FIVE_CATS_FUZZ_FACE = [
+    ("Q1", "BC108", "Q", "hFE 250-300; collector 1.35V"), ("Q2", "BC108", "Q", "hFE 250-300; collector 5.75V"),
+    ("×1", "1N5817", "D", ""), ("×1", "47pF", "C", ""), ("×1", "100nF", "C", ""), ("×1", "2.2uF", "C", ""),
+    ("×1", "22uF", "C", ""), ("×1", "100uF", "C", ""), ("×1", "10R", "R", ""), ("×1", "330R", "R", "1K for more volume"),
+    ("×1", "3.1K", "R", ""), ("×1", "4.7K", "R", "LED"), ("×1", "20K", "R", ""), ("×1", "82K", "R", ""),
+    ("Fuzz", "B1K", "POT", "or C1K"), ("Vol", "A500K", "POT", ""),
+]
+def _variant_table(variants: list[str], rows: list[tuple]) -> list[tuple]:
+    """A per-variant chart written as (ref, category, value per variant...); 'omit' leaves the part out."""
+    out = []
+    for v_i, v in enumerate(variants):
+        for ref, cat, *vals in rows:
+            note = ""
+            val = vals[v_i]
+            if val in ("omit", "jumper"):
+                continue
+            if val.endswith("*"):
+                val, note = val.rstrip("*"), "1N34A are good replacements"
+            out.append((ref, val, cat, note, v))
+    return out
+
+
+_DRIVESTORTION = _variant_table(
+    ["DOD '77 Grey 250", "MXR '80 Distortion+", "DOD '82 Yellow 250", "Ross Tan Distortion", "DeArmond Square Wave", "DOD YJM308"],
+    [("R1", "R", "1M", "1M", "1M", "1M", "1M", "1M"), ("R2", "R", "10k", "10k", "10k", "10k", "10k", "10k"),
+     ("R3", "R", "510k", "1M", "470k", "1M", "1M", "470k"), ("R4", "R", "20k", "1M", "22k", "1M", "1M", "22k"),
+     ("R5", "R", "20k", "1M", "22k", "1M", "1M", "22k"), ("R6", "R", "4.7k", "4.7k", "4.7k", "4.7k", "5.6k", "4.7k"),
+     ("R7", "R", "1M", "1M", "1M", "1M", "1M", "1M"), ("R8", "R", "10k", "10k", "10k", "10k", "10k", "10k"),
+     ("C1", "C", "omit", "1n", "omit", "1n", "1.5n", "omit"), ("C2", "C", "10n", "10n", "10n", "10n", "10n", "1n"),
+     ("C3", "C", "10u", "1u", "10u", "10u", "1u", "10u"), ("C4", "C", "47u", "47u", "47u", "47u", "47u", "47u"),
+     ("C5", "C", "47n", "47n", "47n", "47n", "47n", "47n"), ("C6", "C", "omit", "omit", "25p", "omit", "15p", "25p"),
+     ("C7", "C", "4.7u", "1u", "4.7u", "1u", "1u", "4.7u"), ("C8", "C", "1n", "1n", "1n", "1n", "1.5n", "1n"),
+     ("D1", "D", "1N4001", "1N4001", "1N4001", "1N4001", "1N4001", "1N4001"),
+     ("D2", "D", "1N4001", "1N270*", "1N4148", "1N4148", "1N34A", "1N4148"),
+     ("D3", "D", "1N4001", "1N270*", "1N4148", "1N4148", "1N34A", "1N4148"),
+     ("D4", "D", "jumper", "jumper", "jumper", "1N4148", "jumper", "jumper"),
+     ("IC1", "IC", "LM741", "UA741CP", "LF351N", "RC4558P", "UA741C", "KA4558"),
+     ("Gain", "POT", "C500k", "C1M", "C1M", "C500k", "C500k", "C500k"),
+     ("Level", "POT", "A100k", "A10k", "A10k", "B50k", "A10k", "W100k")])
+
+TRANSCRIBED: dict[str, list[tuple]] = {
+    # Effects Layouts Lawn Darts: a single scanned schematic; OCR read 8 junk-ridden labels (checked 2026-10-02).
+    "effectslayouts:lawn-darts": [
+        ("R1", "1M", "R", ""), ("R2", "100R", "R", ""), ("R3", "10M", "R", ""), ("R4", "1.3k", "R", ""), ("R5", "100k", "R", ""),
+        ("CLR", "4.7k", "R", "LED"), ("C1", "100p", "C", ""), ("C2", "4.7n", "C", ""), ("C3", "10n", "C", ""),
+        ("C4", "100u", "C", ""), ("D1", "1N4001", "D", ""), ("Q1", "2N5089", "Q", ""), ("Level", "B10k", "POT", ""),
+    ],
+    # Effects Layouts Drivestortion: a six-version chart whose text layer is a broken font (checked 2026-10-02).
+    "effectslayouts:drivestortion": _DRIVESTORTION,
+    # Five Cats inserts that are wiring diagrams with the values printed on the parts (checked 2026-10-02).
+    "fivecats:marshall-supa-fuzz-replica-vintage": [
+        ("Q1", "Germanium PNP", "Q", "hFE about 174"), ("Q2", "Germanium PNP", "Q", "hFE about 208"),
+        ("Q3", "Germanium PNP", "Q", "hFE about 194"), ("×1", "10nF", "C", ""), ("×1", "100nF", "C", ""),
+        ("×2", "10uF", "C", ""), ("×1", "47uF", "C", ""), ("×1", "470R", "R", "1K for more volume"),
+        ("×1", "8.2K", "R", ""), ("×2", "10K", "R", ""), ("×1", "47K", "R", ""), ("×1", "100K", "R", ""),
+        ("Fuzz", "B1K", "POT", ""), ("Vol", "A100K", "POT", ""),
+    ],
+    "fivecats:vintage-style-fuzz-face": _FIVE_CATS_FUZZ_FACE,
+    "fivecats:vintage-style-fuzz-face-1590b": _FIVE_CATS_FUZZ_FACE,
+}
+
+# circuit_id -> control names, for a board whose document names its knobs but gives no values to
+# list them as parts rows with (the DVF schematic labels P1-P6; the parts page leaves them out).
+CONTROLS: dict[str, list[str]] = {
+    "guitarpcb:dvf-dual-voice-filter-tonal-shifter-cocked-wah-w-switchable-overdrive":
+        ["Gain", "Freq 1", "Freq 1 Level", "Freq 2", "Freq 2 Level", "Clean Level"],
 }
 
 _NOTE = "corrected by hand"
@@ -227,6 +328,10 @@ def _insert_at(bom: list[BomRow], variant: str, ref: str) -> int:
 
 
 def apply(circuit_id: str, bom: list[BomRow]) -> list[BomRow]:
+    if circuit_id in TRANSCRIBED:
+        bom = [normalize_row(BomRow(ref=ref, value=value, category=cat, notes="; ".join(n for n in (note, _NOTE) if n),
+                                    part_type="Potentiometer" if cat == "POT" else "", variant=(rest or [""])[0]))
+               for ref, value, cat, note, *rest in TRANSCRIBED[circuit_id]]
     fixes: dict[tuple[str | None, str], str | None] = {}
     for k, v in (CORRECTIONS.get(circuit_id) or {}).items():
         variant, ref = k if isinstance(k, tuple) else (None, k)
@@ -251,7 +356,7 @@ def apply(circuit_id: str, bom: list[BomRow]) -> list[BomRow]:
         if value is None or (variant, ref) in seen:
             continue
         cat = ""
-        if re.fullmatch(r"[A-Z]{3,}\d?", ref) and re.search(r"\d", value):  # a named knob: VOL2, GAIN1, PRES1
+        if re.fullmatch(r"[A-Z]{3,}\d?", ref) and (re.match(r"^[ABCW]\d", value) or re.search(r"\btrim", value, re.I)):  # VOL2, GAIN1, PRES1; not RPD1 1M
             cat = "TRIM" if re.search(r"\btrim", value, re.I) else "POT"
         row = normalize_row(BomRow(ref=ref, value=value, notes=_NOTE, variant=variant or "", category=cat))
         out.insert(_insert_at(out, row.variant, ref), row)

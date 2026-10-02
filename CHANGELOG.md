@@ -169,6 +169,16 @@ GitHub Release notes.
   and pots are grouped by taper (A, B, C, W, none) and ordered by resistance.
 
 ### Fixed
+- Hand transcriptions for documents no parser reads: Five Cats' Supa Fuzz and both Vintage Style Fuzz
+  Face inserts (wiring diagrams with values on the parts), Effects Layouts' Drivestortion (six versions
+  side by side: DOD Grey and Yellow 250, MXR Distortion+, Ross, DeArmond Square Wave, YJM308) and
+  Lawn Darts; Dirt Monger American Metal's missing capacitors, the GIG BUFF v2.0's vertical labels and
+  pots, and the Moog 901B's phantom R312 (R32).
+- Controls: when a board's controls are empty or only a knob count and every pot in its parts list has
+  a name, the names are used: 132 boards, 49 of them PedalPCB boards whose product page lists none. A name
+  read off a scan must be a word knobs are called, so OCR slips like "Volumel" keep the knob count.
+  Knobs written 'DRIVE 100k Lin' or 'GAIN A 500k' on GuitarPCB and PCB Guitar Mania boards are added
+  by hand; the DVF names its six controls without values.
 - OCR word boxes: a word tesseract reads as a quote mark no longer swallows the words after it. The
   reader took the quote for the start of a quoted field, so 31% of cached schematic and table scans
   (1,801 of 5,842; most of them Experimentalists Anonymous) lost every label after their first quote.

@@ -334,6 +334,12 @@ def _page_alive(url: str) -> bool:
     return not path or path in str(r.url).lower()
 
 
+# Knob names beyond the pairing's own list, accepted when a scan is the only source of the name.
+_KNOB_WORDS = {"REPEAT", "WAVE", "PEAK", "CLOCK", "AMPLITUDE", "FREQUENCY", "FREQ", "NOTCH", "TEMPO", "DISTORTION",
+               "SENSITIVITY", "TUNE", "WAH", "EMPHASIS", "MOD", "MODULATION", "FINE", "ENVELOPE", "OCTAVE", "LENGTH",
+               "THRESH", "GATE", "Q", "CONTOUR", "SUB", "FILTER", "BALANCE", "CLEAN", "EDGE", "TILT", "WARMTH"}
+
+
 def upsert_circuit(conn: sqlite3.Connection, c: Circuit) -> None:
     from .corrections import apply as apply_corrections
     from .pdf import _expand_range_rows
@@ -346,6 +352,24 @@ def upsert_circuit(conn: sqlite3.Connection, c: Circuit) -> None:
     _fix_stray_digits(c.bom)
     _fix_micro_read_as_pico(c.bom)
     c.bom = apply_corrections(c.id, c.bom)  # last: hand fixes are keyed by the designators as stored
+    from .corrections import CONTROLS, TRANSCRIBED
+    if c.id in CONTROLS:
+        c.controls = list(CONTROLS[c.id])
+    elif c.id in TRANSCRIBED or not c.controls or (len(c.controls) == 1 and re.fullmatch(r"\d+ knobs?", c.controls[0])):
+        # The adapter read its controls before the hand fixes ran, or could only count the knobs. Names
+        # replace it only when every knob has one: 'RV1', 'Pot', '50K' or 'B1M' are not names.
+        # A knob name read off a scan must be a word knobs are called: OCR turns VOLUME 1 into
+        # 'Volumel' and DS-1's TONE into 'Vtav'. Names from a text table are taken as written.
+        from .pdf import _CONTROL_WORDS
+        known = _CONTROL_WORDS | _KNOB_WORDS
+        pot_rows = [r for r in c.bom if r.category == "POT"]
+        pots = [r.ref for r in pot_rows]
+        machine = {r.ref for r in pot_rows if "OCR" in r.notes or "from schematic" in r.notes}
+        named = [p for p in dict.fromkeys(pots) if re.fullmatch(r"[A-Za-z][A-Za-z. /\-]{2,}\d?", p)
+                 and not re.fullmatch(r"(?:POT|VR|RV|P)\d*", p, re.I)
+                 and (p not in machine or re.sub(r"\s*\d$", "", p).upper() in known)]
+        if pots and len(named) == len(dict.fromkeys(pots)):
+            c.controls = [p.title() if p.isupper() else p for p in named]
     c.controls = _dedupe_controls(c.controls)
     c.based_on = _clean_based_on(c.based_on) if c.based_on else c.based_on
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
