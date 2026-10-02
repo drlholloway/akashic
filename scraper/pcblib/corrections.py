@@ -35,9 +35,6 @@ CORRECTIONS: dict[str, dict[Key, str | None]] = {
         "IC1": "JRC4580", "IC2": "JRC4580", "IC1B": None,
         "VOL": None, "VOL2": "100KA", "GAIN1": "100KB", "PRES1": "50K trim", "PRES2": "50K trim",
     },
-    # GuitarPCB MUFF'N: only the Ram column of the variant chart is read. C15 100µ reads 100p (µ as p,
-    # and 100pF is a real value, so no rule can catch it), C1 10µ is missed, 'ALOK' is junk (checked 2026-10-01).
-    "guitarpcb:big-muff-pi-muffn": {"C1": "10µF", "C15": "100µF", "ALOK": None},
     # Five Cats Rattus: Vision reads the RAT's C13 1µF as 1pF and skips cells that are not plain
     # values: RAT2 R1, Turbo RAT C7, C9 and its LED clippers (checked 2026-10-01).
     "fivecats:rattus-rat-rat2-you-dirty-rat-turbo-rat-clone": {

@@ -14,7 +14,8 @@ at the bottom; re-run them after parser changes.
   Positional OCR only works on clean traced drawings.
 - **Bent Fishbowl**: 8 of 33 schematics come back thin; busy drawings defeat the
   designator/value pairing.
-- **GuitarPCB**: 5 boards with no BOM and 7 thin after the thorough OCR pass; the rest
+- **GuitarPCB**: most NostalgiTone docs carry their tables in the text layer and read exactly; OCR fills
+  only parts the text does not list. 5 boards with no BOM and 7 thin after the thorough OCR pass; the rest
   are selector and wiring boards with no BOM by design (Roto-Tone, 2 Knob Job, 3PDT
   boards, Easy Order Switching). 18 boards still have no named controls.
 - **Madbean**: 8 boards with no BOM: the utility boards (9mmBB, 14mm, MiniJack1, sProbe,
@@ -96,7 +97,6 @@ at the bottom; re-run them after parser changes.
 | Effects Layouts | Six Shooter, Strider, Soil Slinger | Only a drill template or a blog post is linked; no parts list |
 | Effects Layouts | Drivestortion | Old blog-era project PDF with a broken font encoding; the aligned OCR gives 23 rows but two pot names come out as 'Cim' and 'Ccim' (the One-Knobber now reads its five-build table in full) |
 | Lectric-FX | Betty Boost | The scanned, sideways schematic is found and paired, but OCR reads only a third of its labels, so it gets its Tone and not its Level (the Double*Take's grid misreads are fixed by hand) |
-| GuitarPCB | MUFF'N (Big Muff) | The ten-variant chart (Ram, Violet Ram, Triangle...) reads as one board with the Ram column's values; the other nine variants are lost. Ram's µ values are corrected |
 | JMK PCBs | most boards | Docs rarely state an enclosure (8 of 38 found). The drill templates draw only the board and its pots, and the shop's categories carry no size, so there is no source to read one from |
 | Five Cats | 57 older inserts | No enclosure stamp on the insert (only newer layouts have the "minimum enclosure" badge) |
 | Sheepylove on GitHub | Katahdin, Sarda, Shorn Sheep | No parts list in the repository and the board render's labels do not OCR, so no controls; the schematics are on the Bent Fishbowl blog |

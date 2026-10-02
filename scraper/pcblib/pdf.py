@@ -1411,6 +1411,42 @@ def _variant_header(cells: list[str]) -> list[str]:
     return []
 
 
+_PART_HEAD = re.compile(r"^(?:.*\s)?(?:part|ref|reference|designator)s?\s*#?$", re.I)
+
+
+def _wrapped_header(plines: list[str], li: int) -> list[str]:
+    """A per-variant header whose long labels wrap onto the lines above and below ('Creamy' over
+    'Dreamer' in GuitarPCB's MUFF'N chart, whose header line reads "MUFF'N Part #  Ram  Violet Ram
+    ... Civil War  Mayo"). Labels are rebuilt by position: each word group on the header line and the
+    lines just above and below goes to the nearest value column of the first designator row, and a
+    column's pieces join top to bottom. Returns [] unless every column gets a plausible label."""
+    def groups(line: str) -> list[tuple[int, int, str]]:
+        return [(m.start(), m.end(), m.group()) for m in re.finditer(r"\S+(?: \S+)*", line)]
+    head = groups(plines[li])
+    if len(head) < 3 or not _PART_HEAD.match(head[0][2]):
+        return []
+    row = next((plines[j] for j in range(li + 1, min(li + 4, len(plines)))
+                if (g := groups(plines[j])) and _VARIANT_REF.match(g[0][2])), None)
+    if row is None:
+        return []
+    cols = groups(row)[1:]
+    if len(cols) <= len(head) - 1 or len(cols) > 16:
+        return []  # nothing wrapped: the plain header parser reads it
+    centers = [(a + b) / 2 for a, b, _ in cols]
+    left = cols[0][0] - 2
+    pieces: list[list[str]] = [[] for _ in cols]
+    for j in (li - 1, li, li + 1):
+        if not 0 <= j < len(plines) or (j != li and (g := groups(plines[j])) and _VARIANT_REF.match(g[0][2])):
+            continue
+        for a, b, t in groups(plines[j]):
+            if b <= left:
+                continue  # the part column's own heading
+            k = min(range(len(centers)), key=lambda k: abs((a + b) / 2 - centers[k]))
+            pieces[k].append(t)
+    labels = [" ".join(p) for p in pieces]
+    return labels if all(labels) and all(_variant_label_ok(lab) for lab in labels) and len({l.lower() for l in labels}) == len(labels) else []
+
+
 def parse_bom_variant_columns(pages: list[str]) -> list[BomRow]:
     """Tables with one value column per build variant ('Part  1977 spec  2003 spec',
     'Resistors  Guitar Mod  Bass Mod'): every column is kept and each row is labelled
@@ -1432,7 +1468,7 @@ def parse_bom_variant_columns(pages: list[str]) -> list[BomRow]:
             cells = [c.strip() for c in re.split(r"\s{2,}", ln.strip()) if c.strip()]
             if not cells:
                 continue
-            hdr = _variant_header(cells)
+            hdr = _variant_header(cells) or _wrapped_header(plines, li)
             if not hdr and not labels and 2 <= len(cells) <= 8 and all(_variant_label_ok(c) and not _variant_heading(c) for c in cells) \
                     and not any(c.upper() in _SCH_SKIP_WORDS or c.upper() in _OCR_VARIANT_STOP or re.fullmatch(r"[A-Z +\-]{1,5}", c) for c in cells) \
                     and not any(re.fullmatch(r"[A-Za-z]{0,4}\d[\dA-Za-z./-]*", c) for c in cells) \
@@ -1458,10 +1494,14 @@ def parse_bom_variant_columns(pages: list[str]) -> list[BomRow]:
             while i < len(cells):
                 ref = cells[i]
                 vals = cells[i + 1:i + 1 + n]
-                is_ref = bool(_VARIANT_REF.match(ref))
-                is_pot = not is_ref and bool(_VARIANT_NAME.match(ref)) and len(vals) == n and all(_VARIANT_POTVAL.match(v) for v in vals)
+                group = expand_refs(ref) if re.search(r"[,\-]", ref) else [ref]
+                is_ref = all(_VARIANT_REF.match(g) for g in group) and len(group) <= 12  # 'D1,D2,D5,D6', 'Q1-Q4'
+                named = re.fullmatch(r"(?:P|VR|RV)\d+\s*-\s*([A-Za-z][A-Za-z/ ]{1,14})", ref)  # 'P1-Sus/Fuzz' is the Sus/Fuzz knob
+                if not is_ref and named:
+                    ref = named.group(1)
+                is_pot = not is_ref and bool(_VARIANT_NAME.match(ref) or named) and len(vals) == n and all(_VARIANT_POTVAL.match(v) for v in vals)
                 if (is_ref or is_pot) and len(vals) == n:
-                    for lab, val in zip(labels, vals):
+                    for g, (lab, val) in ((g, lv) for g in (group if is_ref else [ref]) for lv in zip(labels, vals)):
                         val = val.strip()
                         if val.lower() in _VARIANT_SKIP:
                             continue
@@ -1470,7 +1510,7 @@ def parse_bom_variant_columns(pages: list[str]) -> list[BomRow]:
                         if m:
                             val, note = m.group(1), f"or {m.group(2)}"
                         val = val.rstrip("*")
-                        r = BomRow(ref=ref.upper() if is_ref else ref.rstrip(".").title(), value=val, notes=note, variant=lab,
+                        r = BomRow(ref=g.upper() if is_ref else g.rstrip(".").title(), value=val, notes=note, variant=lab,
                                    part_type="Potentiometer" if is_pot else "", category="POT" if is_pot else "")
                         nr = normalize_row(r)
                         if (lab, nr.ref) not in seen and is_plausible(nr):
@@ -1503,7 +1543,7 @@ def parse_bom_version_blocks(pages: list[str]) -> list[BomRow]:
             k -= 1
         if k < 0:
             continue
-        titles = [lines[k][a:b].strip() for a, b in spans]
+        titles = [re.sub(r"\b([A-Z]{2,})(?=[A-Z][a-z])", r"\1 ", lines[k][a:b].strip()) for a, b in spans]  # 'SUFMascis Muff': tight type loses the space
         if not all(titles) or any(_BLOCK_HEADING.match(t) for t in titles):
             continue
         for ln in lines[first:]:
@@ -1993,9 +2033,9 @@ def _expand_range_rows(rows: list[BomRow]) -> list[BomRow]:
     return out
 
 
-def process_document(pdf: Path, vendor: str, slug: str) -> dict:
-    """Return bom rows, schematic png (relative to data/), page number, version."""
-    pages = pdf_text_pages(pdf)
+def text_bom(pages: list[str]) -> list[BomRow]:
+    """The parts list from a document's text layer: every table parser runs, per-variant tables
+    take over the parts they cover, then shopping lists, variant notes and mod charts."""
     # Vendors lay their parts lists out three ways; run every parser and keep the
     # one that recovered the most designators (they never both succeed on one doc).
     tabled = parse_bom(pages)
@@ -2018,6 +2058,13 @@ def process_document(pdf: Path, vendor: str, slug: str) -> dict:
         bom = variants_from_notes(bom)
     if not any(r.variant for r in bom):
         bom = apply_mod_charts(bom, parse_mod_charts(pages))
+    return bom
+
+
+def process_document(pdf: Path, vendor: str, slug: str) -> dict:
+    """Return bom rows, schematic png (relative to data/), page number, version."""
+    pages = pdf_text_pages(pdf)
+    bom = text_bom(pages)
     page_no = find_schematic_page(pages)
     schematic_rel = ""
     if page_no:

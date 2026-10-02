@@ -1,6 +1,6 @@
-"""GuitarPCB adapter. WooCommerce; BOM and schematic exist only as raster images
-inside the build document, so BOM rows are OCR'd (best effort) when tesseract is
-available, otherwise left empty."""
+"""GuitarPCB adapter. WooCommerce; most build documents hold the BOM and schematic only
+as raster images, so BOM rows are OCR'd (best effort) when tesseract is available. A
+document whose text layer carries the table (the MUFF'N variant chart) is read from it."""
 from __future__ import annotations
 
 import json
@@ -12,7 +12,8 @@ from selectolax.parser import HTMLParser
 from ..models import BomRow, Circuit
 from ..normalize import normalize_row, is_plausible
 from ..paths import CACHE_DIR, DATA_DIR
-from ..pdf import render_page, pdf_text_pages, ocr_bom
+from ..pdf import render_page, pdf_text_pages, ocr_bom, text_bom
+from ..normalize import is_prose_value
 from ..taxonomy import classify, find_enclosure
 from . import register
 from .base import Adapter, clean_text, html_to_text
@@ -93,14 +94,51 @@ class GuitarPCB(Adapter):
                     render_page(pdf, page_no, png)
                 c.schematic_local = str(png.relative_to(DATA_DIR))
                 c.schematic_page = page_no
-            c.bom = ocr_bom(pdf, self.vendor, slug)
-            if len(c.bom) < 12:
+            # Many docs (the NostalgiTone line, the MUFF'N's ten-variant chart) carry the table in their text
+            # layer, which is exact; OCR only adds the parts it does not list and never replaces one it does.
+            text = [r for r in _text_bom_per_circuit(pages) if not (r.category in ("D", "Q", "IC")
+                    and (re.match(r"^[^\w*]", r.value) or re.fullmatch(r"[a-z]{3,}", r.value)))  # '(Q1 -Q2)', 'Q8 require' in prose
+                    and not is_prose_value(r.category, r.value)]  # 'D1 – D4 Clipping Diodes' is a note, not four parts
+            if len({r.ref.upper() for r in text}) < 12:
+                text = []  # a few parts read out of prose ('Q8 require'), not a table
+            ocr = ocr_bom(pdf, self.vendor, slug)
+            if len(ocr) < 12:
                 thorough = ocr_bom(pdf, self.vendor, slug, thorough=True)  # upscaled, thresholded passes for small type
-                if len(thorough) > len(c.bom):
-                    c.bom = thorough
+                if len(thorough) > len(ocr):
+                    ocr = thorough
+            have = {r.ref.upper() for r in text}
+            knobs = any(r.category in ("POT", "TRIM") for r in text)
+            # As in process_document, parts no variant names stay unlabelled. A knob OCR names differently
+            # ('FUZZ' for the text's 'Sus/Fuzz') cannot be matched, so named rows only come in when text has none.
+            c.bom = text + [r for r in ocr if r.ref.upper() not in have and not (knobs and not re.search(r"\d", r.ref))]
             if not c.controls:
-                c.controls = [r.ref.title() for r in c.bom if r.category == "POT" and r.ref.isalpha()]
+                c.controls = list(dict.fromkeys(r.ref.title() for r in c.bom if r.category == "POT"
+                                                and re.sub(r"[/ ]", "", r.ref).isalpha()))  # 'Sus/Fuzz'; once across variants
         return c
+
+
+_BOM_HEADING = re.compile(r"^\s*Bill of Materials\s+(?:for\s+)?(.+?)\s*:\s*$", re.I | re.M)
+
+
+def _text_bom_per_circuit(pages: list[str]) -> list[BomRow]:
+    """Dual-combo docs hold one parts table per pedal ('Bill of Materials Doomstortion:' then
+    'Bill of Materials Harbinger Fuzz:'), numbered from R1 each. Each section is read on its own and
+    its rows are labelled with the pedal's name, so the two boards' R7s stay apart."""
+    whole = "\n".join(pages)
+    heads = list(_BOM_HEADING.finditer(whole))
+    if len(heads) < 2:
+        return text_bom(pages)
+    rows: list[BomRow] = []
+    for k, m in enumerate(heads):
+        end = heads[k + 1].start() if k + 1 < len(heads) else len(whole)
+        part = text_bom([whole[m.start():end]])  # the heading stays: the column parser starts at it
+        if not part:
+            return text_bom(pages)  # one pedal's table is an image (Sonic Bloom): read the doc whole, OCR fills in
+        name = m.group(1).strip(" –—-")
+        for r in part:
+            r.variant = f"{name} {r.variant}".strip()
+            rows.append(r)
+    return rows
 
 
 def _strip_prefixes(t: str) -> tuple[str, list[str]]:

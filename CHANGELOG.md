@@ -164,6 +164,15 @@ GitHub Release notes.
   and pots are grouped by taper (A, B, C, W, none) and ordered by resistance.
 
 ### Fixed
+- GuitarPCB reads a document's text layer before OCR. Most NostalgiTone docs carry their parts tables as
+  text, so their values are now exact (about 47 parts per board, from 40); OCR only adds parts the text
+  does not list. The MUFF'N's ten-variant chart (Ram, Violet Ram, Triangle, 3rd Edition, Creamy Dreamer,
+  Foxy Lady, Green Russian, Black Russian, Civil War, Mayo) reads every column: a header whose long
+  names wrap onto the lines above and below is rebuilt by position, and grouped designators
+  ('D1,D2,D5,D6', 'Q1-Q4') and named pots ('P1-Sus/Fuzz') in a variant table expand to their parts. Dual-combo
+  docs with one 'Bill of Materials <pedal>:' table per pedal keep the two boards apart as variants
+  (Doomstortion / Harbinger Fuzz, Phaser / PlexAmp and 14 more). PedalPCB Muffin Fuzz's 'SUFMascis Muff'
+  reads as 'SUF Mascis Muff'.
 - Experimentalists Anonymous: about 200 part values on 54 schematics restored or corrected by hand, each read
   off the drawing: candidates from a pairing pass that searches farther from each label, which is right about
   two times in three, so its proposals were checked one by one rather than switched on. The Nobels CO-2 and PH-D
