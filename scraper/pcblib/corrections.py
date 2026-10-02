@@ -35,6 +35,8 @@ CORRECTIONS: dict[str, dict[Key, str | None]] = {
         "IC1": "JRC4580", "IC2": "JRC4580", "IC1B": None,
         "VOL": None, "VOL2": "100KA", "GAIN1": "100KB", "PRES1": "50K trim", "PRES2": "50K trim",
     },
+    # Lectric-FX Betty Boost: the scanned grid misreads four values and invents R0 and C0 (checked 2026-10-02).
+    "lectricfx:betty-boost": {"R1": "10M", "R2": "10K", "R7": "18k", "R9": "18k", "R0": None, "C0": None},
     # Five Cats Rattus: Vision reads the RAT's C13 1µF as 1pF and skips cells that are not plain
     # values: RAT2 R1, Turbo RAT C7, C9 and its LED clippers (checked 2026-10-01).
     "fivecats:rattus-rat-rat2-you-dirty-rat-turbo-rat-clone": {
@@ -126,6 +128,38 @@ CORRECTIONS: dict[str, dict[Key, str | None]] = {
     },
     "expanon:fuzz-and-fuzzy-noisemakers-bass-brassmaster-bb1": {"R5": "1.5M", "R23": "47K"},
     "expanon:fuzz-and-fuzzy-noisemakers-roger-mayer-octavia-2": {"C11": "10n", "C12": "100n"},
+    # The remaining candidates of the wide pass, checked on the drawings (2026-10-02); the Nobels and Ross
+    # drawings are clean, so their misreads and missing parts are filled in as well.
+    "expanon:delay-echo-and-samplers-danelectro-pbj-dj-17": {"IC3": "LM311", "R6": "220R", "R110": "18k"},
+    "expanon:distortion-boost-and-overdrive-carl-martin-heavy-drive": {"R67": "100k", "R68": "100k"},
+    "expanon:delay-echo-and-samplers-dod-fx96": {"R19": "10K", "R20": "10K"},
+    "expanon:delay-echo-and-samplers-ibanez-ad9": {"U4": "MN3102"},
+    "expanon:guitar-synth-and-misc-signal-shapers-ehx-bass-microsynth": {"Q1": "2N5087"},
+    "expanon:guitar-synth-and-misc-signal-shapers-electro-harmonix-micro-synthesizer": {"Q1": "2N5087"},
+    "expanon:tone-control-and-eqs-ibanez-pql-parametric-eq": {"R51": "15k"},
+    "expanon:distortion-boost-and-overdrive-nobels-dt-1": {
+        "R14": "390K", "R105": "1K5", "C1": "0.22µF", "C11": "0.68µF", "C23": "1µF", "C24": "1µF", "C31": "1µF", "C40": "1µF",
+        "C41": "3.3µF", "C201": "220µF", "C202": "220µF", "C203": "47µF", "D1": "1N4148", "D2": "Red LED", "D3": "Red LED",
+        "D4": "1N4148", "D5": "1N4148", "D6": "1N4148", "D7": "1N4148", "D8": "1N4148", "D101": "1N4148", "D201": "1N4001",
+        "Q2": "K222E", "Q3": "K222E", "Q4": "C1571G", "Q5": "K222E", "Q6": "K30A-Y", "Q7": "K30A-Y", "U101": "4007",
+    },
+    "expanon:distortion-boost-and-overdrive-nobels-distortion-xtreme": {
+        "R12": "33K", "R14": "430K", "R15": "330", "R33": "1K8", "R36": "2K0", "R62": "15K", "R64": "750K", "R65": "2K2",
+        "R71": "3K3", "R73": "200K", "R203": "100", "C31": "0.1µF",
+    },
+    "expanon:fuzz-and-fuzzy-noisemakers-nobels-fu-z": {
+        "R6": "1K", "R11": "10K", "R44": "470", "R108": "1M", "C2": "1µF", "C11": "0.1µF", "C12": "1µF", "C21": "0.1µF",
+        "C31": "0.1µF", "C33": "1µF", "C34": "27N", "C41": "1µF", "C42": "1µF", "C43": "2.2µF", "C201": "220µF",
+        "C202": "100µF", "C203": "47µF", "Q1": "K222E", "Q2": "K30A-Y", "Q4": "K30A-Y", "Q5": "K30A-Y", "Q11": "C2240BL",
+        "Q21": "C2240BL", "Q31": "C2240BL", "Q41": "C2240BL", "ATTACK": "A30K", "TONE": "A30K",
+    },
+    "expanon:phasers-ross-phaser": {
+        "U1": "RC4558P", "U2": "RC4558P", "U3": "RC4558P", "U4": "RC4558P", "R12": "470k", "R40": "82k", "R141": None,
+        "Avt": None, "R2": "470k", "R3": "100k", "R4": "100k", "R5": "10k", "R9": "10k", "R11": "10k", "R14": "10k",
+        "R22": "470k", "R25": "10k", "C1": "10n", "C2": "47n", "C3": "10n", "C5": "10n", "C6": "47n", "C7": "10n", "C8": "47n",
+        "C9": "10n", "C11": "1n", "C12": "1µF tant", "C13": "1µF tant", "C15": "10n", "C16": "10µF tant", "C18": "10n",
+        "INTENSITY": "C500K",
+    },
     # The .jpg files of titles the archive also holds as .pdf (the plain id; the .pdf is its own board).
     "expanon:full-synths-drum-synths-and-misc-synth-moog-taurus": {
         "R132": "1K", "R134": "22K", "R147": "4.7K", "R202": "1K", "R203": "22K", "R213": "10K", "R304": "33K", "R305": "2.2M",

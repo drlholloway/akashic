@@ -164,6 +164,11 @@ GitHub Release notes.
   and pots are grouped by taper (A, B, C, W, none) and ordered by resistance.
 
 ### Fixed
+- The last Experimentalists Anonymous candidates checked on their drawings: Danelectro PBJ, Carl Martin Heavy
+  Drive, DOD FX96, Ibanez AD9 and PQL, both EHX Micro Synths; the Nobels DT-1, Distortion Xtreme and Fu-Z and
+  the Ross Phaser are clean drawings and have their misreads (R14 '4148', R64 '062', U1 AM9709CN for RC4558P)
+  and missing parts filled in. Lectric-FX Betty Boost's grid misreads (R1 10M, R2 10K, R7 and R9 18k) and its
+  phantom R0 and C0 are corrected.
 - GuitarPCB reads a document's text layer before OCR. Most NostalgiTone docs carry their parts tables as
   text, so their values are now exact (about 47 parts per board, from 40); OCR only adds parts the text
   does not list. The MUFF'N's ten-variant chart (Ram, Violet Ram, Triangle, 3rd Edition, Creamy Dreamer,
