@@ -8,6 +8,7 @@ from contextlib import contextmanager
 from datetime import datetime, timezone
 
 from .models import Circuit
+from .normalize import normalize_row
 from .paths import DB_PATH
 
 SCHEMA = """
@@ -220,6 +221,23 @@ def _clean_based_on(text: str) -> str:
     return t
 
 
+def _fix_micro_read_as_pico(rows: list) -> None:
+    """OCR reads the micro sign as a p (Vision and tesseract both): '1µ' comes out as 1p. A
+    capacitor under 2pF is never a pedal part, so a machine-read one is taken as µF. Checked on
+    every such row in the library (Big Muff, Rattus, SSM2166, panner, EA Tremolo); larger values
+    such as 100p for 100µ are left alone, as 100pF is a real value."""
+    for r in rows:
+        if r.category != "C" or not ("OCR" in r.notes or "from schematic" in r.notes) or not 0 < r.sort_key < 2e-12:
+            continue
+        m = re.match(r"^(\d*\.?\d+)\s?[pP]", r.value)
+        if m:
+            was = r.value
+            r.value = m.group(1) + "µF" + r.value[m.end():].lstrip("Ff")
+            r.norm_value, r.category = "", "C"
+            normalize_row(r)
+            r.notes = (r.notes + f"; read as {was}").strip("; ")
+
+
 def _fix_stray_digits(rows: list) -> None:
     """OCR reads R11 as R111 and C14 as C141 now and then. An OCR row whose number sits far
     outside the board's range for that prefix is renamed to the designator one dropped digit
@@ -319,13 +337,14 @@ def upsert_circuit(conn: sqlite3.Connection, c: Circuit) -> None:
     from .corrections import apply as apply_corrections
     from .pdf import _expand_range_rows
     c.bom = _expand_range_rows(c.bom)  # 'Q1-2 2N5088' is Q1 and Q2, whichever parser read it
-    c.bom = apply_corrections(c.id, c.bom)
     c.bom = _dedupe_named_knobs(c.bom)
     from .normalize import is_prose_value
     c.bom = [r for r in c.bom if not is_prose_value(r.category, r.value)]  # 'for', 'Clipping', 'empty or your choice' as a part
     # 'A5', '16', '1' is never a pot or trimmer value: OCR prose ('WORKS  A5') or a schematic pin number
     c.bom = [r for r in c.bom if not (r.category in ("POT", "TRIM") and re.fullmatch(r"[ABCW]?\d{1,2}", r.value.strip()))]
     _fix_stray_digits(c.bom)
+    _fix_micro_read_as_pico(c.bom)
+    c.bom = apply_corrections(c.id, c.bom)  # last: hand fixes are keyed by the designators as stored
     c.controls = _dedupe_controls(c.controls)
     c.based_on = _clean_based_on(c.based_on) if c.based_on else c.based_on
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")

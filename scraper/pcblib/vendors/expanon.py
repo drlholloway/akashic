@@ -21,9 +21,18 @@ _BRANDS = re.compile(r"^(boss|dod|mxr|ehx|electro[- ]?harmonix|ibanez|maestro|pr
 _SKIP_DIRS = {"MIDI", "OOP Japanese Electronics Book", "Power Supplies and Other Useful Stuff", "Miscellaneous"}
 
 
+def _slug(folder: str, title: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", f"{folder} {title}".lower()).strip("-")[:80]
+
+
 @register
 class ExpAnon(Adapter):
     vendor = "expanon"
+
+    def __init__(self, fetcher):
+        super().__init__(fetcher)
+        self._seen: set[str] = set()
+        self._second: set[str] = set()  # files sharing a folder and title with an earlier one ('Moog Taurus.jpg' and '.pdf')
 
     def list_targets(self) -> Iterable[str]:
         idx = self.f.get_text(INDEX) or ""
@@ -39,15 +48,22 @@ class ExpAnon(Adapter):
                     continue
                 if not re.search(r"\.(gif|jpe?g|png|bmp|pdf)$", href, re.I):
                     continue
-                yield f"{folder}\t{href}\t{clean_text(_html.unescape(title))}"
+                title = clean_text(_html.unescape(title))
+                slug = _slug(folder, title)
+                if slug in self._seen:
+                    self._second.add(href)
+                self._seen.add(slug)
+                yield f"{folder}\t{href}\t{title}"
 
     def parse(self, target: str) -> Circuit | None:
         folder, href, title = target.split("\t", 2)
         file_url = BASE + quote(href)
         cat_url = BASE + "index.php?dir=" + quote(f"Schematics/{folder}")
         ext = href.rsplit(".", 1)[-1].lower()
-        slug = re.sub(r"[^a-z0-9]+", "-", f"{folder} {title}".lower()).strip("-")[:80]
+        slug = _slug(folder, title)
         name = title or href.rsplit("/", 1)[-1].rsplit(".", 1)[0]
+        if href in self._second:  # its own board and its own rendered image; the first file keeps the plain slug
+            slug, name = f"{slug}-{ext}", f"{name} ({ext.upper()})"
         based_on = name if _BRANDS.search(name) else ""
         c = Circuit(
             vendor=self.vendor, slug=slug, name=name, url=file_url, based_on=based_on,

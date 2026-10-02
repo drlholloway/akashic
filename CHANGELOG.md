@@ -164,6 +164,18 @@ GitHub Release notes.
   and pots are grouped by taper (A, B, C, W, none) and ordered by resistance.
 
 ### Fixed
+- Experimentalists Anonymous: about 200 part values on 54 schematics restored or corrected by hand, each read
+  off the drawing: candidates from a pairing pass that searches farther from each label, which is right about
+  two times in three, so its proposals were checked one by one rather than switched on. The Nobels CO-2 and PH-D
+  are transcribed in full (knobs included). Where the archive holds two files under one title ('Moog
+  Taurus.jpg' and 'Moog Taurus.pdf', 11 titles), each is now its own board with its own image; before, the second
+  overwrote the first and was read from the first one's image.
+- A capacitor under 2pF read by OCR or from a schematic is taken as µF: OCR reads the micro sign as a
+  p, and no pedal uses a 1pF part (MUFF'N C9 and C13, the SSM2166's C3, the panner's C2 and the EA
+  Tremolo's NP caps were all 1µF or 0.1µF). Hand corrections now run last, after designator repairs,
+  so a correction meets the designator as stored. Lectric-FX Double*Take's scanned grid is corrected
+  by hand (67 rows: misread values, junk diodes and designators, nine missed cells), and so are the
+  MUFF'N's C1 and C15.
 - Hand corrections can target one build variant and add rows the parsers missed, not only change
   or drop them. Used for Five Cats Rattus (the RAT's C13 is 1µF, not 1pF; RAT2 R1 and the Turbo
   RAT's C7, C9 and LED clippers added), Lectric-FX Mongrel (D1 1N4002, R18 4K7, C10 100uF, two
