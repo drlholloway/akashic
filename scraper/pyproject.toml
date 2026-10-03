@@ -5,7 +5,7 @@ description = "Scrapers and database builder for the Akashic"
 requires-python = ">=3.12"
 dependencies = [
     "httpx>=0.28",
-    "selectolax>=0.3",
+    "selectolax>=0.3,<1",  # 1.0 drops the Modest HTMLParser the adapters use (lexbor move pending)
     "pymupdf>=1.24",
     "typer>=0.12",
     "rich>=13",
