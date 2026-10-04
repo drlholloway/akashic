@@ -17,13 +17,16 @@ echo "=== refresh started $(date)"
 cd "$ROOT/scraper"
 FAILED="$LOG_DIR/failed.txt"
 : >"$FAILED"
+export LOG_DIR FAILED
+# Each vendor goes to sh as an argument (-n 1), not substituted into the command with -I{}: macOS
+# xargs refuses an -I command longer than 255 bytes ("command line cannot be assembled, too long").
 .venv/bin/python -c "from pcblib.vendors import REGISTRY, load_all; load_all(); print('\n'.join(sorted(REGISTRY)))" |
-  xargs -P 4 -I{} sh -c '
+  xargs -P 4 -n 1 sh -c '
     for try in 1 2 3; do
-      .venv/bin/pcblib scrape {} --refresh-pages > "'"$LOG_DIR"'/{}.log" 2>&1 && exit 0
+      .venv/bin/pcblib scrape "$1" --refresh-pages > "$LOG_DIR/$1.log" 2>&1 && exit 0
       sleep 20
     done
-    echo {} >> "'"$FAILED"'"'
+    echo "$1" >> "$FAILED"' sh
 grep -h "no longer listed\|far fewer than the library" "$LOG_DIR"/*.log 2>/dev/null | sed 's/\x1b\[[0-9;]*m//g' | sort -u
 
 .venv/bin/pcblib stats | tail -3
