@@ -9,7 +9,7 @@ import json
 import re
 from typing import Iterable
 
-from selectolax.parser import HTMLParser
+from selectolax.lexbor import LexborHTMLParser
 
 from ..models import Circuit
 from ..paths import CACHE_DIR, DATA_DIR
@@ -35,7 +35,7 @@ class BentFishbowl(Adapter):
         html = self.f.get_text(url) or ""
         if not html:
             return None
-        doc = HTMLParser(html)
+        doc = LexborHTMLParser(html)
         title_n = doc.css_first('[data-hook="post-title"]') or doc.css_first("h1")
         title = clean_text(title_n.text()) if title_n else ""
         art = doc.css_first('article[data-hook="post"]') or doc.css_first("article")

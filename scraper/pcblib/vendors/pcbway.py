@@ -12,7 +12,7 @@ import math
 import re
 from typing import Iterable
 
-from selectolax.parser import HTMLParser
+from selectolax.lexbor import LexborHTMLParser
 
 from ..models import Circuit
 from ..pdf import schematic_value_bom
@@ -63,7 +63,7 @@ class _PCBWayMember(Adapter):
             return None
         url = PROJECT.format(file=file_name)
         html = self.f.get_text(url) or ""
-        doc = HTMLParser(html)
+        doc = LexborHTMLParser(html)
         title = clean_text(it.get("Title") or (doc.css_first("h1.project-title").text() if doc.css_first("h1.project-title") else file_name))
         m = re.match(r"^(.+?)\s+-\s+(.+)$", title)
         # Titles are "<Brand> - <Pedal>": the pedal is the board's name, brand + pedal the original.

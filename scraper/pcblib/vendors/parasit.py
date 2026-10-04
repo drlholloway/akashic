@@ -6,7 +6,7 @@ from __future__ import annotations
 import re
 from typing import Iterable
 
-from selectolax.parser import HTMLParser
+from selectolax.lexbor import LexborHTMLParser
 
 from ..models import Circuit
 from ..pdf import process_document
@@ -38,7 +38,7 @@ class Parasit(Adapter):
         html = self.f.get_text(url) or ""
         if not html:
             return None
-        doc = HTMLParser(html)
+        doc = LexborHTMLParser(html)
         main = doc.css_first("main") or doc.body
         if main is None:
             return None

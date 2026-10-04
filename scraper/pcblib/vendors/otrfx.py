@@ -7,7 +7,7 @@ from __future__ import annotations
 import re
 from typing import Iterable
 
-from selectolax.parser import HTMLParser
+from selectolax.lexbor import LexborHTMLParser
 
 from ..models import Circuit
 from ..pdf import process_document, pdf_text_pages
@@ -31,7 +31,7 @@ class OTRFX(Adapter):
 
     def list_targets(self) -> Iterable[str]:
         html = self.f.get_text(PAGE) or ""
-        doc = HTMLParser(html)
+        doc = LexborHTMLParser(html)
         root = doc.css_first("main") or doc.body
         section, cur = "", None
         # Walk the page in document order: a linked h3 starts a board, a "$" h3 is its price,

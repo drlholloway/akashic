@@ -7,7 +7,7 @@ import json
 import re
 from typing import Iterable
 
-from selectolax.parser import HTMLParser
+from selectolax.lexbor import LexborHTMLParser
 
 from ..models import BomRow, Circuit
 from ..normalize import normalize_row, is_plausible
@@ -34,10 +34,10 @@ class GuitarPCB(Adapter):
         html = self.f.get_text(url)
         if not html:
             return None
-        doc = HTMLParser(html)
+        doc = LexborHTMLParser(html)
         desc_n = doc.css_first("#tab-description")
         desc_html = desc_n.html if desc_n else ""
-        pdfs = [a.attributes["href"] for a in HTMLParser(desc_html).css('a[href$=".pdf"]')
+        pdfs = [a.attributes["href"] for a in LexborHTMLParser(desc_html).css('a[href$=".pdf"]')
                 if "Tonmann" not in a.attributes.get("href", "")]
         # Faceplate art and drill PDFs sit beside the build doc; put them last so the doc is parsed.
         pdfs = sorted(pdfs, key=lambda p: bool(re.search(r"final-?art|artwork|faceplate|drill|template", p, re.I)))

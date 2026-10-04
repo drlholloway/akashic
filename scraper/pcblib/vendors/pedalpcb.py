@@ -5,7 +5,7 @@ import json
 import re
 from typing import Iterable
 
-from selectolax.parser import HTMLParser
+from selectolax.lexbor import LexborHTMLParser
 
 from ..models import Circuit
 from ..pdf import process_document
@@ -48,7 +48,7 @@ class PedalPCB(Adapter):
         html = self.f.get_text(url)
         if not html:
             return None
-        doc = HTMLParser(html)
+        doc = LexborHTMLParser(html)
         ld = _product_ld(html)
         category_path = _unescape(ld.get("category", "")) if ld else ""
         if category_path.split(">")[0].strip().lower() in {"components", "enclosures", "hardware", "gift cards"}:

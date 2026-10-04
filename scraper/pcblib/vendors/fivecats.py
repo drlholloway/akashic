@@ -8,7 +8,7 @@ import json
 import re
 from typing import Iterable
 
-from selectolax.parser import HTMLParser
+from selectolax.lexbor import LexborHTMLParser
 
 from ..ibom import parse_ibom
 from ..models import Circuit
@@ -71,7 +71,7 @@ class FiveCats(Adapter):
             return None
         url = pr.get("permalink") or f"{BASE}/product/{slug}/"
         html = self.f.get_text(url) or ""
-        doc = HTMLParser(html)
+        doc = LexborHTMLParser(html)
 
         def attr(name: str) -> tuple[str, str]:
             cell = doc.css_first(f"tr.woocommerce-product-attributes-item--attribute_pa_{name} td")

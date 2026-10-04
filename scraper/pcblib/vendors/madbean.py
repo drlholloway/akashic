@@ -5,7 +5,7 @@ import re
 from typing import Iterable
 from urllib.parse import urljoin
 
-from selectolax.parser import HTMLParser
+from selectolax.lexbor import LexborHTMLParser
 
 from ..models import BomRow, Circuit
 from ..normalize import normalize_row, is_plausible
@@ -25,7 +25,7 @@ class Madbean(Adapter):
 
     def list_targets(self) -> Iterable[str]:
         html = self.f.get_text(PROJECTS) or ""
-        doc = HTMLParser(html)
+        doc = LexborHTMLParser(html)
         section = ""
         for tr in doc.css("tr"):
             hdr = tr.css_first('td[colspan="9"]')
@@ -38,7 +38,7 @@ class Madbean(Adapter):
 
     def parse(self, target: str) -> Circuit | None:
         section, href, row_html = target.split("\t", 2)
-        tr = HTMLParser(f"<table>{row_html}</table>")
+        tr = LexborHTMLParser(f"<table>{row_html}</table>")
         tds = tr.css("td")
         name = based_on = ""
         for i, td in enumerate(tds):

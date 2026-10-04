@@ -6,7 +6,7 @@ from __future__ import annotations
 import re
 from typing import Iterable
 
-from selectolax.parser import HTMLParser
+from selectolax.lexbor import LexborHTMLParser
 
 from ..models import BomRow, Circuit
 from ..normalize import normalize_row, is_plausible
@@ -34,7 +34,7 @@ class FuzzDog(Adapter):
                 html = self.f.get_text(url)
                 if not html:
                     break
-                doc = HTMLParser(html)
+                doc = LexborHTMLParser(html)
                 links = [a.attributes.get("href", "") for a in doc.css(".product_name a")]
                 new = 0
                 for href in links:
@@ -61,7 +61,7 @@ class FuzzDog(Adapter):
         pdfs = [p for p in all_pdfs if p not in general] or all_pdfs
         if not pdfs:
             return None  # PCB-only page or accessory; the kit page carries the doc
-        doc = HTMLParser(html)
+        doc = LexborHTMLParser(html)
 
         def meta(name: str, attr: str = "itemprop") -> str:
             n = doc.css_first(f'meta[{attr}="{name}"]')

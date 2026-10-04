@@ -4,7 +4,7 @@ from __future__ import annotations
 import re
 from typing import Iterable
 
-from selectolax.parser import HTMLParser
+from selectolax.lexbor import LexborHTMLParser
 
 from ..models import Circuit
 from ..pdf import process_document
@@ -27,7 +27,7 @@ class AionFX(Adapter):
         html = self.f.get_text(url)
         if not html:
             return None
-        doc = HTMLParser(html)
+        doc = LexborHTMLParser(html)
         pdfs = sorted(set(re.findall(r'https://aionfx\.com/app/files/docs/[^"\' >]+\.pdf', html)),
                       key=lambda u: (0 if u.lower().endswith("_documentation.pdf") else 1, u))
         if not pdfs or not pdfs[0].lower().endswith("_documentation.pdf"):

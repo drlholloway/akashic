@@ -6,7 +6,7 @@ from __future__ import annotations
 import re
 from typing import Iterable
 
-from selectolax.parser import HTMLParser
+from selectolax.lexbor import LexborHTMLParser
 
 from ..models import Circuit
 from ..paths import DATA_DIR
@@ -29,7 +29,7 @@ class DeadAstronaut(Adapter):
 
     def list_targets(self) -> Iterable[str]:
         home = self.f.get_text(BASE) or ""
-        doc = HTMLParser(home)
+        doc = LexborHTMLParser(home)
         for a in doc.css("a[href]"):
             href = a.attributes.get("href") or ""
             m = re.match(re.escape(BASE) + r"/([a-z0-9-]+)/?$", href)
@@ -48,7 +48,7 @@ class DeadAstronaut(Adapter):
         html = self.f.get_text(url) or ""
         if not html:
             return None
-        doc = HTMLParser(html)
+        doc = LexborHTMLParser(html)
         pdfs = re.findall(r'href="(https://[a-f0-9-]+\.filesusr\.com/ugd/[^"]+\.pdf)"[^>]*(?:title|aria-label)="([^"]+)"', html)
         build = [(u, t) for u, t in pdfs if re.search(r"build|doc", t, re.I)]
         if not build and not pdfs:

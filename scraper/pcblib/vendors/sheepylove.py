@@ -6,7 +6,7 @@ import json
 import re
 from typing import Iterable
 
-from selectolax.parser import HTMLParser
+from selectolax.lexbor import LexborHTMLParser
 
 from ..models import Circuit
 from ..pdf import process_document, pdf_text_pages
@@ -82,7 +82,7 @@ class SheepyLove(Adapter):
             tags=[t for t in tags if t.lower() not in ("od",)] or [], price=price, currency="EUR",
             sku=sku, in_stock=in_stock, doc_url=doc_url, image_url=images[0] if images else "",
         )
-        for a in HTMLParser(body_html).css("a[href]"):
+        for a in LexborHTMLParser(body_html).css("a[href]"):
             href = a.attributes.get("href", "")
             if href.startswith("http") and "sheepylove.com" not in href:
                 c.extra_docs[clean_text(a.text()) or "Designer's notes"] = href

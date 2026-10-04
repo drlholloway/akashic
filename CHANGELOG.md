@@ -169,6 +169,10 @@ GitHub Release notes.
   and pots are grouped by taper (A, B, C, W, none) and ordered by resistance.
 
 ### Fixed
+- Scraper on selectolax 1.0: the vendor adapters parse HTML with LexborHTMLParser, as 1.0 removed the old
+  Modest parser. Re-scraping all twelve affected vendors from cache gave the same boards, fields and parts
+  rows, with one fix: Madbean's Snarkdoodle row, whose malformed table cell the old parser dropped, now
+  reads its 1590A enclosure. CI installs the scraper from uv.lock, so a dependency release cannot break it.
 - Hand transcriptions for documents no parser reads: Five Cats' Supa Fuzz and both Vintage Style Fuzz
   Face inserts (wiring diagrams with values on the parts), Effects Layouts' Drivestortion (six versions
   side by side: DOD Grey and Yellow 250, MXR Distortion+, Ross, DeArmond Square Wave, YJM308) and
