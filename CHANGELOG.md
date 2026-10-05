@@ -169,6 +169,15 @@ GitHub Release notes.
   and pots are grouped by taper (A, B, C, W, none) and ordered by resistance.
 
 ### Fixed
+- delyk PCBs stopped selling online and replaced its WooCommerce shop with a static catalog, so the
+  adapter now reads the catalog's product pages: their Downloads section for the build document and
+  drill template, and the spec list for difficulty, original and enclosure. Boards keep their pages;
+  prices are gone, and in stock means the maker still has copies (ask through the site). Buzz Box,
+  Conductor's Hand and Lightning Bolt now have parts lists, and El Rey de la Gloria Azul II is
+  transcribed as its four versions (Blues Breaker, Morning Glory, King of Tone, Ultimate King of Tone).
+- Weekly refresh: the vendor loop failed on macOS before scraping anything (an xargs -I command longer
+  than 255 bytes), so a scheduled run audited and deployed unchanged data. Each vendor now goes to the
+  loop as an argument.
 - Scraper on selectolax 1.0: the vendor adapters parse HTML with LexborHTMLParser, as 1.0 removed the old
   Modest parser. Re-scraping all twelve affected vendors from cache gave the same boards, fields and parts
   rows, with one fix: Madbean's Snarkdoodle row, whose malformed table cell the old parser dropped, now

@@ -244,15 +244,18 @@ _FIVE_CATS_FUZZ_FACE = [
     ("Fuzz", "B1K", "POT", "or C1K"), ("Vol", "A500K", "POT", ""),
 ]
 def _variant_table(variants: list[str], rows: list[tuple]) -> list[tuple]:
-    """A per-variant chart written as (ref, category, value per variant...); 'omit' leaves the part out."""
+    """A per-variant chart written as (ref, category, value per variant...); 'omit' or 'jumper' leaves the
+    part out, and 'value|note' carries a note for that cell."""
     out = []
     for v_i, v in enumerate(variants):
         for ref, cat, *vals in rows:
             note = ""
             val = vals[v_i]
-            if val in ("omit", "jumper"):
+            if val.lower() in ("omit", "jumper"):
                 continue
-            if val.endswith("*"):
+            if "|" in val:
+                val, note = val.split("|", 1)
+            elif val.endswith("*"):
                 val, note = val.rstrip("*"), "1N34A are good replacements"
             out.append((ref, val, cat, note, v))
     return out
@@ -276,7 +279,34 @@ _DRIVESTORTION = _variant_table(
      ("Gain", "POT", "C500k", "C1M", "C1M", "C500k", "C500k", "C500k"),
      ("Level", "POT", "A100k", "A10k", "A10k", "B50k", "A10k", "W100k")])
 
+_EL_REY_II = _variant_table(
+    ["Blues Breaker", "Morning Glory", "King of Tone", "Ultimate King of Tone"],
+    [("RPD", "R", *["1M|1M to 2M2"] * 4), ("R1", "R", *["1M"] * 4), ("R2", "R", "3k3", "3k3", "33k", "33k"),
+     ("R3", "R", "4k7", "4k7", "27k", "27k"), ("R4", "R", *["10k"] * 4), ("R5", "R", *["220k"] * 4),
+     ("R6", "R", *["6k8"] * 4), ("R7", "R", *["1k"] * 4), ("R8", "R", *["6k8"] * 4), ("R9", "R", *["1M"] * 4),
+     ("R10", "R", *["47k"] * 4), ("R11", "R", *["47k"] * 4), ("RX1", "R", "omit", "68k", "omit", "68k"),
+     ("RX2", "R", "omit", "1M", "omit", "1M"), ("RX3", "R", "omit", "22k", "omit", "22k"),
+     ("RX4", "R", "omit", "12k", "omit", "12k"), ("RX5", "R", "omit", "12k", "omit", "12k"),
+     ("RX6", "R", "omit", "100k", "omit", "100k"),
+     *[(d, "D", "1N914", "1N4148", "MA856|BA282 a suggested sub", "MA856|BA282 a suggested sub") for d in ("D1", "D2", "D3", "D4")],
+     ("D9", "D", "omit", "omit", "1S1588", "1S1588"), ("D10", "D", "omit", "omit", "1S1588", "1S1588"),
+     ("D11", "D", *["1N4001|polarity protection; any 1N400x"] * 4),
+     ("C1", "C", "10nF", "47nF", "10nF", "10nF"), ("C2", "C", "47pF", "47pF", "100pF", "100pF"),
+     ("C3", "C", *["10nF"] * 4), ("C4", "C", *["10nF"] * 4), ("C5", "C", *["100nF"] * 4), ("C6", "C", *["10nF"] * 4),
+     ("C7", "C", *["10nF"] * 4), ("C8", "C", "100nF", "jumper", "1uF", "1uF"), ("C10", "C", *["100uF"] * 4),
+     ("C11", "C", *["100uF"] * 4), ("CX1", "C", "omit", "100pF", "omit", "100pF"), ("CX2", "C", "omit", "470pF", "omit", "470pF"),
+     ("CX3", "C", "omit", "100nF", "omit", "100nF"), ("CX4", "C", "omit", "10uF", "omit", "10uF"),
+     ("CX5", "C", "omit", "omit", "1uF", "1uF"), ("CX6", "C", "jumper", "2u2", "jumper", "jumper"),
+     ("IC1", "IC", "TL072", "LM833N", "JRC4580", "JRC4580"), ("Q1", "Q", "omit", "2N5457", "omit", "2N5457"),
+     ("Gain", "POT", *["B100k"] * 4), ("Pres", "TRIM", *["50k|trimpot"] * 4), ("Tone", "POT", *["B25k"] * 4),
+     ("Vol", "POT", *["A100k"] * 4), ("Bright Cut", "SW", "omit", "SPDT on-off-on", "omit", "SPDT on-off-on"),
+     ("Hard Clip", "SW", "omit", "omit", "SPDT on-on", "SPDT on-on"), ("Clip", "SW", "omit", "omit", "omit", "SPDT on-off-on")])
+
 TRANSCRIBED: dict[str, list[tuple]] = {
+    # delyk El Rey de la Gloria Azul II: four versions over tables whose wrapped headers and multi-word
+    # cells defeat the column parsers (checked 2026-10-05). D5-D8 on the Ultimate KoT are the builder's
+    # pick of clipping diodes (see the doc's modifications), so they are left out.
+    "delyk:el-rey-de-la-gloria-azul-ii": _EL_REY_II,
     # Effects Layouts Lawn Darts: a single scanned schematic; OCR read 8 junk-ridden labels (checked 2026-10-02).
     "effectslayouts:lawn-darts": [
         ("R1", "1M", "R", ""), ("R2", "100R", "R", ""), ("R3", "10M", "R", ""), ("R4", "1.3k", "R", ""), ("R5", "100k", "R", ""),

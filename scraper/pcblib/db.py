@@ -116,7 +116,8 @@ VENDORS = {
     "coda": ("Coda Effects", "https://shop.coda-effects.com/en/shop/",
              "Build documents on Google Drive are indexed and linked, not redistributed."),
     "delyk": ("delyk PCBs", "https://www.delykpcb.com/shop/",
-              "Build documents in the site's media library are indexed and linked, not redistributed."),
+              "delyk stopped selling online in October 2026; the catalog stays up and the maker sells remaining PCBs on request "
+              "(contact through the site). Build documents are indexed and linked, not redistributed."),
     "tayda": ("Tayda Electronics (DHEA)", "https://www.taydakits.com/categories/diy-guitar-effects",
               "Instruction Center pages are indexed and linked, not redistributed; prices are not readable (Cloudflare)."),
     "schalltechnik": ("Schalltechnik_04", "https://schalltechnik04.de/en/instructions",

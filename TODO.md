@@ -50,9 +50,9 @@ at the bottom; re-run them after parser changes.
   skipped; the SCH-1 Chorus reads from its interactive BOM instead of a project PDF.
   Schematic pages are found by their 'N. Schematic:' heading, but the drawings name pots
   RVn, so controls stay knob counts.
-- **delyk PCBs**: six boards have no BOM in the media library (Fussy Valve 809, Lightning
-  Bolt, TranqDrive, LB-Fuzz, Buzz Box, Conductor's Hand); named trimpots (DEPTH, RATE) are
-  read from their 'Trimpot' note.
+- **delyk PCBs**: stopped selling online in October 2026; the site is now a static catalog with no
+  prices. Three boards have no document in their Downloads section (Fussy Valve 809, TranqDrive,
+  LB-Fuzz); named trimpots (DEPTH, RATE) are read from their 'Trimpot' note.
 - **Schalltechnik_04**: parts pages are quantity / type tables without designators, so rows
   are quantity-named; controls come from the pots named in the intro prose.
 - **Guitar-Electronics.eu**: the PDFs name pots only on the wiring drawing (values under the
