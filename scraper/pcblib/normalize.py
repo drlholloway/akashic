@@ -360,6 +360,50 @@ def catalog_category(category: str, key: str) -> str:
     return category
 
 
+# IC families written under many names: (second-source prefixes, number, canonical name). The prefix
+# list is per family so a different chip that shares the number stays apart (LM4040 is a voltage
+# reference, CD4040 a counter; TLC555 is the CMOS 555); any package or grade suffix after the number
+# (CP, N, D, SCPA, N-1, BE) is the same chip.
+_IC_FAMILIES: list[tuple[str, str, str]] = [
+    ("TL|JRC|NJM|KIA", "0([2-8][1-4])", "TL0{0}"),
+    ("J?RC|NJM|LM|KA|MC|HA", "4558", "4558"), ("J?RC|NJM", "4559", "4559"), ("J?RC|NJM", "4580", "4580"),
+    ("LM|MC|JRC|NJM|LH|CA|RC|KA", "1458", "1458"), ("LM|UA|CA|JRC|NJM|MC|KA", "741", "741"),
+    ("LM|JRC|NJM", "386", "LM386"), ("LM|NJM", "833", "LM833"), ("NE|SA|LM", "5532", "NE5532"),
+    ("NE|SA|JRC|NJM", "5534", "NE5534"), ("LM|JRC|NJM|V", "13700", "LM13700"), ("LM|JRC|NJM", "13600", "LM13600"),
+    ("OPA?", "2134", "OPA2134"), ("OPA?", "1678", "OPA1678"), ("OPA", "2604", "OPA2604"), ("OPA", "134", "OPA134"),
+    ("LM|JRC|NJM|KA", "358", "LM358"), ("LM|KA", "324", "LM324"), ("LM", "308", "LM308"), ("CA|LM", "3080", "CA3080"),
+    ("MN|V|BL", "3102", "MN3102"), ("MN|V|BL", "3207", "MN3207"), ("MN|V|BL", "3205", "MN3205"), ("MN|V|BL", "3007", "MN3007"),
+    ("LF|LM", "353", "LF353"), ("LF", "347", "LF347"), ("LF", "351", "LF351"), ("LF", "412", "LF412"),
+    ("LM", "311", "LM311"), ("LM", "301", "LM301A"), ("CA", "3130", "CA3130"), ("CA", "3260", "CA3260"),
+    ("XR", "2206", "XR2206"), ("RC|NJM|MC|LM", "3403", "3403"), ("NE|SA|V", "571", "NE571"), ("TLC", "2262", "TLC2262"),
+    ("LM|JRC|NJM", "4562", "LM4562"), ("M", "5218", "M5218"), ("M", "5216", "M5216"), ("NJM|LM", "2904", "2904"),
+    ("UPC|C", "4570", "UPC4570"), ("MC", "33179", "MC33179"), ("LM", "339", "LM339"), ("THAT", "2181", "THAT2181"),
+    ("TDA", "7052", "TDA7052"), ("TLC", "272", "TLC272"), ("PT-?", "2399", "PT2399"), ("LT", "1054", "LT1054"),
+    ("TC|MAX|LTC|ICL", "1044", "TC1044"), ("NE|LM|SA|UA", "555", "NE555"), ("NE|LM|SA", "556", "NE556"),
+    ("L|LM|UA|MC|KA", "78(0[5-9]|1[0-5])", "78{0}"), ("L|LM|UA|MC|KA", "79(0[5-9]|1[0-5])", "79{0}"),
+]
+# The suffix starts with a letter: 'LM3080' is not the LM308 with a 0 after it.
+_IC_FAMILY_RE = [(re.compile(rf"^(?:{pre})?{num}(?:[A-Z]{{1,6}}\d?)?(?:-[A-Z0-9]{{1,4}})?$"), name) for pre, num, name in _IC_FAMILIES]
+
+
+def ic_name(part: str) -> str:
+    """The canonical name of an IC part number: 072 and TL072CP are the TL072, JRC4558D and RC4558P the
+    4558. 7660 and 7660S stay apart (the S takes a higher supply), as does a CD4000 chip's UB."""
+    t = part.upper().replace(" ", "")
+    m = re.fullmatch(r"(?:ICL|TC|TL|MAX|LTC|SI)?7660(S?)[A-Z]*\d?", t)
+    if m:
+        return "7660" + m.group(1)
+    for rx, name in _IC_FAMILY_RE:  # op-amps first: 4558, 4559 and 4580 are not CMOS logic
+        m = rx.match(t)
+        if m:
+            return name.format(*m.groups())
+    # CMOS logic: a bare number only from the 4000s (4013, 40106); the 4500s need their CD/HEF prefix.
+    m = re.fullmatch(r"(?:(CD|HEF|MC1)?(4[05]\d{2,3}))(UB)?(?:[A-Z]{1,4}\d{0,2})?(?:\.\d)?", t)
+    if m and (m.group(2).startswith("40") or m.group(1)) and len(m.group(2)) in (4, 5):
+        return f"CD{m.group(2)}" + ("UB" if m.group(2) in ("4049", "4069", "4007") or m.group(3) else "")
+    return part
+
+
 def catalog_keys(category: str, value: str) -> list[str]:
     """The part identities a parts-list value contributes to the cross-reference: part
     numbers (one per alternative in '2N5088 or 2N5089', '7660S/LT1054'), a few generic
@@ -388,7 +432,7 @@ def catalog_keys(category: str, value: str) -> list[str]:
                 for rx, rep in _CATALOG_FIX:
                     t = rx.sub(rep, t)
                 if t and not re.search(r"\d\.[A-Z]|^[ABOPQSTUX]\d{3}$", t) and not re.fullmatch(r"\dATA|[A-Z]0\d\d", t):
-                    keys.append(t)
+                    keys.append(ic_name(t) if category == "IC" else t)
             elif category == "XTAL" and (m := re.search(r"\d+(?:\.\d+)?\s*[KM]?HZ", piece)):
                 keys.append(m.group(0).replace(" ", ""))
         return list(dict.fromkeys(keys))

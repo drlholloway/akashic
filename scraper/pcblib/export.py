@@ -18,7 +18,7 @@ from datetime import date, timedelta
 
 from . import db as dbm
 from .originals import harmonize, original
-from .normalize import catalog_category, catalog_keys
+from .normalize import catalog_category, catalog_keys, ic_name
 from .paths import EXPORT_DIR
 
 
@@ -103,7 +103,8 @@ def run(images: bool = False) -> None:
             bom = [b for b in bom if not b["variant"] or b["variant"] == (variants[0] if variants else "")]
             has_schematic = bool(c.get("schematic_local"))
             # active-part signature for search: ICs, transistors, diodes, opto
-            actives = sorted({b["norm_value"] for b in bom if b["category"] in ("IC", "Q", "OPTO")})
+            actives = sorted({b["norm_value"] for b in bom if b["category"] in ("IC", "Q", "OPTO")}
+                             | {ic_name(b["norm_value"]) for b in bom if b["category"] == "IC" and b["norm_value"]})  # '072' also finds TL072
             o = original(c["based_on"])  # one name per original: 'EHX Big Muff' and 'Big Muff Pi' alike
             c["original"] = settled.get(o, o)
             index.append({

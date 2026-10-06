@@ -36,6 +36,10 @@ jobs:
                             "Ibanez TS-808": "Ibanez TS808 Tube Screamer", "Fuzz Face into Big Muff": "Fuzz Face into Big Muff",
                             "Lots of Big Muff Pi variants": ""}.items():
               assert original(raw) == want, (raw, original(raw), want)
+          from pcblib.normalize import ic_name
+          for raw, want in {"072": "TL072", "TL072CP": "TL072", "JRC4558D": "4558", "LM3080": "CA3080", "LM308N": "LM308",
+                            "7660S": "7660S", "ICL7660": "7660", "TLC555": "TLC555", "LM4040": "LM4040", "4049": "CD4049UB"}.items():
+              assert ic_name(raw) == want, (raw, ic_name(raw), want)
           print("ok")
           PY
       - name: export an empty library

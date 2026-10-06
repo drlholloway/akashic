@@ -169,6 +169,12 @@ GitHub Release notes.
   and pots are grouped by taper (A, B, C, W, none) and ordered by resistance.
 
 ### Fixed
+- Parts: one entry per IC. Parts lists name the same chip with package and grade suffixes (TL072CP,
+  TL072P, LM386N-1, TC1044SCPA) and second-source prefixes (RC/JRC/NJM 4558, MN/V/BL 3207, UA/LM 741),
+  and '072' for the TL072, which split each chip across many parts pages. They now share one name and
+  page: IC entries went from 528 to 299 (TL072: 744 boards on one page). Chips that only share a number
+  stay apart (LM4040 and CD4040, TLC555 and NE555, 7660 and 7660S), and a search for TL072 also finds a
+  board whose list says '072'.
 - Originals: one name per original circuit. Vendors write the same pedal many ways ('EHX Big Muff',
   'Electro-Harmonix Big Muff Pi', 'Big Muff'), which split it across the Originals list. Brand aliases
   are now spelled one way, the best-known models are matched by pattern with their siblings kept apart
