@@ -7,6 +7,8 @@ export interface IndexEntry {
 	name: string;
 	subtitle: string;
 	based_on: string;
+	/** One name per original ('Electro-Harmonix Big Muff Pi' for 'EHX Big Muff'); '' when based_on is a description. */
+	original: string;
 	category: string;
 	effect_type: string;
 	enclosure: string;

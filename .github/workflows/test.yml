@@ -30,6 +30,12 @@ jobs:
           for (ref, val), want in cases.items():
               got = normalize_row(BomRow(ref=ref, value=val)).norm_value
               assert got == want, (ref, val, got, want)
+          from pcblib.originals import original
+          for raw, want in {"EHX Big Muff": "Electro-Harmonix Big Muff Pi", "Big Muff Pi": "Electro-Harmonix Big Muff Pi",
+                            "EHX Op-Amp Big Muff": "Electro-Harmonix Op-Amp Big Muff Pi", "Pro Co RAT": "ProCo RAT",
+                            "Ibanez TS-808": "Ibanez TS808 Tube Screamer", "Fuzz Face into Big Muff": "Fuzz Face into Big Muff",
+                            "Lots of Big Muff Pi variants": ""}.items():
+              assert original(raw) == want, (raw, original(raw), want)
           print("ok")
           PY
       - name: export an empty library

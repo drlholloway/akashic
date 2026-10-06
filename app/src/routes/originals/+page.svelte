@@ -8,14 +8,13 @@
 	const groups = $derived.by(() => {
 		const m = new Map<string, { label: string; count: number; vendors: Set<Vendor>; categories: Set<string> }>();
 		for (const e of data.index) {
-			if (!e.based_on) continue;
-			const k = normalizeOriginal(e.based_on);
+			if (!e.original) continue; // a description ('Lots of Big Muff variants') names no single original
+			const k = normalizeOriginal(e.original);
 			if (!k) continue;
-			const g = m.get(k) ?? { label: e.based_on, count: 0, vendors: new Set<Vendor>(), categories: new Set<string>() };
+			const g = m.get(k) ?? { label: e.original, count: 0, vendors: new Set<Vendor>(), categories: new Set<string>() };
 			g.count++;
 			g.vendors.add(e.vendor);
 			g.categories.add(e.category);
-			if (e.based_on.length < g.label.length) g.label = e.based_on; // prefer the shortest spelling
 			m.set(k, g);
 		}
 		const t = q.trim().toLowerCase();

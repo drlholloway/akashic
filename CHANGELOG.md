@@ -169,6 +169,14 @@ GitHub Release notes.
   and pots are grouped by taper (A, B, C, W, none) and ordered by resistance.
 
 ### Fixed
+- Originals: one name per original circuit. Vendors write the same pedal many ways ('EHX Big Muff',
+  'Electro-Harmonix Big Muff Pi', 'Big Muff'), which split it across the Originals list. Brand aliases
+  are now spelled one way, the best-known models are matched by pattern with their siblings kept apart
+  (Op-Amp Big Muff, Big Muff Pi 2, RAT 2, TS808), a model only one brand makes gets that brand when the
+  vendor left it off, and every spelling takes the most common one. Big Muff went from 39 entries to 11
+  and the list from 2,567 to 2,304. Pairings ('Fuzz Face into Big Muff') keep their own entry, and
+  descriptions that name no single original ('Lots of Big Muff variants') stay on the circuit page but
+  off the list. Older links that carry a vendor's spelling open the whole group.
 - delyk PCBs stopped selling online and replaced its WooCommerce shop with a static catalog, so the
   adapter now reads the catalog's product pages: their Downloads section for the build document and
   drill template, and the spec list for difficulty, original and enclosure. Boards keep their pages;

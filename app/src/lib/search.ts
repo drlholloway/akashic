@@ -69,12 +69,19 @@ export function applyFilters(entries: IndexEntry[], f: Filters): IndexEntry[] {
 		const m = e.controls.length === 1 && /^(\d+) knobs?$/.exec(e.controls[0]);
 		return m ? Number(m[1]) : e.controls.length;
 	};
+	// A link may carry a vendor's own spelling ('EHX Big Muff', from before originals were settled):
+	// resolve it to the original that spelling now belongs to, so it opens the whole group.
+	let basedKey = f.basedOn ? normalizeOriginal(f.basedOn) : '';
+	if (basedKey && !entries.some((e) => normalizeOriginal(e.original) === basedKey)) {
+		const hit = entries.find((e) => e.original && normalizeOriginal(e.based_on) === basedKey);
+		if (hit) basedKey = normalizeOriginal(hit.original);
+	}
 	const out = entries.filter((e) => {
 		if (ids && !ids.has(e.id)) return false;
 		if (f.vendor.length && !f.vendor.includes(e.vendor)) return false;
 		if (f.category.length && !f.category.includes(e.category)) return false;
 		if (f.enclosure.length && !f.enclosure.includes(e.enclosure)) return false;
-		if (f.basedOn && normalizeOriginal(e.based_on) !== normalizeOriginal(f.basedOn)) return false;
+		if (basedKey && normalizeOriginal(e.original) !== basedKey && normalizeOriginal(e.based_on) !== basedKey) return false;
 		if (f.part && !e.actives.includes(f.part)) return false;
 		if (f.knobs != null && knobsOf(e) !== f.knobs) return false;
 		if (f.inStock && (e.in_stock !== true || e.delisted)) return false;

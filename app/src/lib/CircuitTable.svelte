@@ -46,15 +46,17 @@
 						<a href="{base}/circuit/{e.file_id}">{e.name}</a>
 						{#if e.subtitle}<span class="sub">{e.subtitle}</span>{/if}
 						{#if e.actives.length}<span class="actives mono">{e.actives.slice(0, 4).join(' · ')}</span>{/if}
-						{#if e.based_on || e.enclosure}<span class="folded">{[e.based_on, e.enclosure].filter(Boolean).join(' · ')}</span>{/if}
+						{#if e.based_on || e.enclosure}<span class="folded">{[e.original || e.based_on, e.enclosure].filter(Boolean).join(' · ')}</span>{/if}
 					</td>
 					<td class="based">
-						{#if e.based_on}
+						{#if e.original}
 							{#if onOriginal}
-								<button type="button" class="linkish" onclick={() => onOriginal(e.based_on)} title="Show every circuit based on {e.based_on}">{e.based_on}</button>
+								<button type="button" class="linkish" onclick={() => onOriginal(e.original)} title="Show every circuit based on the {e.original}">{e.original}</button>
 							{:else}
-								<a href="{base}/?based={encodeURIComponent(e.based_on)}">{e.based_on}</a>
+								<a href="{base}/?based={encodeURIComponent(e.original)}">{e.original}</a>
 							{/if}
+						{:else if e.based_on}
+							<span class="dim">{e.based_on}</span>
 						{:else}
 							<span class="dim">—</span>
 						{/if}

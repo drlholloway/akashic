@@ -17,6 +17,7 @@ from collections import defaultdict
 from datetime import date, timedelta
 
 from . import db as dbm
+from .originals import harmonize, original
 from .normalize import catalog_category, catalog_keys
 from .paths import EXPORT_DIR
 
@@ -90,6 +91,7 @@ def run(images: bool = False) -> None:
         vendors = {r["id"]: {**dict(r), "kind": dbm.VENDOR_KIND.get(r["id"], "shop"), "warning": dbm.VENDOR_WARNING.get(r["id"], "")}
                    for r in conn.execute("SELECT * FROM vendors")}
         circuits = [_row(r) for r in conn.execute("SELECT * FROM circuits ORDER BY vendor, name")]
+        settled = harmonize([original(c["based_on"]) for c in circuits])
         for c in circuits:
             bom = [dict(b) for b in conn.execute(
                 "SELECT ref,value,part_type,notes,category,norm_value,sort_key,variant FROM bom "
@@ -102,9 +104,11 @@ def run(images: bool = False) -> None:
             has_schematic = bool(c.get("schematic_local"))
             # active-part signature for search: ICs, transistors, diodes, opto
             actives = sorted({b["norm_value"] for b in bom if b["category"] in ("IC", "Q", "OPTO")})
+            o = original(c["based_on"])  # one name per original: 'EHX Big Muff' and 'Big Muff Pi' alike
+            c["original"] = settled.get(o, o)
             index.append({
                 "id": c["id"], "file_id": c["file_id"], "vendor": c["vendor"], "name": c["name"],
-                "subtitle": c["subtitle"], "based_on": c["based_on"], "category": c["category"],
+                "subtitle": c["subtitle"], "based_on": c["based_on"], "original": c["original"], "category": c["category"],
                 "effect_type": c["effect_type"], "enclosure": c["enclosure"], "difficulty": c["difficulty"],
                 "price": c["price"], "currency": c["currency"], "in_stock": c["in_stock"],
                 "delisted": c.get("delisted") or "", "last_listed": c.get("last_listed") or "",

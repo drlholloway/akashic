@@ -11,8 +11,8 @@
 	const c = $derived(data.circuit);
 	const vendorWarning = $derived((data.vendors as Record<string, { warning?: string }> | undefined)?.[c.vendor]?.warning ?? '');
 	const siblings = $derived(
-		c.based_on
-			? data.index.filter((e) => e.id !== c.id && e.based_on && normalizeOriginal(e.based_on) === normalizeOriginal(c.based_on))
+		c.original
+			? data.index.filter((e) => e.id !== c.id && e.original && normalizeOriginal(e.original) === normalizeOriginal(c.original))
 			: []
 	);
 	const variants = $derived(c.variants ?? []);
@@ -65,8 +65,8 @@
 </script>
 
 <svelte:head>
-	<title>{c.name}{c.based_on ? ` (${c.based_on})` : ''} · {VENDOR_NAMES[c.vendor]} · Akashic</title>
-	<meta name="description" content="{c.name} by {VENDOR_NAMES[c.vendor]}{c.based_on ? `, based on the ${c.based_on}` : ''}. Parts list, controls, enclosure and where to buy the PCB." />
+	<title>{c.name}{c.original ? ` (${c.original})` : ''} · {VENDOR_NAMES[c.vendor]} · Akashic</title>
+	<meta name="description" content="{c.name} by {VENDOR_NAMES[c.vendor]}{c.original ? `, based on the ${c.original}` : ''}. Parts list, controls, enclosure and where to buy the PCB." />
 </svelte:head>
 
 <article class="circuit">
@@ -78,8 +78,10 @@
 		<div class="title">
 			<p class="label"><a href="{base}/?vendor={c.vendor}">{VENDOR_NAMES[c.vendor]}</a>{#if c.sku} · <span class="mono">{c.sku}</span>{/if}</p>
 			<h1>{c.name}{#if c.subtitle}<span class="sub">{c.subtitle}</span>{/if}</h1>
-			{#if c.based_on}
-				<p class="based">Based on the <a href="{base}/?based={encodeURIComponent(c.based_on)}">{c.based_on}</a>{#if siblings.length}<span class="dim"> · {siblings.length} other {siblings.length === 1 ? 'board clones' : 'boards clone'} it</span>{/if}</p>
+			{#if c.original}
+				<p class="based">Based on the <a href="{base}/?based={encodeURIComponent(c.original)}">{c.original}</a>{#if siblings.length}<span class="dim"> · {siblings.length} other {siblings.length === 1 ? 'board clones' : 'boards clone'} it</span>{/if}</p>
+			{:else if c.based_on}
+				<p class="based dim">Based on {c.based_on}</p>
 			{/if}
 			<dl class="specs">
 				<div><dt class="label">Category</dt><dd><a href="{base}/?cat={encodeURIComponent(c.category)}">{c.category}</a>{#if c.effect_type && c.effect_type !== c.category} <span class="dim">· {c.effect_type}</span>{/if}</dd></div>
@@ -181,7 +183,7 @@
 
 	{#if siblings.length}
 		<section class="sibs">
-			<h2 class="label strong">Other boards based on the {c.based_on}</h2>
+			<h2 class="label strong">Other boards based on the {c.original}</h2>
 			<ul>
 				{#each siblings as s}
 					<li><Faceplate enclosure={s.enclosure} controls={s.controls} size={26} /> <a href="{base}/circuit/{s.file_id}">{s.name}</a> <span class="dim">{VENDOR_NAMES[s.vendor]}{s.enclosure ? ` · ${s.enclosure}` : ''}{s.price != null ? ` · ${currency.format(s.price, s.currency)}` : ''}</span></li>
