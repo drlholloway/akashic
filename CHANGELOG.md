@@ -6,9 +6,10 @@ GitHub Release notes.
 ## Unreleased
 
 ### Added
-- Datasheets on parts pages: 236 parts (81% of the part uses in the library) link to the manufacturer's
-  own datasheet (TI, onsemi, Analog Devices, Renesas, Microchip, Vishay, Nisshinbo, Diodes), every link
-  checked. The site links rather than hosts them, as the manufacturers hold the copyright; a copy is
+- Datasheets on parts pages: 240 parts (83% of the part uses in the library) link to the manufacturer's
+  own datasheet (TI, onsemi, Analog Devices, Renesas, Microchip, Vishay, Nisshinbo, Diodes, Linear
+  Systems), every link checked. onsemi no longer has a J201 sheet; Linear Systems still makes the part,
+  so the J201 links to its datasheet in their data book (page 62). The site links rather than hosts them, as the manufacturers hold the copyright; a copy is
   cached locally for reference. `pcblib datasheets` finds links for parts added later.
 - PCBWay (Glory to Ukraine): parts lists for the member's boards, read from each project's CC BY-SA
   schematic. The drawings print values but no designators, and the member uploads no BOM (a login adds

@@ -103,8 +103,7 @@ at the bottom; re-run them after parser changes.
 
 ## Datasheets
 
-Parts without a manufacturer datasheet link (checked October 2026): J201 (onsemi dropped its sheet),
-1N34A, PT2399 and the Panasonic MN3xxx BBDs (no maker copy online), CA3080 (Renesas obsolete), BAT41,
+Parts without a manufacturer datasheet link (checked October 2026): 1N34A, PT2399 and the Panasonic MN3xxx BBDs (no maker copy online), CA3080 (Renesas obsolete), BAT41,
 2SC1815 and other discontinued Japanese parts, BC108/BC109 and the germanium transistors. Generic
 entries (GE, NPN, a bare zener voltage) cannot have one. Nexperia's site blocks scripts and was not
 checked; it may cover some BC and PMBT parts.
