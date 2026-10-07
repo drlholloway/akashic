@@ -71,6 +71,8 @@ CORRECTIONS: dict[str, dict[Key, str | None]] = {
     "pcbguitarmania:noise-terminator": {"THRESHOLD": "B10k"},
     # Fuzz Dog Duo Boost: the build doc prints LT0154, a typo for the LT1054 charge pump (reported 2026-10-06).
     "fuzzdog:duoboost": {"IC2": "7660SEPA*/LT1054"},
+    # GuitarPCB NostalgiTone Space Modulator: OCR drops IC2's last digit (PT239); the build doc prints PT2399 (reported 2026-10-06).
+    "guitarpcb:nostalgitone-space-modulator": {"IC2": "PT2399"},
     # Five Cats Rattus: Vision reads the RAT's C13 1µF as 1pF and skips cells that are not plain
     # values: RAT2 R1, Turbo RAT C7, C9 and its LED clippers (checked 2026-10-01).
     "fivecats:rattus-rat-rat2-you-dirty-rat-turbo-rat-clone": {
