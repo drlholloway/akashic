@@ -41,8 +41,7 @@ DISCONTINUED: dict[str, list[str]] = {
     "2SC2458": ["2SC2458GR"], "2SA970": ["2SA970"], "2SB172": ["2SB172"], "2SD352": ["2SD352"],
     "2SK30A": ["2SK30A", "2SK30A-Y", "2SK30AY", "2SK30A-GR", "K30A-Y", "2SK30"], "2SK44": ["2SK44-C"], "2SK170": ["2SK170"],
     "2SK209": ["2SK209-GR"], "2SK246": ["2SK246"], "MPF4393": ["MPF4393"], "2N5952": ["2N5952"],
-    "BC107": ["BC107", "BC107A", "BC107B", "BC108", "BC108B", "BC108C", "BC109", "BC109B", "BC109C"], "BC182": ["BC182L"], "BC183": ["BC183A", "BC183B"],
-    "BC184": ["BC184", "BC184C"], "BC264": ["BC264D"], "2N3565": ["2N3565"], "2N3392": ["2N3391", "2N3391A", "2N3392", "2N3393"],
+    "BC107": ["BC107", "BC107A", "BC107B", "BC108", "BC108B", "BC108C", "BC109", "BC109B", "BC109C"], "BC184": ["BC182", "BC182L", "BC182B", "BC183", "BC183A", "BC183B", "BC184", "BC184C"], "BC264": ["BC264D"], "2N3565": ["2N3565"], "2N3392": ["2N3391", "2N3391A", "2N3392", "2N3393"],
     "2N4124": ["2N4124"], "2N4125": ["2N4125"], "2N5133": ["2N5133"], "2N5172": ["2N5172"], "2N5306": ["2N5306"],
     "2N5308": ["2N5308"], "2N2646": ["2N2646"], "TIS93": ["TIS93"], "2N404A": ["2N404A"], "2N1302": ["2N1302"],
     "2N1304": ["2N1304"], "2N1306": ["2N1306"], "2N1308": ["2N1308"], "AC127": ["AC127"], "AC128": ["AC128"],
@@ -50,6 +49,16 @@ DISCONTINUED: dict[str, list[str]] = {
     # optos
     "VTL5C2": ["VTL5C2"], "VTL5C3": ["VTL5C3"], "NSL-32": ["NSL-32"],
 }
+# Hosted files that are a row in a maker's selector table or catalog, not a full datasheet: the part
+# page says so, and the worklist keeps asking for the real sheet. Set by eye when a file is hosted.
+SELECTOR = {"1N270", "2N1308", "2N3392", "2N3565", "2N404A", "2SC1815", "2SK30A", "AC128"}
+
+
+def is_selector(link: str) -> bool:
+    """A hosted link ('datasheets/AC128.pdf') whose file is a selector table."""
+    return not link.startswith("http") and Path(link).stem in SELECTOR
+
+
 # Pages to keep (1-based) where an archive copy runs on into the next sheet of a scanned data book.
 PAGES: dict[str, range] = {"LM308": range(1, 5)}
 _AD = re.compile(r"findchips\.com|datasheetarchive|alldatasheet|datasheetcatalog|datasheet4u|icminer", re.I)

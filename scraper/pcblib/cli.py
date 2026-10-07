@@ -198,7 +198,7 @@ def datasheets(add: list[str] = typer.Option(None, help="'CAT:PART=URL', a link 
     import re
     import shutil
     from urllib.parse import urlparse
-    from .datasheets import DISCONTINUED, FINDCHIPS, HOSTED, TABLE, candidates, part_like, sheet_for, table
+    from .datasheets import DISCONTINUED, FINDCHIPS, HOSTED, TABLE, candidates, is_selector, part_like, sheet_for, table
     from .datasheets import host as host_pdf
     from .fetch import Fetcher
     from .paths import CACHE_DIR, DATA_DIR
@@ -233,7 +233,9 @@ def datasheets(add: list[str] = typer.Option(None, help="'CAT:PART=URL', a link 
         con.print(f"[green]hosted[/] {sheet} <- {src.name} ({why}, {dst.stat().st_size // 1024} KB)")
         for v in sorted(mentioned):
             key = f'{by_value[v]["category"]}:{v}'
-            if v in sheet_of and not (HOSTED / f"{sheet_of[v]}.pdf").exists():  # a sheet of its own wins
+            have = known.get(key, "")
+            better = not have or is_selector(have) and not is_selector(f"datasheets/{dst.name}")
+            if v in sheet_of and not (HOSTED / f"{sheet_of[v]}.pdf").exists() and better:  # a sheet of its own wins, a datasheet beats a table
                 known[key] = f"datasheets/{dst.name}"
                 con.print(f"    also covers {key}")
             elif v not in sheet_of:
@@ -267,13 +269,24 @@ def datasheets(add: list[str] = typer.Option(None, help="'CAT:PART=URL', a link 
                 to_check[key] = blocked
     TABLE.write_text(json.dumps(dict(sorted(known.items())), indent=1) + "\n")
     (out / "to-check.json").write_text(json.dumps(to_check, indent=1))
-    todo = sorted(((sum(by_value[v]["count"] for v in {k, *vs} if v in by_value), k) for k, vs in DISCONTINUED.items()
-                   if not (HOSTED / f"{k}.pdf").exists()), reverse=True)
-    rows = "".join(f'<tr><td>{n}</td><td><a href="{FINDCHIPS.format(k)}" target="_blank">{k}</a></td><td><code>{k}.pdf</code></td></tr>' for n, k in todo)
+    def status(k: str) -> str:
+        links = [known.get(f'{by_value[v]["category"]}:{v}', "") for v in {k, *DISCONTINUED[k]} if v in by_value]
+        return "done" if any(lk and not is_selector(lk) for lk in links) else "selector" if any(links) else "todo"
+
+    uses = {k: sum(by_value[v]["count"] for v in {k, *vs} if v in by_value) for k, vs in DISCONTINUED.items()}
+    todo = sorted(((uses[k], k) for k in DISCONTINUED if status(k) == "todo"), reverse=True)
+    tables = sorted(((uses[k], k) for k in DISCONTINUED if status(k) == "selector"), reverse=True)
+
+    def table_html(items) -> str:
+        rows = "".join(f'<tr><td>{n}</td><td><a href="{FINDCHIPS.format(k)}" target="_blank">{k}</a></td><td><code>{k}.pdf</code></td></tr>' for n, k in items)
+        return f"<table><tr><th>Uses</th><th>Part</th><th>Save as</th></tr>{rows}</table>"
+
     (out / "discontinued.html").write_text(
         "<!doctype html><meta charset=utf-8><title>Discontinued datasheets</title><style>body{font:14px system-ui;margin:2em}"
-        "td{padding:2px 12px}</style><h1>Discontinued datasheets to download</h1><p>Open each on Findchips, download the archived "
+        "td{padding:2px 12px}h2{margin-top:2em}</style><h1>Discontinued datasheets to download</h1><p>Open each on Findchips, download the archived "
         "sheet, save it as the name shown into one folder, then run <code>pcblib datasheets --host &lt;folder&gt;</code>.</p>"
-        f"<table><tr><th>Uses</th><th>Part</th><th>Save as</th></tr>{rows}</table>")
+        + table_html(todo)
+        + "<h2>Has a selector sheet, not a datasheet</h2><p>Served from a row in a maker's selector table or catalog for now; "
+        "a full datasheet saved under the same name replaces it.</p>" + table_html(tables))
     con.print(f"{len(known)} parts with a datasheet; {len(to_check)} to check in a browser -> {out / 'to-check.json'}; "
-              f"{len(todo)} discontinued sheets to download -> {out / 'discontinued.html'}")
+              f"{len(todo)} discontinued sheets to download and {len(tables)} with only a selector table -> {out / 'discontinued.html'}")

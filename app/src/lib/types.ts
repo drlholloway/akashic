@@ -64,6 +64,8 @@ export interface PartEntry {
 	types: string[];
 	/** The manufacturer's datasheet: a link, or a path under static/datasheets/ for a discontinued part with no maker's copy. */
 	datasheet?: string;
+	/** The hosted file is a row in a maker's selector table, not a full datasheet. */
+	selector?: boolean;
 	count: number;
 	slug: string;
 }
