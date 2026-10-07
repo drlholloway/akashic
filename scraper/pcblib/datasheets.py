@@ -51,13 +51,13 @@ DISCONTINUED: dict[str, list[str]] = {
 }
 # Hosted files that are a row in a maker's selector table or catalog, not a full datasheet: the part
 # page says so, and the worklist keeps asking for the real sheet. Set by eye when a file is hosted.
-SELECTOR = {"2N1308", "2N404A", "2N5172", "2N5306", "2SC1815", "AC128", "BC264"}
+SELECTOR = {"2N1308", "2N5306", "AC176", "BC264"}
 
 
 # Parts a hosted file covers, checked by eye (OCR misses rows in small catalog print): linked to the
 # file until a sheet of their own, or a full datasheet, is hosted.
 COVERED_BY: dict[str, list[str]] = {
-    "AC128": ["AC127", "AC176", "AC187"],                       # Germanium Power Devices catalog, AC series
+    "AC176": ["AC127", "AC187"],                                # Germanium Power Devices catalog, AC series
     "2N1308": ["2N1302", "2N1304", "2N1306", "2N404"],          # TI germanium transistor table
     "2N1302": ["2N1304", "2N1306", "2N1308"],                   # Central's 2N1302/1304/1306/1308 sheet
     "2N5306": ["2N5308"],                                       # National NPN Darlington selector table
@@ -194,7 +194,8 @@ def _names_in(text: str, names, fuzzy: bool = True) -> set[str]:
         f = _fold(n) if fuzzy else _norm(n)
         for m in re.finditer(re.escape(f), t) if f else ():
             starts = fuzzy or (m.start() == 0 or gap[m.start() - 1]) and not any(gap[m.start():m.end() - 1])  # 'mA 150' is not MA150
-            if starts and (gap[m.end() - 1] or not raw[m.end():m.end() + 1].isdigit()):
+            ends = gap[m.end() - 1] or m.end() == len(raw) if not fuzzy else gap[m.end() - 1] or not raw[m.end():m.end() + 1].isdigit()
+            if starts and ends:  # another part must end at a word break: '2N404A' does not list the 2N404
                 out.add(n)
                 break
     return out
