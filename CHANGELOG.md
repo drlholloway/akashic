@@ -16,7 +16,8 @@ GitHub Release notes.
   the distributor Cabintech hosts: Panasonic's MN3102, Xvive's MN3005 and MN3007 (in production again), and
   Coolaudio's V3207 and V3205 for the MN3207 and MN3205 they replace. The PT2399 and Electric Druid's
   TAPLFO3 link to the sheets Electric Druid keeps. The site links rather than hosts them, as the manufacturers hold the copyright; a copy is
-  cached locally for reference. `pcblib datasheets` finds links for parts added later.
+  cached locally for reference. `pcblib datasheets` finds links for parts added later. The Mitsubishi
+  M51134P sub-harmonizer, long discontinued, is the one sheet served from the site, as no maker's copy exists.
 - PCBWay (Glory to Ukraine): parts lists for the member's boards, read from each project's CC BY-SA
   schematic. The drawings print values but no designators, and the member uploads no BOM (a login adds
   only a PDF of the same drawing and a layout render), so every value label is OCR'd, typed by its shape

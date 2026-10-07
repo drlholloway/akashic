@@ -36,7 +36,8 @@
 		<h1 class="mono">{data.part.value}</h1>
 		<p class="lede">{data.rows.length} {data.rows.length === 1 ? 'circuit uses' : 'circuits use'} this part{#if data.part.types.length}. Listed as: {data.part.types.join('; ')}{/if}.</p>
 		{#if data.part.datasheet}
-			<p class="sheet"><a href={data.part.datasheet} target="_blank" rel="noopener">Datasheet</a> <span class="dim">· from {new URL(data.part.datasheet).hostname.replace(/^www\./, '')}</span></p>
+			{@const hosted = !/^https?:/.test(data.part.datasheet)}
+			<p class="sheet"><a href={hosted ? `${base}/${data.part.datasheet}` : data.part.datasheet} target="_blank" rel="noopener">Datasheet</a> <span class="dim">· {hosted ? 'archived copy; the part is discontinued and the maker no longer publishes it' : `from ${new URL(data.part.datasheet).hostname.replace(/^www\./, '')}`}</span></p>
 		{/if}
 	</header>
 	{#if subs}

@@ -62,7 +62,7 @@ export interface PartEntry {
 	value: string;
 	circuits: string[];
 	types: string[];
-	/** The manufacturer's datasheet (a link only; datasheets are never served from this site). */
+	/** The manufacturer's datasheet: a link, or a path under static/datasheets/ for a discontinued part with no maker's copy. */
 	datasheet?: string;
 	count: number;
 	slug: string;

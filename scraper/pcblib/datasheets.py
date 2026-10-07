@@ -3,7 +3,9 @@ copy and never serves one: datasheets are the manufacturers' copyright (the same
 link publicly' rule as vendor build documents). candidates() proposes URLs from each maker's naming
 pattern; `pcblib datasheets` checks them and records the ones that answer with a PDF in
 datasheets.json, which the export reads. A local copy is cached under data/cache/datasheets/ for
-the owner's reference. Generic entries (GE, NPN, a bare zener voltage) have no datasheet."""
+the owner's reference. Generic entries (GE, NPN, a bare zener voltage) have no datasheet.
+The one exception: a discontinued part whose maker no longer publishes the sheet is served from
+app/static/datasheets/, recorded as a relative path ('datasheets/M51134P.pdf')."""
 from __future__ import annotations
 
 import json

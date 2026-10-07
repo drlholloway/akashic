@@ -94,7 +94,9 @@ only). Datasheets are the manufacturers' copyright, so the site links rather tha
 datasheets` caches a copy under `data/cache/datasheets/` for your own reference. It checks candidates
 on hosts that answer scripts (TI, Microchip, Vishay, Nisshinbo, Diodes) itself and lists the ones on
 hosts that block scripts (onsemi, Analog Devices, Renesas, Nexperia) in `to-check.json`; check those in
-a browser and record a good one with `--add 'Q:2N3904=https://...'`.
+a browser and record a good one with `--add 'Q:2N3904=https://...'`. A discontinued part whose maker no
+longer publishes the sheet is the exception: the PDF goes in `app/static/datasheets/` and is recorded as
+a relative path (`--add 'IC:M51134P=datasheets/M51134P.pdf'`).
 
 Names, prices, part values, controls, enclosures and the original circuit are indexed as facts and every record links back to the vendor's product page and build document. Build documents and their schematic images are copyrighted by the vendors: the scraper caches them locally under `data/raw/` and `data/cache/` (git-ignored) for personal reference, and the public export does not include them. Aion FX explicitly permits commercial use of its projects; GuitarPCB and Fuzz Dog explicitly forbid republishing their documents. The redistributable schematic is the optional KiCad fragment you draw yourself (see below).
 
