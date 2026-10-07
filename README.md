@@ -106,7 +106,8 @@ catalog page) is linked for them too until they get one of their own; a file sav
 served once. `PAGES` cuts a scanned data book where it runs on into the next part; `--force` hosts a
 sheet whose part number OCR cannot find, after checking it by eye. A file that is only a row in a maker's selector table
 or catalog goes in `SELECTOR`: the part page calls it a selector table, the worklist moves the part to
-"Has a selector sheet, not a datasheet", and a full datasheet replaces it when one is hosted.
+"Has a selector sheet, not a datasheet", and a full datasheet replaces it when one is hosted. `COVERED_BY` lists the other parts a hosted file covers, checked
+by eye, since OCR misses rows in small catalog print.
 
 Names, prices, part values, controls, enclosures and the original circuit are indexed as facts and every record links back to the vendor's product page and build document. Build documents and their schematic images are copyrighted by the vendors: the scraper caches them locally under `data/raw/` and `data/cache/` (git-ignored) for personal reference, and the public export does not include them. Aion FX explicitly permits commercial use of its projects; GuitarPCB and Fuzz Dog explicitly forbid republishing their documents. The redistributable schematic is the optional KiCad fragment you draw yourself (see below).
 

@@ -198,7 +198,7 @@ def datasheets(add: list[str] = typer.Option(None, help="'CAT:PART=URL', a link 
     import re
     import shutil
     from urllib.parse import urlparse
-    from .datasheets import DISCONTINUED, FINDCHIPS, HOSTED, TABLE, candidates, is_selector, part_like, sheet_for, table
+    from .datasheets import COVERED_BY, DISCONTINUED, FINDCHIPS, HOSTED, TABLE, candidates, is_selector, part_like, sheet_for, table
     from .datasheets import host as host_pdf
     from .fetch import Fetcher
     from .paths import CACHE_DIR, DATA_DIR
@@ -240,6 +240,16 @@ def datasheets(add: list[str] = typer.Option(None, help="'CAT:PART=URL', a link 
                 con.print(f"    also covers {key}")
             elif v not in sheet_of:
                 con.print(f"    [dim]mentions {key} (not discontinued; not linked)[/]")
+    for f, covered in COVERED_BY.items():
+        link = f"datasheets/{f}.pdf"
+        if not (HOSTED / f"{f}.pdf").exists():
+            continue
+        for v in covered:
+            have = known.get(f'{by_value[v]["category"]}:{v}', "") if v in by_value else "x"
+            own = v in sheet_of and (HOSTED / f"{sheet_of[v]}.pdf").exists()
+            if v in by_value and not own and (not have or is_selector(have) and not is_selector(link)):
+                known[f'{by_value[v]["category"]}:{v}'] = link
+                con.print(f"covers {v} <- {f}.pdf")
     open_hosts = {"www.ti.com", "ww1.microchip.com", "www.vishay.com", "www.nisshinbo-microdevices.co.jp", "www.diodes.com", "electricdruid.net"}
     out = CACHE_DIR / "datasheets"
     out.mkdir(parents=True, exist_ok=True)
