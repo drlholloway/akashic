@@ -20,7 +20,7 @@ from . import db as dbm
 from .datasheets import table as datasheet_table
 from .originals import harmonize, original
 from .normalize import catalog_category, catalog_keys, ic_name
-from .paths import EXPORT_DIR
+from .paths import EXPORT_DIR, owner_schematic
 
 
 def _row(r: sqlite3.Row) -> dict:
@@ -138,6 +138,13 @@ def run(images: bool = False) -> None:
                     if not dst.exists():
                         shutil.copyfile(src, dst)
                     c["schematic_image"] = f"schematics/{c['file_id']}.png"
+            if c["vendor"] in dbm.OWNER_VENDORS:  # the site owner's own work: schematic and photo are shown
+                svg = owner_schematic(c["vendor"], c["slug"])
+                if svg.exists():
+                    (EXPORT_DIR / "owner").mkdir(exist_ok=True)
+                    shutil.copyfile(svg, EXPORT_DIR / "owner" / f"{c['file_id']}.svg")
+                    c["owner_schematic"] = f"owner/{c['file_id']}.svg"
+                c["owner_photo"] = c["image_url"]
             c.pop("doc_local", None)
             c.pop("schematic_local", None)
             c["has_schematic"] = has_schematic

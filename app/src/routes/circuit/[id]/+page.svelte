@@ -115,9 +115,19 @@
 		</section>
 	{/if}
 
+	{#if c.owner_photo}
+		<section class="photo">
+			<h2 class="label strong">Built</h2>
+			<img src={c.owner_photo} alt="The finished {c.name}" loading="lazy" />
+		</section>
+	{/if}
+
 	<section class="schem">
 		<h2 class="label strong">Schematic</h2>
-		{#if c.has_kicad}
+		{#if c.owner_schematic}
+			<img src="{base}/data/{c.owner_schematic}" alt="Schematic of {c.name}" loading="lazy" />
+			<p class="small">Drawn by {VENDOR_NAMES[c.vendor]}, <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>. <a href={c.url} target="_blank" rel="noopener">Gerbers and faceplate on GitHub</a>.</p>
+		{:else if c.has_kicad}
 			<img src="{base}/kicad/{c.file_id}.svg" alt="KiCad schematic of {c.name}" loading="lazy" />
 			<p class="small">Redrawn in KiCad. <a href="{base}/kicad/{c.file_id}.kicad_sch" download>Download the .kicad_sch fragment</a> to drop into your own project.</p>
 		{:else if schematicImage}
@@ -221,6 +231,7 @@
 	section { margin-top: 28px; }
 	section h2 { margin-bottom: 10px; }
 	.desc p { max-width: 72ch; margin-bottom: 10px; }
+	.photo img { border: 1px solid var(--rule); max-height: 60dvh; width: auto; max-width: 100%; }
 	.schem img { border: 1px solid var(--rule); background: white; max-height: 80dvh; width: auto; }
 	.small { font-size: 12.5px; margin-top: 6px; }
 	.bom-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 8px; }

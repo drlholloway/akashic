@@ -135,6 +135,9 @@ VENDORS = {
     "holyisland": ("Holy Island Audio", "https://holyislandaudio.bigcartel.com/product/diy-pcbs",
                    "Build guides are Google Docs by Holy Island Audio; indexed and linked, not redistributed. "
                    "The shop is mostly finished pedals; the vendor recommends the DIY boards for experienced builders and offers no build support."),
+    "cryptid": ("Cryptid Effects", "https://github.com/drlholloway/guitar-effects-layouts",
+                "This site's own layouts, CC BY-NC-SA 4.0: gerbers and faceplates on GitHub, build notes and BOM on the wiki. "
+                "The schematic and the finished-pedal photo are shown here with the author's permission."),
     "pcbway-gtu": ("PCBWay: Glory to Ukraine", "https://www.pcbway.com/project/member/?bmbno=19C5FC6C-66B1-46",
                    "Shared projects are CC BY-SA 3.0; schematic images may be shown with attribution. Parts are counted from the schematic's value labels "
                    "(the drawings name no designators); gerbers need a PCBWay login."),
@@ -142,7 +145,10 @@ VENDORS = {
 
 
 # What the vendor sells: "shop" (a PCB), "projects" (order the board from a fab), "blog" (a schematic to read).
-VENDOR_KIND = {"pcbway-gtu": "projects", "rwlpedal": "repo", "scientificguitarist": "repo", "sheepygit": "repo", "bentfishbowl": "blog", "expanon": "archive", "schalltechnik": "blog"}
+VENDOR_KIND = {"pcbway-gtu": "projects", "cryptid": "repo", "rwlpedal": "repo", "scientificguitarist": "repo", "sheepygit": "repo", "bentfishbowl": "blog", "expanon": "archive", "schalltechnik": "blog"}
+
+# The site owner's own designs: their schematic and photo are served, not only linked.
+OWNER_VENDORS = {"cryptid"}
 
 # A caution shown on every circuit page of a vendor, next to the buy link.
 VENDOR_WARNING = {

@@ -6,6 +6,9 @@ GitHub Release notes.
 ## Unreleased
 
 ### Added
+- Cryptid Effects: this site's own layouts (The Everlasting Tantrum v2, Biggus Dickus, Ground Fault)
+  from GitHub, CC BY-NC-SA 4.0. Parts and controls come from each wiki page. The PCB and faceplate gerbers
+  and the Tayda drill template are linked, and the circuit page shows the schematic and the finished pedal.
 - Datasheets on parts pages: 240 parts (83% of the part uses in the library) link to the manufacturer's
   own datasheet (TI, onsemi, Analog Devices, Renesas, Microchip, Vishay, Nisshinbo, Diodes, Linear
   Systems), every link checked. onsemi no longer has a J201 sheet; Linear Systems still makes the part,

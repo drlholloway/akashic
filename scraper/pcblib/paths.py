@@ -9,3 +9,8 @@ EXPORT_DIR = REPO_ROOT / "app" / "static" / "data"
 
 for _d in (RAW_DIR, CACHE_DIR):
     _d.mkdir(parents=True, exist_ok=True)
+
+
+def owner_schematic(vendor: str, slug: str) -> Path:
+    """Where a site-owner board's schematic SVG is cached; the export serves it."""
+    return CACHE_DIR / vendor / f"{slug}-schematic.svg"
