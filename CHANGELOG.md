@@ -11,7 +11,8 @@ GitHub Release notes.
   Systems), every link checked. onsemi no longer has a J201 sheet; Linear Systems still makes the part,
   so the J201 links to its datasheet in their data book (page 62). The BBD chips link to the sheets
   the distributor Cabintech hosts: Panasonic's MN3102, Xvive's MN3005 and MN3007 (in production again), and
-  Coolaudio's V3207 and V3205 for the MN3207 and MN3205 they replace. The site links rather than hosts them, as the manufacturers hold the copyright; a copy is
+  Coolaudio's V3207 and V3205 for the MN3207 and MN3205 they replace. The PT2399 and Electric Druid's
+  TAPLFO3 link to the sheets Electric Druid keeps. The site links rather than hosts them, as the manufacturers hold the copyright; a copy is
   cached locally for reference. `pcblib datasheets` finds links for parts added later.
 - PCBWay (Glory to Ukraine): parts lists for the member's boards, read from each project's CC BY-SA
   schematic. The drawings print values but no designators, and the member uploads no BOM (a login adds

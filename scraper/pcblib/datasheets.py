@@ -33,6 +33,10 @@ _FIXED: dict[str, str] = {
     "1N4004": VISHAY.format("88503/1n4001"), "1N4005": VISHAY.format("88503/1n4001"), "1N4007": VISHAY.format("88503/1n4001"),
     "1N5817": VISHAY.format("88525/1n5817"), "1N5818": VISHAY.format("88525/1n5817"), "1N5819": VISHAY.format("88525/1n5817"),
     "UF4007": VISHAY.format("88755/uf4001"),
+    # Electric Druid's own chips, and the PT2399 sheet it keeps (Princeton publishes none).
+    "PT2399": "https://electricdruid.net/datasheets/PT2399.pdf",
+    "TAPLFO3": "https://electricdruid.net/datasheets/TAPLFO3Datasheet.pdf",
+    "STOMPLFO": "https://electricdruid.net/datasheets/STOMPLFODatasheet.pdf",
     # onsemi dropped the J201; Linear Systems still makes it, and its sheet is page 62 of their data book.
     "J201": "https://www.linearsystems.com/_files/ugd/4be30b_607189520e6a46f6a40c6d98393625e8.pdf#page=62",
 }

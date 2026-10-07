@@ -201,7 +201,7 @@ def datasheets(add: list[str] = typer.Option(None, help="'CAT:PART=URL', a link 
     for a in add or []:
         k, _, url = a.partition("=")
         known[k.strip()] = url.strip()
-    open_hosts = {"www.ti.com", "ww1.microchip.com", "www.vishay.com", "www.nisshinbo-microdevices.co.jp", "www.diodes.com"}
+    open_hosts = {"www.ti.com", "ww1.microchip.com", "www.vishay.com", "www.nisshinbo-microdevices.co.jp", "www.diodes.com", "electricdruid.net"}
     parts = json.loads((DATA_DIR.parent / "app" / "static" / "data" / "parts.json").read_text())
     out = CACHE_DIR / "datasheets"
     out.mkdir(parents=True, exist_ok=True)
