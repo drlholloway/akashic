@@ -6,6 +6,10 @@ GitHub Release notes.
 ## Unreleased
 
 ### Added
+- Eff Dub Audio: 14 free DIY projects from the blog (The Snitch RAT clone, TweakTone delay, Bodhi
+  Zendrive, Box of Hall reverb, DuoVibe, Wahscillator and more). Parts come straight from the Eagle
+  schematics in each project's file pack, which are exact; schematics posted only as images were
+  transcribed by hand. The file packs are linked.
 - Cryptid Effects: this site's own layouts (The Everlasting Tantrum v2, Biggus Dickus, Ground Fault)
   from GitHub, CC BY-NC-SA 4.0. Parts and controls come from each wiki page. The PCB and faceplate gerbers
   and the Tayda drill template are linked, and the circuit page shows the schematic and the finished pedal.
