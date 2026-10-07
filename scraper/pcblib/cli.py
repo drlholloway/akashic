@@ -184,6 +184,8 @@ def import_transistors(dump_dir: str):
 
 @app.command()
 def datasheets(add: list[str] = typer.Option(None, help="'CAT:PART=URL', a link checked in a browser"),
+               host: list[Path] = typer.Option(None, help="An archived PDF of a discontinued part (named for the part), or a folder of them, to serve from the site"),
+               force: bool = typer.Option(False, help="With --host: serve a sheet whose part number OCR could not find"),
                limit: int = 0) -> None:
     """Find manufacturer datasheet links for the parts cross-reference (run after export).
     Candidates on hosts that answer scripts (TI, Microchip, Vishay, Nisshinbo, Diodes) are fetched
@@ -194,15 +196,30 @@ def datasheets(add: list[str] = typer.Option(None, help="'CAT:PART=URL', a link 
     import json
     import shutil
     from urllib.parse import urlparse
-    from .datasheets import TABLE, candidates, table
+    from .datasheets import DISCONTINUED, FINDCHIPS, HOSTED, TABLE, candidates, sheet_for, table
+    from .datasheets import host as host_pdf
     from .fetch import Fetcher
     from .paths import CACHE_DIR, DATA_DIR
     known = table()
     for a in add or []:
         k, _, url = a.partition("=")
         known[k.strip()] = url.strip()
-    open_hosts = {"www.ti.com", "ww1.microchip.com", "www.vishay.com", "www.nisshinbo-microdevices.co.jp", "www.diodes.com", "electricdruid.net"}
     parts = json.loads((DATA_DIR.parent / "app" / "static" / "data" / "parts.json").read_text())
+    by_value = {p["value"]: p for p in parts}
+    for src in [x for h in host or [] for x in (sorted(h.expanduser().glob("*.pdf")) if h.expanduser().is_dir() else [h.expanduser()])]:
+        sheet = sheet_for(src.name)
+        if not sheet:
+            con.print(f"[yellow]skip[/] {src.name}: not a part in datasheets.DISCONTINUED")
+            continue
+        dst, why = host_pdf(src, sheet, force=force)
+        if not dst:
+            con.print(f"[red]refused[/] {src.name}: {why}")
+            continue
+        for v in [sheet, *DISCONTINUED[sheet]]:
+            if v in by_value:
+                known[f'{by_value[v]["category"]}:{v}'] = f"datasheets/{sheet}.pdf"
+        con.print(f"[green]hosted[/] {sheet} <- {src.name} ({why}, {dst.stat().st_size // 1024} KB)")
+    open_hosts = {"www.ti.com", "ww1.microchip.com", "www.vishay.com", "www.nisshinbo-microdevices.co.jp", "www.diodes.com", "electricdruid.net"}
     out = CACHE_DIR / "datasheets"
     out.mkdir(parents=True, exist_ok=True)
     f = Fetcher(vendor="datasheets", min_interval=2.0)
@@ -231,4 +248,13 @@ def datasheets(add: list[str] = typer.Option(None, help="'CAT:PART=URL', a link 
                 to_check[key] = blocked
     TABLE.write_text(json.dumps(dict(sorted(known.items())), indent=1) + "\n")
     (out / "to-check.json").write_text(json.dumps(to_check, indent=1))
-    con.print(f"{len(known)} parts with a datasheet; {len(to_check)} to check in a browser -> {out / 'to-check.json'}")
+    todo = sorted(((sum(by_value[v]["count"] for v in {k, *vs} if v in by_value), k) for k, vs in DISCONTINUED.items()
+                   if not (HOSTED / f"{k}.pdf").exists()), reverse=True)
+    rows = "".join(f'<tr><td>{n}</td><td><a href="{FINDCHIPS.format(k)}" target="_blank">{k}</a></td><td><code>{k}.pdf</code></td></tr>' for n, k in todo)
+    (out / "discontinued.html").write_text(
+        "<!doctype html><meta charset=utf-8><title>Discontinued datasheets</title><style>body{font:14px system-ui;margin:2em}"
+        "td{padding:2px 12px}</style><h1>Discontinued datasheets to download</h1><p>Open each on Findchips, download the archived "
+        "sheet, save it as the name shown into one folder, then run <code>pcblib datasheets --host &lt;folder&gt;</code>.</p>"
+        f"<table><tr><th>Uses</th><th>Part</th><th>Save as</th></tr>{rows}</table>")
+    con.print(f"{len(known)} parts with a datasheet; {len(to_check)} to check in a browser -> {out / 'to-check.json'}; "
+              f"{len(todo)} discontinued sheets to download -> {out / 'discontinued.html'}")
