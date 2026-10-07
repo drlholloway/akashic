@@ -45,13 +45,14 @@ DISCONTINUED: dict[str, list[str]] = {
     "2N4124": ["2N4124"], "2N4125": ["2N4125"], "2N5133": ["2N5133"], "2N5172": ["2N5172"], "2N5306": ["2N5306"],
     "2N5308": ["2N5308"], "2N2646": ["2N2646"], "TIS93": ["TIS93"], "2N404A": ["2N404A"], "2N1302": ["2N1302"],
     "2N1304": ["2N1304"], "2N1306": ["2N1306"], "2N1308": ["2N1308"], "AC127": ["AC127"], "AC128": ["AC128"],
-    "AC176": ["AC176"], "AC187": ["AC187"], "2N404": ["2N404"], "OC44": ["OC44"], "OC71": ["OC71"], "OC75": ["OC75"], "OC139": ["OC139"], "NKT275": ["NKT275"],
+    "AC176": ["AC176"], "AC187": ["AC187"], "2N404": ["2N404"], "OC44": ["OC44"], "OC71": ["OC71"], "OC75": ["OC75"], "OC76": ["OC76"], "OC79": ["OC79"],
+    "OC139": ["OC139"], "OC140": ["OC140"], "OA91": ["OA91"], "OA200": ["OA200"], "NKT275": ["NKT275"],
     # optos
     "VTL5C2": ["VTL5C2"], "VTL5C3": ["VTL5C3"], "NSL-32": ["NSL-32"],
 }
 # Hosted files that are a row in a maker's selector table or catalog, not a full datasheet: the part
 # page says so, and the worklist keeps asking for the real sheet. Set by eye when a file is hosted.
-SELECTOR = {"2N1308", "2N5306", "AC176", "BC264"}
+SELECTOR = {"2N1308", "2N5306", "AC176", "BC264", "Philips-transistors-diodes"}
 
 
 # Parts a hosted file covers, checked by eye (OCR misses rows in small catalog print): linked to the
@@ -60,7 +61,9 @@ COVERED_BY: dict[str, list[str]] = {
     "AC176": ["AC127", "AC187"],                                # Germanium Power Devices catalog, AC series
     "2N1308": ["2N1302", "2N1304", "2N1306", "2N404"],          # TI germanium transistor table
     "2N1302": ["2N1304", "2N1306", "2N1308"],                   # Central's 2N1302/1304/1306/1308 sheet
-    "2N5306": ["2N5308"],                                       # National NPN Darlington selector table
+    "2N5306": ["2N5308"],
+    # A 1950s Philips folder of OC transistors and OA diodes: rating tables and case drawings.
+    "Philips-transistors-diodes": ["OC44", "OC71", "OC75", "OC76", "OC79", "OC139", "OC140", "OA90", "OA91", "OA200"],                                       # National NPN Darlington selector table
     "NE570": ["NE571"],
 }
 
