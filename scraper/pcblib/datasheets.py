@@ -51,7 +51,7 @@ DISCONTINUED: dict[str, list[str]] = {
 }
 # Hosted files that are a row in a maker's selector table or catalog, not a full datasheet: the part
 # page says so, and the worklist keeps asking for the real sheet. Set by eye when a file is hosted.
-SELECTOR = {"1N270", "2N1308", "2N3392", "2N3565", "2N404A", "2SC1815", "2SK30A", "AC128"}
+SELECTOR = {"2N1308", "2N404A", "2N5172", "2N5306", "2SC1815", "AC128", "BC264"}
 
 
 # Parts a hosted file covers, checked by eye (OCR misses rows in small catalog print): linked to the
@@ -59,14 +59,21 @@ SELECTOR = {"1N270", "2N1308", "2N3392", "2N3565", "2N404A", "2SC1815", "2SK30A"
 COVERED_BY: dict[str, list[str]] = {
     "AC128": ["AC127", "AC176", "AC187"],                       # Germanium Power Devices catalog, AC series
     "2N1308": ["2N1302", "2N1304", "2N1306", "2N404"],          # TI germanium transistor table
-    "2N3392": ["2N3391", "2N3391A", "2N3393", "2N5172"],        # National NPN selector table
-    "NE570": ["NE571"], "2SK30A": ["BC264D"],
+    "2N1302": ["2N1304", "2N1306", "2N1308"],                   # Central's 2N1302/1304/1306/1308 sheet
+    "2N5306": ["2N5308"],                                       # National NPN Darlington selector table
+    "NE570": ["NE571"],
 }
 
 
 def is_selector(link: str) -> bool:
     """A hosted link ('datasheets/AC128.pdf') whose file is a selector table."""
     return not link.startswith("http") and Path(link).stem in SELECTOR
+
+
+def has_own(part: str) -> bool:
+    """The part's own sheet is hosted and is a full datasheet (a selector table can be bettered)."""
+    sheet = next((k for k, vs in DISCONTINUED.items() if part in {k, *vs}), "")
+    return bool(sheet) and (HOSTED / f"{sheet}.pdf").exists() and sheet not in SELECTOR
 
 
 # Pages to keep (1-based) where an archive copy runs on into the next sheet of a scanned data book.
@@ -186,7 +193,7 @@ def _names_in(text: str, names, fuzzy: bool = True) -> set[str]:
     for n in names:
         f = _fold(n) if fuzzy else _norm(n)
         for m in re.finditer(re.escape(f), t) if f else ():
-            starts = fuzzy or m.start() == 0 or gap[m.start() - 1]
+            starts = fuzzy or (m.start() == 0 or gap[m.start() - 1]) and not any(gap[m.start():m.end() - 1])  # 'mA 150' is not MA150
             if starts and (gap[m.end() - 1] or not raw[m.end():m.end() + 1].isdigit()):
                 out.add(n)
                 break
@@ -271,9 +278,17 @@ def host(src: Path, sheet: str, others=(), force: bool = False) -> tuple[Path | 
 
 
 def sheet_for(name: str) -> str:
-    """The DISCONTINUED sheet a downloaded file's name points at ('2SK30A-GR.pdf' -> '2SK30A'), or ''."""
-    n = _norm(Path(name).stem)
-    for sheet, spellings in DISCONTINUED.items():
-        if n in {_norm(x) for x in [sheet, *spellings]}:
-            return sheet
+    """The DISCONTINUED sheet a downloaded file's name points at, or ''. The name may add a maker, a
+    package or a range: '2SK30A-GR.pdf', '1N270.NTE.pdf', '2SK30ATM-Y.Tosh.A-139.pdf', '2N3390-2N3393.pdf'."""
+    stem = Path(name).stem
+    spellings = {_norm(x): sheet for sheet, xs in DISCONTINUED.items() for x in [sheet, *xs]}
+    words = [stem, *re.split(r"[ ._]+", stem)]
+    words += [w for x in words for w in x.split("-")]
+    for w in map(_norm, words):                      # a spelling as written
+        if w in spellings:
+            return spellings[w]
+    for w in map(_norm, words):                      # a spelling with a package suffix: 2SK30ATM
+        hits = [x for x in spellings if len(x) >= 4 and w.startswith(x) and not w[len(x):][:1].isdigit()]
+        if hits:
+            return spellings[max(hits, key=len)]
     return ""
