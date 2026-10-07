@@ -35,6 +35,9 @@
 		<p class="label"><a href="{base}/parts">Parts</a> · {PART_CATEGORY_NAMES[data.part.category] ?? data.part.category}</p>
 		<h1 class="mono">{data.part.value}</h1>
 		<p class="lede">{data.rows.length} {data.rows.length === 1 ? 'circuit uses' : 'circuits use'} this part{#if data.part.types.length}. Listed as: {data.part.types.join('; ')}{/if}.</p>
+		{#if data.part.datasheet}
+			<p class="sheet"><a href={data.part.datasheet} target="_blank" rel="noopener">Datasheet</a> <span class="dim">· from {new URL(data.part.datasheet).hostname.replace(/^www\./, '')}</span></p>
+		{/if}
 	</header>
 	{#if subs}
 		<section class="subs">
@@ -85,6 +88,8 @@
 	.head { margin-bottom: 16px; }
 	.head h1 { font-size: clamp(30px, 4.5vw, 44px); margin: 4px 0 8px; font-family: var(--mono); font-weight: 600; letter-spacing: 0; }
 	.lede { color: var(--ink-2); max-width: 70ch; }
+	.sheet { margin-top: 6px; }
+	.sheet a { font-weight: 600; }
 	.subs { margin: 8px 0 28px; }
 	.subs .note { color: var(--ink-2); max-width: 78ch; margin: 4px 0 12px; font-size: 14px; line-height: 1.45; }
 	.subs-grid { display: grid; gap: 16px 28px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }

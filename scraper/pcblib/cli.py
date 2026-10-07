@@ -180,3 +180,55 @@ def import_transistors(dump_dir: str):
     counts = import_dump(Path(dump_dir))
     con.print(f"imported {counts}")
     con.print(f"spec rows: {build_specs()}")
+
+
+@app.command()
+def datasheets(add: list[str] = typer.Option(None, help="'CAT:PART=URL', a link checked in a browser"),
+               limit: int = 0) -> None:
+    """Find manufacturer datasheet links for the parts cross-reference (run after export).
+    Candidates on hosts that answer scripts (TI, Microchip, Vishay, Nisshinbo, Diodes) are fetched
+    and kept when they are a PDF; a copy is cached in data/cache/datasheets/ for your own use and
+    never exported. Candidates on hosts that block scripts (onsemi, Analog Devices, ST, Nexperia)
+    are written to data/cache/datasheets/to-check.json for checking in a browser; record a good one
+    with --add 'Q:2N3904=https://...'."""
+    import json
+    import shutil
+    from urllib.parse import urlparse
+    from .datasheets import TABLE, candidates, table
+    from .fetch import Fetcher
+    from .paths import CACHE_DIR, DATA_DIR
+    known = table()
+    for a in add or []:
+        k, _, url = a.partition("=")
+        known[k.strip()] = url.strip()
+    open_hosts = {"www.ti.com", "ww1.microchip.com", "www.vishay.com", "www.nisshinbo-microdevices.co.jp", "www.diodes.com"}
+    parts = json.loads((DATA_DIR.parent / "app" / "static" / "data" / "parts.json").read_text())
+    out = CACHE_DIR / "datasheets"
+    out.mkdir(parents=True, exist_ok=True)
+    f = Fetcher(vendor="datasheets", min_interval=2.0)
+    to_check: dict[str, list[str]] = {}
+    tried = 0
+    for p in sorted(parts, key=lambda p: -p["count"]):
+        key = f'{p["category"]}:{p["value"]}'
+        if p["category"] not in ("IC", "Q", "D", "OPTO") or key in known:
+            continue
+        if limit and tried >= limit:
+            break
+        tried += 1
+        blocked = []
+        for url in candidates(p["category"], p["value"]):
+            if urlparse(url).netloc not in open_hosts:
+                blocked.append(url)
+                continue
+            path = f.get_file(url, ".pdf")
+            if path and path.read_bytes()[:5] == b"%PDF-":
+                known[key] = url
+                shutil.copyfile(path, out / f'{p["slug"]}.pdf')
+                con.print(f"[green]{key}[/] {url}")
+                break
+        else:
+            if blocked:
+                to_check[key] = blocked
+    TABLE.write_text(json.dumps(dict(sorted(known.items())), indent=1) + "\n")
+    (out / "to-check.json").write_text(json.dumps(to_check, indent=1))
+    con.print(f"{len(known)} parts with a datasheet; {len(to_check)} to check in a browser -> {out / 'to-check.json'}")

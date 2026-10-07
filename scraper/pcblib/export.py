@@ -17,6 +17,7 @@ from collections import defaultdict
 from datetime import date, timedelta
 
 from . import db as dbm
+from .datasheets import table as datasheet_table
 from .originals import harmonize, original
 from .normalize import catalog_category, catalog_keys, ic_name
 from .paths import EXPORT_DIR
@@ -141,8 +142,9 @@ def run(images: bool = False) -> None:
             c.pop("schematic_local", None)
             c["has_schematic"] = has_schematic
             (EXPORT_DIR / "circuits" / f"{c['file_id']}.json").write_text(json.dumps(c, ensure_ascii=False))
+    sheets = datasheet_table()  # manufacturer links only; datasheets themselves are never exported
     parts_out = sorted(
-        ({**p, "circuits": sorted(p["circuits"]), "types": [t for t, _ in sorted(p["types"].items(), key=lambda kv: (-kv[1], kv[0]))][:5],
+        ({**p, "circuits": sorted(p["circuits"]), "datasheet": sheets.get(p["key"], ""), "types": [t for t, _ in sorted(p["types"].items(), key=lambda kv: (-kv[1], kv[0]))][:5],
           "count": len(p["circuits"]),
           "slug": re.sub(r"[^a-z0-9.]+", "-", p["key"].lower())} for p in parts.values()),
         key=lambda p: (-p["count"], p["key"]))

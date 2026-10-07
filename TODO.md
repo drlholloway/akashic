@@ -101,6 +101,14 @@ at the bottom; re-run them after parser changes.
 | Madbean | Flunkee | Doc link returns 404 (`_folders/1590A/pdf/Flunkee.pdf`) |
 | transistor subs | 2N6027, 2N2646 | A PUT and a UJT, which the database lists without parameters, so no substitutes. OC139, 1T308A and CV7351 are anchored to listed equivalents (ASY29, GT308A, 2N1308). Placeholders like `NPN`, `GE`, `your choice` are skipped on purpose |
 
+## Datasheets
+
+Parts without a manufacturer datasheet link (checked October 2026): J201 (onsemi dropped its sheet),
+1N34A, PT2399 and the Panasonic MN3xxx BBDs (no maker copy online), CA3080 (Renesas obsolete), BAT41,
+2SC1815 and other discontinued Japanese parts, BC108/BC109 and the germanium transistors. Generic
+entries (GE, NPN, a bare zener voltage) cannot have one. Nexperia's site blocks scripts and was not
+checked; it may cover some BC and PMBT parts.
+
 ## Parser wishes
 
 - Schematic pairing now runs for every board whose parts list is thin, quantity-only or

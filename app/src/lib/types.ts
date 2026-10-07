@@ -60,6 +60,8 @@ export interface PartEntry {
 	value: string;
 	circuits: string[];
 	types: string[];
+	/** The manufacturer's datasheet (a link only; datasheets are never served from this site). */
+	datasheet?: string;
 	count: number;
 	slug: string;
 }
