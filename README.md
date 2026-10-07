@@ -99,8 +99,12 @@ longer publishes the sheet is the exception, served from `app/static/datasheets/
 in `datasheets.DISCONTINUED`; each run writes `data/cache/datasheets/discontinued.html`, the ones still
 to fetch with their Findchips links (Findchips and The Datasheet Archive sit behind a bot check, so the
 sheets are downloaded by hand). Save them named for the part and run `pcblib datasheets --host <folder>`:
-it drops the archive's ad page, links and metadata, checks (by OCR for a scan) that the part number is
-in the sheet, and records every spelling of the part.
+it drops the archive's ad pages, watermarks, links and metadata and trailing pages about another part,
+checks (by OCR for a scan, turned sideways if need be) that the part number is in the sheet, and records
+every spelling of the part. A sheet that covers other discontinued parts (NE570/571, a germanium
+catalog page) is linked for them too until they get one of their own; a file saved under two names is
+served once. `PAGES` cuts a scanned data book where it runs on into the next part; `--force` hosts a
+sheet whose part number OCR cannot find, after checking it by eye.
 
 Names, prices, part values, controls, enclosures and the original circuit are indexed as facts and every record links back to the vendor's product page and build document. Build documents and their schematic images are copyrighted by the vendors: the scraper caches them locally under `data/raw/` and `data/cache/` (git-ignored) for personal reference, and the public export does not include them. Aion FX explicitly permits commercial use of its projects; GuitarPCB and Fuzz Dog explicitly forbid republishing their documents. The redistributable schematic is the optional KiCad fragment you draw yourself (see below).
 

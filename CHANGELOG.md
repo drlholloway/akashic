@@ -17,8 +17,9 @@ GitHub Release notes.
   Coolaudio's V3207 and V3205 for the MN3207 and MN3205 they replace. The PT2399 and Electric Druid's
   TAPLFO3 link to the sheets Electric Druid keeps. The site links rather than hosts them, as the manufacturers hold the copyright; a copy is
   cached locally for reference. `pcblib datasheets` finds links for parts added later. Discontinued parts
-  with no maker's copy (the Mitsubishi M51134P first) are served from the site: archived sheets without the
-  archive's ad page, checked for the part number. Package suffixes no longer hide a TI datasheet (LF356N,
+  with no maker's copy are served from the site: 15 archived sheets (M51134P, CA3080, LM308, NE570/571,
+  BC107/108/109, 2SC1815, 2SK30A, MPF4393, 2N5952, 2N3565, AC127/128/176, 1N34A, 1N270, 1N60P, 1S1588,
+  MA856) covering 36 part spellings, without the archive's ad pages and watermarks and checked for the part number. Package suffixes no longer hide a TI datasheet (LF356N,
   OPA604AP, LMC660CN and five more now link).
 - PCBWay (Glory to Ukraine): parts lists for the member's boards, read from each project's CC BY-SA
   schematic. The drawings print values but no designators, and the member uploads no BOM (a login adds

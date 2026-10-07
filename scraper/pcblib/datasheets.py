@@ -29,7 +29,7 @@ DISCONTINUED: dict[str, list[str]] = {
     # diodes
     "1N34A": ["1N34A"], "1N270": ["1N270"], "1N60P": ["1N60P"], "1N100": ["1N100"], "1N695": ["1N695"],
     "OA90": ["OA90"], "AA112": ["AA112"], "AA119": ["AA119"], "BA282": ["BA282"], "BA482": ["BA482"],
-    "1S1588": ["1S1588", "IS1588"], "1S2473": ["1S2473"], "MA150": ["MA150"], "MA856": ["MA856"],
+    "1S1588": ["1S1588", "IS1588"], "1S2473": ["1S2473"], "MA150": ["MA150"], "MA856": ["MA856", "MA2C856"],
     # ICs
     "CA3080": ["CA3080"], "LM308": ["LM308"], "LM13600": ["LM13600"], "NE570": ["NE570"], "NE571": ["NE571"],
     "XR2206": ["XR2206"], "MN3101": ["MN3101"], "M51134P": ["M51134P"], "M5216": ["M5216"], "M5218": ["M5218"],
@@ -39,9 +39,9 @@ DISCONTINUED: dict[str, list[str]] = {
     "2SC1815": ["2SC1815", "2SC1815-GR", "2SC1815L-GR"], "2SA1015": ["2SA1015Y"], "2SC828": ["2SC828"],
     "2SC732": ["2SC732"], "2SC536": ["2SC536", "2SC536-F"], "2SC1000": ["2SC1000-GR"], "2SC2240": ["2SC2240", "C2240BL"],
     "2SC2458": ["2SC2458GR"], "2SA970": ["2SA970"], "2SB172": ["2SB172"], "2SD352": ["2SD352"],
-    "2SK30A": ["2SK30A", "2SK30A-Y", "2SK30A-GR", "K30A-Y", "2SK30"], "2SK44": ["2SK44-C"], "2SK170": ["2SK170"],
+    "2SK30A": ["2SK30A", "2SK30A-Y", "2SK30AY", "2SK30A-GR", "K30A-Y", "2SK30"], "2SK44": ["2SK44-C"], "2SK170": ["2SK170"],
     "2SK209": ["2SK209-GR"], "2SK246": ["2SK246"], "MPF4393": ["MPF4393"], "2N5952": ["2N5952"],
-    "BC107": ["BC107", "BC107B", "BC108", "BC108C", "BC109", "BC109C"], "BC182": ["BC182L"], "BC183": ["BC183A", "BC183B"],
+    "BC107": ["BC107", "BC107A", "BC107B", "BC108", "BC108B", "BC108C", "BC109", "BC109B", "BC109C"], "BC182": ["BC182L"], "BC183": ["BC183A", "BC183B"],
     "BC184": ["BC184", "BC184C"], "BC264": ["BC264D"], "2N3565": ["2N3565"], "2N3392": ["2N3391", "2N3391A", "2N3392", "2N3393"],
     "2N4124": ["2N4124"], "2N4125": ["2N4125"], "2N5133": ["2N5133"], "2N5172": ["2N5172"], "2N5306": ["2N5306"],
     "2N5308": ["2N5308"], "2N2646": ["2N2646"], "TIS93": ["TIS93"], "2N404A": ["2N404A"], "2N1302": ["2N1302"],
@@ -50,7 +50,9 @@ DISCONTINUED: dict[str, list[str]] = {
     # optos
     "VTL5C2": ["VTL5C2"], "VTL5C3": ["VTL5C3"], "NSL-32": ["NSL-32"],
 }
-_AD = re.compile(r"findchips\.com|datasheetarchive|alldatasheet|datasheetcatalog|datasheet4u", re.I)
+# Pages to keep (1-based) where an archive copy runs on into the next sheet of a scanned data book.
+PAGES: dict[str, range] = {"LM308": range(1, 5)}
+_AD = re.compile(r"findchips\.com|datasheetarchive|alldatasheet|datasheetcatalog|datasheet4u|icminer", re.I)
 
 TI = "https://www.ti.com/lit/ds/symlink/{}.pdf"
 NJM = "https://www.nisshinbo-microdevices.co.jp/en/pdf/datasheet/{}_E.pdf"
@@ -141,43 +143,112 @@ def _norm(s: str) -> str:
     return re.sub(r"[^A-Z0-9]", "", s.upper())
 
 
+_OCR_FOLD = str.maketrans("SOILBZ8", "5011525")  # shapes OCR confuses: '1S1588' as '151588', '2SC1815' as '28C1815'
+
+
+def _fold(s: str) -> str:
+    return _norm(s).translate(_OCR_FOLD)
+
+
+def _names_in(text: str, names, fuzzy: bool = True) -> set[str]:
+    """The names that occur in text, OCR-tolerant when fuzzy (the sheet's own part; another part must
+    match exactly and start a word). A name running into another digit is a longer part number
+    ('1N2701' is not 1N270) unless a space or a cell border separated them in the text."""
+    chars, gap = [], []                      # alphanumerics, and whether a separator followed each
+    for ch in text.upper():
+        if ch.isascii() and ch.isalnum():
+            chars.append(ch)
+            gap.append(False)
+        elif gap:
+            gap[-1] = True
+    raw = "".join(chars)
+    t = raw.translate(_OCR_FOLD) if fuzzy else raw
+    out = set()
+    for n in names:
+        f = _fold(n) if fuzzy else _norm(n)
+        for m in re.finditer(re.escape(f), t) if f else ():
+            starts = fuzzy or m.start() == 0 or gap[m.start() - 1]
+            if starts and (gap[m.end() - 1] or not raw[m.end():m.end() + 1].isdigit()):
+                out.add(n)
+                break
+    return out
+
+
+def part_like(v: str) -> bool:
+    """A real part number ('2N5458', 'BC109B'), not a value fragment ('5.1', '558', 'D1M')."""
+    n = _norm(v)
+    return len(n) >= 4 and re.search(r"[A-Z]", n) is not None and len(re.findall(r"\d", n)) >= 2 and not re.fullmatch(r"\d+V\d*", n)
+
+
+def _ocr(page, rotate: int = 0) -> str:
+    import pymupdf as fitz
+    zoom = 2400 / max(page.rect.width, 1)    # a fixed width: archive scans come at any page size
+    with tempfile.TemporaryDirectory() as d:
+        png = Path(d) / "p.png"
+        page.get_pixmap(matrix=fitz.Matrix(zoom, zoom).prerotate(rotate)).save(png)
+        return subprocess.run(["tesseract", str(png), "-", "--psm", "3"], capture_output=True, text=True).stdout
+
+
+def _has_text(page) -> bool:
+    return len(page.get_text().split()) > 40
+
+
 def _text(page) -> str:
     """A page's text, by tesseract when the page is a scan."""
     t = page.get_text()
-    if len(t.split()) > 40 or not shutil.which("tesseract"):
+    if _has_text(page) or not shutil.which("tesseract"):
         return t
-    with tempfile.TemporaryDirectory() as d:
-        png = Path(d) / "p.png"
-        page.get_pixmap(dpi=200).save(png)
-        return t + subprocess.run(["tesseract", str(png), "-", "--psm", "3"], capture_output=True, text=True).stdout
+    return t + _ocr(page)
 
 
-def host(src: Path, sheet: str, force: bool = False) -> tuple[Path | None, str]:
+def host(src: Path, sheet: str, others=(), force: bool = False) -> tuple[Path | None, str, set[str]]:
     """Copy an archived datasheet into app/static/datasheets/<sheet>.pdf without the archive's ad
-    pages, links and metadata. Refused (None, reason) when no spelling of the part is in its first pages."""
+    pages, watermarks, links and metadata, and without trailing pages about another part (the next
+    sheet of a data book). Returns (path, what was done, the names in `others` the sheet mentions);
+    refused (None, reason, {}) when no spelling of the part is in its first pages."""
     import pymupdf as fitz
     doc = fitz.open(src)
     if doc.page_count == 0:
-        return None, "not a PDF"
+        return None, "not a PDF", set()
+    if sheet in PAGES:
+        doc.select([i - 1 for i in PAGES[sheet] if i <= doc.page_count])
     ads = [i for i, pg in enumerate(doc) if _AD.search(pg.get_text()) and not pg.get_images() and len(pg.get_text().split()) < 150]
     keep = [i for i in range(doc.page_count) if i not in ads]
     if not keep:
-        return None, "only ad pages"
-    names = {_norm(n) for n in [sheet, *DISCONTINUED.get(sheet, [])]}
-    seen = _norm(" ".join(_text(doc[i]) for i in keep[:2]))
-    if not force and not any(n in seen for n in names):
-        return None, f"{sheet} not found on its first pages (OCR); check it and pass force"
+        return None, "only ad pages", set()
+    names = [sheet, *DISCONTINUED.get(sheet, [])]
+    text = {i: _text(doc[i]) for i in keep}
+    if not force and not _names_in(" ".join(text[i] for i in keep[:2]), names):
+        for i in keep[:2]:                   # a catalog table printed sideways
+            if not _has_text(doc[i]) and shutil.which("tesseract"):
+                text[i] += " ".join(_ocr(doc[i], r) for r in (90, 270))
+        if not _names_in(" ".join(text[i] for i in keep[:2]), names):
+            return None, f"{sheet} not found on its first pages (OCR); check it and pass force", set()
+    other = 0
+    # Trailing pages with a text layer that never name the part: a publisher's legal page, the next
+    # sheet of a data book. Scans are left alone, as OCR can miss the name on a page of graphs.
+    while not force and len(keep) > 1 and _has_text(doc[keep[-1]]) and not _names_in(text[keep[-1]], names):
+        keep.pop()
+        other += 1
     doc.select(keep)
+    marks = 0
     for pg in doc:
         for link in list(pg.get_links()):
             if _AD.search(link.get("uri") or ""):
                 pg.delete_link(link)
+        for b in pg.get_text("dict")["blocks"]:
+            for line in b.get("lines", []):
+                if _AD.search("".join(sp["text"] for sp in line["spans"])):
+                    pg.add_redact_annot(line["bbox"], fill=(1, 1, 1))
+                    marks += 1
+        pg.apply_redactions(images=fitz.PDF_REDACT_IMAGE_NONE)
     doc.set_metadata({k: "" for k in doc.metadata if k not in ("format", "encryption")} | {"title": f"{sheet} datasheet"})
     doc.del_xml_metadata()
     HOSTED.mkdir(parents=True, exist_ok=True)
     dst = HOSTED / f"{sheet}.pdf"
     doc.save(dst, garbage=4, deflate=True)
-    return dst, f"{len(keep)} pages, {len(ads)} ad page(s) removed"
+    done = [f"{len(keep)} pages"] + [f"{n} {w} removed" for n, w in ((len(ads), "ad pages"), (other, "trailing pages on other parts"), (marks, "watermarks")) if n]
+    return dst, ", ".join(done), _names_in(" ".join(text[i] for i in keep), others, fuzzy=False)
 
 
 def sheet_for(name: str) -> str:
