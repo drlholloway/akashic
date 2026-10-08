@@ -183,16 +183,29 @@ def _fingerprint(path: Path) -> str:
     return h.hexdigest()
 
 
+# Discontinued parts made again under another number: the part links the new-production sheet, which
+# the part page names, and an archived sheet of the original (hosted) is listed beside it.
+NEW_PRODUCTION: dict[str, str] = {
+    "MN3005": "Xvive MN3005", "MN3007": "Xvive MN3007", "MN3205": "Coolaudio V3205", "MN3207": "Coolaudio V3207",
+    "MN3101": "Cabintech CT3101", "BL3208": "Coolaudio V3208",
+}
+
+
 def all_sheets(part: str, link: str) -> list[dict]:
     """Every sheet to show for a part whose link is `link`: a hosted part's own sheet and the other
-    fabs' sheets beside it, each with its maker; a maker's link or a covering sheet stands alone."""
-    if link.startswith("http") or not link:
-        return [{"href": link, "maker": "", "selector": False}] if link else []
-    stem = Path(link).stem
+    fabs' sheets beside it, each with its maker; a new-production sheet first and the original's
+    archived sheet after it; a maker's link or a covering sheet stands alone."""
+    if not link:
+        return []
     own = next((k for k, vs in DISCONTINUED.items() if part in {k, *vs}), "")
-    files = sheets_of(stem) if stem == own else [Path(link).name]
     makers = hosted_list()["makers"]
-    return [{"href": f"datasheets/{f}", "maker": makers.get(f, ""), "selector": Path(f).stem in SELECTOR} for f in files]
+    hosted = lambda files: [{"href": f"datasheets/{f}", "maker": makers.get(f, ""), "selector": Path(f).stem in SELECTOR} for f in files]
+    if link.startswith("http"):
+        label = NEW_PRODUCTION.get(part, "")
+        first = {"href": link, "maker": f"{label} (new production)" if label else "", "selector": False}
+        return [first, *hosted(sheets_of(own))] if label and own else [first]
+    stem = Path(link).stem
+    return hosted(sheets_of(stem) if stem == own else [Path(link).name])
 
 
 def is_selector(link: str) -> bool:

@@ -37,11 +37,12 @@
 		<p class="lede">{data.rows.length} {data.rows.length === 1 ? 'circuit uses' : 'circuits use'} this part{#if data.part.types.length}. Listed as: {data.part.types.join('; ')}{/if}.</p>
 		{#if (data.part.datasheets?.length ?? 0) > 1}
 			{@const sheets = data.part.datasheets ?? []}
-			<p class="sheet">Datasheets: {#each sheets as d, i}{#if i}<span class="dim">{' · '}</span>{/if}<a href="{base}/{d.href}" target="_blank" rel="noopener">{d.maker || `copy ${i + 1}`}{d.selector ? ' (selector table)' : ''}</a>{/each} <span class="dim">· archived copies from {sheets.length} fabs; the part is discontinued and the makers no longer publish it</span></p>
+			{@const reissued = /^https?:/.test(sheets[0].href)}
+			<p class="sheet">Datasheets: {#each sheets as d, i}{#if i}<span class="dim">{' · '}</span>{/if}<a href={/^https?:/.test(d.href) ? d.href : `${base}/${d.href}`} target="_blank" rel="noopener">{d.maker || `copy ${i + 1}`}{d.selector ? ' (selector table)' : ''}</a>{/each} <span class="dim">· {reissued ? 'the original is discontinued and made again under another number; its archived sheet follows' : `archived copies from ${sheets.length} fabs; the part is discontinued and the makers no longer publish it`}</span></p>
 		{:else if data.part.datasheet}
 			{@const maker = data.part.datasheets?.[0]?.maker}
 			{@const hosted = !/^https?:/.test(data.part.datasheet)}
-			<p class="sheet"><a href={hosted ? `${base}/${data.part.datasheet}` : data.part.datasheet} target="_blank" rel="noopener">{data.part.selector ? 'Selector table' : 'Datasheet'}</a> <span class="dim">· {data.part.selector ? 'a row in a maker\'s catalog, not a full datasheet; the part is discontinued' : hosted ? `archived copy${maker ? ` from ${maker}` : ''}; the part is discontinued and the maker no longer publishes it` : `from ${new URL(data.part.datasheet).hostname.replace(/^www\./, '')}`}</span></p>
+			<p class="sheet"><a href={hosted ? `${base}/${data.part.datasheet}` : data.part.datasheet} target="_blank" rel="noopener">{data.part.selector ? 'Selector table' : 'Datasheet'}</a> <span class="dim">· {data.part.selector ? 'a row in a maker\'s catalog, not a full datasheet; the part is discontinued' : hosted ? `archived copy${maker ? ` from ${maker}` : ''}; the part is discontinued and the maker no longer publishes it` : `${maker ? `${maker} · ` : ''}from ${new URL(data.part.datasheet).hostname.replace(/^www\./, '')}`}</span></p>
 		{/if}
 	</header>
 	{#if subs}
