@@ -161,6 +161,10 @@ VENDOR_WARNING = {
 }
 
 
+# Knob names that are acronyms stay in capitals when the rest are title-cased ('EQ', not 'Eq').
+_ACRONYM_KNOBS = {"EQ", "LFO", "HPF", "LPF", "HP", "LP", "OD", "FX", "VCF", "VCA", "ENV", "BPM"}
+
+
 @contextmanager
 def connect():
     conn = sqlite3.connect(DB_PATH, timeout=60)
@@ -379,7 +383,7 @@ def upsert_circuit(conn: sqlite3.Connection, c: Circuit) -> None:
                  and not re.fullmatch(r"(?:POT|VR|RV|P)\d*", p, re.I)
                  and (p not in machine or re.sub(r"\s*\d$", "", p).upper() in known)]
         if pots and len(named) == len(dict.fromkeys(pots)):
-            c.controls = [p.title() if p.isupper() else p for p in named]
+            c.controls = [p.title() if p.isupper() and p not in _ACRONYM_KNOBS else p for p in named]
     c.controls = _dedupe_controls(c.controls)
     c.based_on = _clean_based_on(c.based_on) if c.based_on else c.based_on
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")

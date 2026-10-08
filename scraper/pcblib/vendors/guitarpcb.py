@@ -9,10 +9,11 @@ from typing import Iterable
 
 from selectolax.lexbor import LexborHTMLParser
 
+from ..db import _ACRONYM_KNOBS
 from ..models import BomRow, Circuit
 from ..normalize import normalize_row, is_plausible
 from ..paths import CACHE_DIR, DATA_DIR
-from ..pdf import render_page, pdf_text_pages, ocr_bom, text_bom
+from ..pdf import expand_refs, render_page, pdf_text_pages, ocr_bom, text_bom
 from ..normalize import is_prose_value
 from ..taxonomy import classify, find_enclosure
 from . import register
@@ -110,9 +111,22 @@ class GuitarPCB(Adapter):
             knobs = any(r.category in ("POT", "TRIM") for r in text)
             # As in process_document, parts no variant names stay unlabelled. A knob OCR names differently
             # ('FUZZ' for the text's 'Sus/Fuzz') cannot be matched, so named rows only come in when text has none.
-            c.bom = text + [r for r in ocr if r.ref.upper() not in have and not (knobs and not re.search(r"\d", r.ref))]
+            from_grid = bool(text) and not text_bom(pages)  # a heading-free grid table lists every part
+            top: dict[str, int] = {}
+            for r in text:
+                if m := re.fullmatch(r"([A-Z]+)(\d+)[A-Z]?", r.ref.upper()):
+                    top[m.group(1)] = max(top.get(m.group(1), 0), int(m.group(2)))
+
+            def fills_gap(ref: str) -> bool:
+                """Beside a grid table, OCR may fill a gap (R5 between R4 and R6) or a kind it lacks (no ICs), but
+                not run past it: R20 or D7 beside a table that ends at R8 and D2 is a misread label."""
+                m = re.fullmatch(r"([A-Z]+)(\d+)[A-Z]?", ref.upper())
+                return not m or m.group(1) not in top or int(m.group(2)) <= top[m.group(1)]
+            c.bom = text + [r for r in ocr if r.ref.upper() not in have and not (knobs and not re.search(r"\d", r.ref))
+                            and (not from_grid or fills_gap(r.ref))]
             if not c.controls:
-                c.controls = list(dict.fromkeys(r.ref.title() for r in c.bom if r.category == "POT"
+                c.controls = list(dict.fromkeys((r.ref if r.ref != r.ref.upper() or r.ref in _ACRONYM_KNOBS else r.ref.title())
+                                                for r in c.bom if r.category == "POT"
                                                 and re.sub(r"[/ ]", "", r.ref).isalpha()))  # 'Sus/Fuzz'; once across variants
         return c
 
@@ -127,7 +141,7 @@ def _text_bom_per_circuit(pages: list[str]) -> list[BomRow]:
     whole = "\n".join(pages)
     heads = list(_BOM_HEADING.finditer(whole))
     if len(heads) < 2:
-        return text_bom(pages)
+        return text_bom(pages) or _grid_bom(pages)  # the heading-free grid only when no table parser read one
     rows: list[BomRow] = []
     for k, m in enumerate(heads):
         end = heads[k + 1].start() if k + 1 < len(heads) else len(whole)
@@ -139,6 +153,79 @@ def _text_bom_per_circuit(pages: list[str]) -> list[BomRow]:
             r.variant = f"{name} {r.variant}".strip()
             rows.append(r)
     return rows
+
+
+_GRID_ONE = r"(?:R|C|D|Q|IC|U|LED|L|TR|VR|RV|SW|P)\d{1,3}[A-Z]?"
+_GRID_REF = re.compile(rf"^\*?{_GRID_ONE}(?:\s*[-–,]\s*(?:{_GRID_ONE}|\d{{1,3}}))*\*?$")  # 'R1', 'Q1 - Q4', 'D1, D2', 'D3-D6'
+_GRID_KNOB = re.compile(r"^\*?[A-Z][A-Za-z/. ]{1,13}\*?$")  # 'GAIN.BRT'
+_GRID_POT = re.compile(r"^([ABCW]?)\s?(\d+(?:\.\d+)?\s?[kKM]?)\s?([ABCW]?)(?:\s+(LIN|LINEAR|LOG|AUDIO|REV|REVLOG|TRIM|TRIMMER))?(?=\s|$)", re.I)
+_TAPER = {"LIN": "B", "LINEAR": "B", "LOG": "A", "AUDIO": "A", "REV": "C", "REVLOG": "C"}
+
+
+def _grid_bom(pages: list[str]) -> list[BomRow]:
+    """A parts table with no headings, laid out as REF VALUE pairs across the row (the pink GuitarPCB
+    table: 'R1  1M  C1  220n  Q1  2N3904'). Ranges and lists expand ('Q1 - Q4  J113'), named knobs take
+    their taper from a letter or a word ('VOL  A100k', 'PINCH  500k Lin'; 'BIAS  10k Trim' is a
+    trimmer), and a version-tagged cell ('D1  V4 - 1N5817.') is that version's part. Footnote stars
+    are dropped with a note. Only a run of twelve or more designators counts, so pairs read out of
+    prose or a schematic never do."""
+    rows: list[BomRow] = []
+    for page in pages:
+        found: list[tuple[str, str]] = []
+        for line in page.splitlines():
+            cells = []
+            for cell in re.split(r"\s{2,}", line.replace("–", "-").strip()):
+                cell = cell.strip()
+                if not cell or re.fullmatch(r"\d+(?:\.\d+)?\s?V", cell):    # a voltage-rating column ('63V')
+                    continue
+                m = re.match(rf"^\**\s*({_GRID_ONE}(?:\s*-\s*{_GRID_ONE})?)\s+((?!-)\S.{{0,24}})$", cell)
+                cells += [m.group(1), m.group(2)] if m else [cell]       # '** Q2-Q6 J201 (see notes)' is a pair in one cell
+            pairs, k = [], 0
+            while k < len(cells) - 1:  # pair cell by cell, so one stray cell ('BTDR-2H') does not shift the row
+                a, b = cells[k], cells[k + 1]
+                knob = _GRID_KNOB.match(a) and not _GRID_REF.match(a) and (_GRID_POT.match(b.strip("* ")) or re.search(r"\b[SD]P[SD]T\b", b))
+                if knob or (_GRID_REF.match(a) and not _GRID_REF.match(b)):  # 'DECAY  C1M': a pot value, not the designator C1M
+                    pairs.append((a, b))
+                    k += 2
+                else:
+                    k += 1
+            short = len(pairs) == 1 and len(cells) <= 3 and len(pairs[0][1]) <= 20  # a column's last row: 'C9  100n'
+            if (len(pairs) >= 2 or short) and len(pairs) * 2 >= len(cells) - 2:
+                found += pairs
+        if sum(len(expand_refs(a.strip("*"))) for a, _ in found if _GRID_REF.match(a)) < 12:
+            continue
+        for ref, value in found:
+            note = "see the build notes" if "*" in ref + value else ""
+            ref, variant, cat, ptype = ref.strip("* "), "", "", ""
+            value = re.sub(r"\s*\*+\s*", " ", value).strip()            # '1k8 *CLR', '*** J113'
+            value = re.sub(r"\s*\(see notes?\)$", "", value, flags=re.I)
+            if m := re.match(r"^V(\d+)\s*[-–]\s*(.+?)\.?$", value):   # 'V4 - 1N5817.'
+                variant, value = f"V{m.group(1)}", m.group(2)
+            if not _GRID_REF.match(ref):                                  # a named knob or switch
+                name = ref.title() if len(ref) > 3 else ref.upper()       # EQ stays EQ
+                if m := _GRID_POT.match(value):
+                    word = (m.group(4) or "").upper()
+                    taper = m.group(1) or m.group(3) or _TAPER.get(word, "")
+                    rest = value[m.end():].strip()                        # '*B5K and 5k1 Resistor'
+                    note = "; ".join(x for x in (note, rest) if x)
+                    trim = word.startswith("TRIM") or (not taper and re.search(r"BIAS|TRIM|ADJ|SET", name, re.I))
+                    cat = "TRIM" if trim else "POT"                       # 'BIAS  20K' is a trimmer, 'TREB  50k' a knob
+                    value = (taper if cat == "POT" else "") + m.group(2).replace(" ", "")
+                    ptype = "Trimmer" if cat == "TRIM" else "Potentiometer"
+                else:
+                    cat, ptype = "SW", "Switch"
+                refs = [name]
+            elif re.fullmatch(r"P\d+", ref) and not _GRID_POT.match(value):
+                continue                                                  # 'P1  VOL 1': a knob's label, not its value
+            else:
+                refs = expand_refs(ref)
+            for one in refs:
+                r = normalize_row(BomRow(ref=one, value=value, notes=note, category=cat, part_type=ptype, variant=variant))
+                if cat or is_plausible(r) or r.category in ("LED", "D"):
+                    rows.append(r)
+        break
+    variants = sorted({r.variant for r in rows if r.variant}, key=lambda v: -int(v[1:]))  # newest version first
+    return sorted(rows, key=lambda r: variants.index(r.variant) if r.variant else -1) if variants else rows
 
 
 def _strip_prefixes(t: str) -> tuple[str, list[str]]:

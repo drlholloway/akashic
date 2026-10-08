@@ -189,6 +189,11 @@ GitHub Release notes.
   and pots are grouped by taper (A, B, C, W, none) and ordered by resistance.
 
 ### Fixed
+- GuitarPCB: parts tables with no headings (the pink 'R1  1M  C1  220n' grid) are read from the text
+  layer instead of OCR, on 42 boards: exact values (Mastodon Fuzz's 47µ caps and 22k R4, Tight Box's R18
+  and R34), every knob with its taper ('PINCH 500k Lin' is B500k, 'BIAS 10k Trim' a trimmer), expanded
+  ranges ('Q1 - Q4 J113') and version cells, so the Mastodon's D1 is 1N4001 on V3 and 1N5817 on V4.
+  OCR no longer adds designators past the end of such a table (R40, C138).
 - Zener diodes given by voltage are one part however the vendor wrote them: 9V1, 9v1, 9.1V, '9.1V Zener'
   and 'ZENER9V1' are all 9V1 (78 circuits, was split 53 and 22), and so on for every voltage. Whole-volt
   zeners (12V, 15V) now appear in the parts cross-reference. A zener listed by part number (1N4739, 1N5239B, BZX79C9V1) also
