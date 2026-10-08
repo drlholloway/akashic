@@ -1,0 +1,9 @@
+{
+ "id": "expanon:circuit-bending-and-modifications-casio-sa-7-bend-diagram",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Circuit-bending instruction graphic with a photo of the keyboard PCB, not a schematic; the only part is one normally-closed momentary SPST pushbutton.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "SPST", "SW", "momentary, normally closed; wired across IC pins 7 and 3 of the right-hand chip"]
+ ]
+}

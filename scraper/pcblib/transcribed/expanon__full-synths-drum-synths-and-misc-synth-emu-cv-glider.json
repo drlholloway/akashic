@@ -1,0 +1,27 @@
+{
+ "id": "expanon:full-synths-drum-synths-and-misc-synth-emu-cv-glider",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "E-mu-style CV glide (portamento) processor with a 4066-switched integrator; no designators on the drawing, so all parts are counted.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "100k", "R", "one in series to 4066, one to the 47k divider"],
+  ["×2", "10k", "R", "LM741 feedback and TL081 feedback"],
+  ["×1", "471k", "R", "2N3904 collector"],
+  ["×1", "47k", "R", ""],
+  ["×1", "4.7k", "R", "4066 to timing cap"],
+  ["×1", "100", "R", "drawn 100 ohm, TL081 output"],
+  ["×1", "0.01uF", "C", ""],
+  ["×1", "0.011uF", "C", "integrator cap on LM741"],
+  ["×1", "100pF", "C", ""],
+  ["×1", "1uF", "C", ""],
+  ["×1", "1N4148", "D", ""],
+  ["×4", "Diode", "D", "bridge on output, no part number given"],
+  ["×1", "2N3904", "Q", ""],
+  ["×1", "4066", "IC", "CD4066 quad switch"],
+  ["×1", "LM741", "IC", ""],
+  ["×1", "TL081", "IC", ""],
+  ["Shape", "100k", "POT", ""],
+  ["Rate", "1M", "POT", ""],
+  ["Port On/Off", "SPST", "SW", ""]
+ ]
+}

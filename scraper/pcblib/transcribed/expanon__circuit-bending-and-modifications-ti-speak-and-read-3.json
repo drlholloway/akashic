@@ -1,0 +1,9 @@
+{
+ "id": "expanon:circuit-bending-and-modifications-ti-speak-and-read-3",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Not a schematic: a color-coded photo of the TI Speak & Read PCB marking circuit-bend points; the only values are suggested bend resistors (162K, ~5K, 47K) in the legend.",
+ "uncertain": [],
+ "rows": [
+
+ ]
+}

@@ -1,0 +1,10 @@
+{
+ "id": "expanon:circuit-bending-and-modifications-ti-speak-and-read-2",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Photo of the Speak and Read PCB with colored bend points and a legend; no schematic. Only parts named in the legend are listed.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "4.5K", "R", "4500 ohm resistor across the glitch points"],
+  ["×1", "SPST", "SW", "normally open pushbutton for the looping glitch"]
+ ]
+}

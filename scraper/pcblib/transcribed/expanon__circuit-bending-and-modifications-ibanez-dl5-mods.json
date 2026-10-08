@@ -1,0 +1,9 @@
+{
+ "id": "expanon:circuit-bending-and-modifications-ibanez-dl5-mods",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Not a schematic: a 3-page article on modding the Ibanez DL5 (repeat trimmer, dry-signal switch, doubling the delay with a piggy-backed 4164 DRAM, C4 change, wall-wart regulator); only prose and a board photo, no drawing to read.",
+ "uncertain": [],
+ "rows": [
+
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "id": "expanon:circuit-bending-and-modifications-casio-sk-1-aleatron-bending-diagram",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Wiring/bending diagram (book figure 23-2) of a Casio SK-1 PCB with toggle switches, pots and a pushbutton added; no circuit schematic. Body-contact point omitted.",
+ "uncertain": [
+  "Hold: labelled 10K although drawn as a toggle switch; switch throw (SPDT) read from three lugs drawn"
+ ],
+ "rows": [
+  ["Pitch Dial", "500K", "POT", ""],
+  ["Poly Dial", "500K", "POT", ""],
+  ["Skew Dial", "10K", "POT", ""],
+  ["Axis Switches", "SPDT", "SW", "×3 toggle switches"],
+  ["Image Switches", "SPDT", "SW", "×9 toggle switches"],
+  ["Skew Switches", "SPDT", "SW", "×5 toggle switches"],
+  ["Hold", "SPDT", "SW", "toggle switch; drawing also prints 10K under it"],
+  ["Audition", "SPST", "SW", "normally open pushbutton"]
+ ]
+}

@@ -1,0 +1,30 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-moog-904c",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Moog 904-C filter coupler control circuitry (drawing 1148, 1967): coupler switch, one-transistor buffer and a control-voltage differential stage; the 904A/904B filter sections are shown as blocks. No designators are drawn.",
+ "uncertain": [
+  "Coupler Switch: upper (A/B) and lower (C/D/E) decks assumed to be one ganged switch; pole count inferred from the wafer contacts"
+ ],
+ "rows": [
+  ["×3", "10K", "R", "two in series from switch B to the buffer input, one feedback from output"],
+  ["×1", "68K", "R", "buffer bias"],
+  ["×2", "680", "R", "one buffer collector, one to -6 at the PNP pair"],
+  ["×1", "33", "R", "+12 supply dropper"],
+  ["×1", "100", "R", "buffer emitter"],
+  ["×10", "100K", "R", "control summing network"],
+  ["×2", "51K", "R", "control summing network (D deck)"],
+  ["×2", "15K", "R", "differential pair loads"],
+  ["×1", "330", "R", "PNP pair emitters"],
+  ["×1", "68", "R", "in series with .005 between pair collectors"],
+  ["×1", "5.6K", "R", "NPN pair tail to -6"],
+  ["×1", ".01uF", "C", ""],
+  ["×1", "80uF", "C", "electrolytic, supply filter"],
+  ["×2", "10uF", "C", "electrolytic, buffer input and output coupling"],
+  ["×1", ".005uF", "C", ""],
+  ["×3", "2N2926", "Q", "NPN (or TI416): buffer transistor and the lower differential pair"],
+  ["×2", "2N3702", "Q", "PNP: upper differential pair"],
+  ["Center Frequency", "5K", "POT", ""],
+  ["Bandwidth", "5K", "POT", ""],
+  ["Coupler Switch", "9P3T", "SW", "3-position front-panel rotary, decks A-E (A, B, C, D two poles each, E one); series / LP-HP / parallel"]
+ ]
+}

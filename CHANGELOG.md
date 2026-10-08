@@ -220,8 +220,12 @@ GitHub Release notes.
   lose their wrong OCR rows and list nothing.
 - Experimentalists Anonymous synth and utility circuits read by eye too: envelope generators and followers
   (EFM EGLFO1a, Polyfusion 2044), VCAs and amplifiers (Polyfusion 2010, LM386, LM390), mixers, buffers and
-  switchers (Boss TM-3). 33 of the first 40 now list 376 parts; the other 7 are wiring diagrams, articles
-  or drawings with no values. Two images missing their last bytes on the site (10 Band Graphic EQ, Pulse
+  switchers (Boss TM-3), then the full synths and drum machines from their service manuals and build
+  documents (Korg MS-10 and MS-20, Moog Rogue, 904A filter and Memorymoog voice card, Oberheim Matrix-6
+  voice board, Maestro Rhythm 'n' Sound G2, EFM BassAce, PAiA Phlanger). A manual covering a whole synth
+  gives the voice board, with its page named; where a printed parts list exists it is used and checked
+  against the drawing. 56 of the first 80 now list 2,244 parts; the others are wiring diagrams, articles,
+  drawings with no values or photos of circuit-bent toys. Two images missing their last bytes on the site (10 Band Graphic EQ, Pulse
   Frequency Doubler) are now read instead of skipped.
 - Capacitor and resistor values written with a leading point ('.01uF', '.47u') now read as numbers, and
   capacitors printed in the three-digit code ('104', '473') as 100n and 47n; '1meg', '220E' (E for

@@ -1,0 +1,22 @@
+{
+ "id": "expanon:delay-echo-and-samplers-isd1000-recorder",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Small single-sheet ISD1000A voice record/playback circuit on +5V; no designators, so quantity refs are used.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "47k", "R", "pull-up on pins 24/27 and series to pin 23"],
+  ["×1", "2.2k", "R", "mic bias"],
+  ["×1", "4.7k", "R", "mic bias"],
+  ["×1", "470k", "R", "pin 19 (AGC)"],
+  ["×1", "10", "R", "speaker, marked optional"],
+  ["×2", "47uF", "C", "supply decoupling and mic bias filter, electrolytic"],
+  ["×3", ".1uF", "C", ""],
+  ["×3", ".22uF", "C", "pins 20/21, 17 and 18"],
+  ["×1", "4.7uF", "C", "pin 19 AGC, electrolytic"],
+  ["×1", "1N914", "D", ""],
+  ["×1", "ISD100A", "IC", "ISD1000A voice record/playback chip, drawn as ISD100A"],
+  ["Play", "SPST momentary", "SW", "pushbutton"],
+  ["Record", "SPST momentary", "SW", "pushbutton"],
+  ["×1", "Electret mic", "OTHER", ""]
+ ]
+}

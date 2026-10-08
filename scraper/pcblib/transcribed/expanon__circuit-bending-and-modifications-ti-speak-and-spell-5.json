@@ -1,0 +1,13 @@
+{
+ "id": "expanon:circuit-bending-and-modifications-ti-speak-and-spell-5",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Wiring sketch over the Speak & Spell board drawing: a 500K pitch dial, body contact, a looping push button and toggle, and three bending toggles; not a schematic.",
+ "uncertain": [
+  "×4 SW: toggle type not given"
+ ],
+ "rows": [
+  ["Pitch", "500K", "POT", "pitch dial"],
+  ["Loop", "SPST", "SW", "normally open push button"],
+  ["×4", "?", "SW", "toggles (one looping, three bending), type not given"]
+ ]
+}

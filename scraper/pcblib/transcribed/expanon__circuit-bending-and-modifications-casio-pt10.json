@@ -1,0 +1,18 @@
+{
+ "id": "expanon:circuit-bending-and-modifications-casio-pt10",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Circuit-bending map on a photo of the Casio PT-10 board: five bends drawn as resistor/pot hookups to board points, few values given.",
+ "uncertain": [
+  "2.2k: drawn with a question mark",
+  "×3 SW: the looped symbol shunting the resistors is not standard; read as a bypass switch"
+ ],
+ "rows": [
+  ["×2", "5.6k", "R", "one in series with the High Pass Filter pot, one with the Sub-Octave pot"],
+  ["×1", "2.2k", "R", "Squeaky Clock Glitch; drawn '2.2k?'"],
+  ["×2", "?", "R", "no value given: 'Repeating note' bend ('experiment with resistance values') and 'Strange Distortion' bend ('try different resistors, or a low value pot')"],
+  ["High Pass", "10k", "POT", "drawn 'Try 10k'"],
+  ["Sub-Octave", "5k", "POT", "drawn 'Try 5k'"],
+  ["Clock Glitch", "?", "POT", "no value given"],
+  ["×3", "SPST", "SW", "drawn as a looped-wire symbol across the resistor (bypass); read as an on/off switch"]
+ ]
+}
