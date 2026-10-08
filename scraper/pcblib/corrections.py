@@ -375,6 +375,21 @@ TRANSCRIBED: dict[str, list[tuple]] = {
         ("Q1", "2N1101", "Q", ""), ("Q2", "2N1101", "Q", ""), ("SW1", "SPDT", "SW", "Si / Ge clipping diode select"),
         ("Bias", "10K", "TRIM", ""), ("Fuzz", "B1K", "POT", ""), ("Vol", "A100K", "POT", ""),
     ],
+    # Experimentalists Anonymous Basic Saw VCO (Ian Fritz): OCR read U2's CA3140 as D1's value. Read by eye
+    # from the schematic 2026-10-08; D1 and D11 are drawn with no part number. R13 is half hidden by the
+    # tempco's dashed outline and reads as 56K.
+    "expanon:oscillators-lfos-and-signal-generators-basic-saw-vco": [
+        ("R1", "10K", "R", "1%"), ("R2", "100K", "R", "1%"), ("R3", "100K", "R", "1%"), ("R4", "180K", "R", ""),
+        ("R5", "6.8K", "R", ""), ("R6", "100K", "R", "1%"), ("R7", "301K", "R", "1%"), ("R8", "680K", "R", ""),
+        ("R9", "180K", "R", ""), ("R11", "910", "R", ""), ("R12", "150", "R", ""), ("R13", "56K", "R", "partly hidden on the schematic"),
+        ("R15", "15K", "R", ""), ("R18", "1K", "R", ""), ("R19", "2.2K", "R", ""), ("R66", "100K", "R", "1%"),
+        ("RTC1", "1K", "R", "tempco resistor"), ("C1", "0.47uF", "C", ""), ("C2", "2200pF", "C", ""), ("C3", "100pF", "C", ""),
+        ("C4", "43pF", "C", ""), ("C5", "360pF", "C", ""), ("D1", "Diode", "D", "no part number given"),
+        ("D11", "Diode", "D", "no part number given"), ("Q1", "MAT04", "Q", "Q1 and Q2 are one MAT04 quad matched pair"),
+        ("Q2", "MAT04", "Q", ""), ("Q3", "2N4391", "Q", ""), ("U1", "TL084", "IC", ""), ("U2", "CA3140", "IC", ""),
+        ("U3", "LM319", "IC", ""), ("RANGE1", "SPDT", "SW", "range"), ("V/Oct", "10K", "TRIM", "10-turn"),
+        ("Freq", "B10K", "POT", ""), ("FM Level", "A10K", "POT", ""),
+    ],
     "fivecats:vintage-style-fuzz-face": _FIVE_CATS_FUZZ_FACE,
     "fivecats:vintage-style-fuzz-face-1590b": _FIVE_CATS_FUZZ_FACE,
 }
