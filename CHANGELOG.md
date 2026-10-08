@@ -189,6 +189,10 @@ GitHub Release notes.
   and pots are grouped by taper (A, B, C, W, none) and ordered by resistance.
 
 ### Fixed
+- Zener diodes given by voltage are one part however the vendor wrote them: 9V1, 9v1, 9.1V, '9.1V Zener'
+  and 'ZENER9V1' are all 9V1 (78 circuits, was split 53 and 22), and so on for every voltage. Whole-volt
+  zeners (12V, 15V) now appear in the parts cross-reference. A zener listed by part number (1N4739, 1N5239B, BZX79C9V1) also
+  counts toward its voltage, so the 9V1 page lists those boards as well.
 - Parts: one entry per IC. Parts lists name the same chip with package and grade suffixes (TL072CP,
   TL072P, LM386N-1, TC1044SCPA) and second-source prefixes (RC/JRC/NJM 4558, MN/V/BL 3207, UA/LM 741),
   and '072' for the TL072, which split each chip across many parts pages. They now share one name and

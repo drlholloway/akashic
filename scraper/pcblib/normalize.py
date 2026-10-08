@@ -185,6 +185,46 @@ def _resistor_code(raw: str) -> str:
     return str(ohms)
 
 
+_ZENER_V = re.compile(r"^(?:ZENN?ER|ZEN)?[\s.:-]*(\d{1,2})(?:[.,](\d)\s*V?|V(\d)?)?[\s.-]*(?:ZENN?ER|ZEN)?(?:\s+DIODE)?$", re.I)  # 'Zenner' too
+
+
+def zener_voltage(value: str) -> str:
+    """A zener given by its voltage, in the standard form: '9.1V', '9v1', '9.1V Zener', 'ZENER 9V1' -> '9V1';
+    '15v Zener', 'ZENER12V' -> '15V', '12V'. '' for anything else: a part number (1N4739, BZX79C9V1) or a
+    bare number with no V, decimal or 'zener' to say it is a voltage."""
+    v = value.strip()
+    m = _ZENER_V.match(v)
+    if not m or not (re.search(r"[Vv]|zen", v, re.I) or m.group(2)):
+        return ""
+    volts, dec = m.group(1), m.group(2) or m.group(3)
+    return f"{int(volts)}V{dec}" if dec and dec != "0" else f"{int(volts)}V"
+
+
+# Zener part numbers -> nominal voltage, for the series pedal boards use. The part number stays the
+# part; the voltage is a second cross-reference key, so a 1N4739 also counts as a 9V1 zener.
+_ZENER_SERIES: dict[str, float] = {
+    **dict(zip(range(4728, 4765), [3.3, 3.6, 3.9, 4.3, 4.7, 5.1, 5.6, 6.2, 6.8, 7.5, 8.2, 9.1, 10, 11, 12, 13, 15, 16, 18,
+                                   20, 22, 24, 27, 30, 33, 36, 39, 43, 47, 51, 56, 62, 68, 75, 82, 91, 100])),    # 1N4728-1N4764, 1 W
+    **dict(zip(range(5221, 5258), [2.4, 2.5, 2.7, 2.8, 3.0, 3.3, 3.6, 3.9, 4.3, 4.7, 5.1, 5.6, 6.0, 6.2, 6.8, 7.5, 8.2, 8.7, 9.1,
+                                   10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 25, 27, 28, 30, 33])),     # 1N5221-1N5257, 500 mW
+    **dict(zip(range(746, 760), [3.3, 3.6, 3.9, 4.3, 4.7, 5.1, 5.6, 6.2, 6.8, 7.5, 8.2, 9.1, 10, 12])),           # 1N746-1N759
+}
+
+
+def zener_of_part(part: str) -> str:
+    """The voltage of a zener part number, in the standard form ('1N4739A' -> '9V1', 'BZX79C9V1' -> '9V1',
+    'BZX55C12' -> '12V'), or '' for anything that is not one."""
+    p = re.sub(r"[^A-Z0-9]", "", part.upper())
+    m = re.fullmatch(r"1N(\d{3,4})[A-D]?", p)
+    if m and int(m.group(1)) in _ZENER_SERIES:
+        v = _ZENER_SERIES[int(m.group(1))]
+        return f"{int(v)}V{round(v % 1 * 10)}" if v % 1 else f"{int(v)}V"
+    m = re.fullmatch(r"BZ[XVYT]\d{2}[A-Z]?C?(\d{1,2})V?(\d)?", p)
+    if m:
+        return f"{int(m.group(1))}V{m.group(2)}" if m.group(2) and m.group(2) != "0" else f"{int(m.group(1))}V"
+    return ""
+
+
 def normalize_row(row: BomRow) -> BomRow:
     row.value = _ZERO_WIDTH.sub("", row.value)  # '\u200bTC1044SCPA' from a copied web page
     row.ref = _ZERO_WIDTH.sub("", row.ref)
@@ -219,6 +259,8 @@ def normalize_row(row: BomRow) -> BomRow:
             row.value = raw
             row.part_type = row.part_type or m.group(2).strip()
     row.norm_value = re.sub(r"\s+", " ", raw).upper()
+    if row.category == "D" and (z := zener_voltage(raw)):
+        row.norm_value = z                                   # '9.1V Zener', '9v1', 'ZENER9V1' are all 9V1
     row.sort_key = 0.0
 
     if row.category == "R" or row.category == "TRIM":
@@ -424,7 +466,8 @@ def catalog_keys(category: str, value: str) -> list[str]:
                 continue
             tokens = [t.strip("*.,;") for t in piece.split()]
             partnos = [t for t in tokens if _CATALOG_PARTNO.match(t) and (not t.isdigit() or (category == "IC" and 3 <= len(t) <= 5))
-                       and not re.fullmatch(r"\d+(?:MM|V|W|A|HZ|MHZ|KHZ|PIN|X\d+)", t)]
+                       and not (re.fullmatch(r"\d+(?:MM|V|W|A|HZ|MHZ|KHZ|PIN|X\d+)", t)
+                                and not (category == "D" and re.fullmatch(r"\d{1,2}V", t)))]  # a 12V zener
             partnos = [t for t in partnos if not _CATALOG_NOISE.match(t) or (category == "D" and re.fullmatch(r"\d+V\d*|\d+(?:\.\d+)?V", t))]
             partnos = [t for t in partnos if not (_CATALOG_SHORT.match(t) and _CATALOG_SHORT.match(t).group(1) not in _CATALOG_SHORT_OK)]
             if partnos:
@@ -435,6 +478,8 @@ def catalog_keys(category: str, value: str) -> list[str]:
                     keys.append(ic_name(t) if category == "IC" else t)
             elif category == "XTAL" and (m := re.search(r"\d+(?:\.\d+)?\s*[KM]?HZ", piece)):
                 keys.append(m.group(0).replace(" ", ""))
+        if category == "D":
+            keys += [z for k in keys if (z := zener_of_part(k))]  # a 1N4739 is also a 9V1 zener
         return list(dict.fromkeys(keys))
     if category in ("POT", "TRIM"):
         m = re.search(r"(?<![A-Z0-9])([ABCW])?(\d+(?:\.\d+)?)([KM]?)\s?([ABCW])?(?![A-Z0-9])", v.replace("*", ""))

@@ -26,10 +26,13 @@ jobs:
           from pcblib.normalize import normalize_row
           from pcblib.models import BomRow
           cases = {("R1", "1K5"): "1.5k", ("R2", "1m"): "1M", ("C1", "4u7"): "4.7u", ("C2", "100nF"): "100n",
-                   ("VOL", "A100K"): "A100k", ("TONE", "100KB"): "B100k", ("IC1", "TL072"): "TL072"}
+                   ("VOL", "A100K"): "A100k", ("TONE", "100KB"): "B100k", ("IC1", "TL072"): "TL072",
+                   ("D1", "9.1V Zener"): "9V1", ("D2", "9v1"): "9V1", ("D3", "ZENER12V"): "12V", ("D4", "1N4148"): "1N4148"}
           for (ref, val), want in cases.items():
               got = normalize_row(BomRow(ref=ref, value=val)).norm_value
               assert got == want, (ref, val, got, want)
+          from pcblib.normalize import catalog_keys
+          assert catalog_keys("D", "1N4739A") == ["1N4739A", "9V1"] and catalog_keys("D", "1N5817") == ["1N5817"]
           from pcblib.originals import original
           for raw, want in {"EHX Big Muff": "Electro-Harmonix Big Muff Pi", "Big Muff Pi": "Electro-Harmonix Big Muff Pi",
                             "EHX Op-Amp Big Muff": "Electro-Harmonix Op-Amp Big Muff Pi", "Pro Co RAT": "ProCo RAT",
