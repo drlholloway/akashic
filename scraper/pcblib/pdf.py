@@ -2132,6 +2132,74 @@ def _expand_range_rows(rows: list[BomRow]) -> list[BomRow]:
     return out
 
 
+_EAGLE_HEAD = re.compile(r"^\s*Part\s+Value\s+Device\b", re.M)
+_EAGLE_ROW = re.compile(r"^\s*(?:R|C|D|Q|IC|U)\d+\s+\S", re.M)
+_EAGLE_POT = re.compile(r"^([ABC])?\s?(\d+(?:\.\d+)?)\s?([kKM])(?:\s?([ABC])(?![a-z]))?(?:\s+(linear|lin|log|audio|rev(?:erse)?)\b)?", re.I)
+
+
+def parse_eagle_partlist(pages: list[str]) -> list[BomRow]:
+    """An Eagle 'Part Value Device Package Description' export printed into the build document (Dead
+    Astronaut), on the page with that header and any page after it that carries on the list. A
+    designator's value is its first word (the device and package columns follow it). Eagle names
+    off-board parts by their job ('F-DEPTH', 'LDRTREM', 'SW1SQ/TRI', 'D2TREM'): a designator with a
+    suffix keeps the suffix as a note, and a named part is typed by its value: '50k linear', 'A1M log'
+    or '10KB' a knob (a trimmer only when named for it), an LDR, a switch ('ON/ON'; the 3PDT bypass
+    footswitch is left out), an LED. Anything else (a note, a pad, the supply) is not a part."""
+    rows: list[BomRow] = []
+    started = False
+    for page in pages:
+        m = _EAGLE_HEAD.search(page)
+        if m:
+            started, body = True, page[m.end():].split("\n", 1)[-1]
+        elif started and len(_EAGLE_ROW.findall(page)) >= 5:
+            body = page                                               # the list carries on over the page
+        else:
+            if started and rows:
+                break
+            continue
+        for line in body.splitlines():
+            mm = re.match(r"^\s*([A-Z0-9][A-Za-z0-9\-/.]*)\s+(.+)$", line.rstrip())
+            if not mm or not re.fullmatch(r"[A-Z0-9][A-Z0-9\-/.]*", mm.group(1)):
+                continue                                              # a note ('The FV24 uses'), a wrapped line
+            name, rest = mm.groups()
+            note = "; ".join(x.strip(" ()") for x in re.findall(r"\(([^)]*)\)?", rest)).strip()
+            value = re.sub(r"\(.*$", "", rest).strip()
+            ref, cat, ptype = name, "", ""
+            if d := re.fullmatch(r"((?:R|C|D|Q|IC|U|L|SW|LED)\d+)([A-Z/.].*)", name):  # 'D2TREM', 'SW1SQ/TRI'
+                ref, suffix = d.groups()
+                note = "; ".join(x for x in (suffix.strip("."), note) if x)
+            designator = re.fullmatch(r"(?:R|C|D|Q|IC|U|L)\d+", ref)
+            if re.search(r"\b(?:3PDT|4PDT)\b", line) or re.match(r"(?:JP|PAD|X|J)\d", name):
+                continue                                              # the bypass footswitch, a jumper or pad
+            if name.startswith("LDR"):
+                cat, ptype, note, value = "OPTO", "LDR", "; ".join(x for x in (value, note) if x), "LDR"
+            elif re.search(r"\b(?:ON\s*/\s*(?:OFF\s*/\s*)?ON|ON\s+ON|SPDT|DPDT)\b", line, re.I) and not designator:
+                sw = re.search(r"\b(SPDT|DPDT)\b", line)
+                cat, ptype, note = "SW", "Switch", "; ".join(x for x in (re.sub(r"\s{2,}.*", "", value), note) if x)
+                value = sw.group(1) if sw else "SPDT"
+                ref = ref if ref.startswith("SW") else re.sub(r"^(?:SPDT|DPDT)(?=\S)", "", name)  # 'SPDTON/ON'
+            elif (not designator and re.search(r"LED", value + " " + name, re.I)) or (designator and ref.startswith("D") and re.search(r"LED", value, re.I)):
+                cat, ptype = "LED", "LED"
+                note = "; ".join(x for x in (re.sub(r"^\S+\s*", "", value), note) if x)
+                value = re.sub(r"/OR$", "", value.split()[0], flags=re.I)  # 'LED3MM/OR 5MM'
+            elif not designator and (p := _EAGLE_POT.match(value.replace("O", "0") if re.match(r"\d", value) else value)):
+                taper = p.group(1) or p.group(4) or {"lin": "B", "linear": "B", "log": "A", "audio": "A"}.get((p.group(5) or "").lower(), "C" if p.group(5) else "")
+                trim = not taper and re.search(r"TRIM|BIAS|ADJ", name)
+                cat, ptype = ("TRIM", "Trimmer") if trim else ("POT", "Potentiometer")
+                value = taper + p.group(2) + p.group(3).lower().replace("m", "M")
+                ref = name.title() if len(name) > 3 else name
+            elif designator:
+                value = value.split()[0].rstrip("-") if value else ""  # Eagle's value is one word ('2N3906-'); the device follows
+            else:
+                continue                                              # a pad, the supply, a note
+            if any(x.ref == ref for x in rows) and ref != name:
+                ref = name                                            # 'D1PULSE-LED' beside the diode D1: keep Eagle's name
+            r = normalize_row(BomRow(ref=ref, value=value, notes=note, category=cat, part_type=ptype))
+            if cat or (is_plausible(r) and r.category != "OTHER"):
+                rows.append(r)
+    return rows
+
+
 def text_bom(pages: list[str]) -> list[BomRow]:
     """The parts list from a document's text layer: every table parser runs, per-variant tables
     take over the parts they cover, then shopping lists, variant notes and mod charts."""

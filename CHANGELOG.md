@@ -189,6 +189,10 @@ GitHub Release notes.
   and pots are grouped by taper (A, B, C, W, none) and ordered by resistance.
 
 ### Fixed
+- Dead Astronaut: nine build documents print their Eagle parts list as text, which is now read instead
+  of OCR (`parse_eagle_partlist`): the Pendulum Tremolo+ loses an OCR'd 'D7 t.C2' that is not on the board
+  and gains its missing C3, C5, IC1, both LDRs, the switches and its four knobs with tapers. OCR still
+  fills a scanned page of a list but never adds designators past its end. Average parts per board: 41 to 56.
 - GuitarPCB: parts tables with no headings (the pink 'R1  1M  C1  220n' grid) are read from the text
   layer instead of OCR, on 42 boards: exact values (Mastodon Fuzz's 47µ caps and 22k R4, Tight Box's R18
   and R34), every knob with its taper ('PINCH 500k Lin' is B500k, 'BIAS 10k Trim' a trimmer), expanded
