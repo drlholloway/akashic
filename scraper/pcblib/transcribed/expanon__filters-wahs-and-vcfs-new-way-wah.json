@@ -1,0 +1,41 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-new-way-wah",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Modern Dunlop wah (sheet 2 of 2) with a buffer and battery protection; a table gives C3/C9/C10 for GCB-95, GCB-100, JH-1 and Clav-Wah variants (GCB-95 values listed, C9/C10 from JH-1).",
+ "uncertain": [
+  "D1: part number drawn ZL9M3, unfamiliar code"
+ ],
+ "rows": [
+  ["R1", "68K", "R", ""],
+  ["R2", "390", "R", ""],
+  ["R3", "1.5K", "R", ""],
+  ["R4", "22K", "R", ""],
+  ["R5", "470K", "R", ""],
+  ["R6", "470K", "R", ""],
+  ["R7", "1K", "R", ""],
+  ["R8", "10K", "R", ""],
+  ["R9", "33K", "R", ""],
+  ["R10", "82K", "R", ""],
+  ["R11", "1K", "R", ""],
+  ["R12", "10K", "R", ""],
+  ["R13", "2.2M", "R", ""],
+  ["R14", "1.8M", "R", ""],
+  ["R15", "0", "R", "zero-ohm link"],
+  ["C1", ".01uF", "C", ""],
+  ["C2", "4.7uF", "C", "electrolytic"],
+  ["C3", ".01uF", "C", "variant table: GCB-95 .01uF, GCB-100 .068uF, JH-1 .01uF, Clav-Wah 0.22uF"],
+  ["C4", ".22uF", "C", ""],
+  ["C5", ".22uF", "C", ""],
+  ["C6", ".1uF", "C", ""],
+  ["C7", ".01uF", "C", ""],
+  ["C8", "22pF", "C", ""],
+  ["C9", ".022uF", "C", "JH-1 variant only; not fitted in GCB-95, GCB-100, Clav-Wah"],
+  ["C10", ".01uF", "C", "JH-1 variant only; not fitted in GCB-95, GCB-100, Clav-Wah"],
+  ["D1", "ZL9M3", "D", "battery protection zener (part number as drawn)"],
+  ["Q1", "MPS-A18", "Q", "NPN"],
+  ["Q2", "MPS-A18", "Q", "NPN"],
+  ["Q3", "MPS-A13", "Q", "NPN Darlington"],
+  ["L1", "500mH", "L", ""],
+  ["VR1", "100K", "POT", "wah pot, drawn with taper code \"S\""]
+ ]
+}

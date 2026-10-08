@@ -1,0 +1,19 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-analogguru-fet-booster",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Anubics (Analogguru) FET-Booster by Gottfried Divos, 2005: single BF245B common-source booster with a Gain pot and a bias trimmer.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "1k", "R", ""],
+  ["R2", "1M", "R", ""],
+  ["R3", "10k", "R", ""],
+  ["R4", "1k", "R", ""],
+  ["C1", "22nF", "C", "drawn 22n"],
+  ["C2", "100uF", "C", "electrolytic, supply"],
+  ["C3", "10uF", "C", "electrolytic"],
+  ["C4", "10uF", "C", "electrolytic"],
+  ["Q1", "BF245B", "Q", "N-channel JFET"],
+  ["Gain", "10k", "POT", "P1, wired as variable resistor"],
+  ["TP1", "2k5", "TRIM", "source bias; set for 5V at the drain"]
+ ]
+}

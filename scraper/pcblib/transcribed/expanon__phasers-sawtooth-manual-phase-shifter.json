@@ -1,0 +1,13 @@
+{
+ "id": "expanon:phasers-sawtooth-manual-phase-shifter",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Magnus Danielson's 2000 sawtooth phase shifter: a CV-controlled waveform-shifting circuit for synth sawtooth signals (±5V), not a guitar audio phaser; four resistors and a TL082.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "300k", "R", ""],
+  ["R2", "49k9", "R", ""],
+  ["R3", "49k9", "R", ""],
+  ["R4", "300k", "R", ""],
+  ["U1", "TL-082", "IC", "dual op amp"]
+ ]
+}

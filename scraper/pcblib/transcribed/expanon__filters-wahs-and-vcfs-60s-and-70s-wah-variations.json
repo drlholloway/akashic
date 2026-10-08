@@ -1,0 +1,27 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-60s-and-70s-wah-variations",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Schematic Heaven (L.A. Holt, 2006) drawing of the classic two-transistor wah (Jen, Crybaby, Vox, McCoy) with tables of transistor and inductor variations; single-page PDF, fully legible.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "100k", "R", ""],
+  ["R2", "68k", "R", ""],
+  ["R3", "1.5k", "R", ""],
+  ["R4", "470k", "R", ""],
+  ["R5", "470", "R", "drawn '470 ohms'"],
+  ["R6", "22k", "R", ""],
+  ["R7", "470k", "R", ""],
+  ["R9", "1k", "R", ""],
+  ["R10", "10k", "R", ""],
+  ["R11", "33k", "R", "variation: 33k or 100k"],
+  ["C1", "0.01uF", "C", "polystyrene 125V ('Ducati')"],
+  ["C2", "4uF", "C", "non-polarized"],
+  ["C3", "0.22uF", "C", "polyester film ('tropical fish')"],
+  ["C4", "0.01uF", "C", "polystyrene 125V ('Ducati')"],
+  ["C5", "0.22uF", "C", "polyester film ('tropical fish')"],
+  ["Q1", "BC109b", "Q", "NPN silicon; variations BC239C, 5117, 2N3415, 2N5232A, SIP5172, SES131DT2, SGSIW98021650, SGSIW98011642"],
+  ["Q2", "BC109b", "Q", "NPN silicon; same variations as Q1"],
+  ["T1", "500mH", "L", "wah inductor; variations 487-566mH (Halo, Canister 500, Dime Stack, TDK 5103, Fasel, Dunlop thimble)"],
+  ["R8", "A100k", "POT", "wah pedal pot, 'ICAR' audio, 310 degree taper"]
+ ]
+}

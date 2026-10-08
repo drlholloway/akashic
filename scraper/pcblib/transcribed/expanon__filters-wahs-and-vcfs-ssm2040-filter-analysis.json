@@ -1,0 +1,9 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-ssm2040-filter-analysis",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Not a buildable circuit: an 8-page design analysis (Ryan Williams) of the SSM2040 filter's discrete OTA cell (p1) and exponential current sink (p5), drawn as simulation fragments with an ideal op amp, generic NPN/PNP transistors and R7 left without a value, so no parts list is given.",
+ "uncertain": [],
+ "rows": [
+
+ ]
+}

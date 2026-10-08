@@ -1,0 +1,23 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-jordan-bosstone",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Clean Anubics (Gottfried Divos, 2005) redraw of the Jordan (Sho-Sound) Boss Tone; S1 is the bypass switch and is skipped.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "560k", "R", ""],
+  ["R2", "560k", "R", ""],
+  ["R3", "150k", "R", ""],
+  ["R4", "18k", "R", ""],
+  ["R5", "18k", "R", ""],
+  ["C1", "22n", "C", "ceramic (film suggested)"],
+  ["C2", "22n", "C", "ceramic (film suggested)"],
+  ["C3", "50p", "C", "ceramic"],
+  ["C4", "22n", "C", "ceramic (film suggested)"],
+  ["D1", "1N4148", "D", "notes: Si, e.g. 1N4148"],
+  ["D2", "1N4148", "D", "notes: Si, e.g. 1N4148"],
+  ["Q1", "MPS6513", "Q", "NPN; BC547A suggested"],
+  ["Q2", "2N4249", "Q", "PNP; BC557A suggested"],
+  ["Attack", "B100k", "POT", "P1, drawn '100k lin.'"],
+  ["Volume", "A100k", "POT", "P2, drawn '100k log.'"]
+ ]
+}

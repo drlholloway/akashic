@@ -1,0 +1,26 @@
+{
+ "id": "expanon:tone-control-and-eqs-acoustic-simulator",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Modified Linkwitz headphone crossfeed filter, a passive stereo network; values come from the printed table, which gives a low-Z and a high-Z version (high-Z rows prefixed HZ-). Each channel uses the same designators, so every R and C is needed twice.",
+ "uncertain": [],
+ "rows": [
+  ["R1a", "200", "R", "200 ohm, 1/2W; low-Z version; two used, one per channel"],
+  ["R1b", "150", "R", "150 ohm, 1/2W; low-Z version; two used, one per channel"],
+  ["R2", "100", "R", "100 ohm; low-Z version; two used"],
+  ["R3", "910", "R", "910 ohm; low-Z version; two used"],
+  ["R4", "330", "R", "330 ohm; low-Z version; two used"],
+  ["R5", "330", "R", "330 ohm; low-Z version; two used"],
+  ["C1", "0.22uF", "C", "35V film; low-Z version; two used"],
+  ["C2", "1.2uF", "C", "35V film; low-Z version; two used"],
+  ["HZ-R1a", "2K", "R", "1/4W; high-Z version; two used"],
+  ["HZ-R1b", "1.5K", "R", "1/4W; high-Z version; two used"],
+  ["HZ-R2", "1K", "R", "high-Z version; two used"],
+  ["HZ-R3", "9.1K", "R", "high-Z version; two used"],
+  ["HZ-R4", "3.3K", "R", "high-Z version; two used"],
+  ["HZ-R5", "3.3K", "R", "high-Z version; two used"],
+  ["HZ-C1", "22nF", "C", "35V film; high-Z version; two used"],
+  ["HZ-C2", "120nF", "C", "35V film; high-Z version; two used"],
+  ["S1", "DPDT", "SW", "Perspective; mini or micro-mini"],
+  ["S2", "DPDT", "SW", "Bypass; mini or micro-mini"]
+ ]
+}

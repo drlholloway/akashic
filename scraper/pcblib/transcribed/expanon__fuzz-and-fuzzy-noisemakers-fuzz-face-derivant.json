@@ -1,0 +1,22 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-fuzz-face-derivant",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "PSpice drawing of a two-NPN Fuzz Face variant (2N3904s) with feedback from Q1 emitter; no R4, R6 or R10 on the sheet. The 'l' after 1k/5k probably means linear but is not stated.",
+ "uncertain": [],
+ "rows": [
+  ["R3", "10k", "R", ""],
+  ["R5", "10k", "R", ""],
+  ["R7", "47k", "R", ""],
+  ["R8", "100", "R", ""],
+  ["R9", "1k", "R", ""],
+  ["C1", ".1uF", "C", "drawn '.1uf-1uf': any value 0.1uF to 1uF"],
+  ["C2", "33uF", "C", "drawn '33uf-47uf': 33uF to 47uF"],
+  ["C3", "10uF", "C", ""],
+  ["C4", ".01uF", "C", ""],
+  ["Q1", "2N3904", "Q", "drawn as PSpice 'Q2N3904'"],
+  ["Q2", "2N3904", "Q", "drawn as PSpice 'Q2N3904'"],
+  ["Gain", "1k", "POT", "R2, drawn '1kl'; wiper to C2"],
+  ["Bias", "5k", "POT", "R1, drawn '5kl' as a variable resistor; labeled bias control"],
+  ["Volume", "A100k", "POT", "R11, drawn '100ka'"]
+ ]
+}

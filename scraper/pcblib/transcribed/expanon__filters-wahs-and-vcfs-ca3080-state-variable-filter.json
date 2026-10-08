@@ -1,0 +1,26 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-ca3080-state-variable-filter",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Generic state-variable filter with two CA3080 OTA integrators and 741 op amps, high/band/low-pass outputs, controlled from an external exponential converter (not shown). Simple, fully legible CAD drawing.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "100k", "R", ""],
+  ["R2", "100k", "R", ""],
+  ["R3", "24k", "R", ""],
+  ["R4", "24k", "R", ""],
+  ["R5", "200", "R", ""],
+  ["R6", "200", "R", ""],
+  ["R7", "100k", "R", ""],
+  ["R9", "100k", "R", ""],
+  ["R10", "100k", "R", ""],
+  ["R11", "100k", "R", ""],
+  ["C1", "300pF", "C", ""],
+  ["C2", "300pF", "C", ""],
+  ["U1", "UA741", "IC", "op amp; note suggests TL082, CA3140 or CA3240 instead"],
+  ["U2", "UA741", "IC", "op amp"],
+  ["U3", "CA3080", "IC", "OTA"],
+  ["U4", "CA3080", "IC", "OTA"],
+  ["U5", "UA741", "IC", "op amp"],
+  ["R8", "100k", "POT", "band-pass feedback (resonance/Q) control, drawn as variable resistor"]
+ ]
+}

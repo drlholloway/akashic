@@ -1,0 +1,13 @@
+{
+ "id": "expanon:vibrato-and-pitch-shift-sawtooth-frequency-doubler-2",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Single-page PDF: Magnus Danielson's Sawtooth Frequency Doubler V2, a two-op-amp synth waveshaper; no capacitors or supply parts drawn.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "300k", "R", ""],
+  ["R2", "49k9", "R", ""],
+  ["R3", "49k9", "R", ""],
+  ["R4", "300k", "R", ""],
+  ["U1", "TL-082", "IC", "dual op amp (U1A, U1B)"]
+ ]
+}

@@ -189,17 +189,18 @@ GitHub Release notes.
   and pots are grouped by taper (A, B, C, W, none) and ordered by resistance.
 
 ### Fixed
-- Experimentalists Anonymous: 68 pedal schematics whose OCR was worst were read by eye instead, part by
+- Experimentalists Anonymous: 116 pedal schematics whose OCR was worst were read by eye instead, part by
   part (`scraper/pcblib/transcribed/`), from a list ranked by values that fit no standard series or the
-  wrong part type, and by how much of the drawing was missing: 5,100 parts where OCR had found about 650. Boss
-  DC-2 goes from 4 parts to 207, BD-2 from 1 to 120, Morley Echo Chorus Vibrato from 1 to 154, Ibanez
-  DS10 from 2 to 139, MXR Analog Delay from 2 to 119. A PDF whose schematic is not on its first page
-  names its page (DOD FX64, page 2). The Basic Saw VCO's D1 was
+  wrong part type, and by how much of the drawing was missing: 8,100 parts where OCR had found about
+  1,700. Boss DC-2 goes from 4 parts to 207, BD-2 from 1 to 120, DM-2 from 40 to 112, CE-2 from 34 to
+  108, Morley Echo Chorus Vibrato from 1 to 154, EHX Micro Synthesizer from 46 to 192. A PDF whose
+  schematic is not on its first page names its page (DOD FX64, page 2). The Basic Saw VCO's D1 was
   the CA3140 op amp. Values a drawing does not give are shown as '?'; three drawings with no values (a
   pencil trace of the TS5, a tiny FET fuzz, and the DS-1 SEM's cover letter in place of its schematic)
   lose their wrong OCR rows and list nothing.
 - Capacitor and resistor values written with a leading point ('.01uF', '.47u') now read as numbers, and
-  capacitors printed in the three-digit code ('104', '473') as 100n and 47n.
+  capacitors printed in the three-digit code ('104', '473') as 100n and 47n; '1meg', '220E' (E for
+  ohms) and pots written 'A4k7' read too (Moonn's Sunny Sunns Mid pot is B2.2k).
 - Dead Astronaut: nine build documents print their Eagle parts list as text, which is now read instead
   of OCR (`parse_eagle_partlist`): the Pendulum Tremolo+ loses an OCR'd 'D7 t.C2' that is not on the board
   and gains its missing C3, C5, IC1, both LDRs, the switches and its four knobs with tapers. OCR still

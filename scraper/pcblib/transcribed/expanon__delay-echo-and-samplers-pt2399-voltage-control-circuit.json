@@ -1,0 +1,19 @@
+{
+ "id": "expanon:delay-echo-and-samplers-pt2399-voltage-control-circuit",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Simulator-style (SPICE) schematic of a CV-to-delay-time interface for the PT2399 pin 6, run on +/-15V; V1-V6 are simulation voltage sources, not parts.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "300k", "R", ""],
+  ["R2", "220k", "R", ""],
+  ["R3", "300k", "R", ""],
+  ["R4", "27k", "R", ""],
+  ["R5", "470", "R", ""],
+  ["R7", "100k", "R", ""],
+  ["D1", "Diode", "D", "no part number given"],
+  ["D2", "Diode", "D", "no part number given"],
+  ["Q1", "2N3904", "Q", ""],
+  ["U1", "LF412", "IC", "only U1A used"],
+  ["Delay Time", "100k", "POT", "R6; simulator setting 99.9% shown"]
+ ]
+}
