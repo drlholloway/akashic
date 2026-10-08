@@ -1,0 +1,22 @@
+{
+ "id": "pcbway-gtu:eqd-arrows-f31747fd",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "EarthQuaker Arrows clone: single 2N5089 common-emitter boost with collector-base 10M bias and a Level pot on the collector.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "1M", "R", ""],
+  ["×1", "10M", "R", ""],
+  ["×1", "1k3", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×1", "47", "R", "power filter"],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "100p", "C", ""],
+  ["×1", "4n7", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "100n", "C", ""],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×1", "1N4001", "D", "reverse polarity"],
+  ["×1", "2N5089", "Q", ""],
+  ["Level", "B10k", "POT", ""]
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "id": "pcbway-gtu:eqd-hoof-64a2dca4",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "EQD Hoof (Big Muff-style fuzz with 2N1308 germanium-type clipping stages, LED clipping and a Shift-adjustable tone stack); clear drawing.",
+ "uncertain": [
+  "4 clipping LEDs: no type or colour drawn, and one of each pair has inward arrows (photodiode-style), read as LEDs"
+ ],
+ "rows": [
+  ["×1", "1M", "R", ""],
+  ["×3", "470k", "R", ""],
+  ["×1", "390k", "R", ""],
+  ["×4", "100k", "R", ""],
+  ["×2", "39k", "R", ""],
+  ["×3", "15k", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×2", "8k2", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×3", "2k2", "R", ""],
+  ["×3", "100", "R", ""],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×8", "100n", "C", ""],
+  ["×2", "6n8", "C", ""],
+  ["×3", "470p", "C", ""],
+  ["×1", "1N5817", "D", "reverse polarity"],
+  ["×4", "LED", "LED", "clipping pairs in the two feedback loops; no value drawn, one of each pair is drawn with its arrows pointing inward"],
+  ["×2", "2N1308", "Q", ""],
+  ["×2", "2N3904", "Q", ""],
+  ["Fuzz", "B50k", "POT", ""],
+  ["Shift", "B25k", "POT", ""],
+  ["Tone", "B100k", "POT", ""],
+  ["Level", "A1M", "POT", ""]
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "pcbway-gtu:mr-black-orro-8a021c87",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Op-amp overdrive: a gain stage, a clipping stage with two series 1N4148 pairs, a passive tone and a buffered level recovery stage, on two 4558s.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "10k", "R", ""],
+  ["×3", "4k7", "R", "one is the LED resistor"],
+  ["×2", "1k", "R", ""],
+  ["×2", "100k", "R", ""],
+  ["×2", "51k", "R", ""],
+  ["×2", "47k", "R", "bias divider"],
+  ["×1", "2M2", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×2", "220n", "C", ""],
+  ["×2", "100n", "C", ""],
+  ["×2", "100p", "C", ""],
+  ["×3", "47u", "C", "one drawn between VA and VB"],
+  ["×1", "1n", "C", ""],
+  ["×1", "4n7", "C", ""],
+  ["×1", "10u", "C", ""],
+  ["×4", "1N4148", "D", "two series pairs, antiparallel, in the clipping stage feedback"],
+  ["×1", "1N5817", "D", ""],
+  ["×2", "4558", "IC", "four sections drawn: two on pins 1-3, two on pins 5-7"],
+  ["Gain", "B50k", "POT", ""],
+  ["Tone", "B50k", "POT", ""],
+  ["Level", "B50k", "POT", ""]
+ ]
+}

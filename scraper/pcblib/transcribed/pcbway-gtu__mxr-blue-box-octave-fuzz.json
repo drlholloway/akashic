@@ -1,0 +1,35 @@
+{
+ "id": "pcbway-gtu:mxr-blue-box-octave-fuzz",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Blue Box style octave fuzz redesign: 4558 preamp, 2N3904 squarer, CD4013 two-octave-down divider, blend of fuzz and octave through 56k mixers.",
+ "uncertain": [
+  "low-resolution 600px image; 330 and 1n readings from small text"
+ ],
+ "rows": [
+  ["×11", "56k", "R", ""],
+  ["×4", "1M", "R", ""],
+  ["×3", "10k", "R", ""],
+  ["×1", "2M2", "R", ""],
+  ["×1", "150k", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "330", "R", ""],
+  ["×1", "47", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×2", "10n", "C", ""],
+  ["×2", "10u", "C", ""],
+  ["×2", "47n", "C", ""],
+  ["×2", "1u", "C", ""],
+  ["×2", "100u", "C", ""],
+  ["×1", "1n", "C", ""],
+  ["×1", "300p", "C", ""],
+  ["×1", "100n", "C", ""],
+  ["×2", "1N914", "D", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×3", "2N3904", "Q", ""],
+  ["×1", "4558", "IC", ""],
+  ["×1", "CD4013", "IC", "two flip-flop halves of one chip"],
+  ["Blend", "A50k", "POT", ""],
+  ["Output", "A50k", "POT", ""]
+ ]
+}

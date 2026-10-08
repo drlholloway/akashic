@@ -1,0 +1,20 @@
+{
+ "id": "pcbway-gtu:jhs-prestige-233e49e9",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Single BS170 MOSFET common-source boost with a C1M input volume pot and a 1N4742A zener on the gate.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "1M", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "10", "R", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "10u", "C", ""],
+  ["×1", "180n", "C", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "1N4742A", "D", "zener, clamps the gate"],
+  ["×1", "BS170", "Q", ""],
+  ["Volume", "C1M", "POT", "input level before the gate"]
+ ]
+}

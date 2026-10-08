@@ -1,0 +1,26 @@
+{
+ "id": "pcbway-gtu:dod-compressor-280-tonepad-61f28e7f",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "DOD Compressor 280 (TonePad layout): LM358 gain stage with a VTL5C2 vactrol in the feedback loop, driven by a PN4124 rectifier pair; the vactrol LED and LDR are drawn separately but are one part.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "22k", "R", ""],
+  ["×2", "1M", "R", ""],
+  ["×2", "100k", "R", ""],
+  ["×2", "220k", "R", ""],
+  ["×2", "4k7", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×4", "47n", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "47u", "C", ""],
+  ["×1", "10u", "C", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×2", "PN4124", "Q", ""],
+  ["×1", "LM358", "IC", "both sections used"],
+  ["×1", "VTL5C2", "OPTO", "LED and LDR halves drawn apart; one vactrol"],
+  ["Comp", "B500k", "POT", ""],
+  ["Output", "A100k", "POT", ""]
+ ]
+}

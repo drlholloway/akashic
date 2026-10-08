@@ -1,0 +1,24 @@
+{
+ "id": "pcbway-gtu:red-llama-overdrive-10ad7312",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Way Huge Red Llama clone: two CD4049UBE inverters as gain stages, unused four tied off.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "100k", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "2M", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "68n", "C", ""],
+  ["×1", "51p", "C", ""],
+  ["×1", "33n", "C", ""],
+  ["×1", "100p", "C", ""],
+  ["×1", "10u", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "100n", "C", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "CD4049UBE", "IC", ""],
+  ["Gain", "B1M", "POT", ""],
+  ["Volume", "A10k", "POT", ""]
+ ]
+}

@@ -1,0 +1,36 @@
+{
+ "id": "pcbway-gtu:maxon-od808-overdrive",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Maxon OD808 overdrive drawn with an input buffer, clipping stage, tone stage and output buffer on two dual op-amps (four sections); low-resolution image, op-amp and clipping diodes unnamed.",
+ "uncertain": [
+  "10u decoupling cap could be 10n",
+  "op-amp part number not drawn",
+  "clipping diode type not drawn"
+ ],
+ "rows": [
+  ["×5", "10k", "R", ""],
+  ["×4", "1k", "R", ""],
+  ["×2", "100k", "R", ""],
+  ["×2", "4k7", "R", "one is the LED resistor"],
+  ["×2", "220", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "510k", "R", ""],
+  ["×1", "51k", "R", ""],
+  ["×1", "47", "R", ""],
+  ["×5", "1u", "C", ""],
+  ["×2", "220n", "C", ""],
+  ["×1", "47n", "C", ""],
+  ["×1", "47p", "C", ""],
+  ["×1", "4u7", "C", "electrolytic"],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×1", "47u", "C", "electrolytic"],
+  ["×1", "10u", "C", "no polarity mark drawn; could be 10n (low-resolution image)"],
+  ["×2", "?", "D", "clipping diodes, no value drawn"],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "LED", "LED", "indicator LED symbol drawn"],
+  ["×2", "?", "IC", "dual op-amp, four sections; no part number drawn"],
+  ["Overdrive", "A500k", "POT", ""],
+  ["Tone", "A20k", "POT", ""],
+  ["Balance", "B100k", "POT", "output level"]
+ ]
+}

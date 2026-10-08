@@ -1,0 +1,22 @@
+{
+ "id": "pcbway-gtu:mr-black-darling-fuzz-6e27b7ce",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Mr Black Darling Fuzz clone: a 2N3904 Darlington stage, Fuzz pot, a second 2N3904 gain stage, and a Level pot with a 100n/B50k treble-cut Tone.",
+ "uncertain": [],
+ "rows": [
+  ["×4", "4k7", "R", "one is the LED resistor"],
+  ["×1", "2M2", "R", ""],
+  ["×2", "470k", "R", ""],
+  ["×2", "100k", "R", ""],
+  ["×4", "100n", "C", ""],
+  ["×1", "220p", "C", ""],
+  ["×1", "1u", "C", "electrolytic"],
+  ["×2", "10u", "C", "electrolytic"],
+  ["×1", "47u", "C", "electrolytic"],
+  ["×1", "1N5817", "D", "polarity protection"],
+  ["×3", "2N3904", "Q", "first two as a Darlington pair"],
+  ["Fuzz", "B50k", "POT", ""],
+  ["Level", "B50k", "POT", ""],
+  ["Tone", "B50k", "POT", "wired as variable resistor in series with a 100n to ground"]
+ ]
+}

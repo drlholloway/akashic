@@ -1,0 +1,41 @@
+{
+ "id": "pcbway-gtu:bjf-honey-bee-od-6ee21d81",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "BJF Honey Bee OD clone: CA3130 gain stage with green-LED clipping, 1N4007 shunt network, 2N5457 JFET output stage; source image is only 431x600 so small labels are soft.",
+ "uncertain": [
+  "360k",
+  "3k"
+ ],
+ "rows": [
+  ["×2", "1M", "R", ""],
+  ["×1", "360k", "R", "small low-resolution text"],
+  ["×1", "15k", "R", ""],
+  ["×2", "1k", "R", ""],
+  ["×1", "3k", "R", "small low-resolution text"],
+  ["×1", "27k", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×2", "47k", "R", ""],
+  ["×1", "2k2", "R", ""],
+  ["×1", "5k6", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×2", "33k", "R", ""],
+  ["×1", "220n", "C", ""],
+  ["×1", "47n", "C", ""],
+  ["×1", "2u2", "C", ""],
+  ["×4", "4n7", "C", ""],
+  ["×1", "100p", "C", ""],
+  ["×2", "1u", "C", ""],
+  ["×2", "22n", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "100n", "C", ""],
+  ["×1", "22u", "C", ""],
+  ["×2", "1N4007", "D", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×2", "Green 3mm", "LED", "clipping LEDs"],
+  ["×1", "2N5457", "Q", ""],
+  ["×1", "CA3130", "IC", ""],
+  ["Nature", "A50k", "POT", ""],
+  ["Drive", "A500k", "POT", ""],
+  ["Vol", "B50k", "POT", ""]
+ ]
+}

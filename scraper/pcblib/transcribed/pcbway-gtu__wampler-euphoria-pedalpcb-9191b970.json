@@ -1,0 +1,33 @@
+{
+ "id": "pcbway-gtu:wampler-euphoria-pedalpcb-9191b970",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Wampler Euphoria (PedalPCB): MC1458 gain stage with switchable 1N4148 feedback clipping, a second diode pair to a bias node, then a gain stage, tone and volume; Bass control on the gain-stage ground leg.",
+ "uncertain": [
+  "mode switch drawn as two 3-pin contacts (1-2-3, 4-5-6), read as one unlabelled DPDT"
+ ],
+ "rows": [
+  ["×2", "1k", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "33k", "R", ""],
+  ["×2", "47k", "R", ""],
+  ["×6", "100k", "R", ""],
+  ["×2", "470k", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×3", "100p", "C", ""],
+  ["×2", "22n", "C", ""],
+  ["×1", "47n", "C", ""],
+  ["×1", "1u", "C", "electrolytic"],
+  ["×2", "2u2", "C", "electrolytic"],
+  ["×3", "10u", "C", "electrolytic"],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×6", "1N4148", "D", "four in the gain-stage feedback, two after it"],
+  ["×1", "1N5817", "D", "reverse polarity"],
+  ["×1", "MC1458P", "IC", "dual op-amp, both sections used"],
+  ["Bass", "C10k", "POT", ""],
+  ["Gain", "A1M", "POT", ""],
+  ["Tone", "B25k", "POT", ""],
+  ["Volume", "A100k", "POT", ""],
+  ["×1", "DPDT", "SW", "pins 1-2-3 switch the feedback diodes, pins 4-5-6 the diodes to ground; no label, drawn as two contacts"]
+ ]
+}

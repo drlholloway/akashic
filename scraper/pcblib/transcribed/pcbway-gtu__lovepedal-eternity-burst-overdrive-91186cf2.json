@@ -1,0 +1,27 @@
+{
+ "id": "pcbway-gtu:lovepedal-eternity-burst-overdrive-91186cf2",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Lovepedal Eternity Burst: 4558 non-inverting gain stage with two 1N914 pairs in the feedback (Tube Screamer style), then a tone/output stage.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "1M", "R", ""],
+  ["×2", "1k", "R", ""],
+  ["×2", "330", "R", "one in the tone leg, one on the supply"],
+  ["×2", "10k", "R", ""],
+  ["×1", "20k", "R", ""],
+  ["×1", "3k3", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×2", "100n", "C", ""],
+  ["×2", "47u", "C", "electrolytic"],
+  ["×1", "47n", "C", ""],
+  ["×1", "220n", "C", ""],
+  ["×1", "150n", "C", ""],
+  ["×1", "10u", "C", "electrolytic"],
+  ["×4", "1N914", "D", "two series pairs in the feedback loop"],
+  ["×1", "1N5817", "D", ""],
+  ["×1", "4558", "IC", "dual op-amp, both sections used"],
+  ["Drive", "B500k", "POT", ""],
+  ["Tone", "B5k", "POT", ""],
+  ["Level", "A500k", "POT", ""]
+ ]
+}

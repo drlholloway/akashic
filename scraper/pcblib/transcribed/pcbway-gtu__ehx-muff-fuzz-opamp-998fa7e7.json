@@ -1,0 +1,21 @@
+{
+ "id": "pcbway-gtu:ehx-muff-fuzz-opamp-998fa7e7",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "EHX op-amp Muff Fuzz: two LM1458 inverting stages with 1N4148 clipping in the second stage feedback and a single volume control.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "1M", "R", ""],
+  ["×2", "470k", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×2", "100n", "C", ""],
+  ["×1", "47n", "C", ""],
+  ["×1", "100p", "C", ""],
+  ["×1", "10u", "C", "electrolytic"],
+  ["×2", "1N4148", "D", "clipping, antiparallel"],
+  ["×1", "1N5817", "D", ""],
+  ["×1", "LM1458", "IC", "dual op-amp, both sections used"],
+  ["Volume", "A100k", "POT", ""]
+ ]
+}

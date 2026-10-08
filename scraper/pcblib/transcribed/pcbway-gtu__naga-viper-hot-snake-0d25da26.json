@@ -1,0 +1,25 @@
+{
+ "id": "pcbway-gtu:naga-viper-hot-snake-0d25da26",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Naga Viper Hot Snake, a single-2N2222 treble/range booster in the Rangemaster vein with Range, Boost and Heat (emitter) controls.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "100", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "68k", "R", ""],
+  ["×1", "220k", "R", ""],
+  ["×1", "8k2", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "1n", "C", ""],
+  ["×1", "68n", "C", ""],
+  ["×1", "3n3", "C", ""],
+  ["×1", "47p", "C", ""],
+  ["×2", "47u", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "2N2222", "Q", ""],
+  ["Range", "A500k", "POT", ""],
+  ["Boost", "B10k", "POT", ""],
+  ["Heat", "B1k", "POT", ""]
+ ]
+}

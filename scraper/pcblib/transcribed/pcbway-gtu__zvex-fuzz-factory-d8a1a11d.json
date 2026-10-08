@@ -1,0 +1,27 @@
+{
+ "id": "pcbway-gtu:zvex-fuzz-factory-d8a1a11d",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "ZVEX Fuzz Factory: two-PNP fuzz with Stab, Comp, Drive, Gate and Vol, preceded by a 2N3904 input stage; the PNP types are not specified.",
+ "uncertain": [
+  "the two PNP transistors carry no part number"
+ ],
+ "rows": [
+  ["×1", "470", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "5k1", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "47k", "R", ""],
+  ["×2", "220k", "R", ""],
+  ["×1", "1M", "R", "marked 1M* on the drawing (optional or select-on-test)"],
+  ["×1", "100n", "C", ""],
+  ["×3", "10u", "C", "electrolytic"],
+  ["×1", "RED", "LED", "indicator LED drawn from VL to the LED pad"],
+  ["×1", "2N3904", "Q", "input buffer"],
+  ["×2", "PNP", "Q", "type not given; germanium PNP in the original"],
+  ["Stab", "B5k", "POT", ""],
+  ["Comp", "B10k", "POT", ""],
+  ["Drive", "B10k", "POT", ""],
+  ["Gate", "B10k", "POT", ""],
+  ["Vol", "B5k", "POT", ""]
+ ]
+}

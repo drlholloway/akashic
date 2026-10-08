@@ -1,0 +1,27 @@
+{
+ "id": "pcbway-gtu:greer-amps-tomahawk-deluxe-drive-132b5ac2",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Tomahawk Deluxe Drive: TL072 non-inverting drive into LED clipping to ground, Treble and Volume.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "1M", "R", ""],
+  ["×2", "10k", "R", ""],
+  ["×1", "330k", "R", ""],
+  ["×1", "47k", "R", ""],
+  ["×1", "6k8", "R", ""],
+  ["×1", "8k2", "R", ""],
+  ["×1", "47", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "100n", "C", ""],
+  ["×2", "47n", "C", ""],
+  ["×1", "100p", "C", ""],
+  ["×1", "10u", "C", ""],
+  ["×2", "22u", "C", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×2", "LED", "LED", "clipping LEDs to ground, no colour drawn"],
+  ["×1", "TL072", "IC", "second section wired as a follower (unused)"],
+  ["Drive", "A1M", "POT", ""],
+  ["Treble", "A50k", "POT", ""],
+  ["Volume", "A250k", "POT", ""]
+ ]
+}

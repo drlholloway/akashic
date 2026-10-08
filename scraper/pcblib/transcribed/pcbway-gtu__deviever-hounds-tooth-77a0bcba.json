@@ -1,0 +1,20 @@
+{
+ "id": "pcbway-gtu:deviever-hounds-tooth-77a0bcba",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Devi Ever Hounds Tooth: two cascaded complementary MPSA18/2N2907A gain stages, input Intensity pot and output Volume pot.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "2M2", "R", ""],
+  ["×2", "10k", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "100u", "C", ""],
+  ["×3", "100n", "C", ""],
+  ["×2", "10n", "C", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×2", "2N2907A", "Q", ""],
+  ["×2", "MPSA18", "Q", ""],
+  ["Intensity", "B100k", "POT", ""],
+  ["Volume", "A100k", "POT", ""]
+ ]
+}

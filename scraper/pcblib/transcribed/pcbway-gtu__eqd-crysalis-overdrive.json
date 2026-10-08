@@ -1,0 +1,31 @@
+{
+ "id": "pcbway-gtu:eqd-crysalis-overdrive",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Two-transistor MPSA18 boost/overdrive with BAT48 germanium-style clipping to ground (two in series one way, one the other) and a variable-resistor tone; small low-resolution image but all values legible.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "4k7", "R", ""],
+  ["×2", "2M2", "R", ""],
+  ["×1", "470", "R", ""],
+  ["×1", "8k2", "R", ""],
+  ["×1", "47", "R", ""],
+  ["×2", "1k", "R", ""],
+  ["×1", "47k", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×3", "100n", "C", ""],
+  ["×1", "1n", "C", ""],
+  ["×1", "220n", "C", ""],
+  ["×1", "4u7", "C", "electrolytic; drawn as '4m7' (µ glyph rendered as m)"],
+  ["×1", "100u", "C", "electrolytic, supply filter; drawn as '100m' (µ glyph rendered as m)"],
+  ["×1", "10n", "C", ""],
+  ["×1", "100p", "C", ""],
+  ["×1", "4n7", "C", ""],
+  ["×3", "BAT48", "D", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×2", "MPSA18", "Q", ""],
+  ["Drive", "B50k", "POT", ""],
+  ["Tone", "B25k", "POT", ""],
+  ["Level", "A50k", "POT", ""]
+ ]
+}

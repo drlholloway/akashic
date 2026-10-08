@@ -1,0 +1,39 @@
+{
+ "id": "pcbway-gtu:eqd-blumes-7fd2db8e",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "EQD Plumes (Tube Screamer variant with LED/silicon/asymmetric clipping selector, TL072 buffers and TC1044 charge pump); source image is very low resolution.",
+ "uncertain": [
+  "image is only 600x424: most small values are best guesses (10M, 3k3, 220p, 51p x2, 22n, 220n, W10k, B100k)",
+  "mode switch drawn only as pads"
+ ],
+ "rows": [
+  ["×2", "1M", "R", ""],
+  ["×1", "10M", "R", "value hard to read (low-resolution image)"],
+  ["×1", "47k", "R", ""],
+  ["×1", "3k3", "R", "gain-leg resistor; label illegible at this resolution, read as 3k3"],
+  ["×4", "1k", "R", ""],
+  ["×1", "330", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "100", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "220p", "C", "input cap to ground; label illegible"],
+  ["×1", "22n", "C", ""],
+  ["×2", "51p", "C", "feedback caps; labels illegible"],
+  ["×1", "22n", "C", "tone shunt to ground; read as 22n"],
+  ["×1", "220n", "C", "in series with 330 on tone wiper; label illegible"],
+  ["×4", "1u", "C", ""],
+  ["×1", "10u", "C", "output"],
+  ["×2", "10u", "C", "charge pump"],
+  ["×1", "100u", "C", ""],
+  ["×3", "1N4148", "D", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×2", "LED", "LED", "clipping LEDs, one marked RED"],
+  ["×2", "TL072", "IC", "four op-amp sections drawn = two dual chips"],
+  ["×1", "TC1044SCPA", "IC", "charge pump"],
+  ["Gain", "A1M", "POT", ""],
+  ["Tone", "W10k", "POT", "taper/value unclear"],
+  ["Level", "B100k", "POT", "value unclear"],
+  ["Mode", "3-way", "SW", "drawn only as pads 1/2/3 selecting the clipping options"]
+ ]
+}

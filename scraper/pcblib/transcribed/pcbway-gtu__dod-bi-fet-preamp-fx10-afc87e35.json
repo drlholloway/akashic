@@ -1,0 +1,31 @@
+{
+ "id": "pcbway-gtu:dod-bi-fet-preamp-fx10-afc87e35",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "DOD FX10 Bi-Fet Preamp: two TL081 stages (switchable-voltage gain stage then an active tone stage) with Tone and Level.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "3k3", "R", ""],
+  ["×2", "18k", "R", ""],
+  ["×2", "100k", "R", ""],
+  ["×1", "330k", "R", ""],
+  ["×1", "47k", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "3M9", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×2", "220k", "R", ""],
+  ["×2", "22n", "C", ""],
+  ["×2", "120p", "C", ""],
+  ["×3", "1u", "C", ""],
+  ["×1", "10u", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "100n", "C", ""],
+  ["×1", "47u", "C", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×2", "TL081", "IC", ""],
+  ["Tone", "B100k", "POT", ""],
+  ["Level", "C500k", "POT", ""]
+ ]
+}

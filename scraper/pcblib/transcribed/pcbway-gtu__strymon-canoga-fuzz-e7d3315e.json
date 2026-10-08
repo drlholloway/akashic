@@ -1,0 +1,26 @@
+{
+ "id": "pcbway-gtu:strymon-canoga-fuzz-e7d3315e",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Two-BC547B direct-coupled fuzz (Fuzz Face style feedback via 22k) with a B1k drive pot to a 47u bypass and an LC supply filter.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "100", "R", ""],
+  ["×1", "1k5", "R", ""],
+  ["×1", "4k4", "R", ""],
+  ["×1", "3k3", "R", ""],
+  ["×1", "33", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×1", "10", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×3", "22u", "C", "electrolytic"],
+  ["×1", "47u", "C", "electrolytic"],
+  ["×1", "2u2", "C", "electrolytic"],
+  ["×1", "10n", "C", ""],
+  ["×1", "220p", "C", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×2", "BC547B", "Q", ""],
+  ["×1", "680uH", "L", "supply filter inductor"],
+  ["Level", "A500k", "POT", ""],
+  ["Drive", "B1k", "POT", ""]
+ ]
+}

@@ -1,0 +1,36 @@
+{
+ "id": "pcbway-gtu:fairfield-circuitry-900-db1e8ae8",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Fairfield Circuitry The 900: J201 cascode input stage into a starved J201 fuzz stage with bias control and a 2N3904 emitter-follower output.",
+ "uncertain": [
+  "Bias B50k may be a panel knob rather than a trimmer"
+ ],
+ "rows": [
+  ["×2", "3k3", "R", ""],
+  ["×2", "1k", "R", ""],
+  ["×2", "47", "R", ""],
+  ["×2", "10k", "R", ""],
+  ["×1", "4M7", "R", ""],
+  ["×1", "270k", "R", ""],
+  ["×1", "2k2", "R", ""],
+  ["×1", "470", "R", ""],
+  ["×1", "150k", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "47k", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×5", "100n", "C", ""],
+  ["×2", "22u", "C", ""],
+  ["×2", "220p", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "1u", "C", "label drawn rotated"],
+  ["×1", "220u", "C", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×3", "J201", "Q", ""],
+  ["×1", "2N3904", "Q", ""],
+  ["Input", "A1M", "POT", ""],
+  ["Fuzz", "A100k", "POT", ""],
+  ["Volume", "A10k", "POT", ""],
+  ["Bias", "B50k", "TRIM", "labelled BIAS; treated as an internal trimmer"]
+ ]
+}

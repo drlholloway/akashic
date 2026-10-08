@@ -1,0 +1,22 @@
+{
+ "id": "pcbway-gtu:mellowtone-wolf-computer-abe31482",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Three-2N3904 fuzz with a starve pot and bias/fuzz rheostats; the asterisks on several values are on the drawing, unexplained.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "4k7", "R", "one is the LED resistor"],
+  ["×2", "1k", "R", "one marked 1k* on the drawing"],
+  ["×1", "2M2", "R", "marked 2M2* on the drawing"],
+  ["×1", "1M", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×3", "100n", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×3", "2N3904", "Q", ""],
+  ["Starve", "C10k", "POT", "marked C10k* on the drawing"],
+  ["Bias", "B50k", "POT", "marked B50k*, wired as a variable resistor"],
+  ["Fuzz", "B25k", "POT", "marked B25k*, wired as a variable resistor in the first emitter"],
+  ["Volume", "A500k", "POT", ""]
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "id": "pcbway-gtu:lovepedal-hermida-audio-zendrive-aa6e0d06",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Hermida Zendrive: AD712 non-inverting gain stage with 2N7000/BAT41/1N34A asymmetric clipping in feedback and a Voice pot, passive tone into an AD712 buffer.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "1k", "R", ""],
+  ["×3", "10k", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "2M2", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×2", "470n", "C", ""],
+  ["×1", "100n", "C", ""],
+  ["×1", "100p", "C", ""],
+  ["×1", "3n3", "C", ""],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×1", "47u", "C", "electrolytic"],
+  ["×2", "BAT41", "D", ""],
+  ["×1", "1N34A", "D", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×2", "2N7000", "Q", "diode-connected MOSFETs in the clipping network"],
+  ["×1", "AD712", "IC", "two sections of one dual chip"],
+  ["Voice", "B10k", "POT", ""],
+  ["Gain", "B500k", "POT", ""],
+  ["Tone", "B50k", "POT", ""],
+  ["Vol", "B100k", "POT", ""]
+ ]
+}

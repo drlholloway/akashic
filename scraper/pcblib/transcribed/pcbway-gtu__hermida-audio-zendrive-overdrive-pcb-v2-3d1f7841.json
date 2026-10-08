@@ -1,0 +1,29 @@
+{
+ "id": "pcbway-gtu:hermida-audio-zendrive-overdrive-pcb-v2-3d1f7841",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Hermida Zendrive (Dumble-style overdrive): NE5532 gain stage with 2N7000/BAT41/1N34A feedback clipping, Voice control, tone stage and buffer.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "1k", "R", ""],
+  ["×3", "10k", "R", ""],
+  ["×1", "100", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "2M", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×2", "100n", "C", ""],
+  ["×2", "470n", "C", ""],
+  ["×1", "100p", "C", ""],
+  ["×1", "3n3", "C", ""],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×1", "47u", "C", "electrolytic"],
+  ["×1", "1N5817", "D", "reverse polarity"],
+  ["×2", "BAT41", "D", ""],
+  ["×1", "1N34A", "D", ""],
+  ["×2", "2N7000", "Q", "MOSFETs in the feedback loop"],
+  ["×1", "NE5532", "IC", "dual op-amp, both halves used"],
+  ["Voice", "B10k", "POT", ""],
+  ["Gain", "B500k", "POT", ""],
+  ["Tone", "B50k", "POT", ""],
+  ["Volume", "B100k", "POT", ""]
+ ]
+}

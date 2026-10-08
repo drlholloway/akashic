@@ -1,0 +1,19 @@
+{
+ "id": "pcbway-gtu:zzzz-crackle-booster-bae1504d",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Single BS170 MOSFET common-source booster with 10M gate bias, zener gate clamp and a C5k source pot as gain.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "10M", "R", ""],
+  ["×1", "5k1", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×2", "100n", "C", "supply 100n marked with * (optional)"],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×1", "10u", "C", "electrolytic"],
+  ["×1", "1N4739", "D", "zener gate clamp"],
+  ["×1", "1N5817", "D", ""],
+  ["×1", "BS170", "Q", "MOSFET"],
+  ["Gain", "C5k", "POT", "source resistor, wiper and one end to ground; labelled CAIN on the drawing"],
+  ["Volume", "A100k", "POT", ""]
+ ]
+}

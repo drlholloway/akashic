@@ -1,0 +1,21 @@
+{
+ "id": "pcbway-gtu:dod-overdrive-250-0a925c9b",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "DOD Overdrive 250 (grey): LM741 non-inverting gain stage into 1N270 germanium clippers.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "4k7", "R", ""],
+  ["×2", "10k", "R", ""],
+  ["×4", "1M", "R", ""],
+  ["×2", "1n", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "47n", "C", ""],
+  ["×2", "1u", "C", "one electrolytic (supply), one film (output)"],
+  ["×1", "47u", "C", "electrolytic"],
+  ["×1", "1N5817", "D", ""],
+  ["×2", "1N270", "D", "germanium clippers"],
+  ["×1", "LM741", "IC", ""],
+  ["Gain", "B1M", "POT", ""],
+  ["Level", "A10k", "POT", ""]
+ ]
+}

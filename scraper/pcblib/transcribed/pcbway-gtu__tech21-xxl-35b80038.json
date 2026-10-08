@@ -1,0 +1,38 @@
+{
+ "id": "pcbway-gtu:tech21-xxl-35b80038",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Tech21 XXL clone: TL071 input stage with Warp-controlled bias, TLC2262 gain stage, passive tone/level and buffer; the source image is only 600x300 so small values are read at low resolution.",
+ "uncertain": [
+  "56n warp capacitor (low-resolution text, could be 56n/68n)",
+  "47n tone capacitor (low-resolution text)"
+ ],
+ "rows": [
+  ["×4", "1M", "R", ""],
+  ["×4", "10k", "R", ""],
+  ["×3", "100k", "R", ""],
+  ["×2", "47k", "R", ""],
+  ["×2", "22k", "R", ""],
+  ["×2", "3k3", "R", ""],
+  ["×1", "330k", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "33", "R", ""],
+  ["×4", "47n", "C", "one is the tone-network cap, small text"],
+  ["×2", "27n", "C", ""],
+  ["×2", "220u", "C", "electrolytic"],
+  ["×1", "22p", "C", ""],
+  ["×1", "100p", "C", ""],
+  ["×1", "4n7", "C", ""],
+  ["×1", "56n", "C", "warp cap, small text"],
+  ["×1", "2u2", "C", "electrolytic"],
+  ["×1", "100n", "C", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "LED", "LED", "power indicator, symbol drawn"],
+  ["×1", "TL071", "IC", ""],
+  ["×1", "TLC2262", "IC", "both sections one chip"],
+  ["Drive", "B100k", "POT", ""],
+  ["Warp", "B100k", "POT", ""],
+  ["Tone", "B100k", "POT", ""],
+  ["Level", "B100k", "POT", ""]
+ ]
+}

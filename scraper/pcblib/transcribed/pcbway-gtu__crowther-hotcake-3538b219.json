@@ -1,0 +1,27 @@
+{
+ "id": "pcbway-gtu:crowther-hotcake-3538b219",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Crowther Hotcake clone: LM741 non-inverting gain stage with Drive as a variable resistor in the gain leg, no clipping diodes, and a Presence control feeding the Volume; 8V2 zener on the supply.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "10k", "R", ""],
+  ["×3", "100k", "R", ""],
+  ["×2", "1M", "R", ""],
+  ["×2", "220", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "82k", "R", ""],
+  ["×2", "10u", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "82n", "C", ""],
+  ["×1", "470p", "C", ""],
+  ["×1", "22n", "C", ""],
+  ["×1", "56n", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "8V2", "D", "zener across the supply"],
+  ["×1", "LM741", "IC", ""],
+  ["Drive", "C50k", "POT", ""],
+  ["Presence", "B25k", "POT", ""],
+  ["Volume", "A50k", "POT", ""]
+ ]
+}

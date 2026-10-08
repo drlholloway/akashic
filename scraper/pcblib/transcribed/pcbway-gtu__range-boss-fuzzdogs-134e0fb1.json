@@ -1,0 +1,24 @@
+{
+ "id": "pcbway-gtu:range-boss-fuzzdogs-134e0fb1",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Single-BC550 silicon treble/range booster (FuzzDogs Range Boss); the output pot is labelled GAIN and a BALLS pot blends a 1k/33n emitter filter.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "4k7", "R", ""],
+  ["×1", "100", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×1", "2M2", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "100n", "C", ""],
+  ["×1", "22n", "C", ""],
+  ["×1", "10u", "C", ""],
+  ["×1", "33n", "C", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×1", "BC550", "Q", ""],
+  ["Gain", "A100k", "POT", "output level pot, labelled GAIN on the drawing"],
+  ["Balls", "A50k", "POT", ""]
+ ]
+}

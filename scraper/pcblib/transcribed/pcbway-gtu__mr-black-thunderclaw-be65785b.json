@@ -1,0 +1,29 @@
+{
+ "id": "pcbway-gtu:mr-black-thunderclaw-be65785b",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Mr Black Thunderclaw clone: 4558 gain stage with 1N4001 clipping, Baxandall-style treble and bass stages, bipolar supply from an LT1054.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "2M2", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×2", "1k", "R", ""],
+  ["×3", "470", "R", ""],
+  ["×4", "51k", "R", ""],
+  ["×5", "4k7", "R", "one is the LED resistor"],
+  ["×1", "100k", "R", ""],
+  ["×2", "1u", "C", ""],
+  ["×2", "100n", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×2", "1n", "C", ""],
+  ["×2", "10u", "C", "one is the LT1054 pump cap"],
+  ["×2", "47u", "C", ""],
+  ["×2", "1N4001", "D", "drawn as IN4001; clipping to ground after the first stage"],
+  ["×1", "1N5817", "D", ""],
+  ["×2", "4558", "IC", "four sections drawn = two dual chips"],
+  ["×1", "LT1054", "IC", "voltage inverter for the bipolar supply"],
+  ["Distort", "B50k", "POT", ""],
+  ["Treble", "B50k", "POT", ""],
+  ["Bass", "B50k", "POT", ""],
+  ["Output", "B50k", "POT", ""]
+ ]
+}

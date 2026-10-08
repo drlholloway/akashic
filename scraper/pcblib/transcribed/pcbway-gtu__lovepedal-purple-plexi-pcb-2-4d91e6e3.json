@@ -1,0 +1,23 @@
+{
+ "id": "pcbway-gtu:lovepedal-purple-plexi-pcb-2-4d91e6e3",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Lovepedal Purple Plexi: LM386 power-amp gain stage with gain set between pins 1 and 8, then a passive tone control.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "4k7", "R", "one is the LED resistor"],
+  ["×2", "10", "R", ""],
+  ["×1", "2M2", "R", ""],
+  ["×1", "470", "R", ""],
+  ["×1", "330", "R", ""],
+  ["×1", "1k8", "R", ""],
+  ["×3", "47u", "C", "electrolytic"],
+  ["×2", "4n7", "C", ""],
+  ["×2", "100n", "C", ""],
+  ["×1", "390p", "C", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×1", "LM386", "IC", ""],
+  ["Gain", "B1k", "POT", ""],
+  ["Tone", "B5k", "POT", ""],
+  ["Volume", "B100k", "POT", ""]
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "pcbway-gtu:jhs-andy-timmons-drive-78a99980",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "JHS Andy Timmons Drive clone: two-stage LM833 overdrive with selectable LED/BAT41 clipping wired to pads 1-2-3 for an off-board clipping switch that is not drawn.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "1M", "R", ""],
+  ["×3", "1k", "R", ""],
+  ["×2", "22k", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "470", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×3", "22n", "C", ""],
+  ["×2", "100p", "C", ""],
+  ["×2", "100n", "C", ""],
+  ["×2", "100u", "C", "electrolytic"],
+  ["×1", "1n", "C", ""],
+  ["×1", "220n", "C", ""],
+  ["×1", "2u2", "C", "electrolytic"],
+  ["×2", "BAT41", "D", "clipping diodes"],
+  ["×1", "1N5817", "D", "reverse polarity"],
+  ["×2", "LED", "LED", "clipping LEDs, no colour drawn"],
+  ["×1", "LM833", "IC", "two sections of one dual op-amp"],
+  ["Drive", "B100k", "POT", ""],
+  ["EQ", "C10k", "POT", ""],
+  ["Air", "B25k", "POT", ""],
+  ["Vol", "A100k", "POT", ""]
+ ]
+}

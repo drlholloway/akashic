@@ -1,0 +1,23 @@
+{
+ "id": "pcbway-gtu:arbiter-fuzz-face-silicon-5ffff957",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Silicon Fuzz Face (two BC108) with a 10k bias trimmer and 1N5817 polarity protection.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "330", "R", ""],
+  ["×1", "33k", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "10n", "C", ""],
+  ["×1", "2u2", "C", "electrolytic"],
+  ["×1", "22u", "C", "electrolytic"],
+  ["×1", "47u", "C", "electrolytic"],
+  ["×1", "1N5817", "D", ""],
+  ["×2", "BC108", "Q", ""],
+  ["Volume", "A500k", "POT", ""],
+  ["Fuzz", "B1k", "POT", ""],
+  ["Bias", "10k", "TRIM", "trimmer in Q2 collector"]
+ ]
+}

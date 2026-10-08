@@ -1,0 +1,42 @@
+{
+ "id": "pcbway-gtu:mad-professor-deep-blue-delay-52446642",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Mad Professor Deep Blue Delay clone: PT2399 delay between a TL072 input stage and mixer; the source image is tiny (334x600) so several labels are best readings.",
+ "uncertain": [
+  "input resistor 180k (image only 334 px wide)",
+  "5k1, 2k, 15n and the two 4n7 read from very small text"
+ ],
+ "rows": [
+  ["×7", "10k", "R", ""],
+  ["×2", "1k", "R", ""],
+  ["×2", "20k", "R", ""],
+  ["×1", "47", "R", "power input series resistor"],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "1M", "R", ""],
+  ["×1", "180k", "R", "input resistor; tiny text, could be 100k or 150k"],
+  ["×1", "360k", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×1", "12k", "R", ""],
+  ["×1", "5k1", "R", ""],
+  ["×1", "2k", "R", ""],
+  ["×1", "2k2", "R", "PT2399 pin 6, in series with the Delay pot"],
+  ["×4", "1u", "C", ""],
+  ["×4", "100n", "C", ""],
+  ["×3", "47u", "C", "electrolytic; VB filter and PT2399 pins 1 and 2"],
+  ["×2", "22n", "C", ""],
+  ["×2", "4n7", "C", ""],
+  ["×2", "2n2", "C", ""],
+  ["×1", "47p", "C", ""],
+  ["×1", "100p", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "15n", "C", ""],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×1", "1N4001", "D", "reverse polarity"],
+  ["×1", "TL072", "IC", "two sections of one dual op-amp"],
+  ["×1", "PT2399", "IC", "echo processor"],
+  ["×1", "78L05", "IC", "5 V regulator"],
+  ["Level", "B50k", "POT", ""],
+  ["Repeat", "B50k", "POT", ""],
+  ["Delay", "B50k", "POT", "wired as a variable resistor on pin 6"]
+ ]
+}

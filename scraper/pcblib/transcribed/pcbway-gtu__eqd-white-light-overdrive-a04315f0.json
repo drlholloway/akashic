@@ -1,0 +1,33 @@
+{
+ "id": "pcbway-gtu:eqd-white-light-overdrive-a04315f0",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "White Light: LM833 non-inverting overdrive with Weight and Gain, asymmetric 1N4148 clipping and a switchable 1N60 network (Comp).",
+ "uncertain": [],
+ "rows": [
+  ["×5", "10k", "R", ""],
+  ["×2", "4k7", "R", ""],
+  ["×1", "47", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "3k3", "R", ""],
+  ["×1", "2M2", "R", ""],
+  ["×1", "475k", "R", ""],
+  ["×1", "1u", "C", ""],
+  ["×2", "47n", "C", ""],
+  ["×1", "100p", "C", ""],
+  ["×1", "4u7", "C", ""],
+  ["×1", "1n", "C", ""],
+  ["×1", "2n2", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "100n", "C", ""],
+  ["×1", "47u", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×3", "1N4148", "D", ""],
+  ["×4", "1N60", "D", ""],
+  ["×1", "LM833N", "IC", "second section wired as a follower (unused)"],
+  ["Weight", "B25k", "POT", ""],
+  ["Gain", "A1M", "POT", ""],
+  ["Level", "A100k", "POT", ""],
+  ["Comp", "SPST", "SW", "two pads 1/2 switch the 1N60 clipping network in"]
+ ]
+}

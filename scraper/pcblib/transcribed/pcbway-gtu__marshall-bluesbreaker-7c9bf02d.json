@@ -1,0 +1,28 @@
+{
+ "id": "pcbway-gtu:marshall-bluesbreaker-7c9bf02d",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Marshall Bluesbreaker clone: TL072 input stage with 47p/4k7 network, inverting gain stage with 4x1N914 clipping in the feedback loop, Tone and Volume.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "47", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "3k3", "R", ""],
+  ["×2", "4k7", "R", ""],
+  ["×2", "6k8", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×2", "47k", "R", ""],
+  ["×1", "220k", "R", ""],
+  ["×2", "1M", "R", ""],
+  ["×1", "2M2", "R", ""],
+  ["×1", "47p", "C", ""],
+  ["×5", "10n", "C", ""],
+  ["×3", "100n", "C", "one marked 100n* (supply filter)"],
+  ["×2", "100u", "C", "electrolytic"],
+  ["×4", "1N914", "D", "clipping, two series pairs anti-parallel"],
+  ["×1", "1N4001", "D", "reverse-polarity protection"],
+  ["×1", "TL072", "IC", "dual op-amp, both sections used"],
+  ["Drive", "B100k", "POT", ""],
+  ["Tone", "B25k", "POT", ""],
+  ["Volume", "A100k", "POT", ""]
+ ]
+}

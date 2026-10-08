@@ -1,0 +1,30 @@
+{
+ "id": "pcbway-gtu:greer-amps-southland-74480b69",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Greer Southland clone: TL072 gain stage with asymmetric 1N914 feedback clipping (2 vs 3), BAT41 Schottky clippers to VB, a second TL072 stage, and a Range tone control before Volume.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "5k6", "R", ""],
+  ["×2", "3k3", "R", ""],
+  ["×2", "4k7", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "430k", "R", ""],
+  ["×1", "12k", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×1", "3k9", "R", ""],
+  ["×2", "47n", "C", ""],
+  ["×2", "22u", "C", "electrolytic, supply filters"],
+  ["×1", "470n", "C", ""],
+  ["×1", "100p", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "1u", "C", ""],
+  ["×1", "220n", "C", ""],
+  ["×5", "1N914", "D", "feedback clipping, two one way and three the other"],
+  ["×2", "BAT41", "D", "clipping to VB"],
+  ["×1", "1N5817", "D", ""],
+  ["×1", "TL072", "IC", "two sections drawn, one dual chip"],
+  ["Drive", "A1M", "POT", ""],
+  ["Range", "A10k", "POT", ""],
+  ["Volume", "A250k", "POT", ""]
+ ]
+}

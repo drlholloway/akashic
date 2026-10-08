@@ -1,0 +1,23 @@
+{
+ "id": "pcbway-gtu:lovepedal-supersix",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Lovepedal Super Six: single BS170 MOSFET common-source boost with a 9V1 zener and B1k source pot, tone pot bridged by 100n; 270 resistor on the PWR pad.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "1M", "R", ""],
+  ["×1", "270", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "3k3", "R", ""],
+  ["×1", "1M5", "R", ""],
+  ["×1", "510", "R", ""],
+  ["×4", "100n", "C", ""],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×1", "10u", "C", "electrolytic"],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "9V1", "D", "zener, gate to source"],
+  ["×1", "BS170", "Q", ""],
+  ["Tone", "B100k", "POT", ""],
+  ["Volume", "B100k", "POT", ""],
+  ["Intence", "B1k", "POT", "spelled INTENCE on the drawing; source-degeneration control"]
+ ]
+}

@@ -1,0 +1,24 @@
+{
+ "id": "pcbway-gtu:catalinbread-naga-viper-a6a24b66",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Single 2N2222 treble/range booster (Rangemaster-style, Catalinbread Naga Viper clone) with range, boost and heat controls.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "220k", "R", ""],
+  ["×1", "68k", "R", ""],
+  ["×1", "8k2", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×2", "47u", "C", "electrolytic"],
+  ["×1", "1n", "C", ""],
+  ["×1", "68n", "C", ""],
+  ["×1", "3n3", "C", ""],
+  ["×1", "47p", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "1N4001", "D", "shunt reverse-polarity protection"],
+  ["×1", "2N2222", "Q", ""],
+  ["Range", "A500k", "POT", "wired as variable resistor"],
+  ["Boost", "B10k", "POT", "collector load, output from wiper"],
+  ["Heat", "B1k", "POT", "wired as variable resistor, emitter bypass via 47u"]
+ ]
+}

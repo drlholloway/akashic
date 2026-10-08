@@ -1,0 +1,23 @@
+{
+ "id": "pcbway-gtu:jhs-fumble-c3724a03",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "JHS Fumble: single J309 JFET boost with an input-level pot and a drain bias trimmer.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "1M", "R", ""],
+  ["×1", "1M5", "R", ""],
+  ["×1", "100", "R", ""],
+  ["×1", "5k6", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×2", "100n", "C", ""],
+  ["×1", "100p", "C", ""],
+  ["×1", "4u7", "C", "electrolytic"],
+  ["×1", "10u", "C", "electrolytic"],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×1", "1N5817", "D", ""],
+  ["×1", "J309", "Q", "JFET"],
+  ["Input", "B2M", "POT", ""],
+  ["Output", "B10k", "POT", ""],
+  ["Bias", "20k", "TRIM", "drain trimmer labelled BIAS"]
+ ]
+}

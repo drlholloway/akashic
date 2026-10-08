@@ -1,0 +1,18 @@
+{
+ "id": "pcbway-gtu:devi-ever-ruiner-431cb36f",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Devi Ever Ruiner: two MPSA18 common-emitter stages with collector-base feedback and heavy 100n shunt caps to ground.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "4k7", "R", "LED current-limiting resistor"],
+  ["×3", "10k", "R", ""],
+  ["×2", "2M2", "R", ""],
+  ["×1", "47n", "C", ""],
+  ["×4", "100n", "C", "two coupling, two shunt to ground"],
+  ["×1", "47u", "C", "electrolytic"],
+  ["×1", "1N4001", "D", ""],
+  ["×2", "MPSA18", "Q", ""],
+  ["Intensity", "B100k", "POT", "input attenuator pot"],
+  ["Volume", "B100k", "POT", ""]
+ ]
+}

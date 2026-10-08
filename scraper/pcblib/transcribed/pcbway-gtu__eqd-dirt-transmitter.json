@@ -1,0 +1,30 @@
+{
+ "id": "pcbway-gtu:eqd-dirt-transmitter",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Two-transistor 2N1711 fuzz (Dirt Transmitter clone) with a passive tone control and a bias control on the collector.",
+ "uncertain": [
+  "Bias B5k: drawn as a plain pot labelled BIAS; could be a panel knob rather than a trimmer"
+ ],
+ "rows": [
+  ["×1", "1M", "R", ""],
+  ["×2", "4k7", "R", ""],
+  ["×1", "3k3", "R", ""],
+  ["×2", "22k", "R", ""],
+  ["×1", "68k", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×2", "1k", "R", ""],
+  ["×2", "100p", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×2", "22u", "C", ""],
+  ["×2", "6n8", "C", ""],
+  ["×1", "470p", "C", ""],
+  ["×1", "4u7", "C", ""],
+  ["×1", "47u", "C", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×2", "2N1711", "Q", ""],
+  ["Dirt", "A100k", "POT", ""],
+  ["Tone", "B50k", "POT", ""],
+  ["Level", "A100k", "POT", ""],
+  ["Bias", "B5k", "TRIM", "drawn as a pot labelled BIAS, no knob name; likely internal trimmer"]
+ ]
+}

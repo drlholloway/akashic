@@ -1,0 +1,35 @@
+{
+ "id": "pcbway-gtu:mad-professor-dyna-red-distortion-74289a04",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Mad Professor Dyna Red Distortion: CA3130 gain stage with LED feedback clipping, 1N4001 shunt clippers, Treble control and 2N5458 output buffer; source image is only 600px wide.",
+ "uncertain": [
+  "47n cap on the Treble pot wiper (low-resolution label, could read 47k)"
+ ],
+ "rows": [
+  ["×2", "1M", "R", ""],
+  ["×2", "1k", "R", ""],
+  ["×2", "3k", "R", ""],
+  ["×2", "47k", "R", ""],
+  ["×1", "360k", "R", ""],
+  ["×1", "14k7", "R", ""],
+  ["×1", "3k6", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×2", "47n", "C", "one is the Treble pot cap"],
+  ["×2", "22n", "C", ""],
+  ["×2", "1u", "C", "electrolytic"],
+  ["×1", "470n", "C", ""],
+  ["×1", "220p", "C", ""],
+  ["×1", "100p", "C", "CA3130 compensation"],
+  ["×1", "100n", "C", ""],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×1", "22u", "C", "electrolytic"],
+  ["×3", "1N4001", "D", "two shunt clippers to ground, one power"],
+  ["×2", "LED", "LED", "feedback clipping LEDs"],
+  ["×1", "2N5458", "Q", "JFET output buffer"],
+  ["×1", "CA3130EZ", "IC", ""],
+  ["Dist", "A500k", "POT", ""],
+  ["Treble", "B50k", "POT", ""],
+  ["Volume", "B50k", "POT", ""]
+ ]
+}

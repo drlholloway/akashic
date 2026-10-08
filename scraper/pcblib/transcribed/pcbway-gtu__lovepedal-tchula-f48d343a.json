@@ -1,0 +1,24 @@
+{
+ "id": "pcbway-gtu:lovepedal-tchula-f48d343a",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Single 2N5088 collector-feedback gain stage with a switchable, bias-adjustable emitter bypass and BAT46 output clipping.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "3M3", "R", ""],
+  ["×1", "2M2", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "3k3", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "680", "R", ""],
+  ["×1", "330", "R", ""],
+  ["×1", "100u", "C", ""],
+  ["×2", "100n", "C", ""],
+  ["×1", "47u", "C", ""],
+  ["×1", "22n", "C", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×2", "BAT46", "D", "output clipping to ground"],
+  ["×1", "2N5088", "Q", ""],
+  ["Bias", "B1k", "TRIM", "labelled BIAS, paralleled by 1k in the emitter bypass leg"],
+  ["SW", "SPDT", "SW", "switches the 47u emitter bypass in or out; third lug unused"]
+ ]
+}

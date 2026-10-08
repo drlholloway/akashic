@@ -1,0 +1,24 @@
+{
+ "id": "pcbway-gtu:brain-may-treble-boost-3a2a52e4",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Brian May style single-transistor treble booster with a 2N5088 and a Vol pot.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "100", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "100k", "R", ""],
+  ["×1", "6k8", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "120k", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×1", "2k4", "R", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "4n7", "C", ""],
+  ["×1", "47n", "C", ""],
+  ["×1", "1n", "C", ""],
+  ["×1", "47u", "C", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "2N5088", "Q", ""],
+  ["Vol", "A100k", "POT", ""]
+ ]
+}

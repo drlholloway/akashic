@@ -1,0 +1,30 @@
+{
+ "id": "pcbway-gtu:mi-audio-crunch-box-1252bec2",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "MI Audio Crunch Box clone: two TL072 gain stages into red LED clipping, Tone, Presence and Volume; supply 100n is marked with an asterisk (likely optional).",
+ "uncertain": [],
+ "rows": [
+  ["×3", "1M", "R", ""],
+  ["×2", "1k", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "470", "R", ""],
+  ["×1", "47", "R", "power filter resistor from PWR pad"],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×2", "22k", "R", ""],
+  ["×2", "22n", "C", ""],
+  ["×1", "1n", "C", ""],
+  ["×1", "220n", "C", ""],
+  ["×2", "100p", "C", ""],
+  ["×2", "100n", "C", "the supply one is marked 100n* on the drawing"],
+  ["×1", "2u2", "C", "electrolytic"],
+  ["×1", "10n", "C", ""],
+  ["×2", "100u", "C", "electrolytic"],
+  ["×1", "1N4001", "D", "polarity protection"],
+  ["×2", "RED", "LED", "clipping LEDs to ground (one drawn with inward arrows)"],
+  ["×1", "TL072", "IC", "dual op-amp, both sections used"],
+  ["Gain", "B100k", "POT", ""],
+  ["Tone", "C10k", "POT", ""],
+  ["Pres", "B20k", "POT", ""],
+  ["Volume", "B100k", "POT", ""]
+ ]
+}

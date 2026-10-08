@@ -1,0 +1,24 @@
+{
+ "id": "pcbway-gtu:zvex-super-duper-smd",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "ZVEX Super Duper 2-in-1 SMD: two identical MMBF170 MOSFET boosts with zener gate protection, a Boost pot each and a Master on the second.",
+ "uncertain": [],
+ "rows": [
+  ["×6", "1M", "R", ""],
+  ["×2", "5k1", "R", ""],
+  ["×2", "4k7", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×1", "47", "R", ""],
+  ["×2", "100n", "C", ""],
+  ["×2", "10u", "C", "electrolytic"],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×2", "9V1", "D", "zener"],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "RED", "LED", ""],
+  ["×1", "YELLOW", "LED", ""],
+  ["×2", "MMBF170", "Q", "MOSFET"],
+  ["Boost 1", "C5k", "POT", ""],
+  ["Boost 2", "C5k", "POT", ""],
+  ["Master", "B100k", "POT", ""]
+ ]
+}

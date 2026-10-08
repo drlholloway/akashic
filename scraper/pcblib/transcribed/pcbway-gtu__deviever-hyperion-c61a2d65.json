@@ -1,0 +1,21 @@
+{
+ "id": "pcbway-gtu:deviever-hyperion-c61a2d65",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Two-stage MPSA18 drive with a complementary MPSA18/2N2907A output pair; the supply diode is unlabelled.",
+ "uncertain": [
+  "diode across the supply has no value drawn"
+ ],
+ "rows": [
+  ["×2", "10k", "R", ""],
+  ["×2", "2M2", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "1k", "R", ""],
+  ["×4", "100n", "C", ""],
+  ["×1", "47u", "C", "electrolytic"],
+  ["×1", "?", "D", "no value drawn; reverse-protection diode across the supply"],
+  ["×2", "MPSA18", "Q", ""],
+  ["×1", "2N2907A", "Q", ""],
+  ["Control", "B100k", "POT", ""],
+  ["Volume", "B100k", "POT", ""]
+ ]
+}

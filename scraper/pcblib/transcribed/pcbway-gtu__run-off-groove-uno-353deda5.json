@@ -1,0 +1,32 @@
+{
+ "id": "pcbway-gtu:run-off-groove-uno-353deda5",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "RunOffGroove UNO, a four-J201 Mesa Boogie Mk I emulator with a Fender-style tone stack between stages 2 and 3 and 100k drain-bias trimmers.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "1k5", "R", ""],
+  ["×2", "1M", "R", ""],
+  ["×2", "220k", "R", ""],
+  ["×2", "100k", "R", ""],
+  ["×2", "15k", "R", ""],
+  ["×1", "3M3", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "820", "R", ""],
+  ["×2", "3n3", "C", ""],
+  ["×3", "47n", "C", ""],
+  ["×1", "10p", "C", ""],
+  ["×1", "250p", "C", ""],
+  ["×1", "15n", "C", ""],
+  ["×1", "100n", "C", ""],
+  ["×4", "22u", "C", "electrolytic"],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×1", "1N4001", "D", ""],
+  ["×4", "J201", "Q", ""],
+  ["Volume", "A500k", "POT", ""],
+  ["Treble", "A250k", "POT", ""],
+  ["Bass", "A250k", "POT", ""],
+  ["Mid", "B10k", "POT", ""],
+  ["Master", "A100k", "POT", ""],
+  ["×4", "100k", "TRIM", "drain trimmers, wiper tied to drain"]
+ ]
+}

@@ -1,0 +1,24 @@
+{
+ "id": "pcbway-gtu:glitch-fuzz-fuzzdogs-7ab4d5f6",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "FuzzDogs Glitch Fuzz: three 2N3904 stages with a voltage-starve pot, a variable-resistor Bias on the second stage and a Fuzz pot as the first stage's emitter resistor.",
+ "uncertain": [
+  "Bias B50k: knob or trimmer"
+ ],
+ "rows": [
+  ["×2", "4k7", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "2M2", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×3", "100n", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×3", "2N3904", "Q", ""],
+  ["Starve", "C5k", "POT", ""],
+  ["Bias", "B50k", "POT", "drawn as a full pot with a taper letter, so read as a knob rather than a trimmer"],
+  ["Fuzz", "B25k", "POT", ""],
+  ["Volume", "A500k", "POT", ""]
+ ]
+}

@@ -1,0 +1,25 @@
+{
+ "id": "pcbway-gtu:el-musico-loco-blisterlily-58096fd8",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "El Musico Loco Blisterlily: NE5532 non-inverting overdrive with 1+2 asymmetric 1N4148 feedback clipping, Drive and Gain controls, then an active tone stage.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "1k", "R", ""],
+  ["×1", "4k7", "R", "LED current-limiting resistor"],
+  ["×1", "6k8", "R", ""],
+  ["×3", "10k", "R", ""],
+  ["×2", "1M", "R", ""],
+  ["×2", "100p", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "56n", "C", ""],
+  ["×2", "270n", "C", ""],
+  ["×2", "100u", "C", "electrolytic"],
+  ["×3", "1N4148", "D", "asymmetric clipping in the feedback loop (one against two)"],
+  ["×1", "1N5817", "D", ""],
+  ["×1", "NE5532", "IC", "both halves used"],
+  ["Drive", "B10k", "POT", "wired as variable resistor to ground"],
+  ["Gain", "A1M", "POT", "wired as variable resistor"],
+  ["Tone", "B100k", "POT", ""],
+  ["Volume", "A250k", "POT", ""]
+ ]
+}

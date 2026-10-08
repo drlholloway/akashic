@@ -1,0 +1,38 @@
+{
+ "id": "pcbway-gtu:fulltone-ocd-801ab9e0",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Fulltone OCD clone: TL082 non-inverting drive stage, 2N7000 MOSFET plus 1N34A clipping network, second TL082 gain stage, then tone and volume with the HP/LP switch on S1/S2 pads.",
+ "uncertain": [
+  "HP/LP switch row inferred from S1/S2 pads; no switch symbol is drawn"
+ ],
+ "rows": [
+  ["×5", "10k", "R", ""],
+  ["×1", "47", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "2k2", "R", ""],
+  ["×1", "18k", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "150k", "R", ""],
+  ["×1", "39k", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×1", "33k", "R", ""],
+  ["×2", "100n", "C", ""],
+  ["×2", "220p", "C", ""],
+  ["×1", "100u", "C", "electrolytic, supply filter"],
+  ["×1", "47u", "C", "electrolytic, VB filter"],
+  ["×1", "10u", "C", "electrolytic"],
+  ["×1", "68n", "C", ""],
+  ["×1", "22n", "C", ""],
+  ["×1", "1n", "C", ""],
+  ["×1", "47n", "C", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "1N34A", "D", ""],
+  ["×2", "2N7000", "Q", "MOSFET clippers"],
+  ["×1", "TL082", "IC", "two sections drawn, one dual chip"],
+  ["Drive", "A1M", "POT", ""],
+  ["Tone", "B10k", "POT", ""],
+  ["Volume", "A500k", "POT", ""],
+  ["HP/LP", "SPST", "SW", "not drawn: only S1/S2 pads that short the 33k output resistor through the 22k path (Fulltone's HP/LP toggle)"]
+ ]
+}

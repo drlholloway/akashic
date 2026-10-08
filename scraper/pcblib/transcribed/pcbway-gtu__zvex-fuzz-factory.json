@@ -1,0 +1,29 @@
+{
+ "id": "pcbway-gtu:zvex-fuzz-factory",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Fuzz Factory variant with a 2N3904 input stage before the two-PNP Fuzz Factory core; pads 1/2/3 pick 220n or 2u2 input caps via an off-board switch that is not drawn.",
+ "uncertain": [
+  "PNP transistors have no part number on the drawing",
+  "1M input pulldown is marked with an asterisk"
+ ],
+ "rows": [
+  ["×2", "220k", "R", ""],
+  ["×1", "1M", "R", "drawn as 1M* (optional/select)"],
+  ["×1", "47k", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "5k1", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "470", "R", ""],
+  ["×1", "100n", "C", ""],
+  ["×1", "220n", "C", "to off-board pad 1"],
+  ["×1", "2u2", "C", "electrolytic, to off-board pad 3"],
+  ["×3", "10u", "C", "electrolytic"],
+  ["×1", "2N3904", "Q", ""],
+  ["×2", "PNP", "Q", "type not given, drawn only as PNP"],
+  ["Stab", "B5k", "POT", ""],
+  ["Comp", "B10k", "POT", ""],
+  ["Drive", "B10k", "POT", ""],
+  ["Gate", "B10k", "POT", ""],
+  ["Volume", "B5k", "POT", ""]
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "id": "pcbway-gtu:ibanez-black-cat-od-0cbbfc29",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Ibanez Black Cat OD: two inverting LM1458 gain stages with 22k/220p input filters; low-resolution image (600x338).",
+ "uncertain": [
+  "Pot values drawn as 'B50k' at very low resolution; could be read as 850k"
+ ],
+ "rows": [
+  ["×2", "1M", "R", ""],
+  ["×2", "22k", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×2", "100k", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "47", "R", "power input resistor"],
+  ["×4", "100n", "C", ""],
+  ["×2", "220p", "C", ""],
+  ["×1", "100p", "C", ""],
+  ["×1", "10n", "C", "marked 10n* on the drawing (supply bypass)"],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×1", "10u", "C", "electrolytic"],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "LM1458N", "IC", "dual op-amp, both sections used"],
+  ["Gain", "B50k", "POT", ""],
+  ["Level", "B50k", "POT", ""]
+ ]
+}

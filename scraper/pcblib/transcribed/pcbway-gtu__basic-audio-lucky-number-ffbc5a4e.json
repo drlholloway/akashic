@@ -1,0 +1,31 @@
+{
+ "id": "pcbway-gtu:basic-audio-lucky-number-ffbc5a4e",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Three-transistor BC549B discrete overdrive/boost with a Fat bass-cut pot, Gain, a passive Tone and Volume; clean, unambiguous drawing.",
+ "uncertain": [],
+ "rows": [
+  ["×4", "10k", "R", ""],
+  ["×3", "1k", "R", ""],
+  ["×2", "1M", "R", ""],
+  ["×2", "100k", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×1", "2k2", "R", ""],
+  ["×1", "4M7", "R", ""],
+  ["×1", "3k9", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×2", "3n3", "C", ""],
+  ["×2", "100n", "C", ""],
+  ["×1", "220n", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "10u", "C", ""],
+  ["×1", "22u", "C", ""],
+  ["×1", "2u2", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×3", "BC549B", "Q", ""],
+  ["Fat", "B100k", "POT", ""],
+  ["Gain", "A100k", "POT", ""],
+  ["Tone", "B10k", "POT", ""],
+  ["Volume", "A100k", "POT", ""]
+ ]
+}

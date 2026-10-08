@@ -189,6 +189,12 @@ GitHub Release notes.
   and pots are grouped by taper (A, B, C, W, none) and ordered by resistance.
 
 ### Fixed
+- PCBWay (Glory to Ukraine): all 303 boards with a schematic were read by eye instead of OCR: 6,930 parts,
+  with the clipping LEDs, microfarad capacitors and unlabelled trimmers the OCR missed (the Sky Blue OD
+  gains its three 1u caps, 100u, both 100n, two LEDs and the Z trimmer, and loses a 2200n that is not on
+  the drawing). 17 more boards have a schematic: three named schem.png or schematic.png, and 14 older
+  projects whose unnamed images were looked at by hand (Maxon OD808, MXR MicroAmp, RAT, Fuzz Face, EQD
+  Crimson Drive and more).
 - Experimentalists Anonymous: 360 schematics were read by eye instead of OCR, part by part
   (`scraper/pcblib/transcribed/`): every pedal circuit the OCR had read worst (ranked by values that fit
   no standard series or the wrong part type, and by how much of the drawing was missing), then every

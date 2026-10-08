@@ -1,0 +1,33 @@
+{
+ "id": "pcbway-gtu:eqd-bit-commander-e4ccba2e",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "EQD Bit Commander clone: LM386 into a 42TM011R transformer with 1N4148 rectifier for octave up, CD4024 for octave down and sub, mixed and filtered by a TL072.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "1M", "R", ""],
+  ["×3", "220k", "R", ""],
+  ["×2", "100k", "R", ""],
+  ["×1", "47k", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×4", "10k", "R", "two in the output filter/amp, two in the bias supply"],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×2", "100u", "C", "electrolytic"],
+  ["×2", "10u", "C", "electrolytic"],
+  ["×8", "1u", "C", "electrolytic"],
+  ["×2", "22n", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "1n", "C", ""],
+  ["×2", "1N4148", "D", "full-wave rectifier for the octave-up"],
+  ["×1", "1N5817", "D", ""],
+  ["×1", "JRC386D", "IC", "LM386 input amp"],
+  ["×1", "CD4024BE", "IC", "divider for the octave-down and sub"],
+  ["×1", "TL072", "IC", "dual op-amp, both halves used"],
+  ["×1", "42TM011R", "OTHER", "center-tapped audio transformer for the octave-up"],
+  ["Base", "B100k", "POT", "drawn BASE: clean (dry) level"],
+  ["Up", "B2k", "POT", ""],
+  ["Down", "B100k", "POT", ""],
+  ["Sub", "B100k", "POT", ""],
+  ["Filter", "B5k", "POT", ""],
+  ["Level", "A100k", "POT", ""]
+ ]
+}

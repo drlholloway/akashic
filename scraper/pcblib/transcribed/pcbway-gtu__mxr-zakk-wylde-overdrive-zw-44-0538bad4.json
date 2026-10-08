@@ -1,0 +1,33 @@
+{
+ "id": "pcbway-gtu:mxr-zakk-wylde-overdrive-zw-44-0538bad4",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "MXR ZW-44 Zakk Wylde Overdrive clone: MPSA14 input buffer, MC33178 gain stage with asymmetric 1N914 clipping, active W20k tone stage and output.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "47", "R", ""],
+  ["×3", "4k7", "R", "one is the LED resistor"],
+  ["×3", "33k", "R", ""],
+  ["×2", "100k", "R", ""],
+  ["×1", "1M8", "R", ""],
+  ["×1", "2M2", "R", ""],
+  ["×3", "10k", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×1", "470", "R", ""],
+  ["×4", "47n", "C", ""],
+  ["×2", "10n", "C", ""],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×1", "100n", "C", ""],
+  ["×1", "47u", "C", "electrolytic"],
+  ["×1", "4u7", "C", "electrolytic"],
+  ["×1", "18n", "C", ""],
+  ["×1", "120p", "C", ""],
+  ["×1", "3u3", "C", "electrolytic"],
+  ["×1", "1N4001", "D", "polarity protection"],
+  ["×3", "1N914", "D", "asymmetric clipping in the feedback loop (two in series one way, one the other)"],
+  ["×1", "MPSA14", "Q", ""],
+  ["×1", "MC33178", "IC", "dual op-amp, both sections used"],
+  ["Gain", "B1M", "POT", ""],
+  ["Tone", "W20k", "POT", ""],
+  ["Output", "B10k", "POT", ""]
+ ]
+}

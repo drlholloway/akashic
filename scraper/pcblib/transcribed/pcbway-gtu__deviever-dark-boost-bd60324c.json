@@ -1,0 +1,19 @@
+{
+ "id": "pcbway-gtu:deviever-dark-boost-bd60324c",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "DeviEver Dark Boost: single MPSA18 common-emitter boost with a 100n collector-to-ground cap darkening the tone and an input Control pot.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "2M2", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "1k", "R", ""],
+  ["×1", "47", "R", "supply resistor"],
+  ["×3", "100n", "C", ""],
+  ["×1", "47u", "C", "electrolytic"],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "MPSA18", "Q", ""],
+  ["Control", "B100k", "POT", "input pot, wiper takes the input"],
+  ["Volume", "B100k", "POT", ""]
+ ]
+}

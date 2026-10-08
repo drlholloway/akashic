@@ -1,0 +1,28 @@
+{
+ "id": "pcbway-gtu:menatone-red-snapper-4b1848f9",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Menatone Red Snapper clone: 4558 gain stage with asymmetric 1N4148 clipping and a Bite network to ground, then an active Cut filter stage and Vol.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "1k", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "6k8", "R", ""],
+  ["×3", "10k", "R", ""],
+  ["×2", "1M", "R", ""],
+  ["×1", "100p", "C", ""],
+  ["×1", "1n", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "22n", "C", ""],
+  ["×1", "47n", "C", ""],
+  ["×1", "100n", "C", ""],
+  ["×1", "22u", "C", "electrolytic"],
+  ["×1", "47u", "C", "electrolytic"],
+  ["×3", "1N4148", "D", "asymmetric clipping: one forward, two in series reverse"],
+  ["×1", "1N5817", "D", "reverse-polarity protection"],
+  ["×1", "4558", "IC", "dual op-amp, both sections used"],
+  ["Gain", "A1M", "POT", ""],
+  ["Bite", "B25k", "POT", "wired as variable resistor, lug 1 unconnected"],
+  ["Cut", "B25k", "POT", ""],
+  ["Vol", "B250k", "POT", ""]
+ ]
+}

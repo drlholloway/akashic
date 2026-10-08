@@ -1,0 +1,28 @@
+{
+ "id": "pcbway-gtu:lovepedal-karl-74383039",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Lovepedal Karl: 2N5089 gain stage into a 2N3906/2N3904 complementary push-pull stage with asymmetric 1N4148/BAT46 clipping; no reverse-polarity diode is drawn.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "10k", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "3M3", "R", ""],
+  ["×1", "3k3", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "330", "R", "supply filter resistor"],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×2", "220n", "C", ""],
+  ["×1", "47n", "C", ""],
+  ["×1", "390p", "C", ""],
+  ["×1", "22u", "C", "electrolytic"],
+  ["×1", "47u", "C", "electrolytic"],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×1", "1N4148", "D", "clipping to ground"],
+  ["×1", "BAT46", "D", "clipping to ground"],
+  ["×1", "2N5089", "Q", ""],
+  ["×1", "2N3906", "Q", ""],
+  ["×1", "2N3904", "Q", ""],
+  ["Intensity", "B5k", "POT", "input pot ahead of the first stage"],
+  ["Volume", "B500k", "POT", ""]
+ ]
+}

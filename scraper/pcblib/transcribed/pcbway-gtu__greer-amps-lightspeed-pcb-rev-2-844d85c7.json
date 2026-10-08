@@ -1,0 +1,28 @@
+{
+ "id": "pcbway-gtu:greer-amps-lightspeed-pcb-rev-2-844d85c7",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Greer Lightspeed: OPA2134 gain stage with asymmetric 1N914 feedback clipping, a 5k6/10n filter, a non-inverting recovery stage and a Freq/Loudness output network.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "5k6", "R", "one in the VB divider"],
+  ["×3", "4k7", "R", "one is the LED current limiter, one in the VB divider"],
+  ["×2", "3k3", "R", ""],
+  ["×1", "12k", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "430k", "R", ""],
+  ["×1", "3k9", "R", ""],
+  ["×2", "47n", "C", ""],
+  ["×2", "22u", "C", ""],
+  ["×1", "470n", "C", ""],
+  ["×1", "100p", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "1u", "C", ""],
+  ["×1", "220n", "C", ""],
+  ["×5", "1N914", "D", "asymmetric 2+3 clipping in the feedback loop"],
+  ["×1", "1N5817", "D", "polarity protection"],
+  ["×1", "OPA2134", "IC", "both sections used"],
+  ["Drive", "A500k", "POT", ""],
+  ["Freq", "A10k", "POT", ""],
+  ["Loudness", "A100k", "POT", ""]
+ ]
+}

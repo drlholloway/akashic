@@ -1,0 +1,40 @@
+{
+ "id": "pcbway-gtu:fulltone-catalyst",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Fulltone Catalyst: two BS170 MOSFET stages with a 120k feedback loop, a passive bass/mids/treble network and a 2N5457 output buffer; a mode switch appears only as pads 1/2/3.",
+ "uncertain": [
+  "Mode switch inferred from pads 1/2/3, no switch symbol or type drawn"
+ ],
+ "rows": [
+  ["×3", "10k", "R", ""],
+  ["×2", "1M", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "120k", "R", ""],
+  ["×1", "12k", "R", ""],
+  ["×1", "2k2", "R", ""],
+  ["×1", "2k7", "R", ""],
+  ["×1", "2k", "R", ""],
+  ["×1", "330k", "R", ""],
+  ["×1", "39k", "R", ""],
+  ["×1", "4k7", "R", "LED current limiter"],
+  ["×2", "22u", "C", ""],
+  ["×1", "220n", "C", ""],
+  ["×1", "4u7", "C", ""],
+  ["×1", "1u", "C", ""],
+  ["×1", "33n", "C", ""],
+  ["×1", "1n", "C", ""],
+  ["×1", "22n", "C", ""],
+  ["×1", "2u2", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "BZX55C9V1", "D", "9V1 zener at the first gate"],
+  ["×1", "1N5817", "D", "polarity protection"],
+  ["×2", "BS170", "Q", "MOSFET"],
+  ["×1", "2N5457", "Q", "JFET output buffer"],
+  ["Gain", "C10k", "POT", ""],
+  ["Bass/Mids", "B100k", "POT", ""],
+  ["Treble", "A100k", "POT", ""],
+  ["Volume", "A100k", "POT", ""],
+  ["×1", "SPDT", "SW", "not drawn as a symbol: off-board pads 1/2/3 pick the 10k or 330k path from the first stage source to the 4u7; type inferred"]
+ ]
+}

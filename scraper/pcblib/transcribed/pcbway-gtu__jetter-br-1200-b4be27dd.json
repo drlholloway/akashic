@@ -1,0 +1,27 @@
+{
+ "id": "pcbway-gtu:jetter-br-1200-b4be27dd",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Jetter BR 1200 (Rat-style op-amp drive): TL072 gain stage with two series pairs of 1N4148 in the feedback, Contour pot and buffer; Shift switch sets the gain-leg capacitance.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "2M2", "R", ""],
+  ["×3", "10k", "R", ""],
+  ["×2", "1k", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "150k", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "3k9", "R", ""],
+  ["×2", "470n", "C", ""],
+  ["×2", "100u", "C", ""],
+  ["×1", "100n", "C", ""],
+  ["×1", "47n", "C", ""],
+  ["×1", "3n3", "C", ""],
+  ["×4", "1N4148", "D", "feedback clipping, two series pairs"],
+  ["×1", "1N5817", "D", "reverse-polarity protection"],
+  ["×1", "TL072", "IC", "both halves used"],
+  ["Drive", "A1M", "POT", ""],
+  ["Contour", "C150k", "POT", ""],
+  ["Volume", "C150k", "POT", ""],
+  ["Shift", "SPDT", "SW", "switches the 100n input leg to VB or open"]
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "id": "pcbway-gtu:shoot-the-moon-tremolo-327fae0a",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "LDR tremolo: TL072 inverting stages with an LDR between them, 4558 triangle LFO with Wave shaping and a buffer driving rate/indicator LEDs; charge rails VA/VB/VC.",
+ "uncertain": [],
+ "rows": [
+  ["×6", "220k", "R", ""],
+  ["×4", "1k", "R", ""],
+  ["×2", "100k", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "2k2", "R", ""],
+  ["×1", "470", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "100", "R", ""],
+  ["×2", "1u", "C", ""],
+  ["×2", "47u", "C", "electrolytic"],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×1", "10u", "C", "electrolytic"],
+  ["×1", "330p", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×1", "RED", "LED", "drawn in the depth/LFO network"],
+  ["Rate", "LED", "LED", "LED symbol drawn between RA/RK pads; rate indicator, likely the one coupled to the LDR"],
+  ["×1", "4558", "IC", "both sections one chip"],
+  ["×1", "TL072", "IC", "both sections one chip"],
+  ["×1", "GL5516", "OPTO", "LDR"],
+  ["Gain", "B10k", "POT", ""],
+  ["Speed", "B100k", "POT", ""],
+  ["Wave", "B500k", "POT", ""],
+  ["Depth", "B1k", "POT", ""]
+ ]
+}

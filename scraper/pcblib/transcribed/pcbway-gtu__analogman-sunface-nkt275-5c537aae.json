@@ -1,0 +1,26 @@
+{
+ "id": "pcbway-gtu:analogman-sunface-nkt275-5c537aae",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Germanium PNP Fuzz Face (Sunface) on a negative rail from a TC1044 charge pump, with Sundial bias pot, Bias trimmer and input Clean pot.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "470", "R", ""],
+  ["×1", "33k", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "1u", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "22u", "C", ""],
+  ["×1", "10u", "C", "charge pump"],
+  ["×1", "47u", "C", "charge pump"],
+  ["×1", "1N5817", "D", ""],
+  ["×2", "NKT275", "Q", ""],
+  ["×1", "TC1044SCPA", "IC", "charge pump inverter"],
+  ["Sundial", "B5k", "POT", ""],
+  ["Volume", "A250k", "POT", ""],
+  ["Fuzz", "B1k", "POT", ""],
+  ["Clean", "50k", "POT", "input pot, no taper drawn"],
+  ["Bias", "5k", "TRIM", ""]
+ ]
+}

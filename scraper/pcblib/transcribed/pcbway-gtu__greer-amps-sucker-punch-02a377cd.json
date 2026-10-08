@@ -1,0 +1,25 @@
+{
+ "id": "pcbway-gtu:greer-amps-sucker-punch-02a377cd",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "J201 JFET boost into an LM386 power-amp gain stage with Volume and a series-cap Tone pot at the output.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "2M2", "R", ""],
+  ["×1", "1k5", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "100", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×2", "10n", "C", ""],
+  ["×2", "22u", "C", ""],
+  ["×1", "22p", "C", ""],
+  ["×1", "100n", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×1", "J201", "Q", ""],
+  ["×1", "LM386", "IC", ""],
+  ["Gain", "A1M", "POT", ""],
+  ["Volume", "A250k", "POT", ""],
+  ["Tone", "B100k", "POT", ""],
+  ["×1", "100k", "TRIM", "JFET drain trimmer, drawn with a flat trimmer wiper tied to VA"]
+ ]
+}

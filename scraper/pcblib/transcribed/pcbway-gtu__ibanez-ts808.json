@@ -1,0 +1,33 @@
+{
+ "id": "pcbway-gtu:ibanez-ts808",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Ibanez TS9 Tube Screamer (drawing is titled TS9); asterisked values mark the TS808/TS9 differences, low-resolution image.",
+ "uncertain": [],
+ "rows": [
+  ["×6", "10k", "R", ""],
+  ["×4", "1k", "R", ""],
+  ["×2", "510k", "R", ""],
+  ["×2", "4k7", "R", "one is the LED resistor"],
+  ["×1", "51k", "R", ""],
+  ["×1", "220", "R", ""],
+  ["×1", "2M", "R", "marked * on drawing (TS808/TS9 variant value)"],
+  ["×1", "470", "R", "marked * on drawing (TS9 output; TS808 uses 100R)"],
+  ["×1", "100k", "R", "marked * on drawing (TS9 output; TS808 uses 10k)"],
+  ["×2", "220n", "C", ""],
+  ["×2", "1u", "C", ""],
+  ["×1", "27n", "C", ""],
+  ["×1", "47n", "C", ""],
+  ["×1", "51p", "C", ""],
+  ["×1", "100n", "C", ""],
+  ["×1", "10u", "C", "electrolytic"],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×1", "47u", "C", "electrolytic"],
+  ["×3", "1N914", "D", "marked * on drawing"],
+  ["×1", "1N4001", "D", ""],
+  ["×2", "2SC1815", "Q", ""],
+  ["×1", "4558", "IC", ""],
+  ["Drive", "A500k", "POT", ""],
+  ["Tone", "B20k", "POT", ""],
+  ["Level", "B100k", "POT", ""]
+ ]
+}

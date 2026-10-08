@@ -1,0 +1,35 @@
+{
+ "id": "pcbway-gtu:eqd-hummingbird-66a4de64",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "EQD Hummingbird tremolo: PF5102 JFET gain stage modulated by a 2N6027 PUT relaxation LFO through a 2N5089; the rate-range switch appears only as pads 1/2/3.",
+ "uncertain": [
+  "Range switch inferred from pads 1/2/3, no switch symbol or value drawn"
+ ],
+ "rows": [
+  ["×2", "47k", "R", ""],
+  ["×2", "2k2", "R", ""],
+  ["×2", "470", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×1", "12k", "R", ""],
+  ["×1", "27k", "R", ""],
+  ["×1", "220k", "R", ""],
+  ["×1", "100", "R", ""],
+  ["×1", "4k7", "R", "LED current limiter"],
+  ["×3", "1u", "C", ""],
+  ["×2", "2u2", "C", ""],
+  ["×2", "100u", "C", ""],
+  ["×1", "4u7", "C", ""],
+  ["×1", "220n", "C", ""],
+  ["×1", "10u", "C", ""],
+  ["×1", "100n", "C", ""],
+  ["×1", "1N5817", "D", "polarity protection"],
+  ["×1", "PF5102", "Q", "JFET"],
+  ["×1", "2N5089", "Q", ""],
+  ["×1", "2N6027", "Q", "PUT oscillator"],
+  ["Level", "B100k", "POT", ""],
+  ["Rate", "B100k", "POT", ""],
+  ["Depth", "B10k", "POT", ""],
+  ["Range", "SPDT", "SW", "not drawn as a symbol: off-board pads 1/2/3 switch the 10u/2u2 timing caps against ground; type inferred"]
+ ]
+}

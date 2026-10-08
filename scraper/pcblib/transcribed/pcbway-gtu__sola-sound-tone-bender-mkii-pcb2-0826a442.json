@@ -1,0 +1,23 @@
+{
+ "id": "pcbway-gtu:sola-sound-tone-bender-mkii-pcb2-0826a442",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Three-germanium-PNP Tone Bender MkII with a TC1044 inverter making the negative rail from a center-negative supply.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "100k", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "8k2", "R", ""],
+  ["×1", "470", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×2", "10n", "C", ""],
+  ["×2", "5u", "C", "electrolytic"],
+  ["×1", "100n", "C", ""],
+  ["×1", "10u", "C", "electrolytic"],
+  ["×1", "47u", "C", "electrolytic"],
+  ["×1", "1N5817", "D", ""],
+  ["×3", "OC81D", "Q", "PNP germanium"],
+  ["×1", "TC1044SCPA", "IC", "charge pump for -VA"],
+  ["Level", "A100k", "POT", ""],
+  ["Attack", "B1k", "POT", ""]
+ ]
+}

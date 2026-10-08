@@ -1,0 +1,28 @@
+{
+ "id": "pcbway-gtu:sarno-earth-drive-7c76c8d7",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Sarno Earth Drive: 4558 non-inverting gain stage with Ge/Si diode pairs in the feedback, passive tone pot into a gain-of-two second stage; 47 ohm supply resistor and 4k7 LED resistor.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "47", "R", ""],
+  ["×2", "1k5", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×3", "5k6", "R", ""],
+  ["×3", "10k", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "2M2", "R", ""],
+  ["×1", "100p", "C", ""],
+  ["×1", "2n2", "C", ""],
+  ["×1", "4n7", "C", ""],
+  ["×1", "220n", "C", ""],
+  ["×1", "680n", "C", ""],
+  ["×2", "22u", "C", "electrolytic"],
+  ["×2", "GE", "D", "germanium, type not given"],
+  ["×2", "1N914", "D", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "4558", "IC", "dual op-amp, both sections used"],
+  ["Drive", "A500k", "POT", ""],
+  ["Tone", "C50k", "POT", ""],
+  ["Volume", "A10k", "POT", ""]
+ ]
+}

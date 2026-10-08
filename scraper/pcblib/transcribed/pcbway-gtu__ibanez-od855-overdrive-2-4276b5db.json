@@ -1,0 +1,38 @@
+{
+ "id": "pcbway-gtu:ibanez-od855-overdrive-2-4276b5db",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Ibanez OD-855 Overdrive II clone: transistor buffers around a 4558 two-stage overdrive with 1N60 clipping; the source image is very low resolution.",
+ "uncertain": [
+  "Source image is only 600x300 px: 680 resistor (top of tone network), 20n input cap, 30p feedback cap and pot values B20k/B10k read at low resolution",
+  "Distortion C50k marked with '?' by the drawer"
+ ],
+ "rows": [
+  ["×7", "10k", "R", ""],
+  ["×3", "3k", "R", ""],
+  ["×2", "510k", "R", ""],
+  ["×2", "100k", "R", ""],
+  ["×1", "680", "R", "label low-res, could be 680 or 480"],
+  ["×1", "470", "R", ""],
+  ["×1", "100", "R", ""],
+  ["×1", "47", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×2", "1u", "C", ""],
+  ["×2", "100n", "C", ""],
+  ["×1", "20n", "C", "low-res label"],
+  ["×1", "470p", "C", ""],
+  ["×1", "470n", "C", ""],
+  ["×1", "30p", "C", "low-res label"],
+  ["×1", "1n", "C", ""],
+  ["×1", "4u7", "C", "electrolytic"],
+  ["×1", "10u", "C", "electrolytic"],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×1", "47u", "C", "electrolytic"],
+  ["×2", "1N60", "D", "clipping"],
+  ["×1", "1N4001", "D", ""],
+  ["×2", "2SC1815BL", "Q", ""],
+  ["×1", "4558", "IC", "dual op-amp, both sections used"],
+  ["Distortion", "C50k", "POT", "drawn with a '?' beside it on the sheet"],
+  ["Tone", "B20k", "POT", ""],
+  ["Level", "B10k", "POT", ""]
+ ]
+}

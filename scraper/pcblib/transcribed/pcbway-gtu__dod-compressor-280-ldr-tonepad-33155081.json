@@ -1,0 +1,27 @@
+{
+ "id": "pcbway-gtu:dod-compressor-280-ldr-tonepad-33155081",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "TonePad's DOD Compressor 280 with an LED/LDR pair in place of the original OTA: LM358 gain stage with the LDR in its feedback, PN4124 pair rectifying to drive the LED.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "22k", "R", ""],
+  ["×2", "1M", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×2", "220k", "R", ""],
+  ["×2", "100k", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×2", "4k7", "R", "one for the LDR's LED, one for the power LED"],
+  ["×4", "47n", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×1", "47u", "C", "electrolytic"],
+  ["×1", "10u", "C", "electrolytic"],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "LED", "LED", "drives the LDR (homemade vactrol)"],
+  ["×2", "PN4124", "Q", "rectifier pair driving the LED"],
+  ["×1", "LM358", "IC", "dual op-amp, both halves used"],
+  ["×1", "LDR", "OPTO", "paired with the LED"],
+  ["Comp", "B500k", "POT", ""],
+  ["Output", "A100k", "POT", ""]
+ ]
+}

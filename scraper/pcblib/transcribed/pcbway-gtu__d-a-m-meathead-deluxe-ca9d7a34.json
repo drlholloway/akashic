@@ -1,0 +1,27 @@
+{
+ "id": "pcbway-gtu:d-a-m-meathead-deluxe-ca9d7a34",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "D*A*M Meathead Deluxe: two-transistor (BC337/BC107) fuzz with a 22k bias trimmer and Filter/Level/Attack controls.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "4k7", "R", ""],
+  ["×1", "820", "R", ""],
+  ["×1", "18k", "R", ""],
+  ["×1", "2M", "R", ""],
+  ["×1", "120k", "R", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "100n", "C", ""],
+  ["×1", "47p", "C", ""],
+  ["×1", "4n7", "C", ""],
+  ["×1", "470p", "C", ""],
+  ["×1", "1u", "C", ""],
+  ["×1", "22u", "C", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "BC337-16", "Q", ""],
+  ["×1", "BC107B", "Q", ""],
+  ["Filter", "B100k", "POT", ""],
+  ["Level", "A500k", "POT", ""],
+  ["Attack", "B1k", "POT", ""],
+  ["×1", "22k", "TRIM", "drawn with a trimmer wiper, collector load of the BC107B"]
+ ]
+}

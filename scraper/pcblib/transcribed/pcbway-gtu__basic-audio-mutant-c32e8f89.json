@@ -1,0 +1,29 @@
+{
+ "id": "pcbway-gtu:basic-audio-mutant-c32e8f89",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Three-transistor BC549B fuzz (Basic Audio Mutant) with a diode clipper whose ground return goes through a Clamp pot; 4k7 is the LED resistor.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "2k7", "R", ""],
+  ["×2", "4k7", "R", ""],
+  ["×2", "1M2", "R", ""],
+  ["×1", "2k2", "R", ""],
+  ["×1", "3M3", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×2", "4n7", "C", ""],
+  ["×2", "100n", "C", ""],
+  ["×2", "10u", "C", ""],
+  ["×1", "1u", "C", ""],
+  ["×1", "470p", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×2", "1N4148", "D", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×3", "BC549B", "Q", ""],
+  ["Fuzz", "A100k", "POT", ""],
+  ["Saturate", "B100k", "POT", ""],
+  ["Clamp", "B1k", "POT", ""],
+  ["Level", "A100k", "POT", ""]
+ ]
+}

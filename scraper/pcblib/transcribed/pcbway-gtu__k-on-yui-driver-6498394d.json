@@ -1,0 +1,30 @@
+{
+ "id": "pcbway-gtu:k-on-yui-driver-6498394d",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "K-On Yui Driver: 4580 non-inverting gain stage (Drive, plus a Tea pot setting the gain-leg resistance), 1N4148 hard clipping, Tone pot and a 4580 recovery stage.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "100k", "R", ""],
+  ["×3", "1k", "R", ""],
+  ["×2", "1M", "R", ""],
+  ["×2", "4k7", "R", ""],
+  ["×2", "100", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "2k2", "R", ""],
+  ["×3", "100n", "C", ""],
+  ["×3", "100p", "C", ""],
+  ["×2", "470n", "C", ""],
+  ["×2", "100u", "C", ""],
+  ["×1", "220n", "C", ""],
+  ["×1", "47n", "C", ""],
+  ["×1", "22n", "C", ""],
+  ["×2", "1N4148", "D", "hard clipping to ground"],
+  ["×1", "1N5817", "D", "reverse-polarity protection"],
+  ["×1", "4580", "IC", "dual op-amp, both halves used"],
+  ["Tea", "B10k", "POT", "rheostat in the gain leg"],
+  ["Drive", "B500k", "POT", ""],
+  ["Tone", "B10k", "POT", ""],
+  ["Volume", "A100k", "POT", ""]
+ ]
+}

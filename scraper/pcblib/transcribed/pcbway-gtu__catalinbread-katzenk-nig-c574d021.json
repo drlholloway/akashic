@@ -1,0 +1,43 @@
+{
+ "id": "pcbway-gtu:catalinbread-katzenk-nig-c574d021",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Catalinbread Katzenkönig (Tone Bender/Rat-flavored 2N5088 fuzz) with LED clipping plus a switchable 1N914 clip selector, Filter and buffer output.",
+ "uncertain": [
+  "Clip switch type: only three pads drawn"
+ ],
+ "rows": [
+  ["×4", "1k", "R", ""],
+  ["×3", "1M", "R", ""],
+  ["×2", "3k9", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×1", "2k2", "R", ""],
+  ["×1", "150", "R", ""],
+  ["×1", "3k3", "R", ""],
+  ["×1", "100", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×2", "22u", "C", ""],
+  ["×1", "68n", "C", ""],
+  ["×1", "1n", "C", ""],
+  ["×1", "47p", "C", ""],
+  ["×1", "150n", "C", ""],
+  ["×1", "10u", "C", ""],
+  ["×1", "4u7", "C", ""],
+  ["×1", "3n3", "C", ""],
+  ["×1", "220n", "C", ""],
+  ["×1", "1u", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "100n", "C", ""],
+  ["×6", "1N914", "D", "clipping"],
+  ["×1", "1N5817", "D", ""],
+  ["×2", "LED", "LED", "clipping LEDs to ground, colour not drawn"],
+  ["×4", "2N5088", "Q", ""],
+  ["Input", "B250k", "POT", ""],
+  ["Gain", "A50k", "POT", ""],
+  ["Filter", "A100k", "POT", ""],
+  ["Volume", "A100k", "POT", ""],
+  ["Clip", "SPDT", "SW", "3-pad CLIP selector (center to ground) choosing between the 1N914 strings; likely on-off-on"]
+ ]
+}

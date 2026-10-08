@@ -1,0 +1,23 @@
+{
+ "id": "pcbway-gtu:fulltone-2b-b9be2510",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Fulltone 2B (TL071 clean boost with a pair of germanium diodes switched in by a Dynamics pot); clear drawing.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "3M3", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×4", "10k", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "100", "R", ""],
+  ["×2", "100u", "C", "electrolytic"],
+  ["×1", "10u", "C", "electrolytic"],
+  ["×1", "100n", "C", ""],
+  ["×1", "100p", "C", ""],
+  ["×2", "GE", "D", "germanium clipping diodes, drawn with the generic label GE"],
+  ["×1", "1N5817", "D", "reverse polarity"],
+  ["×1", "TL071", "IC", ""],
+  ["Gain", "A100k", "POT", ""],
+  ["Dynamics", "B250k", "POT", "sets the clipping diodes' resistance to the inverting input"]
+ ]
+}

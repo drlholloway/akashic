@@ -1,0 +1,29 @@
+{
+ "id": "pcbway-gtu:wampler-plexi-drive-dff9c273",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Wampler Plexi-Drive three-J201 JFET amp-in-a-box with trimmed drains; pads B1/B2 bring the 2n2 bright cap out to an off-board switch that is not drawn.",
+ "uncertain": [],
+ "rows": [
+  ["×4", "1k", "R", ""],
+  ["×2", "15k", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×2", "2n2", "C", ""],
+  ["×1", "47p", "C", ""],
+  ["×1", "220p", "C", ""],
+  ["×1", "470p", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "22n", "C", ""],
+  ["×1", "1u", "C", ""],
+  ["×1", "47u", "C", ""],
+  ["×1", "470u", "C", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×3", "J201", "Q", ""],
+  ["Gain", "A500k", "POT", ""],
+  ["Tone", "A25k", "POT", ""],
+  ["Volume", "A100k", "POT", ""],
+  ["×3", "50k", "TRIM", "drain bias trimmers, one per J201"]
+ ]
+}

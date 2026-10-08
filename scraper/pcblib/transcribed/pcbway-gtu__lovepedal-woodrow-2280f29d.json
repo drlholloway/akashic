@@ -1,0 +1,21 @@
+{
+ "id": "pcbway-gtu:lovepedal-woodrow-2280f29d",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Lovepedal Woodrow: single 2N5088 common-emitter booster with a B1k emitter-bypass gain pot and 1N4148 diodes to ground.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "1M", "R", ""],
+  ["×1", "2M2", "R", ""],
+  ["×1", "3k3", "R", ""],
+  ["×1", "330", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×2", "47u", "C", "electrolytic"],
+  ["×1", "47n", "C", ""],
+  ["×1", "100n", "C", ""],
+  ["×2", "1N4148", "D", "clipping to ground"],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "2N5088", "Q", ""],
+  ["Gain", "B1k", "POT", "emitter bypass via 47u"],
+  ["Volume", "A100k", "POT", ""]
+ ]
+}

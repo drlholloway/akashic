@@ -1,0 +1,31 @@
+{
+ "id": "pcbway-gtu:greer-amps-black-mountain-crunch-drive-d5901227",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Greer Black Mountain Crunch Drive clone: TL081 gain stage, asymmetric BAT41/1N914 shunt clipping, second TL081 gain stage, simple tone; clean drawing.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "10k", "R", ""],
+  ["×2", "4k7", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "8k2", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×1", "15k", "R", ""],
+  ["×1", "47", "R", ""],
+  ["×2", "47n", "C", ""],
+  ["×2", "22u", "C", ""],
+  ["×1", "100n", "C", ""],
+  ["×1", "220p", "C", ""],
+  ["×1", "1n", "C", ""],
+  ["×1", "100p", "C", ""],
+  ["×1", "10u", "C", ""],
+  ["×1", "BAT41", "D", ""],
+  ["×1", "1N914", "D", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×2", "TL081", "IC", ""],
+  ["Gain", "A1M", "POT", ""],
+  ["Tone", "A50k", "POT", ""],
+  ["Volume", "A250k", "POT", ""]
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "id": "pcbway-gtu:skreddy-fuzz-driver",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Skreddy Fuzz Driver: two-transistor germanium NPN fuzz with Fatness, Drive, Fuzz and Bass controls; transistors and diode drawn only as 'NPN GE' / 'GE'.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "1M", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "56k", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×1", "330", "R", ""],
+  ["×2", "47u", "C", ""],
+  ["×2", "220n", "C", ""],
+  ["×1", "100n", "C", ""],
+  ["×1", "47p", "C", ""],
+  ["×1", "10u", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×1", "GE", "D", "germanium diode, no part number drawn"],
+  ["×2", "NPN GE", "Q", "germanium NPN, no part number drawn"],
+  ["Drive", "B5k", "POT", ""],
+  ["Volume", "A500k", "POT", ""],
+  ["Fatness", "B100k", "POT", ""],
+  ["Fuzz", "B2k", "POT", ""],
+  ["Bass", "B2k", "POT", ""]
+ ]
+}

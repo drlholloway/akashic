@@ -1,0 +1,30 @@
+{
+ "id": "pcbway-gtu:crowther-hotcake-jeds-5380223e",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "TL071 Hotcake (JEDS version) with switchable diode clipping and presence control.",
+ "uncertain": [
+  "The two switch sections may be two separate SPST switches rather than one DPST"
+ ],
+ "rows": [
+  ["×3", "10k", "R", ""],
+  ["×2", "220", "R", ""],
+  ["×2", "100k", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "82k", "R", ""],
+  ["×2", "10n", "C", ""],
+  ["×2", "10u", "C", ""],
+  ["×1", "82n", "C", ""],
+  ["×1", "470p", "C", ""],
+  ["×1", "47n", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×2", "1N914", "D", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "TL071", "IC", ""],
+  ["Drive", "C50k", "POT", ""],
+  ["Presence", "B25k", "POT", ""],
+  ["Volume", "C50k", "POT", ""],
+  ["×1", "DPST", "SW", "two unlabelled switch sections (pins 1-2 and 3-4), read as one dual toggle"]
+ ]
+}

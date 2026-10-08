@@ -1,0 +1,42 @@
+{
+ "id": "pcbway-gtu:ibanez-stl-super-tube-13fed365",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Ibanez STL Super Tube: four 4558 stages (buffer, TS-style clipper, dual-gang Bite filter, Bright stage) and a 2SC1815 output follower; source image is only 600px wide so small labels are hard to read.",
+ "uncertain": [
+  "6n8 (low-resolution label)",
+  "51k drive resistor",
+  "220k bias resistor",
+  "1M* input resistor"
+ ],
+ "rows": [
+  ["×6", "10k", "R", ""],
+  ["×4", "1k", "R", ""],
+  ["×2", "510k", "R", ""],
+  ["×2", "4k7", "R", "one is the LED resistor"],
+  ["×2", "1k5", "R", ""],
+  ["×1", "1M", "R", "drawn as 1M* (input pulldown)"],
+  ["×1", "51k", "R", ""],
+  ["×1", "220k", "R", ""],
+  ["×1", "220", "R", ""],
+  ["×1", "470", "R", ""],
+  ["×1", "47", "R", "power input"],
+  ["×3", "1u", "C", ""],
+  ["×2", "47n", "C", ""],
+  ["×2", "100n", "C", ""],
+  ["×1", "51p", "C", ""],
+  ["×1", "6n8", "C", "drawn 6.8n"],
+  ["×1", "27n", "C", ""],
+  ["×1", "220n", "C", ""],
+  ["×1", "10u", "C", "electrolytic"],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×1", "47u", "C", "electrolytic"],
+  ["×2", "1S1588", "D", "clipping"],
+  ["×1", "1N4001", "D", "power"],
+  ["×1", "2SC1815GR", "Q", "output emitter follower"],
+  ["×2", "4558", "IC", "four op-amp sections = two dual chips"],
+  ["Drive", "A500k", "POT", ""],
+  ["Bite", "C20k", "POT", "dual-gang, sections A and B"],
+  ["Bright", "C20k", "POT", ""],
+  ["Level", "B100k", "POT", ""]
+ ]
+}

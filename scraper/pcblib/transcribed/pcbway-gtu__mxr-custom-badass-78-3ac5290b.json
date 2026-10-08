@@ -1,0 +1,42 @@
+{
+ "id": "pcbway-gtu:mxr-custom-badass-78-3ac5290b",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "MXR Custom Badass 78 clone: BC549C/2N5089 input stages, TLC2262 gain stage with 1N4148+LED clipping and a switchable Crunch diode pair, tone network and 2N5089 output buffer.",
+ "uncertain": [
+  "Crunch switch type: two poles drawn separately (CRUNCH and CRLED), read as one DPDT"
+ ],
+ "rows": [
+  ["×2", "2M2", "R", ""],
+  ["×6", "10k", "R", ""],
+  ["×4", "100k", "R", ""],
+  ["×1", "1M8", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "22", "R", ""],
+  ["×1", "47k", "R", ""],
+  ["×3", "4k7", "R", "two are LED resistors (LED and CRLED)"],
+  ["×2", "2k2", "R", ""],
+  ["×1", "470", "R", ""],
+  ["×2", "6k8", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "4u7", "C", "electrolytic"],
+  ["×4", "47n", "C", ""],
+  ["×2", "270p", "C", ""],
+  ["×3", "1u", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "22n", "C", ""],
+  ["×2", "100n", "C", ""],
+  ["×2", "100u", "C", "electrolytic"],
+  ["×5", "1N4148", "D", "one at op-amp input, two switched by Crunch, two in series with the clipping LEDs"],
+  ["×1", "1N5817", "D", "polarity protection"],
+  ["×3", "LED", "LED", "two clipping LEDs to ground, one Crunch indicator LED switched by the CRLED pole"],
+  ["×1", "BC549C", "Q", ""],
+  ["×2", "2N5089", "Q", ""],
+  ["×1", "TLC2262C", "IC", "dual op-amp, both sections used"],
+  ["Distortion", "B100k", "POT", ""],
+  ["Tone", "B10k", "POT", ""],
+  ["Output", "B100k", "POT", ""],
+  ["Crunch", "DPDT", "SW", "drawn as two separate poles: one grounds the 1N4148 pair, one lights the CRLED indicator"]
+ ]
+}

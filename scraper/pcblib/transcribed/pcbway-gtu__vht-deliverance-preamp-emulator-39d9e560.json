@@ -1,0 +1,11 @@
+{
+ "id": "pcbway-gtu:vht-deliverance-preamp-emulator-39d9e560",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "VHT Deliverance guitar-amp emulator (op-amp stages with LED/diode clipping and switches), but the cached image is a 600 px thumbnail too small to read any value, so no list could be transcribed.",
+ "uncertain": [
+  "whole board: the only cached schematic is a 600x211 thumbnail; no part value, IC type or pot label is legible even enlarged 6x"
+ ],
+ "rows": [
+
+ ]
+}

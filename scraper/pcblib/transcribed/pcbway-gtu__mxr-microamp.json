@@ -1,0 +1,27 @@
+{
+ "id": "pcbway-gtu:mxr-microamp",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "MXR Micro Amp clone: single UA741 non-inverting booster with C500k gain pot; 4k7 is the LED resistor.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "100k", "R", ""],
+  ["×1", "47", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "22M", "R", ""],
+  ["×1", "10M", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "2k7", "R", ""],
+  ["×1", "56k", "R", ""],
+  ["×1", "470", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×3", "10n", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "47u", "C", ""],
+  ["×1", "47p", "C", ""],
+  ["×1", "15u", "C", ""],
+  ["×1", "4u7", "C", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "UA741", "IC", ""],
+  ["Gain", "C500k", "POT", ""]
+ ]
+}

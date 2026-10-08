@@ -1,0 +1,31 @@
+{
+ "id": "pcbway-gtu:bearfoot-sea-blue-eq",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Two 2N5458 JFET stages around a treble/bass EQ (Bearfoot Sea Blue EQ clone); source image is only 600px wide.",
+ "uncertain": [
+  "Two drain caps read as 1n in a 600px image",
+  "Pot values read as B50k (drawn '850k')"
+ ],
+ "rows": [
+  ["×5", "15k", "R", ""],
+  ["×3", "1M", "R", ""],
+  ["×2", "1k", "R", ""],
+  ["×2", "5k6", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "47k", "R", ""],
+  ["×1", "47", "R", ""],
+  ["×3", "22n", "C", ""],
+  ["×2", "1n", "C", "drain-to-supply caps; low-res, could be 1u"],
+  ["×2", "1u", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "470n", "C", ""],
+  ["×1", "4n7", "C", ""],
+  ["×1", "22u", "C", ""],
+  ["×1", "220n", "C", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×2", "2N5458", "Q", ""],
+  ["Treble", "B50k", "POT", ""],
+  ["Bass", "B50k", "POT", ""],
+  ["Level", "B50k", "POT", ""]
+ ]
+}

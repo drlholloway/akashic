@@ -1,0 +1,21 @@
+{
+ "id": "pcbway-gtu:catalinbread-merkin-fuzz-011bcbcc",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Catalinbread Merkin Fuzz clone: three 2N2222A common-emitter stages with a Texture pot blending the second stage against a 2n2-coupled first-stage signal.",
+ "uncertain": [],
+ "rows": [
+  ["×5", "470k", "R", ""],
+  ["×2", "1k", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×2", "47k", "R", ""],
+  ["×2", "4k7", "R", ""],
+  ["×3", "47n", "C", ""],
+  ["×4", "47u", "C", ""],
+  ["×1", "2n2", "C", ""],
+  ["×1", "100n", "C", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×3", "2N2222A", "Q", ""],
+  ["Texture", "B500k", "POT", ""],
+  ["Volume", "B500k", "POT", ""]
+ ]
+}

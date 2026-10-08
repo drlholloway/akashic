@@ -1,0 +1,33 @@
+{
+ "id": "pcbway-gtu:zvex-masotron-fuzz-b7e638a9",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "ZVEX Masotron clone: two 2N2222A stages with Relax/Push input pot, PW bias pot, Fuzz, Tone, Vol, and a 3-way output cap selector wired to off-board pads.",
+ "uncertain": [
+  "low-resolution 600x302 image; values read from enlarged crops",
+  "pads 1/2/3 pick the 3n3, 68n or 100u output cap via an off-board switch that is not drawn"
+ ],
+ "rows": [
+  ["×1", "47", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×1", "56k", "R", ""],
+  ["×1", "100", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×1", "2k2", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "5k1", "R", ""],
+  ["×4", "100u", "C", ""],
+  ["×2", "220n", "C", ""],
+  ["×2", "10n", "C", ""],
+  ["×1", "3n3", "C", ""],
+  ["×1", "68n", "C", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "LED", "LED", "indicator LED drawn with its 4k7"],
+  ["×2", "2N2222A", "Q", ""],
+  ["Relax/Push", "B100k", "POT", ""],
+  ["PW", "B500k", "POT", ""],
+  ["Fuzz", "C5k", "POT", ""],
+  ["Tone", "B10k", "POT", ""],
+  ["Vol", "B10k", "POT", ""]
+ ]
+}

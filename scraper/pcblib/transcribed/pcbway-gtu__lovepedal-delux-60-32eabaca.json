@@ -1,0 +1,21 @@
+{
+ "id": "pcbway-gtu:lovepedal-delux-60-32eabaca",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Lovepedal Delux 60: a single BS170 MOSFET common-source boost with drain-to-gate 3M3 bias and a volume pot.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "3M3", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "3k3", "R", ""],
+  ["×1", "330", "R", ""],
+  ["×1", "47k", "R", ""],
+  ["×1", "47", "R", "power input series resistor"],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "22n", "C", ""],
+  ["×1", "100n", "C", ""],
+  ["×1", "47u", "C", "electrolytic"],
+  ["×1", "1N4001", "D", "reverse polarity"],
+  ["×1", "BS170", "Q", "MOSFET"],
+  ["Volume", "B100k", "POT", ""]
+ ]
+}

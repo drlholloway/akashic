@@ -1,0 +1,21 @@
+{
+ "id": "pcbway-gtu:colorsound-one-knob-fuzz-5e3d1fd3",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Two-transistor BC109/BC108 direct-coupled fuzz with a single volume knob (Colorsound One Knob Fuzz clone); no reverse-polarity diode drawn.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "82", "R", "supply"],
+  ["×1", "10k", "R", ""],
+  ["×1", "2k2", "R", ""],
+  ["×1", "150k", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "100n", "C", ""],
+  ["×1", "220p", "C", ""],
+  ["×1", "220n", "C", ""],
+  ["×1", "10u", "C", "electrolytic"],
+  ["×1", "BC109", "Q", ""],
+  ["×1", "BC108", "Q", ""],
+  ["Volume", "A500k", "POT", ""]
+ ]
+}

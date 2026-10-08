@@ -1,0 +1,36 @@
+{
+ "id": "pcbway-gtu:catalinbread-heliotrope-c1b810a7",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "TL072 clipping preamp into a JFET sample-rate chopper clocked by an LM741 oscillator (Heliotrope clone), with four supply rails.",
+ "uncertain": [
+  "The 22n/4n7 selector is drawn as three pads, read as an SPDT range switch"
+ ],
+ "rows": [
+  ["×4", "10k", "R", ""],
+  ["×3", "1k", "R", ""],
+  ["×3", "1M", "R", ""],
+  ["×2", "47", "R", ""],
+  ["×2", "4k7", "R", ""],
+  ["×1", "2k", "R", ""],
+  ["×1", "3k3", "R", ""],
+  ["×1", "47k", "R", ""],
+  ["×1", "12k", "R", ""],
+  ["×2", "47n", "C", ""],
+  ["×2", "10u", "C", ""],
+  ["×2", "100u", "C", ""],
+  ["×1", "4u7", "C", ""],
+  ["×1", "22n", "C", ""],
+  ["×1", "4n7", "C", ""],
+  ["×1", "47u", "C", ""],
+  ["×4", "1N4148", "D", ""],
+  ["×1", "1N4004", "D", ""],
+  ["×1", "2N5457", "Q", "JFET used as sample-and-hold gate"],
+  ["×1", "TL072", "IC", ""],
+  ["×1", "LM741", "IC", "LFO/oscillator"],
+  ["Gain", "A100k", "POT", ""],
+  ["Volume", "B100k", "POT", ""],
+  ["Sample", "B1M", "POT", ""],
+  ["Resolution", "B100k", "POT", ""],
+  ["×1", "SPDT", "SW", "unlabelled 3-lug switch choosing 22n or 4n7 timing cap"]
+ ]
+}

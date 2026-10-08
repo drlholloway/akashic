@@ -1,0 +1,26 @@
+{
+ "id": "pcbway-gtu:d-a-m-grease-box-gb80-6c30a5f0",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "D*A*M Grease Box GB80: three-transistor NPN germanium fuzz (Tone Bender style) with a germanium diode in the Sustain leg.",
+ "uncertain": [
+  "2M* asterisk meaning unknown (likely select-on-test)"
+ ],
+ "rows": [
+  ["×1", "2M", "R", "marked 2M* on the drawing (asterisk not explained)"],
+  ["×1", "220k", "R", ""],
+  ["×1", "47k", "R", ""],
+  ["×1", "20k", "R", ""],
+  ["×4", "10k", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "3k3", "R", ""],
+  ["×1", "47u", "C", "electrolytic, supply filter"],
+  ["×1", "10u", "C", "electrolytic"],
+  ["×2", "100n", "C", ""],
+  ["×1", "15n", "C", ""],
+  ["×1", "1N270", "D", "drawn as 'Ge (1N270)': any germanium diode"],
+  ["×1", "1N4001", "D", ""],
+  ["×3", "2N1304", "Q", "drawn as 'NPN Ge (2N1304)': any NPN germanium"],
+  ["Sustain", "B100k", "POT", ""],
+  ["Volume", "A500k", "POT", ""]
+ ]
+}

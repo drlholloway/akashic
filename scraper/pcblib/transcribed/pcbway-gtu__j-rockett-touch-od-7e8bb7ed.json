@@ -1,0 +1,30 @@
+{
+ "id": "pcbway-gtu:j-rockett-touch-od-7e8bb7ed",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "J. Rockett Touch OD: 2SC1815 input buffer, NE5532 gain stage with LED clipping in feedback, active tone stage, 2SC1815 output buffer.",
+ "uncertain": [],
+ "rows": [
+  ["×8", "10k", "R", ""],
+  ["×5", "1k", "R", ""],
+  ["×2", "510k", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "220", "R", ""],
+  ["×1", "100", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×3", "220n", "C", ""],
+  ["×2", "1u", "C", ""],
+  ["×1", "22n", "C", ""],
+  ["×1", "56p", "C", ""],
+  ["×1", "100n", "C", ""],
+  ["×1", "10u", "C", "electrolytic"],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×1", "47u", "C", "electrolytic"],
+  ["×1", "1N5817", "D", ""],
+  ["×2", "LED", "LED", "clipping LEDs in the gain feedback loop"],
+  ["×2", "2SC1815", "Q", ""],
+  ["×1", "NE5532", "IC", "two sections of one dual chip"],
+  ["Gain", "A1M", "POT", "wired as variable resistor"],
+  ["Tone", "B25k", "POT", ""],
+  ["Vol", "B100k", "POT", ""]
+ ]
+}

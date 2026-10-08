@@ -1,0 +1,20 @@
+{
+ "id": "pcbway-gtu:deviever-ruby-43e0775d",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Devi Ever Ruby: two self-biased MPSA18 stages with an Intensity pot between them.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "1k", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×2", "10k", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×2", "2M2", "R", ""],
+  ["×2", "10n", "C", ""],
+  ["×2", "100n", "C", ""],
+  ["×1", "47u", "C", "electrolytic"],
+  ["×1", "1N4001", "D", ""],
+  ["×2", "MPSA18", "Q", ""],
+  ["Intensity", "B100k", "POT", ""],
+  ["Volume", "B100k", "POT", ""]
+ ]
+}

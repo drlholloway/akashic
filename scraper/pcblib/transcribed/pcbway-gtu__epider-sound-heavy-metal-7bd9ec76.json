@@ -1,0 +1,21 @@
+{
+ "id": "pcbway-gtu:epider-sound-heavy-metal-7bd9ec76",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Two BC547 stages with an anti-parallel 1N4148 pair around the Attack pot between them and a 1N4148 pair clipping to ground at the output.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "4k7", "R", "one is the LED resistor"],
+  ["×2", "3M3", "R", ""],
+  ["×1", "2k2", "R", ""],
+  ["×1", "47", "R", "supply series"],
+  ["×1", "1M", "R", ""],
+  ["×4", "100n", "C", ""],
+  ["×1", "220p", "C", ""],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×1", "1N4001", "D", ""],
+  ["×4", "1N4148", "D", ""],
+  ["×2", "BC547", "Q", ""],
+  ["Attack", "B100k", "POT", ""],
+  ["Output", "B50k", "POT", ""]
+ ]
+}

@@ -1,0 +1,25 @@
+{
+ "id": "pcbway-gtu:beavis-audio-trotsky-drive-735fa9da",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Beavis Audio Trotsky Drive: single 2N2222 gain stage with germanium clipping diodes and a switchable 22n treble cut.",
+ "uncertain": [
+  "SW: only SW1/SW2 pads drawn, assumed an SPST toggle"
+ ],
+ "rows": [
+  ["×1", "47", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "3k3", "R", ""],
+  ["×1", "2M2", "R", ""],
+  ["×1", "680", "R", ""],
+  ["×1", "47u", "C", ""],
+  ["×1", "47n", "C", ""],
+  ["×1", "100n", "C", ""],
+  ["×1", "22n", "C", "switched in by SW1/SW2"],
+  ["×1", "1N4001", "D", ""],
+  ["×2", "1N34A", "D", "clipping"],
+  ["×1", "2N2222", "Q", ""],
+  ["Gain", "B50k", "POT", ""],
+  ["Volume", "A100k", "POT", ""],
+  ["×1", "SPST", "SW", "off-board switch on SW1/SW2 pads that grounds the 22n; type not drawn"]
+ ]
+}

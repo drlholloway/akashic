@@ -1,0 +1,17 @@
+{
+ "id": "pcbway-gtu:ehx-hogs-foot-5d5ec7cd",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "EHX Hog's Foot bass booster: one 2N5088 common-emitter stage with 100n caps shunting the base and bypassing the collector resistor to cut treble; no supply filter or protection diode drawn.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "430k", "R", ""],
+  ["×1", "43k", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "390", "R", ""],
+  ["×2", "3u3", "C", "electrolytic"],
+  ["×2", "100n", "C", "one base to ground, one across the 10k collector resistor"],
+  ["×1", "2N5088", "Q", ""],
+  ["Volume", "B100k", "POT", ""]
+ ]
+}

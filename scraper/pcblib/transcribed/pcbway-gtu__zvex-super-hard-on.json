@@ -1,0 +1,23 @@
+{
+ "id": "pcbway-gtu:zvex-super-hard-on",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "ZVEX Super Hard On: single BS170 MOSFET booster with a 9V1 zener and a Level control; electrolytics mislabelled mF.",
+ "uncertain": [
+  "electrolytics labelled 100mF and 10mF on the drawing; transcribed as 100u and 10u"
+ ],
+ "rows": [
+  ["×2", "10M", "R", ""],
+  ["×1", "47", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "5k1", "R", ""],
+  ["×1", "2M", "R", ""],
+  ["×1", "100", "R", ""],
+  ["×1", "100u", "C", "drawn as '100mF', read as 100uF"],
+  ["×1", "10u", "C", "drawn as '10mF', read as 10uF"],
+  ["×1", "100n", "C", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "9V1", "D", "zener"],
+  ["×1", "BS170", "Q", ""],
+  ["Level", "A100k", "POT", ""]
+ ]
+}

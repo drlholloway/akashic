@@ -1,0 +1,16 @@
+{
+ "id": "pcbway-gtu:jhs-mini-bomb-1a27f187",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "JHS Mini Bomb: single J201 common-source boost with the Boost pot as a gate input divider.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "5k1", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "100k", "R", ""],
+  ["×1", "22u", "C", "electrolytic"],
+  ["×1", "100n", "C", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "J201", "Q", ""],
+  ["Boost", "B1M", "POT", ""]
+ ]
+}

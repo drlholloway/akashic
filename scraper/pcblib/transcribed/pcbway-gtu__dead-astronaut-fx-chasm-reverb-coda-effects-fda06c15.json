@@ -1,0 +1,43 @@
+{
+ "id": "pcbway-gtu:dead-astronaut-fx-chasm-reverb-coda-effects-fda06c15",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Coda Effects Chasm reverb clone: TL072 buffers, Belton BTDR-2H brick, and a JFET soft-switching relay pair with a 2N7000 trails switch; four TL072 sections means two chips.",
+ "uncertain": [
+  "Osc switch is drawn only as three pads labelled ON/OFF/ON OSC, counted as an SPDT on-off-on toggle",
+  "BTDR 2H Belton brick put in OTHER"
+ ],
+ "rows": [
+  ["×1", "33", "R", ""],
+  ["×2", "100", "R", ""],
+  ["×3", "1k", "R", ""],
+  ["×1", "2k2", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "5k6", "R", ""],
+  ["×4", "10k", "R", ""],
+  ["×5", "22k", "R", ""],
+  ["×1", "47k", "R", ""],
+  ["×1", "56k", "R", ""],
+  ["×3", "100k", "R", ""],
+  ["×2", "1M", "R", ""],
+  ["×3", "100p", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×3", "100n", "C", ""],
+  ["×1", "470n", "C", ""],
+  ["×1", "1u", "C", ""],
+  ["×6", "10u", "C", "electrolytic"],
+  ["×1", "47u", "C", "electrolytic"],
+  ["×2", "100u", "C", "electrolytic"],
+  ["×1", "1N5817", "D", ""],
+  ["×4", "1N4148", "D", ""],
+  ["×2", "2N5457", "Q", ""],
+  ["×1", "2N7000", "Q", "MOSFET"],
+  ["×2", "TL072", "IC", "four op-amp sections drawn"],
+  ["×1", "78L05", "IC", "regulator"],
+  ["×1", "BTDR 2H", "OTHER", "Belton reverb brick"],
+  ["Decay", "B20k", "POT", ""],
+  ["Damp", "B10k", "POT", ""],
+  ["Mix", "B10k", "POT", ""],
+  ["Level", "B100k", "POT", ""],
+  ["Osc", "SPDT ON/OFF/ON", "SW", "drawn as off-board pads 1-2-3"]
+ ]
+}

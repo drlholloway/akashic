@@ -1,0 +1,29 @@
+{
+ "id": "pcbway-gtu:mr-black-orro-pcb-2-0f782632",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Mr Black Orro clone: non-inverting 4558 gain stage, inverting stage with 1N4148 clipping, passive tone into a buffer, then Level into an inverting 51k/51k output stage; two 4558s.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "1k", "R", ""],
+  ["×3", "4k7", "R", ""],
+  ["×3", "10k", "R", ""],
+  ["×2", "47k", "R", ""],
+  ["×2", "51k", "R", ""],
+  ["×2", "100k", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "2M2", "R", ""],
+  ["×2", "100p", "C", ""],
+  ["×1", "1n", "C", ""],
+  ["×1", "4n7", "C", ""],
+  ["×2", "100n", "C", ""],
+  ["×2", "220n", "C", ""],
+  ["×1", "10u", "C", "electrolytic"],
+  ["×3", "47u", "C", "electrolytic, one across VA-VB"],
+  ["×4", "1N4148", "D", "clipping, two series pairs anti-parallel"],
+  ["×1", "1N5817", "D", "reverse-polarity protection"],
+  ["×2", "4558", "IC", "dual op-amp; four sections drawn = two chips"],
+  ["Gain", "B50k", "POT", ""],
+  ["Tone", "B50k", "POT", ""],
+  ["Level", "B50k", "POT", ""]
+ ]
+}

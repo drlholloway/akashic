@@ -1,0 +1,21 @@
+{
+ "id": "pcbway-gtu:zvex-super-duper-2-in-1",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "ZVex Super Duper 2-in-1: two BS170 MOSFET Super Hard On boosters, each with a C5k Gain; channel 2 ends in a Master pot, channel 1 in a 100k pulldown.",
+ "uncertain": [],
+ "rows": [
+  ["×4", "10M", "R", ""],
+  ["×2", "5k1", "R", ""],
+  ["×2", "4k7", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×2", "100n", "C", ""],
+  ["×2", "10u", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×2", "9V1", "D", "zeners, gate to source"],
+  ["×1", "1N4001", "D", ""],
+  ["×2", "LED", "LED", "LED1 and LED2, one per channel"],
+  ["×2", "BS170", "Q", ""],
+  ["Gain", "C5k", "POT", "×2, one per channel, wired as rheostats"],
+  ["Master", "B100k", "POT", "output level of the second channel only"]
+ ]
+}

@@ -1,0 +1,39 @@
+{
+ "id": "pcbway-gtu:jhs-morning-glory-01226b37",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "JHS Morning Glory (Bluesbreaker-style): LM833 input gain stage with drive pot, LM833 clipping stage with 2+2 1N914 diodes, tone, 2N5457 JFET output buffer; a 470p hi-cut toggle drawn as pads.",
+ "uncertain": [
+  "SPDT toggle drawn only as three pads, no switch symbol or label"
+ ],
+ "rows": [
+  ["×2", "47k", "R", ""],
+  ["×2", "4k7", "R", ""],
+  ["×2", "6k8", "R", ""],
+  ["×2", "1M", "R", ""],
+  ["×2", "12k", "R", ""],
+  ["×1", "3k3", "R", ""],
+  ["×1", "2M2", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "220k", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×1", "68k", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×4", "10n", "C", ""],
+  ["×3", "100n", "C", ""],
+  ["×2", "100u", "C", "electrolytic"],
+  ["×1", "47p", "C", ""],
+  ["×1", "47n", "C", ""],
+  ["×1", "470p", "C", "switched into the clipping loop by the toggle"],
+  ["×1", "2u2", "C", "electrolytic"],
+  ["×1", "10u", "C", "electrolytic"],
+  ["×4", "1N914", "D", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×1", "2N5457", "Q", ""],
+  ["×1", "LM833N", "IC", "two sections of one dual chip"],
+  ["Drive", "B100k", "POT", ""],
+  ["Tone", "B25k", "POT", ""],
+  ["Volume", "A100k", "POT", ""],
+  ["×1", "SPDT", "SW", "unnamed toggle drawn as pads 1-2-3 (pad 3 unconnected): switches the 470p across the feedback loop"]
+ ]
+}

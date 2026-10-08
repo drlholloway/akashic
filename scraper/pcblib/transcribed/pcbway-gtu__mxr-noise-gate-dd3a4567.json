@@ -1,0 +1,30 @@
+{
+ "id": "pcbway-gtu:mxr-noise-gate-dd3a4567",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "MXR Noise Gate clone: 2N3904 input buffer, 4558 envelope amp and 2N3904 detector driving a 2N5485 JFET shunt gate, then 4558 output buffer.",
+ "uncertain": [],
+ "rows": [
+  ["×6", "1M", "R", ""],
+  ["×4", "22k", "R", ""],
+  ["×2", "4k7", "R", "one is the LED resistor"],
+  ["×2", "10k", "R", ""],
+  ["×2", "100k", "R", ""],
+  ["×1", "2M2", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "100", "R", ""],
+  ["×1", "1k8", "R", ""],
+  ["×1", "150k", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×4", "10u", "C", ""],
+  ["×4", "10n", "C", ""],
+  ["×2", "47n", "C", ""],
+  ["×1", "2u2", "C", ""],
+  ["×1", "1u", "C", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×1", "1N4733A", "D", "5V1 zener, marked with * on drawing"],
+  ["×2", "2N3904", "Q", ""],
+  ["×1", "2N5485", "Q", "JFET gate switch"],
+  ["×1", "4558", "IC", ""],
+  ["Gate", "A500k", "POT", ""]
+ ]
+}

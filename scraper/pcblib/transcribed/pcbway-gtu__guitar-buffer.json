@@ -1,0 +1,20 @@
+{
+ "id": "pcbway-gtu:guitar-buffer",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "LM741 voltage-follower buffer with a 100k/100k bias divider; no controls.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "100k", "R", ""],
+  ["×2", "1M", "R", ""],
+  ["×1", "470", "R", ""],
+  ["×1", "47", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "100n", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "10u", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "LED", "LED", "power indicator, drawn as a LED symbol"],
+  ["×1", "LM741", "IC", ""]
+ ]
+}

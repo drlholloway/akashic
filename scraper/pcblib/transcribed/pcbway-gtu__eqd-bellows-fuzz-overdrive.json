@@ -1,0 +1,23 @@
+{
+ "id": "pcbway-gtu:eqd-bellows-fuzz-overdrive",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "EQD Bellows: a PF5102 JFET driving an MPSA13 Darlington in a compound gain stage, with a Gain pot at the input and Volume at the output.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "47", "R", ""],
+  ["×1", "200", "R", ""],
+  ["×1", "4k7", "R", "LED current-limiting resistor"],
+  ["×2", "10k", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×1", "1n", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "22n", "C", ""],
+  ["×1", "68n", "C", ""],
+  ["×2", "100u", "C", "electrolytic"],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "PF5102", "Q", "JFET"],
+  ["×1", "MPSA13", "Q", "Darlington"],
+  ["Gain", "B250k", "POT", ""],
+  ["Volume", "B100k", "POT", ""]
+ ]
+}

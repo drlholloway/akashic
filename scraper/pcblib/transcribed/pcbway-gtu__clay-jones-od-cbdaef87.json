@@ -1,0 +1,30 @@
+{
+ "id": "pcbway-gtu:clay-jones-od-cbdaef87",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Clay Jones OD clone: BC546B input buffer, OPA2134 gain stage with anti-parallel LED clipping, active tone stage and BC546B output buffer.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "1M", "R", ""],
+  ["×5", "1k", "R", ""],
+  ["×2", "510k", "R", ""],
+  ["×7", "10k", "R", ""],
+  ["×1", "220", "R", ""],
+  ["×1", "100", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "22n", "C", ""],
+  ["×2", "1u", "C", ""],
+  ["×3", "220n", "C", ""],
+  ["×1", "50p", "C", ""],
+  ["×1", "100n", "C", ""],
+  ["×1", "10u", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "47u", "C", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×2", "LED", "LED", "clipping LEDs, no colour drawn"],
+  ["×2", "BC546B", "Q", ""],
+  ["×1", "OPA2134", "IC", "dual op-amp, both sections used"],
+  ["Drive", "A1M", "POT", ""],
+  ["Tone", "B20k", "POT", ""],
+  ["Level", "B100k", "POT", ""]
+ ]
+}

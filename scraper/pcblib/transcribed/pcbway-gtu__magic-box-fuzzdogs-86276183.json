@@ -1,0 +1,20 @@
+{
+ "id": "pcbway-gtu:magic-box-fuzzdogs-86276183",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Single BS170 MOSFET booster with the volume pot ahead of the gate and a 1N4742A zener on the gate; 4k7 is the LED resistor.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "1M", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×1", "100", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "100n", "C", ""],
+  ["×1", "10u", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "1N4742A", "D", "zener from gate to ground"],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "BS170", "Q", ""],
+  ["Volume", "C1M", "POT", "at the input, before the gate"]
+ ]
+}

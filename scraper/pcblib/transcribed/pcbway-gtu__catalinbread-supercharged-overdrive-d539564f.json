@@ -1,0 +1,33 @@
+{
+ "id": "pcbway-gtu:catalinbread-supercharged-overdrive-d539564f",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Catalinbread SuperCharged Overdrive: BS170 input and output buffers around three CD4007 inverter gain stages, with Contour and a two-pole output filter.",
+ "uncertain": [],
+ "rows": [
+  ["×4", "3k3", "R", ""],
+  ["×4", "10k", "R", ""],
+  ["×3", "100k", "R", ""],
+  ["×2", "10M", "R", ""],
+  ["×1", "2M2", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "62k", "R", ""],
+  ["×1", "47", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×5", "47n", "C", ""],
+  ["×5", "2n2", "C", ""],
+  ["×2", "4n7", "C", ""],
+  ["×2", "100u", "C", ""],
+  ["×1", "22n", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "10u", "C", ""],
+  ["×1", "1u", "C", ""],
+  ["×2", "1N4739A", "D", "zener gate protection"],
+  ["×1", "1N4001", "D", ""],
+  ["×2", "BS170", "Q", ""],
+  ["×1", "CD4007", "IC", "three inverter sections on one chip (pins 6/13/8/14/7, 3/1/5/2/4, 10/12/11/9)"],
+  ["Gain", "A100k", "POT", ""],
+  ["Contour", "B50k", "POT", ""],
+  ["Volume", "B100k", "POT", ""]
+ ]
+}

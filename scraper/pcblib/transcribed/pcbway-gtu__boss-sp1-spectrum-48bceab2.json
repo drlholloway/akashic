@@ -1,0 +1,34 @@
+{
+ "id": "pcbway-gtu:boss-sp1-spectrum-48bceab2",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Boss SP-1 Spectrum clone on one RC3403A quad op-amp: buffer, Balance blend and a dual-gang Spectrum-swept bandpass filter.",
+ "uncertain": [
+  "1k with wiper bar read as a trimmer (no label)"
+ ],
+ "rows": [
+  ["×1", "2M", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×2", "33k", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×1", "18k", "R", ""],
+  ["×7", "10k", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×2", "1k", "R", ""],
+  ["×1", "470", "R", ""],
+  ["×1", "47", "R", "supply series resistor"],
+  ["×1", "100u", "C", "electrolytic, supply filter"],
+  ["×1", "47u", "C", "electrolytic, VB filter"],
+  ["×3", "4u7", "C", "electrolytic"],
+  ["×2", "1u", "C", "electrolytic"],
+  ["×1", "100n", "C", ""],
+  ["×1", "47n", "C", ""],
+  ["×2", "3n3", "C", ""],
+  ["×1", "47p", "C", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "RC3403A", "IC", "quad op-amp, four sections drawn"],
+  ["Balance", "C10k/A10k", "POT", "dual-gang: C10k section (pins 1-3) and A10k section (pins 4-6)"],
+  ["Spectrum", "B100k dual", "POT", "dual-gang B100k (pins 1-3 and 4-6)"],
+  ["×1", "1k", "TRIM", "drawn as a resistor with a wiper bar feeding pin 9 of the bandpass stage"]
+ ]
+}

@@ -1,0 +1,37 @@
+{
+ "id": "pcbway-gtu:catalinbread-manx-loaghtan-98b956ac",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Catalinbread Manx Loaghtan (Big Muff-style fuzz): three BJT stages with 1N4148 feedback clipping, Lows/Highs tone and a JFET + 2N2222 recovery.",
+ "uncertain": [
+  "capacitor marked '*' across the first 2N5088 collector-base has no value drawn"
+ ],
+ "rows": [
+  ["×1", "47k", "R", ""],
+  ["×6", "470k", "R", ""],
+  ["×4", "22k", "R", ""],
+  ["×4", "100k", "R", ""],
+  ["×3", "130", "R", ""],
+  ["×1", "100", "R", ""],
+  ["×2", "10k", "R", ""],
+  ["×2", "2k2", "R", ""],
+  ["×2", "2M", "R", ""],
+  ["×2", "4k7", "R", "one JFET source, one LED resistor"],
+  ["×7", "100n", "C", ""],
+  ["×1", "?", "C", "first-stage collector-base cap marked only '*' (no value drawn)"],
+  ["×1", "1n", "C", ""],
+  ["×3", "470n", "C", ""],
+  ["×4", "470p", "C", ""],
+  ["×2", "10n", "C", ""],
+  ["×1", "4n7", "C", ""],
+  ["×1", "470u", "C", "electrolytic"],
+  ["×4", "1N4148", "D", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×2", "2N5088", "Q", ""],
+  ["×2", "2N2222", "Q", ""],
+  ["×1", "2N5457", "Q", "JFET"],
+  ["Sustain", "A100k", "POT", ""],
+  ["Lows", "A500k", "POT", ""],
+  ["Highs", "B500k", "POT", ""],
+  ["Level", "A100k", "POT", ""]
+ ]
+}

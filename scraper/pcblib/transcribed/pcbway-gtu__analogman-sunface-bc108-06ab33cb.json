@@ -1,0 +1,26 @@
+{
+ "id": "pcbway-gtu:analogman-sunface-bc108-06ab33cb",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Analogman Sunface silicon fuzz-face variant (BC108 pair) with Sundial bias pot, 5k bias trimmer and a Clean control on an extra Z pad.",
+ "uncertain": [
+  "Clean 50k: drawn with the trimmer (wiper-bar) symbol, not the knob symbol, so listed as TRIM; may be an external control via the Z pad"
+ ],
+ "rows": [
+  ["×1", "100k", "R", ""],
+  ["×1", "33k", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "1k", "R", ""],
+  ["×1", "470", "R", ""],
+  ["×1", "47u", "C", "electrolytic, supply filter"],
+  ["×1", "22u", "C", "electrolytic"],
+  ["×1", "1u", "C", "electrolytic"],
+  ["×1", "10n", "C", ""],
+  ["×1", "1N5817", "D", "reverse-polarity protection"],
+  ["×2", "BC108", "Q", ""],
+  ["Fuzz", "B1k", "POT", ""],
+  ["Volume", "A250k", "POT", ""],
+  ["Sundial", "B5k", "POT", ""],
+  ["Bias", "5k", "TRIM", ""],
+  ["Clean", "50k", "TRIM", "drawn with the same wiper-bar symbol as the Bias trimmer; wiper to the 1u cap, end to the Z pad"]
+ ]
+}

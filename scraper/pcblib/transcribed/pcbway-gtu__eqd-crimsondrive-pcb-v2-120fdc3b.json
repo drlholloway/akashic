@@ -1,0 +1,28 @@
+{
+ "id": "pcbway-gtu:eqd-crimsondrive-pcb-v2-120fdc3b",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "EQD Crimson Drive: J201 JFET stage into an OC139 germanium transistor stage with 1N34A/1N4001 clipping, tone and level pots.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "10k", "R", ""],
+  ["×2", "1M", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "15k", "R", ""],
+  ["×1", "68k", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "2k2", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×2", "100u", "C", ""],
+  ["×2", "100n", "C", ""],
+  ["×1", "1u", "C", ""],
+  ["×1", "100p", "C", ""],
+  ["×1", "3n3", "C", ""],
+  ["×2", "1N4001", "D", ""],
+  ["×2", "1N34A", "D", ""],
+  ["×1", "J201", "Q", ""],
+  ["×1", "OC139", "Q", ""],
+  ["Drive", "B250k", "POT", ""],
+  ["Tone", "B25k", "POT", ""],
+  ["Level", "B100k", "POT", ""]
+ ]
+}

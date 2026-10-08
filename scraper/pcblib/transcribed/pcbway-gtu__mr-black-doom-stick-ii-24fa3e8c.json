@@ -1,0 +1,21 @@
+{
+ "id": "pcbway-gtu:mr-black-doom-stick-ii-24fa3e8c",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Mr Black Doom Stick II: a 2N3904 Darlington-style pair into a second 2N3904 gain stage, single Level control.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "4k7", "R", "one is the LED resistor"],
+  ["×2", "470k", "R", ""],
+  ["×2", "100k", "R", ""],
+  ["×2", "51k", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×4", "100n", "C", ""],
+  ["×2", "10u", "C", "electrolytic"],
+  ["×1", "220p", "C", ""],
+  ["×1", "1u", "C", "electrolytic"],
+  ["×1", "47u", "C", "electrolytic"],
+  ["×1", "1N5817", "D", ""],
+  ["×3", "2N3904", "Q", ""],
+  ["Level", "B50k", "POT", ""]
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "id": "pcbway-gtu:dallas-rangemaster-4bda8ad4",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Dallas Rangemaster treble booster: single germanium PNP with a 100k bias trimmer; transistor only marked GE.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "1M", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "3k9", "R", ""],
+  ["×2", "47u", "C", "electrolytic"],
+  ["×1", "10n", "C", ""],
+  ["×1", "4n7", "C", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "GE", "Q", "germanium PNP, no part number drawn"],
+  ["Bias", "100k", "TRIM", ""],
+  ["Boost", "A10k", "POT", ""]
+ ]
+}

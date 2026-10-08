@@ -1,0 +1,35 @@
+{
+ "id": "pcbway-gtu:echoplex-ep3-preamp-5312d967",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Echoplex EP-3 preamp clone: two JFET stages run from an LT1054 voltage doubler, with a Fat switch on the first stage's source bypass; the supply resistor is marked 60 ohms.",
+ "uncertain": [
+  "Fat switch drawn with three terminals (1,2,3); read as SPDT"
+ ],
+ "rows": [
+  ["×1", "60", "R", "value drawn as 60"],
+  ["×1", "3k3", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "15k", "R", ""],
+  ["×2", "22k", "R", ""],
+  ["×3", "100k", "R", ""],
+  ["×2", "220k", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×4", "1M", "R", ""],
+  ["×1", "2M2", "R", ""],
+  ["×2", "220p", "C", ""],
+  ["×3", "22n", "C", ""],
+  ["×3", "100n", "C", ""],
+  ["×3", "470n", "C", ""],
+  ["×2", "10u", "C", "electrolytic"],
+  ["×1", "47u", "C", "electrolytic"],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×3", "1N5817", "D", ""],
+  ["×1", "1N4742A", "D", "12V zener"],
+  ["×1", "2N5484", "Q", ""],
+  ["×1", "2N5485", "Q", ""],
+  ["×1", "LT1054CP", "IC", "charge pump"],
+  ["Volume", "B500k", "POT", ""],
+  ["Fat", "SPDT", "SW", "toggle switching the 22n/47u source bypass"]
+ ]
+}

@@ -1,0 +1,23 @@
+{
+ "id": "pcbway-gtu:mythos-golden-fleece-9858fd0c",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Mythos Golden Fleece-style single 2N5088 gain stage with asymmetric silicon/germanium clipping to ground and a Volume control only.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "47k", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "47", "R", ""],
+  ["×1", "2M2", "R", ""],
+  ["×1", "680", "R", ""],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×1", "47u", "C", "electrolytic"],
+  ["×1", "47n", "C", ""],
+  ["×1", "100p", "C", ""],
+  ["×1", "33n", "C", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "1N4148", "D", "clipping to ground"],
+  ["×1", "D9E", "D", "germanium clipping to ground"],
+  ["×1", "2N5088", "Q", ""],
+  ["Volume", "B100k", "POT", ""]
+ ]
+}

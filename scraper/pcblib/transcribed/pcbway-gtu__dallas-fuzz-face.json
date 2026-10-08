@@ -1,0 +1,23 @@
+{
+ "id": "pcbway-gtu:dallas-fuzz-face",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Silicon Fuzz Face (BC108) with a 330R/100u supply filter and 1N4001 protection; caps are labelled mF where uF is meant.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "47", "R", ""],
+  ["×1", "330", "R", ""],
+  ["×1", "4k7", "R", "LED current-limiting resistor"],
+  ["×1", "8k2", "R", ""],
+  ["×1", "33k", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×1", "2M", "R", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "2.2u", "C", "electrolytic; drawn as 2.2mF, meaning uF"],
+  ["×1", "22u", "C", "electrolytic; drawn as 22mF, meaning uF"],
+  ["×1", "100u", "C", "electrolytic; drawn as 100mF, meaning uF"],
+  ["×1", "1N4001", "D", ""],
+  ["×2", "BC108", "Q", ""],
+  ["Level", "A500k", "POT", ""],
+  ["Fuzz", "B1k", "POT", ""]
+ ]
+}

@@ -1,0 +1,30 @@
+{
+ "id": "pcbway-gtu:dmb-pedals-stellar-drive-7d08d205",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "LF351 non-inverting op-amp overdrive with LED clipping in the feedback loop, a pot-as-variable-resistor tone filter and a 2N5457 source-follower output.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "1M", "R", ""],
+  ["×2", "470k", "R", ""],
+  ["×2", "10k", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "2k2", "R", ""],
+  ["×1", "1k8", "R", ""],
+  ["×2", "100n", "C", ""],
+  ["×1", "220n", "C", ""],
+  ["×1", "47n", "C", ""],
+  ["×1", "3n3", "C", ""],
+  ["×1", "1n", "C", ""],
+  ["×1", "100p", "C", ""],
+  ["×1", "30p", "C", ""],
+  ["×1", "10u", "C", "electrolytic"],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×1", "1N5817", "D", ""],
+  ["×2", "LED", "LED", "clipping LEDs in the feedback loop, no colour drawn"],
+  ["×1", "2N5457", "Q", "JFET source-follower output buffer"],
+  ["×1", "LF351", "IC", ""],
+  ["Drive", "A1M", "POT", ""],
+  ["Tone", "B100k", "POT", ""],
+  ["Level", "A100k", "POT", ""]
+ ]
+}

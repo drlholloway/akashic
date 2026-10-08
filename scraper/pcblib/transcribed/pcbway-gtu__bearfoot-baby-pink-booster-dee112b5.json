@@ -1,0 +1,23 @@
+{
+ "id": "pcbway-gtu:bearfoot-baby-pink-booster-dee112b5",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Bearfoot Baby Pink Booster: single 2N5952 JFET boost with a C50k Boost pot and an SPST toggle on its wiper.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "1k", "R", "one power filter, one boost leg"],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×2", "14k7", "R", ""],
+  ["×2", "2M", "R", ""],
+  ["×1", "12k", "R", ""],
+  ["×2", "150k", "R", ""],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×1", "47n", "C", ""],
+  ["×1", "100p", "C", ""],
+  ["×1", "1u", "C", ""],
+  ["×1", "22u", "C", "electrolytic"],
+  ["×1", "1N4002", "D", ""],
+  ["×1", "2N5952", "Q", "JFET"],
+  ["Boost", "C50k", "POT", ""],
+  ["SW1", "SPST", "SW", "toggle between pot wiper and ground (pads SW1/SW2)"]
+ ]
+}

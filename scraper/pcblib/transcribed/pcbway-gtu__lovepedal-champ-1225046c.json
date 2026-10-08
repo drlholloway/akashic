@@ -1,0 +1,20 @@
+{
+ "id": "pcbway-gtu:lovepedal-champ-1225046c",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Lovepedal Champ: single 2N5088 common-emitter stage with collector-base feedback bias, partly bypassed emitter, 1N60P germanium clipping and Volume.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "330", "R", ""],
+  ["×1", "3k3", "R", ""],
+  ["×1", "2M2", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×2", "47u", "C", ""],
+  ["×1", "100n", "C", ""],
+  ["×1", "22n", "C", ""],
+  ["×2", "1N60P", "D", "germanium clipping to ground"],
+  ["×1", "1N4001", "D", "shunt reverse-polarity protection"],
+  ["×1", "2N5088", "Q", ""],
+  ["Volume", "B100k", "POT", ""]
+ ]
+}

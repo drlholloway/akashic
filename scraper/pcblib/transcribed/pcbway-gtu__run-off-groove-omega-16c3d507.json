@@ -1,0 +1,23 @@
+{
+ "id": "pcbway-gtu:run-off-groove-omega-16c3d507",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Run Off Groove Omega, a 2N5457 JFET range booster with a BS170 source-follower output and a 100k source bias trimmer.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "33k", "R", ""],
+  ["×2", "1M", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "68k", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "3n3", "C", ""],
+  ["×1", "220p", "C", ""],
+  ["×2", "4u7", "C", "electrolytic"],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "2N5457", "Q", "JFET"],
+  ["×1", "BS170", "Q", "MOSFET"],
+  ["Range", "A500k", "POT", ""],
+  ["Volume", "A10k", "POT", ""],
+  ["×1", "100k", "TRIM", "JFET source trimmer, drawn with a wiper tab and no knob name"]
+ ]
+}

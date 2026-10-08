@@ -1,0 +1,29 @@
+{
+ "id": "pcbway-gtu:eqd-special-cranker-b0bbe4a6",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Two-stage 2N3904 overdrive (EQD Special Cranker) with switchable 1N60P/D9K germanium clipping; the clipping selector is drawn only as pads 1-2-3, no switch symbol, so no SW row; small 600px image but all values legible.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "4k7", "R", ""],
+  ["×2", "22k", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "10M", "R", ""],
+  ["×1", "33k", "R", ""],
+  ["×1", "390", "R", ""],
+  ["×1", "47", "R", ""],
+  ["×1", "2M2", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×3", "82n", "C", ""],
+  ["×2", "10n", "C", ""],
+  ["×2", "100u", "C", ""],
+  ["×1", "100p", "C", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "BAT41", "D", ""],
+  ["×3", "1N60P", "D", ""],
+  ["×3", "D9K", "D", ""],
+  ["×2", "2N3904", "Q", ""],
+  ["More", "B10k", "POT", ""],
+  ["Tone", "A100k", "POT", ""],
+  ["Level", "A100k", "POT", ""]
+ ]
+}

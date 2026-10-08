@@ -1,0 +1,24 @@
+{
+ "id": "pcbway-gtu:death-by-audio-interstellar-609a23be",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Three cascaded 2N5089 common-emitter gain stages with a dual-gang gain pot (input level and post-stage level) and an A100k volume.",
+ "uncertain": [
+  "Gain A / Gain B read as one dual-gang B100k from the 1-6 pin numbering; could be two separate B100k pots"
+ ],
+ "rows": [
+  ["×3", "910k", "R", ""],
+  ["×3", "180k", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "3k3", "R", ""],
+  ["×1", "33", "R", ""],
+  ["×3", "100n", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "47u", "C", "electrolytic"],
+  ["×1", "1N5817", "D", ""],
+  ["×3", "2N5089", "Q", ""],
+  ["Gain", "B100k dual", "POT", "drawn as Gain A (pins 1-3) and Gain B (pins 4-6): one dual-gang B100k"],
+  ["Volume", "A100k", "POT", ""]
+ ]
+}

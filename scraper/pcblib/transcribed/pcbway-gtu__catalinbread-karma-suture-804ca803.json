@@ -1,0 +1,37 @@
+{
+ "id": "pcbway-gtu:catalinbread-karma-suture-804ca803",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Catalinbread Karma Suture (Harmonic Percolator style) drawn for a germanium build with silicon-version values in parentheses.",
+ "uncertain": [
+  "Two builds on one drawing: rows give the germanium values, silicon alternatives in parentheses noted"
+ ],
+ "rows": [
+  ["×1", "750k", "R", "germanium version; 470k in the silicon version"],
+  ["×1", "220k", "R", "germanium version; 150k in the silicon version"],
+  ["×1", "91k", "R", ""],
+  ["×1", "33k", "R", ""],
+  ["×2", "4k7", "R", "one is the LED resistor"],
+  ["×1", "100", "R", "supply series resistor"],
+  ["×1", "5k6", "R", "silicon version only; marked OMIT for germanium"],
+  ["×1", "100u", "C", "electrolytic, supply filter"],
+  ["×1", "47u", "C", "electrolytic, emitter bypass"],
+  ["×1", "220n", "C", "germanium version; 1u in the silicon version"],
+  ["×2", "100n", "C", ""],
+  ["×1", "47n", "C", ""],
+  ["×1", "4n7", "C", ""],
+  ["×1", "1n", "C", ""],
+  ["×1", "330p", "C", "germanium version; 100p in the silicon version"],
+  ["×1", "220p", "C", "germanium version; 47p in the silicon version"],
+  ["×1", "47p", "C", ""],
+  ["×1", "1N5817", "D", "reverse-polarity protection"],
+  ["×1", "1N914", "D", "clipping"],
+  ["×1", "1N34A", "D", "clipping, germanium version; omitted in the silicon version"],
+  ["×1", "1N914", "D", "clipping, silicon version only (with the 5k6); OMIT for germanium"],
+  ["×1", "1T308A", "Q", "germanium version; 2N3906 in the silicon version"],
+  ["×1", "2N2222", "Q", ""],
+  ["Input", "B100k", "POT", ""],
+  ["Density", "C500k", "POT", ""],
+  ["Diodes", "B50k", "POT", ""],
+  ["Output", "A100k", "POT", ""]
+ ]
+}

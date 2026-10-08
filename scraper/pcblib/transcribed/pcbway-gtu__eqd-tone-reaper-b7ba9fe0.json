@@ -1,0 +1,31 @@
+{
+ "id": "pcbway-gtu:eqd-tone-reaper-b7ba9fe0",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Tone Bender-style two-transistor fuzz (MPSA18 preamp into AC176 germanium stage with a 1N4148 shunt diode) and a passive tone control.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "1M", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "47k", "R", ""],
+  ["×3", "10k", "R", ""],
+  ["×1", "330", "R", ""],
+  ["×2", "1k", "R", ""],
+  ["×2", "33k", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "100p", "C", ""],
+  ["×4", "1u", "C", ""],
+  ["×1", "47p", "C", ""],
+  ["×1", "10u", "C", ""],
+  ["×1", "22u", "C", ""],
+  ["×1", "470p", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "1N4148", "D", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×1", "MPSA18", "Q", ""],
+  ["×1", "AC176", "Q", ""],
+  ["Fuzz", "B250k", "POT", ""],
+  ["Tone", "B100k", "POT", ""],
+  ["Level", "A100k", "POT", ""]
+ ]
+}

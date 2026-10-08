@@ -1,0 +1,27 @@
+{
+ "id": "pcbway-gtu:mr-black-jds-50-a3576848",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Mr Black JDS-50, a 4558 op-amp overdrive with two switched-in diode-pair clipping legs in the feedback loop and a buffered output.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "100", "R", ""],
+  ["×2", "51k", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "470", "R", ""],
+  ["×1", "2M2", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×2", "1u", "C", ""],
+  ["×1", "1n", "C", ""],
+  ["×1", "100n", "C", ""],
+  ["×1", "4n7", "C", ""],
+  ["×3", "10u", "C", ""],
+  ["×4", "1N4148", "D", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×1", "4558", "IC", ""],
+  ["Drive", "B50k", "POT", ""],
+  ["Tone", "B50k", "POT", ""],
+  ["Master", "B50k", "POT", ""]
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "id": "pcbway-gtu:eqd-black-ash-fuzz-2f58e557",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Black Ash: three-transistor 2N3903 fuzz with Fuzz, Top and Volume; the Q3 collector load is a 10k trimmer and one resistor is printed 46k.",
+ "uncertain": [
+  "10k with flat wiper read as trimmer",
+  "46k as drawn (possibly meant 47k)"
+ ],
+ "rows": [
+  ["×2", "4k7", "R", ""],
+  ["×2", "100k", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "46k", "R", "value drawn as 46k"],
+  ["×1", "1k", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×1", "100u", "C", ""],
+  ["×2", "4u7", "C", ""],
+  ["×3", "100n", "C", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×3", "2N3903", "Q", ""],
+  ["Top", "B25k", "POT", ""],
+  ["Volume", "A100k", "POT", ""],
+  ["Fuzz", "B5k", "POT", ""],
+  ["×1", "10k", "TRIM", "drawn as a resistor with a flat wiper tap on the Q3 collector; read as a trimmer"]
+ ]
+}

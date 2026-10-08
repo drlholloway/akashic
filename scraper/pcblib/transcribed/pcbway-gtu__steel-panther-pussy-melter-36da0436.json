@@ -1,0 +1,39 @@
+{
+ "id": "pcbway-gtu:steel-panther-pussy-melter-36da0436",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Steel Panther Pussy Melter: BS170 MOSFET input buffer with 9V1 zener, CA3240 op-amp gain stage with LED clipping and a switchable gain network, BS170 output stage with Sizzle/Load tone and Booty controls.",
+ "uncertain": [
+  "SW: three numbered pads imply an off-board switch (likely SPDT/on-off-on) but no switch symbol or type is drawn"
+ ],
+ "rows": [
+  ["×1", "220", "R", ""],
+  ["×1", "2k4", "R", ""],
+  ["×2", "2k7", "R", ""],
+  ["×5", "4k7", "R", ""],
+  ["×2", "1M", "R", ""],
+  ["×1", "4M7", "R", ""],
+  ["×2", "1k", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×6", "10k", "R", ""],
+  ["×3", "470n", "C", ""],
+  ["×2", "1u", "C", ""],
+  ["×4", "100n", "C", ""],
+  ["×1", "220p", "C", ""],
+  ["×1", "22n", "C", ""],
+  ["×1", "1n", "C", ""],
+  ["×1", "10u", "C", ""],
+  ["×1", "3n9", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×2", "47u", "C", ""],
+  ["×2", "9V1", "D", "zener"],
+  ["×1", "1N5817", "D", ""],
+  ["×2", "LED", "LED", "clipping LEDs in the op-amp feedback loop"],
+  ["×2", "BS170", "Q", ""],
+  ["×1", "CA3240EZ", "IC", "dual op-amp; one section unused, tied off"],
+  ["Dirty", "A500k", "POT", ""],
+  ["Sizzle", "A10k", "POT", ""],
+  ["Booty", "C5k", "POT", "wired as a variable resistor"],
+  ["Load", "A100k", "POT", ""],
+  ["×1", "?", "SW", "three pads 1/2/3: pad 3 to the 470n/1u gain-network node, pad 2 to ground, pad 1 open; presumably an off-board toggle, type not drawn"]
+ ]
+}

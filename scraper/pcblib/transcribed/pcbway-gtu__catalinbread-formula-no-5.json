@@ -1,0 +1,26 @@
+{
+ "id": "pcbway-gtu:catalinbread-formula-no-5",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Catalinbread Formula No.5 (tweed Deluxe style) clone built from two bootstrapped 2N5457 JFET totem-pole stages with a Gain/Tone network and a two-pole 10k/1n output filter.",
+ "uncertain": [],
+ "rows": [
+  ["×6", "1M", "R", ""],
+  ["×4", "10k", "R", ""],
+  ["×1", "62k", "R", ""],
+  ["×1", "47k", "R", ""],
+  ["×1", "47", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×4", "100n", "C", ""],
+  ["×2", "4u7", "C", ""],
+  ["×2", "1n", "C", ""],
+  ["×1", "2u2", "C", ""],
+  ["×1", "47p", "C", ""],
+  ["×1", "4n7", "C", ""],
+  ["×1", "47n", "C", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×4", "2N5457", "Q", ""],
+  ["Gain", "B1M", "POT", ""],
+  ["Tone", "B1M", "POT", ""],
+  ["Vol", "A500k", "POT", ""]
+ ]
+}

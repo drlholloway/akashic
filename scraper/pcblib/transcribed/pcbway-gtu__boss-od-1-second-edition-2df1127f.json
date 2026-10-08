@@ -1,0 +1,29 @@
+{
+ "id": "pcbway-gtu:boss-od-1-second-edition-2df1127f",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Boss OD-1 clone: 2SC732 buffers around a 4558 with asymmetric 1S1588 clipping (one diode against two) in the feedback loop; the source image is only 309x600 px.",
+ "uncertain": [
+  "18n feedback capacitor on the second op-amp stage (small, low-resolution text)"
+ ],
+ "rows": [
+  ["×5", "10k", "R", ""],
+  ["×3", "4k7", "R", ""],
+  ["×3", "33k", "R", ""],
+  ["×2", "1k", "R", ""],
+  ["×2", "100k", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×3", "47n", "C", ""],
+  ["×2", "1u", "C", ""],
+  ["×1", "4n7", "C", ""],
+  ["×1", "18n", "C", "low-resolution image; read as 18n"],
+  ["×1", "100u", "C", ""],
+  ["×1", "47u", "C", ""],
+  ["×3", "1S1588", "D", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×2", "2SC732", "Q", ""],
+  ["×1", "4558", "IC", ""],
+  ["Overdrive", "B1M", "POT", ""],
+  ["Level", "B10k", "POT", ""]
+ ]
+}

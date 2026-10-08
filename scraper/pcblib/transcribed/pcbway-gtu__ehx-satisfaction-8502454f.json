@@ -1,0 +1,25 @@
+{
+ "id": "pcbway-gtu:ehx-satisfaction-8502454f",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "EHX Satisfaction: KSP2222A/2N3906 direct-coupled fuzz with diode clipping at the output, Attack input pot and Volume; clipping diodes unlabelled.",
+ "uncertain": [
+  "clipping diode pair has no part number drawn"
+ ],
+ "rows": [
+  ["×2", "560k", "R", ""],
+  ["×2", "18k", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "150k", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×2", "22n", "C", ""],
+  ["×1", "1n5", "C", ""],
+  ["×1", "4n7", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×2", "?", "D", "antiparallel clipping diodes to ground at the output, no value drawn (hollow diode symbols)"],
+  ["×1", "KSP2222A", "Q", ""],
+  ["×1", "2N3906", "Q", ""],
+  ["Attack", "A100k", "POT", ""],
+  ["Vol", "A100k", "POT", ""]
+ ]
+}

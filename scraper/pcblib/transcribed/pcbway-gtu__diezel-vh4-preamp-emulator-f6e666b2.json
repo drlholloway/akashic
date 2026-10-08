@@ -1,0 +1,11 @@
+{
+ "id": "pcbway-gtu:diezel-vh4-preamp-emulator-f6e666b2",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Diezel VH4 preamp emulator (op-amp stages with LED/diode clipping and a tone stack), but the schematic image is only 600x230 px so no value can be read; needs a higher-resolution source.",
+ "uncertain": [
+  "whole board: source image is a 600x230 thumbnail, every value label is illegible"
+ ],
+ "rows": [
+
+ ]
+}

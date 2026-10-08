@@ -1,0 +1,30 @@
+{
+ "id": "pcbway-gtu:bearfoot-arctic-white-fuzz-16dc462b",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "BC550C/J113 fuzz with feedback (Bearfoot Arctic White Fuzz), input Fuzz pot, passive tone and a 10k JFET trimmer.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "1k", "R", ""],
+  ["×2", "2k", "R", ""],
+  ["×2", "91k", "R", ""],
+  ["×1", "47k", "R", ""],
+  ["×1", "9k1", "R", ""],
+  ["×1", "5k6", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "180k", "R", ""],
+  ["×1", "100", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×3", "22n", "C", ""],
+  ["×1", "100p", "C", ""],
+  ["×1", "4u7", "C", ""],
+  ["×1", "22u", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "BC550C", "Q", ""],
+  ["×1", "J113", "Q", ""],
+  ["Fuzz", "C1M", "POT", ""],
+  ["Tone", "B50k", "POT", ""],
+  ["Vol", "A50k", "POT", ""],
+  ["×1", "10k", "TRIM", "JFET source trimmer, unlabelled"]
+ ]
+}

@@ -1,0 +1,23 @@
+{
+ "id": "pcbway-gtu:seamoon-fresh-fuzz-c3d9e620",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Seamoon Fresh Fuzz clone: two inverting 4558 gain stages with 220p input filters and a Bite pot between them, Gain pot as output volume.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "1M", "R", ""],
+  ["×2", "22k", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×2", "100k", "R", ""],
+  ["×1", "560", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×4", "47n", "C", ""],
+  ["×2", "220p", "C", ""],
+  ["×1", "82p", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "10u", "C", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×1", "4558", "IC", "dual op-amp, both sections used"],
+  ["Bite", "B50k", "POT", ""],
+  ["Gain", "B50k", "POT", ""]
+ ]
+}

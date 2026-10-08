@@ -1,0 +1,38 @@
+{
+ "id": "pcbway-gtu:thorpy-fx-gunshot-2989f019",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "ThorpyFX Gunshot: BS170 MOSFET input stage into an OPA2134 gain stage with LED clipping, then an active tone stage and a 2N3904 output buffer with 1N4148 diodes.",
+ "uncertain": [
+  "Calibre C5k: named like a knob, could be an internal trim"
+ ],
+ "rows": [
+  ["×5", "10k", "R", ""],
+  ["×3", "1k", "R", ""],
+  ["×2", "10M", "R", ""],
+  ["×2", "4k7", "R", "one is the LED resistor"],
+  ["×1", "5k1", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×1", "43k", "R", ""],
+  ["×1", "820", "R", ""],
+  ["×1", "100", "R", ""],
+  ["×1", "510k", "R", ""],
+  ["×1", "51k", "R", ""],
+  ["×4", "100n", "C", ""],
+  ["×2", "220n", "C", ""],
+  ["×2", "1u", "C", ""],
+  ["×1", "47p", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "47u", "C", ""],
+  ["×2", "1N4148", "D", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×1", "9V1", "D", "zener"],
+  ["×2", "LED", "LED", "clipping LEDs in the gain-stage feedback"],
+  ["×1", "BS170", "Q", ""],
+  ["×1", "2N3904", "Q", ""],
+  ["×1", "OPA2134", "IC", "two sections of one dual op amp"],
+  ["Gain", "A1M", "POT", ""],
+  ["Tone", "W20k", "POT", ""],
+  ["Volume", "A100k", "POT", ""],
+  ["Calibre", "C5k", "POT", "drawn as a named pot on the BS170 source"]
+ ]
+}

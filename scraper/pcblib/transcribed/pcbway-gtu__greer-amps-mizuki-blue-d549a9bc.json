@@ -1,0 +1,27 @@
+{
+ "id": "pcbway-gtu:greer-amps-mizuki-blue-d549a9bc",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Greer Amps Mizuki Blue: two 2SK208R JFET stages with trimmed drain resistors, a single 1N914 clipping diode to ground and a Tone pot in series with 10n.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "1M", "R", ""],
+  ["×1", "1k5", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "2k2", "R", ""],
+  ["×1", "47", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×2", "10n", "C", ""],
+  ["×1", "22n", "C", ""],
+  ["×1", "47n", "C", ""],
+  ["×1", "4u7", "C", ""],
+  ["×1", "1u", "C", ""],
+  ["×1", "47u", "C", ""],
+  ["×1", "1N914", "D", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×2", "2SK208R", "Q", ""],
+  ["Gain", "A500k", "POT", ""],
+  ["Vol", "A250k", "POT", ""],
+  ["Tone", "A100k", "POT", ""],
+  ["×2", "100k", "TRIM", "JFET drain trimmers, wiper to VA, set for 4.5V at the drain"]
+ ]
+}

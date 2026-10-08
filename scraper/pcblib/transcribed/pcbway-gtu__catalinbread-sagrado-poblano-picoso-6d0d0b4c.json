@@ -1,0 +1,22 @@
+{
+ "id": "pcbway-gtu:catalinbread-sagrado-poblano-picoso-6d0d0b4c",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Single BS170 MOSFET booster with a source-bypass Boost pot; no reverse-polarity diode is drawn.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "2k7", "R", ""],
+  ["×1", "10M", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "62k", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "47p", "C", ""],
+  ["×1", "470u", "C", ""],
+  ["×1", "220n", "C", ""],
+  ["×1", "10u", "C", ""],
+  ["×1", "1N4739", "D", "zener from gate to source"],
+  ["×1", "BS170", "Q", ""],
+  ["Boost", "B5k", "POT", ""]
+ ]
+}

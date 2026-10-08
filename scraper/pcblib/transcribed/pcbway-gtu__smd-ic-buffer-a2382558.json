@@ -1,0 +1,20 @@
+{
+ "id": "pcbway-gtu:smd-ic-buffer-a2382558",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Unity-gain 741 op-amp buffer with 1M input bias, 100 ohm output resistor and a 100k/100k bias divider; no controls.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "100k", "R", ""],
+  ["×2", "1M", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "100", "R", ""],
+  ["×1", "47", "R", ""],
+  ["×2", "100n", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "10u", "C", "electrolytic"],
+  ["×1", "47u", "C", "electrolytic"],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "741", "IC", ""]
+ ]
+}

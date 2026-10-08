@@ -1,0 +1,37 @@
+{
+ "id": "pcbway-gtu:eqd-spires-fuzz-doubler-356e904d",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Spires: two fuzz channels, a 2N4401 pair (green) and an MPS3704 Fuzz Factory-style pair (red); the red channel has a 20k trimmer.",
+ "uncertain": [
+  "20k with flat wiper read as trimmer"
+ ],
+ "rows": [
+  ["×3", "10k", "R", ""],
+  ["×2", "1M", "R", ""],
+  ["×2", "470k", "R", ""],
+  ["×1", "220k", "R", ""],
+  ["×1", "39", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "47k", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×1", "1k5", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×2", "1n", "C", ""],
+  ["×5", "100n", "C", ""],
+  ["×1", "47p", "C", ""],
+  ["×1", "15p", "C", ""],
+  ["×1", "1u", "C", ""],
+  ["×1", "6n8", "C", ""],
+  ["×1", "4u7", "C", ""],
+  ["×1", "22u", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×2", "2N4401", "Q", ""],
+  ["×2", "MPS3704", "Q", ""],
+  ["Tone", "A1M", "POT", ""],
+  ["Green", "B100k", "POT", "green channel volume"],
+  ["Red", "B100k", "POT", "red channel volume"],
+  ["Fuzz", "B1M", "POT", ""],
+  ["×1", "20k", "TRIM", "drawn as a resistor with a flat wiper tap on the MPS3704 collector; read as a trimmer"]
+ ]
+}

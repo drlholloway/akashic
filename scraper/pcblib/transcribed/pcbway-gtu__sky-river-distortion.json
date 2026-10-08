@@ -1,0 +1,31 @@
+{
+ "id": "pcbway-gtu:sky-river-distortion",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "TL072 two-stage distortion with a series 1N4148 clipper and a passive two-pole tone network; the 600x321 image is low resolution.",
+ "uncertain": [
+  "39k bias resistor: low-resolution image, could be 34k"
+ ],
+ "rows": [
+  ["×3", "10k", "R", ""],
+  ["×3", "220k", "R", ""],
+  ["×2", "1k", "R", ""],
+  ["×1", "47", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "39k", "R", "bias divider top; low-res image, could read 34k"],
+  ["×1", "47k", "R", ""],
+  ["×1", "5k1", "R", ""],
+  ["×1", "2k2", "R", ""],
+  ["×4", "47n", "C", ""],
+  ["×2", "220n", "C", ""],
+  ["×2", "10n", "C", ""],
+  ["×1", "4n7", "C", ""],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×1", "47u", "C", "electrolytic"],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "1N4148", "D", "series clipping diode"],
+  ["×1", "TL072", "IC", "both sections used"],
+  ["Drive", "A1M", "POT", ""],
+  ["Tone", "B10k", "POT", ""],
+  ["Level", "A100k", "POT", ""]
+ ]
+}

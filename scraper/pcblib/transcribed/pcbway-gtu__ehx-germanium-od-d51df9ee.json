@@ -1,0 +1,22 @@
+{
+ "id": "pcbway-gtu:ehx-germanium-od-d51df9ee",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "EHX Germanium OD clone: an NKT275 germanium gain stage between 2N5087 PNP stages, with Volts, Gain and Bias controls and no separate volume pot.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "4k7", "R", "LED current-limiting resistor"],
+  ["×1", "10k", "R", ""],
+  ["×1", "15k", "R", ""],
+  ["×4", "62k", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×1", "2M2", "R", ""],
+  ["×5", "470n", "C", "drawn polarized (with +)"],
+  ["×1", "47u", "C", "electrolytic"],
+  ["×1", "1N5817", "D", ""],
+  ["×2", "2N5087", "Q", ""],
+  ["×1", "NKT275", "Q", "germanium"],
+  ["Volts", "B100k", "POT", ""],
+  ["Gain", "B10k", "POT", ""],
+  ["Bias", "C100k", "POT", "wired as variable resistor"]
+ ]
+}

@@ -1,0 +1,28 @@
+{
+ "id": "pcbway-gtu:lovepedal-hermida-audio-zendrive",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Hermida ZenDrive clone: MC1458 gain stage with 2N7000/BAT41 clipping and Voice control, then a buffered tone; supply caps drawn as mF meaning uF.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "1k", "R", ""],
+  ["×3", "10k", "R", ""],
+  ["×1", "2M", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "47", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×2", "470n", "C", ""],
+  ["×2", "100n", "C", ""],
+  ["×1", "100p", "C", ""],
+  ["×1", "3n3", "C", ""],
+  ["×1", "100u", "C", "electrolytic; drawn as 100mF, meaning uF"],
+  ["×1", "47u", "C", "electrolytic; drawn as 47mF, meaning uF"],
+  ["×3", "BAT41", "D", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×2", "2N7000", "Q", "MOSFETs used as clipping elements"],
+  ["×1", "MC1458", "IC", "dual op-amp, both halves used"],
+  ["Voice", "B10k", "POT", ""],
+  ["Gain", "B500k", "POT", ""],
+  ["Tone", "B50k", "POT", ""],
+  ["Level", "A100k", "POT", ""]
+ ]
+}

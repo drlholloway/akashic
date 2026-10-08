@@ -1,0 +1,28 @@
+{
+ "id": "pcbway-gtu:greer-amps-lightspeed-fa8065bf",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Greer Amps Lightspeed (OPA2134 op-amp overdrive with asymmetric 1N914 clipping, a non-inverting recovery stage and Freq/Loudness controls); clear drawing.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "1M", "R", ""],
+  ["×1", "430k", "R", ""],
+  ["×1", "12k", "R", ""],
+  ["×3", "5k6", "R", ""],
+  ["×3", "4k7", "R", ""],
+  ["×1", "3k9", "R", ""],
+  ["×2", "3k3", "R", ""],
+  ["×2", "22u", "C", "electrolytic"],
+  ["×1", "1u", "C", ""],
+  ["×1", "470n", "C", ""],
+  ["×1", "220n", "C", ""],
+  ["×2", "47n", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "100p", "C", ""],
+  ["×5", "1N914", "D", "clipping, asymmetric 2 + 3 in the feedback loop"],
+  ["×1", "1N5817", "D", "reverse polarity"],
+  ["×1", "OPA2134", "IC", ""],
+  ["Drive", "A500k", "POT", ""],
+  ["Freq", "A10k", "POT", ""],
+  ["Loudness", "A100k", "POT", ""]
+ ]
+}

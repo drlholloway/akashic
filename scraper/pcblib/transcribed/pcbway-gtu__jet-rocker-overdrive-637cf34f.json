@@ -1,0 +1,35 @@
+{
+ "id": "pcbway-gtu:jet-rocker-overdrive-637cf34f",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Jet Rocker hi-gain overdrive: TL072 gain stage with red LED clipping, diode clipping, then a 22k-ladder active depth/presence stage with more red LEDs.",
+ "uncertain": [
+  "Image is 600x312 px: 20k divider resistor, 15n cap, 1N4003 and Level B50k read at low resolution"
+ ],
+ "rows": [
+  ["×6", "22k", "R", ""],
+  ["×2", "1M", "R", ""],
+  ["×2", "2k2", "R", ""],
+  ["×2", "4k7", "R", "one is the LED resistor"],
+  ["×2", "1k", "R", ""],
+  ["×1", "220", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×1", "47", "R", ""],
+  ["×1", "20k", "R", "VA to VB divider top; low-res label"],
+  ["×3", "1u", "C", ""],
+  ["×2", "33n", "C", ""],
+  ["×2", "220n", "C", ""],
+  ["×1", "330p", "C", ""],
+  ["×1", "15n", "C", "low-res label"],
+  ["×1", "33p", "C", ""],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×1", "10u", "C", "electrolytic"],
+  ["×2", "1N4148", "D", ""],
+  ["×1", "1N4003", "D", "polarity protection; low-res, could be 1N4001"],
+  ["×4", "RED", "LED", "clipping LEDs: two in gain-stage feedback, two across the tone stage op-amp"],
+  ["×1", "TL072", "IC", "dual, both sections used"],
+  ["Gain", "A500k", "POT", ""],
+  ["Depth", "B10k", "POT", ""],
+  ["Presence", "B10k", "POT", ""],
+  ["Level", "B50k", "POT", "low-res, could be B10k"]
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "id": "pcbway-gtu:ehx-lizard-queen-4a0027bf",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "EHX Lizard Queen octave fuzz: 2N2222A/2N5088 fuzz into a 2N2222A/2N3906 octave section.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "470", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×3", "10k", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×2", "470k", "R", ""],
+  ["×2", "1M", "R", ""],
+  ["×2", "47p", "C", ""],
+  ["×6", "100n", "C", ""],
+  ["×2", "10u", "C", "electrolytic"],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×1", "1N4148", "D", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×2", "2N2222A", "Q", ""],
+  ["×1", "2N5088", "Q", ""],
+  ["×1", "2N3906", "Q", ""],
+  ["Balance", "B1k", "POT", ""],
+  ["Octave", "B100k", "POT", ""],
+  ["Volume", "A100k", "POT", ""]
+ ]
+}

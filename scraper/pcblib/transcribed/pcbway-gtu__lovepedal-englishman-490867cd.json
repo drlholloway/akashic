@@ -1,0 +1,25 @@
+{
+ "id": "pcbway-gtu:lovepedal-englishman-490867cd",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Lovepedal Englishman: single 2N5088 common-emitter booster with a B1k emitter gain control and switchable 1N914B/BAT46 clipping pairs to ground.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "2M2", "R", ""],
+  ["×2", "330", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "3k3", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "100", "R", "supply filter"],
+  ["×2", "47u", "C", "electrolytic"],
+  ["×1", "470n", "C", ""],
+  ["×1", "220n", "C", ""],
+  ["×1", "100n", "C", ""],
+  ["×2", "1N914B", "D", "clipping, switch position 1"],
+  ["×2", "BAT46", "D", "clipping, switch position 3"],
+  ["×1", "1N5817", "D", "reverse polarity"],
+  ["×1", "2N5088", "Q", ""],
+  ["Gain", "B1k", "POT", "wired as rheostat to ground"],
+  ["Volume", "B100k", "POT", ""],
+  ["Fail", "SPDT", "SW", "ON/ON, selects silicon or Schottky clipping pair"]
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "id": "pcbway-gtu:eqd-grey-channel-cbcd136a",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Grey Channel: two LM1458 overdrive channels, each with a 3-way clipping switch (1N4148/1N34A on green, LEDs/2N7000 on red).",
+ "uncertain": [],
+ "rows": [
+  ["×4", "1M", "R", ""],
+  ["×4", "4k7", "R", ""],
+  ["×4", "10k", "R", ""],
+  ["×2", "470k", "R", ""],
+  ["×2", "20k", "R", ""],
+  ["×2", "47n", "C", ""],
+  ["×2", "25p", "C", ""],
+  ["×2", "10n", "C", ""],
+  ["×4", "2n2", "C", ""],
+  ["×2", "22u", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "10u", "C", ""],
+  ["×2", "1N4148", "D", ""],
+  ["×2", "1N34A", "D", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×2", "LED", "LED", "clipping LEDs on the red channel, no colour drawn"],
+  ["×2", "2N7000", "Q", "MOSFET clipping on the red channel"],
+  ["×1", "LM1458", "IC", "both sections used, one per channel"],
+  ["Gain Green", "B1M", "POT", ""],
+  ["Gain Red", "B1M", "POT", ""],
+  ["Volume Green", "A100k", "POT", ""],
+  ["Volume Red", "A100k", "POT", ""],
+  ["SW1", "SPDT", "SW", "clipping select, pins 1-2-3 with centre to ground (likely on-off-on)"],
+  ["SW2", "SPDT", "SW", "clipping select, pins 1-2-3 with centre to ground (likely on-off-on)"]
+ ]
+}

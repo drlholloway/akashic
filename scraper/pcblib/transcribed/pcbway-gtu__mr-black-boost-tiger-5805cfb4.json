@@ -1,0 +1,21 @@
+{
+ "id": "pcbway-gtu:mr-black-boost-tiger-5805cfb4",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Mr Black Boost Tiger: single 4558 non-inverting boost with the Volume pot in the feedback loop; the second op-amp section is the VB buffer.",
+ "uncertain": [],
+ "rows": [
+  ["×4", "1k", "R", ""],
+  ["×2", "4k7", "R", "one is the LED resistor"],
+  ["×2", "470k", "R", ""],
+  ["×2", "51k", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×1", "100", "R", ""],
+  ["×2", "10u", "C", ""],
+  ["×1", "100p", "C", ""],
+  ["×1", "100n", "C", ""],
+  ["×1", "470u", "C", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×1", "4558", "IC", "second section buffers VB"],
+  ["Volume", "B50k", "POT", ""]
+ ]
+}

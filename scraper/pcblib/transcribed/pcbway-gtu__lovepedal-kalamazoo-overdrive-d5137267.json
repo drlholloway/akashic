@@ -1,0 +1,30 @@
+{
+ "id": "pcbway-gtu:lovepedal-kalamazoo-overdrive-d5137267",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Lovepedal Kalamazoo: 4558 gain stage with series-pair 1N914 feedback clipping, passive Tone and an active Glass (treble) control around the second 4558 half; the 470p feedback cap is marked with an asterisk.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "10k", "R", ""],
+  ["×2", "1M", "R", ""],
+  ["×2", "1k", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "3k3", "R", ""],
+  ["×1", "2k7", "R", ""],
+  ["×1", "330", "R", ""],
+  ["×1", "100", "R", ""],
+  ["×2", "47u", "C", ""],
+  ["×2", "100n", "C", ""],
+  ["×1", "220n", "C", ""],
+  ["×1", "150n", "C", ""],
+  ["×1", "47n", "C", ""],
+  ["×1", "10u", "C", ""],
+  ["×1", "470p", "C", "drawn as 470p* (asterisk: optional or value to taste)"],
+  ["×4", "1N914", "D", "feedback clipping, two series pairs"],
+  ["×1", "1N5817", "D", "reverse-polarity protection"],
+  ["×1", "4558", "IC", "dual op-amp, both halves used"],
+  ["Drive", "B500k", "POT", ""],
+  ["Tone", "B5k", "POT", ""],
+  ["Glass", "B5k", "POT", ""],
+  ["Level", "B100k", "POT", ""]
+ ]
+}

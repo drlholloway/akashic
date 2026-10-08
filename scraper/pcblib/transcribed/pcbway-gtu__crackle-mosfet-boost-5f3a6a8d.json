@@ -1,0 +1,21 @@
+{
+ "id": "pcbway-gtu:crackle-mosfet-boost-5f3a6a8d",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Single BS170 MOSFET boost (Crackle) with Gain in the source leg and Volume; the 2M input pulldown is starred on the drawing.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "10M", "R", ""],
+  ["×1", "2M", "R", "drawn as 2M* (asterisk: value to taste or select on test)"],
+  ["×1", "47", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "5k1", "R", ""],
+  ["×1", "100n", "C", ""],
+  ["×1", "10u", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "1N4739", "D", "zener at the gate input"],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "BS170", "Q", ""],
+  ["Gain", "C5k", "POT", ""],
+  ["Volume", "A100k", "POT", ""]
+ ]
+}

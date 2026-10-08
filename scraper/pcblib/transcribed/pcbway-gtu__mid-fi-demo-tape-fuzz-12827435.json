@@ -1,0 +1,25 @@
+{
+ "id": "pcbway-gtu:mid-fi-demo-tape-fuzz-12827435",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Mid-Fi Demo Tape fuzz: a TL071 gain stage with a TRIM-controlled gain leg into a TL071 Baxandall bass/treble stage.",
+ "uncertain": [],
+ "rows": [
+  ["×5", "10k", "R", ""],
+  ["×2", "100k", "R", ""],
+  ["×2", "3k6", "R", ""],
+  ["×1", "470", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "47", "R", ""],
+  ["×3", "1u", "C", "electrolytic"],
+  ["×3", "47u", "C", "electrolytic"],
+  ["×2", "47n", "C", ""],
+  ["×1", "4n7", "C", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×2", "TL071", "IC", ""],
+  ["Bass", "B100k", "POT", ""],
+  ["Treble", "B500k", "POT", ""],
+  ["Volume", "B100k", "POT", ""],
+  ["Trim", "B25k", "TRIM", "drawn as pot labelled TRIM"]
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "id": "pcbway-gtu:arm-overdrive-12acb47c",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Two-stage MC33178 op-amp overdrive with red-LED/1N4148 clipping in both stages and a three-band (High/Mid/Low) passive EQ.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "1k", "R", ""],
+  ["×2", "1k8", "R", ""],
+  ["×1", "220k", "R", ""],
+  ["×1", "330", "R", ""],
+  ["×1", "2M2", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×1", "39k", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "47k", "R", ""],
+  ["×2", "220n", "C", ""],
+  ["×3", "470n", "C", ""],
+  ["×1", "470p", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "220p", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "47u", "C", ""],
+  ["×4", "1N4148", "D", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×2", "RED", "LED", "clipping LEDs"],
+  ["×1", "MC33178", "IC", "dual op-amp, both sections used"],
+  ["Gain", "B100k", "POT", ""],
+  ["High", "B10k", "POT", ""],
+  ["Low", "A50k", "POT", ""],
+  ["Mid", "B1k", "POT", ""],
+  ["Level", "B100k", "POT", ""]
+ ]
+}

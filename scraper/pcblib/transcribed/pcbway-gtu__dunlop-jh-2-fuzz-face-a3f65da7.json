@@ -1,0 +1,26 @@
+{
+ "id": "pcbway-gtu:dunlop-jh-2-fuzz-face-a3f65da7",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Dunlop JH-2 style silicon Fuzz Face with two MPSA18s, a 1N5239 zener on the supply, plus a 47p Miller cap and 1n input cap to ground.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "180k", "R", ""],
+  ["×1", "68k", "R", ""],
+  ["×1", "43k", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "1k", "R", ""],
+  ["×1", "470", "R", "supply resistor"],
+  ["×1", "330", "R", ""],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×1", "22u", "C", "electrolytic"],
+  ["×1", "2u2", "C", "electrolytic"],
+  ["×1", "10n", "C", ""],
+  ["×1", "1n", "C", ""],
+  ["×1", "47p", "C", ""],
+  ["×1", "1N5239", "D", "9.1V zener across the supply"],
+  ["×2", "MPSA18", "Q", ""],
+  ["Volume", "A500k", "POT", ""],
+  ["Fuzz", "B1k", "POT", ""]
+ ]
+}

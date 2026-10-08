@@ -1,0 +1,21 @@
+{
+ "id": "pcbway-gtu:mxr-distortion-plus-pcb-2-bc390f8f",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Standard MXR Distortion+ (741 with 1N270 germanium clippers).",
+ "uncertain": [],
+ "rows": [
+  ["×4", "1M", "R", "two form the VB divider"],
+  ["×2", "4k7", "R", "one is the LED resistor"],
+  ["×2", "10k", "R", ""],
+  ["×2", "1n", "C", ""],
+  ["×2", "1u", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "47n", "C", ""],
+  ["×1", "47u", "C", ""],
+  ["×2", "1N270", "D", "germanium clippers to ground"],
+  ["×1", "1N5817", "D", ""],
+  ["×1", "741", "IC", ""],
+  ["Distortion", "B1M", "POT", "wired as a variable resistor"],
+  ["Output", "A10k", "POT", ""]
+ ]
+}

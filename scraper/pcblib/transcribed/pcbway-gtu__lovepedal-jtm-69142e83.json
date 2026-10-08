@@ -1,0 +1,20 @@
+{
+ "id": "pcbway-gtu:lovepedal-jtm-69142e83",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Single 2N5089 collector-feedback gain stage with an emitter bias control and BAT46 Schottky clipping at the output.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "3k3", "R", ""],
+  ["×1", "2M2", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "330", "R", ""],
+  ["×2", "47u", "C", ""],
+  ["×1", "100n", "C", ""],
+  ["×1", "47n", "C", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×2", "BAT46", "D", "output clipping to ground"],
+  ["×1", "2N5089", "Q", ""],
+  ["Bias", "B5k", "TRIM", "labelled BIAS, wired as variable resistor in the emitter leg"]
+ ]
+}

@@ -1,0 +1,34 @@
+{
+ "id": "pcbway-gtu:mojo-hand-fx-rook-ba13be81",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Mojo Hand FX Rook clone: 4559 non-inverting gain stage with switchable LED/silicon clipping, active Baxandall Bass/Treble on the second section, Volume.",
+ "uncertain": [
+  "clipping switch type: drawn only as pads 1-2-3, assumed SPDT"
+ ],
+ "rows": [
+  ["×2", "1k", "R", ""],
+  ["×3", "4k7", "R", ""],
+  ["×3", "8k2", "R", ""],
+  ["×2", "10k", "R", ""],
+  ["×1", "33k", "R", ""],
+  ["×1", "510k", "R", ""],
+  ["×1", "2M2", "R", ""],
+  ["×1", "100p", "C", ""],
+  ["×2", "4n7", "C", ""],
+  ["×2", "33n", "C", ""],
+  ["×2", "100n", "C", ""],
+  ["×1", "470n", "C", ""],
+  ["×1", "1u", "C", ""],
+  ["×1", "47u", "C", "electrolytic"],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×5", "1N4148", "D", "clipping: 2 in series one way, 3 in series the other (switched)"],
+  ["×1", "1N5817", "D", "reverse-polarity protection"],
+  ["×2", "LED", "LED", "anti-parallel clipping LEDs, no colour drawn"],
+  ["×1", "4559", "IC", "dual op-amp, both sections used"],
+  ["Gain", "A500k", "POT", ""],
+  ["Bass", "B50k", "POT", ""],
+  ["Treble", "B50k", "POT", ""],
+  ["Volume", "B100k", "POT", ""],
+  ["×1", "SPDT", "SW", "off-board 3-lug clipping selector (pads 1/2/3): LEDs or 3x1N4148; throw type not drawn, could be on-off-on"]
+ ]
+}

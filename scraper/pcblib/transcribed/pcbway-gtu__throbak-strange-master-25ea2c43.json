@@ -1,0 +1,25 @@
+{
+ "id": "pcbway-gtu:throbak-strange-master-25ea2c43",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Rangemaster-style treble booster with switchable input cap and a DPDT switch choosing a germanium AC176 PNP or a 2N2222 NPN.",
+ "uncertain": [
+  "Bias B250k: labelled BIAS so filed as trimmer, but drawn as a full pot with taper and may be a front-panel control"
+ ],
+ "rows": [
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "470k", "R", ""],
+  ["×1", "3k9", "R", ""],
+  ["×1", "2M2", "R", ""],
+  ["×2", "47u", "C", "electrolytic"],
+  ["×2", "10n", "C", ""],
+  ["×1", "4n7", "C", ""],
+  ["×1", "220p", "C", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×1", "AC176", "Q", "germanium, drawn PNP, marked GE AC176*"],
+  ["×1", "2N2222", "Q", "silicon NPN"],
+  ["Boost", "A10k", "POT", ""],
+  ["Bias", "B250k", "TRIM", "drawn as a pot with taper, wiper to ground; may be a panel knob"],
+  ["×1", "SPDT", "SW", "ON/ON, selects 10n or 4n7 input cap"],
+  ["×1", "DPDT", "SW", "ON/ON, selects germanium or silicon transistor"]
+ ]
+}

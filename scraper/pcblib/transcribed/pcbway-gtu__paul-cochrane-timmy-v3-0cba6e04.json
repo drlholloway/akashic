@@ -1,0 +1,31 @@
+{
+ "id": "pcbway-gtu:paul-cochrane-timmy-v3-0cba6e04",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Timmy V3 overdrive (LM1458) with bass/treble controls, a DPDT Range switch and an SPDT asymmetric-clipping switch.",
+ "uncertain": [],
+ "rows": [
+  ["×4", "3k3", "R", ""],
+  ["×2", "2k2", "R", ""],
+  ["×2", "1M", "R", ""],
+  ["×1", "360", "R", ""],
+  ["×1", "18k", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "8k2", "R", "bias divider"],
+  ["×1", "10k", "R", "bias divider"],
+  ["×2", "820n", "C", ""],
+  ["×2", "39n", "C", ""],
+  ["×2", "100p", "C", ""],
+  ["×2", "6n8", "C", ""],
+  ["×2", "47u", "C", ""],
+  ["×1", "220n", "C", ""],
+  ["×4", "1N4148", "D", "clipping diodes in the gain-stage feedback"],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "LM1458", "IC", "both sections of one chip"],
+  ["Bass", "C50k", "POT", ""],
+  ["Gain", "A500k", "POT", ""],
+  ["Treble", "C50k", "POT", ""],
+  ["Volume", "A25k", "POT", ""],
+  ["Range", "DPDT", "SW", "pins 1-6 drawn, two poles"],
+  ["A/Sym", "SPDT", "SW", "clipping symmetry selector"]
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "id": "pcbway-gtu:buggfx-raincoat-b49cbc26",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "BuggFX Raincoat clone: three cascaded BC549C common-emitter gain stages with 470p feedback caps, a BC549C emitter follower and a B1k/330n tone control.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "1M", "R", ""],
+  ["×4", "100k", "R", ""],
+  ["×4", "12k", "R", ""],
+  ["×4", "470k", "R", ""],
+  ["×3", "390", "R", ""],
+  ["×2", "220", "R", ""],
+  ["×1", "2k2", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×5", "100n", "C", ""],
+  ["×3", "470p", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "330n", "C", ""],
+  ["×1", "47u", "C", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×4", "BC549C", "Q", ""],
+  ["Sustain", "A100k", "POT", ""],
+  ["Tone", "B1k", "POT", ""],
+  ["Volume", "A100k", "POT", ""]
+ ]
+}

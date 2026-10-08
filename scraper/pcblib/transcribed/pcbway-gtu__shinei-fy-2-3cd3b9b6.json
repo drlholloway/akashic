@@ -1,0 +1,26 @@
+{
+ "id": "pcbway-gtu:shinei-fy-2-3cd3b9b6",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Shin-ei FY-2 two-transistor 2SC536 fuzz; fuzz pot wiper feeds back through a 2n2 to the first collector.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "2M2", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "15k", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×1", "47k", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×1", "1M2", "R", ""],
+  ["×3", "47n", "C", ""],
+  ["×2", "1n", "C", ""],
+  ["×1", "2n2", "C", ""],
+  ["×1", "3n3", "C", ""],
+  ["×1", "100n", "C", ""],
+  ["×1", "47u", "C", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×2", "2SC536", "Q", ""],
+  ["Fuzz", "B50k", "POT", ""],
+  ["Volume", "B50k", "POT", ""]
+ ]
+}

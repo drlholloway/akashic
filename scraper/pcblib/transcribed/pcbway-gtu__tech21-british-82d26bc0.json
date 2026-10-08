@@ -1,0 +1,11 @@
+{
+ "id": "pcbway-gtu:tech21-british-82d26bc0",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Tech21 Character Series (4-in-1: Blonde/British/California/Liverpool) op-amp schematic with a per-model value table, but the cached image is only a 600x166 thumbnail so nothing can be read; needs a full-resolution image.",
+ "uncertain": [
+  "whole board: image is a 600x166 thumbnail, values and the per-model value table are illegible"
+ ],
+ "rows": [
+
+ ]
+}

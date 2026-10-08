@@ -1,0 +1,20 @@
+{
+ "id": "pcbway-gtu:ehx-muff-fuzz-8c59592b",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "EHX Muff Fuzz clone: two direct-coupled 2N5089s with emitter feedback and 1N4148 diodes to ground at the output.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "100k", "R", ""],
+  ["×1", "1M5", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "2k7", "R", ""],
+  ["×1", "100", "R", "supply filter"],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×2", "100n", "C", ""],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×2", "1N4148", "D", "clipping to ground"],
+  ["×1", "1N5817", "D", "reverse polarity"],
+  ["×2", "2N5089", "Q", ""],
+  ["Volume", "A100k", "POT", ""]
+ ]
+}

@@ -1,0 +1,29 @@
+{
+ "id": "pcbway-gtu:pro-tone-dead-horse-overdrive-82b4b63f",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Pro Tone Dead Horse overdrive clone (Klon-adjacent Tube Screamer-style): 2N3904 input buffer, 4558 gain stage with 1N4148 clipping, active tone stage, 2N3904 output buffer.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "1M", "R", ""],
+  ["×5", "1k", "R", ""],
+  ["×2", "510k", "R", ""],
+  ["×8", "10k", "R", ""],
+  ["×1", "220", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "100", "R", ""],
+  ["×1", "27n", "C", ""],
+  ["×2", "1u", "C", ""],
+  ["×3", "220n", "C", ""],
+  ["×1", "51p", "C", ""],
+  ["×1", "100n", "C", ""],
+  ["×1", "10u", "C", ""],
+  ["×2", "47u", "C", ""],
+  ["×2", "1N4148", "D", "clipping diodes in the feedback loop"],
+  ["×1", "1N5817", "D", ""],
+  ["×2", "2N3904", "Q", ""],
+  ["×1", "4558", "IC", "two sections drawn = one dual chip"],
+  ["Drive", "A1M", "POT", ""],
+  ["Tone", "B5k", "POT", ""],
+  ["Volume", "B100k", "POT", ""]
+ ]
+}

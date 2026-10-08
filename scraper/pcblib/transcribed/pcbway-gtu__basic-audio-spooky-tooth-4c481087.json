@@ -1,0 +1,33 @@
+{
+ "id": "pcbway-gtu:basic-audio-spooky-tooth-4c481087",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Basic Audio Spooky Tooth: two 2N2222A gain stages with Saturate/Texture feedback controls and a 2N5089 output buffer.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "4M7", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×1", "39k", "R", ""],
+  ["×1", "20k", "R", ""],
+  ["×1", "15k", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "3k6", "R", ""],
+  ["×1", "2k2", "R", ""],
+  ["×1", "390", "R", ""],
+  ["×1", "100", "R", "supply series resistor"],
+  ["×1", "100u", "C", "electrolytic, supply filter"],
+  ["×3", "100n", "C", ""],
+  ["×1", "47n", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×2", "4n7", "C", ""],
+  ["×1", "330p", "C", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×2", "2N2222A", "Q", ""],
+  ["×1", "2N5089", "Q", ""],
+  ["Fuzz", "B250k", "POT", ""],
+  ["Saturate", "B250k", "POT", ""],
+  ["Texture", "B1M", "POT", ""],
+  ["Level", "A100k", "POT", ""]
+ ]
+}

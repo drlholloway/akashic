@@ -1,0 +1,23 @@
+{
+ "id": "pcbway-gtu:earthquaker-devices-bows-a2a490bb",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "EarthQuaker Bows: single OC139 germanium NPN booster with a Treble/Full switch choosing a 4n7 or 100n+10k input coupling, and a Level pot.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "1M", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "68k", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "100", "R", ""],
+  ["×1", "47", "R", ""],
+  ["×3", "100n", "C", ""],
+  ["×1", "4n7", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "47u", "C", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "OC139", "Q", ""],
+  ["Level", "B10k", "POT", ""],
+  ["SW", "SPDT", "SW", "Treble / Full input select"]
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "id": "pcbway-gtu:k-on-azusa-driver-0ce6153c",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "K-On Azusa Driver: 2SC1815 buffer, a passive 'Tea' filter, then a 4580 gain stage and a second stage with 1N4148/LED asymmetric clipping.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "1M", "R", ""],
+  ["×2", "10k", "R", ""],
+  ["×2", "47k", "R", ""],
+  ["×2", "4k7", "R", "one is the LED resistor"],
+  ["×2", "100k", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "220k", "R", ""],
+  ["×1", "100", "R", ""],
+  ["×2", "1u", "C", ""],
+  ["×2", "100n", "C", ""],
+  ["×3", "100u", "C", "electrolytic"],
+  ["×1", "4n7", "C", ""],
+  ["×1", "560p", "C", ""],
+  ["×1", "100p", "C", ""],
+  ["×1", "470n", "C", ""],
+  ["×1", "47n", "C", ""],
+  ["×1", "1N4148", "D", "clipping"],
+  ["×1", "1N5817", "D", "polarity protection"],
+  ["×1", "LED", "LED", "clipping LED in feedback, no colour drawn"],
+  ["×1", "2SC1815", "Q", ""],
+  ["×1", "4580", "IC", "dual op-amp, both sections used"],
+  ["Tea", "B100k", "POT", ""],
+  ["Drive", "B500k", "POT", ""],
+  ["Volume", "A100k", "POT", ""],
+  ["Tone", "A50k", "POT", ""]
+ ]
+}

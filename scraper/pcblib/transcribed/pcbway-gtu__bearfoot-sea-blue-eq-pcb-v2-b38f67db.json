@@ -1,0 +1,28 @@
+{
+ "id": "pcbway-gtu:bearfoot-sea-blue-eq-pcb-v2-b38f67db",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Bearfoot Sea Blue EQ: two 2N5458 JFET stages around a passive treble/bass EQ.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "1M", "R", ""],
+  ["×1", "47k", "R", ""],
+  ["×5", "15k", "R", ""],
+  ["×2", "5k6", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×2", "1k", "R", ""],
+  ["×1", "47", "R", "supply series resistor"],
+  ["×1", "100u", "C", "electrolytic, supply filter"],
+  ["×1", "22u", "C", "electrolytic"],
+  ["×2", "1u", "C", "electrolytic"],
+  ["×1", "470n", "C", ""],
+  ["×1", "220n", "C", ""],
+  ["×3", "22n", "C", ""],
+  ["×1", "4n7", "C", ""],
+  ["×2", "1n", "C", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×2", "2N5458", "Q", ""],
+  ["Treble", "B50k", "POT", ""],
+  ["Bass", "B50k", "POT", ""],
+  ["Volume", "B50k", "POT", ""]
+ ]
+}

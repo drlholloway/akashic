@@ -1,0 +1,26 @@
+{
+ "id": "pcbway-gtu:zvex-woolly-mammoth-56a4383c",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "ZVEX Woolly Mammoth: two direct-coupled 2N3904 stages with Pinch feedback and Wool emitter control, a 10k/5k1/220n EQ network and Output pot; the power LED is drawn as a yellow LED symbol.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "1M", "R", ""],
+  ["×1", "51k", "R", ""],
+  ["×1", "20k", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "5k1", "R", ""],
+  ["×1", "2k2", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×2", "220n", "C", ""],
+  ["×2", "10n", "C", ""],
+  ["×3", "100u", "C", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×1", "YELLOW", "LED", "power indicator, drawn as an LED symbol with its 4k7 resistor"],
+  ["×2", "2N3904", "Q", ""],
+  ["Pinch", "A500k", "POT", ""],
+  ["Wool", "A2k", "POT", ""],
+  ["EQ", "B10k", "POT", ""],
+  ["Output", "B10k", "POT", ""]
+ ]
+}

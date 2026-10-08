@@ -1,0 +1,33 @@
+{
+ "id": "pcbway-gtu:dod-noise-gate-230-2ec740b0",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "DOD 230 clone: TL022 gain stage feeding a VTL5C2 series gate, with an LM358 envelope detector driving the vactrol LED.",
+ "uncertain": [
+  "Level 25k is drawn with a trimmer wiper; could be a panel pot in the original"
+ ],
+ "rows": [
+  ["×6", "1M", "R", "two marked 1M*, one of them '(JUMPER)' in the first op-amp's feedback"],
+  ["×3", "10k", "R", ""],
+  ["×2", "220k", "R", ""],
+  ["×2", "22k", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "47k", "R", ""],
+  ["×1", "1k", "R", "marked 1k*"],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "100", "R", "supply"],
+  ["×3", "100n", "C", "one marked 100n*"],
+  ["×1", "10n", "C", ""],
+  ["×1", "120p", "C", ""],
+  ["×1", "10u", "C", "electrolytic"],
+  ["×1", "1u", "C", "electrolytic"],
+  ["×1", "47u", "C", "electrolytic, marked 47u*"],
+  ["×1", "4u7", "C", "electrolytic"],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "2N3904", "Q", ""],
+  ["×1", "TL022", "IC", "dual op-amp, both sections used"],
+  ["×1", "LM358", "IC", "dual op-amp, both sections used"],
+  ["×1", "VTL5C2", "OPTO", "vactrol: LED and LDR halves drawn separately"],
+  ["Threshold", "B500k", "POT", "labelled 'THRASHOLD' on the drawing"],
+  ["Level", "25k", "TRIM", "drawn as a trimmer, marked LEVEL*"]
+ ]
+}

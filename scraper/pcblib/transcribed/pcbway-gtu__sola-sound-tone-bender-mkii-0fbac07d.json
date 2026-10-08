@@ -1,0 +1,23 @@
+{
+ "id": "pcbway-gtu:sola-sound-tone-bender-mkii-0fbac07d",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Three-transistor OC81D Tone Bender MkII on a negative rail made by a TC1044 charge pump.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "100k", "R", ""],
+  ["×1", "470", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "8k2", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×2", "10n", "C", ""],
+  ["×2", "5u", "C", ""],
+  ["×1", "100n", "C", ""],
+  ["×1", "10u", "C", ""],
+  ["×1", "47u", "C", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×3", "OC81D", "Q", ""],
+  ["×1", "TC1044SCPA", "IC", "charge pump for the -VA supply"],
+  ["Level", "A100k", "POT", ""],
+  ["Attack", "B1k", "POT", ""]
+ ]
+}

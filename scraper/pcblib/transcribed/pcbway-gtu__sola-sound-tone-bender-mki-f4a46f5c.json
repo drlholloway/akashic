@@ -1,0 +1,28 @@
+{
+ "id": "pcbway-gtu:sola-sound-tone-bender-mki-f4a46f5c",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Tone Bender MK1 clone: three PNP germanium stages (OC75, 2x 2G381) on a -9V rail from a TC1044 charge pump.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "1M", "R", ""],
+  ["×2", "8k2", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "1k8", "R", ""],
+  ["×1", "2k2", "R", ""],
+  ["×1", "15k", "R", ""],
+  ["×1", "47k", "R", ""],
+  ["×1", "2M2", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "25u", "C", ""],
+  ["×2", "100n", "C", ""],
+  ["×1", "10u", "C", "charge-pump cap"],
+  ["×1", "47u", "C", "-VA reservoir"],
+  ["×1", "1N5817", "D", ""],
+  ["×1", "OC75", "Q", "PNP germanium"],
+  ["×2", "2G381", "Q", "PNP germanium"],
+  ["×1", "TC1044SCPA", "IC", "charge pump for -9V supply"],
+  ["Attack", "B50k", "POT", ""],
+  ["Level", "A500k", "POT", ""]
+ ]
+}

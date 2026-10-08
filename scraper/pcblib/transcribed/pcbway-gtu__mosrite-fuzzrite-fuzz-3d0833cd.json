@@ -1,0 +1,21 @@
+{
+ "id": "pcbway-gtu:mosrite-fuzzrite-fuzz-3d0833cd",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Mosrite FuzzRite clone: two 2N3904 stages with the Depth pot blending between them.",
+ "uncertain": [
+  "supply diode has no value"
+ ],
+ "rows": [
+  ["×4", "470k", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "2M", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×1", "47u", "C", ""],
+  ["×2", "47n", "C", ""],
+  ["×2", "2n2", "C", ""],
+  ["×1", "?", "D", "shunt protection diode across the supply, no value drawn"],
+  ["×2", "2N3904", "Q", ""],
+  ["Depth", "B500k", "POT", ""],
+  ["Volume", "A50k", "POT", ""]
+ ]
+}

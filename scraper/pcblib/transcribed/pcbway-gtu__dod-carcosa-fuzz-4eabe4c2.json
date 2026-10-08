@@ -1,0 +1,30 @@
+{
+ "id": "pcbway-gtu:dod-carcosa-fuzz-4eabe4c2",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "DOD Carcosa clone: five 2N5089 stages, BAT41 clippers, a twin-T mid-notch with a Mode switch to bypass it, and Hi-Cut tone.",
+ "uncertain": [],
+ "rows": [
+  ["×4", "1k", "R", ""],
+  ["×1", "4k7", "R", "LED current-limiting resistor"],
+  ["×1", "9k1", "R", ""],
+  ["×1", "47k", "R", ""],
+  ["×5", "100k", "R", ""],
+  ["×4", "220k", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "510k", "R", ""],
+  ["×6", "1M", "R", ""],
+  ["×1", "680p", "C", ""],
+  ["×2", "10n", "C", "twin-T notch"],
+  ["×8", "100n", "C", ""],
+  ["×1", "220n", "C", ""],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×2", "BAT41", "D", "clipping diodes"],
+  ["×1", "1N5817", "D", "reverse-polarity protection"],
+  ["×5", "2N5089", "Q", ""],
+  ["Before", "B100k", "POT", ""],
+  ["After", "C100k", "POT", "wired as variable resistor"],
+  ["Hi-Cut", "A5k", "POT", ""],
+  ["Output", "A100k", "POT", ""],
+  ["Mode", "SPDT", "SW", "ON/ON; switches the twin-T notch filter in or out"]
+ ]
+}

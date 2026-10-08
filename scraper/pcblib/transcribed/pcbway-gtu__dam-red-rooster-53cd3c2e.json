@@ -1,0 +1,22 @@
+{
+ "id": "pcbway-gtu:dam-red-rooster-53cd3c2e",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "D*A*M Red Rooster single-transistor germanium treble/range booster around a CV7112 with a Range pot in a feedback path, Boost output pot and a 5k emitter bias trimmer.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "1M", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "68k", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "47u", "C", ""],
+  ["×1", "22u", "C", ""],
+  ["×1", "2u2", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "5n", "C", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×1", "CV7112", "Q", ""],
+  ["Range", "B100k", "POT", ""],
+  ["Boost", "A10k", "POT", ""],
+  ["Bias", "5k", "TRIM", "drawn with a trimmer wiper bar, labelled BIAS"]
+ ]
+}

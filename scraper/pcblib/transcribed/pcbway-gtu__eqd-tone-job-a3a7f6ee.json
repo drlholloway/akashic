@@ -1,0 +1,29 @@
+{
+ "id": "pcbway-gtu:eqd-tone-job-a3a7f6ee",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "EQD Tone Job clone: TL072 input buffer, Baxandall-style active bass/mid/treble stack, a gain stage with the Level pot in its feedback, and an output buffer.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "1M", "R", ""],
+  ["×2", "2k2", "R", ""],
+  ["×2", "3k3", "R", ""],
+  ["×6", "10k", "R", ""],
+  ["×1", "470", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "100", "R", "supply filter to the VC rail"],
+  ["×2", "1u", "C", "one electrolytic (drawn with +), one film"],
+  ["×4", "10u", "C", "electrolytic"],
+  ["×1", "100u", "C", "electrolytic, supply filter"],
+  ["×1", "10n", "C", ""],
+  ["×1", "22n", "C", ""],
+  ["×1", "4n7", "C", ""],
+  ["×1", "47n", "C", ""],
+  ["×1", "1N5817", "D", ""],
+  ["×2", "TL072", "IC", "four op-amp sections drawn, two dual chips"],
+  ["Treble", "B250k", "POT", ""],
+  ["Mid", "B100k", "POT", ""],
+  ["Bass", "B100k", "POT", ""],
+  ["Level", "B50k", "POT", "wired as a variable feedback resistor"]
+ ]
+}

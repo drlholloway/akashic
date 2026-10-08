@@ -1,0 +1,26 @@
+{
+ "id": "pcbway-gtu:mr-black-white-widow-5f342699",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Mr Black White Widow clone: 4558 drive stage with two 1u/100 feedback legs and a pair of LEDs clipping to ground after a 1u, a tone pot and a buffered output.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "100", "R", ""],
+  ["×2", "51k", "R", ""],
+  ["×2", "10k", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "2M2", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×6", "1u", "C", ""],
+  ["×2", "100n", "C", ""],
+  ["×1", "1n", "C", ""],
+  ["×1", "4n7", "C", ""],
+  ["×1", "1N4148", "D", "power-supply protection"],
+  ["×1", "LED", "LED", "clipping LED to ground, no colour marked"],
+  ["×1", "RED", "LED", "clipping LED to ground, marked RED"],
+  ["×1", "4558", "IC", "dual op-amp, both sections used"],
+  ["Gain", "B50k", "POT", ""],
+  ["Tone", "B50k", "POT", ""],
+  ["Volume", "B50k", "POT", ""]
+ ]
+}

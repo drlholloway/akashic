@@ -1,0 +1,41 @@
+{
+ "id": "pcbway-gtu:ibanez-st9-super-tube-screamer-e14b4bfb",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Ibanez ST9 Super Tube Screamer: Tube Screamer with an added buffered mid-boost stage on a dual-gang pot; the source image is only 600 px wide so small labels are hard to read.",
+ "uncertain": [
+  "input cap 47n vs 4.7n",
+  "mid boost caps 68n/2.7n vs 6.8n/27n",
+  "tone pot B20k (tiny text)"
+ ],
+ "rows": [
+  ["×6", "10k", "R", ""],
+  ["×4", "1k", "R", ""],
+  ["×2", "510k", "R", ""],
+  ["×2", "4k7", "R", "one in the drive feedback leg, one LED resistor"],
+  ["×2", "1k5", "R", "mid boost stage"],
+  ["×1", "1M", "R", ""],
+  ["×1", "220k", "R", ""],
+  ["×1", "51k", "R", ""],
+  ["×1", "220", "R", ""],
+  ["×1", "470", "R", ""],
+  ["×1", "47", "R", "power input series resistor"],
+  ["×3", "1u", "C", ""],
+  ["×2", "47n", "C", "input cap and drive leg cap; input label could be 4.7n (low-resolution image)"],
+  ["×2", "100n", "C", ""],
+  ["×1", "68n", "C", "mid boost cap; could read 6.8n"],
+  ["×1", "2.7n", "C", "mid boost feedback cap; could read 27n"],
+  ["×1", "51p", "C", ""],
+  ["×1", "220n", "C", ""],
+  ["×1", "10u", "C", "electrolytic"],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×1", "47u", "C", "electrolytic"],
+  ["×2", "1S1588", "D", "clipping diodes"],
+  ["×1", "1N4001", "D", "reverse polarity"],
+  ["×1", "2SC1815", "Q", "output buffer"],
+  ["×2", "4558", "IC", "four sections drawn, two dual chips"],
+  ["Drive", "A500k", "POT", ""],
+  ["Tone", "B20k", "POT", ""],
+  ["Level", "B100k", "POT", ""],
+  ["Mid Boost", "C10k dual", "POT", "dual-gang pot, sections (A) and (B)"]
+ ]
+}

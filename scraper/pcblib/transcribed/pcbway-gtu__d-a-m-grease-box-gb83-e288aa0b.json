@@ -1,0 +1,25 @@
+{
+ "id": "pcbway-gtu:d-a-m-grease-box-gb83-e288aa0b",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "D*A*M Grease Box GB83: two-transistor (BC547B + BC337) fuzz with Sustain and Volume.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "4k7", "R", "one is the LED resistor"],
+  ["×1", "2M", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "260k", "R", ""],
+  ["×1", "8k2", "R", ""],
+  ["×1", "33k", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "47u", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "22n", "C", ""],
+  ["×1", "10u", "C", ""],
+  ["×1", "100n", "C", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "BC547B", "Q", ""],
+  ["×1", "BC337", "Q", ""],
+  ["Sustain", "B100k", "POT", "used as variable resistor, lug 1 unconnected"],
+  ["Volume", "A500k", "POT", ""]
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "id": "pcbway-gtu:mesa-boogie-tone-burst-5a12dabd",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Mesa Boogie Tone Burst clone: input buffer, 4558 gain stage with triple-1N4148 clipping strings, Baxandall-style bass/treble stage, level pot and output buffer on two 4558s.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "4k7", "R", ""],
+  ["×3", "10k", "R", ""],
+  ["×1", "2M2", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "15k", "R", ""],
+  ["×1", "47k", "R", ""],
+  ["×1", "33k", "R", ""],
+  ["×1", "470", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×2", "100n", "C", ""],
+  ["×2", "33n", "C", ""],
+  ["×2", "4n7", "C", ""],
+  ["×2", "47u", "C", ""],
+  ["×1", "51p", "C", ""],
+  ["×1", "10u", "C", ""],
+  ["×6", "1N4148", "D", "two series strings of three in the feedback loop"],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "1N4744", "D", "zener across the supply"],
+  ["×2", "4558", "IC", "four op-amp sections drawn, two dual chips"],
+  ["Gain", "B100k", "POT", ""],
+  ["Bass", "B50k", "POT", ""],
+  ["Treble", "B50k", "POT", ""],
+  ["Level", "B100k", "POT", ""]
+ ]
+}

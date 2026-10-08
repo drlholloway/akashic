@@ -1,0 +1,22 @@
+{
+ "id": "pcbway-gtu:lovepedal-jubilee-overdrive-c4659888",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Lovepedal Jubilee: an LM386 (JRC386D) overdrive with the Drive pot as an input attenuator, pins 1-8 open, and a passive tone control.",
+ "uncertain": [],
+ "rows": [
+  ["×4", "4k7", "R", "one is the LED resistor"],
+  ["×1", "47", "R", ""],
+  ["×1", "1k8", "R", ""],
+  ["×1", "330", "R", ""],
+  ["×3", "47u", "C", "electrolytic"],
+  ["×2", "100n", "C", "the supply one is marked 100n* (optional)"],
+  ["×1", "47n", "C", ""],
+  ["×1", "390p", "C", ""],
+  ["×1", "22n", "C", ""],
+  ["×1", "1N5817", "D", "polarity protection"],
+  ["×1", "JRC386D", "IC", "LM386 power amp"],
+  ["Drive", "A250k", "POT", ""],
+  ["Tone", "B50k", "POT", ""],
+  ["Volume", "A100k", "POT", ""]
+ ]
+}

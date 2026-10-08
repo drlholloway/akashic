@@ -1,0 +1,18 @@
+{
+ "id": "pcbway-gtu:ehx-hogs-foot-acac3a4e",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "EHX Hog's Foot single-transistor 2N5088 bass booster with 100n caps shunting treble at base and collector, and a Volume pot; the diode is marked 1N4001* with no footnote.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "430k", "R", ""],
+  ["×1", "43k", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "390", "R", ""],
+  ["×2", "3u3", "C", ""],
+  ["×2", "100n", "C", ""],
+  ["×1", "1N4001", "D", "drawn as 1N4001* (asterisk not explained)"],
+  ["×1", "2N5088", "Q", ""],
+  ["Volume", "B100k", "POT", ""]
+ ]
+}
