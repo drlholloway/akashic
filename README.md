@@ -95,7 +95,8 @@ only). Datasheets are the manufacturers' copyright, so the site links rather tha
 datasheets` caches a copy under `data/cache/datasheets/` for your own reference. It checks candidates
 on hosts that answer scripts (TI, Microchip, Vishay, Nisshinbo, Diodes) itself and lists the ones on
 hosts that block scripts (onsemi, Analog Devices, Renesas, Nexperia) in `to-check.json`; check those in
-a browser and record a good one with `--add 'Q:2N3904=https://...'`. A discontinued part whose maker no
+a browser and record a good one with `--add 'Q:2N3904=https://...'`, which also saves a copy in the
+cache. A discontinued part whose maker no
 longer publishes the sheet is the exception, served from `app/static/datasheets/`. The parts are listed
 in `datasheets.DISCONTINUED`; each run writes `data/cache/datasheets/discontinued.html`, the ones still
 to fetch with their Findchips links (Findchips and The Datasheet Archive sit behind a bot check, so those

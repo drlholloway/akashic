@@ -203,10 +203,20 @@ def datasheets(add: list[str] = typer.Option(None, help="'CAT:PART=URL', a link 
     from .fetch import Fetcher
     from .paths import CACHE_DIR, DATA_DIR
     known = table()
+    parts = json.loads((DATA_DIR.parent / "app" / "static" / "data" / "parts.json").read_text())
+    out = CACHE_DIR / "datasheets"
+    out.mkdir(parents=True, exist_ok=True)
+    f = Fetcher(vendor="datasheets", min_interval=2.0)
     for a in add or []:
         k, _, url = a.partition("=")
-        known[k.strip()] = url.strip()
-    parts = json.loads((DATA_DIR.parent / "app" / "static" / "data" / "parts.json").read_text())
+        k, url = k.strip(), url.strip()
+        known[k] = url
+        if url.startswith("http"):  # keep our own copy of a linked sheet, as the checked links get
+            path = f.get_file(url, ".pdf")
+            if path and path.read_bytes()[:5] == b"%PDF-":
+                slug = re.sub(r"[^a-z0-9.]+", "-", k.lower())
+                shutil.copyfile(path, out / f"{slug}.pdf")
+                con.print(f"[green]cached[/] {k} -> {out / f'{slug}.pdf'}")
     by_value = {p["value"]: p for p in parts}
     sheet_of = {v: k for k, vs in DISCONTINUED.items() for v in {k, *vs}}
     unlinked = {v for v, p in by_value.items() if p["category"] in ("IC", "Q", "D", "OPTO") and part_like(v)
@@ -240,20 +250,17 @@ def datasheets(add: list[str] = typer.Option(None, help="'CAT:PART=URL', a link 
                 con.print(f"    also covers {key}")
             elif v not in sheet_of:
                 con.print(f"    [dim]mentions {key} (not discontinued; not linked)[/]")
-    for f, covered in COVERED_BY.items():
-        link = f"datasheets/{f}.pdf"
-        if not (HOSTED / f"{f}.pdf").exists():
+    for sheet_file, covered in COVERED_BY.items():
+        link = f"datasheets/{sheet_file}.pdf"
+        if not (HOSTED / f"{sheet_file}.pdf").exists():
             continue
         for v in covered:
             have = known.get(f'{by_value[v]["category"]}:{v}', "") if v in by_value else "x"
-            own = has_own(v) and f != sheet_of.get(v)
+            own = has_own(v) and sheet_file != sheet_of.get(v)
             if v in by_value and not own and (not have or is_selector(have) and not is_selector(link)):
                 known[f'{by_value[v]["category"]}:{v}'] = link
-                con.print(f"covers {v} <- {f}.pdf")
+                con.print(f"covers {v} <- {sheet_file}.pdf")
     open_hosts = {"www.ti.com", "ww1.microchip.com", "www.vishay.com", "www.nisshinbo-microdevices.co.jp", "www.diodes.com", "electricdruid.net"}
-    out = CACHE_DIR / "datasheets"
-    out.mkdir(parents=True, exist_ok=True)
-    f = Fetcher(vendor="datasheets", min_interval=2.0)
     to_check: dict[str, list[str]] = {}
     tried = 0
     for p in sorted(parts, key=lambda p: -p["count"]):
