@@ -1,0 +1,11 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-fet-fuzz",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "a tiny drawing with designators only, no values. OCR rows dropped as wrong; nothing to list.",
+ "uncertain": [
+  "All values: the drawing gives designators only, no values or part numbers"
+ ],
+ "rows": [
+
+ ]
+}

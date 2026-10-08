@@ -1,0 +1,20 @@
+{
+ "id": "expanon:tone-control-and-eqs-anderton-frequency-booster",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Small muzique.com redraw (1999) of Craig Anderton's twin-T frequency booster around one FET op amp on a +/-12V supply; only C1 and C2 carry designators, and their value is picked from a table for the center frequency.",
+ "uncertain": [
+  "C1/C2: value is chosen from the table (0.22uF/0.1uF/0.02uF/0.01uF/0.005uF), not fixed"
+ ],
+ "rows": [
+  ["×1", "10k", "R", "no designator; input, across C1+C2 (twin-T)"],
+  ["×1", "10k", "R", "no designator; op-amp inverting input to the switch"],
+  ["×1", "10k", "R", "no designator; op-amp feedback"],
+  ["×1", "5.6k", "R", "no designator; in series with the Boost pot"],
+  ["C1", "?", "C", "select C1 = C2 for the center frequency: 0.22uF = 90 Hz, 0.1uF = 200Hz, 0.02uF = 1k, 0.01uF = 2k, 0.005uF = 4k"],
+  ["C2", "?", "C", "select C1 = C2 for the center frequency: 0.22uF = 90 Hz, 0.1uF = 200Hz, 0.02uF = 1k, 0.01uF = 2k, 0.005uF = 4k; same value as C1"],
+  ["×1", "2.2uF", "C", "no designator; output, electrolytic"],
+  ["×1", "FET op-amp", "IC", "no designator or part number; 'FET op-amp', dual +/-12V supply"],
+  ["Boost", "10k", "POT", "wired as a variable resistor, no taper given"],
+  ["×1", "SPST", "SW", "no designator; boost Off (on) switch to ground"]
+ ]
+}

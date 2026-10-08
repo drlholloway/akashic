@@ -1,0 +1,27 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-eti-octave-fuzz",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Clean redraw of the ETI-Canada (January 1980) 'Guitar Effects Unit' octave fuzz: MPS6515 preamp, 4558 full-wave rectifier, ±9V from two batteries. Only D1, D2, Q1 and the switches carry designators, so other parts are counted by value.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "270ohms", "R", "no designator on the drawing; Q1 emitter"],
+  ["×1", "820 ohms", "R", "no designator on the drawing; output divider; raise for a louder Fuzz mode"],
+  ["×2", "1k", "R", "no designator on the drawing; output divider of op-amp b"],
+  ["×1", "6.8k", "R", "no designator on the drawing"],
+  ["×1", "8.2k", "R", "no designator on the drawing"],
+  ["×5", "10k", "R", "no designator on the drawing"],
+  ["×1", "39k", "R", "no designator on the drawing; output divider; lower for a louder Fuzz mode"],
+  ["×1", "100k", "R", "no designator on the drawing"],
+  ["×1", "680k", "R", "no designator on the drawing"],
+  ["×1", "560pf", "C", "no designator on the drawing"],
+  ["×2", "1.0uf", "C", "no designator on the drawing; electrolytic"],
+  ["D1", "1N4148", "D", ""],
+  ["D2", "1N4148", "D", ""],
+  ["Q1", "MPS6515", "Q", ""],
+  ["×1", "4558", "IC", "dual op-amp (sections a and b); 'any low-noise dual op-amp'"],
+  ["×1", "1M", "POT", "unnamed variable resistor in op-amp a's feedback; no designator on the drawing"],
+  ["S1", "DPDT", "SW", "power on/off for the two 9V batteries (±9V)"],
+  ["S2", "SPDT", "SW", "effect/bypass (not true bypass)"],
+  ["S3", "SPDT", "SW", "Fuzz / Struzz mode"]
+ ]
+}

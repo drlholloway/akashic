@@ -1,0 +1,32 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-vox-guyatone-1901-distortion",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Hand-drawn 1981 Vox 1901 Distortion (Guyatone-made) schematic: LM741 gain stage with two SG9150 clipping diodes to ground, parts list and notes on the sheet. Pots are unnamed, given only as R8 50K and R10 500K.",
+ "uncertain": [
+  "R5: handwritten 4.7K, could be 1.7K-looking"
+ ],
+ "rows": [
+  ["R1", "10K", "R", ""],
+  ["R2", "1M", "R", ""],
+  ["R3", "1M", "R", ""],
+  ["R4", "1M", "R", ""],
+  ["R5", "4.7K", "R", "handwritten; first digit could be read as 1"],
+  ["R6", "1M", "R", ""],
+  ["R7", "39K", "R", "LED resistor"],
+  ["R9", "12K", "R", ""],
+  ["C1", "0.001uF", "C", ""],
+  ["C2", "0.01uF", "C", ""],
+  ["C3", "1uF", "C", "drawn '16V 1', electrolytic"],
+  ["C4", "0.056uF", "C", ""],
+  ["C5", "500pF", "C", ""],
+  ["C6", "1uF", "C", "drawn '16V 1', electrolytic"],
+  ["D1", "SG9150", "D", "HV-23Y; clipping diode"],
+  ["D2", "SG9150", "D", "HV-23Y; clipping diode"],
+  ["D3", "TLR102KB", "LED", ""],
+  ["D4", "RD5A-M", "D", "5V zener"],
+  ["IC1", "LM741CH", "IC", "metal can"],
+  ["R8", "50K", "POT", "output level (not named)"],
+  ["R10", "500K", "POT", "gain (not named), rheostat to ground via C4/R5"],
+  ["SW1", "DPDT", "SW", "bypass; second pole switches LED"]
+ ]
+}

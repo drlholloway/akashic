@@ -1,0 +1,27 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-5-stage-envelope-filter",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "A conceptual sheet by Colin Raffel (2004): one of five identical LDR/op-amp filter stages is drawn, driven by a BA6214 LED VU-meter chip; no designators, quantities are per the five stages. Most of the sheet is a 'How it works' text.",
+ "uncertain": [
+  "*k resistors: value not given, to be matched to the LDR",
+  "0.003uF and 0.002uF (stages 3 and 4): not written, inferred from the stepping .005/.004/.../.001",
+  "Op amps: type and count not given; 10 single op amps assumed (one LDR inverting stage plus one high-pass stage per stage)"
+ ],
+ "rows": [
+  ["×5", "?", "R", "input resistor of each LDR stage; 'tweak to match value of the LDR', no value given"],
+  ["×5", "10k", "R", "one per stage, between the LDR stage and the high-pass filter"],
+  ["×5", "100k", "R", "feedback resistor of each filter op amp"],
+  ["×1", "680ohm", "R", "LED string resistor at the BA6214"],
+  ["×1", "10k", "R", "BA6214 pin 7 to ground, in parallel with the 10uf"],
+  ["×2", "0.005uF", "C", "stage 1 (series and feedback caps both marked *uf)"],
+  ["×2", "0.004uF", "C", "stage 2"],
+  ["×2", "0.003uF", "C", "stage 3; inferred from '.005uf at stage 1, .004uf at stage 2, up to .001uf at stage 5'"],
+  ["×2", "0.002uF", "C", "stage 4; inferred as above"],
+  ["×2", "0.001uF", "C", "stage 5"],
+  ["×1", "10uf", "C", "electrolytic, BA6214 pin 7"],
+  ["×5", "LED", "LED", "LEDs 1-5 on BA6214 pins 1-4 and 6"],
+  ["×10", "Op amp", "IC", "two op amps per stage, no part number given; drawn as single sections"],
+  ["×1", "BA6214", "IC", "LED VU-meter driver"],
+  ["×5", "LDR", "OPTO", "LDRs 1-5, each lit by one of the LEDs (LED/LDR pairs); no type given"]
+ ]
+}

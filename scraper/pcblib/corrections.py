@@ -12,10 +12,17 @@ A document no parser can read (values printed on the parts of a wiring drawing) 
 whole instead: TRANSCRIBED[circuit_id] is its parts list, which replaces whatever the parsers found.
 Rows without designators are named by quantity ('×2'), as the shopping-list parser names them. A
 five-field row carries its build variant ('DOD \u201977 Grey 250').
+
+Schematic images read whole by eye (the OCR got most of a drawing wrong or missed it) live one per file
+in transcribed/<circuit id, ':' as '__'>.json, with the reading's date, a comment on the drawing, the
+values that stayed uncertain and the rows. An empty list drops wrong OCR rows when the drawing gives
+no values to read.
 """
 from __future__ import annotations
 
+import json
 import re
+from pathlib import Path
 
 from .models import BomRow
 from .normalize import normalize_row
@@ -402,6 +409,12 @@ CONTROLS: dict[str, list[str]] = {
 }
 
 _NOTE = "corrected by hand"
+_READ_NOTE = "read from the schematic by eye"
+_READ: set[str] = set()
+for _f in sorted((Path(__file__).parent / "transcribed").glob("*.json")):
+    _d = json.loads(_f.read_text())
+    TRANSCRIBED[_d["id"]] = [tuple(r) for r in _d["rows"]]
+    _READ.add(_d["id"])
 
 
 def _split(ref: str) -> tuple[str, int]:
@@ -426,7 +439,8 @@ def _insert_at(bom: list[BomRow], variant: str, ref: str) -> int:
 
 def apply(circuit_id: str, bom: list[BomRow]) -> list[BomRow]:
     if circuit_id in TRANSCRIBED:
-        bom = [normalize_row(BomRow(ref=ref, value=value, category=cat, notes="; ".join(n for n in (note, _NOTE) if n),
+        how = _READ_NOTE if circuit_id in _READ else _NOTE
+        bom = [normalize_row(BomRow(ref=ref, value=value, category=cat, notes="; ".join(n for n in (note, how) if n),
                                     part_type="Potentiometer" if cat == "POT" else "", variant=(rest or [""])[0]))
                for ref, value, cat, note, *rest in TRANSCRIBED[circuit_id]]
     fixes: dict[tuple[str | None, str], str | None] = {}

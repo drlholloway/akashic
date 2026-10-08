@@ -1,0 +1,14 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-ibanez-ts5",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "a pencil trace with designators only, no values. OCR rows dropped as wrong; nothing to list.",
+ "uncertain": [
+  "All parts: the drawing gives designators only, no values",
+  "C11: written like 'G1' beside R20; read as C11 since C1 appears elsewhere",
+  "R8: label beside the TR1 collector resistor is scribbled; read as R8",
+  "U1: op-amp type and designator not drawn"
+ ],
+ "rows": [
+
+ ]
+}

@@ -189,6 +189,14 @@ GitHub Release notes.
   and pots are grouped by taper (A, B, C, W, none) and ordered by resistance.
 
 ### Fixed
+- Experimentalists Anonymous: 20 schematics whose OCR was worst were read by eye instead, part by part
+  (`scraper/pcblib/transcribed/`), from a list ranked by values that fit no standard series or the wrong
+  part type, and by how much of the drawing was missing. Boss DC-2 goes from 4 parts to 207, MXR Analog
+  Delay from 2 to 119, Pearl OC-07 from 6 to 137, Ibanez STL from 1 to 75. The Basic Saw VCO's D1 was
+  the CA3140 op amp. Values a drawing does not give are shown as '?'; three drawings with no values (a
+  pencil trace of the TS5, a tiny FET fuzz, and the DS-1 SEM's cover letter in place of its schematic)
+  lose their wrong OCR rows and list nothing.
+- Capacitor and resistor values written with a leading point ('.01uF', '.47u') now read as numbers.
 - Dead Astronaut: nine build documents print their Eagle parts list as text, which is now read instead
   of OCR (`parse_eagle_partlist`): the Pendulum Tremolo+ loses an OCR'd 'D7 t.C2' that is not on the board
   and gains its missing C3, C5, IC1, both LDRs, the switches and its four knobs with tapers. OCR still

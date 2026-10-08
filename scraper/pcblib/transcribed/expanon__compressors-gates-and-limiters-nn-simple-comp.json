@@ -1,0 +1,29 @@
+{
+ "id": "expanon:compressors-gates-and-limiters-nn-simple-comp",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Clean single-sheet TL071 compressor with a BF256C JFET in the feedback loop and a GA206 germanium detector. Only the pots and diodes carry designators, so other parts are listed by value with counts.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "100R", "R", "output series resistor; no designators on resistors"],
+  ["×1", "150R", "R", "in series with P1 (gain)"],
+  ["×1", "1k", "R", "output, before volume pot"],
+  ["×2", "10k", "R", "input series; diode-detector feed"],
+  ["×1", "100k", "R", "detector to JFET gate"],
+  ["×2", "820k", "R", "bias from +9V; JFET drain to gate"],
+  ["×1", "1M", "R", ""],
+  ["×1", "1M2", "R", "bias to ground"],
+  ["×1", "4M7", "R", "input pulldown"],
+  ["×1", "68p", "C", "input to ground"],
+  ["×2", "10n", "C", "JFET drain-gate; output to ground"],
+  ["×1", "22n", "C", "detector hold"],
+  ["×1", "47n", "C", "input coupling"],
+  ["×1", "1u", "C", "electrolytic, output coupling"],
+  ["×1", "100u", "C", "electrolytic, JFET to op-amp feedback"],
+  ["D1", "GA206", "D", "germanium"],
+  ["D2", "GA206", "D", "germanium"],
+  ["×1", "BF256C", "Q", "N-JFET, variable resistance in feedback"],
+  ["×1", "TL071", "IC", ""],
+  ["P1", "5k", "POT", "gain/compression set, unnamed"],
+  ["P2", "B50K", "POT", "volume, drawn 50k/B"]
+ ]
+}
