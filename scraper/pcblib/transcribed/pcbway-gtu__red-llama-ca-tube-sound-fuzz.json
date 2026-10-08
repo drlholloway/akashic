@@ -1,0 +1,28 @@
+{
+ "id": "pcbway-gtu:red-llama-ca-tube-sound-fuzz",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Two CD4049UBE inverter fuzzes on one board: CA Tube Sound Fuzz (schematic p1-1) and Way Huge Red Llama (schematic p1-3), differing in supply resistor, coupling and feedback caps; p1-0 and p1-2 are the matching layouts.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "100k", "R", ""],
+  ["×2", "1M", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "100", "R", "supply resistor", "CA Tube Sound Fuzz"],
+  ["×1", "1k", "R", "supply resistor", "Red Llama"],
+  ["×1", "100u", "C", ""],
+  ["×1", "10u", "C", ""],
+  ["×1", "100n", "C", "supply filter"],
+  ["×1", "100n", "C", "input cap", "CA Tube Sound Fuzz"],
+  ["×1", "50n", "C", "", "CA Tube Sound Fuzz"],
+  ["×2", "10p", "C", "", "CA Tube Sound Fuzz"],
+  ["×1", "68n", "C", "input cap", "Red Llama"],
+  ["×1", "33n", "C", "", "Red Llama"],
+  ["×1", "51p", "C", "", "Red Llama"],
+  ["×1", "100p", "C", "", "Red Llama"],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "CD4049UBE", "IC", ""],
+  ["Fuzz", "B1M", "POT", "", "CA Tube Sound Fuzz"],
+  ["Drive", "B1M", "POT", "", "Red Llama"],
+  ["Level", "A10k", "POT", "Volume on the layout"]
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "id": "pcbway-gtu:eqd-blackeye-boost-869487c7",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Single BS170 MOSFET booster with bias trim (EQD Black Eye trace by storyboardist); image p1-0 holds layout and schematic side by side, designators R1-R4/C1-C3/D1-D2/Q1 printed but rows grouped by value.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "10k", "R", ""],
+  ["×1", "2.2M", "R", ""],
+  ["×2", "10M", "R", ""],
+  ["×1", "100n", "C", ""],
+  ["×1", "10u", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×2", "1N4001", "D", ""],
+  ["×1", "BS170", "Q", ""],
+  ["Boost", "A100k", "POT", ""],
+  ["×1", "5k", "TRIM", ""]
+ ]
+}

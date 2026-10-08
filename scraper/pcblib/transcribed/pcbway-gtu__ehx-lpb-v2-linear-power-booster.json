@@ -1,0 +1,24 @@
+{
+ "id": "pcbway-gtu:ehx-lpb-v2-linear-power-booster",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "EHX LPB-1 single-2N5088 booster on one board with a Screaming Bird treble-booster variant; schematics are p1-0 (LPB, 100n caps) and p1-2 (Screaming Bird, 2n caps), the two differing only in the coupling caps; pot is labeled Boost on the layout.",
+ "uncertain": [
+  "Screaming Bird coupling caps drawn 2n on the schematic but 222 (2n2) on the layout"
+ ],
+ "rows": [
+  ["×1", "47", "R", ""],
+  ["×1", "430k", "R", ""],
+  ["×1", "43k", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "2M2", "R", ""],
+  ["×1", "390", "R", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×2", "100n", "C", "input and output coupling", "LPB-1"],
+  ["×2", "2n", "C", "input and output coupling; layout marks them 222 (2n2)", "Screaming Bird"],
+  ["×1", "1N4001", "D", ""],
+  ["×1", "2N5088", "Q", ""],
+  ["Level", "A100k", "POT", ""]
+ ]
+}

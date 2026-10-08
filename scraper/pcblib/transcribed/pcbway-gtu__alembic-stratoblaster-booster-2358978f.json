@@ -1,0 +1,19 @@
+{
+ "id": "pcbway-gtu:alembic-stratoblaster-booster-2358978f",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "GGG Stratoblaster (Improved) JFET booster read from image p1-1 (designators printed); the PCB layout (p1-0) also has a 47 ohm supply resistor and a 1N4001 that the schematic does not draw, and replaces the DPDT bypass with a footswitch.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "100", "R", ""],
+  ["R2", "22k", "R", ""],
+  ["R3", "12k", "R", ""],
+  ["R5", "100k", "R", ""],
+  ["R6", "4M7", "R", ""],
+  ["C1", "10u", "C", "16V tantalum"],
+  ["C2", "1.5u", "C", "tantalum"],
+  ["C3", "100u", "C", ""],
+  ["Q1", "J201", "Q", "or 2N5457 / other JFET"],
+  ["R4", "B100k", "POT", "Boost"],
+  ["Sw1", "DPDT", "SW", "bypass switch"]
+ ]
+}

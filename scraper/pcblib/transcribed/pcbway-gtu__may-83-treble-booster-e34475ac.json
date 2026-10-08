@@ -1,0 +1,24 @@
+{
+ "id": "pcbway-gtu:may-83-treble-booster-e34475ac",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "May 83 treble booster: single BC549 stage with an optional 5KA Bias pot; schematic p1-1 carries designators and its own BOM, p1-0 is the PCB layout.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "120K", "R", ""],
+  ["R2", "100K", "R", ""],
+  ["R3", "1K", "R", ""],
+  ["R4", "2K7", "R", "2K7 with the Bias pot, 6K8 without"],
+  ["R5", "22K", "R", ""],
+  ["R6", "2K4", "R", ""],
+  ["R7", "47K", "R", ""],
+  ["R8", "100R", "R", ""],
+  ["C1", "10n", "C", ""],
+  ["C2", "1n", "C", ""],
+  ["C3", "47n", "C", ""],
+  ["C4", "4n7", "C", ""],
+  ["C5", "47u", "C", "elec"],
+  ["C6", "100u", "C", "elec"],
+  ["Q1", "BC549", "Q", ""],
+  ["Bias", "A5k", "POT", "optional; jumpers replace it if omitted"]
+ ]
+}

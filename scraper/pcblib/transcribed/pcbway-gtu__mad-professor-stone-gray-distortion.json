@@ -1,0 +1,32 @@
+{
+ "id": "pcbway-gtu:mad-professor-stone-gray-distortion",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Mad Professor Stone Grey Distortion clone: TL051 gain stage with two 2N3819 JFETs as feedback clippers, then two CD4069UBE inverters as gain stages; image p1-1 is the schematic (p1-0 the layout); the 4k7 to the LED pad is the power LED resistor.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "47", "R", ""],
+  ["×2", "4k7", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "14k7", "R", ""],
+  ["×1", "200k", "R", ""],
+  ["×2", "470k", "R", ""],
+  ["×4", "1M", "R", ""],
+  ["×1", "15p", "C", ""],
+  ["×3", "100p", "C", ""],
+  ["×1", "2n2", "C", ""],
+  ["×1", "10n", "C", ""],
+  ["×1", "22n", "C", ""],
+  ["×3", "47n", "C", ""],
+  ["×1", "100n", "C", ""],
+  ["×1", "4u7", "C", ""],
+  ["×1", "47u", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×2", "2N3819", "Q", "JFETs in the op-amp feedback loop"],
+  ["×1", "TL051", "IC", ""],
+  ["×1", "CD4069UBE", "IC", ""],
+  ["Distortion", "A1M", "POT", ""],
+  ["Tone", "A50k", "POT", ""],
+  ["Volume", "A50k", "POT", ""]
+ ]
+}

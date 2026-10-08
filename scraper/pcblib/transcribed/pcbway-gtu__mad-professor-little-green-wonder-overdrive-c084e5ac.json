@@ -1,0 +1,30 @@
+{
+ "id": "pcbway-gtu:mad-professor-little-green-wonder-overdrive-c084e5ac",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Mad Professor Little Green Wonder (JFET buffer into TLC272 Tube-Screamer-style stage with green LED clipping and dual-gang Body control); image p1-1 is the schematic, p1-0 the PCB layout; no designators printed.",
+ "uncertain": [],
+ "rows": [
+  ["×4", "5k6", "R", ""],
+  ["×4", "27k", "R", ""],
+  ["×3", "2k", "R", ""],
+  ["×2", "1M", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "1k", "R", ""],
+  ["×1", "470", "R", ""],
+  ["×1", "47", "R", ""],
+  ["×3", "1u", "C", ""],
+  ["×2", "47n", "C", ""],
+  ["×2", "100n", "C", "one marked 100n*"],
+  ["×1", "220n", "C", ""],
+  ["×1", "100p", "C", ""],
+  ["×2", "100u", "C", "electrolytic"],
+  ["×1", "1N4001", "D", ""],
+  ["×2", "3mm Green", "LED", "clipping"],
+  ["×1", "2N5457", "Q", ""],
+  ["×1", "TLC272CP", "IC", ""],
+  ["Drive", "B500k", "POT", ""],
+  ["Volume", "B50k", "POT", ""],
+  ["Body", "B20k dual", "POT", "dual-gang, labelled BODY on the PCB"]
+ ]
+}

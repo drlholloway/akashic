@@ -1,0 +1,22 @@
+{
+ "id": "pcbway-gtu:lovepedal-cot50-boost-85e78eb7",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Lovepedal COT50: single 2N5088 common-emitter boost with 1N60 clipping at the output and a B1k Gain pot; schematic is p1-1 (upright), p1-0 is the PCB layout; no volume control.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "47", "R", ""],
+  ["×1", "330", "R", ""],
+  ["×1", "3k3", "R", ""],
+  ["×1", "4k7", "R", "LED resistor"],
+  ["×1", "1M", "R", ""],
+  ["×1", "2M2", "R", ""],
+  ["×2", "47n", "C", ""],
+  ["×1", "100n", "C", ""],
+  ["×1", "47u", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×2", "1N60", "D", "output clipping to ground"],
+  ["×1", "2N5088", "Q", ""],
+  ["Gain", "B1k", "POT", "wired as variable resistor in emitter leg"]
+ ]
+}

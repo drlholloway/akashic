@@ -197,6 +197,12 @@ GitHub Release notes.
   Crimson Drive and more). Three boards uploaded only as thumbnails (Diezel VH4, VHT Deliverance, Tech21
   Character Series) were read from the project's full-size schematic PDF; the Tech21 board's four voicings
   (Blonde, British, California, Liverpool) are build variants.
+  24 more boards whose schematics are only in the login-only project PDF were read from those PDFs
+  (AMT B1/E1/M1/R1, ZVEX Box of Rock and Super Hard On, EQD Black Eye, Mad Professor Little Green Wonder,
+  Simble and Stone Grey, MXR Custom Badass, Red Llama, the EHX Big Muff in six versions from the PDF's
+  parts tables, and the 3-in-1 boards from Lovepedal, Xotic and the op-amp head emulators as build
+  variants). 327 of the 337 boards now have a parts list; the rest are utility boards or have no
+  schematic on PCBWay at all.
 - Experimentalists Anonymous: 360 schematics were read by eye instead of OCR, part by part
   (`scraper/pcblib/transcribed/`): every pedal circuit the OCR had read worst (ranked by values that fit
   no standard series or the wrong part type, and by how much of the drawing was missing), then every

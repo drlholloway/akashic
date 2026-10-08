@@ -1,0 +1,26 @@
+{
+ "id": "pcbway-gtu:basic-audio-zippy-fuzz",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "Basic Audio Zippy two-transistor MPS6513 fuzz; image p1-1 is the upright schematic (p1-0 the layout); the SW1/SW2 pads take a toggle that switches a 1k from the supply onto the second collector.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "47", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "2k2", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×1", "47k", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "4M7", "R", ""],
+  ["×2", "1n", "C", ""],
+  ["×3", "47n", "C", ""],
+  ["×2", "100n", "C", ""],
+  ["×1", "100u", "C", ""],
+  ["×1", "1N4001", "D", ""],
+  ["×2", "MPS6513", "Q", ""],
+  ["Fuzz", "B50k", "POT", ""],
+  ["Body", "B50k", "POT", ""],
+  ["Vol", "B50k", "POT", ""],
+  ["SW", "SPST", "SW", "off-board toggle on the SW1/SW2 pads"]
+ ]
+}

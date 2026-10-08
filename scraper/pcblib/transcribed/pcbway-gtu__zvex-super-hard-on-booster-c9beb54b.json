@@ -1,0 +1,19 @@
+{
+ "id": "pcbway-gtu:zvex-super-hard-on-booster-c9beb54b",
+ "read": "2026-10-08, by eye from the schematic image (CC BY-SA)",
+ "comment": "ZVEX Super Hard On BS170 MOSFET booster from the Gottfried Divos schematic (image p1-1, designators printed); the layout p1-0 adds a 4k7 LED resistor, a 2M resistor, a 1N4001 and a 100u supply cap not drawn on the schematic.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "10M", "R", "can be reduced to 1M"],
+  ["R2", "10M", "R", "can be reduced to 1M"],
+  ["R3", "5k1", "R", ""],
+  ["R4", "100k", "R", ""],
+  ["C1", "100n", "C", ""],
+  ["C2", "10u", "C", ""],
+  ["D1", "1N4148", "D", ""],
+  ["D2", "1N4148", "D", ""],
+  ["Q1", "BS170", "Q", ""],
+  ["P1", "B5k", "POT", "Crackle; may be 5k reverse log"],
+  ["S1", "DPDT", "SW", "bypass switch"]
+ ]
+}
