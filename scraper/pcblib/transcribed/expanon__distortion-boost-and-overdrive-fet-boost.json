@@ -1,0 +1,16 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-fet-boost",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Single N-channel JFET source-follower buffer/boost; clean small drawing, no part number for the JFET.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "10M", "R", ""],
+  ["R2", "2.2M", "R", ""],
+  ["R3", "2.2M", "R", ""],
+  ["R4", "10k", "R", ""],
+  ["R5", "100k", "R", ""],
+  ["C1", "0.1uF", "C", "drawn 0.1"],
+  ["C2", "1uF", "C", "electrolytic"],
+  ["Q1", "?", "Q", "N-channel JFET, no part number given; source follower"]
+ ]
+}

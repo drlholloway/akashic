@@ -1,0 +1,22 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-single-transistor-overdrive",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Small SPICE-style (PSpice) drawing of a one-transistor 2N3904 overdrive with bootstrapped bias (C2 from emitter to the R1/R2/R3 node); no pots.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "4.7k", "R", ""],
+  ["R2", "47k", "R", ""],
+  ["R3", "10k", "R", ""],
+  ["R4", "1k", "R", ""],
+  ["R5", "1k", "R", ""],
+  ["R6", "4.7k", "R", ""],
+  ["R7", "10k", "R", ""],
+  ["R8", "100k", "R", ""],
+  ["C1", ".1uf", "C", ""],
+  ["C2", "22uf", "C", "electrolytic"],
+  ["C3", ".22uf", "C", ""],
+  ["C4", "1uf", "C", ""],
+  ["C5", ".001uf", "C", ""],
+  ["Q1", "2N3904", "Q", "drawn Q2N3904 (the SPICE model name)"]
+ ]
+}

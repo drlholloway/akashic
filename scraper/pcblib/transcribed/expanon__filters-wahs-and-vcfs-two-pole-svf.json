@@ -1,0 +1,28 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-two-pole-svf",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "M. Danielson 2-pole state variable filter (2002), clean single-page CAD drawing with four inputs and HP/BP/LP/notch outputs; two inputs are both labeled 'Signal Input 3'.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "100k", "R", ""],
+  ["R2", "100k", "R", ""],
+  ["R3", "100k", "R", ""],
+  ["R4", "100k", "R", ""],
+  ["R5", "27k", "R", ""],
+  ["R6", "100k", "R", ""],
+  ["R7", "100k", "R", ""],
+  ["R8", "15k", "R", ""],
+  ["R9", "100k", "R", ""],
+  ["R10", "100k", "R", ""],
+  ["R11", "100k", "R", ""],
+  ["C1", "100n", "C", ""],
+  ["C2", "100n", "C", ""],
+  ["U1", "CA3140", "IC", ""],
+  ["U2", "CA3140", "IC", ""],
+  ["U3", "CA3140", "IC", ""],
+  ["U4", "TL082", "IC", ""],
+  ["U5", "TL082", "IC", ""],
+  ["P1", "A100k", "POT", "dual-gang (P1a/P1b) 100k log, frequency"],
+  ["P2", "100k", "POT", "feedback/Q control, no taper given"]
+ ]
+}

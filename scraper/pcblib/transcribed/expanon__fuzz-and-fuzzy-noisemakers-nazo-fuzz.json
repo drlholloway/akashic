@@ -1,0 +1,24 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-nazo-fuzz",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Clean schematic of a Gus HP SI Fuzz mod by EatYourGuitar, with perfboard and stripboard layouts below; the perfboard parts list swaps R2/R3/R4/R5 values against the schematic and the stripboard version adds D3, D4 and a DIP switch, so the schematic values are used.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "1M", "R", ""],
+  ["R2", "10K", "R", ""],
+  ["R3", "470K", "R", ""],
+  ["R4", "100K", "R", ""],
+  ["R5", "15K", "R", ""],
+  ["C1", "100nF", "C", ""],
+  ["C2", "100nF", "C", ""],
+  ["C3", "100uF", "C", ""],
+  ["C4", "100nF", "C", ""],
+  ["D1", "Diode", "D", "no part number given; clipping pair to ground switched by SPST"],
+  ["D2", "Diode", "D", "no part number given"],
+  ["Q1", "2N2222", "Q", ""],
+  ["Q2", "2N2222", "Q", ""],
+  ["Gain", "100K", "POT", "VR1"],
+  ["Volume", "100K", "POT", "VR2"],
+  ["SPST", "SPST", "SW", "clipping diodes on/off"]
+ ]
+}

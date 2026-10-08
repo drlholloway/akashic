@@ -1,0 +1,33 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-crowther-hot-cake",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Clean Gottfried Divos redraw of the 1977 Crowther Hot Cake (741 op-amp overdrive); no R1 is drawn, and the bypass is a switch S1 rather than a footswitch.",
+ "uncertain": [],
+ "rows": [
+  ["R2", "100k", "R", ""],
+  ["R3", "120k", "R", ""],
+  ["R4", "1M", "R", ""],
+  ["R5", "10k", "R", ""],
+  ["R6", "120E", "R", "120 ohm"],
+  ["R7", "100k", "R", ""],
+  ["R8", "10k", "R", ""],
+  ["R9", "1k", "R", ""],
+  ["R10", "10k", "R", ""],
+  ["R11", "10k", "R", ""],
+  ["R12", "220k", "R", ""],
+  ["R13", "120k", "R", "ground-reference resistor for the shared return line, switched by S1"],
+  ["C1", "12n", "C", ""],
+  ["C2", "10uF", "C", "electrolytic"],
+  ["C3", "10uF", "C", "electrolytic"],
+  ["C4", "82n", "C", ""],
+  ["C5", "470p", "C", ""],
+  ["C6", "12n", "C", ""],
+  ["C7", "47n", "C", ""],
+  ["C8", "12n", "C", ""],
+  ["IC1", "LM741", "IC", "from the notes: IC1 LM 741"],
+  ["Drive", "50k rev. log", "POT", "P1, reverse log taper"],
+  ["Level", "A50k", "POT", "P3, 50k log"],
+  ["S1", "SPST", "SW", "labeled BYPASS; shorts R13 to ground"],
+  ["S2", "SPDT", "SW", "Mid Lift / Normal"]
+ ]
+}

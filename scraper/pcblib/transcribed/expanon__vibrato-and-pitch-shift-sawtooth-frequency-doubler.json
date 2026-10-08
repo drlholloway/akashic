@@ -1,0 +1,15 @@
+{
+ "id": "expanon:vibrato-and-pitch-shift-sawtooth-frequency-doubler",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Clean CAD synth-style schematic (Magnus Danielson, 1998): op-amp rectifier plus summing stage doubling a +/-5V sawtooth; runs on +/-15V.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "300k", "R", ""],
+  ["R2", "100k", "R", ""],
+  ["R3", "49k9", "R", "to -15V"],
+  ["R4", "100k", "R", ""],
+  ["R5", "100k", "R", ""],
+  ["D1", "1N4148", "D", ""],
+  ["U1", "TL-082", "IC", "dual op amp, U1A and U1B"]
+ ]
+}

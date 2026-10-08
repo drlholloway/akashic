@@ -1,0 +1,21 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-mosfet-booster",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Jack Orman's 2001 MOSFET Booster (muzique.com), a small but legible GIF; single BS170 common-source stage with a 5k gain pot.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "100k", "R", ""],
+  ["R2", "62k", "R", ""],
+  ["R3", "10M", "R", ""],
+  ["R4", "2.7k", "R", ""],
+  ["R5", "2.7k", "R", ""],
+  ["C1", ".001uF", "C", ""],
+  ["C2", "47pF", "C", ""],
+  ["C3", "10uF", "C", "electrolytic"],
+  ["C4", ".1uF", "C", ""],
+  ["C5", "100uF", "C", "electrolytic"],
+  ["D1", "9.1V zener", "D", "gate protection zener, gate to source"],
+  ["Q1", "BS170", "Q", "N-channel MOSFET"],
+  ["Gain", "5k", "POT", "R6, wired as a variable resistor in series with C5"]
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-muffer",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Jack Orman's Muffer (2000), a one-transistor fuzz with antiparallel diodes in the collector-base feedback; small but legible GIF. The DPDT stompswitch is skipped.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "100k", "R", ""],
+  ["R2", "470k", "R", ""],
+  ["R3", "10k", "R", ""],
+  ["R4", "150", "R", ""],
+  ["C1", "1uF", "C", ""],
+  ["C2", "1uF", "C", ""],
+  ["C3", "10uF", "C", "electrolytic"],
+  ["D1", "1N914", "D", ""],
+  ["D2", "1N914", "D", ""],
+  ["Q1", "2N5088", "Q", "NPN; alternatives given: 2N5210, BC108 or 2SC1684"],
+  ["Vol", "A100k", "POT", "R5, drawn 100k-A"]
+ ]
+}

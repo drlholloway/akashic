@@ -1,0 +1,28 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-simple-two-pole-state-variable-filter",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Clean M. Danielson 2002 drawing of a 2-pole state variable filter with four summed inputs and LP/BP/HP/notch outputs; the fourth input is mislabeled 'Signal Input 3' on the drawing, and no power pins or decoupling are shown.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "100k", "R", ""],
+  ["R2", "100k", "R", ""],
+  ["R3", "100k", "R", ""],
+  ["R4", "100k", "R", ""],
+  ["R5", "27k", "R", ""],
+  ["R6", "100k", "R", ""],
+  ["R7", "100k", "R", ""],
+  ["R8", "15k", "R", ""],
+  ["R9", "100k", "R", ""],
+  ["R10", "100k", "R", ""],
+  ["R11", "100k", "R", ""],
+  ["C1", "100n", "C", ""],
+  ["C2", "100n", "C", ""],
+  ["U1", "CA3140", "IC", ""],
+  ["U2", "CA3140", "IC", ""],
+  ["U3", "CA3140", "IC", ""],
+  ["U4", "TL082", "IC", "notch summer and highpass buffer"],
+  ["U5", "TL082", "IC", "lowpass and bandpass buffers"],
+  ["P1", "A100k", "POT", "dual-gang (P1a/P1b), 100k LOG; frequency"],
+  ["P2", "100k", "POT", "feedback/resonance (Q) control"]
+ ]
+}

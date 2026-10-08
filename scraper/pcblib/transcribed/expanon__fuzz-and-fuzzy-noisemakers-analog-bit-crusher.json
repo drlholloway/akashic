@@ -1,0 +1,28 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-analog-bit-crusher",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Colin Raffel 2006 analog bit crusher: J201 sample/hold clocked by an op-amp pulse oscillator, with op-amp input and output buffers. Op amp sections X1-X4 have no part number.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "1M", "R", ""],
+  ["R2", "1M", "R", ""],
+  ["R3", "1M", "R", ""],
+  ["R4", "1M", "R", ""],
+  ["R5", "100k", "R", ""],
+  ["R6", "22k", "R", ""],
+  ["R7", "100k", "R", ""],
+  ["R8", "100ohm", "R", ""],
+  ["R10", "100k", "R", ""],
+  ["R11", "100k", "R", ""],
+  ["C1", ".1uF", "C", ""],
+  ["C2", ".001uF", "C", ""],
+  ["C3", ".1uF", "C", ""],
+  ["C4", ".0033uF", "C", ""],
+  ["C5", "10uF", "C", "electrolytic"],
+  ["D1", "1N914", "D", "per the note 'Diodes are 1n914'"],
+  ["D2", "1N914", "D", "per the note 'Diodes are 1n914'"],
+  ["Q1", "J201", "Q", "JFET used as sample/hold switch"],
+  ["×1", "?", "IC", "op amps X1-X4 with no part number: one quad op amp, or (suggested) two duals, one for the buffers X1/X2 and one for the clock oscillator X3/X4"],
+  ["Frequency", "1M", "POT", "R9, drawn '1M-2M', wired as a variable resistor; 2M or more gives a lower frequency range"]
+ ]
+}

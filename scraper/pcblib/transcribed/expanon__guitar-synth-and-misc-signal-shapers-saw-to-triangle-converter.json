@@ -1,0 +1,20 @@
+{
+ "id": "expanon:guitar-synth-and-misc-signal-shapers-saw-to-triangle-converter",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Clean Tony Clark (1997) schematic of a saw-to-triangle converter (precision rectifier plus level-shifting op amp) on a TL082, run from +/-15V.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "10K", "R", ""],
+  ["R2", "10K", "R", ""],
+  ["R3", "10K", "R", ""],
+  ["R4", "50K", "R", ""],
+  ["R5", "100K", "R", ""],
+  ["R6", "10K", "R", ""],
+  ["R7", "100K", "R", ""],
+  ["C1", "220pF", "C", "filtering capacitor, marked optional"],
+  ["D1", "1N5817", "D", "Schottky"],
+  ["D2", "1N5817", "D", "Schottky"],
+  ["D3", "1N5817", "D", "Schottky"],
+  ["U1", "TL082", "IC", "dual op amp, U1A and U1B"]
+ ]
+}

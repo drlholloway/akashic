@@ -1,0 +1,30 @@
+{
+ "id": "expanon:compressors-gates-and-limiters-ssm2166-compressor",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Clean Jack Orman (1998) drawing of the SSM2166 datasheet compressor/limiter with a 78L05 regulator; J1 is a power-down jumper to ground and is not listed. R3/R6/R7/R10 are drawn as variable resistors with no indication which are panel pots; R3 (rotation point) taken as a trimmer.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "10k", "R", ""],
+  ["R2", "10k", "R", ""],
+  ["R4", "1k", "R", ""],
+  ["R8", "1k", "R", ""],
+  ["R9", "1k", "R", ""],
+  ["R12", "100k", "R", ""],
+  ["C1", "0.1uF", "C", ""],
+  ["C2", "1uF", "C", "electrolytic"],
+  ["C3", "0.1uF", "C", ""],
+  ["C4", "4.7uF", "C", "electrolytic"],
+  ["C5", ".01uF", "C", ""],
+  ["C6", "10uF", "C", "electrolytic"],
+  ["C7", "10uF", "C", "electrolytic"],
+  ["C8", "10uF", "C", "electrolytic"],
+  ["C9", "33pF", "C", ""],
+  ["C10", "1uF", "C", "electrolytic"],
+  ["×1", "SSM2166", "IC", "Analog Devices compressor/limiter; no designator drawn"],
+  ["×1", "78L05", "IC", "5V regulator; no designator drawn"],
+  ["Comp Ratio", "25k", "POT", "R6, drawn as a variable resistor"],
+  ["Noise Gate", "1M", "POT", "R7, drawn as a variable resistor"],
+  ["Gain Adj", "10k", "POT", "R10, drawn as a variable resistor"],
+  ["R3", "50k", "TRIM", "rotation point adjust"]
+ ]
+}

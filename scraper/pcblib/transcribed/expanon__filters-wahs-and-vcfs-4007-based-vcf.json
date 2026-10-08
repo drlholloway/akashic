@@ -1,0 +1,30 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-4007-based-vcf",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Clean article schematic (figure 1) of Labolida's Sallen-Key VCF using CD4007 MOSFETs as variable resistors; no pots, frequency and resonance are control-voltage inputs, +/-5V supply.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "100K", "R", ""],
+  ["R2", "470R", "R", ""],
+  ["R3", "1M", "R", "FRQ control voltage input"],
+  ["R4", "1M", "R", "RES control voltage input"],
+  ["R5", "1K", "R", ""],
+  ["R6", "4K7", "R", ""],
+  ["R7", "220R", "R", ""],
+  ["R8", "10K", "R", ""],
+  ["R9", "10K", "R", ""],
+  ["R10", "1K", "R", ""],
+  ["C1", "3N3", "C", ""],
+  ["C2", "10N", "C", ""],
+  ["C3", "10N", "C", ""],
+  ["C4", "10N", "C", ""],
+  ["C5", "680P", "C", ""],
+  ["C6", "10uF", "C", "electrolytic, drawn 10U"],
+  ["C7", ".1uF", "C", "supply decoupling"],
+  ["C8", ".1uF", "C", "supply decoupling"],
+  ["D1", "1N4148", "D", ""],
+  ["D2", "1N4148", "D", ""],
+  ["IC1", "CD4007", "IC", "MOSFET pairs used as voltage-controlled resistors"],
+  ["IC2", "TL084", "IC", "two sections used"]
+ ]
+}
