@@ -1,0 +1,24 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-chebyshev-bandpass-filter",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "SPICE-style simulation schematic of a three-stage multiple-feedback Chebyshev bandpass filter, with signal and +/- supply sources; computed (non-standard) resistor values as drawn.",
+ "uncertain": [],
+ "rows": [
+  ["R10", "13.68K", "R", ""],
+  ["R11", "43.1", "R", ""],
+  ["R12", "1.99K", "R", ""],
+  ["R13", "5.644K", "R", ""],
+  ["R14", "76.7", "R", ""],
+  ["R15", "2.88K", "R", ""],
+  ["R16", "9.77K", "R", ""],
+  ["R17", "29.5", "R", ""],
+  ["R18", "1.374K", "R", ""],
+  ["C7", ".1uF", "C", ""],
+  ["C8", ".1uF", "C", ""],
+  ["C9", ".1uF", "C", ""],
+  ["C10", ".1uF", "C", ""],
+  ["C11", ".1uF", "C", ""],
+  ["C12", ".1uF", "C", ""],
+  ["×3", "?", "IC", "op amps (one per stage), no designator or part number; simulation op-amp model"]
+ ]
+}

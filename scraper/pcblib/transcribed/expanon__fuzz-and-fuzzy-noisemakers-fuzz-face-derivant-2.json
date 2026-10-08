@@ -1,0 +1,26 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-fuzz-face-derivant-2",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "'jh2 mod' silicon Fuzz Face derivative drawn in a SPICE editor: two 2N3904s with gain, bias and volume controls. Several caps are given as value ranges.",
+ "uncertain": [
+  "Gain/Bias: trailing 'l' on 1kl and 4.7kl read as linear taper",
+  "C1, C2, C3: drawing gives value ranges; lower value listed"
+ ],
+ "rows": [
+  ["R3", "10k", "R", ""],
+  ["R5", "10k", "R", ""],
+  ["R7", "68k", "R", ""],
+  ["R8", "100", "R", ""],
+  ["R9", "1k", "R", ""],
+  ["R12", "1k", "R", ""],
+  ["C1", ".1uF", "C", "drawn as a range .1uf-1uf"],
+  ["C2", "33uF", "C", "drawn as a range 33uf-47uf; on the gain pot wiper"],
+  ["C3", "4.7uF", "C", "drawn as a range 4.7uf-10uf; input"],
+  ["C4", ".01uF", "C", "across R9"],
+  ["Q1", "2N3904", "Q", "drawn Q2N3904 (SPICE model name)"],
+  ["Q2", "2N3904", "Q", "drawn Q2N3904 (SPICE model name)"],
+  ["Gain", "B1K", "POT", "R2, drawn 1kl (l read as linear)"],
+  ["Bias", "B4.7K", "POT", "R1, drawn 4.7kl (l read as linear); variable resistor"],
+  ["Volume", "A500K", "POT", "R11, drawn 500ka"]
+ ]
+}

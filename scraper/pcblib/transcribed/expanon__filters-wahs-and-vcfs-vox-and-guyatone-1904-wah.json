@@ -1,0 +1,39 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-vox-and-guyatone-1904-wah",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Clean Vox V-1904 factory drawing (1981) with a parts legend: an LM1458 auto-wah/crossover box with a C500K pedal pot (R6) and a 2M trimmer; R4 is printed twice (470K bias and 4.7K LED resistor).",
+ "uncertain": [
+  "R10: value written over itself, reads like 33K but could be 22K"
+ ],
+ "rows": [
+  ["R1", "47K", "R", ""],
+  ["R2", "470K", "R", ""],
+  ["R3", "470K", "R", ""],
+  ["R4", "470K", "R", "drawn twice: the 4.7K LED resistor is also labeled R4"],
+  ["R4", "4.7K", "R", "LED resistor; the drawing reuses R4 (clash with the 470K R4)"],
+  ["R5", "150K", "R", ""],
+  ["R7", "47K", "R", ""],
+  ["R8", "3.3M", "R", ""],
+  ["R9", "100", "R", ""],
+  ["R10", "33K", "R", "value hard to read"],
+  ["R11", "10K", "R", ""],
+  ["R12", "12K", "R", ""],
+  ["C1", "0.005uF", "C", "K tolerance"],
+  ["C2", "0.005uF", "C", "K tolerance"],
+  ["C3", "10uF", "C", "16V electrolytic"],
+  ["C4", "0.001uF", "C", "K tolerance"],
+  ["C5", "0.056uF", "C", ""],
+  ["C6", "0.002uF", "C", ""],
+  ["C7", "10uF", "C", "16V bipolar (BP)"],
+  ["×1", "22uF", "C", "25V electrolytic at the DC jack, no designator"],
+  ["D1", "1S953", "D", ""],
+  ["D2", "1S953", "D", "drawn unlabeled at the second op amp's output"],
+  ["D3", "RD5AM", "D", "5V zener"],
+  ["D4", "TLR-102", "LED", ""],
+  ["Q1", "2SC693F", "Q", "Sanyo"],
+  ["IC", "LM1458N", "IC", "dual op amp, both halves used; no number on the drawing"],
+  ["R6", "C500K", "POT", "pedal pot, C taper"],
+  ["R13", "2M", "TRIM", "variable resistor in series with R12"],
+  ["SW1", "DPDT", "SW", "6-pin (6P) switch, SW1-1/SW1-2"]
+ ]
+}

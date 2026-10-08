@@ -19,6 +19,9 @@ BASE = "https://www.experimentalistsanonymous.com/diy/"
 INDEX = BASE + "index.php?dir=Schematics"
 _BRANDS = re.compile(r"^(boss|dod|mxr|ehx|electro[- ]?harmonix|ibanez|maestro|proco|pro co|danelectro|arion|fender|vox|marshall|roland|yamaha|pearl|guyatone|colorsound|sola sound|univox|shin[- ]?ei|jen|ross|dallas|way huge|z\.?vex|zvex|fulltone|keeley|klon|lovetone|tech 21|digitech|morley|dunlop|ampeg|peavey|mu-?tron|musitronics|sovtek|tycobrahe|mosrite|gibson|ace tone|aria|korg|kay|dunlop|crybaby|cry baby|frantone|lovepedal|catalinbread|earthquaker|eqd|walrus|bjfe|bjf|mad professor|xotic|analogman|hermida|menatone|barber|voodoo lab|emma|carl martin|t-?rex|line 6|chandler|prescription|rocktron|electra|hohner|elka|jordan|foxx|systech|seamoon|craig anderton|anderton|coron|multivox|washburn|aria|aria pro|pearl|nobels|behringer|tone ?bender|big muff|fuzz face|tube screamer|rat\b|rangemaster|octavia|uni-?vibe|small stone|phase 90|blues driver|dyna comp|orange squeezer)\b", re.I)
 _SKIP_DIRS = {"MIDI", "OOP Japanese Electronics Book", "Power Supplies and Other Useful Stuff", "Miscellaneous"}
+# slug -> the page of a multi-page PDF that holds the schematic, found by looking (page 1 is often a cover,
+# a parts list or an article's first page). Unlisted PDFs use page 1.
+_PAGE: dict[str, int] = {"chorus-dod-fx64": 2}
 
 
 def _slug(folder: str, title: str) -> str:
@@ -73,19 +76,20 @@ class ExpAnon(Adapter):
         blob = self.f.get_file(file_url, f".{ext}")
         if not blob:
             return c
-        png = CACHE_DIR / self.vendor / f"{slug}-schematic.png"
+        page = _PAGE.get(slug, 1) if ext == "pdf" else 1
+        png = CACHE_DIR / self.vendor / (f"{slug}-schematic.png" if page == 1 else f"{slug}-p{page}-schematic.png")
         png.parent.mkdir(parents=True, exist_ok=True)
         try:
             if ext == "pdf":
                 if blob.read_bytes()[:5] != b"%PDF-":
                     return c
-                rows = schematic_bom(blob, 1)
+                rows = schematic_bom(blob, page)
                 if not png.exists():
-                    render_page(blob, 1, png, dpi=200)
+                    render_page(blob, page, png, dpi=200)
                 if len(rows) < 3:  # decided on the strict pairing: a scan's stray text layer should still go to OCR
                     rows = ocr_schematic_bom(png)
                 else:
-                    rows = schematic_bom(blob, 1, wide=True)  # traced drawings often set a label well off its part
+                    rows = schematic_bom(blob, page, wide=True)  # traced drawings often set a label well off its part
             else:
                 if not png.exists():
                     from PIL import Image
@@ -100,7 +104,7 @@ class ExpAnon(Adapter):
         except Exception:  # noqa: BLE001 - corrupt or exotic image
             return c
         c.schematic_local = str(png.relative_to(DATA_DIR))
-        c.schematic_page = 1
+        c.schematic_page = page
         c.bom = rows
         pots = [r for r in rows if r.category == "POT"]
         if pots:
