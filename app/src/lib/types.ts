@@ -66,6 +66,8 @@ export interface PartEntry {
 	datasheet?: string;
 	/** The hosted file is a row in a maker's selector table, not a full datasheet. */
 	selector?: boolean;
+	/** Every sheet for the part, first its own: a discontinued part made by several fabs has one per maker. */
+	datasheets?: { href: string; maker: string; selector: boolean }[];
 	count: number;
 	slug: string;
 }

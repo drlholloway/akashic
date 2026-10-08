@@ -67,6 +67,92 @@ COVERED_BY: dict[str, list[str]] = {
 }
 
 
+# Downloads that are only a row in a selector table or cross-reference for a part that already has a
+# full sheet, or a sheet for a different part than the name says: never hosted. Set by eye.
+NOT_HOSTED = {
+    "2N3392.pdf", "2SC1815.pdf", "2N5306.pdf", "2N3565.pdf",  # Fairchild selector tables
+    "2N404A.pdf", "2SK30A.pdf",                     # cross-reference tables from data books
+    "TDA7052A_AT.pdf",                              # the TDA7052A, a different chip from the TDA7052
+}
+
+# A part made by several fabs keeps every sheet: the first is <sheet>.pdf, the rest
+# <sheet>.<Maker>.pdf, and HOSTED_LIST records them per sheet, with each file's maker.
+HOSTED_LIST = Path(__file__).with_name("hosted.json")
+
+# Makers, by a spelling in a sheet's text; the first one named in its opening pages is taken.
+MAKERS: list[tuple[str, str]] = [
+    ("Motorola", r"motorola"), ("Philips", r"philips"), ("Mullard", r"mullard"), ("Valvo", r"valvo"),
+    ("Fairchild", r"fairchild"), ("National Semiconductor", r"national\s+semiconductor"),
+    ("Texas Instruments", r"texas\s+instruments"), ("RCA", r"\bRCA\b"), ("General Electric", r"general\s+electric"),
+    ("Toshiba", r"toshiba"), ("Hitachi", r"hitachi"), ("NEC", r"\bNEC\b"), ("Sanyo", r"sanyo"),
+    ("Mitsubishi", r"mitsubishi"), ("Panasonic", r"panasonic|matsushita"), ("Rohm", r"\brohm\b"),
+    ("Siemens", r"siemens"), ("Telefunken", r"telefunken"), ("SGS", r"\bSGS\b"), ("ITT", r"\bITT\b"),
+    ("Central Semiconductor", r"central\s+semiconductor"), ("NTE", r"\bNTE\b"), ("Comset", r"comset"),
+    ("onsemi", r"on\s+semiconductor|onsemi"), ("New Jersey Semiconductor", r"new\s+jersey\s+semi"),
+    ("Intersil", r"intersil"), ("Harris", r"\bharris\b"), ("Exar", r"\bexar\b"), ("Signetics", r"signetics"),
+    ("Analog Devices", r"analog\s+devices"), ("PerkinElmer", r"perkin\s*elmer"), ("Silonex", r"silonex"),
+    ("Taitron", r"taitron"), ("BKC International", r"bkc\s+international"), ("Galaxy", r"galaxy\s+micro"),
+    ("Diodes Inc.", r"diodes\s+inc"), ("Germanium Power Devices", r"germanium\s+power"),
+]
+# A maker named in a downloaded file's name ('1N270.NTE.pdf', '2SK30ATM-Y.Tosh.A-139.pdf').
+_NAMED = {"nte": "NTE", "tosh": "Toshiba", "toshiba": "Toshiba", "fsc": "Fairchild", "fairchild": "Fairchild",
+          "on": "onsemi", "onsemi": "onsemi", "central": "Central Semiconductor", "centralsemi": "Central Semiconductor",
+          "newjerseysemi": "New Jersey Semiconductor", "philips": "Philips", "comset": "Comset", "valvo": "Valvo",
+          "motorola": "Motorola", "mullard": "Mullard"}
+
+
+def maker_of(name: str, text: str) -> str:
+    """The fab a sheet comes from: named in the file name, else the first maker its text names, else ''.
+    A logo with no text gives '' (set it by eye in hosted.json)."""
+    for w in re.split(r"[ ._,\-]+", Path(name).stem.lower()):
+        if w in _NAMED:
+            return _NAMED[w]
+    hits = [(m.start(), n) for n, rx in MAKERS for m in [re.search(rx, text, re.I)] if m]
+    return min(hits)[1] if hits else ""
+
+
+def hosted_list() -> dict:
+    """{'sheets': {sheet: [file, ...]}, 'makers': {file: maker}}; the first file is the sheet's own."""
+    try:
+        return json.loads(HOSTED_LIST.read_text())
+    except (OSError, ValueError):
+        return {"sheets": {}, "makers": {}}
+
+
+def sheets_of(sheet: str) -> list[str]:
+    """Every hosted file for a sheet, its own first."""
+    files = hosted_list()["sheets"].get(sheet) or []
+    own = f"{sheet}.pdf"
+    if own not in files and (HOSTED / own).exists():
+        files = [own, *files]
+    return [f for f in files if (HOSTED / f).exists()]
+
+
+def _fingerprint(path: Path) -> str:
+    """Pages, text and a small render of page 1: equal for two cleaned copies of one download."""
+    import hashlib
+    import pymupdf as fitz
+    doc = fitz.open(path)
+    h = hashlib.sha256(str(doc.page_count).encode())
+    for pg in doc:
+        h.update(pg.get_text().encode())
+    if doc.page_count:
+        h.update(doc[0].get_pixmap(dpi=24).samples)
+    return h.hexdigest()
+
+
+def all_sheets(part: str, link: str) -> list[dict]:
+    """Every sheet to show for a part whose link is `link`: a hosted part's own sheet and the other
+    fabs' sheets beside it, each with its maker; a maker's link or a covering sheet stands alone."""
+    if link.startswith("http") or not link:
+        return [{"href": link, "maker": "", "selector": False}] if link else []
+    stem = Path(link).stem
+    own = next((k for k, vs in DISCONTINUED.items() if part in {k, *vs}), "")
+    files = sheets_of(stem) if stem == own else [Path(link).name]
+    makers = hosted_list()["makers"]
+    return [{"href": f"datasheets/{f}", "maker": makers.get(f, ""), "selector": Path(f).stem in SELECTOR} for f in files]
+
+
 def is_selector(link: str) -> bool:
     """A hosted link ('datasheets/AC128.pdf') whose file is a selector table."""
     return not link.startswith("http") and Path(link).stem in SELECTOR
@@ -230,21 +316,23 @@ def _text(page) -> str:
     return t + _ocr(page)
 
 
-def host(src: Path, sheet: str, others=(), force: bool = False) -> tuple[Path | None, str, set[str]]:
-    """Copy an archived datasheet into app/static/datasheets/<sheet>.pdf without the archive's ad
-    pages, watermarks, links and metadata, and without trailing pages about another part (the next
-    sheet of a data book). Returns (path, what was done, the names in `others` the sheet mentions);
-    refused (None, reason, {}) when no spelling of the part is in its first pages."""
+def host(src: Path, sheet: str, others=(), force: bool = False) -> tuple[Path | None, str, set[str], str]:
+    """Copy an archived datasheet into app/static/datasheets/ without the archive's ad pages,
+    watermarks, links and metadata, and without trailing pages about another part (the next sheet
+    of a data book). The first sheet for a part is <sheet>.pdf; another fab's sheet for it is kept
+    beside it as <sheet>.<Maker>.pdf, and a file already hosted (under any name) is not copied
+    again. Returns (path, what was done, the names in `others` the sheet mentions, its maker);
+    refused (None, reason, {}, '') when no spelling of the part is in its first pages."""
     import pymupdf as fitz
     doc = fitz.open(src)
     if doc.page_count == 0:
-        return None, "not a PDF", set()
+        return None, "not a PDF", set(), ""
     if sheet in PAGES:
         doc.select([i - 1 for i in PAGES[sheet] if i <= doc.page_count])
     ads = [i for i, pg in enumerate(doc) if _AD.search(pg.get_text()) and not pg.get_images() and len(pg.get_text().split()) < 150]
     keep = [i for i in range(doc.page_count) if i not in ads]
     if not keep:
-        return None, "only ad pages", set()
+        return None, "only ad pages", set(), ""
     names = [sheet, *DISCONTINUED.get(sheet, [])]
     text = {i: _text(doc[i]) for i in keep}
     if not force and not _names_in(" ".join(text[i] for i in keep[:2]), names):
@@ -252,7 +340,7 @@ def host(src: Path, sheet: str, others=(), force: bool = False) -> tuple[Path | 
             if not _has_text(doc[i]) and shutil.which("tesseract"):
                 text[i] += " ".join(_ocr(doc[i], r) for r in (90, 270))
         if not _names_in(" ".join(text[i] for i in keep[:2]), names):
-            return None, f"{sheet} not found on its first pages (OCR); check it and pass force", set()
+            return None, f"{sheet} not found on its first pages (OCR); check it and pass force", set(), ""
     other = 0
     # Trailing pages with a text layer that never name the part: a publisher's legal page, the next
     # sheet of a data book. Scans are left alone, as OCR can miss the name on a page of graphs.
@@ -274,10 +362,25 @@ def host(src: Path, sheet: str, others=(), force: bool = False) -> tuple[Path | 
     doc.set_metadata({k: "" for k in doc.metadata if k not in ("format", "encryption")} | {"title": f"{sheet} datasheet"})
     doc.del_xml_metadata()
     HOSTED.mkdir(parents=True, exist_ok=True)
-    dst = HOSTED / f"{sheet}.pdf"
-    doc.save(dst, garbage=4, deflate=True)
+    maker = maker_of(src.name, " ".join(text[i] for i in keep[:2]))
+    mentioned = _names_in(" ".join(text[i] for i in keep), others, fuzzy=False)
     done = [f"{len(keep)} pages"] + [f"{n} {w} removed" for n, w in ((len(ads), "ad pages"), (other, "trailing pages on other parts"), (marks, "watermarks")) if n]
-    return dst, ", ".join(done), _names_in(" ".join(text[i] for i in keep), others, fuzzy=False)
+    with tempfile.TemporaryDirectory() as d:
+        tmp = Path(d) / "sheet.pdf"
+        doc.save(tmp, garbage=4, deflate=True)
+        fp = _fingerprint(tmp)
+        same = next((h for h in sorted(HOSTED.glob("*.pdf")) if _fingerprint(h) == fp), None)
+        if same:
+            return same, f"already hosted as {same.name}", mentioned, maker
+        dst = HOSTED / f"{sheet}.pdf"
+        if dst.exists() and sheet not in SELECTOR:  # a full sheet replaces a selector table; another fab's sheet goes beside it
+            tag = re.sub(r"[^A-Za-z0-9]+", "", maker) or "alt"
+            dst = HOSTED / f"{sheet}.{tag}.pdf"
+            n = 2
+            while dst.exists():
+                dst, n = HOSTED / f"{sheet}.{tag}{n}.pdf", n + 1
+        shutil.copyfile(tmp, dst)
+    return dst, ", ".join(done), mentioned, maker
 
 
 def sheet_for(name: str) -> str:
@@ -285,7 +388,7 @@ def sheet_for(name: str) -> str:
     package or a range: '2SK30A-GR.pdf', '1N270.NTE.pdf', '2SK30ATM-Y.Tosh.A-139.pdf', '2N3390-2N3393.pdf'."""
     stem = Path(name).stem
     spellings = {_norm(x): sheet for sheet, xs in DISCONTINUED.items() for x in [sheet, *xs]}
-    words = [stem, *re.split(r"[ ._]+", stem)]
+    words = [stem, *re.split(r"[ ._,]+", stem)]
     words += [w for x in words for w in x.split("-")]
     for w in map(_norm, words):                      # a spelling as written
         if w in spellings:

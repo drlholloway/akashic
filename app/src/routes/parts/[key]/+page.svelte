@@ -35,9 +35,13 @@
 		<p class="label"><a href="{base}/parts">Parts</a> · {PART_CATEGORY_NAMES[data.part.category] ?? data.part.category}</p>
 		<h1 class="mono">{data.part.value}</h1>
 		<p class="lede">{data.rows.length} {data.rows.length === 1 ? 'circuit uses' : 'circuits use'} this part{#if data.part.types.length}. Listed as: {data.part.types.join('; ')}{/if}.</p>
-		{#if data.part.datasheet}
+		{#if (data.part.datasheets?.length ?? 0) > 1}
+			{@const sheets = data.part.datasheets ?? []}
+			<p class="sheet">Datasheets: {#each sheets as d, i}{#if i}<span class="dim">{' · '}</span>{/if}<a href="{base}/{d.href}" target="_blank" rel="noopener">{d.maker || `copy ${i + 1}`}{d.selector ? ' (selector table)' : ''}</a>{/each} <span class="dim">· archived copies from {sheets.length} fabs; the part is discontinued and the makers no longer publish it</span></p>
+		{:else if data.part.datasheet}
+			{@const maker = data.part.datasheets?.[0]?.maker}
 			{@const hosted = !/^https?:/.test(data.part.datasheet)}
-			<p class="sheet"><a href={hosted ? `${base}/${data.part.datasheet}` : data.part.datasheet} target="_blank" rel="noopener">{data.part.selector ? 'Selector table' : 'Datasheet'}</a> <span class="dim">· {data.part.selector ? 'a row in a maker\'s catalog, not a full datasheet; the part is discontinued' : hosted ? 'archived copy; the part is discontinued and the maker no longer publishes it' : `from ${new URL(data.part.datasheet).hostname.replace(/^www\./, '')}`}</span></p>
+			<p class="sheet"><a href={hosted ? `${base}/${data.part.datasheet}` : data.part.datasheet} target="_blank" rel="noopener">{data.part.selector ? 'Selector table' : 'Datasheet'}</a> <span class="dim">· {data.part.selector ? 'a row in a maker\'s catalog, not a full datasheet; the part is discontinued' : hosted ? `archived copy${maker ? ` from ${maker}` : ''}; the part is discontinued and the maker no longer publishes it` : `from ${new URL(data.part.datasheet).hostname.replace(/^www\./, '')}`}</span></p>
 		{/if}
 	</header>
 	{#if subs}

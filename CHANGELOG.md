@@ -6,6 +6,7 @@ GitHub Release notes.
 ## Unreleased
 
 ### Added
+- Datasheets from more than one fab: a discontinued part whose sheet exists from several makers now links every one, named by maker (2N2646 from Philips and Comset, 2N4124 from Fairchild and onsemi), and a single archived sheet says whose it is. The 2N5133 gets New Jersey Semiconductor's sheet.
 - Eff Dub Audio: 14 free DIY projects from the blog (The Snitch RAT clone, TweakTone delay, Bodhi
   Zendrive, Box of Hall reverb, DuoVibe, Wahscillator and more). Parts come straight from the Eagle
   schematics in each project's file pack, which are exact; schematics posted only as images were

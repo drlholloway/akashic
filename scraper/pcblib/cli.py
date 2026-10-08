@@ -193,12 +193,11 @@ def datasheets(add: list[str] = typer.Option(None, help="'CAT:PART=URL', a link 
     never exported. Candidates on hosts that block scripts (onsemi, Analog Devices, ST, Nexperia)
     are written to data/cache/datasheets/to-check.json for checking in a browser; record a good one
     with --add 'Q:2N3904=https://...'."""
-    import hashlib
     import json
     import re
     import shutil
     from urllib.parse import urlparse
-    from .datasheets import COVERED_BY, DISCONTINUED, FINDCHIPS, HOSTED, TABLE, candidates, has_own, is_selector, part_like, sheet_for, table
+    from .datasheets import COVERED_BY, DISCONTINUED, FINDCHIPS, HOSTED, HOSTED_LIST, NOT_HOSTED, SELECTOR, TABLE, candidates, has_own, hosted_list, is_selector, part_like, sheet_for, sheets_of, table
     from .datasheets import host as host_pdf
     from .fetch import Fetcher
     from .paths import CACHE_DIR, DATA_DIR
@@ -221,26 +220,31 @@ def datasheets(add: list[str] = typer.Option(None, help="'CAT:PART=URL', a link 
     sheet_of = {v: k for k, vs in DISCONTINUED.items() for v in {k, *vs}}
     unlinked = {v for v, p in by_value.items() if p["category"] in ("IC", "Q", "D", "OPTO") and part_like(v)
                 and not known.get(f'{p["category"]}:{v}', "").startswith("http")}
-    served: dict[str, Path] = {}
+    listed = hosted_list()
     for src in [x for h in host or [] for x in (sorted(h.expanduser().glob("*.pdf")) if h.expanduser().is_dir() else [h.expanduser()])]:
         sheet = sheet_for(src.name)
         if not sheet:
             con.print(f"[yellow]skip[/] {src.name}: not a part in datasheets.DISCONTINUED")
             continue
+        if src.name in NOT_HOSTED:
+            con.print(f"[yellow]skip[/] {src.name}: datasheets.NOT_HOSTED (a selector row or another part)")
+            continue
         own = {sheet, *DISCONTINUED[sheet]}
-        dst, why, mentioned = host_pdf(src, sheet, others=unlinked - own, force=force)
+        dst, why, mentioned, maker = host_pdf(src, sheet, others=unlinked - own, force=force)
         if not dst:
             con.print(f"[red]refused[/] {src.name}: {why}")
             continue
-        digest = hashlib.sha256(src.read_bytes()).hexdigest()
-        same = served.get(digest)
-        served.setdefault(digest, dst)
-        if same and same != dst:  # one download saved under two names (AC128 and AC176 from one catalog): serve it once
-            dst.unlink()
-            dst, why = same, f"{why}, same file as {same.name}"
+        files = sheets_of(sheet)
+        if dst.name not in files and not (dst.stem in SELECTOR and files):  # a catalog row adds nothing beside a sheet
+            files.append(dst.name)
+        if len(files) > 1:  # one file is the default, <sheet>.pdf
+            listed["sheets"][sheet] = files
+        if maker and not listed["makers"].get(dst.name):
+            listed["makers"][dst.name] = maker
+        HOSTED_LIST.write_text(json.dumps({k: dict(sorted(v.items())) for k, v in listed.items()}, indent=1, ensure_ascii=False) + "\n")
         for v in own & by_value.keys():
-            known[f'{by_value[v]["category"]}:{v}'] = f"datasheets/{dst.name}"
-        con.print(f"[green]hosted[/] {sheet} <- {src.name} ({why}, {dst.stat().st_size // 1024} KB)")
+            known[f'{by_value[v]["category"]}:{v}'] = f"datasheets/{files[0]}" if files else f"datasheets/{dst.name}"
+        con.print(f"[green]hosted[/] {sheet} <- {src.name} as {dst.name} ({why}, {maker or 'maker not named'}, {dst.stat().st_size // 1024} KB)")
         for v in sorted(mentioned):
             key = f'{by_value[v]["category"]}:{v}'
             have = known.get(key, "")
