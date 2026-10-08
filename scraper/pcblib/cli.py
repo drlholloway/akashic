@@ -254,6 +254,16 @@ def datasheets(add: list[str] = typer.Option(None, help="'CAT:PART=URL', a link 
                 con.print(f"    also covers {key}")
             elif v not in sheet_of:
                 con.print(f"    [dim]mentions {key} (not discontinued; not linked)[/]")
+    for sheet, spellings in DISCONTINUED.items():  # every spelling of a hosted sheet links to it ('2SC1815GR', 'C1815')
+        files = sheets_of(sheet)
+        for v in {sheet, *spellings} & by_value.keys() if files else ():
+            key = f'{by_value[v]["category"]}:{v}'
+            have = known.get(key, "")
+            if is_selector(f"datasheets/{files[0]}") and have and not is_selector(have):
+                continue  # a full sheet that covers the part beats its own selector row
+            if not have.startswith("http") and have != f"datasheets/{files[0]}":
+                known[key] = f"datasheets/{files[0]}"
+                con.print(f"spelling {key} <- {files[0]}")
     for sheet_file, covered in COVERED_BY.items():
         link = f"datasheets/{sheet_file}.pdf"
         if not (HOSTED / f"{sheet_file}.pdf").exists():

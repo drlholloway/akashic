@@ -6,7 +6,7 @@ GitHub Release notes.
 ## Unreleased
 
 ### Added
-- Datasheets from more than one fab: a discontinued part whose sheet exists from several makers now links every one, named by maker (2N2646 from Philips and Comset, 2N4124 from Fairchild and onsemi), and a single archived sheet says whose it is. The 2N5133 gets New Jersey Semiconductor's sheet.
+- Datasheets from more than one fab: a discontinued part whose sheet exists from several makers now links every one, named by maker (2N2646 from Philips and Comset, 2N4124 from Fairchild and onsemi), and a single archived sheet says whose it is. The 2N5133 gets New Jersey Semiconductor's sheet. The discontinued list grows from 84 to 210 sheets with the parts the newer parts lists brought in (Japanese small-signal transistors and JFETs such as the 2SC945, 2SK118 and 2SK117, germanium and Soviet types, Motorola MPS and HEP parts, the Reticon SAD1024 and Panasonic MN3001/3011/3204 BBDs, the SN76477, RC4195, LM394 and THAT4301), so the download worklist asks for them, and other spellings of a hosted part (2SC1815GR, C1815, NE570N, 2SK30ATM-Y) link to its sheet. 47 more parts link the maker's own sheet (TI's LF356, LM3900, RC4136 and CD4000 chips, Nisshinbo's NJM2902/2904).
 - Eff Dub Audio: 14 free DIY projects from the blog (The Snitch RAT clone, TweakTone delay, Bodhi
   Zendrive, Box of Hall reverb, DuoVibe, Wahscillator and more). Parts come straight from the Eagle
   schematics in each project's file pack, which are exact; schematics posted only as images were
