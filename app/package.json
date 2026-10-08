@@ -31,6 +31,7 @@
 	"overrides": {
 		"@sveltejs/kit": {
 			"cookie": "^0.7.2"
-		}
+		},
+		"sharp": "0.35.5"
 	}
 }
