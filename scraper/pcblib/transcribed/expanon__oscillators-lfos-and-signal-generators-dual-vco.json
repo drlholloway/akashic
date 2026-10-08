@@ -1,0 +1,37 @@
+{
+ "id": "expanon:oscillators-lfos-and-signal-generators-dual-vco",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Unfinished OrCAD draft of a dual triangle-core VCO (THAT140 expo, LM13700, CA3140 integrator, LM311): pages 1 and 2 are identical VCO1/VCO2 cores, page 3 the edge connector; no designators and about half the parts carry no value. Counts cover both cores.",
+ "uncertain": [
+  "40 resistors, 14 capacitors and all 6 trimmers have no value on the drawing",
+  "CA3046: two packages per core assumed since both are drawn as section A"
+ ],
+ "rows": [
+  ["×16", "100K", "R", "8 per VCO core"],
+  ["×4", "49.9K", "R", "2 per VCO core"],
+  ["×2", "24.9K", "R", "1 per VCO core"],
+  ["×2", "200K", "R", "1 per VCO core"],
+  ["×2", "4.99K", "R", "1 per VCO core"],
+  ["×2", "499", "R", "1 per VCO core"],
+  ["×4", "200", "R", "2 per VCO core, THAT140 emitters"],
+  ["×40", "?", "R", "20 per VCO core drawn as 'R' with no value (input mixer, expo converter, comparator, outputs)"],
+  ["×12", "?", "C", "6 per VCO core drawn as 'CAP' with no value (timing/integrator caps and supply decoupling)"],
+  ["×2", "?", "C", "polarized supply caps on the edge-connector sheet, no value"],
+  ["×10", "1N914", "D", "5 per VCO core"],
+  ["×4", "2N3906", "Q", "2 per VCO core"],
+  ["×4", "CA3046", "IC", "transistor array, two drawn per VCO core (both as Q?A, pins 1-5)"],
+  ["×2", "THAT140", "IC", "matched transistor array, one per VCO core"],
+  ["×2", "LF347", "IC", "quad op amp, one per VCO core"],
+  ["×2", "LF353", "IC", "dual op amp, one per VCO core"],
+  ["×2", "CA3140", "IC", "one per VCO core"],
+  ["×2", "LM311", "IC", "comparator, one per VCO core"],
+  ["×4", "LM336", "IC", "2.5V reference, two per VCO core"],
+  ["×1", "LM13700", "IC", "dual OTA shared: section A in VCO1, section B in VCO2"],
+  ["VCO1 Scale", "?", "TRIM", "no value drawn"],
+  ["VCO1 High Freq Track", "?", "TRIM", "no value drawn"],
+  ["VCO1 Ref", "?", "TRIM", "pot across the LM336 reference, unnamed, no value drawn"],
+  ["VCO2 Scale", "?", "TRIM", "no value drawn"],
+  ["VCO2 High Freq Track", "?", "TRIM", "no value drawn"],
+  ["VCO2 Ref", "?", "TRIM", "pot across the LM336 reference, unnamed, no value drawn"]
+ ]
+}

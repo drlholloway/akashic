@@ -1,0 +1,31 @@
+{
+ "id": "expanon:full-synths-drum-synths-and-misc-synth-poly-2044-envelope-follower-and-gate",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Hand-drawn Polyfusion 2044 envelope follower schematic (1977), clean and fully legible; no designators drawn, so parts are grouped by value. The three 1458s are labelled A, B, C, each used for both sections.",
+ "uncertain": [],
+ "rows": [
+  ["×6", "100K", "R", "1%: input, signal out, two summing, two rectifier"],
+  ["×3", "100K", "R", "741 feedback, 2N3904 base, gate comparator to 1458C"],
+  ["×2", "51K", "R", "op amp + input to ground"],
+  ["×1", "49.9K", "R", "1%"],
+  ["×1", "24K", "R", ""],
+  ["×1", "10K", "R", "1%"],
+  ["×1", "16.5K", "R", "1%"],
+  ["×1", "6.8K", "R", ""],
+  ["×2", "620", "R", "CV and gate outputs"],
+  ["×2", "1.0K", "R", "threshold divider; LED"],
+  ["×1", "470K", "R", "comparator bias to -"],
+  ["×1", "10M", "R", "comparator hysteresis"],
+  ["×2", "0.22uF", "C", "input coupling; SLOW response cap"],
+  ["×1", "0.015uF", "C", "FAST response cap"],
+  ["×1", "0.056uF", "C", "MED response cap"],
+  ["×5", "1N4148", "D", "2 input clamps, 2 rectifier, 1 gate clamp"],
+  ["Gate", "FLV-117", "LED", "gate indicator"],
+  ["×1", "2N3904", "Q", "LED driver"],
+  ["×1", "741", "IC", "input amp"],
+  ["×3", "1458", "IC", "dual op amps marked A, B, C"],
+  ["Output Level", "100K", "POT", ""],
+  ["Gate Threshold", "100K", "POT", ""],
+  ["Response", "SP3T", "SW", "Fast/Med/Slow, ST2-6 rotary"]
+ ]
+}

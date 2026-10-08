@@ -1,0 +1,33 @@
+{
+ "id": "expanon:oscillators-lfos-and-signal-generators-stereo-test-tone-oscillator",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "G. Forrest Cook 2003 stereo test tone generator: two LM324 square/triangle oscillators with low-pass filters, plus inverted output and virtual ground on a 1458.",
+ "uncertain": [],
+ "rows": [
+  ["×4", "100K", "R", "no designators on drawing"],
+  ["×2", "47K", "R", ""],
+  ["×2", "27K", "R", "low-tone filter"],
+  ["×2", "33K", "R", "high-tone filter"],
+  ["×3", "1K", "R", ""],
+  ["×2", "22K", "R", ""],
+  ["×1", "10K", "R", ""],
+  ["×1", "9.1K", "R", ""],
+  ["×2", "20K", "R", "virtual-ground divider"],
+  ["×1", "10n", "C", "low-tone integrator"],
+  ["×1", "6n8", "C", "high-tone integrator"],
+  ["×2", "20n", "C", ""],
+  ["×2", "10n", "C", "filter"],
+  ["×5", "100n", "C", ""],
+  ["×2", "2n2", "C", ""],
+  ["×1", "220uF", "C", "25V"],
+  ["×1", "10uF", "C", "16V"],
+  ["×1", "Diode", "D", "3A crowbar diode, no part number given"],
+  ["×1", "red", "LED", "power indicator"],
+  ["U1", "324", "IC", "LM324"],
+  ["U2", "324", "IC", "LM324"],
+  ["U3", "1458", "IC", "one half virtual ground, one half inverter"],
+  ["Output Level (Low)", "20K", "POT", ""],
+  ["Output Level (High)", "20K", "POT", ""],
+  ["Invert Level", "2K", "POT", ""]
+ ]
+}

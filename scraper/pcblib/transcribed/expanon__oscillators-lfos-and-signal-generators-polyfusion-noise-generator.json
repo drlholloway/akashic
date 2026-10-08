@@ -1,0 +1,37 @@
+{
+ "id": "expanon:oscillators-lfos-and-signal-generators-polyfusion-noise-generator",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Polyfusion white/pink/infra-red noise generator with 3130, TL081, 741 and 1458. No designators on the drawing.",
+ "uncertain": [
+  "SD10W: noise diode label read as 'SD 10W', part number unclear"
+ ],
+ "rows": [
+  ["×1", "1K", "R", "no designators on drawing"],
+  ["×2", "150K", "R", ""],
+  ["×1", "240K", "R", ""],
+  ["×3", "100K", "R", ""],
+  ["×2", "1.2K", "R", ""],
+  ["×4", "1M", "R", ""],
+  ["×3", "620", "R", ""],
+  ["×1", "1.5K", "R", ""],
+  ["×1", "1.8K", "R", ""],
+  ["×1", "18K", "R", ""],
+  ["×1", "51K", "R", ""],
+  ["×1", "10K", "R", ""],
+  ["×1", "470K", "R", ""],
+  ["×4", "0.1uF", "C", "drawn 0.1"],
+  ["×1", "47pF", "C", ""],
+  ["×2", "1uF", "C", ""],
+  ["×1", ".056uF", "C", "drawn .056"],
+  ["×1", "2.2uF", "C", ""],
+  ["×1", "SD10W", "D", "noise-source zener/diode labelled 'SD 10W'"],
+  ["×1", "3130", "IC", "CA3130"],
+  ["×1", "TL081", "IC", ""],
+  ["×1", "741", "IC", ""],
+  ["×1", "1458", "IC", "both halves used"],
+  ["White Level", "50K", "POT", ""],
+  ["White Offset", "100K", "POT", "offset adjust, may be a trimmer"],
+  ["Pink Level", "5K", "POT", "wired as rheostat"],
+  ["Infra-Red Offset", "100K", "POT", "offset adjust, may be a trimmer"]
+ ]
+}

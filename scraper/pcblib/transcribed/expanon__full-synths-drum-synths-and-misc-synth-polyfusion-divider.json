@@ -1,0 +1,21 @@
+{
+ "id": "expanon:full-synths-drum-synths-and-misc-synth-polyfusion-divider",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Polyfusion frequency divider: TL082 input buffer/comparator clocking a 4024 counter, seven 4136 op-amp output stages. No designators on the drawing.",
+ "uncertain": [],
+ "rows": [
+  ["×10", "100K", "R", "no designators: 2 in input inverter, 1 in comparator, 7 output-stage inputs"],
+  ["×1", "51K", "R", ""],
+  ["×1", "4.7K", "R", ""],
+  ["×2", "10K", "R", ""],
+  ["×1", "1M", "R", "comparator hysteresis"],
+  ["×7", "200K", "R", "output-stage offset"],
+  ["×7", "33K", "R", "output-stage feedback"],
+  ["×7", "620", "R", "drawn 620Ω, output"],
+  ["×7", "33pF", "C", "output-stage feedback"],
+  ["×1", "1N4148", "D", ""],
+  ["×1", "TL082", "IC", "both halves used"],
+  ["×1", "4024", "IC", "7-stage binary counter"],
+  ["×2", "4136", "IC", "drawn as 4136 A and 4136 B, quad op amps; one section of A unused"]
+ ]
+}

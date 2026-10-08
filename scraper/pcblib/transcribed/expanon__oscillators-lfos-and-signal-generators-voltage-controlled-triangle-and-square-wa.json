@@ -1,0 +1,20 @@
+{
+ "id": "expanon:oscillators-lfos-and-signal-generators-voltage-controlled-triangle-and-square-wa",
+ "read": "2026-10-08, by eye from the cached schematic image (PDF page 2)",
+ "comment": "Wireless World letter: integrator/comparator triangle-square generator with an FET switch for voltage control; page 1 is the article text, page 2 the drawing.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "3k", "R", ""],
+  ["R2", "1k5", "R", ""],
+  ["R3", "100k", "R", "text: R1 = 2R3 for unity mark-space ratio"],
+  ["×3", "10k", "R", "comparator input, positive feedback, Tr2 collector load to -12V"],
+  ["×3", "2k2", "R", "op-amp compensation/output resistors"],
+  ["×1", "10n", "C", "integrator"],
+  ["×1", "500p", "C", "integrator op-amp compensation"],
+  ["D1", "Diode", "D", "no part number given"],
+  ["D2", "Diode", "D", "no part number given; text suggests 3V zeners for stability"],
+  ["Tr1", "?", "Q", "FET switch, no part number given"],
+  ["Tr2", "?", "Q", "PNP transistor, no part number given"],
+  ["×2", "SL701C", "IC", "op amps, named in the article text, not on the drawing"]
+ ]
+}

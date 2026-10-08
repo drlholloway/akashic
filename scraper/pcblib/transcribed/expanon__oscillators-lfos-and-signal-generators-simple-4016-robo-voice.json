@@ -1,0 +1,14 @@
+{
+ "id": "expanon:oscillators-lfos-and-signal-generators-simple-4016-robo-voice",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Robovox robot-voice effect around a 4016 (from a Brazilian magazine via Munky's site); no designators.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "680K", "R", ""],
+  ["×2", "22K", "R", ""],
+  ["×2", "10n", "C", "change to 220n for tremolo"],
+  ["×1", "4016", "IC", "CMOS quad bilateral switch"],
+  ["Freq.", "1M", "POT", ""],
+  ["Depth", "1M", "POT", ""]
+ ]
+}

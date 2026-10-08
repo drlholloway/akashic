@@ -1,0 +1,9 @@
+{
+ "id": "expanon:full-synths-drum-synths-and-misc-synth-sn76477-single-chip-synth-corrected-diagr",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "SN76477 + 555 synth drawn with designators only (R1-R10, VR1-VR8, C1-C21, S1-S16): no component values printed anywhere, so nothing to transcribe.",
+ "uncertain": [],
+ "rows": [
+
+ ]
+}

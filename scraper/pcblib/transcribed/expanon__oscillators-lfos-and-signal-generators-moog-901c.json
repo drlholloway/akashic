@@ -1,0 +1,30 @@
+{
+ "id": "expanon:oscillators-lfos-and-signal-generators-moog-901c",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Moog 901C output stage (Figure 8 of the manual): waveform selector, push-pull differential stage and output section A; output section B is only stubbed and its parts are not listed. Transistors carry no part numbers (ECB pinout only).",
+ "uncertain": [
+  "220 cap: no unit drawn, pF assumed",
+  "Polarity switch: drawn as a 3-contact wafer, read as SP3T",
+  "Waveform switch: 6 contacts drawn, 4 labelled"
+ ],
+ "rows": [
+  ["×2", "15K", "R", ""],
+  ["×1", "160", "R", ""],
+  ["×2", "680", "R", ""],
+  ["×1", "6.8K", "R", ""],
+  ["×1", "10K", "R", "input from waveform switch"],
+  ["×1", "47K", "R", "feedback"],
+  ["×1", "22K", "R", "output section A input"],
+  ["×2", "2.2K", "R", ""],
+  ["×1", "1K", "R", ""],
+  ["×1", "220pF", "C", "drawn 220 with no unit; read as pF (in parallel with 47K feedback)"],
+  ["×2", "?", "Q", "PNP, no part number given: differential pair"],
+  ["×2", "?", "Q", "NPN, no part number given: input and current-source side of push-pull"],
+  ["×1", "?", "Q", "NPN, no part number given: output section A"],
+  ["×1", "?", "Q", "PNP, no part number given: output section A"],
+  ["Output", "10K", "POT", "output level"],
+  ["×1", "50", "TRIM", "balance trimmer in tail"],
+  ["Waveform", "SP6T", "SW", "sine/sawtooth/triangular/square plus two unused positions"],
+  ["Polarity", "SP3T", "SW", "direct / positive going / negative going"]
+ ]
+}

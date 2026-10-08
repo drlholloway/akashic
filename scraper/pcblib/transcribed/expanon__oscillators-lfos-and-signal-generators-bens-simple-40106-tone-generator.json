@@ -1,0 +1,12 @@
+{
+ "id": "expanon:oscillators-lfos-and-signal-generators-bens-simple-40106-tone-generator",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Hand-drawn 40106 two-oscillator tone generator; values come from the text notes (all pots 50K, all caps 1uF), no designators.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "1uF", "C", "drawn as polarized; note says all capacitors are 1uF"],
+  ["×1", "40106", "IC", "hex Schmitt inverter"],
+  ["×4", "50K", "POT", "pots 1 and 2 set frequency, 3 and 4 fine frequency (numbering not marked on the drawing); note says all pots are 50K"],
+  ["Out", "50K", "POT", "output blend between oscillators A and B"]
+ ]
+}

@@ -1,0 +1,17 @@
+{
+ "id": "expanon:oscillators-lfos-and-signal-generators-cmos-inverter-test-oscillator",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "1 kHz test oscillator from a 4069 hex inverter with a 2K2/1K/10 ohm output divider; no designators on the drawing.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "5K6", "R", "oscillator feedback"],
+  ["×1", "2K2", "R", "output series"],
+  ["×1", "1K", "R", "output divider"],
+  ["×1", "10 OHM", "R", "output divider"],
+  ["×1", "0.1uF", "C", "drawn 0.1MFD, supply bypass"],
+  ["×1", "0.1uF", "C", "drawn 0.1MFD, timing"],
+  ["×1", "0.47uF", "C", "drawn 0.47MFD, output coupling"],
+  ["×1", "0.1uF", "C", "drawn 0.1MFD, across output divider"],
+  ["×1", "4069", "IC", "hex inverter, 3 sections used"]
+ ]
+}

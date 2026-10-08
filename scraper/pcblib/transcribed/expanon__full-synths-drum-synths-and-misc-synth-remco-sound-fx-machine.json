@@ -1,0 +1,39 @@
+{
+ "id": "expanon:full-synths-drum-synths-and-misc-synth-remco-sound-fx-machine",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Wiring map (solder-side view) of a Remco Sound FX toy built on the SN76488 sound chip, with a parts legend; not a schematic. Pot values are stated as unknown and four capacitor values carry question marks.",
+ "uncertain": [
+  "C4: drawn '.1uf?'",
+  "C7: drawn '5000pf?'",
+  "C14: drawn '.01uf?'",
+  "C15: drawn '.01uf?'",
+  "R1-R5: pot values unknown"
+ ],
+ "rows": [
+  ["C1", "22uF", "C", ""],
+  ["C2", "10uF", "C", ""],
+  ["C3", "1uF", "C", ""],
+  ["C4", ".1uF", "C", "marked '?' on the drawing: value guessed by the author"],
+  ["C5", "390pF", "C", ""],
+  ["C6", "680pF", "C", ""],
+  ["C7", "5000pF", "C", "marked '?' on the drawing: value guessed by the author"],
+  ["C8", "10000pF", "C", ""],
+  ["C9", "100000pF", "C", ""],
+  ["C10", "4.7uF", "C", ""],
+  ["C11", "10uF", "C", ""],
+  ["C12", "390pF", "C", ""],
+  ["C13", "100uF", "C", ""],
+  ["C14", ".01uF", "C", "marked '?' on the drawing: value guessed by the author"],
+  ["C15", ".01uF", "C", "marked '?' on the drawing: value guessed by the author"],
+  ["IC", "SN76488NF", "IC", "TI complex sound generator"],
+  ["R1", "?", "POT", "potentiometer, value unknown per the drawing"],
+  ["R2", "?", "POT", "potentiometer, value unknown per the drawing"],
+  ["R3", "?", "POT", "potentiometer, value unknown per the drawing"],
+  ["R4", "?", "POT", "potentiometer, value unknown per the drawing"],
+  ["R5", "?", "POT", "potentiometer, value unknown per the drawing"],
+  ["SWX", "SP4T", "SW", "4-position rotary switch selecting C1-C4"],
+  ["SWY", "SP5T", "SW", "5-position rotary switch selecting C5-C9"],
+  ["A-F", "SPST", "SW", "six SPST switches labelled A to F"],
+  ["MOM SW", "momentary", "SW", "momentary switch"]
+ ]
+}

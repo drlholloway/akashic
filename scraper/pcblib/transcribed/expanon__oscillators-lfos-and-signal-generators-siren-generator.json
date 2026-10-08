@@ -1,0 +1,21 @@
+{
+ "id": "expanon:oscillators-lfos-and-signal-generators-siren-generator",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Small three-transistor siren driving an 8 ohm speaker from 9V, triggered by a pushbutton; clean drawing, no designators. Speaker and battery skipped.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "330k", "R", ""],
+  ["×2", "100k", "R", ""],
+  ["×2", "33k", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×1", "1.5k", "R", ""],
+  ["×1", "220 ohm", "R", ""],
+  ["×1", "100 ohm", "R", ""],
+  ["×1", "22uF", "C", "electrolytic"],
+  ["×1", "0.1uF", "C", "drawn with + polarity mark"],
+  ["×2", "100uF", "C", "electrolytic: supply bypass, speaker coupling"],
+  ["×2", "2N4403", "Q", "PNP"],
+  ["×1", "2N4401", "Q", "NPN"],
+  ["Pushbutton", "SPST", "SW", "momentary pushbutton"]
+ ]
+}

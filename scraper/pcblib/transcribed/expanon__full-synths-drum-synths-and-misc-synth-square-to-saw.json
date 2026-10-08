@@ -1,0 +1,16 @@
+{
+ "id": "expanon:full-synths-drum-synths-and-misc-synth-square-to-saw",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Small undesignated square-to-sawtooth converter: differentiated and integrated copies of the input summed by one op amp. No designators, no op amp type, no trimmer value.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "2.7k", "R", "one across each differentiator/integrator branch to ground"],
+  ["×2", "10k", "R", "bias divider on the + input"],
+  ["×1", "100k", "R", "op amp feedback"],
+  ["×2", "220k", "R", "summing resistors"],
+  ["×2", "330nF", "C", ""],
+  ["×2", "Diode", "D", "no part number given"],
+  ["×1", "?", "IC", "op amp, no part number given"],
+  ["Trim", "?", "TRIM", "no value given"]
+ ]
+}

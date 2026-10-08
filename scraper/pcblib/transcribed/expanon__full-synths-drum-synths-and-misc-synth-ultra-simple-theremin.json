@@ -1,0 +1,26 @@
+{
+ "id": "expanon:full-synths-drum-synths-and-misc-synth-ultra-simple-theremin",
+ "read": "2026-10-08, by eye from the cached schematic image (PDF page 3)",
+ "comment": "1972 magazine article (Steve Daniels); page 3 holds the schematic and printed parts list, which values were read from. Two-oscillator beat-frequency theremin with JFET buffer.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "100K", "R", "100,000 ohm 1/2 W"],
+  ["R2", "100K", "R", "100,000 ohm 1/2 W"],
+  ["R3", "3.9M", "R", "1/2 W"],
+  ["R4", "5.6K", "R", "5,600 ohm 1/2 W"],
+  ["C1", "270pF", "C", "disc"],
+  ["C2", "300pF", "C", "disc"],
+  ["C3", "270pF", "C", "disc"],
+  ["C4", "300pF", "C", "disc"],
+  ["C5", "100pF", "C", "disc"],
+  ["C6", "100pF", "C", "disc"],
+  ["C7", "10uF", "C", "15V electrolytic"],
+  ["Q1", "HEP-50", "Q", "or 2N706, NPN (Motorola)"],
+  ["Q2", "HEP-50", "Q", "or 2N706, NPN (Motorola)"],
+  ["Q3", "HEP-801", "Q", "N-channel JFET (Motorola)"],
+  ["L1", "Loopstick", "L", "Lafayette 32-41080, slug-tuned"],
+  ["L2", "Loopstick", "L", "Lafayette 32-41080, slug-tuned"],
+  ["R5", "10M", "POT", "potentiometer modified as per text; output level"],
+  ["S1", "SPST", "SW", "power switch; on drawing, not in parts list"]
+ ]
+}

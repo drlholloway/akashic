@@ -1,0 +1,24 @@
+{
+ "id": "expanon:oscillators-lfos-and-signal-generators-complex-waveform-generator",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Scott Gravenhorst shift-register (4015 + XOR feedback) waveform generator clocked from a VCO, with four weighted outputs mixed by LM324 stages; no designators on the drawing.",
+ "uncertain": [],
+ "rows": [
+  ["×5", "1MEG", "R", "4 pull-downs on the feedback tap switches, 1 on reset"],
+  ["×4", "10K", "R", "buffer outputs to mixer pots"],
+  ["×8", "110K", "R", "op amp feedback and + input; author used 10K+100K in series"],
+  ["×4", "100K", "R", "summing resistors"],
+  ["×1", "8.2K", "R", "output divider; ideal value for FatMan"],
+  ["×1", "100K", "R", "output series resistor; ideal value for FatMan"],
+  ["×1", "1uF", "C", "electrolytic, output coupling; ideal value for FatMan"],
+  ["×1", "4015", "IC", "4-bit shift register; only half used"],
+  ["×1", "4070", "IC", "quad XOR, 3 gates used"],
+  ["×1", "4050", "IC", "hex buffer (4049 inverting also works)"],
+  ["×1", "LM324", "IC", "quad op amp, 4 sections"],
+  ["×1", "1458", "IC", "dual op amp, output buffer"],
+  ["×4", "100K", "POT", "level per shift-register output"],
+  ["×1", "10K", "POT", "output level; ideal value for FatMan"],
+  ["×4", "SPST", "SW", "feedback tap enables"],
+  ["Reset", "SPST", "SW", "momentary pushbutton"]
+ ]
+}

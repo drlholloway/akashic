@@ -1,0 +1,21 @@
+{
+ "id": "expanon:vibrato-and-pitch-shift-pulse-frequency-doubler",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Hand-drawn phase-splitter frequency doubler (two Ge diodes full-wave rectify). The cached JPEG is truncated below the top strip; the full drawing was read from its embedded EXIF thumbnail, so values are low resolution.",
+ "uncertain": [
+  "2K2/1K: read from the 160x120 EXIF thumbnail; 2K2 could be drawn as a trimmer",
+  "47K: thumbnail blur, could be 97K but 47K is clear in the intact top strip of the full image"
+ ],
+ "rows": [
+  ["×1", "47K", "R", "base bias, upper"],
+  ["×1", "100K", "R", "base bias, lower"],
+  ["×2", "470R", "R", "collector and emitter loads (phase splitter)"],
+  ["×1", "4K7", "R", "to ground after upper 56n"],
+  ["×1", "2K2", "R", "in series with 1K to ground after lower 56n"],
+  ["×1", "1K", "R", ""],
+  ["×1", "22n", "C", "input"],
+  ["×2", "56n", "C", "coupling from collector and emitter"],
+  ["×2", "Diode", "D", "germanium; 'Diodes are Ge', no part number given"],
+  ["×1", "?", "Q", "NPN transistor, no part number given"]
+ ]
+}

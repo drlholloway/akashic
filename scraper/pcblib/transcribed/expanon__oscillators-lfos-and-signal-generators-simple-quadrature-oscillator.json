@@ -1,0 +1,14 @@
+{
+ "id": "expanon:oscillators-lfos-and-signal-generators-simple-quadrature-oscillator",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Simple two-integrator quadrature (sine/cosine) oscillator on an LM747 with no designators drawn; includes the LM747C pinout.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "190K", "R", ""],
+  ["×1", "180K", "R", ""],
+  ["×3", "820pF", "C", "select a higher value for a lower frequency range"],
+  ["×2", "1N4148", "D", "back-to-back across the second integrator"],
+  ["×1", "LM747", "IC", "dual op amp, both halves used"],
+  ["×1", "1M", "POT", "variable resistor in the feedback loop"]
+ ]
+}

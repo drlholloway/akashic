@@ -1,0 +1,13 @@
+{
+ "id": "expanon:oscillators-lfos-and-signal-generators-simple-white-noise-generator-2",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Not a schematic but a stripboard/PCB layout (BR2003) with values printed on the parts; two NPN transistors (PN100/2N3904), two resistors and two 0.1 caps. No designators on the passives.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "4.7k", "R", "9V feed to the noise transistor"],
+  ["×1", "47k", "R", ""],
+  ["×2", "0.1uF", "C", "one on the supply, one output coupling"],
+  ["Q1", "PN100", "Q", "or 2N3904; wired reverse-biased base-emitter as the noise source"],
+  ["Q2", "PN100", "Q", "or 2N3904; amplifier"]
+ ]
+}

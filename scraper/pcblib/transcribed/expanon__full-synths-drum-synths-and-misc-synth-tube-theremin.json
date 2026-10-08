@@ -1,0 +1,35 @@
+{
+ "id": "expanon:full-synths-drum-synths-and-misc-synth-tube-theremin",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Doug Forbes 'Theremin 1' (1995) four-12AU7 tube theremin with 6X4 rectifier supply; clean CAD drawing, no component designators except tube numbers. Mains transformer, fuse and power switch skipped; tubes listed as OTHER.",
+ "uncertain": [
+  "V3 cathode resistor: no value drawn",
+  "Oscillator coils: no inductance given"
+ ],
+ "rows": [
+  ["×6", "1M", "R", "grid resistors"],
+  ["×2", "470K", "R", "plate loads V2b, V3a"],
+  ["×2", "1K", "R", "V2b cathode; B+ supply dropper"],
+  ["×1", "?", "R", "V3a/V3b shared cathode resistor, no value drawn"],
+  ["×3", "220pF", "C", "oscillator grid caps"],
+  ["×1", "150pF", "C", "pitch oscillator V1 tank"],
+  ["×2", "150pF", "C", "variable (trimmer) caps: V2a tank, volume tuning tank"],
+  ["×1", "33pF", "C", "V1 tank"],
+  ["×5", "15pF", "C", "oscillator couplings, volume detector coupling, one in parallel with the volume tank"],
+  ["×1", "22pF", "C", "in parallel with volume tank (15pF + 22pF)"],
+  ["×1", "47pF", "C", "V4a tank"],
+  ["×2", "0.1uF", "C", "drawn .1uf: mixer coupling, output"],
+  ["×2", "10nF", "C", "mixer filtering"],
+  ["×3", "20uF", "C", "300V filter caps, B+ supply"],
+  ["×2", "1N4148", "D", "drawn as one with (2): volume detector"],
+  ["×3", "82V", "D", "1W zeners in series, B+ regulator"],
+  ["×4", "?", "L", "tapped oscillator coils, no value given"],
+  ["×1", "5H", "L", "B+ filter choke"],
+  ["V1", "12AU7", "OTHER", "vacuum tube, one triode used (pitch osc)"],
+  ["V2", "12AU7", "OTHER", "vacuum tube: variable pitch osc + mixer"],
+  ["V3", "12AU7", "OTHER", "vacuum tube: VCA/output"],
+  ["V4", "12AU7", "OTHER", "vacuum tube, V4a volume osc"],
+  ["×1", "6X4", "OTHER", "rectifier tube"],
+  ["Volume", "100K", "POT", ""]
+ ]
+}

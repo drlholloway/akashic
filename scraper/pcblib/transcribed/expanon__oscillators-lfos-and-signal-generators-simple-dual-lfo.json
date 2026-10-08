@@ -1,0 +1,19 @@
+{
+ "id": "expanon:oscillators-lfos-and-signal-generators-simple-dual-lfo",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Experimentalists Anonymous dual-wave LFO: op amp Schmitt trigger plus integrator, with a 10k/10k bias supply.",
+ "uncertain": [
+  "Vb filter capacitor: no value drawn"
+ ],
+ "rows": [
+  ["×1", "47k", "R", "in series with Speed pot"],
+  ["×1", "100k", "R", "Schmitt trigger feedback"],
+  ["×1", "68k", "R", "drawn as 'close to but less than 100k (68k works)'"],
+  ["×2", "10k", "R", "Vb bias divider"],
+  ["×1", "1uf", "C", "integrator timing cap"],
+  ["×1", "?", "C", "electrolytic, Vb bias filter; no value drawn"],
+  ["IC1", "?", "IC", "dual op amp: 072, 082, 4558 etc."],
+  ["Speed", "100k", "POT", ""],
+  ["×1", "1k", "POT", "blend between triangle and square out"]
+ ]
+}

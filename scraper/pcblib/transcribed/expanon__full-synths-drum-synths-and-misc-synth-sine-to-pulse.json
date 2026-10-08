@@ -1,0 +1,16 @@
+{
+ "id": "expanon:full-synths-drum-synths-and-misc-synth-sine-to-pulse",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Sine-to-pulse converter with manual and VC PWM: a TL084 comparator into a 4093 NAND; up to 4 may be built with one set of ICs. No designators drawn.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "47k", "R", "input and PWM VC resistors"],
+  ["×1", "110k", "R", "manual PWM resistor"],
+  ["×1", "2.2k", "R", "output"],
+  ["×1", "1k", "R", "output to ground"],
+  ["×1", "TL084", "IC", "1/4 used as comparator"],
+  ["×1", "4093", "IC", "1/4 NAND used"],
+  ["Manual PWM", "50k", "POT", ""],
+  ["PWM VC Scale", "1 Meg", "POT", "drawn as a variable resistor"]
+ ]
+}

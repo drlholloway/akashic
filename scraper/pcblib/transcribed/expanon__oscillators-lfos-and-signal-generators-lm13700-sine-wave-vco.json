@@ -1,0 +1,19 @@
+{
+ "id": "expanon:oscillators-lfos-and-signal-generators-lm13700-sine-wave-vco",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Chris MacDonald's variable-frequency quadrature sine oscillator (2000): two LM13700 OTA integrators with TL072 buffers and a diode/zener amplitude limiter. No designators drawn; the same drawing is filed as Sine Wave Quadrature Oscillator.",
+ "uncertain": [],
+ "rows": [
+  ["×4", "15k", "R", "frequency CV, two LM13700 bias resistors, oscillation trim"],
+  ["×6", "1k", "R", "four LM13700 input dividers, sine and cosine outputs"],
+  ["×3", "22k", "R", ""],
+  ["×2", "100k", "R", "amplitude limiter stage"],
+  ["×2", "330pF", "C", "integrator capacitors"],
+  ["×4", "1N4148", "D", "limiter bridge"],
+  ["×1", "1N4735A", "D", "zener in the limiter bridge"],
+  ["×1", "LM13700", "IC", "both OTA halves used as integrators"],
+  ["×2", "TL072", "IC", "three op amp sections drawn (pins 1-3 used twice), so two chips"],
+  ["Frequency", "100k", "POT", "frequency control (or use an expo converter)"],
+  ["Oscillation Trim", "10k", "TRIM", ""]
+ ]
+}

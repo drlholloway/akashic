@@ -1,0 +1,33 @@
+{
+ "id": "expanon:oscillators-lfos-and-signal-generators-triangle-square-and-sine-test-oscillator",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "G. Forrest Cook stereo test tone generator (2003): two 324 square/triangle oscillators with sine low-pass filters, plus an inverted low-tone output. Components carry no designators except the ICs.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "1K", "R", "LED resistor"],
+  ["×2", "1K", "R", "from each output-level control to the amp input"],
+  ["×1", "9.1K", "R", "inverter input/feedback"],
+  ["×1", "10K", "R", "feed to inverter"],
+  ["×2", "20K", "R", "virtual ground divider"],
+  ["×2", "22K", "R", "amp feedback"],
+  ["×2", "27K", "R", "low-tone filter"],
+  ["×2", "33K", "R", "high-tone filter"],
+  ["×2", "47K", "R", "oscillator feedback"],
+  ["×4", "100K", "R", "oscillator, two per channel"],
+  ["×2", "2n2", "C", "amp feedback"],
+  ["×1", "6n8", "C", "high-tone integrator"],
+  ["×3", "10n", "C", "low-tone integrator and both filter caps to ground"],
+  ["×2", "20n", "C", "filter"],
+  ["×5", "100n", "C", "coupling and output caps"],
+  ["×1", "10uF", "C", "electrolytic, 16V, virtual ground"],
+  ["×1", "220uF", "C", "electrolytic, 25V, supply"],
+  ["×1", "Diode", "D", "crowbar diode across the 12V input, marked 3A; no part number given"],
+  ["×1", "red", "LED", "power LED"],
+  ["U1", "324", "IC", "quad op amp, low-tone channel"],
+  ["U2", "324", "IC", "quad op amp, high-tone channel"],
+  ["U3", "1458", "IC", "dual op amp: inverter and virtual ground buffer"],
+  ["Low Output Level", "20K", "POT", "drawn as variable resistor"],
+  ["High Output Level", "20K", "POT", "drawn as variable resistor"],
+  ["Invert Level", "2K", "POT", "drawn as variable resistor"]
+ ]
+}
