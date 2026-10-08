@@ -1,0 +1,41 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-ibanez-black-noise",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Ibanez Black Noise (BN-5 style) drawn without designators or semiconductor part numbers, so parts are counted by value; FET-switching control lines X, Y and A are drawn as off-sheet labels.",
+ "uncertain": [
+  "IC: two op-amp symbols with no part number; whether they are one dual chip or two singles is not shown"
+ ],
+ "rows": [
+  ["×4", "1k", "R", "input series, Q2 base, after each op-amp stage"],
+  ["×9", "10k", "R", ""],
+  ["×7", "510k", "R", "input bias and the JFET-switch gate/drain/source bias, output buffer bias"],
+  ["×1", "9.1k", "R", "bias divider"],
+  ["×1", "22k", "R", "bias divider"],
+  ["×1", "220", "R", "op-amp input"],
+  ["×1", "180", "R", "gain-leg resistor"],
+  ["×1", "1m", "R", "written 1m; 1M to 4.5V"],
+  ["×2", "100k", "R", "tone-network bias and output pulldown"],
+  ["×1", "5.6k", "R", ""],
+  ["×1", "4.7k", "R", ""],
+  ["×1", "470", "R", "output series"],
+  ["×1", "1.5k", "R", ""],
+  ["×1", "68k", "R", ""],
+  ["×1", "22n", "C", "input"],
+  ["×4", "10u", "C", "electrolytic: bias filter, after first FET switch, gain leg, output"],
+  ["×5", "1uF", "C", ""],
+  ["×1", "68p", "C", "first op-amp feedback"],
+  ["×1", "4.7u", "C", "electrolytic, after first op amp"],
+  ["×2", "10n", "C", "after clipping diodes; second op-amp feedback"],
+  ["×1", "33n", "C", ""],
+  ["×1", "4.7n", "C", ""],
+  ["×1", "220n", "C", ""],
+  ["×1", "47n", "C", ""],
+  ["×5", "Diode", "D", "no part number given: two clipping diodes to ground, two on the JFET-switch gates (X), one on the Y control line"],
+  ["×5", "?", "Q", "NPN BJTs, no part number given (input buffer, effect-switch driver, two in the tone network, output buffer)"],
+  ["×3", "?", "Q", "JFET switches, no part number given"],
+  ["×1", "?", "IC", "two op-amp stages drawn, no part number; probably one dual op amp"],
+  ["Dist", "100kB", "POT", ""],
+  ["Tone", "22kA", "POT", ""],
+  ["Level", "100kA", "POT", ""]
+ ]
+}

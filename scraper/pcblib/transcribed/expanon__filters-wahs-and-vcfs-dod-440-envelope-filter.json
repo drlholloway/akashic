@@ -1,0 +1,29 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-dod-440-envelope-filter",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Traced DOD 440 Envelope Filter schematic, no designators except the pot labels RL and D. Bypass switch skipped as the footswitch.",
+ "uncertain": [
+  "Opto module part number unknown (drawing guesses a Vactec VTL)"
+ ],
+ "rows": [
+  ["×2", "10k", "R", "input series; envelope op amp input"],
+  ["×3", "100k", "R", "filter input; Vref divider; to D pot"],
+  ["×3", "22k", "R", "Vref divider x2; rectifier output to LED"],
+  ["×1", "22k", "R", "D pot to ground"],
+  ["×3", "220k", "R", "filter op amp input; two in series with the LDR halves"],
+  ["×1", "430k", "R", "filter op amp feedback"],
+  ["×1", "470k", "R", "envelope op amp feedback"],
+  ["×1", "0.01uF", "C", "input coupling"],
+  ["×1", "0.1uF", "C", "envelope input coupling"],
+  ["×1", "10uF", "C", "electrolytic Vref filter"],
+  ["×2", "0.02uF", "C", "filter"],
+  ["×1", "0.05uF", "C", "output coupling"],
+  ["×1", "4.7uF", "C", "electrolytic, envelope op amp output"],
+  ["×1", "1uF", "C", "electrolytic envelope smoothing"],
+  ["×2", "1N4148", "D", "envelope rectifier"],
+  ["×1", "TL022", "IC", "dual low-power op amp (each op amp is 1/2 TL022)"],
+  ["×1", "VTL", "OPTO", "LED/LDR module, unknown; probably a Vactec VTL with LED to center-tapped LDR"],
+  ["RL", "100k", "POT", "envelope sensitivity, labeled RL"],
+  ["D", "100k", "POT", "labeled D; sets the LED bias"]
+ ]
+}

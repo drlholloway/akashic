@@ -1,0 +1,37 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-mxr-hot-tubes",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Traced MXR Hot Tubes schematic with no designators: dual op amp input buffer/filter into three CD4049 inverter gain stages. Both pot values are marked unknown on the drawing.",
+ "uncertain": [
+  "drive pot: value unknown on the drawing, 100k guessed",
+  "output pot: value unknown on the drawing, 10K guessed"
+ ],
+ "rows": [
+  ["×1", "1M", "R", "input pulldown"],
+  ["×1", "120k", "R", "input bias to Vref"],
+  ["×2", "20k", "R", "second op amp inputs"],
+  ["×1", "75k", "R", "second op amp feedback"],
+  ["×2", "220k", "R", "Vref divider"],
+  ["×1", "8k2", "R", "first inverter input"],
+  ["×1", "150k", "R", "first inverter feedback"],
+  ["×1", "1m5", "R", "first inverter input to ground"],
+  ["×1", "220k", "R", "second inverter feedback"],
+  ["×1", "2m2", "R", "second inverter input to ground"],
+  ["×1", "470k", "R", "third inverter input"],
+  ["×1", "1m", "R", "third inverter feedback (1M)"],
+  ["×1", "15k", "R", "output series"],
+  ["×2", "0.1uF", "C", "input coupling; inverter section coupling"],
+  ["×1", "47pF", "C", "op amp input to ground"],
+  ["×2", "22pF", "C", "second op amp feedback; first inverter feedback"],
+  ["×1", "1uF", "C", "electrolytic, second op amp + input to ground"],
+  ["×1", "30uF", "C", "electrolytic supply filter"],
+  ["×1", "1uF", "C", "electrolytic Vref filter"],
+  ["×1", "0.015uF", "C", "inverter coupling"],
+  ["×1", "0.22uF", "C", "inverter coupling"],
+  ["×1", "4.7uF", "C", "electrolytic output coupling"],
+  ["×1", "4558", "IC", "dual op amp; drawing says dual 741 or 4558"],
+  ["×1", "CD4049", "IC", "hex inverter, three sections used"],
+  ["×1", "100k", "POT", "drive, wired as variable resistor; drawing says unknown value, 100k?"],
+  ["×1", "10K", "POT", "output level; drawing says unknown value, 10K?"]
+ ]
+}

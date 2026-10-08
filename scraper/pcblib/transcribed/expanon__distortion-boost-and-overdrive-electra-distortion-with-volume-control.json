@@ -1,0 +1,16 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-electra-distortion-with-volume-control",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Clean single-transistor Electra Distortion with an added output volume pot; no designators drawn.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "47k", "R", "collector"],
+  ["×1", "2.2M", "R", "collector-base feedback"],
+  ["×1", "680", "R", "emitter"],
+  ["×2", "0.1uF", "C", "input and output coupling"],
+  ["×1", "1N34A", "D", "clipping to ground"],
+  ["×1", "1N4001", "D", "clipping to ground"],
+  ["×1", "2N3904", "Q", ""],
+  ["Volume", "A100k", "POT", "drawn '100k Audio Taper' on the output; named from the title"]
+ ]
+}

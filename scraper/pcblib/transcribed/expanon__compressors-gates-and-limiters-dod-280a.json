@@ -1,0 +1,27 @@
+{
+ "id": "expanon:compressors-gates-and-limiters-dod-280a",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Web-redrawn DOD 280A compressor with values but almost no designators. The lower fragment is the author's suggested fix (an added 100k at the second op amp's - input) and is not counted.",
+ "uncertain": [
+  "Q1, Q2: part number reads 'NP4124' in a low-resolution font; most likely 2N4124"
+ ],
+ "rows": [
+  ["×1", "3M", "R", "first op amp feedback"],
+  ["×1", "4.7k", "R", "VTL5C2 LED to transistor collectors"],
+  ["×1", "10k", "R", "input"],
+  ["×3", "22k", "R", "one in series with 0.05uf on the 500k pot, one bias divider to ground, one bias divider to +9V"],
+  ["×1", "100k", "R", "second op amp feedback"],
+  ["×2", "220k", "R", "transistor base bias"],
+  ["×1", "470k", "R", "bias to + input"],
+  ["×1", "0.01uf", "C", "input"],
+  ["×4", "0.05uf", "C", "gain leg, output to level pot, coupling to rectifier transistor, second op amp output"],
+  ["×1", "10uf", "C", "electrolytic, bias filter"],
+  ["×1", "47uf", "C", "electrolytic, rectifier/LED reservoir"],
+  ["Q1", "NP4124", "Q", "NPN; drawn 'Q1,Q2 = NP4124' in a pixel font, probably 2N4124"],
+  ["Q2", "NP4124", "Q", "NPN; drawn 'Q1,Q2 = NP4124' in a pixel font, probably 2N4124"],
+  ["×1", "LM358", "IC", "dual op amp; both sections used ('Op amps are LM358')"],
+  ["×1", "500k", "POT", "sustain/gain pot (unnamed), in the first op amp's feedback leg"],
+  ["×1", "100k", "POT", "output level pot (unnamed)"],
+  ["×1", "VTL5C2", "OPTO", "LED/LDR vactrol in the compression feedback loop"]
+ ]
+}

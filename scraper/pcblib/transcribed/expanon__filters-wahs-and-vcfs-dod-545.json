@@ -1,0 +1,43 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-dod-545",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Hand-drawn DOD 545 Wah/Filter with no designators; two CA3094 OTA stages, envelope follower and a CD4007 oscillator/trigger section.",
+ "uncertain": [
+  "Attack cap read as 4.7uF, drawn like '4.1uf'",
+  "Sensitivity pot taper 'D500KRL' as drawn"
+ ],
+ "rows": [
+  ["×7", "100K", "R", ""],
+  ["×8", "22K", "R", ""],
+  ["×5", "10K", "R", "one in series with the LDR"],
+  ["×5", "1K", "R", ""],
+  ["×5", "1M", "R", ""],
+  ["×3", "4.7K", "R", ""],
+  ["×1", "470K", "R", ""],
+  ["×1", "5K", "R", ""],
+  ["×1", "62K", "R", ""],
+  ["×1", "150K", "R", ""],
+  ["×1", "220K", "R", ""],
+  ["×5", "10uF", "C", ""],
+  ["×3", ".01uF", "C", "drawn .01"],
+  ["×3", ".047uF", "C", "drawn .047"],
+  ["×1", "1uF", "C", ""],
+  ["×2", ".001uF", "C", "drawn .001"],
+  ["×3", ".1uF", "C", "drawn .1"],
+  ["×2", "4.7uF", "C", ""],
+  ["×1", "1N4001", "D", "supply"],
+  ["×3", "1N4148", "D", ""],
+  ["×1", "Diode", "D", "no part number given; shunt diode of the envelope rectifier, likely 1N4148"],
+  ["×1", "J111", "Q", "JFET"],
+  ["×2", "J113", "Q", "JFET"],
+  ["×3", "2N4124", "Q", ""],
+  ["×1", "TL062", "IC", "dual op amp, both halves used"],
+  ["×2", "CA3094", "IC", "OTA"],
+  ["×1", "CD4007", "IC", ""],
+  ["×1", "LED/LDR", "OPTO", "LED driving an LDR, drawn as diode plus photoresistor"],
+  ["Sensitivity", "D500K", "POT", "drawn D500KRL"],
+  ["Peak", "D100K", "POT", ""],
+  ["Attack", "D100K", "POT", ""],
+  ["×1", "SPST", "SW", "switch to ground through 100K/.047 at the CD4007 stage; purpose not labeled"]
+ ]
+}

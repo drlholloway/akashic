@@ -1,0 +1,17 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-jordan-bosstone",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Clean two-transistor Jordan Boss-Tone schematic with a text description; no designators, and the switching and battery are not drawn.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "560K", "R", "feedback and bias"],
+  ["×2", "18K", "R", "collector loads of both transistors"],
+  ["×1", "150K", "R", "bias to ground"],
+  ["×3", "0.022uF", "C", "input, bias node to ground, output"],
+  ["×1", "47pF", "C", "collector-base of the second transistor"],
+  ["×2", "1N914", "D", "clippers to ground; drawn '1N914/1N4148'"],
+  ["×2", "2N2222", "Q", "drawn '2N2222 -or- 2N4124 -or- similar'"],
+  ["×1", "100K", "POT", "input level pot, no name or taper given"],
+  ["×1", "10K", "POT", "output level pot, no name or taper given"]
+ ]
+}

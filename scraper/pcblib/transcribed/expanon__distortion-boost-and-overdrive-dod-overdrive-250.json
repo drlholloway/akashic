@@ -1,0 +1,22 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-dod-overdrive-250",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Simple web-style schematic of the DOD 250 (741 with two diodes to ground) with values but no designators; the bypass switch is the footswitch and is skipped.",
+ "uncertain": [
+  "500K pot: suffix after 500K reads 'RA' (reverse audio?) but is blurred"
+ ],
+ "rows": [
+  ["×2", "10K", "R", "one drawn '10k' (input), one '10K' (output to diodes)"],
+  ["×2", "1M", "R", "one feedback, one bias from + input to the 20K/20K divider"],
+  ["×2", "20K", "R", "bias divider"],
+  ["×1", "47K", "R", "gain leg, in series with the 500K pot"],
+  ["×1", "0.001uF", "C", "across the clipping diodes"],
+  ["×1", "0.01uF", "C", "input"],
+  ["×1", "0.05uF", "C", "gain leg"],
+  ["×2", "10uF", "C", "electrolytic; one output coupling, one bias filter"],
+  ["×2", "Diode", "D", "clipping diodes to ground; no part number given"],
+  ["×1", "741", "IC", ""],
+  ["×1", "500K", "POT", "gain pot (unnamed); drawn '500KRA', probably reverse-audio taper"],
+  ["×1", "100K", "POT", "output level pot (unnamed)"]
+ ]
+}

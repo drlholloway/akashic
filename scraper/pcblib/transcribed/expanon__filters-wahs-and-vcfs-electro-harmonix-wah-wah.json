@@ -1,0 +1,32 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-electro-harmonix-wah-wah",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Electro-Harmonix factory hand-drawn wah schematic (two 2N3565s, 500mH inductor) with Tone, Mode and Reverse switches; no designators, parts counted by value. The bypass footswitch is skipped.",
+ "uncertain": [
+  "Mode Selector: pole count read from the drawing, could be DPDT with a third contact set"
+ ],
+ "rows": [
+  ["×3", "470K", "R", "Q1 emitter, collector bias, collector-to-Q2 base"],
+  ["×1", "68K", "R", "input"],
+  ["×1", "15K", "R", "Q1 base"],
+  ["×1", "22K", "R", "Q1 collector"],
+  ["×1", "33K", "R", ""],
+  ["×1", "100K", "R", ""],
+  ["×1", "1K", "R", "Q2 collector"],
+  ["×1", "10K", "R", "Q2 emitter"],
+  ["×1", ".022uF", "C", "input"],
+  ["×2", ".2uF", "C", "drawn '.2µf'"],
+  ["×1", "5uF", "C", "electrolytic"],
+  ["×1", ".0022uF", "C", "feedback from Q2 emitter"],
+  ["×1", ".0033uF", "C", "Tone switch"],
+  ["×1", ".01uF", "C", "Tone switch"],
+  ["×1", ".047uF", "C", "Tone switch"],
+  ["×1", ".1uF", "C", "Tone switch"],
+  ["×2", "2N3565", "Q", ""],
+  ["×1", "500mH", "L", "wah inductor"],
+  ["Pedal", "100K", "POT", "drawn 100KΩ, wired through the Reverse switch"],
+  ["Tone", "SP4T", "SW", "rotary, selects one of four feedback caps"],
+  ["Mode Selector", "3PDT", "SW", "drawn with three switched contacts; pole count read from the drawing"],
+  ["Reverse", "DPDT", "SW", "reverses the pot's sweep"]
+ ]
+}

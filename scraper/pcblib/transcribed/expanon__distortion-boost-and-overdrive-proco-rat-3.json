@@ -1,0 +1,31 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-proco-rat-3",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Clean redrawn ProCo Rat schematic ('Type B Rev 7-81') with values but no designators; three unnamed 100k log pots (distortion, filter, volume).",
+ "uncertain": [],
+ "rows": [
+  ["×1", "47", "R", "gain leg to 4.7uF"],
+  ["×1", "100", "R", "supply"],
+  ["×1", "560", "R", "gain leg to 4.7uF"],
+  ["×2", "1k", "R", "one at the input, one at the op amp output"],
+  ["×1", "1.5k", "R", "after the filter pot"],
+  ["×1", "10k", "R", "JFET source"],
+  ["×2", "100k", "R", "4.5V bias divider"],
+  ["×2", "1M", "R", "input bias and JFET gate bias"],
+  ["×1", "30pf", "C", "compensation, pins 1-8"],
+  ["×1", "100pf", "C", "feedback"],
+  ["×2", "0.001uf", "C", "input filter to ground; supply bypass"],
+  ["×1", "0.0033uf", "C", "filter"],
+  ["×2", "0.022uf", "C", "input coupling; output to JFET gate"],
+  ["×2", "1uf", "C", "electrolytic, 50v; bias filter and JFET output coupling"],
+  ["×3", "4.7uf", "C", "electrolytic, 35v; two in the gain legs, one output coupling"],
+  ["×1", "100uf", "C", "electrolytic, 16v; supply filter"],
+  ["×1", "1N4001", "D", "supply protection"],
+  ["×2", "1N4148", "D", "clipping diodes to ground ('Diodes = 1N4148')"],
+  ["×1", "2N5458", "Q", "JFET output buffer"],
+  ["×1", "LM308", "IC", ""],
+  ["×1", "A100k", "POT", "gain/distortion pot in the feedback loop (unnamed), drawn '100k Log'"],
+  ["×1", "A100k", "POT", "filter pot (unnamed), drawn '100k Log'"],
+  ["×1", "A100k", "POT", "volume pot (unnamed), drawn '100k Log'"]
+ ]
+}

@@ -1,0 +1,35 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-mxr-hot-tubes-pdf",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Clean single-page redraw of the MXR Hot Tubes (op-amp buffer and filter into three CD4049 inverter stages), no designators; the two pot values are the drawer's guesses.",
+ "uncertain": [
+  "Drive rheostat: value unknown, 100k? per the drawing",
+  "Output pot: value unknown, 10K? per the drawing"
+ ],
+ "rows": [
+  ["×1", "1M", "R", ""],
+  ["×1", "120k", "R", ""],
+  ["×2", "20k", "R", ""],
+  ["×1", "75k", "R", ""],
+  ["×3", "220k", "R", "two bias divider, one inverter feedback"],
+  ["×1", "8k2", "R", ""],
+  ["×1", "150k", "R", ""],
+  ["×1", "1m5", "R", ""],
+  ["×1", "2m2", "R", ""],
+  ["×1", "1m", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "15k", "R", ""],
+  ["×1", "30uF", "C", "supply"],
+  ["×2", "1uF", "C", ""],
+  ["×2", "0.1uF", "C", ""],
+  ["×1", "47pF", "C", ""],
+  ["×2", "22pF", "C", ""],
+  ["×1", "0.015uF", "C", ""],
+  ["×1", "0.22uF", "C", ""],
+  ["×1", "4.7uF", "C", ""],
+  ["×1", "4558", "IC", "dual op amp; drawing says dual 741 or 4558"],
+  ["×1", "CD4049", "IC", "hex CMOS inverter, three sections used"],
+  ["×1", "100k", "POT", "rheostat at the first inverter input; drawing says 'unknown value 100k?'"],
+  ["×1", "10K", "POT", "output volume; drawing says 'unknown value 10K?'"]
+ ]
+}

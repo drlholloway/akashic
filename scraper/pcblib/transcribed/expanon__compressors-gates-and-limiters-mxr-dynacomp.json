@@ -1,0 +1,30 @@
+{
+ "id": "expanon:compressors-gates-and-limiters-mxr-dynacomp",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Jack Orman's 1996 redraw of the MXR Dynacomp; only transistors carry designators, other parts grouped by value.",
+ "uncertain": [],
+ "rows": [
+  ["×5", "10k", "R", ""],
+  ["×5", "1M", "R", ""],
+  ["×2", "27k", "R", ""],
+  ["×2", "150k", "R", ""],
+  ["×1", "56k", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "15k", "R", ""],
+  ["×4", ".01uF", "C", ""],
+  ["×3", "1uF", "C", "electrolytic"],
+  ["×1", ".001uF", "C", ""],
+  ["×1", ".05uF", "C", ""],
+  ["×1", "10uF", "C", "electrolytic"],
+  ["×3", "1N914", "D", "drawing says all diodes are 1N914 or similar"],
+  ["Q1", "2N3904", "Q", "drawing says transistors may be 2N3904 or similar"],
+  ["Q2", "2N3904", "Q", "drawing says transistors may be 2N3904 or similar"],
+  ["Q3", "2N3904", "Q", "drawing says transistors may be 2N3904 or similar"],
+  ["Q4", "2N3904", "Q", "drawing says transistors may be 2N3904 or similar"],
+  ["Q5", "2N3904", "Q", "drawing says transistors may be 2N3904 or similar"],
+  ["×1", "CA3080", "IC", "OTA, drawn as 3080"],
+  ["Sens.", "500k", "POT", "sensitivity"],
+  ["Vol", "50k", "POT", ""],
+  ["×1", "2k", "TRIM", "OTA input balance, wiper fed through 470k"]
+ ]
+}

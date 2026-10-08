@@ -1,0 +1,17 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-vox-treble-booster",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Two drawings of the same one-transistor Vox treble booster: the original and a version modified for overdrive (larger input cap, added 500K output pot). Rows follow the original plus the mod's pot.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "100K", "R", ""],
+  ["×2", "2K2", "R", "collector load, split"],
+  ["×1", "22K", "R", ""],
+  ["×1", "1K", "R", "emitter"],
+  ["×1", "500pF", "C", "input cap; the modified version uses 0.01uF to 0.022uF"],
+  ["×1", "0.1uF", "C", "output"],
+  ["×1", "10uF", "C", "emitter bypass"],
+  ["×1", "2N2924", "Q", ""],
+  ["×1", "500K", "POT", "output level, only in the 'modified for overdrive' version"]
+ ]
+}

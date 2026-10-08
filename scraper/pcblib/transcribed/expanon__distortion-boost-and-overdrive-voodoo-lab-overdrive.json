@@ -1,0 +1,25 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-voodoo-lab-overdrive",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Clean redrawn Voodoo Lab Overdrive (two TL072 stages with diode clipping between them) by Justin Philpott; no designators. The DPDT bypass footswitch is skipped.",
+ "uncertain": [
+  "output resistor: drawn '250Ω?' from bands red-green-black-black-red"
+ ],
+ "rows": [
+  ["×3", "10k", "R", "input, between stages (2)"],
+  ["×2", "470k", "R", "feedback, input bias"],
+  ["×3", "47k", "R", "bias divider (2), second stage to ground"],
+  ["×1", "150k", "R", "second stage feedback"],
+  ["×1", "250", "R", "output series, marked *: 1% bands red-green-black-black-red, drawn '250Ω?'"],
+  ["×1", ".01uF", "C", "input"],
+  ["×1", ".1uF", "C", "Gain leg"],
+  ["×2", "220pF", "C", "feedback caps"],
+  ["×1", ".001uF", "C", "across clipping diodes"],
+  ["×1", "100uF", "C", "bias filter"],
+  ["×2", "2.2uF", "C", "output coupling, second stage to ground"],
+  ["×2", "1N4148", "D", "clipping, antiparallel"],
+  ["×1", "TL072CN", "IC", "dual op amp"],
+  ["Gain", "500k", "POT", ""],
+  ["Volume", "100k", "POT", ""]
+ ]
+}

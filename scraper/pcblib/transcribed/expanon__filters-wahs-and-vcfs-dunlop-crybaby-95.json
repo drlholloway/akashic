@@ -1,0 +1,30 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-dunlop-crybaby-95",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Dunlop GCB-95 Crybaby with no designators, so parts are listed by quantity; includes a DPDT true-bypass rewiring note and a buffer section that can be dropped with true bypass.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "1k", "R", "supply dropper and Q3 collector"],
+  ["×1", "1M8", "R", "input buffer bias (buffer only needed with the SPDT switch)"],
+  ["×1", "68k", "R", "buffer output series"],
+  ["×2", "10k", "R", "buffer emitter and Q3 emitter"],
+  ["×1", "22k", "R", "Q2 collector"],
+  ["×1", "390", "R", "Q2 emitter"],
+  ["×1", "1k5", "R", "Q2 base to inductor"],
+  ["×2", "470k", "R", "feedback and Q2-collector bias"],
+  ["×1", "33k", "R", "inductor parallel resistor"],
+  ["×1", "82k", "R", "across the 4u7"],
+  ["×1", "0", "R", "drawn with one black band (0 ohms); a jumper can be used"],
+  ["×2", ".22uF", "C", "either side of the Hot Potz pot"],
+  ["×1", ".1uF", "C", "supply filter"],
+  ["×1", "220uF", "C", "electrolytic, supply filter"],
+  ["×3", ".01uF", "C", "buffer input, Q2 input coupling, feedback"],
+  ["×1", "22pF", "C", "buffer input to ground"],
+  ["×1", "4u7", "C", "electrolytic"],
+  ["×1", "ZL9M3", "D", "9.1V zener; drawing says any 9.1V zener can be used"],
+  ["×1", "MPSA-13", "Q", "input buffer (only needed with the SPDT switch)"],
+  ["×2", "MPS-A18", "Q", ""],
+  ["×1", "500mH", "L", "wah inductor"],
+  ["Hot Potz", "100k", "POT", "wah pot, Dunlop Hot Potz"]
+ ]
+}

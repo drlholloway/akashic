@@ -21,7 +21,8 @@ _BRANDS = re.compile(r"^(boss|dod|mxr|ehx|electro[- ]?harmonix|ibanez|maestro|pr
 _SKIP_DIRS = {"MIDI", "OOP Japanese Electronics Book", "Power Supplies and Other Useful Stuff", "Miscellaneous"}
 # slug -> the page of a multi-page PDF that holds the schematic, found by looking (page 1 is often a cover,
 # a parts list or an article's first page). Unlisted PDFs use page 1.
-_PAGE: dict[str, int] = {"chorus-dod-fx64": 2, "filters-wahs-and-vcfs-lovetone-meatball-mcmeat": 2}
+_PAGE: dict[str, int] = {"chorus-dod-fx64": 2, "filters-wahs-and-vcfs-lovetone-meatball-mcmeat": 2,
+                         "distortion-boost-and-overdrive-boss-mt2": 2}
 
 
 def _slug(folder: str, title: str) -> str:

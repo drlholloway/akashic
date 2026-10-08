@@ -1,0 +1,37 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-electro-harmonix-bassballs",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "EHX factory drawing EH-4250 (4-12-78), page 1 of a 3-page PDF (pages 2-3 are a PCB layout); faint pencil designators exist but are mostly illegible, so parts are grouped by value. The Effect/Direct switch is the footswitch and is skipped.",
+ "uncertain": [
+  ".47uF tantalum: the leading point is faint, could be 4.7uF",
+  "Fuzz switch: drawn with OFF/ON contacts and points D/E/F, exact type unclear"
+ ],
+ "rows": [
+  ["×1", "100Ω", "R", "envelope rectifier, after the 1N4148"],
+  ["×1", "1K", "R", "to the DIRECT output"],
+  ["×3", "2.7K", "R", "1458 input; one at each 4558 filter stage input"],
+  ["×1", "4.7K", "R", "envelope follower input"],
+  ["×2", "22K", "R", "2N5088 bases, from the trimmers"],
+  ["×6", "47K", "R", "two Vb divider, fuzz pulldown, two filter collector loads, output pulldown"],
+  ["×1", "100K", "R", "fuzz switch feed"],
+  ["×2", "220K", "R", "input bias from Vb; envelope op amp feedback"],
+  ["×1", "330K", "R", "envelope reservoir discharge"],
+  ["×4", "470K", "R", "two per 4558 filter stage"],
+  ["×1", "2.2M", "R", "envelope op amp - input to ground"],
+  ["×2", "560pF", "C", "ceramic, filter stages"],
+  ["×2", ".0047uF", "C", "second filter stage"],
+  ["×2", ".022uF", "C", "first filter stage"],
+  ["×3", ".047uF", "C", "input coupling, envelope op amp output, fuzz switch"],
+  ["×1", ".47uF", "C", "tantalum, envelope follower input"],
+  ["×1", "1uF", "C", "electrolytic, effect output coupling"],
+  ["×1", "4.7uF", "C", "tantalum, envelope reservoir"],
+  ["×3", "10uF", "C", "electrolytic: supply, Vb, sensitivity pot feed"],
+  ["×1", "1N4148", "D", "envelope rectifier"],
+  ["×3", "2N5088", "Q", "one envelope emitter follower, two variable-resistance elements in the filter; one is drawn '2N5C88'"],
+  ["×1", "1458", "IC", "dual op amp: input buffer and envelope amp"],
+  ["×1", "4558", "IC", "dual op amp: two filter stages"],
+  ["Sensitivity", "B10K", "POT", "drawn '10K LIN'"],
+  ["×2", "10K", "TRIM", "filter transistor bias trimmers"],
+  ["Fuzz", "SPDT", "SW", "fuzz on/off toggle; contact arrangement uncertain"]
+ ]
+}

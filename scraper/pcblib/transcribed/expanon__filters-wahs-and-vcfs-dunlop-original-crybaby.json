@@ -1,0 +1,27 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-dunlop-original-crybaby",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Justin Philpott's 1997 redraw of the original Crybaby wah; no designators, so quantity refs are used.",
+ "uncertain": [
+  ".0011uF: as drawn; possibly meant .001uF or a misprint of a larger supply cap"
+ ],
+ "rows": [
+  ["×2", "1k", "R", "supply series; Q2 collector"],
+  ["×1", "68k", "R", "input"],
+  ["×1", "22k", "R", "Q1 collector"],
+  ["×1", "470", "R", "Q1 emitter"],
+  ["×1", "1k5", "R", ""],
+  ["×2", "470k", "R", ""],
+  ["×1", "33k", "R", ""],
+  ["×1", "82k", "R", ""],
+  ["×1", "10k", "R", "Q2 emitter"],
+  ["×2", ".001uF", "C", "feedback to the wah pot"],
+  ["×1", ".0011uF", "C", "supply filter; drawn '.0011uF', unusual value"],
+  ["×2", ".01uF", "C", ""],
+  ["×1", "4u7", "C", "electrolytic"],
+  ["×1", "1N4148", "D", "supply polarity protection"],
+  ["×2", "2N3904", "Q", ""],
+  ["×1", "660mH", "L", "wah inductor"],
+  ["×1", "100k", "POT", "wah pot, drawn '100k \"Hot Potz\"'"]
+ ]
+}

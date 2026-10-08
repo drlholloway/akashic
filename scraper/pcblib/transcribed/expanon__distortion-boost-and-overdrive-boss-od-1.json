@@ -1,0 +1,26 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-boss-od-1",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Clean hand-drawn schematic of the Boss OD-1 with no designators; asymmetric clipping in the first stage feedback.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "1K", "R", "input series, first-stage output, second-stage feedback"],
+  ["×4", "10K", "R", "two Vref divider, pin 5 to Vref, output series"],
+  ["×1", "2.2M", "R", "input pulldown"],
+  ["×1", "510K", "R", "pin 3 bias"],
+  ["×1", "4.7K", "R", "drive leg"],
+  ["×1", "51K", "R", "drive feedback"],
+  ["×1", "220", "R", "to 20KB wiper"],
+  ["×2", "47pF", "C", "input filter, feedback"],
+  ["×1", ".1uF", "C", "input coupling"],
+  ["×1", "473", "C", "47nF, drive leg to ground"],
+  ["×2", ".22uF", "C", "drawn .22"],
+  ["×1", "10uF", "C", "Vref filter"],
+  ["×1", "1uF", "C", "output coupling"],
+  ["×3", "Diode", "D", "no part number given; two in series one way, one the other way in the feedback"],
+  ["×1", "JRC4558", "IC", "dual op amp"],
+  ["Over Drive", "A500K", "POT", "drawn 500KA"],
+  ["×1", "B20K", "POT", "drawn 20KB, unnamed, sets second-stage gain; likely an internal trim"],
+  ["×1", "B100K", "POT", "drawn 100KB, unnamed output volume (Level)"]
+ ]
+}

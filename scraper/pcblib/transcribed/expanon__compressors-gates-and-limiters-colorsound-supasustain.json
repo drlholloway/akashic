@@ -1,0 +1,28 @@
+{
+ "id": "expanon:compressors-gates-and-limiters-colorsound-supasustain",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Clean redrawn schematic by Tobias Karlsson with no designators, so quantity refs are used. The Normal/Sustain switch in the photo is not drawn; 'log b' on the pots is read as log (A) taper.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "82k", "R", ""],
+  ["×3", "220k", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×1", "47k", "R", "output, before Volume"],
+  ["×1", "1.5k", "R", ""],
+  ["×1", "1k", "R", "below Sensitivity pot"],
+  ["×1", "4.7k", "R", ""],
+  ["×1", "1.8k", "R", ""],
+  ["×2", "100ohm", "R", "one in series with the LDR, one at the second LED-driver emitter"],
+  ["×1", "470ohm", "R", "LED series resistor"],
+  ["×1", "33uF", "C", "electrolytic, 18V supply filter"],
+  ["×1", "10uF", "C", "electrolytic"],
+  ["×2", "0.047uF", "C", ""],
+  ["×1", "0.1uF", "C", "input"],
+  ["×2", "1uF", "C", "non-polar (NP)"],
+  ["×1", "red LED", "LED", "6mm, mounted with the LDR in shrink tube"],
+  ["×4", "BC169B", "Q", "all transistors BC169B"],
+  ["×1", "LDR", "OPTO", "mounted with the LED in shrink tube"],
+  ["Sensitivity", "A100K", "POT", "drawn '100k log b'"],
+  ["Volume", "A100K", "POT", "drawn '100k log b'"]
+ ]
+}

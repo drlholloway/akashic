@@ -1,0 +1,9 @@
+{
+ "id": "expanon:delay-echo-and-samplers-arion-sad-1-layout",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Not a schematic: a PCB component-side layout of the Arion SAD-1 (MN3205/MN3102, TC4027, TA75558, uPC1571C, RC4558) with values printed on the footprints but no designators or connectivity; left empty per the PCB-layout rule.",
+ "uncertain": [],
+ "rows": [
+
+ ]
+}

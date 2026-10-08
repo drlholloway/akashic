@@ -260,6 +260,7 @@ def normalize_row(row: BomRow) -> BomRow:
     if row.category in ("D", "Q", "IC", "OPTO"):
         raw = re.sub(r"[*+†‡]+$", "", raw).strip()          # footnote markers: 2N5458**, 1N4148+
         raw = re.sub(r"\s+[A-Z]$", "", raw)                  # stray column bleed: "1N5817 S"
+        raw = re.sub(r"(?i)^MPS-?A-?(\d)", r"MPSA\1", raw)    # 'MPS-A18', 'MPSA-13' as old drawings hyphenate them
     if row.category in ("R", "C", "L", "TRIM"):
         m = re.match(r"^(\d+(?:[.,]\d+)?\s*[pnuµμmkKMRr]?\d*\s*(?:[Ff]|ohms?|H)?)\s+([A-Za-z(][^\n]*|\d+/\d+\s*W.*)$", raw)
         if m and _parse_si(m.group(1)) is not None:   # "100p Silver Mica" -> value 100p, type "Silver Mica"

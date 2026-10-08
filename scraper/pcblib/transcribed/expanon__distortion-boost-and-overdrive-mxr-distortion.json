@@ -1,0 +1,24 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-mxr-distortion",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Clean redraw of the MXR Distortion+ with S1 bypass and LED; D1/D2 are the only designators. The original diode type 1N270 comes from the sheet's note; the 1M input pulldown and 8-10pF feedback cap are optional mods drawn dotted.",
+ "uncertain": [],
+ "rows": [
+  ["×5", "1M", "R", "bias divider (2), bias feed, feedback; plus one more as the dotted click-prevention mod on the input"],
+  ["×2", "10k", "R", ""],
+  ["×1", "4.7k", "R", ""],
+  ["×1", "2.2k", "R", "LED"],
+  ["×2", ".001uF", "C", "input and output"],
+  ["×1", ".01uF", "C", ""],
+  ["×1", ".047uF", "C", ""],
+  ["×1", "1uF", "C", "25V electrolytic, bias"],
+  ["×1", "1uF", "C", "35V tantalum, output"],
+  ["×1", "8-10pF", "C", "dotted mod: across the feedback resistor against oscillation"],
+  ["D1", "1N270", "D", "germanium; drawing suggests 1N34, 1N4148 or LEDs as alternatives"],
+  ["D2", "1N270", "D", "germanium; drawing suggests 1N34, 1N4148 or LEDs as alternatives"],
+  ["×1", "LED", "LED", "status"],
+  ["×1", "741", "IC", "op amp"],
+  ["×1", "1M", "POT", "unlabeled: distortion, wired as variable resistor"],
+  ["×1", "10k", "POT", "unlabeled: output"]
+ ]
+}

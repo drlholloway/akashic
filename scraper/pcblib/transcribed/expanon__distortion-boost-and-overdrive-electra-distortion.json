@@ -1,0 +1,14 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-electra-distortion",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Clean typed single-page schematic of the Electra Distortion (one 2N3904 stage with germanium diode clipping) plus a paragraph of notes; no designators.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "4.7K", "R", "collector"],
+  ["×1", "2.3M", "R", "collector-to-base bias"],
+  ["×1", "470", "R", "emitter"],
+  ["×2", "0.1uF", "C", "input and output coupling"],
+  ["×2", "Ge", "D", "germanium clipping diodes to ground, no part number given"],
+  ["×1", "2N3904", "Q", ""]
+ ]
+}

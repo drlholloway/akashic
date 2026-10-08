@@ -1,0 +1,30 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-electro-harmonix-big-muff-pi",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Original-style Big Muff Pi drawing with no designators; parts grouped by value. The notes on the sheet say diode and transistor types are unknown.",
+ "uncertain": [
+  "Tone: pot has no value on the drawing"
+ ],
+ "rows": [
+  ["×5", "100k", "R", ""],
+  ["×3", "15k", "R", ""],
+  ["×3", "470k", "R", ""],
+  ["×3", "100", "R", "emitter resistors"],
+  ["×2", "39k", "R", "one at the input, one in the tone stack"],
+  ["×2", "8.2k", "R", ""],
+  ["×1", "1k", "R", "below Sustain"],
+  ["×1", "390k", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "2.2k", "R", ""],
+  ["×5", "1u", "C", "the four marked * reported to sound better as 0.1uF"],
+  ["×3", "500p", "C", ""],
+  ["×3", "0.1uF", "C", "the two clipping-loop caps marked ** reported to sound better as 1.0uF"],
+  ["×1", "0.01uF", "C", "tone stack"],
+  ["×1", "0.004uF", "C", "tone stack"],
+  ["×4", "1N914", "D", "types unknown; drawing says 1N914s work"],
+  ["×4", "?", "Q", "NPN; types unknown, drawing says any high-gain NPN"],
+  ["Sustain", "100k", "POT", ""],
+  ["Tone", "?", "POT", "no value drawn"],
+  ["Volume", "100k", "POT", ""]
+ ]
+}

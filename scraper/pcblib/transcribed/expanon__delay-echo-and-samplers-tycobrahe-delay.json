@@ -1,0 +1,9 @@
+{
+ "id": "expanon:delay-echo-and-samplers-tycobrahe-delay",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Hand-drawn 600x460 scan of a large analog delay line (555/7474/MN3002 clock, several BBD stages with 24dB and 36dB filters, reverb and echo sums, mains supply). At this resolution most of the BBD-section values and all IC part numbers on the signal path are illegible, and there are no designators, so no parts list could be read reliably.",
+ "uncertain": [],
+ "rows": [
+
+ ]
+}

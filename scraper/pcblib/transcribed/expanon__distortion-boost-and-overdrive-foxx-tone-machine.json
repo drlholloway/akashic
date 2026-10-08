@@ -1,0 +1,30 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-foxx-tone-machine",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Justin Philpott's 1997 drawing of the Foxx Tone Machine, no designators; transistor, diode, electrolytic and pot values come from the note box.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "47k", "R", ""],
+  ["×2", "1k", "R", ""],
+  ["×3", "4k7", "R", ""],
+  ["×5", "100k", "R", ""],
+  ["×1", "220", "R", ""],
+  ["×1", "150k", "R", ""],
+  ["×1", "15k", "R", ""],
+  ["×2", "10k", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "1k5", "R", ""],
+  ["×2", "0.1uF", "C", ""],
+  ["×1", "1000pF", "C", ""],
+  ["×1", "3300pF", "C", ""],
+  ["×1", ".047uF", "C", ""],
+  ["×8", "10uF", "C", "electrolytic, 16V, per the drawing's note"],
+  ["×4", "1N34A", "D", "germanium, per the note"],
+  ["×4", "2N3565", "Q", "per the note"],
+  ["Drive", "50K", "POT", "all pots 50K per the note"],
+  ["Tone", "50K", "POT", ""],
+  ["Output", "50K", "POT", ""],
+  ["Octave", "SPDT", "SW", "selects octave A/B"]
+ ]
+}
