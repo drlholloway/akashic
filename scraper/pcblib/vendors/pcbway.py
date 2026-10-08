@@ -27,6 +27,26 @@ MEMBERS = {
 }
 LIST = "https://member.pcbway.com/Project/GetProject_ShareProjectList?callback=cb&bmbno={bmbno}&type=&page={page}"
 PROJECT = "https://www.pcbway.com/project/shareproject/{file}.html"
+# A schematic image is named '..._schematic.png' on most projects, 'schem.png' or 'schematic.png' on a few.
+_SCHEM_NAME = re.compile(r"(?:^|[_\-\s])schem(?:atic)?\.(?:png|jpe?g|gif)$", re.I)
+# Older projects upload their images unnamed; these were looked at and the schematic picked by hand.
+# slug -> image URL
+_SCHEMATIC: dict[str, str] = {
+    "basic-audio-scarab-deluxe-fuzz": "https://pcbwayfile.s3-us-west-2.amazonaws.com/project/20/07/24/0435155368476.png",
+    "bearfoot-sea-blue-eq": "https://pcbwayfile.s3-us-west-2.amazonaws.com/project/20/08/29/1722318278838.png",
+    "dallas-fuzz-face": "https://pcbwayfile.s3-us-west-2.amazonaws.com/project/20/06/18/0247429255480.jpg",
+    "eqd-crimson-drive": "https://pcbwayfile.s3-us-west-2.amazonaws.com/project/20/09/06/1833216060061.png",
+    "eqd-crysalis-overdrive": "https://pcbwayfile.s3-us-west-2.amazonaws.com/project/20/06/22/0017594035716.jpg",
+    "lovepedal-hermida-audio-zendrive": "https://pcbwayfile.s3-us-west-2.amazonaws.com/project/20/06/21/1208061166560.jpg",
+    "marshall-jmp-cabsim": "https://pcbwayfile.s3-us-west-2.amazonaws.com/project/20/06/12/0134106354156.jpg",
+    "maxon-od808-overdrive": "https://pcbwayfile.s3-us-west-2.amazonaws.com/project/21/02/10/0629191375325.png",
+    "mxr-blue-box-octave-fuzz": "https://pcbwayfile.s3-us-west-2.amazonaws.com/project/21/05/08/2251064590356.png",
+    "mxr-microamp": "https://pcbwayfile.s3-us-west-2.amazonaws.com/project/21/01/08/1055496267202.png",
+    "proco-rat-distortion": "https://pcbwayfile.s3-us-west-2.amazonaws.com/project/20/11/07/0700535728662.png",
+    "sky-river-distortion": "https://pcbwayfile.s3-us-west-2.amazonaws.com/project/20/10/02/1948339051160.png",
+    "zvex-super-duper-smd": "https://pcbwayfile.s3-us-west-2.amazonaws.com/project/21/01/23/2059206313486.png",
+    "zvex-super-hard-on": "https://pcbwayfile.s3-us-west-2.amazonaws.com/project/20/06/13/0827279720305.jpg",
+}
 
 
 class _PCBWayMember(Adapter):
@@ -86,16 +106,21 @@ class _PCBWayMember(Adapter):
             price=None, currency="USD", in_stock=True, doc_url=url,
             image_url=(it.get("Pics") or "").replace("m.png", ".png"), doc_version=published,
         )
-        schem = next((li.attributes.get("data-url") or "" for li in doc.css("li.img-pics")
-                      if re.search(r"_schematic\.(png|jpe?g)$", li.attributes.get("data-name") or "", re.I)), "")
+        schem = _SCHEMATIC.get(c.slug) or next((li.attributes.get("data-url") or "" for li in doc.css("li.img-pics")
+                                                 if _SCHEM_NAME.search(li.attributes.get("data-name") or "")), "")
         if schem:
             c.extra_docs["Schematic image (CC BY-SA)"] = schem
-            img = self.f.get_file(schem, ".png")
+            ext = "." + schem.rsplit(".", 1)[-1].lower()
+            img = self.f.get_file(schem, ext if ext in (".png", ".jpg", ".jpeg", ".gif") else ".png")
             if img:
                 png = CACHE_DIR / self.vendor / f"{c.slug}-schematic.png"
                 if not png.exists():
                     png.parent.mkdir(parents=True, exist_ok=True)
-                    png.write_bytes(img.read_bytes())
+                    if img.suffix.lower() == ".png":
+                        png.write_bytes(img.read_bytes())
+                    else:
+                        from PIL import Image
+                        Image.open(img).convert("RGB").save(png)
                 c.schematic_local = str(png.relative_to(DATA_DIR))
                 c.schematic_page = 1
                 c.bom = schematic_value_bom(png)
