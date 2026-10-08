@@ -21,7 +21,7 @@ GitHub Release notes.
   Coolaudio's V3207 and V3205 for the MN3207 and MN3205 they replace. The PT2399 and Electric Druid's
   TAPLFO3 link to the sheets Electric Druid keeps. The site links rather than hosts them, as the manufacturers hold the copyright; a copy is
   cached locally for reference. `pcblib datasheets` finds links for parts added later. Discontinued parts
-  with no maker's copy are served from the site: 64 archived files covering 106 part spellings,
+  with no maker's copy are served from the site: 65 archived files covering 107 part spellings,
   without the archive's ad pages and watermarks and checked for the part number. One sheet serves every
   part it covers (NE570/571, BC182/183/184, 2N1302/1304/1306/1308). Where only a row in a maker's selector table could be found
   (the germanium catalogs, a 1950s Philips folder of OC transistors and OA diodes), the part page says so. Package suffixes no longer hide a TI datasheet (LF356N,
