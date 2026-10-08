@@ -7,7 +7,7 @@ the owner's reference. Generic entries (GE, NPN, a bare zener voltage) have no d
 The one exception: a discontinued part whose maker no longer publishes the sheet is served from
 app/static/datasheets/, recorded as a relative path ('datasheets/M51134P.pdf'). DISCONTINUED lists
 those parts; their sheets come from an archive (Findchips links to The Datasheet Archive, which sits
-behind a bot check, so they are downloaded by hand) and host() strips the archive's ad page and
+behind a bot check, so those are downloaded by hand; datasheet4u.com serves its PDFs to scripts) and host() strips the archive's ad page and
 metadata and checks the part number is in the sheet before it is served."""
 from __future__ import annotations
 
@@ -52,7 +52,7 @@ DISCONTINUED: dict[str, list[str]] = {
 }
 # Hosted files that are a row in a maker's selector table or catalog, not a full datasheet: the part
 # page says so, and the worklist keeps asking for the real sheet. Set by eye when a file is hosted.
-SELECTOR = {"2N1308", "2N5306", "AC176", "BC264", "Philips-transistors-diodes"}
+SELECTOR = {"2N1308", "2N5308", "AC176", "Philips-transistors-diodes"}
 
 
 # Parts a hosted file covers, checked by eye (OCR misses rows in small catalog print): linked to the
@@ -61,7 +61,6 @@ COVERED_BY: dict[str, list[str]] = {
     "AC176": ["AC127", "AC187"],                                # Germanium Power Devices catalog, AC series
     "2N1308": ["2N1302", "2N1304", "2N1306", "2N404"],          # TI germanium transistor table
     "2N1302": ["2N1304", "2N1306", "2N1308"],                   # Central's 2N1302/1304/1306/1308 sheet
-    "2N5306": ["2N5308"],
     # A 1950s Philips folder of OC transistors and OA diodes: rating tables and case drawings.
     "Philips-transistors-diodes": ["OC44", "OC71", "OC75", "OC76", "OC79", "OC139", "OC140", "OA90", "OA91", "OA200"],                                       # National NPN Darlington selector table
     "NE570": ["NE571"],
@@ -80,7 +79,7 @@ def has_own(part: str) -> bool:
 
 
 # Pages to keep (1-based) where an archive copy runs on into the next sheet of a scanned data book.
-PAGES: dict[str, range] = {"LM308": range(1, 5)}
+PAGES: dict[str, range] = {"LM308": range(1, 5), "2SD352": range(4, 7)}
 _AD = re.compile(r"findchips\.com|datasheetarchive|alldatasheet|datasheetcatalog|datasheet4u|icminer", re.I)
 
 TI = "https://www.ti.com/lit/ds/symlink/{}.pdf"
@@ -169,7 +168,7 @@ def table() -> dict[str, str]:
 
 
 def _norm(s: str) -> str:
-    return re.sub(r"[^A-Z0-9]", "", s.upper())
+    return re.sub(r"[^A-Z0-9]", "", s.upper().replace("µ", "U").replace("Μ", "U"))  # 'µPC4570' is the UPC4570
 
 
 _OCR_FOLD = str.maketrans("SOILBZ8", "5011525")  # shapes OCR confuses: '1S1588' as '151588', '2SC1815' as '28C1815'
@@ -184,7 +183,7 @@ def _names_in(text: str, names, fuzzy: bool = True) -> set[str]:
     match exactly and start a word). A name running into another digit is a longer part number
     ('1N2701' is not 1N270) unless a space or a cell border separated them in the text."""
     chars, gap = [], []                      # alphanumerics, and whether a separator followed each
-    for ch in text.upper():
+    for ch in text.upper().replace("Μ", "U"):      # 'µPC4570' (µ upper-cases to Greek Mu) is the UPC4570
         if ch.isascii() and ch.isalnum():
             chars.append(ch)
             gap.append(False)

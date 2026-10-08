@@ -98,8 +98,8 @@ hosts that block scripts (onsemi, Analog Devices, Renesas, Nexperia) in `to-chec
 a browser and record a good one with `--add 'Q:2N3904=https://...'`. A discontinued part whose maker no
 longer publishes the sheet is the exception, served from `app/static/datasheets/`. The parts are listed
 in `datasheets.DISCONTINUED`; each run writes `data/cache/datasheets/discontinued.html`, the ones still
-to fetch with their Findchips links (Findchips and The Datasheet Archive sit behind a bot check, so the
-sheets are downloaded by hand). Save them named for the part and run `pcblib datasheets --host <folder>`:
+to fetch with their Findchips links (Findchips and The Datasheet Archive sit behind a bot check, so those
+are downloaded by hand; datasheet4u.com serves its archived PDFs to scripts and allows it in robots.txt). Save them named for the part and run `pcblib datasheets --host <folder>`:
 it drops the archive's ad pages, watermarks, links and metadata and trailing pages about another part,
 checks (by OCR for a scan, turned sideways if need be) that the part number is in the sheet, and records
 every spelling of the part. A sheet that covers other discontinued parts (NE570/571, a germanium
