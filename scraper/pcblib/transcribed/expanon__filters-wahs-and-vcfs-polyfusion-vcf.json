@@ -1,0 +1,43 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-polyfusion-vcf",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Hand-lettered Polyfusion four-pole OTA (3080) voltage-controlled filter with exponential converter and resonance CV circuitry; no designators, so quantity refs by value are used. Offset, Scale, Range, H.F. Comp, R-Sym and R-Cal read as trimmers; Freq and Reson are the boxed panel pots.",
+ "uncertain": [
+  "10K: one JFET source resistor in stage B is drawn '.10K', read as 10K like the other three"
+ ],
+ "rows": [
+  ["×10", "1K", "R", "8 in the four filter stages (JFET drains and 3080 pin 5), 2 at the 2N3906 pair bases"],
+  ["×8", "100", "R", "3080 A-D input pins to ground"],
+  ["×1", "620", "R", "signal output series"],
+  ["×2", "2K", "R", "around 3080 E"],
+  ["×1", "4.7K", "R", "2N3906 pair emitter"],
+  ["×1", "5.1K", "R", "Range trimmer string"],
+  ["×1", "5.6K", "R", "feedback into 3080 A"],
+  ["×8", "10K", "R", "4 JFET source loads (one drawn '.10K', read as 10K), 1458 A input and feedback, H.F. comp, 3080 E feedback"],
+  ["×2", "15K", "R", "2N3906 pair collector and 1458 B + input"],
+  ["×8", "20K", "R", "filter ladder resistors"],
+  ["×2", "27K", "R", "1458 A + input to ground and 2N3906 pair base feed"],
+  ["×1", "36K", "R", "741 A feedback"],
+  ["×2", "43K", "R", "Freq CV scale string and 741 C + input"],
+  ["×4", "51K", "R", "3 around 741 A input, 1 in the Range string"],
+  ["×11", "100K", "R", ""],
+  ["×2", "300K", "R", "Freq and Reson pot wiper resistors"],
+  ["×5", "100pF", "C", "4 on 3080 outputs, 1 on 1458 B feedback"],
+  ["×1", "330pF", "C", "3080 E feedback"],
+  ["×1", ".22uF", "C", "output coupling to 741 B"],
+  ["×1", "1N4148", "D", ""],
+  ["×4", "E-112", "Q", "JFET buffers after each 3080"],
+  ["×3", "2N3906", "Q", "PNP; 2 are a matched pair (exponential converter), 1 in the resonance CV path"],
+  ["×3", "741", "IC", "op amps A, B, C"],
+  ["×5", "3080", "IC", "OTAs A-E"],
+  ["×2", "1458", "IC", "dual op amps; two sections drawn 'A' and two 'B'"],
+  ["Freq", "B25K", "POT", "25K lin"],
+  ["Reson", "B25K", "POT", "25K lin"],
+  ["Offset", "100K", "TRIM", "signal offset"],
+  ["Scale", "20K", "TRIM", "Freq CV scale"],
+  ["Range", "5K", "TRIM", ""],
+  ["H.F. Comp", "100K", "TRIM", ""],
+  ["R-Sym", "100K", "TRIM", ""],
+  ["R-Cal", "100K", "TRIM", ""]
+ ]
+}

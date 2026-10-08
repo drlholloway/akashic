@@ -1,0 +1,21 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-simple-mid-booster",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "LPB-1 booster followed by a passive mid-boost filter (R1-R4, C1-C2). The GIF renders almost blank because its palette is inverted; read from the raw palette indices. The right edge is cropped but no parts are lost.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "11M", "R", "mid filter"],
+  ["R2", "25k", "R", "mid filter to ground"],
+  ["R4", "10M", "R", "output"],
+  ["×1", "430k", "R", "LPB-1 bias"],
+  ["×1", "43k", "R", "LPB-1 bias"],
+  ["×1", "10k", "R", "LPB-1 collector"],
+  ["×1", "390", "R", "LPB-1 emitter"],
+  ["C1", "15n", "C", ""],
+  ["C2", "500p", "C", ""],
+  ["×2", "0.1uF", "C", "LPB-1 input and output coupling"],
+  ["×1", "2N5133", "Q", "LPB-1 transistor"],
+  ["Mid", "250k", "POT", "drawn R3, labelled 'Mid (tone)'"],
+  ["×1", "100k", "POT", "LPB-1 output level pot, unnamed"]
+ ]
+}

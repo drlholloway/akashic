@@ -1,0 +1,23 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-angry-beard-iii",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Jamie Heilman's Angry Beard III: single op amp gain stage into a 2N44 PNP germanium stage, with an emphasis switch. No designators; bypass switching is not drawn.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "330 ohms", "R", "emphasis switch to ground"],
+  ["×2", "1M", "R", "op-amp feedback and bias"],
+  ["×2", "10k", "R", "input and transistor base"],
+  ["×2", "20k", "R", "bias divider"],
+  ["×1", "1k", "R", "collector to +9V"],
+  ["×1", "100k", "R", "emitter"],
+  ["×2", "0.22uf", "C", "Normal emphasis and output coupling"],
+  ["×1", "0.022uf", "C", "High emphasis"],
+  ["×1", "0.01uf", "C", "input"],
+  ["×2", "10uf", "C", "electrolytic: coupling and bias filter"],
+  ["×1", "0.0056uf", "C", "base to ground"],
+  ["×1", "2N44", "Q", "PNP germanium"],
+  ["×1", "NE5534", "IC", "any low-noise single op amp"],
+  ["×1", "10k", "POT", "output level, unnamed"],
+  ["×1", "SPDT", "SW", "emphasis switch Normal/High"]
+ ]
+}

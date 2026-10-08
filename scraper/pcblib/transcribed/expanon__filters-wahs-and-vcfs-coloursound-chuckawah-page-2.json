@@ -1,0 +1,28 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-coloursound-chuckawah-page-2",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Hand-traced Colorsound Chuck-a-Wah page 2 of 2: an MC3401 quad Norton op-amp wah/filter with a BF244A JFET, plus off-board wiring; no designators, and the tracer warns it may contain errors.",
+ "uncertain": [
+  "16k: handwritten '16 k', could be 15k",
+  "pot and trimmer values not given"
+ ],
+ "rows": [
+  ["×5", "1M", "R", ""],
+  ["×3", "470k", "R", "op-amp feedback"],
+  ["×4", "100k", "R", ""],
+  ["×2", "47k", "R", ""],
+  ["×1", "16k", "R", ""],
+  ["×2", "220k", "R", ""],
+  ["×2", "10M", "R", "switched in by the slide switch"],
+  ["×4", "47n", "C", ""],
+  ["×3", "100n", "C", ""],
+  ["×2", "10n", "C", ""],
+  ["×2", "4n7", "C", ""],
+  ["×1", "Diode", "D", "no part number given; supply polarity protection"],
+  ["×1", "BF244A", "Q", "N-channel JFET"],
+  ["×1", "MC3401", "IC", "quad Norton op amp, four sections used"],
+  ["×1", "?", "POT", "no value drawn; pot with wiper to a 100n cap, likely the wah/sweep control"],
+  ["×1", "?", "TRIM", "value drawn as '?'; between 220k and ground, wiper to 47k"],
+  ["×1", "SPDT", "SW", "slide switch selecting the 10M resistors"]
+ ]
+}

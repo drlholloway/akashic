@@ -1,0 +1,17 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-cookbook-fuzz",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "National Semiconductor application-note figure 5.5.1 Fuzz Circuit: a quarter-LM324 inverting stage with diode clipping in the feedback; no designators. The output coupling capacitor has no value drawn and is not listed.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "10k", "R", ""],
+  ["×2", "100k", "R", "bias divider"],
+  ["×1", "1uF", "C", "input"],
+  ["×1", "0.1uF", "C", "supply bypass, drawn 0.1"],
+  ["×1", "10uF", "C", "bias filter, electrolytic"],
+  ["×2", "1N914", "D", "anti-parallel clipping pair"],
+  ["×1", "LM324", "IC", "one quarter used"],
+  ["Fuzz Depth", "100k", "POT", "rheostat in series with 10k feedback resistor"],
+  ["Fuzz Intensity", "100k", "POT", "output level"]
+ ]
+}

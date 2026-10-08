@@ -1,0 +1,23 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-digital-fuzz",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Digital fuzz: ADC0808 into DAC0807 with per-bit switches, drawn without designators; the left edge (input label) is cropped.",
+ "uncertain": [
+  "100k variable resistor: drawn as a rheostat with no name; could be a pot rather than a trimmer",
+  "Input/output coupling capacitors: no value drawn"
+ ],
+ "rows": [
+  ["×7", "4.7k", "R", ""],
+  ["×1", "100k", "R", "input op amp feedback"],
+  ["×1", "220pF", "C", "ADC clock"],
+  ["×1", ".1uF", "C", "DAC compensation"],
+  ["×1", "220uF", "C", "+5V supply filter"],
+  ["×2", "?", "C", "input and output coupling caps, no value drawn"],
+  ["×1", "ADC0808", "IC", ""],
+  ["×1", "DAC0807", "IC", "as drawn"],
+  ["×2", "?", "IC", "op amps, no part number given"],
+  ["×1", "100k", "TRIM", "variable resistor in the ADC clock network (could be a panel pot)"],
+  ["×8", "SPDT", "SW", "one per data bit A-H, each line to DAC or ground"],
+  ["×1", "SPST", "SW", "switch from ADC pin 3 to ground (start/reset)"]
+ ]
+}

@@ -1,0 +1,30 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-aron-nelson-hot-fuzz",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Hand-drawn Hot Fuzz Professional (NPN version, Rev 002, 2000) by Aron Nelson. Three 2N388A germanium stages and a J201 buffer, based on the Tone Bender Mk II and the Sweet Thing tone stack.",
+ "uncertain": [
+  "5K emitter control: drawn as a variable resistor with no 'T' mark; could be a panel pot or a trimmer"
+ ],
+ "rows": [
+  ["×1", "100K", "R", "Q1 base to ground"],
+  ["×1", "10K", "R", "Q1 collector"],
+  ["×1", "470", "R", "Q3 collector, top"],
+  ["×1", "8.2K", "R", "Q3 collector"],
+  ["×2", "100K", "R", "FET gate: series from the 500k pot, and gate to tone network"],
+  ["×1", "1M", "R", "FET gate to ground"],
+  ["×3", "10K", "R", "FET source and the tone network"],
+  ["×1", "50uF", "C", "electrolytic supply filter"],
+  ["×3", ".1uF", "C", "input, Q1 to Q2 coupling, and to the highs trim"],
+  ["×1", ".01uF", "C", "output coupling to the 500k pot"],
+  ["×1", "22uF", "C", "electrolytic emitter bypass via the 5K"],
+  ["×1", ".47uF", "C", "output"],
+  ["×1", ".022uF", "C", "tone network"],
+  ["×3", "2N388A", "Q", "NPN germanium"],
+  ["×1", "J201", "Q", "JFET"],
+  ["×1", "500k", "POT", "unnamed, feeds the FET stage"],
+  ["Tone", "50K", "POT", ""],
+  ["×1", "5K", "POT", "emitter-bypass control, wired as variable resistor to the 22uF; could be a trimmer"],
+  ["×3", "100K", "TRIM", "marked '100KT': Q2 collector, Q2 bias and Q3 collector"],
+  ["×1", "5K", "TRIM", "'highs trim'"]
+ ]
+}

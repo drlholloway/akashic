@@ -1,0 +1,17 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-diode-compression-op-amp",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Joe Davisson discrete op amp building block (differential pair plus gain stage with a 1N914 compression diode); clean drawing with values but no designators.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "1k", "R", "emitter of 2N5089"],
+  ["×1", "4.7k", "R", "collector load"],
+  ["×1", "6.8k", "R", ""],
+  ["×2", "10k", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×1", "22uF", "C", "emitter bypass electrolytic"],
+  ["×1", "1N914", "D", ""],
+  ["×2", "2N5087", "Q", "PNP differential pair"],
+  ["×1", "2N5089", "Q", "NPN gain stage"]
+ ]
+}

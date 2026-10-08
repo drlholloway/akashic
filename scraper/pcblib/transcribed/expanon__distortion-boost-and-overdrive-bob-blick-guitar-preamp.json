@@ -1,0 +1,23 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-bob-blick-guitar-preamp",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Hand-drawn 1995 Bob Blick calculation sheet: a single non-inverting op amp preamp biased by two red LEDs; no designators except Rg, so quantity refs are used.",
+ "uncertain": [],
+ "rows": [
+  ["Rg", "100K", "R", "gain resistor; drawing says try 100K (12dB) to 1MEG (30dB)"],
+  ["×1", "10K", "R", "input series"],
+  ["×2", "1MEG", "R", "input to ground and bias to + input"],
+  ["×1", "2.2K", "R", "LED bias feed from supply"],
+  ["×1", "22K", "R", "feedback leg to ground"],
+  ["×1", "470", "R", "output series"],
+  ["×1", "100K", "R", "output to ground"],
+  ["×1", "220pF", "C", "input to ground"],
+  ["×1", ".05uF", "C", "input coupling"],
+  ["×1", "4.7uF", "C", "LED bias filter, electrolytic"],
+  ["×1", "1uF", "C", "feedback leg, electrolytic"],
+  ["×1", "4.7uF", "C", "output coupling, electrolytic"],
+  ["×1", "100uF", "C", "supply filter, electrolytic"],
+  ["×2", "Red LED", "LED", "two red LEDs in series used as the bias reference"],
+  ["×1", "LM741", "IC", "single op amp; drawing says LM741 for 'tone', TL081 for 'sizzle'"]
+ ]
+}

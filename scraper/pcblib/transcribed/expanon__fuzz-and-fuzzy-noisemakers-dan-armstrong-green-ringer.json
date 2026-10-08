@@ -1,0 +1,25 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-dan-armstrong-green-ringer",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Traced Dan Armstrong Green Ringer: input buffer, phase splitter feeding a full-wave rectifier made from an unmarked device marked '*', output transistor. No designators.",
+ "uncertain": [
+  "Supply cap: read as 1000uF, tiny text, could be 100uF"
+ ],
+ "rows": [
+  ["×1", "160K", "R", ""],
+  ["×1", "560K", "R", ""],
+  ["×1", "18K", "R", ""],
+  ["×1", "6K2", "R", ""],
+  ["×2", "10K", "R", "phase splitter collector and emitter"],
+  ["×2", "66K", "R", "from the diode device"],
+  ["×2", "22K", "R", "bias divider"],
+  ["×1", "10K", "R", "output transistor"],
+  ["×1", "47K", "R", "output"],
+  ["×3", "0.047uF", "C", "input and phase splitter outputs"],
+  ["×1", "0.1uF", "C", "tantalum"],
+  ["×1", "1000uF", "C", "supply filter, electrolytic"],
+  ["×2", "2SA666", "Q", "input and output transistors"],
+  ["×1", "2SC828", "Q", "phase splitter"],
+  ["*", "?", "Q", "unmarked three-lead device (green/blue/white stripes); author thinks a low-gain NPN used as a dual diode"]
+ ]
+}

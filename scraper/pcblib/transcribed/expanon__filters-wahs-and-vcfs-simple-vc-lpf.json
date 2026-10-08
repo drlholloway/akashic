@@ -1,0 +1,15 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-simple-vc-lpf",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Block-level sketch of a voltage-controlled low-pass filter using an LM1496 multiplier and a quarter LM3900 integrator; the multiplier's support parts are not drawn.",
+ "uncertain": [
+  "100K variable: drawn as a variable resistor, could be a panel pot rather than a trimmer"
+ ],
+ "rows": [
+  ["×2", "100K", "R", ""],
+  ["×1", ".005uF", "C", "integrator capacitor, drawn .005"],
+  ["×1", "LM1496", "IC", "balanced modulator/multiplier"],
+  ["×1", "LM3900", "IC", "one quarter used (Norton amp)"],
+  ["×1", "100K", "TRIM", "variable resistor in the feedback path"]
+ ]
+}

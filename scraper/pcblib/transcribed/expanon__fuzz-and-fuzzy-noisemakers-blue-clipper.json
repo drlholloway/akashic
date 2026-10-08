@@ -1,0 +1,22 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-blue-clipper",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Blue Clipper: half a 4558 non-inverting gain stage into a D1/D2 shunt clipper and output pot; the drawing says the supply is a -9V battery and the diodes are the builder's choice.",
+ "uncertain": [
+  "50k pot: drawn with a question mark on the schematic itself"
+ ],
+ "rows": [
+  ["×1", "20k", "R", "bias divider to V+"],
+  ["×2", "240k", "R", "bias divider to ground and feedback to ground"],
+  ["×1", "150k", "R", "feedback"],
+  ["×1", "8.2k", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", ".047uf", "C", "input"],
+  ["×2", "4.7uf", "C", "electrolytic: output coupling and feedback leg"],
+  ["×1", ".033uf", "C", "output filter"],
+  ["D1", "Diode", "D", "no part number given: 'pick an element'"],
+  ["D2", "Diode", "D", "no part number given: 'pick an element'"],
+  ["×1", "4558", "IC", "dual op amp, one half used"],
+  ["×1", "50k", "POT", "output level, unnamed; drawn '50k ?'"]
+ ]
+}

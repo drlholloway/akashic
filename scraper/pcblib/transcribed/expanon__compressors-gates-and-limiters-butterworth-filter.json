@@ -1,0 +1,14 @@
+{
+ "id": "expanon:compressors-gates-and-limiters-butterworth-filter",
+ "read": "2026-10-08, by eye from the cached schematic image (PDF page 8)",
+ "comment": "A 14-page college lab handout on Butterworth filters, not a pedal. Page 8, Figure 0-6, is the band-pass cascade of the low pass (p6) and high pass (p7) circuits, so it covers every part. The values are vector text and there are no designators.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "680", "R", "low pass input resistors (680 Ω)"],
+  ["×2", "68K", "R", "high pass resistors (68 kΩ)"],
+  ["×2", "5.6K", "R", "op amp gain-set resistor to ground, one per stage"],
+  ["×2", "3.3K", "R", "op amp feedback resistor, one per stage"],
+  ["×4", "47nF", "C", "two in the low pass, two in the high pass"],
+  ["×2", "LM741", "IC", "one per stage, ±15V supply"]
+ ]
+}

@@ -1,0 +1,9 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-national-semiconductor-basic-intro-to-filters",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "National Semiconductor AN-779, a 22-page tutorial on filter theory; its figures are generic examples and block diagrams, not a buildable circuit with values.",
+ "uncertain": [],
+ "rows": [
+
+ ]
+}

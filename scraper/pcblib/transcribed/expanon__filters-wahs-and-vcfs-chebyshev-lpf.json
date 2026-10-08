@@ -1,0 +1,20 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-chebyshev-lpf",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Eighth-order Chebyshev low-pass of four unity-gain Sallen-Key stages with computed (non-standard) values; no designators or supply shown.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "8008Ω", "R", ""],
+  ["×2", "5621Ω", "R", ""],
+  ["×2", "21.9kΩ", "R", ""],
+  ["×2", "6952Ω", "R", ""],
+  ["×1", "112.5nF", "C", ""],
+  ["×1", "50nF", "C", ""],
+  ["×1", "806.56nF", "C", ""],
+  ["×2", "1nF", "C", ""],
+  ["×1", "72.93nF", "C", ""],
+  ["×1", "153.86nF", "C", ""],
+  ["×1", "10nF", "C", ""],
+  ["×4", "?", "IC", "op amp as unity-gain follower, no part number given"]
+ ]
+}

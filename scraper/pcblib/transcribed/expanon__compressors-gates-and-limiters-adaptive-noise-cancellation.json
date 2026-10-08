@@ -1,0 +1,9 @@
+{
+ "id": "expanon:compressors-gates-and-limiters-adaptive-noise-cancellation",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Not a circuit schematic: an 86-page TI application report (automotive audio and adaptive noise cancellation on a TMS320C3x DSP) made of text, plots, block diagrams, flow charts and assembly listings, with no component-level drawing.",
+ "uncertain": [],
+ "rows": [
+
+ ]
+}

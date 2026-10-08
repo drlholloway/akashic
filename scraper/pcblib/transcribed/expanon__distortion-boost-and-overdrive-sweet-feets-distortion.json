@@ -1,0 +1,23 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-sweet-feets-distortion",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Sweet Feets Distortion: three AC127 stages with a series input pot, no designators.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "470Ω", "R", ""],
+  ["×2", "1kΩ", "R", ""],
+  ["×1", "8.2kΩ", "R", ""],
+  ["×1", "10kΩ", "R", ""],
+  ["×1", "33kΩ", "R", ""],
+  ["×1", "22nF", "C", ""],
+  ["×2", "100nF", "C", ""],
+  ["×1", "1uF", "C", "electrolytic"],
+  ["×2", "2.2uF", "C", "electrolytic, emitter bypass"],
+  ["×1", "47uF", "C", "electrolytic, supply filter"],
+  ["×1", "9V zener", "D", "zener 9 volt across the supply"],
+  ["×3", "AC127", "Q", "germanium NPN"],
+  ["Fuzz Intensity", "B100kΩ", "POT", "LIN, wired as a variable resistor in series with the input"],
+  ["Volume", "A1MΩ", "POT", "LOG"],
+  ["Trim", "1MΩ", "TRIM", "interstage level trimmer"]
+ ]
+}

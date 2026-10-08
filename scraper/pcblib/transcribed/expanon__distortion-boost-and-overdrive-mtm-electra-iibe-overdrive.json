@@ -1,0 +1,20 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-mtm-electra-iibe-overdrive",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "MTM Electra IIbe overdrive: 2N3904 gain stage into two strings of 1N4001 + germanium clipping diodes. Low-resolution GIF with no designators.",
+ "uncertain": [
+  ".001uF/0.1uF: small low-resolution text, readings consistent with the Electra circuit"
+ ],
+ "rows": [
+  ["×1", "2.2M", "R", "collector-base feedback"],
+  ["×1", "47K", "R", "collector"],
+  ["×1", "680", "R", "emitter"],
+  ["×2", "0.1uF", "C", "input and output coupling"],
+  ["×1", ".001uF", "C", "across the clipping diodes"],
+  ["×4", "1N4001", "D", "two in each of the two anti-parallel clipping strings"],
+  ["×2", "Diode", "D", "germanium, no part number given; one at the bottom of each clipping string"],
+  ["×1", "2N3904", "Q", "NPN"],
+  ["×1", "10K", "POT", "drive into the clipping diodes, unnamed"],
+  ["×1", "100k", "POT", "output level, unnamed"]
+ ]
+}

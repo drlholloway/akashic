@@ -1,0 +1,9 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-ir3109-vcf",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Not a circuit: a 1982 datasheet page showing the IR3109 quad OTA chip's pinout and internal block diagram (top view), with no external components or values.",
+ "uncertain": [],
+ "rows": [
+
+ ]
+}

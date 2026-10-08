@@ -1,0 +1,21 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-4-transistor-high-gain-overdrive",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Joe Davisson's four-stage cascaded NPN overdrive (1999), no designators; parts counted by value.",
+ "uncertain": [],
+ "rows": [
+  ["×5", "47k", "R", "four collector resistors plus one interstage"],
+  ["×4", "470k", "R", ""],
+  ["×4", "680", "R", ""],
+  ["×1", "8.2k", "R", ""],
+  ["×1", "15k", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×3", "0.1uF", "C", ""],
+  ["×2", "0.22uF", "C", ""],
+  ["×4", "1N34A", "D", ""],
+  ["×4", "1N4001", "D", ""],
+  ["×4", "?", "Q", "NPN, no part number given"],
+  ["×1", "100k", "POT", "input level"],
+  ["×1", "5k", "POT", "output volume"]
+ ]
+}

@@ -1,0 +1,24 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-ms-20-style-filters",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "A Doepfer web page (copied from doepfer.de/a1011_tec.htm) with two principle circuits: the A-101-1 vactrol Steiner filter and the A-106/MS20 filter. Neither has designators, so each note says which circuit the part is in. The two 'R' resistors are OTAs in the real module.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "47k", "R", "A-101-1: LP, HP and BP input resistors"],
+  ["×1", "10k", "R", "A-101-1: feedback"],
+  ["×3", "1k", "R", "A-101-1: two shunts and the BP feedback (Doepfer uses 100 Ohm here)"],
+  ["×2", "4n7", "C", "A-101-1"],
+  ["×3", "Vactrol", "OPTO", "A-101-1: two frequency vactrols and one resonance vactrol"],
+  ["×1", "?", "IC", "A-101-1: op amp, no part number given"],
+  ["×2", "2k2", "R", "A-106/MS20: LP and HP inputs"],
+  ["×2", "47", "R", "A-106/MS20: input attenuator shunts"],
+  ["×2", "?", "R", "A-106/MS20: 'R', realized by OTAs in the MS20"],
+  ["×1", "4k7", "R", "A-106/MS20: gain set"],
+  ["×1", "330k", "R", "A-106/MS20: feedback"],
+  ["×1", "3n3", "C", "A-106/MS20"],
+  ["×1", "1n", "C", "A-106/MS20"],
+  ["×2", "Diode", "D", "A-106/MS20: anti-parallel limiters; no part number given"],
+  ["×1", "?", "IC", "A-106/MS20: op amp, no part number given"],
+  ["Q Control", "10k", "POT", "A-106/MS20"]
+ ]
+}

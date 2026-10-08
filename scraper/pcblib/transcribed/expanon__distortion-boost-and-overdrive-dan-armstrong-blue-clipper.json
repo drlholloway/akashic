@@ -1,0 +1,22 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-dan-armstrong-blue-clipper",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Hand-drawn reconstruction of the Dan Armstrong Blue Clipper: 4558 non-inverting stage into a diode clipper and output pot. Only the diodes carry designators.",
+ "uncertain": [
+  "Output pot: drawn '50k ?' — the author was unsure of the value"
+ ],
+ "rows": [
+  ["×1", "20k", "R", "bias divider to V+"],
+  ["×2", "240k", "R", "bias divider to ground and op amp feedback leg to ground"],
+  ["×1", "150k", "R", "op amp feedback"],
+  ["×1", "8.2k", "R", "series after output cap"],
+  ["×1", "10k", "R", "into output pot"],
+  ["×1", ".047uF", "C", "input"],
+  ["×2", "4.7uF", "C", "electrolytic: output coupling and feedback leg to ground"],
+  ["×1", ".033uF", "C", "tone cap to ground"],
+  ["D1", "Diode", "D", "no part number given; 'pick an element'"],
+  ["D2", "Diode", "D", "no part number given; 'pick an element'"],
+  ["×1", "4558", "IC", "dual op amp, one section used"],
+  ["×1", "50k", "POT", "output level pot, value drawn '50k ?'"]
+ ]
+}

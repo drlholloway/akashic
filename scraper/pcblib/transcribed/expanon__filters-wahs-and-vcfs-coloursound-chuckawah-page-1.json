@@ -1,0 +1,23 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-coloursound-chuckawah-page-1",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Hand-traced Colorsound Chuck-a-Wah (page 1 of 2) with wiring and layout sketches; no designators, so quantity refs are used. Page 2 is a separate entry.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "820k", "R", "bias from +V"],
+  ["×3", "470k", "R", "feedback resistors of the first three Norton amp sections"],
+  ["×1", "150k", "R", ""],
+  ["×1", "2k7", "R", "LED series resistor"],
+  ["×1", "8k2", "R", "from Intensity pot wiper to the clipping diodes"],
+  ["×2", "100k", "R", "LDR network"],
+  ["×2", "300p", "C", ""],
+  ["×2", "47n", "C", ""],
+  ["×3", "4n7", "C", ""],
+  ["×1", "Diode", "D", "supply polarity protection, no part number given"],
+  ["×2", "Diode", "D", "antiparallel pair, no part number given"],
+  ["×1", "LED", "LED", "LED inside the 'funk unit' with the LDR"],
+  ["×1", "MC3401", "IC", "quad Norton op amp"],
+  ["×1", "LDR", "OPTO", "photoresistor lit by the LED, in the 'funk unit'"],
+  ["Intensity", "B100K", "POT", "100K lin"]
+ ]
+}

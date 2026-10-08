@@ -1,0 +1,25 @@
+{
+ "id": "expanon:compressors-gates-and-limiters-walco-chord-and-note-sustainer",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Clean redrawn schematic of the Walco Chord and Note Sustainer (dual-gate MOSFET plus two 2SC871 stages with a 2SC644 feedback detector); no designators drawn, so quantity refs are used.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "1M5", "R", "input series resistor; drawn as 2 x 3M3 in parallel"],
+  ["×1", "1K5", "R", "MOSFET drain"],
+  ["×2", "330", "R", "MOSFET source and first 2SC871 emitter"],
+  ["×2", "4K7", "R", "2SC871 collectors"],
+  ["×1", "150K", "R", "first 2SC871 collector-base feedback"],
+  ["×1", "220K", "R", "second 2SC871 collector-base feedback"],
+  ["×1", "15K", "R", ""],
+  ["×1", "3K3", "R", "output"],
+  ["×1", "10M", "R", "2SC644 base to ground"],
+  ["×1", "1uF", "C", "input, electrolytic"],
+  ["×3", "10uF", "C", "coupling, electrolytic"],
+  ["×2", "33uF", "C", "MOSFET source bypass and detector filter, electrolytic"],
+  ["×1", "4.7uF", "C", "output, electrolytic"],
+  ["×2", "Ge", "D", "germanium diodes, no part number given"],
+  ["×1", "3SK30 (B)", "Q", "dual-gate MOSFET"],
+  ["×2", "2SC871", "Q", "NPN"],
+  ["×1", "2SC644 (S)", "Q", "NPN, sustain control transistor"]
+ ]
+}

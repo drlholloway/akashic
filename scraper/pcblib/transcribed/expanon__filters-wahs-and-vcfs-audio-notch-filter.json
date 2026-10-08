@@ -1,0 +1,20 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-audio-notch-filter",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "A TINA simulation drawing of a notch filter: a low pass and a high pass section with tunable 50k pots, summed by a third LF351. The source, the Rload test load and the two 9V batteries are left out.",
+ "uncertain": [
+  "R1: no value drawn"
+ ],
+ "rows": [
+  ["R1", "?", "R", "no value given"],
+  ["×2", "100.0k", "R", "op amp feedback"],
+  ["×3", "22.0k", "R", "two gain-set resistors and the summing amp feedback"],
+  ["×2", "10.0k", "R", "summing resistors"],
+  ["×1", "1.0k", "R", "summing amp gain-set to ground"],
+  ["×3", "10.0n", "C", ""],
+  ["×1", "100.0n", "C", ""],
+  ["×1", "10.0u", "C", "output coupling"],
+  ["×3", "LF351", "IC", "LF351/NS, ±9V supply"],
+  ["×4", "50.0k", "POT", "wired as variable resistors, tuning the low pass and high pass sections"]
+ ]
+}

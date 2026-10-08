@@ -1,0 +1,24 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-differential-distortion",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Modified Differential Distortion: two 2N5088 stages around a 2N3906 differential pair, drawn without designators.",
+ "uncertain": [
+  "01uF: drawn without the leading point, read as .01uF"
+ ],
+ "rows": [
+  ["×1", "360", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "6.2k", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×4", "100k", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "830k", "R", "odd value as drawn"],
+  ["×1", "1M", "R", ""],
+  ["×1", ".01uF", "C", "drawn '01uF', leading point lost"],
+  ["×3", "0.1uF", "C", ""],
+  ["×1", "4.7uF", "C", "electrolytic, supply filter"],
+  ["×2", "2N5088", "Q", ""],
+  ["×2", "2N3906", "Q", "drawn Q2N3906 (simulator model name)"],
+  ["Volume", "100k", "POT", ""]
+ ]
+}

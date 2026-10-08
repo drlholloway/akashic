@@ -1,0 +1,21 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-brian-may-treble-booster",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Hand-drawn veroboard layout with parts list and 'Stan's hand drawn version' schematic; parts numbered 1-8 (resistors) and A-E (capacitors) as drawn, with 4 and B unused. The 1n disc cap appears on the schematic and layout but not the list.",
+ "uncertain": [],
+ "rows": [
+  ["1", "120K", "R", ""],
+  ["2", "22K", "R", ""],
+  ["3", "2K4", "R", ""],
+  ["5", "100R", "R", "drawn 100 on schematic"],
+  ["6", "100K", "R", ""],
+  ["7", "6K8", "R", "schematic says 6K8-10K"],
+  ["8", "1K0", "R", "base stopper"],
+  ["A", "47uF", "C", "16V electrolytic, emitter bypass"],
+  ["C", "47uF", "C", "16V electrolytic, supply filter"],
+  ["D", "4n7", "C", "poly (0.0047uF), input"],
+  ["E", "47n", "C", "0.047uF, output"],
+  ["×1", "1n", "C", "disc cap, base to emitter; not in the parts list"],
+  ["T", "BC182L", "Q", "NPN"]
+ ]
+}

@@ -1,0 +1,15 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-classic-state-variable-filter",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Generic three-op-amp state-variable filter with HP, BP, LP and notch outputs; no designators or op-amp part numbers, no power supply drawn.",
+ "uncertain": [],
+ "rows": [
+  ["×4", "10K", "R", "input, summer feedback, two integrator inputs"],
+  ["×2", "12K", "R", "in series with the Q and F pots"],
+  ["×2", ".01uF", "C", "integrator capacitors"],
+  ["×3", "?", "IC", "op amps, no part number given (summer and two integrators)"],
+  ["Q", "500K", "POT", "variable resistor"],
+  ["F", "500K", "POT", "frequency, variable resistor"],
+  ["Notch", "100K", "POT", "blends HP and LP outputs for the notch output"]
+ ]
+}

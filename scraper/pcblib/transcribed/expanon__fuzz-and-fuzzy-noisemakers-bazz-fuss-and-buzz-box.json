@@ -1,0 +1,14 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-bazz-fuss-and-buzz-box",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Two circuits on one sheet: Christian H.'s one-transistor Bazz Fuss (top) and two-transistor BuzzBox (bottom); no designators, so counts are combined with the split in the notes.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "10k", "R", "1 in Bazz Fuss, 2 in BuzzBox"],
+  ["×5", "10uF", "C", "2 in Bazz Fuss, 3 in BuzzBox; electrolytic"],
+  ["×2", "1n4148", "D", "1 in Bazz Fuss, 1 in BuzzBox"],
+  ["×1", "Diode", "D", "BuzzBox; Schottky or germanium, no part number given"],
+  ["×3", "?", "Q", "normal NPN small-signal; 1 in Bazz Fuss, 2 in BuzzBox"],
+  ["×2", "A50K", "POT", "input level, one per circuit; marked Log"]
+ ]
+}

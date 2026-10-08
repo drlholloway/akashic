@@ -1,0 +1,32 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-fatwah-lf-wah",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Dunlop GCB-95 Cry Baby with Paul Crowther's Fatwah low-frequency mod (330R, 100K, 10uF and a switch added); no designators.",
+ "uncertain": [
+  ".22UF: a single label between two capacitors; assumed both are .22uF (GCB-95 has a .22uF and possibly a .01uF here)"
+ ],
+ "rows": [
+  ["×1", "330", "R", "added component (Fatwah mod)"],
+  ["×1", "390", "R", ""],
+  ["×1", "1K", "R", ""],
+  ["×1", "1K5", "R", ""],
+  ["×2", "10K", "R", ""],
+  ["×1", "22K", "R", ""],
+  ["×1", "33K", "R", ""],
+  ["×1", "68K", "R", ""],
+  ["×1", "82K", "R", ""],
+  ["×1", "100K", "R", "added component (Fatwah mod)"],
+  ["×2", "470K", "R", ""],
+  ["×1", "1M8", "R", ""],
+  ["×1", "2M2", "R", ""],
+  ["×3", ".01uF", "C", ""],
+  ["×2", ".22uF", "C", "one '.22UF' label sits between two caps; read as both"],
+  ["×1", "4.7uF", "C", "lift at -ve end for the mod"],
+  ["×1", "10uF", "C", "added component (Fatwah mod)"],
+  ["×1", "MPS-A13", "Q", "Darlington"],
+  ["×2", "MPS-A18", "Q", ""],
+  ["Wah", "100K", "POT", "drawn as variable resistor (treadle pot)"],
+  ["×1", "?", "L", "wah inductor, value not given"],
+  ["×1", "SPST", "SW", "open = Fatwah mod"]
+ ]
+}

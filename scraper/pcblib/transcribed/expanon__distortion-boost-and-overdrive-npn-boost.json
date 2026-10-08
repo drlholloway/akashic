@@ -1,0 +1,18 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-npn-boost",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Hand-drawn single-NPN bootstrapped clean-to-dirty booster by Gustav Smalley (2001), with design notes; no designators, so quantity refs are used.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "10K", "R", "collector load, and base to bootstrap node"],
+  ["×2", "100K", "R", "bias from +9V, and output to ground (note says the output one can be a 100K volume pot)"],
+  ["×1", "47K", "R", "bias to ground"],
+  ["×1", ".1uF", "C", "input coupling"],
+  ["×1", "1uF", "C", "output coupling, film; drawing says 1uF film or 10uF electrolytic"],
+  ["×1", "22uF", "C", "bootstrap, electrolytic"],
+  ["×1", "47uF", "C", "gain pot wiper bypass, electrolytic"],
+  ["×1", "100uF", "C", "supply filter, electrolytic"],
+  ["×1", "2N5088", "Q", "NPN; drawing also suggests MPSA18, 2N2222A, 2N3904, or try TIP29"],
+  ["Gain", "B5K", "POT", "5K lin, emitter resistor with bypassed wiper"]
+ ]
+}

@@ -1,0 +1,30 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-old-style-vcf",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Nyle Steiner diode-ladder (Steiner-Parker style) VCF from Electronic Design, December 1974; runs on ±15V, synth circuit with no designators.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "360Ω", "R", "from +15V"],
+  ["×4", "1k", "R", "ladder supply, two ladder legs, base to ground"],
+  ["×4", "2k2", "R", "two ladder collectors, bias divider, output emitter"],
+  ["×1", "8k2", "R", "bias divider"],
+  ["×1", "3M3", "R", "output transistor base bias"],
+  ["×1", "1k8", "R", "in series with Resonance"],
+  ["×3", "47k", "R", "audio input, modulation input, cut-off wiper"],
+  ["×1", "68k", "R", "+15V to Cut Off pot"],
+  ["×1", "3k9", "R", "tail"],
+  ["×1", "82Ω", "R", "tail to -15V"],
+  ["×1", "1u", "C", "electrolytic, audio input"],
+  ["×3", "4n7", "C", "diode-ladder capacitors"],
+  ["×1", "100n", "C", ""],
+  ["×2", "150u", "C", "electrolytic, supply decoupling"],
+  ["×1", "10u", "C", "electrolytic, audio output"],
+  ["×8", "1N4148", "D", "diode ladder"],
+  ["×3", "BC547", "Q", "NPN: differential pair and output follower"],
+  ["×1", "BC557", "Q", "PNP"],
+  ["Cut Off", "B25k", "POT", "25k lin"],
+  ["Resonance", "B1k", "POT", "1k lin, wired as a variable resistor"],
+  ["×1", "470k", "TRIM", "1V/octave input trimmer"],
+  ["×1", "SP3T", "SW", "LP/BP/HP mode selector"]
+ ]
+}

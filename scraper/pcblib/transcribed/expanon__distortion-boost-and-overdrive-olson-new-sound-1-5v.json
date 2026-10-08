@@ -1,0 +1,18 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-olson-new-sound-1-5v",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Three-transistor 2SB175 circuit running on one 1.5V cell, with the drawer's own question marks about bias and battery polarity; no designators or knob names.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "1M", "R", "input bias"],
+  ["×3", "10k", "R", "first-stage emitter and two collector loads"],
+  ["×1", "100k", "R", ""],
+  ["×1", "15k", "R", ""],
+  ["×1", "5k", "R", ""],
+  ["×2", "0.003uF", "C", "input and output"],
+  ["×2", "1uF", "C", "interstage coupling"],
+  ["×3", "2SB175", "Q", "PNP germanium"],
+  ["×1", "1M", "POT", "variable resistor wired as rheostat in the interstage path"],
+  ["×1", "47k", "POT", "output level"]
+ ]
+}

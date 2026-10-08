@@ -22,7 +22,9 @@ _SKIP_DIRS = {"MIDI", "OOP Japanese Electronics Book", "Power Supplies and Other
 # slug -> the page of a multi-page PDF that holds the schematic, found by looking (page 1 is often a cover,
 # a parts list or an article's first page). Unlisted PDFs use page 1.
 _PAGE: dict[str, int] = {"chorus-dod-fx64": 2, "filters-wahs-and-vcfs-lovetone-meatball-mcmeat": 2,
-                         "distortion-boost-and-overdrive-boss-mt2": 2, "flangers-anderton-flanger": 2}
+                         "distortion-boost-and-overdrive-boss-mt2": 2, "flangers-anderton-flanger": 2,
+                         "compressors-gates-and-limiters-butterworth-filter": 8, "compressors-gates-and-limiters-fet-compressors": 2,
+                         "filters-wahs-and-vcfs-steve-giles-autowah": 2, "fuzz-and-fuzzy-noisemakers-building-the-gristleizer": 2}
 
 
 def _slug(folder: str, title: str) -> str:

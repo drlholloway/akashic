@@ -1,0 +1,17 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-modified-vox-treble-booster",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Single-transistor VOX treble booster with the transistor and output cap changed from the original; no designators.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "100K", "R", ""],
+  ["×2", "2K2", "R", ""],
+  ["×1", "22K", "R", ""],
+  ["×1", "1K", "R", ""],
+  ["×1", ".022uF", "C", ""],
+  ["×1", "47uF", "C", "changed from the original"],
+  ["×1", "10uF", "C", "electrolytic"],
+  ["×1", "2N3904", "Q", "changed from the original"],
+  ["×1", "500K", "POT", "output volume"]
+ ]
+}

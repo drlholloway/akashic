@@ -1,0 +1,26 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-2-tranny-simple-od-and-clean-boost",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Hand-drawn two-transistor overdrive titled 'The one night stand' by Colin Raffel (2004). Only one circuit is on the sheet; no separate clean boost is drawn.",
+ "uncertain": [
+  "220 input resistor: the drawing itself says '220 (100?)'"
+ ],
+ "rows": [
+  ["×2", "100k", "R", "Q1 collector-base bias and Q2 base to ground"],
+  ["×1", "2k2", "R", "Q1 collector"],
+  ["×1", "837k", "R", "Q2 bias; drawing says 100k+220k+470k+47k in series, or 830k"],
+  ["×1", "10k", "R", "Q2 collector"],
+  ["×1", "1k", "R", "below the Gain pot"],
+  ["×1", "220", "R", "input shunt; drawing says '220 (100?)'"],
+  ["×1", "470", "R", "input shunt, in series with the 220"],
+  ["×1", "220", "R", "Q2 emitter"],
+  ["×1", "100", "R", "Q2 emitter, in series with the 220"],
+  ["×1", ".1uF", "C", "input"],
+  ["×1", "10uF", "C", "electrolytic, coupling to Q1 base"],
+  ["×2", ".2uF", "C", "interstage and output coupling"],
+  ["×1", ".01uF", "C", "output to ground, tames highs"],
+  ["×2", "2N3904", "Q", "'all trannies 2n3904 or similar'"],
+  ["Gain", "100k", "POT", "input attenuator; can be omitted"],
+  ["Volume", "100k", "POT", ""]
+ ]
+}

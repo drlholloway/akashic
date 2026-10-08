@@ -1,0 +1,23 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-single-oa-wah",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Single op amp wah-wah with a bridged-T feedback network swept by a 10k linear pot. No designators; op amp type not given.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "100k", "R", "9V divider for bias"],
+  ["×1", "100k", "R", "inverting-input bias"],
+  ["×1", "100k", "R", "input series"],
+  ["×1", "120k", "R", "to inverting input"],
+  ["×1", "330k", "R", "input pulldown"],
+  ["×1", "120k", "R", "feedback"],
+  ["×1", "10k", "R", "in series with the wah pot"],
+  ["×3", "47u", "C", "supply filter and bias decoupling"],
+  ["×1", "22n", "C", "input"],
+  ["×1", "220p", "C", "feedback"],
+  ["×3", "22n", "C", "twin-T / bridge network"],
+  ["×1", "1u", "C", "output coupling"],
+  ["×1", "?", "IC", "op amp, no part number given"],
+  ["×1", "B10k", "POT", "wah pot (B10K)"],
+  ["×1", "B220k", "POT", "output level pot (B220K)"]
+ ]
+}
