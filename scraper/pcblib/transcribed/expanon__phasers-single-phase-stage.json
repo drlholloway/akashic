@@ -1,0 +1,12 @@
+{
+ "id": "expanon:phasers-single-phase-stage",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "One all-pass stage of a 12-stage LM3900 phaser; parts listed are for the single stage shown.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "10K", "R", ""],
+  ["×1", ".01uF", "C", ""],
+  ["×1", "LM3900", "IC", "1/4 used per stage; full phaser uses 3x LM3900 for 12 stages"],
+  ["Phase Shift", "A1M", "POT", "drawn 1M log, wired as variable resistor; can be replaced by LDR or FET for voltage control"]
+ ]
+}

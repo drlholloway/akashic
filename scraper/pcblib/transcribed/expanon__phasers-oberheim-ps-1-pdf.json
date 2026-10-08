@@ -1,0 +1,37 @@
+{
+ "id": "expanon:phasers-oberheim-ps-1-pdf",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Oberheim PS-1 phase shifter: six JFET all-pass stages on three 1458s, transistor-switched LFO and a 115V supply; no designators, single-page PDF.",
+ "uncertain": [
+  "220K/10K in LFO: labels sit between two resistors, read 220K to -15 and 10K to ground"
+ ],
+ "rows": [
+  ["×18", "100k", "R", "all-pass stages"],
+  ["×3", "100K", "R", ""],
+  ["×12", "10K", "R", ""],
+  ["×6", "4.7K", "R", ""],
+  ["×4", "33K", "R", ""],
+  ["×6", "1M", "R", ""],
+  ["×1", "220K", "R", "LFO, to -15"],
+  ["×2", "150K", "R", ""],
+  ["×2", "270", "R", "supply"],
+  ["×6", "0.01uF", "C", "all-pass stages"],
+  ["×2", "0.33uF", "C", ""],
+  ["×1", "220uF", "C", ""],
+  ["×1", "4.7uF", "C", ""],
+  ["×2", "470uF", "C", "25V"],
+  ["×4", "1N4002", "D", "rectifier"],
+  ["×2", "1N965", "D", "zener"],
+  ["×4", "2N3638A", "Q", "all bipolars"],
+  ["×3", "2N4302", "Q", "JFET"],
+  ["×1", "P1069C", "Q", "JFET"],
+  ["×6", "?", "Q", "JFET, marked selected, no part number"],
+  ["×4", "1458", "IC", "dual op amp"],
+  ["DC Offset", "10K", "TRIM", "output offset"],
+  ["Osc. Ampl.", "10K", "TRIM", ""],
+  ["FET Bias", "10K", "TRIM", ""],
+  ["×1", "SPDT", "SW", "Off/Slow Phase switch, drawn as single throw"],
+  ["Medium Phase", "SPST", "SW", ""],
+  ["Fast Phase", "SPST", "SW", ""]
+ ]
+}

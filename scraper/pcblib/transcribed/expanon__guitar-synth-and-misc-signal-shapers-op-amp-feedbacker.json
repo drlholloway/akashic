@@ -1,0 +1,23 @@
+{
+ "id": "expanon:guitar-synth-and-misc-signal-shapers-op-amp-feedbacker",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Hand-drawn concept sketch of an op-amp overdrive with LDR-controlled positive feedback; few values given and the LED driver is omitted, so this is incomplete.",
+ "uncertain": [
+  "250k pot: author says 'about 250k'",
+  "feedback resistors and caps 1/2: no values drawn"
+ ],
+ "rows": [
+  ["×1", "1k", "R", "output series resistor"],
+  ["×2", "?", "R", "feedback network resistors (to ground via cap, and feedback), no values drawn"],
+  ["×1", ".068uF", "C", "input"],
+  ["×1", "1uF", "C", "output"],
+  ["×1", ".22uF", "C", "positive-feedback cap"],
+  ["Cap 1", "?", "C", "feedback high roll-off cap, no value drawn"],
+  ["Cap 2", "?", "C", "larger roll-off cap in series with LDR, no value drawn"],
+  ["×1", "?", "C", "cap in feedback-to-ground leg, no value drawn"],
+  ["×1", "?", "IC", "op amp, no part number given"],
+  ["×1", "250k", "POT", "positive feedback amount; 'I would say about 250k'"],
+  ["×1", "SPST", "SW", "momentary, onboard"],
+  ["×2", "LDR", "OPTO", "one in series with cap 2, one on the positive-feedback leg; LED driver not shown"]
+ ]
+}

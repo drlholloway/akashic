@@ -1,0 +1,13 @@
+{
+ "id": "expanon:ring-modulators-and-frequency-shifters-fatman-simple-ad633jn-ring-modulator",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Small GIF of an AD633JN ring-modulator add-on for the FatMan synth, driven by its VCOs; only a divider, the mix pot and a selector switch.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "1K", "R", "output divider top"],
+  ["×1", "2.7K", "R", "output divider bottom"],
+  ["×1", "AD633JN", "IC", "drawn 'Analog Devices 633JN', Jameco #115182"],
+  ["Mix", "10K", "POT", "drawn '*R56 10K 1/2 Mix': one half of a dual pot (R56 in the FatMan synth)"],
+  ["×1", "SPDT", "SW", "selects modulator input (VCO #1 or external)"]
+ ]
+}

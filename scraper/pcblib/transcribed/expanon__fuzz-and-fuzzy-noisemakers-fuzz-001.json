@@ -1,0 +1,19 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-fuzz-001",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Two-stage 4558 op-amp fuzz with antiparallel diodes in the second stage's feedback; no designators, so quantities are used.",
+ "uncertain": [
+  "Diodes: label '1n42' is not a standard part number; could mean 1N4148 or 1N34A"
+ ],
+ "rows": [
+  ["×3", "100k", "R", "input resistor and the two feedback resistors"],
+  ["×1", "10k", "R", ""],
+  ["×2", "1M", "R", "bias divider"],
+  ["×3", "0.1uF", "C", "input, interstage and output coupling"],
+  ["×1", "470pF", "C", "feedback cap across clipping diodes"],
+  ["×1", "10uF", "C", "electrolytic, bias filter"],
+  ["×2", "1n42", "D", "antiparallel clippers in the feedback loop; label printed '1n42', possibly shorthand for 1N4148 or a typo for 1N34"],
+  ["×1", "4558", "IC", "dual op amp, both halves used"],
+  ["×1", "A47k", "POT", "output volume pot, drawn 47k Log; unnamed"]
+ ]
+}

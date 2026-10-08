@@ -1,0 +1,14 @@
+{
+ "id": "expanon:guitar-synth-and-misc-signal-shapers-saw-to-triangle-converter-2",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Tadej Bozicko's saw-to-triangle converter, one TL082 stage; not a guitar effect on its own.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "100k", "R", "feedback"],
+  ["×1", "39k", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "1N4148", "D", ""],
+  ["×1", "TL082", "IC", ""],
+  ["R", "100k", "TRIM", "drawn [R]/100kΩ/45%, adjusts triangle shape"]
+ ]
+}

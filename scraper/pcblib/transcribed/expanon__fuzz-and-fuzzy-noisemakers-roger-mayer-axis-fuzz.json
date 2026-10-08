@@ -1,0 +1,25 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-roger-mayer-axis-fuzz",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Roger Mayer Axis Fuzz drawn by Justin Philpott 12-97; complementary 2N3906/2N3904 pair, no designators.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "2M2", "R", ""],
+  ["×1", "820k", "R", ""],
+  ["×1", "680k", "R", ""],
+  ["×1", "180k", "R", ""],
+  ["×1", "47k", "R", ""],
+  ["×1", "39k", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "220", "R", ""],
+  ["×1", "2.2uF", "C", "electrolytic, drawn '2.2'"],
+  ["×3", "22uF", "C", "electrolytic, drawn '22' (supply filter and two emitter bypass)"],
+  ["×2", "1uF", "C", "drawn '1'"],
+  ["×1", "47pF", "C", ""],
+  ["×1", "2N3904", "Q", ""],
+  ["×1", "2N3906", "Q", ""],
+  ["Volume", "47k", "POT", ""],
+  ["Drive", "2k2", "POT", "wiper unconnected (NC), used as variable resistor"]
+ ]
+}

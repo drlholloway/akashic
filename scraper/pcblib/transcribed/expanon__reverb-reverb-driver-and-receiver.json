@@ -1,0 +1,31 @@
+{
+ "id": "expanon:reverb-reverb-driver-and-receiver",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Robin Tomtlund's 1999 spring reverb driver (TL071 into a BD139/BD140 push-pull) and receiver/mixer (two LF351) for an amp on a +/-15V supply; no designators.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "1Ω", "R", "driver feedback to ground"],
+  ["×2", "10Ω", "R", "output emitter resistors"],
+  ["×3", "10kΩ", "R", "two mix resistors, one across the spring output"],
+  ["×2", "4.7kΩ", "R", "output stage bias"],
+  ["×2", "220kΩ", "R", "driver input and receiver input"],
+  ["×1", "1.8kΩ", "R", ""],
+  ["×4", "47kΩ", "R", "three mixer inputs, one mixer feedback"],
+  ["×1", "10nF", "C", ""],
+  ["×1", "47nF", "C", ""],
+  ["×1", "2.2nF", "C", ""],
+  ["×1", "820pF", "C", ""],
+  ["×2", "100nF", "C", ""],
+  ["×1", "2.2uF", "C", "electrolytic, mixer input"],
+  ["×1", "100pF", "C", "on the mixer output"],
+  ["×2", "1N4148", "D", ""],
+  ["×1", "BD139", "Q", "NPN output"],
+  ["×1", "BD140", "Q", "PNP output"],
+  ["×1", "TL071", "IC", "driver op amp"],
+  ["×2", "LF351", "IC", "receiver and mixer op amps"],
+  ["Reverb Mix Channel 1", "B10kΩ", "POT", "lin."],
+  ["Reverb Mix Channel 2", "B10kΩ", "POT", "lin."],
+  ["Reverb Level", "A10kΩ", "POT", "log"],
+  ["×1", "1MΩ", "TRIM", "receiver gain trim"]
+ ]
+}

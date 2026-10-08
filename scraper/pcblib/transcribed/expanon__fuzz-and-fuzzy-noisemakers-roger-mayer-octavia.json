@@ -1,0 +1,34 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-roger-mayer-octavia",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Justin Philpott's 1997 redraw of the Roger Mayer Octavia: 2N3906 input stage, MPS-A13 gain stage, phase splitter into a 1N4148 full-wave rectifier and MPS-A13 output follower; no designators, so quantities are used.",
+ "uncertain": [
+  "2N3906 base resistor: label partly hidden by the wire, reads 820k (could be 320k)"
+ ],
+ "rows": [
+  ["×4", "2.2M", "R", "input pulldown, phase-splitter collector feedback, output-stage bias pair"],
+  ["×2", "820k", "R", "2N3906 base bias; phase-splitter emitter to diode"],
+  ["×1", "680k", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "330k", "R", ""],
+  ["×1", "180k", "R", ""],
+  ["×1", "150k", "R", "output pulldown"],
+  ["×2", "100k", "R", "2N3906 collector load; rectifier load"],
+  ["×1", "47k", "R", ""],
+  ["×2", "39k", "R", "MPS-A13 stage collector and emitter"],
+  ["×2", "20k", "R", "phase-splitter collector and emitter"],
+  ["×1", "10k", "R", "output emitter resistor"],
+  ["×1", "2.2k", "R", ""],
+  ["×1", "220", "R", ""],
+  ["×4", "22uF", "C", "electrolytics"],
+  ["×5", ".01uF", "C", ""],
+  ["×1", ".001uF", "C", ""],
+  ["×1", "470pF", "C", ""],
+  ["×1", "0.1uF", "C", "output coupling"],
+  ["×2", "1N4148", "D", "full-wave rectifier (octave), drawn D1N4148"],
+  ["×1", "2N3906", "Q", "PNP input stage, drawn Q2N3906"],
+  ["×3", "MPS-A13", "Q", "NPN Darlington"],
+  ["×1", "C10k", "POT", "drawn '10k RLG' (reverse log), unnamed; fuzz/gain control in the first stage"],
+  ["×1", "A1M", "POT", "drawn '1M LOG', unnamed; output level"]
+ ]
+}

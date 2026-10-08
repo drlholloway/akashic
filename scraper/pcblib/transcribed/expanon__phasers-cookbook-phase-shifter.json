@@ -1,0 +1,36 @@
+{
+ "id": "expanon:phasers-cookbook-phase-shifter",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Figure 5.4.1 from a cookbook (scanned book page): six-stage all-pass phaser with LM348s, AM9709CN FET arrays and an LM741 sweep, +/-12V.",
+ "uncertain": [
+  "Manual pot is labeled 'RATE 100k' on the drawing; named Manual here"
+ ],
+ "rows": [
+  ["×3", "100k", "R", "input bias, buffer feedback, summer feedback"],
+  ["×1", "200k", "R", ""],
+  ["×13", "20k", "R", "12 in the all-pass stages plus summer input"],
+  ["×1", "36k", "R", ""],
+  ["×6", "10k", "R", ""],
+  ["×2", "75k", "R", ""],
+  ["×1", "360k", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "2.4k", "R", ""],
+  ["×1", "51k", "R", ""],
+  ["×1", "100k", "R", "manual divider"],
+  ["×1", "1uF", "C", ""],
+  ["×1", "0.47uF", "C", ""],
+  ["×1", "0.33uF", "C", ""],
+  ["×1", "0.15uF", "C", ""],
+  ["×2", "0.1uF", "C", "one all-pass stage, one supply bypass in the sweep generator"],
+  ["×1", "0.05uF", "C", ""],
+  ["×1", "100uF", "C", "electrolytic, sweep timing"],
+  ["×2", "LM348", "IC", "quad op amp; 8 sections used"],
+  ["×1", "LM741", "IC", "sweep generator"],
+  ["×2", "AM9709CN", "IC", "FET switch arrays used as variable resistors (4 + 2 sections)"],
+  ["Depth", "100k", "POT", ""],
+  ["Rate", "250k", "POT", "sweep rate"],
+  ["Manual", "100k", "POT", "labeled RATE 100k on the manual side"],
+  ["Bypass", "SPDT", "SW", ""],
+  ["Auto/Manual", "SPDT", "SW", ""]
+ ]
+}

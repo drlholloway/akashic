@@ -1,0 +1,20 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-rex-fuzz",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Jack Orman's 1995 Rex's Fuzz: two inverting op amp stages with diode clipping in the second's feedback; no designators on the drawing.",
+ "uncertain": [],
+ "rows": [
+  ["×4", "10K", "R", "stage-2 input, stage-2 feedback, two bias divider resistors"],
+  ["×1", "100K", "R", "input"],
+  ["×1", "1M", "R", "stage-1 feedback"],
+  ["×2", "0.1uF", "C", "input coupling and bias filter, drawn 0.1"],
+  ["×2", "1.0uF", "C", "interstage and output coupling, drawn 1.0u"],
+  ["×1", "51p", "C", "stage-2 feedback"],
+  ["×1", "47u", "C", "supply filter, electrolytic"],
+  ["×2", "1N914", "D", "antiparallel clipping pair in stage-2 feedback; only one is labeled"],
+  ["×1", "1N4001", "D", "reverse-polarity protection"],
+  ["×2", "?", "IC", "op amp, no part number given; two single op amps drawn (a dual would do)"],
+  ["Drive", "1M", "POT", "wired as a variable resistor in series with the 10K feedback resistor"],
+  ["×1", "10K", "POT", "output level, unnamed"]
+ ]
+}

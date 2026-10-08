@@ -1,0 +1,9 @@
+{
+ "id": "expanon:guitar-synth-and-misc-signal-shapers-multi-stage-waveshaper",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Conceptual 'waveshaper sketch' (Christian, 2002): preamp, repeated window-comparator stages and a mixer drawn with op amp symbols and labels (R1, RX, R2, Gainpot, Level) but no component values or part numbers, so there is no parts list to read.",
+ "uncertain": [],
+ "rows": [
+
+ ]
+}

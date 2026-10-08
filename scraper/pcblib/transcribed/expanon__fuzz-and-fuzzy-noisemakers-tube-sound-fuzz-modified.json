@@ -1,0 +1,28 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-tube-sound-fuzz-modified",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "M. Hammer's modification of Craig Anderton's Tube Sound Fuzz, no designators; starred caps are suggested values.",
+ "uncertain": [
+  "coupling cap between the CD4049 stages: no value on the drawing"
+ ],
+ "rows": [
+  ["×1", "2k2", "R", ""],
+  ["×1", "47k", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×3", "100k", "R", "one input to the first inverter, two inverter feedback resistors"],
+  ["×2", "3k9", "R", ""],
+  ["×2", "10uF", "C", "electrolytic"],
+  ["×2", "0.1uF", "C", ""],
+  ["×1", "510pF", "C", "suggested value (*)"],
+  ["×1", "1500pF", "C", "suggested value (*), Bright cap"],
+  ["×2", "390pF", "C", "suggested value (*)"],
+  ["×2", "4700pF", "C", ""],
+  ["×1", "?", "C", "coupling cap between the two CD4049 stages, no value drawn"],
+  ["×1", "?", "IC", "any low-noise dual op amp"],
+  ["×1", "CD4049", "IC", "hex inverter, two stages used"],
+  ["×1", "10k", "POT", "unnamed pot after the first op amp (drive/level into the inverters)"],
+  ["Tone", "100k", "POT", "dual-ganged"],
+  ["×1", "10k", "POT", "output volume, unnamed"],
+  ["Bright", "SPST", "SW", ""]
+ ]
+}

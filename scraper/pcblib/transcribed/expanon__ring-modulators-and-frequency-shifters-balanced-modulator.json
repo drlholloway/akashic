@@ -1,0 +1,22 @@
+{
+ "id": "expanon:ring-modulators-and-frequency-shifters-balanced-modulator",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Chris MacDonald's LM1496 balanced modulator prototype (2000), +/-15V, no designators; clean CAD drawing.",
+ "uncertain": [],
+ "rows": [
+  ["×7", "1k", "R", ""],
+  ["×2", "1 Meg", "R", ""],
+  ["×1", "220k", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×1", "15k", "R", ""],
+  ["×2", "5k6", "R", ""],
+  ["×2", "33k", "R", ""],
+  ["×1", "330k", "R", ""],
+  ["×1", "390k", "R", ""],
+  ["×3", "1 uF", "C", ""],
+  ["×1", "LM1496", "IC", "balanced modulator"],
+  ["×1", "TL072", "IC", "one section used as output differential amp"],
+  ["Signal Symmetry", "100k", "POT", ""],
+  ["Carrier Null", "100k", "POT", ""]
+ ]
+}

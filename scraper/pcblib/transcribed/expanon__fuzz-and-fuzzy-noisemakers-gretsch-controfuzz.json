@@ -1,0 +1,23 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-gretsch-controfuzz",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Clean redrawn schematic of the Gretsch Controfuzz 7798 with no designators; two 748 op amps, the first driving 1N4001 clippers, the second mixing distortion against dry.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "100K", "R", "bias divider pair and series resistor after Distort pot"],
+  ["×2", "220K", "R", "first op amp feedback and series after diodes"],
+  ["×1", "10K", "R", ""],
+  ["×1", "100", "R", "to ground via 10uF"],
+  ["×1", "330K", "R", "second op amp feedback"],
+  ["×2", "0.1uF", "C", "input coupling (drawn 0.1 uF) and after the 10K"],
+  ["×2", "25pF", "C", "op amp compensation"],
+  ["×1", "220pF", "C", "bias filter"],
+  ["×1", "10uF", "C", "electrolytic"],
+  ["×2", "0.47uF", "C", ""],
+  ["×2", "1N4001", "D", "clippers to ground"],
+  ["×2", "748", "IC", "one per stage, pinout 3/4/5/6/10/11/12 as drawn (likely uA748 in a 14-pin package)"],
+  ["Distort", "10K", "POT", ""],
+  ["Boost", "10K", "POT", ""],
+  ["×1", "DPDT", "SW", "bypass switch"]
+ ]
+}

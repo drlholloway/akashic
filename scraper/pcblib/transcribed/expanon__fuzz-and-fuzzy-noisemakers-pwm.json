@@ -1,0 +1,23 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-pwm",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Small hand-drawn GIF of a 386 + 40106 pulse-width fuzz with an optional EZ LFO inset; no designators. DPDT stomp switch skipped as the footswitch.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "47k", "R", "optional EZ LFO section"],
+  ["×1", "33k", "R", "optional EZ LFO section"],
+  ["×1", "22uF", "C", "supply filter, electrolytic"],
+  ["×1", ".005uF", "C", "Schmitt trigger timing"],
+  ["×1", ".1uF", "C", "output coupling"],
+  ["×1", "2.2uF", "C", "optional EZ LFO section, electrolytic"],
+  ["×1", "100uF", "C", "optional EZ LFO section, electrolytic"],
+  ["×1", "1N4001", "D", "reverse polarity protection"],
+  ["×1", "2N3904", "Q", "optional EZ LFO section, output to pin 3 of the 40106 (pulse width control)"],
+  ["×1", "JRC386D", "IC", "drawn '386D JRC' (JRC 386 power amp used as input gain stage)"],
+  ["×1", "40106", "IC", "hex Schmitt trigger; the EZ LFO uses one of its sections"],
+  ["Pulse Width", "500k", "POT", "wired as variable resistor"],
+  ["×1", "100k", "POT", "output level, unnamed"],
+  ["×1", "500k", "POT", "optional EZ LFO rate"],
+  ["×1", "10k", "POT", "optional EZ LFO depth"]
+ ]
+}

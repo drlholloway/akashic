@@ -1,0 +1,10 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-housefly",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Minimal LM386 fuzz: one diode from pin 1 (gain) to the output pin 5, no other parts; the in/out jacks and supply are drawn as symbols only. No coupling caps are drawn.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "1N4447", "D", "pin 1 to pin 5 feedback; part number as drawn (1n4447)"],
+  ["×1", "386", "IC", "drawn as '386' (LM386 power amp)"]
+ ]
+}

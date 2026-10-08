@@ -1,0 +1,32 @@
+{
+ "id": "expanon:reverb-guitar-reverb-pedal",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "G. Forrest Cook's 1996 spring reverb (rev 2): 2N3904 driver stage feeding an LM386 tank driver, 2N3904 recovery and dry stages mixed through 4.7K resistors, SPDT bypass footswitch (skipped); reverb spring assembly not listed.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "100K", "R", "driver and recovery stage base bias"],
+  ["×1", "18K", "R", "dry stage base bias"],
+  ["×2", "12K", "R", "driver and recovery stage base bias"],
+  ["×3", "10K", "R", "collector loads"],
+  ["×2", "4.7K", "R", "dry and wet mix resistors"],
+  ["×1", "3.3K", "R", "LM386 pins 1-8 gain set, in series with 10uF"],
+  ["×1", "2.2K", "R", "dry stage base bias"],
+  ["×1", "1.5K", "R", "LED"],
+  ["×3", "1K", "R", "emitter resistors"],
+  ["×1", "100", "R", "supply filter between VCC and VCC2"],
+  ["×1", "10", "R", "LM386 Zobel"],
+  ["×10", "0.1uF", "C", "stage couplings, mix output, supply bypass, LM386 input, wet emitter bypass"],
+  ["×1", "0.05uF", "C", "LM386 Zobel"],
+  ["×1", "2.2uF", "C", "electrolytic, dry stage emitter bypass"],
+  ["×2", "10uF", "C", "electrolytic, LM386 pin 7 bypass and pins 1-8 gain"],
+  ["×1", "100uF", "C", "electrolytic, LM386 output to reverb tank"],
+  ["×2", "220uF", "C", "electrolytic, VCC2 filter and LM386 supply"],
+  ["×1", "RED", "LED", "power indicator"],
+  ["×3", "2N3904", "Q", "NPN"],
+  ["×1", "LM386", "IC", "reverb tank driver"],
+  ["Dry", "A10K", "POT", "drawn 10K Aud"],
+  ["Wet", "A10K", "POT", "drawn 10K Aud"],
+  ["Drive", "A10K", "POT", "drawn 10K Aud"],
+  ["On/Off", "SPST", "SW", "power switch, 9-12V"]
+ ]
+}

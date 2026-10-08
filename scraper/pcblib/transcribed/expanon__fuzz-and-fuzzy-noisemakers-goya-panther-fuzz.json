@@ -1,0 +1,29 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-goya-panther-fuzz",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Hand-drawn traced schematic of the Goya Panther treble booster plus fuzz, no designators; two PNP germanium sections switched in separately. Power switch sits on the Treble pot.",
+ "uncertain": [
+  "Treble pot: value not known on the drawing",
+  "Fuzz Intensity/Attack: values marked 'likely'"
+ ],
+ "rows": [
+  ["×1", "22k", "R", ""],
+  ["×2", "47k", "R", "one at the treble input, one in the treble output network"],
+  ["×1", "100K", "R", ""],
+  ["×1", "330", "R", "treble emitter"],
+  ["×1", "330k", "R", ""],
+  ["×2", "10K", "R", "one in the treble output, one on the fuzz Q2 base"],
+  ["×2", "4K7", "R", "fuzz collector load and feedback"],
+  ["×1", "1K5", "R", ""],
+  ["×1", "220K", "R", ""],
+  ["×4", "10uF", "C", ""],
+  ["×4", ".1uF", "C", ""],
+  ["×1", "47pF", "C", ""],
+  ["×3", "2N2613", "Q", "PNP germanium (Q1, Q2, Q3)"],
+  ["Treble", "?", "POT", "value drawn as 'val ??'; carries the power switch"],
+  ["Fuzz Intensity", "100K", "POT", "drawn 'likely 100K'"],
+  ["Fuzz Attack", "25K", "POT", "drawn 'likely 25K'"],
+  ["Treble", "SPST", "SW", "treble on/off switch"],
+  ["Fuzz", "SPST", "SW", "fuzz on/off switch"]
+ ]
+}

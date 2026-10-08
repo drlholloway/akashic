@@ -1,0 +1,18 @@
+{
+ "id": "expanon:phasers-simple-phaser",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Magazine-style diode-tuned phaser with two all-pass stages ('insert as many stages here as required'), 0-12V DC control input; no designators on the drawing.",
+ "uncertain": [
+  "TL072 count: three op amp sections drawn, listed as two dual chips"
+ ],
+ "rows": [
+  ["×5", "10k", "R", "two all-pass input, one all-pass feedback, two mixer inputs"],
+  ["×4", "100k", "R", "two control-voltage feeds, second all-pass feedback, mixer feedback"],
+  ["×2", "10n", "C", "all-pass stages"],
+  ["×1", "220n", "C", "interstage coupling"],
+  ["×2", "100n", "C", "control-voltage decoupling"],
+  ["×4", "1N4148", "D", "used as voltage-controlled resistors in the all-pass stages"],
+  ["×2", "TL072", "IC", "three TL072 sections drawn (two all-pass, one mixer): two dual chips"],
+  ["×1", "22k", "POT", "mix/depth control between the last stage and the mixer, unnamed"]
+ ]
+}

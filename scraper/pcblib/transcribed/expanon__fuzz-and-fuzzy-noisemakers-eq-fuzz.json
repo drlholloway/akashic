@@ -1,0 +1,23 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-eq-fuzz",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Equalizer Fuzz: TL072 buffer into a three-band tone stack and a fuzz stage with 1M feedback pot; no designators, dual 9-18V supply.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "100k", "R", "input"],
+  ["×1", "220k", "R", "op amp feedback"],
+  ["×5", "10k", "R", "tone stack"],
+  ["×2", "1.8k", "R", "treble"],
+  ["×2", "47nF", "C", ""],
+  ["×1", "22nF", "C", "bass"],
+  ["×1", "4.7nF", "C", "middle"],
+  ["×1", "10nF", "C", "treble"],
+  ["×1", "10uF", "C", "output, electrolytic"],
+  ["×1", "TL072", "IC", "both halves used"],
+  ["Bass", "100k", "POT", ""],
+  ["Middle", "100k", "POT", ""],
+  ["Treble", "22k", "POT", ""],
+  ["Fuzz Intensity", "1M", "POT", "feedback of second op amp"],
+  ["×1", "10k", "POT", "output level, unnamed"]
+ ]
+}

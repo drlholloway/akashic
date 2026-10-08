@@ -1,0 +1,38 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-roger-mayer-voodoo-1",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Low-resolution bitmap trace of the Roger Mayer Voodoo-1 by Justin Philpott; no designators, pot values stated as unknown. Transistor stage, LM308 gain stage with diode clipping, passive tone, emitter follower output.",
+ "uncertain": [
+  "70k: unusual value, glyph could be 10k in this bitmap font",
+  "100 caps: no unit drawn, likely 100nF but could be pF"
+ ],
+ "rows": [
+  ["×1", "150", "R", "no designator; supply series resistor"],
+  ["×1", "1.6M", "R", "no designator; input bias from output feedback line"],
+  ["×3", "2.2M", "R", "no designators; input pulldown, Q1 base bias, output pulldown"],
+  ["×1", "680k", "R", "no designator; Q1 base to ground"],
+  ["×2", "47k", "R", "no designators; Q1 collector/bias divider"],
+  ["×1", "22k", "R", "no designator; Q1 emitter"],
+  ["×1", "150k", "R", "no designator; op amp feedback"],
+  ["×1", "39", "R", "no designator; gain leg in series with Gain pot"],
+  ["×1", "70k", "R", "no designator; after op amp output cap"],
+  ["×1", "1.5k", "R", "no designator"],
+  ["×2", "39k", "R", "no designators; tone network"],
+  ["×1", "12k", "R", "no designator; tone network"],
+  ["×1", "820k", "R", "no designator; Q2 base bias"],
+  ["×1", "1M", "R", "no designator; Q2 base to ground"],
+  ["×1", "10k", "R", "no designator; Q2 emitter"],
+  ["×3", "0.1uF", "C", "no designators; drawn '0.1': input, output-stage input and output coupling"],
+  ["×2", "22uF", "C", "no designators; drawn '22', electrolytic: supply filter and bias filter"],
+  ["×1", "22pf", "C", "no designator; LM308 compensation pins 1-8"],
+  ["×2", "2.2uF", "C", "no designators; drawn '2.2', electrolytic: op amp output coupling and gain leg"],
+  ["×3", "?", "C", "drawn '100' with no unit; no designators; drawn '100' with no unit (series tone cap, shunt cap, cap under 12k); likely nF"],
+  ["×1", "Diode", "D", "no part number given; supply polarity protection"],
+  ["×4", "Diode", "D", "no part number given; clipping diodes, two series pairs anti-parallel to ground"],
+  ["×2", "BC549C", "Q", "NPN; marked 'C549C PH21' (probably BC549); input and output transistor"],
+  ["×1", "LM308N", "IC", "op amp"],
+  ["Gain", "?", "POT", "pot values unknown per drawing"],
+  ["Tone", "?", "POT", "pot values unknown per drawing"],
+  ["Output", "?", "POT", "pot values unknown per drawing"]
+ ]
+}

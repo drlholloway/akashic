@@ -1,0 +1,19 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-fuzzface",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Clean redrawn Dallas Arbiter Fuzz Face (PNP germanium) with no designators except Q1/Q2; S1 is the bypass footswitch and is skipped. Transistor types come from the note below the drawing.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "470", "R", "no designator; marked *: 330 for the NPN silicon version"],
+  ["×1", "33k", "R", "no designator"],
+  ["×1", "8.2k", "R", "no designator"],
+  ["×1", "100k", "R", "no designator"],
+  ["×1", "2.2uf", "C", "no designator; electrolytic, input"],
+  ["×1", "0.1uf", "C", "no designator; output cap, some units .047uF"],
+  ["×1", "20uf", "C", "no designator; electrolytic on the fuzz pot wiper"],
+  ["Q1", "AC128", "Q", "PNP germanium AC128 or NKT275; NPN version BC108C"],
+  ["Q2", "AC128", "Q", "PNP germanium AC128 or NKT275; NPN version BC108C"],
+  ["×1", "500k", "POT", "volume, unnamed on drawing"],
+  ["×1", "1k", "POT", "fuzz, unnamed on drawing"]
+ ]
+}

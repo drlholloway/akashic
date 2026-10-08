@@ -1,0 +1,19 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-pushme-pullyou",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Small GIF of a transistor octave-up fuzz (v1.0 10/04) with a PNP/NPN pair; only transistors are designated, read from a 4x enlargement.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "470Ω", "R", "supply filter"],
+  ["×3", "10k", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×2", "500k", "R", ""],
+  ["×4", ".1uF", "C", ""],
+  ["×2", "10uF", "C", "electrolytic"],
+  ["Q1", "2N3904", "Q", ""],
+  ["Q2", "2N3904", "Q", ""],
+  ["Q3", "2N3906", "Q", ""],
+  ["Gain", "1k", "POT", "emitter gain pot"],
+  ["Vol", "100k", "POT", ""]
+ ]
+}

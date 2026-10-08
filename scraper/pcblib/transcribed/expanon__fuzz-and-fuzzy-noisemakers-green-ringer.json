@@ -1,0 +1,24 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-green-ringer",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Dan Armstrong Green Ringer traced by hand (1995), no designators. Clean single-page drawing; the starred device is an unidentified three-lead part per the note.",
+ "uncertain": [
+  "66k resistors: value drawn as 66k, not a standard E-series value"
+ ],
+ "rows": [
+  ["×1", "160k", "R", ""],
+  ["×1", "560k", "R", ""],
+  ["×1", "18k", "R", ""],
+  ["×1", "6k2", "R", ""],
+  ["×3", "10k", "R", ""],
+  ["×2", "22k", "R", ""],
+  ["×2", "66k", "R", "66k as drawn (nonstandard; likely 68k)"],
+  ["×1", "47k", "R", ""],
+  ["×3", "0.047uF", "C", ""],
+  ["×1", "0.1uF", "C", "tantalum"],
+  ["×1", "100uF", "C", "electrolytic, supply filter"],
+  ["×2", "2SA666", "Q", "PNP"],
+  ["×1", "2SC828", "Q", "NPN"],
+  ["×1", "?", "Q", "marked * on drawing: unmarked part with green/blue/white stripes, probably a low-gain NPN used as a dual diode"]
+ ]
+}

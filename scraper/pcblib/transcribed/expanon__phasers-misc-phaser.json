@@ -1,0 +1,36 @@
+{
+ "id": "expanon:phasers-misc-phaser",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Scanned magazine schematic of a 6-stage JFET phaser with stereo A/B outputs, 1458 LFO and a mains supply (24V CT transformer, fuse and power switch skipped). No designators; quantities include the undrawn 'identical' stages.",
+ "uncertain": [
+  "Phase stages: drawing shows 3 stages plus '3 more identical stages'; counted 6 stages, consistent with two TL074s (6 stages + 2 mixers)",
+  "15pF/30pF: printed with a µ-like glyph but are compensation caps in pF"
+ ],
+ "rows": [
+  ["×19", "10K", "R", "3 per phase stage x6, plus 5534 feedback"],
+  ["×7", "1K", "R", "1 per phase stage x6, plus LFO"],
+  ["×13", "100K", "R", "2 per phase stage x6, plus Manual bias to -V"],
+  ["×3", "33K", "R", "input, and two on the LFO offset trim"],
+  ["×5", "47K", "R", "four in the A/B output mixers, one in the LFO"],
+  ["×4", "150K", "R", "three in the output mixers, one LFO integrator input"],
+  ["×2", "150Ω", "R", "A and B outputs"],
+  ["×1", "330Ω", "R", "below Rate pot"],
+  ["×1", "1.5K", "R", "1/2W, LED dropper"],
+  ["×3", "15pF", "C", "drawn '15µf', clearly pF: 5534 and both output mixer feedback"],
+  ["×1", "30pF", "C", "drawn '30µf', 5534 compensation pF"],
+  ["×18", ".1uF", "C", "2 per phase stage x6, plus 6 supply decoupling discs"],
+  ["×1", "10uF", "C", "non-polar, LFO integrator, drawn '10 NP'"],
+  ["×2", "1000uF", "C", "25V, supply filter"],
+  ["×1", "bridge rectifier", "D", "full wave bridge, no part number given"],
+  ["×1", "LED", "LED", "power indicator"],
+  ["×6", "2N5457", "Q", "JFET, one per phase stage (2 drawn plus 3 more identical stages plus final stage)"],
+  ["×1", "5534", "IC", "input stage"],
+  ["×2", "TL074", "IC", "six phase stages and two output mixers"],
+  ["×1", "1458", "IC", "LFO (Schmitt and integrator)"],
+  ["Depth", "B10K", "POT", "drawn 10K LIN"],
+  ["Rate", "A10K", "POT", "drawn 10K LOG"],
+  ["Manual", "B10K", "POT", "drawn 10K LIN"],
+  ["×1", "10K", "TRIM", "LFO offset trim"],
+  ["×1", "SPDT", "SW", "Auto/Man"]
+ ]
+}

@@ -1,0 +1,12 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-noise-567",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Tiny hand-drawn Noise567 (SicBox) by Christian: an NE567 tone decoder with a panel-mounted LDR as the timing resistor. No designators.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "22nF", "C", "no designator; timing cap pins 6/7"],
+  ["×2", "10uF", "C", "no designators; electrolytic input and output coupling"],
+  ["×1", "NE567", "IC", "tone decoder"],
+  ["×1", "LDR", "OPTO", "panel-mounted LDR, no value given"]
+ ]
+}

@@ -1,0 +1,25 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-heathkit-ta-28",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Jack Orman's drawing of the Heathkit TA-28 fuzz, two transistors on 1.5V; no designators.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "27k", "R", ""],
+  ["×1", "82k", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×1", "3.3k", "R", ""],
+  ["×1", "2.7k", "R", ""],
+  ["×1", "8.2k", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "6.8k", "R", ""],
+  ["×2", "1k", "R", ""],
+  ["×1", "0.1uF", "C", "drawn 0.1"],
+  ["×1", "100uF", "C", ""],
+  ["×1", "10uF", "C", ""],
+  ["×1", "0.022uF", "C", "drawn .022"],
+  ["×1", "2N3391", "Q", "NPN"],
+  ["×1", "X29A829", "Q", "PNP; Heathkit house number as drawn"],
+  ["×1", "50k", "POT", "input level, unnamed"],
+  ["Tone", "50k", "POT", ""]
+ ]
+}

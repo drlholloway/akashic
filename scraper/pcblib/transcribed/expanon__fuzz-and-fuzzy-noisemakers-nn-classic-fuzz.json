@@ -1,0 +1,18 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-nn-classic-fuzz",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Four-transistor direct-coupled fuzz with germanium diode clipper, 4.5V supply; no designators and no controls drawn.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "100k", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×2", "6k8", "R", ""],
+  ["×3", "1k", "R", ""],
+  ["×1", "3k3", "R", ""],
+  ["×2", "47u", "C", "electrolytic (supply filter and emitter/feedback node)"],
+  ["×2", "10u", "C", "electrolytic, input and output coupling"],
+  ["×1", "4u7", "C", "electrolytic"],
+  ["×2", "GA201", "D", "germanium, antiparallel clipping"],
+  ["×4", "102NU70", "Q", "alternative 4x BC550C given"]
+ ]
+}

@@ -1,0 +1,19 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-random-number-generator",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Doug Deeper's Random Number Generator, single-knob version: four-transistor fuzz, no designators.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "47k", "R", ""],
+  ["×1", "2.2m", "R", ""],
+  ["×2", "470k", "R", ""],
+  ["×1", "1m", "R", ""],
+  ["×4", "100k", "R", ""],
+  ["×3", "0.01uF", "C", "drawn .01"],
+  ["×1", "10uF", "C", ""],
+  ["×1", "2n4401", "Q", ""],
+  ["×1", "pn2222", "Q", ""],
+  ["×2", "2n3904", "Q", ""],
+  ["×1", "100k", "POT", "output level, unnamed"]
+ ]
+}

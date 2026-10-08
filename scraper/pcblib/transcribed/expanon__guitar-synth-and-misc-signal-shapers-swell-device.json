@@ -1,0 +1,19 @@
+{
+ "id": "expanon:guitar-synth-and-misc-signal-shapers-swell-device",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Justin Philpott's 1997 drawing of a two-2N3904 swell/feedback circuit with a Swell pot across the first stage; no designators, so quantities are used.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "4M7", "R", "feedback from second emitter to first base"],
+  ["×1", "680k", "R", ""],
+  ["×1", "68k", "R", "output divider"],
+  ["×1", "10k", "R", "output divider"],
+  ["×1", "6k8", "R", ""],
+  ["×1", "4k7", "R", "input series resistor"],
+  ["×2", "470", "R", "first-stage collector and emitter"],
+  ["×1", "0.22uF", "C", "input coupling, drawn polarized"],
+  ["×1", "10uF", "C", "electrolytic, output coupling"],
+  ["×2", "2N3904", "Q", "NPN; 'transistors are 2N3904'"],
+  ["Swell", "100k", "POT", "drawn '50k-100k': any value in that range"]
+ ]
+}

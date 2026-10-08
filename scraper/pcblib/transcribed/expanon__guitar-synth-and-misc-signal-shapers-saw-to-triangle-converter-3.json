@@ -1,0 +1,14 @@
+{
+ "id": "expanon:guitar-synth-and-misc-signal-shapers-saw-to-triangle-converter-3",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Tadej Bozicko's sawtooth-to-triangle converter (version 2), a synth utility rather than a pedal; no designators on the drawing.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "100k", "R", ""],
+  ["×1", "10k", "R", "collector resistor"],
+  ["×1", "1k", "R", "base resistor"],
+  ["×1", "?", "Q", "NPN transistor, no part number given"],
+  ["×2", "?", "IC", "op amp (comparator and summing stage), no part number given"],
+  ["Symmetry", "100k", "POT", "drawn 'Symetry Adj. [R]/100kΩ/62%', wired as a variable resistor in the feedback"]
+ ]
+}

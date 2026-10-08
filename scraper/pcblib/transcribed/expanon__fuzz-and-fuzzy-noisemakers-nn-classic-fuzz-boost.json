@@ -1,0 +1,19 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-nn-classic-fuzz-boost",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Two-transistor PNP fuzz with a blend pot between the first-stage booster signal and the second-stage fuzz; no designators, so quantities are used.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "1M", "R", "collector-base feedback, one per transistor"],
+  ["×2", "22k", "R", ""],
+  ["×1", "10k", "R", "supply filter"],
+  ["×1", "47k", "R", ""],
+  ["×2", "10n", "C", "input and output coupling"],
+  ["×1", "1n", "C", "booster tap to blend pot"],
+  ["×1", "100n", "C", "supply filter"],
+  ["×1", "47u", "C", "electrolytic, supply filter"],
+  ["×2", "2N5863", "Q", "PNP, drawn '2 x 2N5863'"],
+  ["Volume", "100k", "POT", ""],
+  ["Booster/Fuzz", "A470k", "POT", "blend between booster and fuzz outputs, drawn 470k/A"]
+ ]
+}

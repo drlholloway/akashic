@@ -1,0 +1,24 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-parallel-universe-schematic-old",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Experimentalists Anonymous Parallel Universe (old version), LM386 gain-driven oscillator with a passive volume/tone stage; no designators.",
+ "uncertain": [
+  "Gain pot: value left open on the drawing (between 1k and 5k)"
+ ],
+ "rows": [
+  ["×1", "2k2", "R", "in series with the gate switch"],
+  ["×2", "2m2", "R", "input and output pulldowns"],
+  ["×1", "47k", "R", "volume stage"],
+  ["×3", ".1uF", "C", "input, output and in the freq loop"],
+  ["×2", "10uF", "C", "electrolytic; one across pins 1-8 with the gain pot, one in the oscillate loop"],
+  ["×1", ".047uF", "C", "tone cap; drawing says .047 or .1uF, lower value = less top cut"],
+  ["×1", "LM386", "IC", ""],
+  ["Starve", "1k", "POT", ""],
+  ["Freq", "5k", "POT", ""],
+  ["Gain", "?", "POT", "drawn '*k': 1k is small range, 5k is too big"],
+  ["Level", "5k", "POT", ""],
+  ["Tone", "10k", "POT", ""],
+  ["Gate", "SPDT", "SW", "selects 2k2 or starve pot"],
+  ["Oscillate", "SPST", "SW", ""]
+ ]
+}

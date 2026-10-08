@@ -1,0 +1,16 @@
+{
+ "id": "expanon:guitar-synth-and-misc-signal-shapers-sine-to-pulse",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Sine to pulse converter with manual and VC PWM; up to four may share one set of ICs.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "47k", "R", ""],
+  ["×1", "110k", "R", ""],
+  ["×1", "2.2k", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "TL084", "IC", "one quarter used as comparator"],
+  ["×1", "4093", "IC", "one quarter (NAND Schmitt)"],
+  ["Manual PWM", "50k", "POT", ""],
+  ["PWM VC Scale", "1 Meg", "POT", "wired as variable resistor"]
+ ]
+}

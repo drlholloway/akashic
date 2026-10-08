@@ -1,0 +1,21 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-tube-sound-fuzz",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Jack Orman's 1995 drawing of the Tube Sound Fuzz from Guitar Player, Feb. 1977: 741 input stage into two 4049 inverter gain stages.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "270k", "R", ""],
+  ["×1", "390k", "R", ""],
+  ["×1", "2.2M", "R", ""],
+  ["×5", "1M", "R", "IC1 feedback, IC2b feedback, IC2a input pulldown, two in the bias divider"],
+  ["×3", ".05uF", "C", ""],
+  ["×1", ".22uF", "C", ""],
+  ["×1", "39uF", "C", "electrolytic, supply"],
+  ["×1", "2.7uF", "C", "electrolytic, bias filter"],
+  ["×1", "Diode", "D", "no part number given; series supply protection"],
+  ["IC1", "741", "IC", "op amp"],
+  ["IC2", "4049", "IC", "CMOS hex inverter, two sections used (IC2a, IC2b)"],
+  ["Dist", "500k", "POT", ""],
+  ["Vol", "10k", "POT", ""]
+ ]
+}
