@@ -1,0 +1,22 @@
+{
+ "id": "expanon:vibrato-and-pitch-shift-polyfusion-octave-divider",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Hand-redrawn Polyfusion divider: TL082 squarer driving a 4024 counter, seven 4136 output stages for seven octave-down outputs; no designators. Supply decoupling is not drawn.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "100K", "R", "input stage and comparator threshold divider"],
+  ["×7", "100K", "R", "one per output summing stage, from the 4024 outputs"],
+  ["×1", "4.7K", "R", "comparator threshold divider"],
+  ["×2", "10K", "R", "comparator input and 4024 clock pulldown"],
+  ["×1", "1.0M", "R", "comparator hysteresis"],
+  ["×7", "200K", "R", "one per output stage, from the offset/bias terminal"],
+  ["×7", "33K", "R", "output stage feedback"],
+  ["×7", "620", "R", "output series resistors"],
+  ["×7", "33pF", "C", "output stage feedback"],
+  ["×1", "1N4148", "D", ""],
+  ["×1", "TL082", "IC", "input amp and comparator"],
+  ["×1", "4024", "IC", "7-stage ripple counter divider"],
+  ["×2", "4136", "IC", "quad op amp; 7 sections used, one unused (A and B chips)"],
+  ["×1", "51K", "TRIM", "on the non-inverting input of TL082B, drawn as a variable resistor"]
+ ]
+}

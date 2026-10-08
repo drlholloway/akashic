@@ -1,0 +1,20 @@
+{
+ "id": "expanon:ring-modulators-and-frequency-shifters-mosfet-ring-mod",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Small hand-drawn ring modulator: two FETs used as switches/multipliers between six op-amp stages, +/-5V supply. No designators, no op-amp or FET part numbers, and no pot/trimmer values.",
+ "uncertain": [
+  "Gain, Trim1, Trim2: no values drawn",
+  "Q: FET type and part number not given",
+  "IC: op amp type not given"
+ ],
+ "rows": [
+  ["×12", "10k", "R", "no designators drawn; all resistors are 10k"],
+  ["×2", "10uF", "C", "input coupling caps on IN 1 and IN 2; no designators"],
+  ["×2", "?", "Q", "FET (title says MOSFET; drawn with D/S/G and a gate arrow), no part number given"],
+  ["×6", "?", "IC", "op amps (six sections), no part number given; supply +/-5V"],
+  ["Gain", "?", "POT", "two variable resistors labelled Gain (one per input stage) in the feedback loops; no value drawn"],
+  ["Gain", "?", "POT", "second Gain variable resistor (IN 2 stage); no value drawn"],
+  ["Trim1", "?", "TRIM", "from V- to ground, sets offset on IN 1 stage; no value drawn"],
+  ["Trim2", "?", "TRIM", "from V- to ground, sets offset on the inverter stage; no value drawn"]
+ ]
+}

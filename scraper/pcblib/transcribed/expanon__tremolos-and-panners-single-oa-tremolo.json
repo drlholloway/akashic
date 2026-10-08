@@ -1,0 +1,22 @@
+{
+ "id": "expanon:tremolos-and-panners-single-oa-tremolo",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Phase-shift LFO on 1/4 LM324 driving a diode (1N914) attenuator; a 'tremolo foot sw' grounds the oscillator feedback and is not listed. Supply Vs with an external Vs/2 reference.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "5.1k", "R", ""],
+  ["×1", "51k", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "220k", "R", ""],
+  ["×3", "1k", "R", ""],
+  ["×3", "0.33uF", "C", "phase-shift oscillator caps, drawn 0.33"],
+  ["×2", "0.1uF", "C", "supply bypass and output coupling, drawn 0.1"],
+  ["×1", "10uF", "C", "input coupling, electrolytic"],
+  ["×2", "1N914", "D", "diode modulator"],
+  ["×1", "LM324", "IC", "only 1/4 used"],
+  ["Speed", "25k", "POT", "wired as rheostat, 5-10 Hz"],
+  ["Depth", "100k", "POT", ""]
+ ]
+}

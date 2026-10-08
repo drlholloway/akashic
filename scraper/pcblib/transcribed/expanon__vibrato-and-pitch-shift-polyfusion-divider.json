@@ -1,0 +1,21 @@
+{
+ "id": "expanon:vibrato-and-pitch-shift-polyfusion-divider",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Hand-drawn Polyfusion octave/frequency divider: TL082 input buffer and Schmitt comparator clock a 4024 counter whose seven outputs are level-shifted and filtered by 4136 op-amp sections into Outputs 1-7. No designators drawn.",
+ "uncertain": [],
+ "rows": [
+  ["×10", "100K", "R", "input and feedback of the first TL082 inverter, reference divider for the comparator, and the input resistor of each of the seven output stages"],
+  ["×1", "4.7K", "R", "comparator reference divider to ground"],
+  ["×2", "10K", "R", "one into the comparator + input, one pulldown at the 4024 clock input"],
+  ["×1", "1M", "R", "comparator hysteresis feedback"],
+  ["×1", "51K", "R", "first TL082 + input to ground"],
+  ["×7", "200K", "R", "offset resistor from the negative supply, one per output stage"],
+  ["×7", "33K", "R", "feedback, one per output stage"],
+  ["×7", "620", "R", "620 ohm output resistor, one per output"],
+  ["×7", "33pF", "C", "feedback, one per output stage"],
+  ["×1", "1N4148", "D", "comparator output to 4024 clock"],
+  ["×1", "TL082", "IC", "dual op amp: inverting input buffer and comparator"],
+  ["×1", "4024", "IC", "7-stage binary ripple counter (divider)"],
+  ["×2", "4136", "IC", "quad op amp, drawn as chips A and B; A drives outputs 1-3 (one section unused), B drives outputs 4-7"]
+ ]
+}

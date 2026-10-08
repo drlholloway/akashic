@@ -1,0 +1,22 @@
+{
+ "id": "expanon:tone-control-and-eqs-single-op-amp-3-band-tone-control",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Single op-amp 3-band active tone control from the Widgybox; no designators, op amp type not given.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "18k", "R", "bass band; no designators"],
+  ["×2", "12k", "R", "mid band; no designators"],
+  ["×2", "10k", "R", "treble band; no designators"],
+  ["×1", "1k", "R", "no designator"],
+  ["×1", "39k", "R", "bias to V/2; no designator"],
+  ["×1", "15nF", "C", "no designator"],
+  ["×1", "2.7nF", "C", "no designator"],
+  ["×1", "12nF", "C", "no designator"],
+  ["×1", "1.5nF", "C", "no designator"],
+  ["×1", "39pF", "C", "feedback; no designator"],
+  ["×1", "?", "IC", "single op amp (pins 2,3,6,7,4), no part number given"],
+  ["Bass", "B100k", "POT", "drawing: all pots 100k linear"],
+  ["Mid", "B100k", "POT", ""],
+  ["Treble", "B100k", "POT", ""]
+ ]
+}

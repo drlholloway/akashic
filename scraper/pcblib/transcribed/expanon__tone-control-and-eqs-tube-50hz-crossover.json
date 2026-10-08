@@ -1,0 +1,39 @@
+{
+ "id": "expanon:tone-control-and-eqs-tube-50hz-crossover",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Vintage magazine schematic of a two-tube 50 Hz low-pass (crossover) filter, -3 dB at 5 Hz and 50 Hz, 12 dB/octave, with its own mains supply (6X4 rectifier, DC heater supply). No designators except tubes; resistors 1/2W 10% unless marked.",
+ "uncertain": [
+  "1 MEG at V2 grid: drawn as variable resistor, could be a front-panel control rather than a trimmer"
+ ],
+ "rows": [
+  ["×1", "100", "R", "V1 plate to supply A"],
+  ["×2", "1 MEG", "R", "V1 and V2 (second section) grid return"],
+  ["×2", "1000", "R", "V1 and V2 (second section) cathode"],
+  ["×3", "47k", "R", "two cathode resistors to ground (V1, V2 second section) and one series resistor after V1 cathode"],
+  ["×1", "68k", "R", "5%, filter feedback from output"],
+  ["×1", "100k", "R", "5%, filter series"],
+  ["×1", "270k", "R", "5%, filter series"],
+  ["×1", "330k", "R", "filter series into V2 grid"],
+  ["×1", "1.5 MEG", "R", "marked *: may be changed to 3.3 MEG for 6 dB overall gain; unity gain with 1.5 MEG"],
+  ["×1", "100k", "R", "V2 first section plate to supply B"],
+  ["×1", "1500", "R", "V2 first section cathode"],
+  ["×1", "4700", "R", "power supply filter"],
+  ["×2", "2200", "R", "power supply filter (B+)"],
+  ["×1", "2200", "R", "1W, heater supply filter"],
+  ["×2", "0.1uF", "C", "input coupling and V2 interstage coupling"],
+  ["×1", "0.47uF", "C", "coupling after V1 cathode follower"],
+  ["×1", "0.039uF", "C", "5%, filter"],
+  ["×1", "0.015uF", "C", "5%, filter"],
+  ["×1", "0.22uF", "C", "output coupling"],
+  ["×2", "30uF", "C", "350V electrolytic, B+ filter"],
+  ["×2", "40uF", "C", "350V electrolytic, B+ filter"],
+  ["×2", "1000uF", "C", "6V electrolytic, heater voltage doubler"],
+  ["×1", "2000uF", "C", "15V electrolytic, heater supply filter"],
+  ["×2", "Diode", "D", "no part number given; 500 mA 50 PIV, heater supply rectifiers"],
+  ["V1", "12AX7", "OTHER", "vacuum tube, half used; alternative 12AV6"],
+  ["V2", "12AX7", "OTHER", "vacuum tube"],
+  ["V3", "6X4", "OTHER", "rectifier tube in the mains power supply"],
+  ["×1", "500k", "POT", "input level pot; no taper given"],
+  ["×1", "1 MEG", "TRIM", "variable resistor from V2 grid to ground (wiper tied to ground end), filter adjustment"]
+ ]
+}

@@ -1,0 +1,27 @@
+{
+ "id": "expanon:tone-control-and-eqs-harmonic-sweetener",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Clean typed schematic of a harmonic sweetener (buffer, two-stage band-pass, LED clipper, inverter, mixer) on +/-15V; no designators anywhere.",
+ "uncertain": [
+  "TL074 count: drawing shows six op-amp sections with repeated pin numbers, read as two chips"
+ ],
+ "rows": [
+  ["×2", "1M", "R", "input and output pulldowns"],
+  ["×2", "100k", "R", "input and feedback of input buffer"],
+  ["×7", "10k", "R", "mixer inputs, feedback and output; clipper input; inverter input and feedback"],
+  ["×2", "4k7", "R", "marked * on the drawing: replace with a 10k dual-ganged pot for a tunable filter"],
+  ["×2", "4k7", "R", "second band-pass stage feedback and to ground"],
+  ["×1", "2k2", "R", ""],
+  ["×1", "15k", "R", ""],
+  ["×2", "22k", "R", ""],
+  ["×1", "1M", "R", "marked ** on the drawing: clipper feedback; can be a 2.5M pot for a drive option"],
+  ["×2", "100", "R", "supply filter"],
+  ["×1", "1uF", "C", "electrolytic input coupling"],
+  ["×4", "4n7", "C", ""],
+  ["×1", "10pF", "C", ""],
+  ["×3", "10uF", "C", "electrolytic: output coupling and two supply filters"],
+  ["×2", "LED", "LED", "anti-parallel clipping pair; note suggests red LEDs"],
+  ["×2", "TL074", "IC", "drawing says TL074 with 3 of the 4 amps used; six op-amp sections drawn (pins 1-3 and 12-14 appear twice), so two chips"],
+  ["×1", "10k", "POT", "blend of the clipped signal into the mixer; no name given"]
+ ]
+}

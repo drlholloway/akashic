@@ -1,0 +1,37 @@
+{
+ "id": "expanon:tone-control-and-eqs-aphex-aural-exciter-b",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Redrawn Aphex Aural Exciter Type B (Christian 2003), page 1/2 of the circuit; no designators, so parts are listed by quantity. The display/limiter page 2 is not part of this image.",
+ "uncertain": [
+  "150k bias resistor: drawing itself says the value is unknown, probably 150k",
+  "LF353 count: 3 assumed from 6 op amp sections"
+ ],
+ "rows": [
+  ["×5", "20k", "R", ""],
+  ["×4", "10k", "R", ""],
+  ["×3", "1k", "R", ""],
+  ["×2", "2k4", "R", ""],
+  ["×2", "150", "R", ""],
+  ["×4", "150k", "R", ""],
+  ["×1", "150k", "R", "bias resistor on the summing amp + input; drawing says 'don't know the value, probably 150k?'"],
+  ["×2", "510", "R", ""],
+  ["×1", "510k", "R", ""],
+  ["×1", "51k", "R", ""],
+  ["×1", "15k", "R", ""],
+  ["×1", "81k", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×3", "4.7uF", "C", "electrolytic"],
+  ["×3", "47uF", "C", "electrolytic"],
+  ["×4", "20pF", "C", ""],
+  ["×1", "56pF", "C", ""],
+  ["×2", "4.7nF", "C", ""],
+  ["×1", "0.1uF", "C", ""],
+  ["×1", "0.1uF", "C", "electrolytic (drawn with +)"],
+  ["×3", "1N4148", "D", ""],
+  ["×3", "LF353", "IC", "six op amp sections drawn; drawing says 'Opamps LF353' (dual), so assumed 3 chips"],
+  ["×1", "LM13700", "IC", "OTA generator; Darlington buffer transistors inside the LM13700"],
+  ["Drive", "50K", "POT", ""],
+  ["Tune", "50K", "POT", "dual gang"],
+  ["×1", "10K", "POT", "unnamed, sets the generated harmonics level into the summing amp"]
+ ]
+}

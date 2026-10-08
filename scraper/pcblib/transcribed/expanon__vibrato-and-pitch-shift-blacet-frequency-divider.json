@@ -1,0 +1,27 @@
+{
+ "id": "expanon:vibrato-and-pitch-shift-blacet-frequency-divider",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Blacet frequency divider (octave-down sub-octaves plus a 4040 control-voltage divider); no designators on the drawing.",
+ "uncertain": [
+  "SW: position count read from the 4040 pins wired to the switch (7,6,5,3,2,4,13,12,14,15,1); the switch type is not labelled"
+ ],
+ "rows": [
+  ["×3", "10K", "R", "input series, input to ground, between op-amp stages; no designators"],
+  ["×4", "2.2K", "R", "one after the comparator, three on the 4050 outputs (one feeds the LED); no designators"],
+  ["×4", "20K", "R", "mix resistors from the four level pots; no designators"],
+  ["×1", "5.6M", "R", "comparator feedback; no designator"],
+  ["×1", "3.3K", "R", "output filter; no designator"],
+  ["×1", "100K", "R", "reset input; no designator"],
+  ["×1", "1M", "R", "reset pulldown; no designator"],
+  ["×2", "1.0uF", "C", "electrolytic, input and audio output coupling; no designators"],
+  ["×1", ".022uF", "C", "output filter to ground; no designator"],
+  ["×1", "LED", "LED", "on 4050 output via 2.2K; no designator"],
+  ["×1", "TL072", "IC", "input amp and comparator"],
+  ["×1", "4001", "IC", "quad NOR; four sections used"],
+  ["×2", "4013", "IC", "dual D flip-flop, drawn as chips A and B, both sections of each used"],
+  ["×1", "4040", "IC", "12-stage ripple counter, control divider"],
+  ["×1", "4050", "IC", "hex buffer, three sections used"],
+  ["×4", "10K", "POT", "level pots for the four divider outputs; unnamed, no taper given"],
+  ["×1", "SP11T", "SW", "rotary selector for 4040 outputs Q2-Q12 (11 positions counted from the pins wired)"]
+ ]
+}

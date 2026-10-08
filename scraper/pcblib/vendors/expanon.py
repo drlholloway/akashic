@@ -26,7 +26,9 @@ _PAGE: dict[str, int] = {"chorus-dod-fx64": 2, "filters-wahs-and-vcfs-lovetone-m
                          "compressors-gates-and-limiters-butterworth-filter": 8, "compressors-gates-and-limiters-fet-compressors": 2,
                          "filters-wahs-and-vcfs-steve-giles-autowah": 2, "fuzz-and-fuzzy-noisemakers-building-the-gristleizer": 2,
                          "guitar-synth-and-misc-signal-shapers-guitar-to-synth-interface": 2,
-                         "guitar-synth-and-misc-signal-shapers-waveform-multiplier": 2, "reverb-mn3011-reverb": 4}
+                         "guitar-synth-and-misc-signal-shapers-waveform-multiplier": 2, "reverb-mn3011-reverb": 4,
+                         "ring-modulators-and-frequency-shifters-light-metal-effects-penfold-ring-mod": 2,
+                         "vibrato-and-pitch-shift-emm-harmony-generator": 2, "vibrato-and-pitch-shift-guitar-frequency-doubleur": 2}
 
 
 def _slug(folder: str, title: str) -> str:

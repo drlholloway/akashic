@@ -1,0 +1,42 @@
+{
+ "id": "expanon:tone-control-and-eqs-tone-control-circuits",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Sheet with two separate synth-module tone controls: a 709 op-amp bass/treble preamp and a discrete Baxandall with HEP 50/51 buffer stages. No designators, so quantity refs with the circuit named in each note.",
+ "uncertain": [
+  "Circuit 2 input follower emitter resistor: value not given on the drawing ('Unlabeled ???')"
+ ],
+ "rows": [
+  ["×2", "39k", "R", "circuit 1 (709 preamp)"],
+  ["×1", "10k", "R", "circuit 1 (709 preamp)"],
+  ["×1", "600", "R", "circuit 1 (709 preamp); drawn '600 ohms'"],
+  ["×2", "100k", "R", "circuit 2 (transistor tone control)"],
+  ["×2", "220", "R", "circuit 2 (transistor tone control); drawn '220 ohms'"],
+  ["×1", "?", "R", "circuit 2 (transistor tone control); input follower emitter resistor, drawing says 'Unlabeled ???'"],
+  ["×2", "22k", "R", "circuit 2 (transistor tone control)"],
+  ["×3", "2k2", "R", "circuit 2 (transistor tone control)"],
+  ["×2", "470k", "R", "circuit 2 (transistor tone control)"],
+  ["×1", "56k", "R", "circuit 2 (transistor tone control)"],
+  ["×1", "3k3", "R", "circuit 2 (transistor tone control)"],
+  ["×2", "10k", "R", "circuit 2 (transistor tone control)"],
+  ["×1", "47k", "R", "circuit 2 (transistor tone control)"],
+  ["×1", "1k", "R", "circuit 2 (transistor tone control)"],
+  ["×2", "0.005uF", "C", "circuit 1 (709 preamp)"],
+  ["×1", "0.0015uF", "C", "circuit 1 (709 preamp)"],
+  ["×2", "20uF", "C", "circuit 1 (709 preamp); electrolytic"],
+  ["×1", "4.7uF", "C", "circuit 2 (transistor tone control); electrolytic"],
+  ["×1", "1.0uF", "C", "circuit 2 (transistor tone control); electrolytic"],
+  ["×4", "6800pF", "C", "circuit 2 (transistor tone control)"],
+  ["×1", "0.5uF", "C", "circuit 2 (transistor tone control)"],
+  ["×3", "20uF", "C", "circuit 2 (transistor tone control); electrolytic"],
+  ["×1", "10pF", "C", "circuit 2 (transistor tone control)"],
+  ["×2", "1N914", "D", "circuit 2 (transistor tone control)"],
+  ["×3", "HEP 50", "Q", "circuit 2 (transistor tone control); NPN, per the symbol legend"],
+  ["×1", "HEP 51", "Q", "circuit 2 (transistor tone control); PNP"],
+  ["×1", "709", "IC", "circuit 1 (709 preamp); op amp"],
+  ["Bass", "1M", "POT", "circuit 1 (709 preamp)"],
+  ["Treble", "250k", "POT", "circuit 1 (709 preamp)"],
+  ["×1", "500k", "POT", "circuit 2 (transistor tone control); input level, unnamed"],
+  ["×1", "250k", "POT", "circuit 2 (transistor tone control); bass (network with 6800pF caps), unnamed"],
+  ["×1", "25k", "POT", "circuit 2 (transistor tone control); treble, unnamed"]
+ ]
+}

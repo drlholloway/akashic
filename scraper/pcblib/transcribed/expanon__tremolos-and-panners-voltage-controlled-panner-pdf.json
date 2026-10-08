@@ -1,0 +1,23 @@
+{
+ "id": "expanon:tremolos-and-panners-voltage-controlled-panner-pdf",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "G. Forrest Cook 1994 voltage-controlled panner, single-page vector PDF; one gain stage is drawn and marked 'duplicate for the second channel', so its parts are doubled in the counts. No designators, so parts are listed by quantity; +/-15V supply.",
+ "uncertain": [],
+ "rows": [
+  ["×12", "10K", "R", "6 per gain stage, two stages (one per channel)"],
+  ["×4", "330", "R", "2 per gain stage"],
+  ["×3", "4.7K", "R", "control voltage amp and inverter"],
+  ["×1", "5.6K", "R", ""],
+  ["×1", "2.2K", "R", ""],
+  ["×1", "5.0uF", "C", "non-polar, input"],
+  ["×2", "1.0uF", "C", "non-polar, output, one per channel"],
+  ["×2", "100pF", "C", "one per channel"],
+  ["×3", "0.01uF", "C", "one per channel plus one in the CV amp"],
+  ["×2", "0.1uF", "C", "power supply filter"],
+  ["×4", "2N3904", "Q", "matched pairs, two per channel"],
+  ["×1", "NE5532", "IC", "one half per channel"],
+  ["×1", "LM1458", "IC", "control voltage amp and inverter"],
+  ["Input Level", "A10K", "POT", "drawn '10K Aud'"],
+  ["Zero Adjust", "10K", "TRIM", "left channel zero adjust"]
+ ]
+}

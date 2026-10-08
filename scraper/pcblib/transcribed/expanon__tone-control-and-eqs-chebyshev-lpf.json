@@ -1,0 +1,23 @@
+{
+ "id": "expanon:tone-control-and-eqs-chebyshev-lpf",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Small textbook-style drawing of an 8th-order Chebyshev low-pass made of four unity-gain Sallen-Key stages; no designators and calculated, non-standard values, no power or op amp part numbers.",
+ "uncertain": [
+  "806.56nF: low-resolution image, could be 808.56nF",
+  "50nF: small text, could be 60nF"
+ ],
+ "rows": [
+  ["×2", "8008", "R", "drawn 8008 Ω, stage 1"],
+  ["×2", "5621", "R", "drawn 5621 Ω, stage 2"],
+  ["×2", "21.9k", "R", "stage 3"],
+  ["×2", "6952", "R", "drawn 6952 Ω, stage 4"],
+  ["×1", "112.5nF", "C", "stage 1 feedback"],
+  ["×1", "50nF", "C", "stage 1 to ground"],
+  ["×1", "806.56nF", "C", "stage 2 feedback"],
+  ["×2", "1nF", "C", "stage 2 and 3 to ground"],
+  ["×1", "72.93nF", "C", "stage 3 feedback"],
+  ["×1", "153.66nF", "C", "stage 4 feedback"],
+  ["×1", "10nF", "C", "stage 4 to ground"],
+  ["×4", "?", "IC", "op amp, no part number given; four unity-gain Sallen-Key stages"]
+ ]
+}

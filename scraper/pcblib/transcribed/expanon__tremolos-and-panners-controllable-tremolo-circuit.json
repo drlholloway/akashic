@@ -1,0 +1,24 @@
+{
+ "id": "expanon:tremolos-and-panners-controllable-tremolo-circuit",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Clean typed schematic of a phase-shift-oscillator tremolo modulating a JFET follower on +18V; no designators. The note says it needs input/output buffering to work as a guitar effect.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "47k", "R", "phase-shift oscillator network"],
+  ["×1", "47k", "R", "JFET source resistor"],
+  ["×1", "4k7", "R", ""],
+  ["×1", "2k2", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "5k6", "R", ""],
+  ["×4", "1uf", "C", "electrolytic"],
+  ["×1", "2uf", "C", "electrolytic"],
+  ["×1", "0.1uf", "C", ""],
+  ["×1", "0.5uf", "C", "input coupling"],
+  ["×1", "HEP 251", "Q", "oscillator transistor, drawn PNP"],
+  ["×1", "HEP 801", "Q", "N-channel JFET source follower"],
+  ["Depth", "100k", "POT", "wired as variable resistor"],
+  ["Rate", "25k", "POT", "wired as variable resistor"]
+ ]
+}

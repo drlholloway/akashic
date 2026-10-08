@@ -1,0 +1,17 @@
+{
+ "id": "expanon:tone-control-and-eqs-active-notch-filter",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "TINA simulation drawing with no designators: Sallen-Key low-pass and high-pass stages summed by a third LF351 to form a notch, run from two 9V batteries (+/-9V). The VG1 generator and Rload are simulation parts and are skipped.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "100.0k", "R", "op-amp gain resistors, low-pass and high-pass stages"],
+  ["×3", "22.0k", "R", "two to ground at the filter stages, one feedback in the mixer"],
+  ["×2", "10.0k", "R", "summing resistors into the mixer"],
+  ["×1", "1.0k", "R", "mixer gain resistor to ground"],
+  ["×3", "10.0n", "C", "two in the low-pass stage, one in the high-pass stage"],
+  ["×1", "100.0n", "C", "second high-pass capacitor (the other is 10.0n as drawn)"],
+  ["×1", "10.0u", "C", "output coupling"],
+  ["×3", "LF351", "IC", "drawn LF351/NS; one per stage"],
+  ["×4", "50.0k", "POT", "wired as variable resistors, two per filter; probably ganged pairs to tune the notch"]
+ ]
+}

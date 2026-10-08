@@ -1,0 +1,22 @@
+{
+ "id": "expanon:tone-control-and-eqs-active-3-band-tone-control-2",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Clean color drawing of a single-op-amp (LF351) active three-band Baxandall-style EQ, +6-18 V; no designators or knob names, so parts are listed by quantity.",
+ "uncertain": [],
+ "rows": [
+  ["×5", "10k", "R", "one in the top feedback branch, two around the top pot, two as the bias divider"],
+  ["×2", "3k3", "R", ""],
+  ["×2", "1k8", "R", ""],
+  ["×1", "270R", "R", "in series with the 1n to the inverting input"],
+  ["×1", "1uF", "C", "input coupling"],
+  ["×1", "47n", "C", "across the top 100k pot"],
+  ["×1", "22n", "C", "middle pot wiper to inverting input"],
+  ["×2", "4n7", "C", "one across the middle pot, one from the 470k pot wiper"],
+  ["×1", "1n", "C", ""],
+  ["×1", "100u", "C", "supply filter, electrolytic"],
+  ["×1", "33u", "C", "bias filter, electrolytic"],
+  ["×1", "LF351", "IC", "single op amp"],
+  ["×2", "100k", "POT", "unlabeled; top one (47n across it) acts as bass, middle one (4n7 across it, 22n to wiper) as mid"],
+  ["×1", "470k", "POT", "unlabeled; bottom pot with 4n7 from wiper, acts as treble"]
+ ]
+}

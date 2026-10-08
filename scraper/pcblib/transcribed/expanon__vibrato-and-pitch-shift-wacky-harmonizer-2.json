@@ -1,0 +1,36 @@
+{
+ "id": "expanon:vibrato-and-pitch-shift-wacky-harmonizer-2",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Faded scan of a Japanese magazine harmonizer, cropped on the left: the Delay A and Delay B BBD sections are mostly cut off (only Delay C's MN3007/MN3101 is complete), so this list covers only what is on the sheet. Right side is the 4053 tap switch, pitch shift down/up 4558 filters, output mixer and a waveform chart.",
+ "uncertain": [
+  "Pitch Shift Up pot: no value printed, A10K assumed from the other two mix pots",
+  "Noise-cancel 10K and 10KB parts marked ※ read as trimmers; could be panel pots",
+  "Left-edge parts (Delay A/B 470µ, 56K, 1/50, 1/50(BP), 470K) are only partly visible"
+ ],
+ "rows": [
+  ["×1", "47Ω", "R", "Delay C BBD supply"],
+  ["×1", "1K", "R", "output"],
+  ["×6", "10K", "R", "three per low-pass filter, pitch shift down and up"],
+  ["×9", "47K", "R", "three in the output mix, two biasing the 4558 noise-cancel buffer, four in the two noise-cancel dividers (47K / trimmer / 47K)"],
+  ["×3", "56K", "R", "Delay C, plus one each from the Delay A and Delay B sections cut off at the left edge"],
+  ["×2", "100K", "R", "output to ground, and the BBD trim bias resistor"],
+  ["×4", "470K", "R", "one to 1/2Vcc at the 4053 X0 input, one into each noise-cancel trimmer, and one at Delay A cut off at the left"],
+  ["×2", "0.0015uF", "C", "written 0.0015 (uF), one per filter"],
+  ["×2", "0.0039uF", "C", "written 0.0039 (uF), one per filter"],
+  ["×2", "220P", "C", "one per filter"],
+  ["×10", "1uF", "C", "drawn 1/50 (1uF 50V) electrolytics: output mix (5), output, Delay C input and supply, Delay A/B noise cancel caps at the left edge"],
+  ["×3", "1uF", "C", "drawn 1/50(BP), bipolar 50V: Delay C output and the Delay A/B outputs at the left edge"],
+  ["×2", "47uF", "C", "drawn 47/16 (16V): noise-cancel buffer bias and the BBD trim bias"],
+  ["×2", "470uF", "C", "drawn 470µ: Delay C supply and the Delay A supply at the left edge"],
+  ["×2", "4558", "IC", "one dual for the pitch shift down/up filters, one for the output mixer and the 1/2Vcc noise-cancel buffer"],
+  ["×1", "4053", "IC", "CMOS triple 2-channel analog switch selecting the delay taps"],
+  ["×1", "MN3007", "IC", "Delay C BBD"],
+  ["×1", "MN3101", "IC", "Delay C BBD clock driver"],
+  ["Direct", "A10K", "POT", "drawn 10KA"],
+  ["Pitch Shift Down", "A10K", "POT", "drawn 10KA"],
+  ["Pitch Shift Up", "A10K", "POT", "no value printed; assumed same as the other two mix pots"],
+  ["BBD Trim", "10K", "TRIM", ""],
+  ["×1", "10K", "TRIM", "noise cancel (marked ※)"],
+  ["×1", "B10K", "TRIM", "noise cancel (marked ※), drawn 10KB"]
+ ]
+}

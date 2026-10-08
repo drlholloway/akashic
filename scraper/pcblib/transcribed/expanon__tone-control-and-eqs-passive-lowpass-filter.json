@@ -1,0 +1,9 @@
+{
+ "id": "expanon:tone-control-and-eqs-passive-lowpass-filter",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Generic one-pole RC lowpass (R1, C1 between in and out jacks) with no values drawn, so there is nothing to list.",
+ "uncertain": [],
+ "rows": [
+
+ ]
+}

@@ -1,0 +1,24 @@
+{
+ "id": "expanon:tremolos-and-panners-voltage-controlled-panner",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "G. Forrest Cook 1994 voltage-controlled panner: a 2N3904 differential-pair variable gain stage drawn once for one channel (quantities doubled for the second), plus an LM1458 control-voltage amp and inverter, on +/-15V.",
+ "uncertain": [],
+ "rows": [
+  ["×12", "10K", "R", "six per channel (input, two collectors, tail to gain control input, + input to ground, feedback); the variable gain stage is drawn once and marked 'duplicate this circuit for the second channel'"],
+  ["×4", "330", "R", "two per channel, transistor bases to ground"],
+  ["×1", "5.6K", "R", "control voltage amp feedback"],
+  ["×3", "4.7K", "R", "control voltage amp input, inverter input and inverter feedback"],
+  ["×1", "2.2K", "R", "LM1458 + input to ground"],
+  ["×1", "5.0uF", "C", "non polar, input coupling"],
+  ["×2", "100pF", "C", "one per channel, NE5532 feedback"],
+  ["×2", "0.01uF", "C", "one per channel, at the differential pair tail"],
+  ["×2", "1.0uF", "C", "non polar, one per channel, output coupling"],
+  ["×1", "0.01uF", "C", "control voltage amp feedback"],
+  ["×2", "0.1uF", "C", "power supply filter, +/-15V rails"],
+  ["×4", "2N3904", "Q", "two per channel as a differential pair; should be a matched pair"],
+  ["×1", "NE5532", "IC", "one half per channel"],
+  ["×1", "LM1458", "IC", "control voltage amp and inverter"],
+  ["Input Level", "A10K", "POT", "drawn '10K Aud'; feeds both channels"],
+  ["×1", "10K", "TRIM", "left channel zero adjust"]
+ ]
+}

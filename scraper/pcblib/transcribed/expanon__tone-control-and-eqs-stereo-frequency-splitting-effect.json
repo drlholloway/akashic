@@ -1,0 +1,37 @@
+{
+ "id": "expanon:tone-control-and-eqs-stereo-frequency-splitting-effect",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Magazine schematic of a stereo phase-splitting effect: NE5534 input, six JFET-controlled all-pass stages (three drawn, three 'identical' implied), LFO and A/B output mixers, with a 117V mains supply; no designators, so quantities are counted with the implied stages included.",
+ "uncertain": [
+  "15uF ×3 and 30uF: drawn µf but used as op amp feedback/compensation, likely pF",
+  "0.1uF count: 12 in the six phase stages plus 6 decoupling assumes the 3 undrawn stages match the drawn ones"
+ ],
+ "rows": [
+  ["×1", "150Ω", "R", "output build-out, drawn 150Ω (×2 total)"],
+  ["×19", "10K", "R", "1 input-buffer feedback + 3 per phase stage × 6 stages"],
+  ["×7", "1K", "R", "1 per phase stage × 6, plus 1 in LFO"],
+  ["×1", "1.5K", "R", "1/2W, LED dropper in power supply"],
+  ["×3", "33K", "R", "1 input, 2 LFO offset trim"],
+  ["×5", "47K", "R", "4 output mixers, 1 LFO"],
+  ["×13", "100K", "R", "2 per phase stage × 6, plus 1 manual-sweep feed"],
+  ["×4", "150K", "R", "3 output mixers, 1 LFO integrator"],
+  ["×1", "330Ω", "R", "below Rate pot"],
+  ["×3", "15uF", "C", "drawn '15µf' across op amp feedback; almost certainly 15pF"],
+  ["×1", "30uF", "C", "drawn '30µf' on 5534 compensation pins 1-8; almost certainly 30pF"],
+  ["×18", "0.1uF", "C", "drawn '.1'; 2 per phase stage × 6, plus 6 supply decoupling discs"],
+  ["×1", "10uF", "C", "drawn '10 NP', non-polar, LFO integrator"],
+  ["×2", "1000uF", "C", "25V electrolytic, supply filter"],
+  ["×1", "Bridge rectifier", "D", "full-wave bridge, no part number given"],
+  ["×1", "LED", "LED", "power indicator"],
+  ["×6", "2N5457", "Q", "N-channel JFET, one per phase stage (3 drawn plus '3 more identical stages')"],
+  ["×1", "5534", "IC", "NE5534 input buffer"],
+  ["×2", "TL074", "IC", "quad op amp: 6 phase stages + 2 output mixers"],
+  ["×1", "1458", "IC", "dual op amp LFO"],
+  ["Depth", "B10K", "POT", "10K LIN"],
+  ["Rate", "A10K", "POT", "10K LOG"],
+  ["Manual", "B10K", "POT", "10K LIN"],
+  ["×1", "10K", "TRIM", "LFO offset trim"],
+  ["×1", "SPDT", "SW", "Auto/Man sweep select"],
+  ["×1", "SPST", "SW", "mains power switch"]
+ ]
+}

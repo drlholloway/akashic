@@ -1,0 +1,18 @@
+{
+ "id": "expanon:tone-control-and-eqs-45-to-90-hz-hum-filter",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Clean small drawing of a 741 twin-T notch hum filter with single-supply bias divider; resistors and capacitors carry no designators.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "620K", "R", "feedback across the twin-T"],
+  ["×1", "4.7K", "R", ""],
+  ["×1", "75K", "R", ""],
+  ["×1", "2.2K", "R", ""],
+  ["×2", "100K", "R", "bias divider"],
+  ["×3", ".047uF", "C", ""],
+  ["×1", "10uF", "C", "electrolytic, bias filter"],
+  ["×1", "741", "IC", ""],
+  ["RV1", "20K", "POT", "adjusts frequency 45 to 90 Hz"],
+  ["RV2", "100", "POT", "variable resistor, adjusts bandwidth"]
+ ]
+}

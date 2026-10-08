@@ -1,0 +1,9 @@
+{
+ "id": "expanon:tone-control-and-eqs-passive-highpass-filter",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Textbook passive RC high-pass (C1 in series, R1 to ground) between two jacks; no component values are drawn, so there is nothing to list.",
+ "uncertain": [],
+ "rows": [
+
+ ]
+}

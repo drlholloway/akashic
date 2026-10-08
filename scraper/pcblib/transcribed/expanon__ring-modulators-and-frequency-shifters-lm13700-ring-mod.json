@@ -1,0 +1,17 @@
+{
+ "id": "expanon:ring-modulators-and-frequency-shifters-lm13700-ring-mod",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Clean Aaron Cram drawing (2000) of an LM13700 ring modulator with three unnamed op amps; no designators, so quantity refs. Page 2 of the PDF is description text.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "100K", "R", "input pulldowns"],
+  ["×1", "33K", "R", "linearizing diode bias"],
+  ["×2", "4.7K", "R", ""],
+  ["×2", "10K", "R", "one input divider, one output gain leg"],
+  ["×1", "22K", "R", "output feedback"],
+  ["×3", "?", "IC", "op amps (two input buffers, one output amp), no part number given"],
+  ["×1", "LM13700", "IC", "OTA; the two drawn diodes are the chip's internal linearizing diodes"],
+  ["Balance Trim", "10K", "TRIM", ""],
+  ["Offset Trim", "1K", "TRIM", ""]
+ ]
+}

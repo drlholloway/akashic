@@ -1,0 +1,14 @@
+{
+ "id": "expanon:tone-control-and-eqs-body-control",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Passive tone control with a body (low-cut) pot; no designators on the drawing.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "3.3k", "R", "no designator"],
+  ["×1", "39k", "R", "no designator"],
+  ["×1", ".012uF", "C", "no designator"],
+  ["×1", ".01uF", "C", "no designator"],
+  ["Body", "B25k", "POT", "linear, wired as variable resistor"],
+  ["Tone", "B100k", "POT", "linear"]
+ ]
+}
