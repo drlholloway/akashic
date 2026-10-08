@@ -1,0 +1,13 @@
+{
+ "id": "expanon:adsr-generators-and-envelope-generators-ripply-envelope-follower",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "LM386 driving an LED through 100uF from a .047uF-loaded input; no designators drawn.",
+ "uncertain": [],
+ "rows": [
+  ["×1", ".047uF", "C", ""],
+  ["×1", "1uF", "C", "electrolytic, pins 1-8 gain cap"],
+  ["×1", "100uF", "C", "electrolytic, output"],
+  ["×1", "LED", "LED", "no part number given; drawn as diode with light marks on output"],
+  ["×1", "LM386", "IC", ""]
+ ]
+}

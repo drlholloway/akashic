@@ -1,0 +1,9 @@
+{
+ "id": "expanon:buffers-switchers-mixers-and-routers-tb-with-dpdt-without-led",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Beavis Audio wiring diagram of a true bypass looper with a DPDT switch, jacks only otherwise; the DPDT is the footswitch. Nothing to list but the footswitch.",
+ "uncertain": [],
+ "rows": [
+
+ ]
+}

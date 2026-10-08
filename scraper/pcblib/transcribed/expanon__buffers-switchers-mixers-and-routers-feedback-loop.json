@@ -1,0 +1,11 @@
+{
+ "id": "expanon:buffers-switchers-mixers-and-routers-feedback-loop",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Wiring diagram for a feedback-loop box: send/return jacks, bypass footswitch, feedback pot and optional LED.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "4K7", "R", "LED resistor, only for the optional 3PDT LED wiring"],
+  ["×1", "LED", "LED", "optional, no colour given"],
+  ["Feedback", "A500K", "POT", "drawn 500K LOG"]
+ ]
+}

@@ -1,0 +1,20 @@
+{
+ "id": "expanon:buffers-switchers-mixers-and-routers-effects-swapper-revised",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Marcus Young (2008) effects loop order swapper: momentary switch clocks a 4520 counter that drives 4052/4053 analog switches.",
+ "uncertain": [
+  "4052 count: drawn as two boxes on the right plus control pins at top left; read as one chip (pins 13 and 3 are the X/Y commons)"
+ ],
+ "rows": [
+  ["×8", "100k", "R", "6 bias/pulldown on switch lines + 2 in the 4.5V divider"],
+  ["×1", "36k", "R", ""],
+  ["×1", "47k", "R", ""],
+  ["×2", "1uF", "C", "input coupling and switch debounce"],
+  ["×2", "10uF", "C", "output coupling and 4.5V reference"],
+  ["×1", "4052", "IC", "CD4052 dual 4-channel mux; the two right-hand 4052 boxes are its X and Y halves"],
+  ["×1", "4053", "IC", "CD4053 triple 2-channel mux"],
+  ["×1", "4520", "IC", "CD4520 dual binary counter"],
+  ["×1", "4093", "IC", "Schmitt NAND, or 40106 inverter"],
+  ["×1", "Momentary", "SW", "momentary footswitch, SPST: steps the counter"]
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "id": "expanon:adsr-generators-and-envelope-generators-polyfusion-envelope-follower",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Polyfusion 2044 envelope follower (1977), no designators; all values legible.",
+ "uncertain": [],
+ "rows": [
+  ["×6", "100K", "R", "1%: input, second input, rectifier input, rectifier feedback, summing feedbacks (two)"],
+  ["×3", "100K", "R", "741 feedback, 2N3904 base, comparator-to-buffer series"],
+  ["×2", "51K", "R", "op amp + input bias resistors"],
+  ["×1", "49.9K", "R", "1%"],
+  ["×1", "24K", "R", ""],
+  ["×1", "10K", "R", "1%"],
+  ["×1", "16.5K", "R", "1%"],
+  ["×1", "6.8K", "R", ""],
+  ["×2", "620", "R", "CV and gate output resistors"],
+  ["×2", "1.0K", "R", "LED series, threshold comparator"],
+  ["×1", "470K", "R", ""],
+  ["×1", "10M", "R", "comparator hysteresis"],
+  ["×2", "0.22uF", "C", "input coupling and SLOW response cap"],
+  ["×1", "0.015uF", "C", "FAST response cap"],
+  ["×1", "0.056uF", "C", "MED response cap"],
+  ["×5", "1N4148", "D", "two input clamps, two rectifier, one gate output clamp"],
+  ["Gate Indicator", "FLV-117", "LED", ""],
+  ["×1", "2N3904", "Q", ""],
+  ["×1", "741", "IC", ""],
+  ["×3", "1458", "IC", "dual op amps labelled A, B, C, each used for two sections"],
+  ["Output Level", "100K", "POT", ""],
+  ["Gate Threshold", "100K", "POT", ""],
+  ["Response", "SP3T", "SW", "rotary switch type ST2-6, Fast/Med/Slow"]
+ ]
+}

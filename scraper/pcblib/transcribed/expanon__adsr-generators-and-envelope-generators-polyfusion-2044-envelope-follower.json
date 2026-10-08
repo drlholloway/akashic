@@ -1,0 +1,31 @@
+{
+ "id": "expanon:adsr-generators-and-envelope-generators-polyfusion-2044-envelope-follower",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Hand-drawn Polyfusion 2044 envelope follower (1977), clean and legible; no designators on the drawing so rows use quantity refs.",
+ "uncertain": [],
+ "rows": [
+  ["×6", "100K", "R", "1%: input, output-to-switch, summing and feedback resistors"],
+  ["×3", "100K", "R", "741 feedback, 2N3904 base, gate buffer input"],
+  ["×2", "51K", "R", ""],
+  ["×1", "49.9K", "R", "1%"],
+  ["×1", "24K", "R", ""],
+  ["×1", "10K", "R", "1%"],
+  ["×1", "16.5K", "R", "1%"],
+  ["×1", "6.8K", "R", ""],
+  ["×2", "620R", "R", "output resistors (620 ohm)"],
+  ["×2", "1K", "R", "LED and comparator hysteresis"],
+  ["×1", "470K", "R", ""],
+  ["×1", "10M", "R", ""],
+  ["×2", ".22uF", "C", "coupling cap and Slow response cap"],
+  ["×1", ".015uF", "C", "Fast response cap"],
+  ["×1", ".056uF", "C", "Med response cap"],
+  ["×5", "1N4148", "D", ""],
+  ["×1", "FLV-117", "LED", "gate indicator"],
+  ["×1", "2N3904", "Q", ""],
+  ["×1", "741", "IC", ""],
+  ["×3", "1458", "IC", "dual op amp, chips A, B, C"],
+  ["Output Level", "100K", "POT", ""],
+  ["Gate Threshold", "100K", "POT", ""],
+  ["Response", "SP3T", "SW", "Fast/Med/Slow, Switchcraft ST2-6"]
+ ]
+}

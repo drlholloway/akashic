@@ -1,0 +1,12 @@
+{
+ "id": "expanon:buffers-switchers-mixers-and-routers-electronic-bypass",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Hand-drawn CMOS electronic bypass by Christopher Robins (4011 debounce, 4027 toggle, 4016 switches); the SPDT momentary pushbutton footswitch is not listed.",
+ "uncertain": [],
+ "rows": [
+  ["×5", "10k", "R", "two after the 4011 gates, J and K pull-ups, output pull-down"],
+  ["×1", "4011", "IC", "two gates used as a debouncer"],
+  ["×1", "4027", "IC", "half used as toggle flip-flop"],
+  ["×1", "4016", "IC", "three switches used for the bypass"]
+ ]
+}

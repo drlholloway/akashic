@@ -1,0 +1,20 @@
+{
+ "id": "expanon:adsr-generators-and-envelope-generators-horn-envelope-follower",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Delton T. Horn envelope follower (modified), three op-amp sections with a full-wave rectifier; passives have no designators.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "270K", "R", ""],
+  ["×1", "47K", "R", ""],
+  ["×1", "100R", "R", ""],
+  ["×3", "39K", "R", ""],
+  ["×1", "18K", "R", ""],
+  ["×1", "220K", "R", ""],
+  ["×2", "0.1uF", "C", "one drawn 0.1uF (input), one .1uF (U1A output)"],
+  ["×1", ".047uF", "C", ""],
+  ["×2", "1N4148", "D", "1N4148 or 1N914 per note"],
+  ["U1", "KA4558", "IC", "dual op amp (U1A, U1B); TL074 etc. should work"],
+  ["U2", "KA4558", "IC", "dual op amp, only U2A used"],
+  ["×1", "10K", "POT", "unnamed pot, wiper fed back to U1A input via 270K; not labeled as a control"]
+ ]
+}

@@ -1,0 +1,11 @@
+{
+ "id": "expanon:buffers-switchers-mixers-and-routers-feedback-looper-with-body-contacts",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Arishrobots wiring diagram of a true-bypass loop with a feedback path through two 250k pots and body contacts; only pots and switches.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "250k", "POT", "feedback resistance pots, in series give 0-500k; no taper given"],
+  ["#1", "DPDT", "SW", "stomp switch, fx loop engaged/bypassed"],
+  ["#2", "DPDT", "SW", "on/off/on toggle, feedback loop engage"]
+ ]
+}

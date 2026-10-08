@@ -1,0 +1,38 @@
+{
+ "id": "expanon:buffers-switchers-mixers-and-routers-boss-tm-3",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Boss TM-3 speaker simulator / line driver redrawn as one channel without designators; the note says build two complete circuits for stereo, so quantities are per channel.",
+ "uncertain": [
+  "IC: drawn '5216LL', read as Mitsubishi M5216L dual op amp; chip count inferred from three sections"
+ ],
+ "rows": [
+  ["×8", "10kΩ", "R", ""],
+  ["×1", "10K", "R", "supply dropping resistor from +9V"],
+  ["×4", "1MΩ", "R", ""],
+  ["×6", "47kΩ", "R", ""],
+  ["×2", "4.7kΩ", "R", ""],
+  ["×2", "2.2kΩ", "R", ""],
+  ["×1", "1kΩ", "R", ""],
+  ["×2", "470Ω", "R", "output resistors"],
+  ["×1", "330Ω", "R", ""],
+  ["×2", "47nF", "C", ""],
+  ["×1", "1uF", "C", "film"],
+  ["×1", "1uF", "C", "electrolytic"],
+  ["×1", "15nF", "C", ""],
+  ["×1", "22nF", "C", ""],
+  ["×1", "4.7nF", "C", ""],
+  ["×1", "33nF", "C", ""],
+  ["×1", "5.6nF", "C", ""],
+  ["×1", "1.5nF", "C", ""],
+  ["×2", "15pF", "C", ""],
+  ["×4", "10uF", "C", "electrolytic"],
+  ["×1", "47uF", "C", "electrolytic, supply"],
+  ["×1", "100uF", "C", "electrolytic, output"],
+  ["×2", "1N4148", "D", ""],
+  ["×1", "2SK117", "Q", "JFET input buffer"],
+  ["×1", "2SC3378", "Q", "NPN emitter follower"],
+  ["×2", "M5216L", "IC", "drawn '5216LL' (Mitsubishi dual op amp); three op amp sections per channel"],
+  ["Volume", "100k", "POT", ""],
+  ["×1", "SPDT", "SW", "Line/Spkr switch"]
+ ]
+}

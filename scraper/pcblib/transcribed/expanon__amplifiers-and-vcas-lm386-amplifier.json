@@ -1,0 +1,12 @@
+{
+ "id": "expanon:amplifiers-and-vcas-lm386-amplifier",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Basic LM386 datasheet-style speaker amplifier with a 1K input pot; no designators drawn and the 10uF gain cap is shown dotted as optional.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "10uF", "C", "between pins 1 and 8, drawn dotted (optional, gain 200)"],
+  ["×1", "250uF", "C", "output coupling to speaker"],
+  ["×1", "LM386", "IC", ""],
+  ["×1", "1K", "POT", "input volume pot, drawn 1KΩ"]
+ ]
+}

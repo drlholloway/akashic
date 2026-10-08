@@ -1,0 +1,11 @@
+{
+ "id": "expanon:buffers-switchers-mixers-and-routers-passive-variable-attenuator",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Tiny drawing: a single pot as a passive attenuator between two jacks; no value shown.",
+ "uncertain": [
+  "P2: value not drawn"
+ ],
+ "rows": [
+  ["P2", "?", "POT", "attenuator pot, no value given"]
+ ]
+}

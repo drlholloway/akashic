@@ -1,0 +1,9 @@
+{
+ "id": "expanon:buffers-switchers-mixers-and-routers-matrix-mixer",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Generic 3x3 (expandable) matrix mixer: a pot and resistor per crosspoint feeding two inverting op amp stages per output; no component values or part numbers anywhere on the drawing.",
+ "uncertain": [],
+ "rows": [
+
+ ]
+}

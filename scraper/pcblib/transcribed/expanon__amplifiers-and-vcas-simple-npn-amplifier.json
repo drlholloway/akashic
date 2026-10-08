@@ -1,0 +1,12 @@
+{
+ "id": "expanon:amplifiers-and-vcas-simple-npn-amplifier",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Colin Raffel single 2N3904 common-emitter stage with collector feedback bias; no designators.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "2k2", "R", "collector"],
+  ["×1", "100k", "R", "collector-base feedback"],
+  ["×2", "10uF", "C", "electrolytic, input and output"],
+  ["×1", "2N3904", "Q", ""]
+ ]
+}

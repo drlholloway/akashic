@@ -1,0 +1,11 @@
+{
+ "id": "expanon:buffers-switchers-mixers-and-routers-dpdt-tb-w-led",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Joe Davisson's true bypass with LED indicator from a DPDT footswitch (footswitch left out).",
+ "uncertain": [],
+ "rows": [
+  ["×1", "330k", "R", ""],
+  ["×1", "LED", "LED", "high efficiency"],
+  ["×1", "2N3904", "Q", ""]
+ ]
+}

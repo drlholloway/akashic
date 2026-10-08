@@ -1,0 +1,15 @@
+{
+ "id": "expanon:adsr-generators-and-envelope-generators-simple-op-amp-envelope-follower",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Wim Verheyen op-amp envelope follower: precision rectifier, buffer and two RC smoothing stages with a dual-gang 220kB pot; no designators on the drawing.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "10k", "R", ""],
+  ["×2", "18k", "R", ""],
+  ["×1", "270", "R", "output resistor"],
+  ["×3", "100n", "C", ""],
+  ["×1", "1N4148", "D", "or equivalent"],
+  ["×1", "TL084", "IC", "A1-A4, quad op amp; TL074 also given"],
+  ["×1", "B220K", "POT", "dual-gang (stereo) pot, drawn 220kB, sets the two RC filter stages"]
+ ]
+}

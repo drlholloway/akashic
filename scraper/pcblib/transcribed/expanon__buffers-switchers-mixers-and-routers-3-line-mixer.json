@@ -1,0 +1,15 @@
+{
+ "id": "expanon:buffers-switchers-mixers-and-routers-3-line-mixer",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Three-input passive level pots summed through 22K into a single BC109 common-emitter stage on 9V; no designators drawn.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "22K", "R", "input mixing resistors"],
+  ["×1", "1M", "R", "base bias"],
+  ["×1", "2K2", "R", "collector"],
+  ["×2", "5uF", "C", "input and output coupling, electrolytic"],
+  ["×1", "100uF", "C", "supply filter"],
+  ["×1", "BC109", "Q", "NPN"],
+  ["×3", "10K", "POT", "In 1-3 level"]
+ ]
+}

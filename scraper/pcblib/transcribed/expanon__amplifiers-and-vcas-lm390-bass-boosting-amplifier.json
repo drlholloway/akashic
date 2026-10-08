@@ -1,0 +1,21 @@
+{
+ "id": "expanon:amplifiers-and-vcas-lm390-bass-boosting-amplifier",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "LM390 bass-boost application circuit from the National datasheet, with its frequency response plot; RL load (speaker) not listed.",
+ "uncertain": [
+  "Bypass cap: no value drawn, optional"
+ ],
+ "rows": [
+  ["×2", "180", "R", "ohms"],
+  ["×1", "10k", "R", ""],
+  ["×1", "2.7", "R", "2.7 ohms, Zobel"],
+  ["×1", "0.1uF", "C", ""],
+  ["×1", "20uF", "C", "electrolytic"],
+  ["×1", "0.033uF", "C", ""],
+  ["×1", "0.05uF", "C", ""],
+  ["×1", "500uF", "C", "electrolytic, output coupling"],
+  ["×1", "?", "C", "optional BYPASS cap on pin 1 (dashed), no value given"],
+  ["×1", "LM390", "IC", "1W battery-operated power amplifier"],
+  ["Volume", "10k", "POT", "input level pot"]
+ ]
+}

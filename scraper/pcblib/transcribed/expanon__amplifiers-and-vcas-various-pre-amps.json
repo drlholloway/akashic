@@ -1,0 +1,27 @@
+{
+ "id": "expanon:amplifiers-and-vcas-various-pre-amps",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Three separate guitar preamps on one sheet: Don Tillman's 2N5457 JFET preamp, a TL071 gain-of-2 preamp and an LT1012 buffer; no designators, so the notes say which circuit each part belongs to.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "6.8K", "R", "JFET preamp"],
+  ["×1", "2.2K", "R", "JFET preamp"],
+  ["×1", "10M", "R", "JFET preamp"],
+  ["×1", "51K", "R", "JFET preamp"],
+  ["×2", "220k", "R", "TL071 preamp bias"],
+  ["×2", "100k", "R", "TL071 preamp: feedback and gain set"],
+  ["×2", "1M", "R", "LT1012 buffer bias"],
+  ["×1", "50", "R", "LT1012 buffer output"],
+  ["×1", "5uF", "C", "JFET preamp"],
+  ["×1", "10uF", "C", "JFET preamp supply"],
+  ["×1", "1uF", "C", "TL071 preamp input, electrolytic"],
+  ["×1", "15uF", "C", "TL071 preamp output, electrolytic"],
+  ["×1", "22uF", "C", "TL071 preamp gain set, electrolytic"],
+  ["×1", "0.1uF", "C", "LT1012 buffer input"],
+  ["×1", "1uF", "C", "LT1012 buffer output"],
+  ["×1", "2N5457", "Q", "JFET preamp"],
+  ["×1", "TL071", "IC", "TL071 preamp"],
+  ["×1", "LT1012", "IC", "LT1012 buffer"],
+  ["×1", "250k", "POT", "LT1012 buffer: guitar volume pot ahead of the buffer"]
+ ]
+}

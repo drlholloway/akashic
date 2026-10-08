@@ -1,0 +1,12 @@
+{
+ "id": "expanon:buffers-switchers-mixers-and-routers-feedback-loop-with-led",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Beavis Audio wiring diagram of a true bypass looper with feedback loop pot and LED; the 3PDT is the footswitch.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "2K", "R", "drawn as 2k-5k; LED resistor, 1/4W, range given"],
+  ["×1", "Red LED", "LED", ""],
+  ["Feedback", "A500K", "POT", "500K log/audio"],
+  ["×1", "SPDT", "SW", "feedback on/off"]
+ ]
+}

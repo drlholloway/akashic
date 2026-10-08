@@ -1,0 +1,10 @@
+{
+ "id": "expanon:buffers-switchers-mixers-and-routers-3pdt-tb-looper-with-led",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Beavis Audio wiring diagram for a true-bypass loop with a 3PDT footswitch and LED; besides jacks and the footswitch the only parts are the LED and its 2k-5k resistor.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "2K", "R", "LED resistor, drawn as 2k-5k, 1/4 W"],
+  ["×1", "Red LED", "LED", "indicator"]
+ ]
+}

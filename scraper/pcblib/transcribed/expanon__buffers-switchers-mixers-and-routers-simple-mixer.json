@@ -1,0 +1,19 @@
+{
+ "id": "expanon:buffers-switchers-mixers-and-routers-simple-mixer",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Single-page PDF: four-input inverting op amp mixer with a second inverting stage and a 9V bias divider; no designators, op amp type given only in the text.",
+ "uncertain": [
+  "output coupling capacitor: no value drawn"
+ ],
+ "rows": [
+  ["×9", "100K", "R", "4 input, 2 feedback, 1 gain-changing (10K gives x10), 2 bias divider"],
+  ["×1", "1M", "R", "output pull-down"],
+  ["×4", "0.1uF", "C", "input coupling"],
+  ["×1", "22uF", "C", "supply filter"],
+  ["×1", "2.2uF", "C", "bias filter"],
+  ["×1", "?", "C", "output coupling electrolytic, no value drawn"],
+  ["×1", "?", "IC", "dual JFET op amp (both halves used); text suggests TL072, TL082 or LF3xx"],
+  ["×4", "10K", "POT", "input level controls, one per channel; text says audio taper preferred, linear works"],
+  ["×1", "SPST", "SW", "power switch"]
+ ]
+}

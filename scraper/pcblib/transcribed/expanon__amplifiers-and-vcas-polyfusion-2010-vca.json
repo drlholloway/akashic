@@ -1,0 +1,33 @@
+{
+ "id": "expanon:amplifiers-and-vcas-polyfusion-2010-vca",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Hand-drawn Polyfusion Model 2010 VCA (1976), one channel shown; clean and legible, no designators so rows use quantity refs.",
+ "uncertain": [
+  "VCA Bal: drawn as a 100K pot with no indication whether panel or trimmer"
+ ],
+ "rows": [
+  ["×4", "100K", "R", "signal input, 1458 feedback, two CV inputs"],
+  ["×2", "470R", "R", "3080 input dividers (470 ohm)"],
+  ["×1", "1M", "R", ""],
+  ["×5", "10K", "R", ""],
+  ["×1", "22K", "R", ""],
+  ["×1", "620R", "R", "output (620 ohm)"],
+  ["×2", "20K", "R", "1%, offset trim network"],
+  ["×1", "300K", "R", ""],
+  ["×1", "50K", "R", ""],
+  ["×1", "5K", "R", ""],
+  ["×1", "470K", "R", ""],
+  ["×2", ".01uF", "C", "3080 supply bypass"],
+  ["×1", "100pF", "C", ""],
+  ["×2", "0.1uF", "C", "supply bypass"],
+  ["×2", "100uF", "C", "25V, supply filter"],
+  ["×2", "2N3906", "Q", ""],
+  ["×1", "3080", "IC", "CA3080 OTA"],
+  ["×1", "TL081", "IC", ""],
+  ["×1", "1458", "IC", "dual op amp, both halves used"],
+  ["Gain", "B25K", "POT", "drawn 25K LIN"],
+  ["VCA Bal", "100K", "TRIM", "balance adjust, likely a trimmer"],
+  ["Gain Trim", "5K", "TRIM", ""],
+  ["Output Offset", "500R", "TRIM", "500 ohm"]
+ ]
+}

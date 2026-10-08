@@ -1,0 +1,17 @@
+{
+ "id": "expanon:amplifiers-and-vcas-stereo-preamp",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "EM Stereo Spreader (the PDF's title), a single-page schematic with two NE5532s and a dual linear pot; bipolar 9-15V supply.",
+ "uncertain": [],
+ "rows": [
+  ["×4", "100k", "R", "1% metal film"],
+  ["×6", "10k", "R", "1% metal film"],
+  ["×2", "1k", "R", "output resistors"],
+  ["×2", "10ohm", "R", "1/2W, supply filter"],
+  ["×2", "10uF", "C", "output coupling electrolytics"],
+  ["×2", "33uF", "C", "supply filter electrolytics"],
+  ["IC1", "5532", "IC", "dual op amp"],
+  ["IC2", "5532", "IC", "dual op amp"],
+  ["×1", "B100K", "POT", "100k dual linear pot (stereo spread)"]
+ ]
+}

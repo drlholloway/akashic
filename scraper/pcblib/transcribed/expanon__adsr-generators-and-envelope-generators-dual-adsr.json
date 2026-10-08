@@ -1,0 +1,28 @@
+{
+ "id": "expanon:adsr-generators-and-envelope-generators-dual-adsr",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Single ADSR envelope generator by Christopher MacDonald (TL084, 4093, 4066), no designators; the title says Dual ADSR but the drawing shows one envelope.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "100k", "R", ""],
+  ["×4", "10k", "R", "op amp feedback, gate input, sustain divider (2)"],
+  ["×1", "2k2", "R", ""],
+  ["×1", "68k", "R", ""],
+  ["×1", "47k", "R", ""],
+  ["×1", "200Ω", "R", "LED resistor"],
+  ["×1", ".001uF", "C", ""],
+  ["×1", "1uF", "C", "electrolytic, switched by SPST"],
+  ["×1", "10uF", "C", "electrolytic"],
+  ["×4", "1N4148", "D", "drawing says all diodes 1N4148 or similar"],
+  ["×1", "LED", "LED", ""],
+  ["×2", "2N3904", "Q", ""],
+  ["×1", "TL084", "IC", "4 sections"],
+  ["×1", "4093", "IC", "2 gates used"],
+  ["×1", "4066", "IC", "2 switches used"],
+  ["Attack", "1M", "POT", ""],
+  ["Decay", "1M", "POT", ""],
+  ["Sustain", "100k", "POT", ""],
+  ["Release", "1M", "POT", ""],
+  ["×1", "SPST", "SW", "adds 1uF or 10uF timing cap"]
+ ]
+}

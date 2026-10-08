@@ -1,0 +1,18 @@
+{
+ "id": "expanon:adsr-generators-and-envelope-generators-cmos-envelope-follower",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Clean small drawing of a CMOS (4069 inverter) envelope follower with an LED indicator; no designators, so quantity refs.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "33k", "R", ""],
+  ["×1", "68k", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×1", "2M2", "R", ""],
+  ["×3", "1M", "R", ""],
+  ["×1", "1K", "R", "LED series resistor"],
+  ["×1", "1uF", "C", "electrolytic"],
+  ["×1", "Diode", "D", "no part number given; schottky suggested for faster response"],
+  ["×1", "LED", "LED", ""],
+  ["×1", "4069", "IC", "CD4069 hex inverter, three sections used"]
+ ]
+}

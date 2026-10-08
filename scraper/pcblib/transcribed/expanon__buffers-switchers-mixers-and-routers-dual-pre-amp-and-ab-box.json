@@ -1,0 +1,22 @@
+{
+ "id": "expanon:buffers-switchers-mixers-and-routers-dual-pre-amp-and-ab-box",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Rick Barker's dual preamp and A/B box for harmonica mics: two NE5532 two-stage inverting preamps on a single supply, A/B switch at the output. No designators drawn.",
+ "uncertain": [
+  "×1 10k series resistor in channel B second stage: channel A has 20k in the same spot, could be a drawing error"
+ ],
+ "rows": [
+  ["×7", "20k", "R", "input and feedback resistors"],
+  ["×1", "10k", "R", "channel B second-stage input; channel A uses 20k here"],
+  ["×2", "10k", "R", "bias divider"],
+  ["×1", "100ohms", "R", "supply filter"],
+  ["×4", "6.8uF", "C", "coupling, electrolytic"],
+  ["×3", "10uF", "C", "2 output coupling, 1 bias filter"],
+  ["×5", "0.1uF", "C", "decoupling, bias and supply"],
+  ["×1", "50uF", "C", "supply filter"],
+  ["×1", "100uF", "C", "supply filter"],
+  ["×2", "5532", "IC", "NE5532 dual op amp, one per channel"],
+  ["×2", "100k", "POT", "gain control in each second-stage feedback loop"],
+  ["A/B", "SPDT", "SW", "output select"]
+ ]
+}

@@ -1,0 +1,9 @@
+{
+ "id": "expanon:amplifiers-and-vcas-candy-tin-amplifier",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Make magazine Vol. 04 article on Warren Young's mint-tin CMoy headphone amp (8 pages); page 2 holds the only drawing, a perfboard wiring diagram naming R1-R5, C1, C2, RLED, D1 and a dual op-amp but giving no values (the article points to a website for the parts list; text mentions OPA132 and 47-100 ohm optional R5). No schematic with values, so no rows.",
+ "uncertain": [],
+ "rows": [
+
+ ]
+}

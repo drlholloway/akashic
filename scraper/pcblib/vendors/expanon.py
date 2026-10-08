@@ -21,7 +21,7 @@ _BRANDS = re.compile(r"^(boss|dod|mxr|ehx|electro[- ]?harmonix|ibanez|maestro|pr
 _SKIP_DIRS = {"MIDI", "OOP Japanese Electronics Book", "Power Supplies and Other Useful Stuff", "Miscellaneous"}
 # slug -> the page of a multi-page PDF that holds the schematic, found by looking (page 1 is often a cover,
 # a parts list or an article's first page). Unlisted PDFs use page 1.
-_PAGE: dict[str, int] = {"chorus-dod-fx64": 2, "filters-wahs-and-vcfs-lovetone-meatball-mcmeat": 2,
+_PAGE: dict[str, int] = {"chorus-dod-fx64": 2, "adsr-generators-and-envelope-generators-efm-envelope-generator": 3, "filters-wahs-and-vcfs-lovetone-meatball-mcmeat": 2,
                          "distortion-boost-and-overdrive-boss-mt2": 2, "flangers-anderton-flanger": 2,
                          "compressors-gates-and-limiters-butterworth-filter": 8, "compressors-gates-and-limiters-fet-compressors": 2,
                          "filters-wahs-and-vcfs-steve-giles-autowah": 2, "fuzz-and-fuzzy-noisemakers-building-the-gristleizer": 2,
@@ -99,8 +99,9 @@ class ExpAnon(Adapter):
                     rows = schematic_bom(blob, page, wide=True)  # traced drawings often set a label well off its part
             else:
                 if not png.exists():
-                    from PIL import Image
+                    from PIL import Image, ImageFile
                     Image.MAX_IMAGE_PIXELS = None
+                    ImageFile.LOAD_TRUNCATED_IMAGES = True  # a few files on the site lack their last bytes
                     im = Image.open(blob)
                     if im.mode not in ("RGB", "L"):
                         im = im.convert("RGB")

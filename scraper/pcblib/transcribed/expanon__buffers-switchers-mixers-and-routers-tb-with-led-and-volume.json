@@ -1,0 +1,11 @@
+{
+ "id": "expanon:buffers-switchers-mixers-and-routers-tb-with-led-and-volume",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Beavis Audio wiring diagram of a true-bypass looper with LED and a volume attenuator on the return.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "2K", "R", "drawn as 2k-5k 1/4W, LED resistor; any value in that range"],
+  ["×1", "Red", "LED", "indicator"],
+  ["Volume", "A100K", "POT", "100K log/audio taper"]
+ ]
+}

@@ -1,0 +1,16 @@
+{
+ "id": "expanon:buffers-switchers-mixers-and-routers-6-input-mixer",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Six-channel mixer: three inputs with inverting op-amp preamps (gain 100) and three passive, into an inverting summing amp; bipolar 2x9V supply, no designators.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "1k", "R", "input resistors, channels 1-3"],
+  ["×4", "100k", "R", "feedback, three preamps and summing amp"],
+  ["×6", "47k", "R", "mix resistors"],
+  ["×1", "10k", "R", "output pulldown"],
+  ["×4", "10uF", "C", "electrolytic: three inputs and output"],
+  ["×6", "1uF", "C", "electrolytic coupling"],
+  ["×4", "?", "IC", "op amp, no part number given (four single op amp symbols)"],
+  ["×6", "A10k", "POT", "channel levels, 10k log"]
+ ]
+}

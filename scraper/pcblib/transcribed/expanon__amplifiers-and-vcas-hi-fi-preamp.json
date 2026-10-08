@@ -1,0 +1,21 @@
+{
+ "id": "expanon:amplifiers-and-vcas-hi-fi-preamp",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Discrete 60dB hi-fi preamp simulation schematic (BC550C/BC560C), +/-15V; the 600R RL is the simulated load and is left out.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "120", "R", ""],
+  ["×1", "39.0", "R", "39 ohm"],
+  ["×1", "10.0k", "R", ""],
+  ["×1", "100k", "R", "input"],
+  ["Rf", "100.0k", "R", "feedback; note says Rf=10R, Rb=100k for 80dB gain"],
+  ["Rb", "100", "R", ""],
+  ["×3", "4.7k", "R", ""],
+  ["×1", "10u", "C", "electrolytic, input"],
+  ["×1", "2.2p", "C", ""],
+  ["×1", "2200u", "C", "electrolytic"],
+  ["×1", "CQX35A", "LED", "red LED used as reference"],
+  ["×5", "BC560C", "Q", ""],
+  ["×5", "BC550C", "Q", ""]
+ ]
+}

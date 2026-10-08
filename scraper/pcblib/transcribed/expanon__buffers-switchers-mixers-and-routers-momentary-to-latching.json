@@ -1,0 +1,12 @@
+{
+ "id": "expanon:buffers-switchers-mixers-and-routers-momentary-to-latching",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Amos Gaynes' momentary-to-latching converter: a CD4024 counter toggles a CD4016 analog switch.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "3.3M", "R", ""],
+  ["×1", ".01uF", "C", ""],
+  ["×1", "CD4024BE", "IC", "drawing says not the BCM version"],
+  ["×1", "CD4016", "IC", "one switch used"]
+ ]
+}

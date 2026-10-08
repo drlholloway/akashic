@@ -218,6 +218,11 @@ GitHub Release notes.
   the CA3140 op amp. Values a drawing does not give are shown as '?'; three drawings with no values (a
   pencil trace of the TS5, a tiny FET fuzz, and the DS-1 SEM's cover letter in place of its schematic)
   lose their wrong OCR rows and list nothing.
+- Experimentalists Anonymous synth and utility circuits read by eye too: envelope generators and followers
+  (EFM EGLFO1a, Polyfusion 2044), VCAs and amplifiers (Polyfusion 2010, LM386, LM390), mixers, buffers and
+  switchers (Boss TM-3). 33 of the first 40 now list 376 parts; the other 7 are wiring diagrams, articles
+  or drawings with no values. Two images missing their last bytes on the site (10 Band Graphic EQ, Pulse
+  Frequency Doubler) are now read instead of skipped.
 - Capacitor and resistor values written with a leading point ('.01uF', '.47u') now read as numbers, and
   capacitors printed in the three-digit code ('104', '473') as 100n and 47n; '1meg', '220E' (E for
   ohms) and pots written 'A4k7' read too (Moonn's Sunny Sunns Mid pot is B2.2k);
