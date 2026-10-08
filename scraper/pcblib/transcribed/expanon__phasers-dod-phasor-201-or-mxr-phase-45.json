@@ -1,0 +1,33 @@
+{
+ "id": "expanon:phasers-dod-phasor-201-or-mxr-phase-45",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Justin Philpott's combined MXR Phase 45 / DOD Phasor 201 drawing; DOD values (blue/black) are listed with the MXR values (red) in the notes, and parts found in only one version are marked.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "100", "R", "DOD only, supply series; a short in the MXR"],
+  ["×1", "100K", "R", "IC1a feedback; MXR 10k"],
+  ["×11", "10k", "R", "both versions: input, four in the feedback chain, two feedback and two gate-network per JFET stage, two at the output mix"],
+  ["×1", "220K", "R", "bias divider; MXR 30k"],
+  ["×1", "22K", "R", "zener feed; MXR 10k"],
+  ["×3", "470k", "R", "both versions: IC1a input bias and the two JFET gate resistors"],
+  ["×1", "470K", "R", "LFO to trimpot; MXR 1M"],
+  ["×1", "470K", "R", "output pulldown; MXR 150k"],
+  ["×1", "3.9M", "R", "LFO output to JFET gates"],
+  ["×4", "220K", "R", "LFO; MXR 150k"],
+  ["×1", "10K", "R", "LFO to Speed pot; MXR 7.5k"],
+  ["×3", ".01uF", "C", "drawn '.01': input coupling and the two JFET gate caps"],
+  ["×1", ".01uF", "C", "drawn '.01': LFO integrator"],
+  ["×2", ".047uF", "C", "drawn '.047': phase-shift caps; MXR .05"],
+  ["×1", ".047uF", "C", "drawn '.047': output coupling; MXR .05"],
+  ["×1", "10uF", "C", "drawn '10', electrolytic, bias filter"],
+  ["×1", "10uF", "C", "drawn '(10)', electrolytic supply filter, MXR only (open in the DOD)"],
+  ["×1", ".05uF", "C", "drawn '(.05)', MXR only (open in the DOD), between JFET bias line and LFO line"],
+  ["×1", "4.7uF", "C", "drawn '4.7', electrolytic, LFO; MXR 10"],
+  ["×1", "1N5230", "D", "zener, bias reference"],
+  ["×2", "MI 113 926", "Q", "JFET; MXR uses 2N5952"],
+  ["IC1", "TL072", "IC", "input buffer and first phase stage"],
+  ["IC2", "TL072", "IC", "second phase stage and LFO"],
+  ["Trimpot", "100K", "TRIM", "JFET bias trim; MXR 250k"],
+  ["Speed", "500k", "POT", ""]
+ ]
+}

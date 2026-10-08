@@ -256,7 +256,7 @@ def find_flags(db: sqlite3.Connection, tdb: sqlite3.Connection) -> tuple[list[di
             else:
                 alts = [a for a in alternatives(re.sub(r"^(?:JFET|MOSFET|NPN|PNP)\s+", "", v, flags=re.I)) if a]
                 parts = [a for a in alts if not GENERIC_Q.match(a)]
-                if parts and not any(known_transistor(c) or c.upper().rstrip("*") in KNOWN_Q for a in parts for c in shorthand_q(a)):
+                if parts and not known_transistor(norm) and not any(known_transistor(c) or c.upper().rstrip("*") in KNOWN_Q for a in parts for c in shorthand_q(a)):
                     s = near("Q", V)
                     flag(r, "high" if s else "medium", "Transistor not in the transistor database", s)
         elif cat == "IC":

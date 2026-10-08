@@ -1,0 +1,21 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-craig-anderton-tube-sound-fuzz",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Justin Philpott's 1998 drawing of Craig Anderton's CD4049 Tube Sound Fuzz; no designators, values all legible.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "100k", "R", "input resistor; Rhythm feedback"],
+  ["×1", "10M", "R", "Lead feedback"],
+  ["×1", "1M", "R", "second stage feedback"],
+  ["×1", "100", "R", "supply resistor, drawn 100Ω"],
+  ["×1", "0.1uF", "C", "input"],
+  ["×2", "10pF", "C", "feedback caps"],
+  ["×1", ".05uF", "C", "interstage"],
+  ["×1", "10uF", "C", "output, electrolytic"],
+  ["×1", "100uF", "C", "supply filter, electrolytic"],
+  ["IC1", "CD4049", "IC", "hex inverter; two sections as amplifiers, four unused"],
+  ["Fuzz", "1M", "POT", ""],
+  ["Volume", "10k", "POT", ""],
+  ["Rhythm/Lead", "SPDT", "SW", "selects 100k or 10M feedback"]
+ ]
+}

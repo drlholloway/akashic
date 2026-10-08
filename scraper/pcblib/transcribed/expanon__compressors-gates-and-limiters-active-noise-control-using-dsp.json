@@ -1,0 +1,9 @@
+{
+ "id": "expanon:compressors-gates-and-limiters-active-noise-control-using-dsp",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "23-page TI application note (SPRA336) on an active noise controller in the TMS320C26 DSP Starter Kit; only block diagrams, flowcharts and a board photo, no circuit schematic or part values.",
+ "uncertain": [],
+ "rows": [
+
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "id": "expanon:tremolos-and-panners-kay-tremolo",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Kay T-1 tremolo, twin-T oscillator; no designators. DPDT bypass slide switch not drawn.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "10K", "R", ""],
+  ["×1", "33", "R", ""],
+  ["×1", "1K2", "R", ""],
+  ["×1", "68K", "R", ""],
+  ["×3", "33K", "R", ""],
+  ["×2", "100K", "R", ""],
+  ["×1", "47K", "R", ""],
+  ["×1", "4K7", "R", ""],
+  ["×1", "470K", "R", ""],
+  ["×1", "43K", "R", ""],
+  ["×1", "10uF", "C", "electrolytic"],
+  ["×2", "4.7uF", "C", "electrolytic"],
+  ["×1", "0.01uF", "C", ""],
+  ["×1", "0.22uF", "C", ""],
+  ["×1", "0.1uF", "C", ""],
+  ["×1", "2SC828R", "Q", "twin-T oscillator"],
+  ["×3", "2SC828P", "Q", "input stage and two loading transistors"],
+  ["Speed", "1K", "POT", "treadle speed control (named in text, not on drawing)"]
+ ]
+}

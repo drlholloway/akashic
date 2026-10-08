@@ -1,0 +1,40 @@
+{
+ "id": "expanon:ring-modulators-and-frequency-shifters-electro-harmonix-frequency-analyzer-3",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Hand-drawn Electro-Harmonix factory schematic of the Frequency Analyzer: ICL8038 oscillator into an AD533 balanced modulator, with a mains supply (transformer skipped). No designators; a handwritten 'OP275' note sits beside the modulator.",
+ "uncertain": [
+  "Blue and White: drawn as trimmers/pots with no value",
+  "Fs/Ss switch type inferred from two contacts"
+ ],
+ "rows": [
+  ["×1", "82K", "R", "ICL8038 pin 12"],
+  ["×3", "1K", "R", "two on ICL8038 pins 4 and 5, one at the modulator input"],
+  ["×2", "47K", "R", "one after the sine coupling cap, one from modulator pin 6"],
+  ["×2", "10K", "R", "one input pulldown, one at the modulator input"],
+  ["×1", "220K", "R", "741 feedback"],
+  ["×2", "4.7K", "R", ""],
+  ["×3", "39K", "R", ""],
+  ["×1", "3.3K", "R", ""],
+  ["×3", "56K", "R", "two feeding the Blue trimmer from +/-15V, one at the 4558 output"],
+  ["×2", "33K", "R", "4558 filter"],
+  ["×2", "10", "R", "10 ohm, regulator"],
+  ["×1", ".022uF", "C", "ICL8038 timing"],
+  ["×4", "1uF", "C", "electrolytic: sine coupling, -15V bypass at the 741, two at the regulator"],
+  ["×3", "10uF", "C", "electrolytic"],
+  ["×4", ".1uF", "C", "one at the modulator input, three in the 4558 filter"],
+  ["×2", "100uF", "C", "electrolytic, supply filter"],
+  ["×2", ".047uF", "C", "regulator compensation"],
+  ["×4", "Diode", "D", "no part number given; bridge rectifier of the mains supply"],
+  ["×1", "ICL8038CCPD", "IC", "function generator (sine wave used)"],
+  ["×1", "741", "IC", "input buffer"],
+  ["×1", "AD533JH", "IC", "balanced modulator (multiplier), TO-100 can"],
+  ["×1", "NE4558N", "IC", "dual op amp, filter"],
+  ["×1", "SG4501N", "IC", "dual tracking voltage regulator +/-15V"],
+  ["Shift", "100K", "POT", ""],
+  ["Fine", "2.5K", "POT", ""],
+  ["Blend", "100K", "POT", ""],
+  ["Blue", "?", "TRIM", "multiplier offset trim between two 56K to +/-15V; no value drawn"],
+  ["White", "?", "TRIM", "multiplier offset trim across +/-15V; no value drawn"],
+  ["Fs/Ss", "SPDT", "SW", "switch at the output marked Fs and Ss"]
+ ]
+}

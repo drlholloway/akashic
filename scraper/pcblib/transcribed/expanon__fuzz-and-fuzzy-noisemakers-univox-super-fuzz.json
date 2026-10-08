@@ -1,0 +1,30 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-univox-super-fuzz",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Justin Philpott 1997 redraw of the Univox Super-Fuzz, no designators; electrolytic values given only by the 'all 10uF' note.",
+ "uncertain": [
+  "Electrolytic count (11) counted from + marks; values come from the drawing's blanket note"
+ ],
+ "rows": [
+  ["×7", "10k", "R", ""],
+  ["×6", "100k", "R", ""],
+  ["×4", "22k", "R", ""],
+  ["×3", "47k", "R", ""],
+  ["×2", "1k8", "R", ""],
+  ["×2", "470", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "220k", "R", ""],
+  ["×1", "270k", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "15k", "R", ""],
+  ["×11", "10uF", "C", "electrolytic; drawing says all electrolytics are 10uF"],
+  ["×1", "100uF", "C", "supply filter"],
+  ["×2", "0.1uF", "C", ""],
+  ["×1", ".001uF", "C", "tone"],
+  ["×2", "1N34A", "D", "germanium, octave rectifier"],
+  ["×6", "BC547A", "Q", "NPN; drawing allows BC547A, 2N5088 or 2N2222A"],
+  ["Drive", "50k", "POT", "no taper given"],
+  ["Level", "50k", "POT", "no taper given"],
+  ["Tone", "SPDT", "SW", "Normal/Notch"]
+ ]
+}

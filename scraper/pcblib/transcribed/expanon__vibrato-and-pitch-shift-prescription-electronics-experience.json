@@ -1,0 +1,23 @@
+{
+ "id": "expanon:vibrato-and-pitch-shift-prescription-electronics-experience",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Only the swell circuit and the bypass/Octave/Swell switching of the Prescription Electronics Experience; the fuzz/octave core is a Foxx Tone Machine that is not drawn here. The Bypass footswitch is skipped.",
+ "uncertain": [
+  "Swell: pot value not drawn"
+ ],
+ "rows": [
+  ["×1", "680k", "R", ""],
+  ["×2", "470", "R", "collector and emitter of the first transistor"],
+  ["×1", "4k7", "R", ""],
+  ["×1", "4M7", "R", "feedback bias"],
+  ["×1", "6k8", "R", ""],
+  ["×1", "68k", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×1", "0.22uF", "C", "electrolytic, drawn '0.22uF+'"],
+  ["×1", "10uF", "C", "electrolytic"],
+  ["×2", "?", "Q", "NPN, no part number given"],
+  ["Swell", "?", "POT", "no value drawn"],
+  ["Octave", "DPDT", "SW", "octave switch"],
+  ["Swell switch", "DPDT", "SW", "swell switch"]
+ ]
+}

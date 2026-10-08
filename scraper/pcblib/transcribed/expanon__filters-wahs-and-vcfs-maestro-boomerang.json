@@ -1,0 +1,24 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-maestro-boomerang",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Clean redrawn schematic of the Maestro Boomerang wah (Model EG-1); only Q1, Q2 and S1 are designated. S1 is the bypass switch and is skipped.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "10k", "R", "Q1 collector"],
+  ["×1", "48k", "R", "input series"],
+  ["×1", "4.7k", "R", "Q1 base to ground"],
+  ["×1", "120", "R", "Q1 emitter"],
+  ["×1", "1.5M", "R", ""],
+  ["×1", "47k", "R", "across inductor"],
+  ["×1", "8.2k", "R", ""],
+  ["×1", "620k", "R", "Q2 collector-base feedback"],
+  ["×1", ".047uF", "C", "input"],
+  ["×2", "1uF", "C", "electrolytic coupling"],
+  ["×1", "6uF", "C", "electrolytic"],
+  ["×1", ".01uF", "C", ""],
+  ["Q1", "P-2356", "Q", "NPN, designated P-2356 per drawing note"],
+  ["Q2", "P-2356", "Q", "NPN, designated P-2356 per drawing note"],
+  ["×1", "500mH", "L", "wah inductor"],
+  ["×1", "25k", "POT", "wah pedal pot, unnamed, no taper given"]
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "id": "expanon:phasers-electro-harmonix-small-stone",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Small redrawn GIF of the EH Small Stone, Issue J: buffer, four OTA phase stages (EH1048/CA3094) and an OTA LFO, with the color switch. No designators; the bypass switch is the footswitch and is skipped.",
+ "uncertain": [
+  "2N5087 ×3: the LFO has two PNP transistors with a single 2N5087 label pointing at both"
+ ],
+ "rows": [
+  ["×1", "100", "R", "LFO output to the OTA control lines"],
+  ["×5", "1k", "R", "one per phase stage to Vbias, one in LFO"],
+  ["×1", "1.8k", "R", "LFO"],
+  ["×1", "3.3k", "R", "mixer"],
+  ["×4", "4.7k", "R", "two in input buffer, one mixer, one LFO"],
+  ["×1", "7.5k", "R", "LFO divider"],
+  ["×6", "10k", "R", "bias, input buffer collector, four phase-stage loads"],
+  ["×2", "15k", "R", "bias supply, LFO"],
+  ["×1", "22k", "R", "LFO"],
+  ["×11", "27k", "R", "seven in the phase stages, two in the mixer, two in the LFO"],
+  ["×2", "30k", "R", "first phase-stage input, input buffer to mixer"],
+  ["×1", "100k", "R", "input"],
+  ["×1", "270k", "R", "color switch feedback"],
+  ["×2", "470k", "R", "bias of input transistor, effect output to ground"],
+  ["×5", "0.0068uF", "C", "input coupling and one per phase stage, drawn 0.0068"],
+  ["×3", "0.1uF", "C", "two in mixer/feedback, one in LFO, drawn 0.1"],
+  ["×1", "10uF", "C", "electrolytic, input buffer output"],
+  ["×2", "33uF", "C", "electrolytic; bias filter and LFO timing"],
+  ["×1", "2N5088", "Q", "NPN, input buffer"],
+  ["×3", "2N5087", "Q", "PNP; one input buffer, two in the LFO (one label drawn for the LFO pair)"],
+  ["×5", "EH1048", "IC", "OTA plus Darlington, house-marked; CA3094 substitute; four phase stages and the LFO"],
+  ["×1", "1M", "POT", "LFO rate, unnamed"],
+  ["Color", "DPDT", "SW", "color switch, two poles linked"]
+ ]
+}

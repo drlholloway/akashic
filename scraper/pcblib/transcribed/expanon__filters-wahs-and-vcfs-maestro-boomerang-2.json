@@ -1,0 +1,27 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-maestro-boomerang-2",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Clean redrawn schematic titled 'Maestro Boomer 2' (Model EG-2), wah/volume pedal; no designators except Q1, Q2, S1 (bypass) and S2.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "10k", "R", "Q1 collector load; Q2 stage to ground"],
+  ["×1", "48k", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "120", "R", "Q1 emitter"],
+  ["×1", "1.5M", "R", ""],
+  ["×1", "47k", "R", ""],
+  ["×1", "820k", "R", "Q2 bias"],
+  ["×1", "56k", "R", ""],
+  ["×1", "8.2k", "R", ""],
+  ["×1", ".047uF", "C", ""],
+  ["×2", "1uF", "C", "electrolytic"],
+  ["×1", "6uF", "C", "electrolytic"],
+  ["×1", ".1uF", "C", ""],
+  ["×1", ".01uF", "C", ""],
+  ["Q1", "991-002873", "Q", "house number; replacement transistor needed"],
+  ["Q2", "991-002873", "Q", "house number; replacement transistor needed"],
+  ["×1", "500mH", "L", "wah inductor, drawn 500mh"],
+  ["Wah", "25k", "POT", "treadle pot, no taper given"],
+  ["S2", "SPST", "SW", "wah/volume mode switch"]
+ ]
+}

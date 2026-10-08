@@ -1,0 +1,33 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-maestro-fz-1-and-fz-1a",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Jack Orman (muzique.com) redraw of two circuits on one sheet: the FZ-1 (top, 3V, 2N270) and FZ-1a (bottom, 1.5V, 2N2613/2N2614). No designators; rows are grouped by version in the notes.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "100K", "R", "Maestro FZ-1: input"],
+  ["×1", "1M", "R", "Maestro FZ-1: Q1 base"],
+  ["×3", "10K", "R", "Maestro FZ-1: Q1 emitter, Q3 base, Q3 collector"],
+  ["×1", "1.5K", "R", "Maestro FZ-1: Q2 collector"],
+  ["×1", "2.2K", "R", "Maestro FZ-1: Q2 base"],
+  ["×1", "22K", "R", "Maestro FZ-1: Q2 base to ground"],
+  ["×1", "56K", "R", "Maestro FZ-1: output"],
+  ["×1", ".01uF", "C", "Maestro FZ-1: input, drawn .01"],
+  ["×2", "20uF", "C", "Maestro FZ-1: electrolytic coupling, drawn 20.0"],
+  ["×1", ".0033uF", "C", "Maestro FZ-1: Q3 collector to output, drawn .0033"],
+  ["×3", "2N270", "Q", "Maestro FZ-1: germanium PNP"],
+  ["×1", "A50K", "POT", "Maestro FZ-1: unnamed knob (attack) at Q2 base, drawn 50KA"],
+  ["×1", "500K", "POT", "Maestro FZ-1: unnamed output level pot"],
+  ["×1", "100K", "R", "Maestro FZ-1a: input"],
+  ["×1", "1M", "R", "Maestro FZ-1a: Q1 base"],
+  ["×4", "10K", "R", "Maestro FZ-1a: Q1 emitter, Q2 collector, Q3 base, Q3 collector"],
+  ["×1", "470K", "R", "Maestro FZ-1a: Q2 base bias from supply"],
+  ["×1", "2.2K", "R", "Maestro FZ-1a: Q2 base"],
+  ["×1", "22K", "R", "Maestro FZ-1a: Q2 base to ground"],
+  ["×1", ".01uF", "C", "Maestro FZ-1a: input, drawn .01"],
+  ["×2", "1uF", "C", "Maestro FZ-1a: electrolytic coupling, drawn 1.0"],
+  ["×1", ".0033uF", "C", "Maestro FZ-1a: Q3 collector to output, drawn .0033"],
+  ["×3", "2N2613", "Q", "Maestro FZ-1a: germanium PNP, 2N2613 or 2N2614"],
+  ["×1", "A50K", "POT", "Maestro FZ-1a: unnamed knob (attack) at Q2 base, drawn 50KA"],
+  ["×1", "A50K", "POT", "Maestro FZ-1a: unnamed output level pot, drawn 50KA"]
+ ]
+}

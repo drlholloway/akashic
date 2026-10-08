@@ -189,12 +189,13 @@ GitHub Release notes.
   and pots are grouped by taper (A, B, C, W, none) and ordered by resistance.
 
 ### Fixed
-- Experimentalists Anonymous: 189 schematics were read by eye instead of OCR, part by part
+- Experimentalists Anonymous: 237 schematics were read by eye instead of OCR, part by part
   (`scraper/pcblib/transcribed/`): every pedal circuit the OCR had read worst (ranked by values that fit
-  no standard series or the wrong part type, and by how much of the drawing was missing), then 45
-  branded pedals that had no parts list at all (Boss SD-1, OD-1, OD-3, MT-2, CS-3; Ibanez TS-808 and
-  TS9; MXR Dyna Comp, Distortion+ and Analog Delay; ProCo RAT; Big Muff Pi; Crybaby). 11,170 parts
-  where OCR had found about 2,500. Boss DC-2 goes from 4 parts to 207, BD-2 from 1 to 120, DM-2 from 40 to 112, CE-2 from 34 to
+  no standard series or the wrong part type, and by how much of the drawing was missing), then 89
+  pedals that had no parts list at all (Boss SD-1, OD-1, OD-3, MT-2, CS-3, SG-1; Ibanez TS-808 and
+  TS9; MXR Dyna Comp, Distortion+, Flanger and Analog Delay; ProCo RAT; Big Muff Pi, Small Stone,
+  Electric Mistress; Uni-Vibe; Univox Super-Fuzz; Maestro Boomerang and FZ-1; Mosrite Fuzz-Rite;
+  Crybaby, Vox V847). 12,550 parts where OCR had found about 2,500. Boss DC-2 goes from 4 parts to 207, BD-2 from 1 to 120, DM-2 from 40 to 112, CE-2 from 34 to
   108, Morley Echo Chorus Vibrato from 1 to 154, EHX Micro Synthesizer from 46 to 192. A PDF whose
   schematic is not on its first page names its page (DOD FX64 and Lovetone Meatball, page 2). The Basic Saw VCO's D1 was
   the CA3140 op amp. Values a drawing does not give are shown as '?'; three drawings with no values (a
@@ -203,7 +204,7 @@ GitHub Release notes.
 - Capacitor and resistor values written with a leading point ('.01uF', '.47u') now read as numbers, and
   capacitors printed in the three-digit code ('104', '473') as 100n and 47n; '1meg', '220E' (E for
   ohms) and pots written 'A4k7' read too (Moonn's Sunny Sunns Mid pot is B2.2k);
-  'MPS-A18' is the MPSA18.
+  'MPS-A18' is the MPSA18; trimmers written with a taper letter ('B150K') read as 150k.
 - Dead Astronaut: nine build documents print their Eagle parts list as text, which is now read instead
   of OCR (`parse_eagle_partlist`): the Pendulum Tremolo+ loses an OCR'd 'D7 t.C2' that is not on the board
   and gains its missing C3, C5, IC1, both LDRs, the switches and its four knobs with tapers. OCR still

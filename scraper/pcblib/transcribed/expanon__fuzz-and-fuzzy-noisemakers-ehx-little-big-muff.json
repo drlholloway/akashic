@@ -1,0 +1,32 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-ehx-little-big-muff",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Clean redrawn schematic of the original EHX Little Big Muff, no designators; three gain stages with diode clipping and a switched tone. Transistor and diode types unknown per the drawing.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "33k", "R", "input"],
+  ["×1", "43k", "R", "Q1 base to ground"],
+  ["×3", "470k", "R", "collector-base feedback, one per gain stage"],
+  ["×2", "8.2k", "R", "Q1 collector; stage 3 input"],
+  ["×1", "100", "R", "Q1 emitter"],
+  ["×2", "10k", "R", "stage 2 input; Q2 collector"],
+  ["×4", "100k", "R", "Q2/Q3 base to ground, tone network, Q4 base to ground"],
+  ["×2", "150", "R", "Q2/Q3 emitter"],
+  ["×2", "15k", "R", "Q3 collector; Q4 collector"],
+  ["×1", "39k", "R", "tone network"],
+  ["×1", "22k", "R", "tone network"],
+  ["×1", "430k", "R", "Q4 base bias"],
+  ["×1", "6.8k", "R", "Q4 emitter"],
+  ["×1", "10uF", "C", "input, electrolytic"],
+  ["×3", "560pF", "C", "collector-base, one per gain stage"],
+  ["×4", "0.1uF", "C", "Q1 output, Q2 to Q3 coupling, tone to Q4, Q4 output"],
+  ["×2", "0.1uF", "C", "electrolytic, marked * on drawing: reported to work great at 1.0uF"],
+  ["×1", "0.01uF", "C", "tone network"],
+  ["×1", "0.004uF", "C", "tone network"],
+  ["×1", "470uF", "C", "supply filter"],
+  ["×4", "Diode", "D", "no part number given; drawing suggests 1N914"],
+  ["×4", "?", "Q", "NPN, type unknown; drawing says any high-gain NPN"],
+  ["Volume", "100k", "POT", ""],
+  ["Tone", "SPDT", "SW", "tone switch selecting between two filter taps"]
+ ]
+}

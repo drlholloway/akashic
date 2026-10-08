@@ -1,0 +1,19 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-ehx-muff-fuzz",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Clean redrawn schematic of the EHX Muff Fuzz (4558 version): two op-amp stages with antiparallel clipping diodes in the second stage's feedback. S1 is the DPDT bypass footswitch, skipped; no designators except D1/D2.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "100k", "R", "input resistor"],
+  ["×1", "470k", "R", "feedback, first stage"],
+  ["×1", "10k", "R", ""],
+  ["×2", "680k", "R", "bias divider"],
+  ["×1", ".01uF", "C", "input"],
+  ["×1", ".1uF", "C", "output"],
+  ["×1", "10uF", "C", "electrolytic, bias filter"],
+  ["D1", "Diode", "D", "no part number given; drawing says select to taste"],
+  ["D2", "Diode", "D", "no part number given; drawing says select to taste"],
+  ["×1", "4558", "IC", "dual op amp, both halves used"],
+  ["×1", "A100K", "POT", "output level, drawn 100k Audio; unnamed"]
+ ]
+}

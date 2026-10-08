@@ -1,0 +1,34 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-univox-superfuzz",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Low-resolution GIF of the Unicord/Univox Super Fuzz with voltages and lettered wiring points; no designators. Bypass switch wiring not listed.",
+ "uncertain": [
+  "10k count: low-resolution GIF; resistors counted 7 at 10k, small labels hard to read",
+  "10uF count: 11 electrolytics counted, some labels partly cut"
+ ],
+ "rows": [
+  ["×7", "10k", "R", ""],
+  ["×6", "100k", "R", ""],
+  ["×4", "22k", "R", ""],
+  ["×3", "47k", "R", ""],
+  ["×2", "1k8", "R", ""],
+  ["×2", "470", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×1", "3.3K", "R", ""],
+  ["×1", "220k", "R", ""],
+  ["×1", "150K", "R", ""],
+  ["×1", "15k", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "0.0022uF", "C", ""],
+  ["×11", "10uF", "C", "electrolytic; input cap drawn with 'note polarity'"],
+  ["×2", "0.1uF", "C", "drawn 0.1u"],
+  ["×1", "0.001uF", "C", "drawn 0.001"],
+  ["×1", "100uF", "C", "10V supply filter"],
+  ["×2", "Diode", "D", "no part number given; clipping pair"],
+  ["×6", "?", "Q", "NPN, no part number given (input pair, splitter, differential octave pair, output)"],
+  ["Drive", "50k", "POT", ""],
+  ["Level", "50k", "POT", ""],
+  ["Octave Balance", "B10K", "TRIM", "drawn 10K - Lin"],
+  ["Normal/Notch", "SPDT", "SW", "tone switch"]
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "id": "expanon:phasers-mu-tron-bi-phase-phase-stage",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Simplified Bi-Phase phase stage with LFO and mixer; only one 4-stage channel is drawn, the second is a box 'similar circuit as above but C=15nF'. FET test jig (1K, meter) not listed. Depth rows each cover two pots/switches (qty in note).",
+ "uncertain": [],
+ "rows": [
+  ["×10", "10k", "R", "input; 8 in phase stages; LFO"],
+  ["×7", "22k", "R", "4 FET gate; feedback; depth; mixer"],
+  ["×3", "1k", "R", ""],
+  ["×2", "47k", "R", ""],
+  ["×3", "100k", "R", ""],
+  ["×1", "680k", "R", ""],
+  ["×1", "68k", "R", ""],
+  ["×1", "150k", "R", "LFO"],
+  ["×1", "470k", "R", "LFO"],
+  ["×1", "3M9", "R", "LFO"],
+  ["×1", "1M", "R", "LFO"],
+  ["×2", "0.1uF", "C", "input; supply"],
+  ["×4", "47nF", "C", "phase stage C; second channel uses 15nF (not drawn)"],
+  ["×3", "100pF", "C", ""],
+  ["×2", "0.22uF", "C", ""],
+  ["×1", "1uF", "C", ""],
+  ["×1", "10nF", "C", "LFO"],
+  ["×1", "10uF", "C", "LFO, electrolytic"],
+  ["×4", "BF245A", "Q", "JFETs used as variable resistors; match them"],
+  ["×3", "4558", "IC", "dual op amp; six sections drawn (4 phase stages, input buffer, output mixer)"],
+  ["×1", "741", "IC", "LFO"],
+  ["Depth", "B100K", "POT", "two drawn, one per channel, marked LIN"],
+  ["Speed", "B500K", "POT", "marked LIN"],
+  ["Trim", "250k", "TRIM", "LFO offset"],
+  ["On/Off", "SPST", "SW", "two drawn, one per channel"]
+ ]
+}

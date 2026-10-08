@@ -1,0 +1,18 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-mosrite-feedrite",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Redrawn Mosrite Fuzz-Rite with an added feedback loop (Feed-Rite); values but no designators, so listed by quantity.",
+ "uncertain": [
+  "SW: which of the two switches is the footswitch is inferred from the wiring; the 3-lug switch may be SPDT or the second pole is simply not drawn"
+ ],
+ "rows": [
+  ["×4", "470k", "R", "two collector loads, two base feedback resistors"],
+  ["×2", ".047uF", "C", "input coupling and feedback from Q1 collector to Q2 base"],
+  ["×2", ".0022uF", "C", "either side of the 470k lin blend pot"],
+  ["×2", "BC184C", "Q", "NPN"],
+  ["×1", "B470k", "POT", "drawn '470k lin.', unnamed; blends the two collector outputs (the Fuzz-Rite depth control)"],
+  ["×1", "A100k", "POT", "drawn '100k audio', unnamed; output volume"],
+  ["×1", "A500k", "POT", "drawn '500k audio', unnamed; feedback loop amount"],
+  ["×1", "SPDT", "SW", "toggle in the feedback loop wiring; the DPDT beside it is the bypass footswitch and is skipped"]
+ ]
+}

@@ -1,0 +1,25 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-vox-wah-v847",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Justin Philpott 1997 drawing of the Vox V847 wah, no designators; bold values mark differences from the Crybaby.",
+ "uncertain": [
+  "L: drawing itself says '? Inductor ? maybe 660mH'"
+ ],
+ "rows": [
+  ["×1", "68k", "R", "input resistor"],
+  ["×1", "22k", "R", "Q1 collector"],
+  ["×2", "470k", "R", "Q1 collector-base feedback and inductor feed"],
+  ["×1", "510", "R", "Q1 emitter; bold on drawing, differs from Crybaby"],
+  ["×1", "1k5", "R", "Q1 base to inductor bottom"],
+  ["×1", "33k", "R", "inductor network"],
+  ["×1", "100k", "R", "parallel with 4u7 to ground; bold on drawing, differs from Crybaby"],
+  ["×1", "1k", "R", "Q2 collector"],
+  ["×1", "10k", "R", "Q2 emitter"],
+  ["×2", ".01uF", "C", "input coupling and Q2 emitter feedback"],
+  ["×2", "0.22uF", "C", "to and from wah pot; bold on drawing, differ from Crybaby"],
+  ["×1", "4u7", "C", "electrolytic"],
+  ["×2", "MPS-A18", "Q", ""],
+  ["×1", "660mH", "L", "drawn '? Inductor ? maybe 660mH'"],
+  ["Wah", "100k", "POT", "labelled 100k \"Hot Potz\""]
+ ]
+}

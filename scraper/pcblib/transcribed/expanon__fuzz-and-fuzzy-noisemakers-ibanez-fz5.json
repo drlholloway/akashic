@@ -1,0 +1,38 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-ibanez-fz5",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Ibanez FZ5 traced schematic with no designators, no transistor types and no pot values; parts listed by value with quantities. The two 10uF electrolytics are listed separately by function.",
+ "uncertain": [
+  "Pots: no values or names on the drawing",
+  "Q: transistor types not given"
+ ],
+ "rows": [
+  ["×7", "10k", "R", ""],
+  ["×8", "510k", "R", "bias resistors to the Vr reference rail, FET switch gates and buffer bases"],
+  ["×1", "1k", "R", ""],
+  ["×3", "33k", "R", ""],
+  ["×3", "470k", "R", ""],
+  ["×5", "100k", "R", ""],
+  ["×2", "15k", "R", ""],
+  ["×3", "100", "R", "emitter resistors, ohms"],
+  ["×1", "820", "R", "ohms"],
+  ["×2", "8.2k", "R", ""],
+  ["×1", "470", "R", "ohms, output series"],
+  ["×1", "0.047uF", "C", ""],
+  ["×1", "10uF", "C", "Vr rail decoupling"],
+  ["×1", "47uF", "C", "Vr divider decoupling"],
+  ["×1", "10uF", "C", "output coupling"],
+  ["×6", "1uF", "C", ""],
+  ["×6", "0.1uF", "C", "drawn 0.1u or 0.1uF"],
+  ["×3", "470pF", "C", ""],
+  ["×1", "0.005uF", "C", ""],
+  ["×1", "0.01uF", "C", ""],
+  ["×1", "0.0022uF", "C", ""],
+  ["×4", "Diode", "D", "no part number given; two anti-parallel clipping pairs"],
+  ["×5", "?", "Q", "NPN bipolar, no part number given (input buffer, three gain stages, output buffer)"],
+  ["×4", "?", "Q", "JFET, no part number given; three as bypass switches, one as a source follower"],
+  ["×1", "?", "POT", "no value or name; gain-stage pot with 820 ohm to ground (likely Fuzz)"],
+  ["×1", "?", "POT", "no value or name; between the two 33k resistors (likely Tone)"],
+  ["×1", "?", "POT", "no value or name; after the JFET follower (likely Level)"]
+ ]
+}

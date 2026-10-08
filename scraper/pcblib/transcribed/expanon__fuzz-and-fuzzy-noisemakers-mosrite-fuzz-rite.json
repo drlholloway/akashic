@@ -1,0 +1,14 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-mosrite-fuzz-rite",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Simple redrawn Mosrite Fuzz-Rite, two TZ82 stages, no designators or knob names; the DPDT bypass shown is the footswitch.",
+ "uncertain": [],
+ "rows": [
+  ["×4", "470k", "R", "two collector loads, two collector-base feedback"],
+  ["×2", ".05uF", "C", "input coupling; Q1 collector to Q2 output mix"],
+  ["×2", ".002uF", "C", "around the 350k pot"],
+  ["×2", "TZ82", "Q", "NPN"],
+  ["×1", "350k", "POT", "unnamed; mixes the two stages (fuzz/depth)"],
+  ["×1", "33k", "POT", "unnamed; output level (volume)"]
+ ]
+}

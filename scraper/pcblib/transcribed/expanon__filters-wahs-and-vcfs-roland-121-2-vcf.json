@@ -1,0 +1,9 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-roland-121-2-vcf",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Roland System 100M M-121 dual VCF service schematic, but the cached image is only 829x584 px for a sheet of roughly 200 parts: designators and values are smeared beyond reliable reading, so nothing is transcribed. A higher-resolution scan is needed.",
+ "uncertain": [],
+ "rows": [
+
+ ]
+}

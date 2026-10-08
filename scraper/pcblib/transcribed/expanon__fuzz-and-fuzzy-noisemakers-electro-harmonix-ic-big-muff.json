@@ -1,0 +1,42 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-electro-harmonix-ic-big-muff",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Clean drawn schematic of an op-amp (4558 + 741) Big Muff with no designators; parts listed by quantity. The On/Off switch is the bypass footswitch and is skipped.",
+ "uncertain": [
+  "6.8k tone resistor: drawn small, reads 6.6k or 6.8k"
+ ],
+ "rows": [
+  ["×1", "56k", "R", "input"],
+  ["×1", "330k", "R", "U1A feedback"],
+  ["×2", "220k", "R", "bias divider"],
+  ["×5", "47k", "R", "one in the 4558 input filter, one in series with Fuzz, two in the 741 output divider, one output pulldown"],
+  ["×1", "10k", "R", ""],
+  ["×1", "560k", "R", "second 4558 stage feedback"],
+  ["×1", "62k", "R", ""],
+  ["×1", "82k", "R", "741 input"],
+  ["×1", "470k", "R", "741 feedback"],
+  ["×1", "820k", "R", "741 bias"],
+  ["×1", "1M", "R", "741 bias"],
+  ["×1", "6.8k", "R", "tone; drawn like 6.6k"],
+  ["×1", "1.2k", "R", "tone"],
+  ["×1", "100k", "R", "output pulldown"],
+  ["×1", ".068uF", "C", "input"],
+  ["×1", "220uF", "C", "electrolytic, supply"],
+  ["×3", "1uF", "C", "electrolytic: bias bypass, coupling to 741, tone"],
+  ["×1", ".0047uF", "C", "second stage feedback"],
+  ["×1", ".01uF", "C", "filter to ground"],
+  ["×1", "10uF", "C", "electrolytic"],
+  ["×1", "150pF", "C", "741 feedback"],
+  ["×2", "0.22uF", "C", "741 output coupling and bias bypass"],
+  ["×1", "0.1uF", "C", "tone"],
+  ["×1", "0.12uF", "C", "tone"],
+  ["×1", "4.7uF", "C", "electrolytic, output"],
+  ["×6", "1N4148", "D", "two antiparallel strings of three in the 741 feedback"],
+  ["×1", "4558", "IC", "dual op amp, both sections used"],
+  ["×1", "741", "IC", ""],
+  ["Fuzz", "10k", "POT", ""],
+  ["Tone", "10k", "POT", ""],
+  ["Volume", "25k", "POT", ""],
+  ["Tone Bypass", "SPDT", "SW", "selects tone stack or bypass"]
+ ]
+}

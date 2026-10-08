@@ -1,0 +1,30 @@
+{
+ "id": "expanon:phasers-jen-hf-modulator",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Clean redrawn schematic (CJLectronics, rev 1.1 2005) of the Jen HF Modulator: one-transistor stage with a phase-shift LFO modulating a transistor shunt. No designators; parts listed by quantity.",
+ "uncertain": [
+  "input variable resistor: no value drawn beside it; the '33k' label sits between it and a fixed 33k to ground"
+ ],
+ "rows": [
+  ["×2", "33k", "R", "one input to ground, one in parallel with the 0.01uF from the input pot to ground"],
+  ["×1", "560k", "R", "Q1 base bias"],
+  ["×2", "100k", "R", "one from Q1 emitter, one across the Speed pot"],
+  ["×1", "12k", "R", "Q1 collector"],
+  ["×1", "1.2k", "R", "Q1 emitter"],
+  ["×1", "220k", "R", "Intensity wiper to oscillator"],
+  ["×1", "18k", "R", "oscillator collector"],
+  ["×1", "2.2M", "R", "oscillator bias"],
+  ["×1", "10k", "R", ""],
+  ["×1", "2.2k", "R", "in series with Speed pot"],
+  ["×1", "3300pF", "C", "input"],
+  ["×1", "0.01uF", "C", ""],
+  ["×3", "0.22uF", "C", ""],
+  ["×2", "0.0022uF", "C", ""],
+  ["×1", "0.1uF", "C", "across the modulating transistor"],
+  ["×3", "0.047uF", "C", "phase-shift oscillator"],
+  ["×3", "2N5172", "Q", "NPN: input stage, modulating transistor, phase-shift oscillator"],
+  ["Intensity", "100k", "POT", ""],
+  ["Speed", "100k", "POT", ""],
+  ["×1", "?", "POT", "input-side variable resistor with no value of its own; the nearby 33k label may belong to it"]
+ ]
+}

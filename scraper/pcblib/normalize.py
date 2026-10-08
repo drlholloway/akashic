@@ -275,6 +275,8 @@ def normalize_row(row: BomRow) -> BomRow:
     if row.category == "R" or row.category == "TRIM":
         raw = re.sub(r"^(\d+(?:[.,]\d+)?)m$", r"\1M", raw)  # "1m" on a resistor means 1 megohm, never milliohm
         raw = re.sub(r"^(\d+)m(\d+)$", r"\1M\2", raw)  # and "2m2" is 2.2 megohms
+        if row.category == "TRIM":
+            raw = re.sub(r"^[ABCW](?=\d)|(?<=[kKM])[ABCW]$", "", raw)  # 'B150K', '10KB': a trimmer's taper letter
         if row.category == "R":
             coded = _resistor_code(raw)
             if coded != raw:

@@ -1,0 +1,26 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-ibanez-standard-wau-fuzz",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Redrawn fuzz section only of the Ibanez Standard Wau Fuzz (2003 redraw, rev. 2), no designators; the wah section is not shown.",
+ "uncertain": [],
+ "rows": [
+  ["×6", "10K", "R", ""],
+  ["×5", "100K", "R", ""],
+  ["×3", "1K", "R", ""],
+  ["×2", "150K", "R", ""],
+  ["×3", "22K", "R", ""],
+  ["×1", "3K", "R", "JFET source"],
+  ["×1", "510K", "R", ""],
+  ["×1", "1.5K", "R", "long-tailed pair emitters"],
+  ["×1", "15K", "R", "output stage bias"],
+  ["×11", "10uF", "C", "electrolytic"],
+  ["×1", ".0033uF", "C", "tone"],
+  ["×1", ".022uF", "C", "tone"],
+  ["×1", "0.1uF", "C", "tone, switched in by Tone Sw."],
+  ["×2", "Diode", "D", "germanium, no part number given"],
+  ["×1", "2SK30A", "Q", "JFET input buffer"],
+  ["×4", "2SC828", "Q", ""],
+  ["×2", "B100K", "POT", "unnamed, drawn 100KB"],
+  ["Tone", "SPST", "SW", "Tone Sw. adds the 0.1 cap"]
+ ]
+}

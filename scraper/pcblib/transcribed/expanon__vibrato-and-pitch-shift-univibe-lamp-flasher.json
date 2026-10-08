@@ -1,0 +1,27 @@
+{
+ "id": "expanon:vibrato-and-pitch-shift-univibe-lamp-flasher",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Bob Starr's Uni-Vibe lamp flasher: an XR2206 LFO driving a 6V incandescent lamp through a 2N2222/2N3568 pair, with Speed, Depth and lamp bias controls. Drawing is a clean small GIF/BMP; no designators.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "10", "R", "lamp driver collector"],
+  ["×1", "200", "R", "XR2206 pins 13-14 (sine shaping)"],
+  ["×1", "470", "R", "rate LED"],
+  ["×3", "1k", "R", "timing (pin 7), depth divider, driver emitter"],
+  ["×2", "5.1k", "R", "bias divider"],
+  ["×1", "10k", "R", "pin 11 pull-up"],
+  ["×1", "47k", "R", "lamp bias"],
+  ["×1", "57k", "R", "pin 3"],
+  ["×2", "1uF", "C", "electrolytic; supply bypass and pin 10"],
+  ["×1", "10uF", "C", "electrolytic, bias filter"],
+  ["×1", "33uF", "C", "electrolytic, timing capacitor pins 5-6"],
+  ["Rate Ind", "LED", "LED", "rate indicator"],
+  ["×2", "2N2222", "Q", "NPN; LED driver and lamp driver"],
+  ["×1", "2N3568", "Q", "NPN, lamp driver"],
+  ["×1", "XR2206", "IC", "Exar 2206 function generator"],
+  ["Speed", "B100K", "POT", "drawn 100k Lin, rheostat"],
+  ["Depth", "20k", "POT", ""],
+  ["Lamp Bias Adj", "100k", "TRIM", "drawn as a rheostat labeled 'Lamp Bias Adj'; could be a panel pot"],
+  ["×1", "6V .025A lamp", "OTHER", "incandescent lamp, Radio Shack 272-1140"]
+ ]
+}

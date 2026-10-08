@@ -1,0 +1,42 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-shin-ei-fuzz-wah",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Scanned Japanese factory schematic of the Shin-ei 8-transistor Fuzz Wah (8 x 2SC828); no designators, parts listed by quantity. The 6P push switch is the effect selector footswitch and is skipped; pots are not named on the drawing.",
+ "uncertain": [
+  "input cap: blotted, reads 10uF or 30uF",
+  "1.8K: drawn like 1.9K, could be 1.5K or 1.8K",
+  "22K at wah transistor base: could be 27K",
+  "100K at input transistor base may be a trimmer (arrow-like mark)"
+ ],
+ "rows": [
+  ["×1", "47K~100K", "R", "input bias, select on test (drawn '47K~100K')"],
+  ["×8", "100K", "R", "one at the input transistor base may be drawn as a trimmer"],
+  ["×3", "47K", "R", "one across the second transistor with 0.001uF, one in series with 10uF, one in the filter"],
+  ["×3", "470K", "R", ""],
+  ["×7", "10K", "R", ""],
+  ["×5", "22K", "R", "the one at the wah transistor base reads 22K or 27K"],
+  ["×3", "470", "R", "470 ohm"],
+  ["×1", "1.8K", "R", "input transistor emitter; drawn like 1.9K"],
+  ["×1", "18K", "R", ""],
+  ["×1", "220K", "R", ""],
+  ["×1", "150K", "R", ""],
+  ["×1", "2K", "R", "emitter, bypassed by 10uF"],
+  ["×1", "15K", "R", "output stage bias"],
+  ["×1", "1K", "R", "output stage emitter"],
+  ["×1", "1.5K", "R", "below the choke"],
+  ["×1", "?", "C", "input cap, blotted: reads 10uF or 30uF"],
+  ["×11", "10uF", "C", ""],
+  ["×2", "0.1uF", "C", ""],
+  ["×2", "0.001uF", "C", ""],
+  ["×1", "0.01uF", "C", ""],
+  ["×1", "0.03uF", "C", ""],
+  ["×2", "0.2uF", "C", "wah outputs to the 50K pot"],
+  ["×2", "Diode", "D", "no part number given; shunt clippers to ground"],
+  ["×8", "2SC828", "Q", "NPN; drawing says 'Tr-2SC828 x8'"],
+  ["CH", "?", "L", "wah choke, no value given"],
+  ["×1", "50K-B", "POT", "fuzz section pot (wired as variable resistor to a 10uF)"],
+  ["×1", "50K-B", "POT", "pot before the output transistor"],
+  ["×1", "50K-B", "POT", "wah section pot between the two 0.2uF outputs"],
+  ["S SW", "SPDT", "SW", "tone/filter select"]
+ ]
+}

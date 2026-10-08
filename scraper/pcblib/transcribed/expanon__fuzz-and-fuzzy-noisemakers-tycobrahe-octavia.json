@@ -1,0 +1,33 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-tycobrahe-octavia",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Tycobrahe Octavia drawn by Justin Philpott (10-97), positive-ground battery; no designators, parts listed by value.",
+ "uncertain": [
+  "Transformer: rating text '200 400mW' unclear, likely a small 200-ohm-class audio transformer"
+ ],
+ "rows": [
+  ["×1", "180k", "R", ""],
+  ["×1", "820k", "R", ""],
+  ["×1", "680k", "R", ""],
+  ["×1", "220k", "R", ""],
+  ["×1", "220", "R", "ohms"],
+  ["×1", "1k", "R", ""],
+  ["×1", "47k", "R", ""],
+  ["×1", "1k2", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×1", "470", "R", "ohms"],
+  ["×1", "0.1uF", "C", "input"],
+  ["×1", "150pF", "C", ""],
+  ["×1", "33uF", "C", "electrolytic, bias filter"],
+  ["×1", "25uF", "C", "electrolytic"],
+  ["×1", ".001uF", "C", ""],
+  ["×1", "33uF", "C", "electrolytic, output coupling to transformer"],
+  ["×1", "220uF", "C", "electrolytic, emitter bypass"],
+  ["×2", "1N34A", "D", "germanium rectifier pair"],
+  ["×1", "MPS-A18", "Q", ""],
+  ["×2", "2N3906", "Q", ""],
+  ["Intensity", "1k", "POT", ""],
+  ["Volume", "A500k", "POT", "drawn 500k LOG"],
+  ["×1", "200:400mW", "OTHER", "coupling transformer, impedance ratio 3:1, centre-tapped secondary; drawn \"200 400mW\""]
+ ]
+}

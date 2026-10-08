@@ -1,0 +1,20 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-crybaby-fuzz-wah-fuzz",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Hand-drawn two-transistor fuzz from the Cry-Baby Stereo Fuzz-Wah 9-3701; no designators, all values legible.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "270", "R", "supply dropping resistor"],
+  ["×1", "18K", "R", "Q1 collector"],
+  ["×1", "10K", "R", "Q2 collector"],
+  ["×1", "47K", "R", "output pulldown"],
+  ["×1", "68K", "R", "feedback bias, Q2 emitter to Q1 base"],
+  ["×1", "2K7", "R", "Q2 emitter"],
+  ["×2", "0.1uF", "C", "input and output coupling; drawn 0.1"],
+  ["×1", "18pF", "C", "Q1 collector-base"],
+  ["×1", "10uF", "C", "in series with Sustain pot to ground"],
+  ["×2", "5117", "Q", "silicon NPN, marked 5117"],
+  ["Volume", "B50K", "POT", "drawn 50K lin"],
+  ["Sustain", "B50K", "POT", "drawn 50K lin, variable resistor in Q2 emitter bypass"]
+ ]
+}

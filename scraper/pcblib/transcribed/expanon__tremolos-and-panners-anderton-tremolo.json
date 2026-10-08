@@ -1,0 +1,27 @@
+{
+ "id": "expanon:tremolos-and-panners-anderton-tremolo",
+ "read": "2026-10-08, by eye from the cached schematic image",
+ "comment": "Craig Anderton tremolo redraw: CD4049 LFO driving a CLM6000 opto in a 4739 op amp stage, bipolar +/-9 V supply, no designators.",
+ "uncertain": [
+  "100uF supply cap: a wire crosses the label; label width suggests 100uF rather than 10uF"
+ ],
+ "rows": [
+  ["×2", "2k2", "R", ""],
+  ["×1", "470k", "R", "LFO"],
+  ["×1", "1M", "R", "LFO"],
+  ["×2", "1k", "R", ""],
+  ["×2", "100k", "R", ""],
+  ["×2", "4k7", "R", ""],
+  ["×4", "10uF", "C", "electrolytic"],
+  ["×1", "100uF", "C", "electrolytic, supply filter"],
+  ["×1", ".22uF", "C", "input"],
+  ["×2", "1N4001", "D", ""],
+  ["×1", "4739", "IC", "dual op amp, both sections; drawing allows 5532 or 4558"],
+  ["×1", "CD4049", "IC", "hex inverter LFO"],
+  ["×1", "CLM6000", "OPTO", "LED/LDR opto with internal LED, drawn with a diode across it"],
+  ["Frequency", "50k", "POT", "no taper given"],
+  ["Depth", "25k", "POT", "no taper given"],
+  ["×1", "10k", "POT", "output level, unnamed"],
+  ["Wave", "SPDT", "SW", "Triangle/Square"]
+ ]
+}
