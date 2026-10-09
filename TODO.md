@@ -126,7 +126,7 @@ equivalent goes in `transistors._ALIASES`.
 
 ## Datasheets
 
-Counts from `pcblib datasheets` as of October 9, 2026: 549 of 1,176 part numbers link a datasheet. Every
+Counts from `pcblib datasheets` as of October 9, 2026: 562 of 1,176 part numbers link a datasheet. Every
 current part used more than once was searched by hand in early October (`"<part> datasheet pdf"`, maker's
 own site only); the counts below are since then.
 
@@ -140,12 +140,16 @@ own site only); the counts below are since then.
   <- CD4011, MMBF201 <- J201, UPC4558C <- 4558), and a grade of a discontinued part links its hosted
   sheet as soon as that sheet is downloaded.
   - **No sheet to find**: generic LDRs (GL5516, GL5537-1, KE-10720, LDR1, Morley's M79-211564-000), house
-    numbers (Maestro P-2356, DOD RCY568, TI592, A02650, Boss FD24006BP, the Korg 35 module), the CEM3310
+    numbers (Maestro P-2356, DOD RCY568, TI592, A02650, Boss FD24006BP, the Korg 35 module, EHX 1048), the CEM3310
     and CEM3360 (Alfa reissues with no sheet on Alfa's site), zener voltages off the E24 series (9V, 5V3)
     and odd diode marks (51E, ZL9M3, GL32AR).
-  - **To search**: the Belton BTDR-2/3 reverb bricks, Spin's FV-1, 4559, 3403 and 4136 (bare op-amp
-    numbers), the LM319 comparator, 7912/7915, 2159, 2764, 1048, TIS92/TIS97, the Russian D9B/D9E/D9K
-    diodes; NTE103 (replacement-house spec sheet, not checked); the 2N3965 (only a Central selector row).
+  - **Searched October 9**: Belton's own BTDR-2/2H and BTDR-3/3H sheets, Spin's FV-1, TI's MC3403,
+    RC4559, RC4136, LM319-N and LM79 (7912, 7915) are linked. The TIS92/TIS97 (TI, not on TIS93's sheet)
+    and the Soviet D9 family (D9B, D9E, D9K, D9V) joined the discontinued list. No sheet: the THAT 2159
+    (THAT's 2150-series sheet names only the 2150, 2150A, 2151 and 2155), EHX's 1048 (a house number)
+    and the 2764 (a programmed EPROM). NTE's own NTE102/NTE103 sheet is served from the site
+    (nteinc.com refuses scripts, so it cannot be linked or checked). Still open: the 2N3965 (Central
+    lists the part but publishes no PDF).
   - 2N5008 (RWL Whippoorwill, Dunwich Cthulhu) and NP4124 (DOD 280) are printed that way in their
     sources and are not misreads. The other 398 are used once; not yet searched.
 - **Panasonic BBDs**: MN3204 and MN3001 have no maker copy online. The others link to the copies

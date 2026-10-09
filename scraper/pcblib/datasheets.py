@@ -27,6 +27,7 @@ FINDCHIPS = "https://www.findchips.com/search/{}"
 # THAT2181) gets the maker's link instead.
 DISCONTINUED: dict[str, list[str]] = {
     # diodes
+    "D9": ["D9B", "D9E", "D9K", "D9V"],  # the Soviet D9 germanium family: one sheet lists every letter
     "1N34A": ["1N34A"], "1N270": ["1N270"], "1N60P": ["1N60P"], "1N100": ["1N100"], "1N695": ["1N695"],
     "OA90": ["OA90"], "AA112": ["AA112"], "AA119": ["AA119"], "BA282": ["BA282"], "BA482": ["BA482"],
     "1S1588": ["1S1588", "IS1588"], "1S2473": ["1S2473"], "MA150": ["MA150"], "MA856": ["MA856", "MA2C856"],
@@ -65,7 +66,10 @@ DISCONTINUED: dict[str, list[str]] = {
     "BC184": ["BC182", "BC182L", "BC182B", "BC183", "BC183A", "BC183B", "BC184", "BC184C", "BC183C", "BC183L"],
     "BC264": ["BC264D", "BC264A"], "2N3565": ["2N3565"], "2N3392": ["2N3391", "2N3391A", "2N3392", "2N3393"],
     "2N4124": ["2N4124"], "2N4125": ["2N4125"], "2N5133": ["2N5133"], "2N5172": ["2N5172"], "2N5306": ["2N5306"],
-    "2N5308": ["2N5308"], "2N2646": ["2N2646"], "TIS93": ["TIS93"], "2N404A": ["2N404A"], "2N1302": ["2N1302"],
+    "2N5308": ["2N5308"], "2N2646": ["2N2646"], "TIS93": ["TIS93"], "TIS92": ["TIS92"], "TIS97": ["TIS97"],
+    # NTE still sells the NTE103, but nteinc.com refuses scripts and its spec sheets cannot be linked or
+    # checked, so NTE's own NTE102/NTE103 sheet is served (supplied by Lane, 2026-10-09).
+    "NTE103": ["NTE103", "NTE102"], "2N404A": ["2N404A"], "2N1302": ["2N1302"],
     "2N1304": ["2N1304"], "2N1306": ["2N1306"], "2N1308": ["2N1308"], "AC127": ["AC127"], "AC128": ["AC128"],
     "AC176": ["AC176"], "AC187": ["AC187"], "2N404": ["2N404"], "OC44": ["OC44"], "OC71": ["OC71"], "OC75": ["OC75"],
     "OC76": ["OC76"], "OC79": ["OC79"], "OC139": ["OC139"], "OC140": ["OC140"], "OA91": ["OA91"], "OA200": ["OA200"],
@@ -248,7 +252,7 @@ def has_own(part: str) -> bool:
 
 
 # Pages to keep (1-based) where an archive copy runs on into the next sheet of a scanned data book.
-PAGES: dict[str, range] = {"LM308": range(1, 5), "2SD352": range(4, 7)}
+PAGES: dict[str, range] = {"LM308": range(1, 5), "2SD352": range(4, 7), "NTE103": range(1, 3)}
 _AD = re.compile(r"findchips\.com|datasheetarchive|alldatasheet|datasheetcatalog|datasheet4u|icminer", re.I)
 
 TI = "https://www.ti.com/lit/ds/symlink/{}.pdf"
@@ -427,7 +431,7 @@ def host(src: Path, sheet: str, others=(), force: bool = False) -> tuple[Path | 
     other = 0
     # Trailing pages with a text layer that never name the part: a publisher's legal page, the next
     # sheet of a data book. Scans are left alone, as OCR can miss the name on a page of graphs.
-    while not force and len(keep) > 1 and _has_text(doc[keep[-1]]) and not _names_in(text[keep[-1]], names):
+    while not force and sheet not in PAGES and len(keep) > 1 and _has_text(doc[keep[-1]]) and not _names_in(text[keep[-1]], names):  # PAGES already chose them
         keep.pop()
         other += 1
     doc.select(keep)
