@@ -19,7 +19,7 @@ from datetime import date, timedelta
 from . import db as dbm
 from .datasheets import all_sheets, is_selector, table as datasheet_table
 from .originals import harmonize, original
-from .normalize import catalog_category, catalog_keys, ic_name
+from .normalize import catalog_category, catalog_keys, ic_name, zener_choices
 from .paths import EXPORT_DIR, owner_schematic
 
 
@@ -154,6 +154,7 @@ def run(images: bool = False) -> None:
         ({**p, "circuits": sorted(p["circuits"]), "datasheet": sheets.get(p["key"], ""), "selector": is_selector(sheets.get(p["key"], "http")),
           "datasheets": all_sheets(p["value"], sheets.get(p["key"], "")), "types": [t for t, _ in sorted(p["types"].items(), key=lambda kv: (-kv[1], kv[0]))][:5],
           "count": len(p["circuits"]),
+          **({"zeners": z} if p["category"] == "D" and (z := zener_choices(p["value"])) else {}),
           "slug": re.sub(r"[^a-z0-9.]+", "-", p["key"].lower())} for p in parts.values()),
         key=lambda p: (-p["count"], p["key"]))
     # dedupe part slugs (different keys can collapse to one slug)

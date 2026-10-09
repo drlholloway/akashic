@@ -68,6 +68,7 @@ export interface PartEntry {
 	selector?: boolean;
 	/** Every sheet for the part, first its own: a discontinued part made by several fabs has one per maker. */
 	datasheets?: { href: string; maker: string; selector: boolean }[];
+	zeners?: { pn: string; series: string; power: string; package: string; datasheet: string }[];
 	count: number;
 	slug: string;
 }

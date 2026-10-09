@@ -86,6 +86,27 @@
 			</div>
 		</section>
 	{/if}
+	{#if data.part.zeners?.length}
+		<section class="subs">
+			<h2 class="label strong">Zeners for {data.part.value.replace('V', '.').replace(/\.$/, '')} V</h2>
+			<p class="note">The parts list gives only the voltage, so any zener of that voltage fits. A 500 mW part in DO-35 suits clipping and most pedal uses; the 1 W and 1.3 W parts are larger (DO-41) and only needed where the zener carries real current, such as clamping a supply rail. Check the spacing on the board before ordering the bigger body.</p>
+			<div class="scroll"><table class="sheet-table subs-table">
+				<thead><tr><th>Part</th><th>Series</th><th>Power</th><th>Package</th><th class="num">Boards</th><th>Datasheet</th></tr></thead>
+				<tbody>
+					{#each data.part.zeners as z}
+						<tr>
+							<td class="mono">{#if data.zeners[z.pn]?.slug}<a href="{base}/parts/{data.zeners[z.pn].slug}">{z.pn}</a>{:else}{z.pn}{/if}</td>
+							<td class="mono">{z.series}</td>
+							<td class="mono">{z.power}</td>
+							<td class="mono">{z.package}</td>
+							<td class="mono num">{data.zeners[z.pn]?.boards || ''}</td>
+							<td><a href={z.datasheet} target="_blank" rel="noopener">{new URL(z.datasheet).hostname.replace(/^(www|my|assets)\./, '')}</a></td>
+						</tr>
+					{/each}
+				</tbody>
+			</table></div>
+		</section>
+	{/if}
 	<CircuitTable rows={data.rows} />
 </div>
 
@@ -102,4 +123,5 @@
 	.subs-grid h3 { margin: 0 0 6px; }
 	.subs-table td.num, .subs-table th.num { text-align: right; }
 	.subs-table { width: 100%; }
+	.scroll { overflow-x: auto; }
 </style>

@@ -211,6 +211,44 @@ _ZENER_SERIES: dict[str, float] = {
 }
 
 
+_E24_ZENER = [2.4, 2.7, 3.0, 3.3, 3.6, 3.9, 4.3, 4.7, 5.1, 5.6, 6.2, 6.8, 7.5, 8.2, 9.1, 10, 11, 12, 13, 15, 16, 18, 20, 22,
+               24, 27, 30, 33, 36, 39, 43, 47, 51, 56, 62, 68, 75]
+# Zener series a builder can buy for a voltage-only part: (series, how its parts are numbered, power, package,
+# lowest voltage, the maker's series datasheet). Through-hole first, most common first.
+_ZENER_CHOICES = [
+    ("1N52xxB", "1N5221", "500 mW", "DO-35", "https://www.vishay.com/docs/85588/1n5221.pdf"),
+    ("BZX55", "BZX55C", "500 mW", "DO-35", "https://www.vishay.com/docs/85604/bzx55.pdf"),
+    ("BZX79", "BZX79C", "500 mW", "DO-35", "https://assets.nexperia.com/documents/data-sheet/BZX79_SER.pdf"),
+    ("1N7xxA", "1N746", "500 mW", "DO-35", "https://my.centralsemi.com/datasheets/1N746A-759A.PDF"),
+    ("1N47xxA", "1N4728", "1 W", "DO-41", "https://www.vishay.com/docs/85816/1n4728a.pdf"),
+    ("BZX85", "BZX85C", "1.3 W", "DO-41", "https://www.vishay.com/docs/85607/bzx85.pdf"),
+]
+_BZX_LOW = {"BZX55C": 2.4, "BZX79C": 2.4, "BZX85C": 3.3}
+
+
+def zener_choices(voltage: str) -> list[dict]:
+    """Stock zeners for a part given only by its voltage ('9V1' -> 1N5239B, BZX55C9V1, BZX79C9V1, 1N757A,
+    1N4739A, BZX85C9V1), each with its series, power, package and the maker's series datasheet."""
+    m = re.fullmatch(r"(\d{1,2})V(\d)?", voltage)
+    if not m:
+        return []
+    v = int(m.group(1)) + int(m.group(2) or 0) / 10
+    out = []
+    for series, prefix, power, pkg, sheet in _ZENER_CHOICES:
+        if prefix.startswith("BZX"):
+            if v not in _E24_ZENER or v < _BZX_LOW[prefix]:
+                continue
+            pn = prefix + (f"{int(v)}V{round(v % 1 * 10)}" if v % 1 or v < 10 else f"{int(v)}")
+        else:
+            start = int(prefix[2:])
+            num = next((n for n, z in _ZENER_SERIES.items() if z == v and start <= n < start + 40), None)
+            if num is None:
+                continue
+            pn = f"1N{num}" + ("B" if series == "1N52xxB" else "A")
+        out.append({"pn": pn, "series": series, "power": power, "package": pkg, "datasheet": sheet})
+    return out
+
+
 def zener_of_part(part: str) -> str:
     """The voltage of a zener part number, in the standard form ('1N4739A' -> '9V1', 'BZX79C9V1' -> '9V1',
     'BZX55C12' -> '12V'), or '' for anything that is not one."""
