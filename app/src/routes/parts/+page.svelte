@@ -6,7 +6,7 @@
 	let q = $state('');
 	const filtered = $derived.by(() => {
 		const t = q.trim().toLowerCase();
-		return t ? data.parts.filter((p) => p.value.toLowerCase().includes(t) || p.types.some((x) => x.toLowerCase().includes(t))) : data.parts;
+		return t ? data.parts.filter((p) => p.value.toLowerCase().includes(t) || p.types.some((x) => x.toLowerCase().includes(t)) || (p.desc ?? '').toLowerCase().includes(t)) : data.parts;
 	});
 	// Alphabetical within each category, numbers compared as numbers: A10k before A100k, 2N3904 before 2N5088.
 	const byValue = new Intl.Collator('en', { numeric: true, sensitivity: 'base' });
@@ -59,7 +59,7 @@
 						{#each sub.items as p}
 							<li>
 								<a href="{base}/parts/{p.slug}"><span class="mono val">{p.value}</span><span class="mono n">{p.count}</span></a>
-								{#if p.types[0]}<span class="type">{p.types[0]}</span>{/if}
+								{#if p.desc ?? p.types[0]}<span class="type">{p.desc ?? p.types[0]}</span>{/if}
 							</li>
 						{/each}
 					</ul>
@@ -69,7 +69,7 @@
 					{#each g.items as p}
 						<li>
 							<a href="{base}/parts/{p.slug}"><span class="mono val">{p.value}</span><span class="mono n">{p.count}</span></a>
-							{#if p.types[0]}<span class="type">{p.types[0]}</span>{/if}
+							{#if p.desc ?? p.types[0]}<span class="type">{p.desc ?? p.types[0]}</span>{/if}
 						</li>
 					{/each}
 				</ul>

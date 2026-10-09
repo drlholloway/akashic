@@ -307,3 +307,74 @@ def substitutes(conn: sqlite3.Connection, spec: dict, popularity: dict[str, int]
     closest = sorted(familiar if len(familiar) >= 3 else rest, key=lambda v: (v[1], v[3]["partnum"]))
     return {"used": [row(d, pop, c) for _, d, pop, c in used[:limit]],
             "closest": [row(d, pop, c) for _, d, pop, c in closest[:limit]]}
+
+
+# --- short description: material, polarity, kind, package, mounting --------------------------------
+# The package a part number is registered in (JEDEC, Pro Electron, JIS), not the footprint a vendor's
+# board offers: an MMBF5457 is SOT-23 even on a board laid out for TO-92. A part made in both the metal
+# can and plastic (2N2222A) lists both. Only families whose package is certain are listed; anything
+# else is described without one rather than guessed.
+_PACKAGES: list[tuple[re.Pattern, str]] = [(re.compile(rx), pkg) for rx, pkg in [
+    (r"^(?:MMBT|MMBF|SMMBT|PMBT|PMBF|FMMT|LMBT|KST|SST|BSS)\w*\d", "SOT-23"),
+    (r"^(?:BC8[4-6]\d|BF5[45]\d|2N7002|2SK20[89])", "SOT-23"),
+    (r"^(?:TIP\d{2,3}|IRFZ?\d{2,4}|IRL\d{3,4})", "TO-220"),
+    (r"^BD1(?:3[5-9]|4[01])", "TO-126"),
+    (r"^(?:2N1711|2N1613|2N2219|2N2905|2N3053|BC14[01]|BC16[01])", "TO-39"),
+    (r"^(?:2N2222|2N2907|2N2369|BC10[789])", "TO-18 / TO-92"),  # registered in the metal can, sold in plastic as well
+    (r"^(?:2N2484|2N930|2N2646|BC17[789])", "TO-18"),
+    (r"^AC1(?:2[5-8]|76|8[78])", "TO-1"),
+    (r"^ZTX\d{3}", "E-Line"),
+    (r"^(?:P2N\d{4}|2N370[27]|2N3820|2N530[5-8]|(?:LND|VN|VP|TN|TP)\d{3,4}-?N3)", "TO-92"),
+    (r"^(?:2N390[3-6]|2N412[3-6]|2N440[0-3]|2N508[6-9]|2N545[7-9]|2N548[4-6]|2N595[0-3]|2N7000|2N3819|2N5210|2N6027|2N487[01]"
+     r"|J1[0-7]\d|J20[1-4]|J30\d|J31\d|MPF102|MPF4393|PF510[23]|MPSA\d\d|MPS\d{3,4}|MPS2222|PN\d{3,4}"
+     r"|BC5[4-6]\d|BC23[7-9]|BC30[7-9]|BC32[78]|BC33[78]|BC18[234]|BC21[234]|BC16[789]|BC41[56]"
+     r"|BS1(?:07|08|70)|BS250|BF24[457]|BF256|KSP\d\d|KS[AC]\d{3,4}"
+     r"|2SC1815|2SA1015|2SC945|2SA733|2SC1000|2SC732|2SA564|2SC828|2SC2240|2SA970|2SC2458|2SA1048|2SC2785"
+     r"|2SK30A|2SK11[78]|2SK170|2SK246|2SK184)", "TO-92"),
+]]
+_DARLINGTON = re.compile(r"^(?:MPSA1[2-4]|MPSA6[2-6]|2N530[5-8]|2N6426|2N6427|TIP1[0-4]\d|BC51[67]|BC87[56]|KSP1[34])")
+# Parts the database lists without parameters or not at all, where the kind is certain.
+_KIND_EXTRA = {"2N2646": ("Si", "UJT"), "2N4870": ("Si", "UJT"), "2N4871": ("Si", "UJT"), "2N6027": ("Si", "PUT"),
+               "2N4302": ("Si", "N-channel JFET"), "2N4303": ("Si", "N-channel JFET"), "2N4304": ("Si", "N-channel JFET"),
+               "BC264A": ("Si", "N-channel JFET"), "BC264B": ("Si", "N-channel JFET"), "BC264C": ("Si", "N-channel JFET"),
+               "BC264D": ("Si", "N-channel JFET"), "KP303A": ("Si", "N-channel JFET"), "KP303E": ("Si", "N-channel JFET"),
+               "KP303ZH": ("Si", "N-channel JFET"), "E112": ("Si", "N-channel JFET"), "E212": ("Si", "N-channel JFET"),
+               "TIS92": ("Si", "NPN BJT"), "TIS93": ("Si", "PNP BJT"), "TIS97": ("Si", "NPN BJT"), "MAT04": ("Si", "NPN BJT, matched quad")}
+
+
+def package_of(pn: str) -> str:
+    for cand in _candidates(pn):
+        for rx, pkg in _PACKAGES:
+            if rx.match(cand):
+                return pkg
+    return ""
+
+
+def describe(conn: sqlite3.Connection, pn: str) -> str:
+    """'Si NPN BJT TO-92 Through-Hole', 'Si N-channel JFET SOT-23 SMD', 'Ge PNP BJT Through-Hole':
+    material, polarity or channel and kind from the transistor database (a part it lacks from
+    _KIND_EXTRA), the package from the part number's family. '' when the part is not known."""
+    cands = _candidates(pn)
+    extra = next((_KIND_EXTRA[c] for c in cands if c in _KIND_EXTRA), None)
+    spec = None if extra else lookup(conn, pn)
+    if extra:
+        mat, kind = extra
+    elif spec:
+        k = spec["kind"]
+        if k == "bjt":
+            pol = spec.get("pol") or ""
+            dar = "Darlington " if any(_DARLINGTON.match(c) for c in cands) else ""
+            mat, kind = spec.get("mat") or "", f"{pol} {dar}BJT".strip()
+        elif k in ("jfet", "mosfet"):
+            mat, kind = spec.get("mat") or "Si", f"{spec.get('ch') or ''}-channel {k.upper() if k == 'jfet' else 'MOSFET'}".lstrip("-")
+        else:
+            return ""
+    else:
+        return ""
+    pkg = package_of(pn)  # from the number as written: a bare VP3203 may be TO-92 or SOT-89
+    mount = "SMD" if pkg.startswith(("SOT", "SC-")) else "Through-Hole"
+    if mat == "Ge" and not pkg:
+        mount = "Through-Hole"  # germanium parts are all leaded
+    elif not pkg:
+        mount = ""
+    return " ".join(x for x in (mat, kind, pkg, mount) if x)

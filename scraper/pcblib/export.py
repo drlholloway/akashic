@@ -150,11 +150,13 @@ def run(images: bool = False) -> None:
             c["has_schematic"] = has_schematic
             (EXPORT_DIR / "circuits" / f"{c['file_id']}.json").write_text(json.dumps(c, ensure_ascii=False))
     sheets = datasheet_table()  # manufacturer links only; datasheets themselves are never exported
+    descs = _transistor_descs([p["value"] for p in parts.values() if p["category"] == "Q"])
     parts_out = sorted(
         ({**p, "circuits": sorted(p["circuits"]), "datasheet": sheets.get(p["key"], ""), "selector": is_selector(sheets.get(p["key"], "http")),
           "datasheets": all_sheets(p["value"], sheets.get(p["key"], "")), "types": [t for t, _ in sorted(p["types"].items(), key=lambda kv: (-kv[1], kv[0]))][:5],
           "count": len(p["circuits"]),
           **({"zeners": z} if p["category"] == "D" and (z := zener_choices(p["value"])) else {}),
+          **({"desc": descs[p["value"]]} if descs.get(p["value"]) else {}),
           "slug": re.sub(r"[^a-z0-9.]+", "-", p["key"].lower())} for p in parts.values()),
         key=lambda p: (-p["count"], p["key"]))
     # dedupe part slugs (different keys can collapse to one slug)
@@ -181,6 +183,19 @@ def run(images: bool = False) -> None:
         "delisted": sum(1 for c in index if c.get("delisted")),
     }))
     print(f"exported {len(index)} circuits, {len(parts_out)} indexed part values -> {EXPORT_DIR}")
+
+
+def _transistor_descs(values: list[str]) -> dict[str, str]:
+    """'Si NPN BJT TO-92 Through-Hole' for each transistor part number the database or the package
+    rules know (see transistors.describe). Empty when the transistor database is absent."""
+    from .transistors import TRANS_DB, describe
+    import sqlite3 as _sq
+    if not TRANS_DB.exists():
+        return {}
+    tdb = _sq.connect(TRANS_DB)
+    out = {v: d for v in values if (d := describe(tdb, v))}
+    tdb.close()
+    return out
 
 
 def _transistor_subs(conn) -> dict:

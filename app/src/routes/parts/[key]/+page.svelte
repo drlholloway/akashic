@@ -34,7 +34,7 @@
 	<header class="head">
 		<p class="label"><a href="{base}/parts">Parts</a> · {PART_CATEGORY_NAMES[data.part.category] ?? data.part.category}</p>
 		<h1 class="mono">{data.part.value}</h1>
-		<p class="lede">{data.rows.length} {data.rows.length === 1 ? 'circuit uses' : 'circuits use'} this part{#if data.part.types.length}. Listed as: {data.part.types.join('; ')}{/if}.</p>
+		<p class="lede">{#if data.part.desc}{data.part.desc}. {/if}{data.rows.length} {data.rows.length === 1 ? 'circuit uses' : 'circuits use'} this part{#if data.part.types.length}. Listed as: {data.part.types.join('; ')}{/if}.</p>
 		{#if (data.part.datasheets?.length ?? 0) > 1}
 			{@const sheets = data.part.datasheets ?? []}
 			{@const reissued = /^https?:/.test(sheets[0].href)}
