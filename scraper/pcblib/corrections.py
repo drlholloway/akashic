@@ -117,9 +117,6 @@ CORRECTIONS: dict[str, dict[Key, str | None]] = {
     },
     "expanon:distortion-boost-and-overdrive-marshall-guvnor": {"R6": "680k"},
     "expanon:filters-wahs-and-vcfs-buchla-291-bandpass-vcf": {"C10": "10uF", "R24": "68", "R36": "68K"},
-    # (Q: no Q18 is drawn; it was Q28 TIS92 misread, and the TIS93 is Q26, 2026-10-09)
-    "expanon:filters-wahs-and-vcfs-minimoog-ladder-vcf-2": {"R32": "150", "R41": "150", "R46": "68K", "R67": "200", "Q18": None, "Q26": "TIS93", "Q28": "TIS92"},
-    "expanon:filters-wahs-and-vcfs-moog-minimoog-filter": {"R32": "150", "R41": "150", "R46": "68K", "R67": "200", "Q18": None, "Q26": "TIS93", "Q28": "TIS92"},
     "expanon:flangers-ibanez-fl301": {"C123": "180P", "R149": "510K"},
     "expanon:full-synths-drum-synths-and-misc-synth-ar-318-sample-and-hold-and-noise-generato": {
         "Q2": "2N3393", "Q10": "2N4870", "Q7": "2N3393",  # Q7 read 2N3383 (2026-10-09)
@@ -226,12 +223,10 @@ CORRECTIONS: dict[str, dict[Key, str | None]] = {
     "expanon:fuzz-and-fuzzy-noisemakers-maestro-brassmaster": {"Q2": "2N3392"},  # legend 'Q1-Q4, Q6, Q7 = 2N3392'; 1N4001 is D1-4
     "expanon:guitar-synth-and-misc-signal-shapers-maestro-brassmaster": {"Q2": "2N3392"},
     "expanon:filters-wahs-and-vcfs-dunlop-crybaby": {"Q1": "2N3904", "Q2": "2N3904"},  # '-Q1 & Q2 are 2n3904'; 1N4148 is D1
-    "expanon:oscillators-lfos-and-signal-generators-ems-vcs3-osillator": {"Q81": None},  # 'Q81' is the tempco resistor fitted at R176
     "expanon:buffers-switchers-mixers-and-routers-rat-bypass": {"Q1": "2N5457"},  # 1N914 labels the LED-leg diodes
-    "expanon:distortion-boost-and-overdrive-ibanez-ts-10": {"Q1": "2SC1815", "Q6": "2SC1815", "Q7": "2SK118", "Q8": "2SK118", "D1": "1N4001"},  # the drawing's note
+    "expanon:distortion-boost-and-overdrive-ibanez-ts-10": {**{f"Q{i}": "2SC1815" for i in range(1, 7)}, "Q7": "2SK118", "Q8": "2SK118", "D1": "1N4001"},  # the drawing's note: 'Q1 to Q6 are 2SC1815, Q7 and Q8 are 2SK118'
     "expanon:oscillators-lfos-and-signal-generators-sine-wave-generation-techniques": {"Q1": "2N3904", "Q2": "2N3904", "Q3": "2N3904"},  # Figure 1: 'Q1-Q3 2N3904'; the LM313 is the reference
     "expanon:chorus-boss-ce-1-gif": {"Q7": "2SC900"},  # legend 'Q1,Q2,Q7,Q10,Q16: 2SC900'; 1S1555 is every diode
-    "expanon:guitar-synth-and-misc-signal-shapers-saw-waveshaper": {"Q10": "2N3904", "Q11": "2N3906"},  # read 2H0904
     "expanon:fuzz-and-fuzzy-noisemakers-60s-style-fuzzbox": {"Q1": "SK3020", "Q2": "SK3005", "Q3": "SK3020"},  # legend 'Q1, Q3 SK3020 / Q2 SK3005'
 }
 

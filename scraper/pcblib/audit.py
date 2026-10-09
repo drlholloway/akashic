@@ -69,7 +69,7 @@ def find_flags(db: sqlite3.Connection, tdb: sqlite3.Connection) -> tuple[list[di
                 "LF351", "LF356", "NE5534A", "4066", "CD4066", "4066N", "4046A", "MN3001", "MN3004", "MN3008", "MN3204", "MN3205", "MN3206", "MN3214",
                 "TLC272", "5534", "NE5534", "CA741", "LM307", "LM301", "4559", "RC4559", "MC33174", "MC33178", "TLP222", "TLP222A",
                 "LM741DIP", "LT1054/", "MAX1044S", "78L05Z", "TL061", "TL062", "TL064", "TL031", "OPA2134", "LM386N", "CD4024", "CD4029"}
-    KNOWN_Q = {"BC264D", "BC264C", "BC264B", "2N6027", "2N2646", "CV7353", "CV7351", "FS36999", "2N2222A_CEB", "NP4124", "TI592", "A02650"}
+    KNOWN_Q = {"BC264D", "BC264C", "BC264B", "2N6027", "2N2646", "CV7353", "CV7351", "FS36999", "2N2222A_CEB", "NP4124", "TI592", "A02650", "LM394", "LM194"}
     Q_WORDS = {"NPN", "PNP", "JFET", "FET", "MOSFET", "GE", "SI", "GE PNP", "GE NPN", "PNP GE", "NPN GE", "NPN SI", "PNP SI"}
 
     flags = []
@@ -157,7 +157,7 @@ def find_flags(db: sqlite3.Connection, tdb: sqlite3.Connection) -> tuple[list[di
         # Designator
         if RANGE_REF.match(ref):
             flag(r, "medium", "Designator range was not expanded into one row per part", kind="format the library can't read")
-        elif not (REF_OK.match(ref) or QTY.match(ref) or (cat in ("POT", "SW", "TRIM", "LED", "CONN", "HW", "OTHER") and NAMED.match(ref))):
+        elif not (REF_OK.match(ref) or REF_OK.match(re.sub(r"^[A-Z]{2,6}-", "", ref, flags=re.I)) or QTY.match(ref) or (cat in ("POT", "SW", "TRIM", "LED", "CONN", "HW", "OTHER") and NAMED.match(ref))):
             if re.match(r"^[A-Z]{1,3}\d{4,}$", ref.upper()):
                 flag(r, "medium", "Designator number has four or more digits (a part number read as a designator?)", kind="designator")
             elif re.match(r"^[A-Z]{1,3}\d+[A-Z0-9]{2,}$", ref.upper()) or re.search(r"\d[OISZ]\b|[OISZ]\d", ref.upper()[1:]):
