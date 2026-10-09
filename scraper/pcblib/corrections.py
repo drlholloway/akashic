@@ -226,8 +226,15 @@ CORRECTIONS: dict[str, dict[Key, str | None]] = {
     "otherpedals:skywater-pcb": {"D1": "1N5817"},  # read iNsai7; the schematic prints 1N5817
     "deadendfx:silent-relay-bypass-pcb": {"D11": "1N4148W"},  # read INW4148, on a SOD-123 footprint
     "lectricfx:o-zoan-v2-0-jfet-overdrive": {"D4": "1N400X", "D5": "1N400X"},  # read n400x, 4n400x
+    "guitarpcb:nostalgitone-ampeq-active-eq-preamp-amplifier-style-control": {"X1": "1k8-4k7"},  # '*CLR x1  1k8- 4k7': the footswitch board's LED resistor, read cut short
+    "guitarpcb:nostalgitone-sonic-architect-pcb-set-dual-combo": {"X1": "1k8-4k7"},  # '*CLR x1  1k8- 4k7': the footswitch board's LED resistor, read cut short
+    "guitarpcb:nostalgitone-the-burner-saturation-generator": {"X1": "1k8-4k7"},  # '*CLR x1  1k8- 4k7': the footswitch board's LED resistor, read cut short
+    "fuzzdog:repeater": {"R10": "220-500R trimmer", "VOL": "47-50K Trim"},  # the bias and output trimmers; the column reading drops VOL
     "guitarpcb:nostalgitone-dual-combo-creator-pcb": {"D1": None},  # '0C5' is OCR noise; the doc has no parts table
     "deadendfx:string-ringer": {"D11": "Yellow 5mm LED"},
+    "pcbguitarmania:master-phaser": {"L074": None},  # the schematic pairing read TL074 as a designator
+    "deadastronaut:tremshifter": {"L458": None, "IC1": "1458"},  # OCR split 'IC1 1458'
+    "deadendfx:kruger": {"L1": "4.7mH"},  # the schematic prints 4.7mH; the pairing took the neighbouring 1n
     "moody:tremolito-kit": {"=2N5809": "2N5089"},  # a typo for the 2N5089 (confirmed by Lane, 2026-10-09)
     "tayda:fuzz-face-with-inverter": {"Q1": "2N3906 / BC108 / BC109", "Q2": "2N3906 / BC108 / BC109"},
     # Experimentalists Anonymous: a legend or note value paired with the wrong designator (each label viewed, 2026-10-09).

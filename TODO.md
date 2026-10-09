@@ -152,6 +152,17 @@ Five Cats Danish Pastry D5 '1N474A' (beside a 1N747A; 1N747A or 1N4742A?), EHX C
 1N9658, Moog 904B 'IN346', E-mu 1N4950, Griffin Hype-R Fuzz 35686G, PedalPCB Lenora SH270, Ibanez AFL
 '5.1EB'.
 
+## Other categories
+
+Descriptions (`describe.py`, October 9, 2026) for ICs, pots, trimmers, switches, optos, inductors,
+transformers and crystals. Coverage by use: IC 93% (263 of 593 part numbers), POT, TRIM, SW, XTAL 100%,
+L 99%, XFM 95%, OPTO 83%. Undescribed ICs are house numbers and rarer chips whose function or input type
+is not certain from the number: HT8950, TA7136P, UPD444C, 1048, BA718, ISD2540, M5207L01, M65831AP,
+OPA1678 (input type), 2159, 2716, 3140, 4164, 4174. Undescribed optos are maker part numbers for LDRs and
+lamp/LDR cells with no sheet found (VT-811/812/912, M79-211564-000, MXY-7BX4, P873G35-380, PBT3-12,
+PG53-650-6, CLM600, PC600, D1M, LPT80A, P1501). Transformers left: '12VAC TRANSFORMER' (a mains wall
+supply) and 'TM022 1.725:1'.
+
 ## Datasheets
 
 Counts from `pcblib datasheets` as of October 9, 2026: 562 of 1,176 part numbers link a datasheet. Every

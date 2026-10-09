@@ -1,0 +1,33 @@
+{
+ "id": "bentfishbowl:22-standard-reverb",
+ "read": "2026-10-09, by eye from the blog post's schematic",
+ "comment": "Bent Fishbowl's '20 Standard Reverb: a TL074 driving a spring tank (L1 IN and L2 OUT on the drawing are the tank's transducers, not parts on the board) with an LTC1044 voltage doubler. The schematic pairing had read only 'L2 22n' (C6's value). No C9 on the drawing.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "1M", "R", ""],
+  ["R2", "47", "R", ""],
+  ["R3", "4.7K", "R", ""],
+  ["R4", "2.2K", "R", ""],
+  ["R5", "10K", "R", ""],
+  ["R6", "220K", "R", ""],
+  ["R7", "1K", "R", ""],
+  ["R8", "100K", "R", ""],
+  ["R9", "10K", "R", ""],
+  ["R10", "10K", "R", ""],
+  ["R11", "100K", "R", ""],
+  ["C1", "100n", "C", ""],
+  ["C2", "100u", "C", ""],
+  ["C3", "22u", "C", ""],
+  ["C4", "10u", "C", ""],
+  ["C5", "100u", "C", ""],
+  ["C6", "22n", "C", ""],
+  ["C7", "1u", "C", ""],
+  ["C8", "100p", "C", ""],
+  ["C10", "220p", "C", ""],
+  ["C11", "1u", "C", ""],
+  ["U1", "TL074", "IC", ""],
+  ["U2", "LTC1044", "IC", "charge pump, doubles the supply"],
+  ["Dwell", "50K", "POT", ""],
+  ["Reverb", "10K", "POT", ""]
+ ]
+}

@@ -125,6 +125,12 @@ def categorize(ref: str, part_type: str, value: str = "") -> str:
         return "TRIM"  # 'Q3B  50k trimmer': the bias trimmer of Q3
     if re.search(r"\bSOCKET\b", v):
         return "CONN"  # 'IC1-S  DIP-8 socket'
+    if re.search(r"\blamp\b", t0):
+        return "OTHER"  # an incandescent lamp numbered L1 (Uni-Vibe clones)
+    if re.match(r"^X\d+$", r, re.I) and "HZ" not in v and (re.match(r"^\d+(?:[.,]\d+)?[kKMR]\d*", v) or re.match(r"^(?:LM|TL|NE|CA|CD)\d{3}", v)):
+        return "R" if re.match(r"^\d", v) else "IC"  # OCR of a resistor or chip row filed under X
+    if r.upper() == "TRIM" and re.search(r"potentiometer|\bpot\b", t0) and "trim" not in t0:
+        return "POT"  # a panel knob named Trim
     if re.search(r"\d\s?[KM]HZ\b", v):
         return "XTAL"  # a 32.768kHz crystal numbered Q1
     if re.match(r"^(IC|U)\d+[A-Z]?$", r, re.I):
@@ -327,6 +333,7 @@ def normalize_row(row: BomRow) -> BomRow:
         raw = re.sub(r"^(\d+)m(\d+)$", r"\1M\2", raw)  # and "2m2" is 2.2 megohms
         if row.category == "TRIM":
             raw = re.sub(r"^[ABCW](?=\d)|(?<=[kKM])[ABCW]$", "", raw)  # 'B150K', '10KB': a trimmer's taper letter
+            raw = re.sub(r"(?i)\s+trim(?:mer|pot)?$", "", raw)  # '47-50K Trim'
         if row.category == "R":
             coded = _resistor_code(raw)
             if coded != raw:
@@ -335,6 +342,14 @@ def normalize_row(row: BomRow) -> BomRow:
         if n is not None:
             row.norm_value = _fmt(n, _R_PREFIX)
             row.sort_key = n
+        elif row.category in ("R", "TRIM") and (m := re.fullmatch(r"(\d+[.,]?\d*[kKMR]?\d*)\s*-\s*(\d+[.,]?\d*[kKMR]?\d*)?", raw)):
+            a, b = m.group(1), m.group(2) or ""
+            if re.fullmatch(r"\d+(?:[.,]\d+)?", a) and (u := re.search(r"[kKM]", b)):
+                a += u.group(0)  # '47-50K', '10-15K': the low end shares the high end's unit
+            lo, hi = _parse_si(a), _parse_si(b)
+            if lo is not None:  # '1k8-4k7': select on test, sorted by its low end
+                row.norm_value = _fmt(lo, _R_PREFIX) + "-" + (_fmt(hi, _R_PREFIX) if hi is not None else "")
+                row.sort_key = lo
     elif row.category == "C":
         raw = re.sub(r"(?<=\d)([UNP])(?=\d|F?$)", lambda m: m.group(1).lower(), raw)  # 2U2, 100N: an upper-case unit letter
         n = _parse_si(raw)
@@ -344,6 +359,7 @@ def normalize_row(row: BomRow) -> BomRow:
                 row.norm_value = _fmt(n, _C_PREFIX)
                 row.sort_key = n
     elif row.category == "L":
+        raw = re.sub(r"(?<=\d)\s*MH$", "mH", raw)  # '100MH': an inductor is never in megahenries
         n = _parse_si(raw)
         if n is not None:
             row.norm_value = _fmt(n, _L_PREFIX)

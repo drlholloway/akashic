@@ -200,6 +200,8 @@ def find_flags(db: sqlite3.Connection, tdb: sqlite3.Connection) -> tuple[list[di
                 flag(r, "high", "Resistor over 22M")
             elif re.match(r"^0\d", v):
                 flag(r, "medium", "Resistor value with a leading zero")
+            elif "-" in norm:
+                pass  # '2k7-4k7': a select-on-test range, each end checked by eye in the doc
             elif len(digits) >= 4 and not re.search(r"\d[.,]\d", v):
                 flag(r, "medium", "Resistor value has four or more significant digits")
             elif not standard(sk, e96_ok=True):
