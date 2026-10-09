@@ -399,6 +399,9 @@ _CATALOG_FIX = [
 ]
 
 
+_IC_ONLY = re.compile(r"^(?:BA6\d{3}|BA7\d\d\b|HD14\d{3}|L78L\d\d|NJM\d{4})")
+
+
 def catalog_category(category: str, key: str) -> str:
     """A part filed under the wrong category by its designator (a TL072 as D3) goes where its
     part number says: the value hints decide for diodes, transistors and ICs."""
@@ -406,6 +409,8 @@ def catalog_category(category: str, key: str) -> str:
         return "OPTO"
     if re.search(r"\d(?:K|M)?HZ$", key):
         return "XTAL"
+    if category in ("D", "Q", "IC") and _IC_ONLY.match(key):
+        return "IC"  # ROHM's BA6110 VCA and BA718 op amp are no BA-series diodes; Hitachi's HD14011 is a CD4011
     if category in ("D", "Q", "IC"):
         for rx, cat in _VALUE_HINTS:
             if cat in ("D", "Q", "IC") and rx.match(key):

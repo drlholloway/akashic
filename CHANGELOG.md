@@ -191,6 +191,7 @@ GitHub Release notes.
   and pots are grouped by taper (A, B, C, W, none) and ordered by resistance.
 
 ### Fixed
+- Parts filed under the wrong kind move to the right list: ROHM's BA6110 VCA and BA718 op amp and Hitachi's HD14011 (a CD4011) were listed as diodes, the L78L05/L78L06 regulators and NJM4558 as transistors; they are ICs. Korg's TX-429D is a dual-gate MOSFET used as a voltage-controlled resistor, not an optocoupler, and moves to transistors. The 1N414B, 1N1418 and 2N222A typos read as 1N4148 and 2N2222A.
 - PCBWay (Glory to Ukraine): all 303 boards with a schematic were read by eye instead of OCR: 6,930 parts,
   with the clipping LEDs, microfarad capacitors and unlabelled trimmers the OCR missed (the Sky Blue OD
   gains its three 1u caps, 100u, both 100n, two LEDs and the Z trimmer, and loses a 2200n that is not on

@@ -3,8 +3,7 @@
  "read": "2026-10-08, by eye from the cached schematic image",
  "comment": "Korg PHS-1 four-stage phaser factory schematic, clean and fully legible; IC5-IC7 4558 all-pass stages, IC8 TL062 LFO driving TX-429D cells.",
  "uncertain": [
-  "VR1/VR2: pot or internal trimmer not marked; read as trimmers",
-  "IC1-IC4: TX-429D read as photo-FET couplers from the symbol"
+  "VR1/VR2: pot or internal trimmer not marked; read as trimmers"
  ],
  "rows": [
   ["R1", "6.8K", "R", ""],
@@ -65,10 +64,10 @@
   ["D3", "RD5.1EB2", "D", "5.1V zener"],
   ["D4", "RD5.6EB1", "D", "5.6V zener"],
   ["×1", "PR5534S", "LED", "effect-on LED"],
-  ["IC1", "TX-429D", "IC", "selected; photo-FET coupler cell per stage (drawn with lamp and FET in a dashed box)"],
-  ["IC2", "TX-429D", "IC", "selected; photo-FET coupler cell per stage (drawn with lamp and FET in a dashed box)"],
-  ["IC3", "TX-429D", "IC", "selected; photo-FET coupler cell per stage (drawn with lamp and FET in a dashed box)"],
-  ["IC4", "TX-429D", "IC", "selected; photo-FET coupler cell per stage (drawn with lamp and FET in a dashed box)"],
+  ["IC1", "TX-429D", "Q", "Korg dual-gate MOSFET used as a voltage-controlled resistor (like the MPF131), drawn as IC"],
+  ["IC2", "TX-429D", "Q", "Korg dual-gate MOSFET used as a voltage-controlled resistor (like the MPF131), drawn as IC"],
+  ["IC3", "TX-429D", "Q", "Korg dual-gate MOSFET used as a voltage-controlled resistor (like the MPF131), drawn as IC"],
+  ["IC4", "TX-429D", "Q", "Korg dual-gate MOSFET used as a voltage-controlled resistor (like the MPF131), drawn as IC"],
   ["IC5", "NJM4558DV", "IC", ""],
   ["IC6", "NJM4558DV", "IC", ""],
   ["IC7", "NJM4558DV", "IC", ""],
