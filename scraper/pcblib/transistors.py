@@ -209,9 +209,10 @@ def _digits(pn: str) -> str:
 # germanium type rated 20 V, 130 mW, hFE 30 minimum, against the ASY29's 15 V, 150 mW, hFE 30).
 # FS36999 is Fairchild's house number for the 2N5133 in the early Big Muffs; TR1623 is the Danelectro
 # drawing's library name (TR- prefix, as its TR-KSA812L) for the 2SC1623; CV10805 is the UK military
-# BC108 in TO-18.
+# BC108 in TO-18. The A02650 (Jen Zonk Machine) is a Texas Instruments house number for a low-gain PNP
+# germanium, hFE about 30: the OC71 (PNP Ge, hFE 30, 20 V, 125 mW) is the closest listed part.
 _ALIASES = {"CV7351": "2N1308", "1T308A": "GT308A", "1T308B": "GT308B", "OC139": "ASY29", "OC140": "ASY29", "CV7112": "ASY29",
-            "FS36999": "2N5133", "TR1623": "2SC1623", "CV10805": "BC108"}
+            "FS36999": "2N5133", "TR1623": "2SC1623", "CV10805": "BC108", "A02650": "OC71"}
 # The database files the BF245 family as MOSFETs; they are N-channel JFETs.
 _KIND_FIX = {"BF245": "jfet", "BF245A": "jfet", "BF245B": "jfet", "BF245C": "jfet"}
 
