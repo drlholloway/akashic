@@ -191,6 +191,7 @@ GitHub Release notes.
   and pots are grouped by taper (A, B, C, W, none) and ordered by resistance.
 
 ### Fixed
+- GuitarPCB: a doc whose parts table is a heading-free grid now reads from that grid even when the table parser picks a few pairs out of the prose (Blues Power's 'TR1 so'), instead of falling back to OCR. 27 boards gain parts or exact values: Blues Power's diodes read 1N4739, 1N34A and Green LED as the doc prints them (OCR had '1ONE' and a switch of '1000'), and ICs, status and clipping LEDs, named knobs and switch types come through on the NostalgiTone and other boards; OCR junk such as R320 and Q99 is gone. Numbered knobs (VOL2) read from the grid, a part's role in brackets ('Yellow (vibe)') and a zener's voltage ('1N5232 - 5.6v') move to the note, and footnote stars come off values ('*TL072').
 - Parts filed under the wrong kind move to the right list: ROHM's BA6110 VCA and BA718 op amp and Hitachi's HD14011 (a CD4011) were listed as diodes, the L78L05/L78L06 regulators and NJM4558 as transistors; they are ICs. Korg's TX-429D is a dual-gate MOSFET used as a voltage-controlled resistor, not an optocoupler, and moves to transistors. The 1N414B, 1N1418 and 2N222A typos read as 1N4148 and 2N2222A.
 - PCBWay (Glory to Ukraine): all 303 boards with a schematic were read by eye instead of OCR: 6,930 parts,
   with the clipping LEDs, microfarad capacitors and unlabelled trimmers the OCR missed (the Sky Blue OD

@@ -100,6 +100,10 @@ class GuitarPCB(Adapter):
             text = [r for r in _text_bom_per_circuit(pages) if not (r.category in ("D", "Q", "IC")
                     and (re.match(r"^[^\w*]", r.value) or re.fullmatch(r"[a-z]{3,}", r.value)))  # '(Q1 -Q2)', 'Q8 require' in prose
                     and not is_prose_value(r.category, r.value)]  # 'D1 – D4 Clipping Diodes' is a note, not four parts
+            for r in text:
+                if r.category in ("D", "Q", "IC", "LED") and r.value.startswith("*"):  # '*TL072': a footnote star
+                    r.value, r.norm_value, r.notes = r.value.lstrip("* "), "", "; ".join(x for x in (r.notes, "see the build notes") if x)
+                    normalize_row(r)
             if len({r.ref.upper() for r in text}) < 12:
                 text = []  # a few parts read out of prose ('Q8 require'), not a table
             ocr = ocr_bom(pdf, self.vendor, slug)
@@ -111,7 +115,7 @@ class GuitarPCB(Adapter):
             knobs = any(r.category in ("POT", "TRIM") for r in text)
             # As in process_document, parts no variant names stay unlabelled. A knob OCR names differently
             # ('FUZZ' for the text's 'Sus/Fuzz') cannot be matched, so named rows only come in when text has none.
-            from_grid = bool(text) and not text_bom(pages)  # a heading-free grid table lists every part
+            from_grid = bool(text) and len(_BOM_HEADING.findall("\n".join(pages))) < 2 and _grid_wins(pages)  # a heading-free grid table lists every part
             top: dict[str, int] = {}
             for r in text:
                 if m := re.fullmatch(r"([A-Z]+)(\d+)[A-Z]?", r.ref.upper()):
@@ -141,7 +145,7 @@ def _text_bom_per_circuit(pages: list[str]) -> list[BomRow]:
     whole = "\n".join(pages)
     heads = list(_BOM_HEADING.finditer(whole))
     if len(heads) < 2:
-        return text_bom(pages) or _grid_bom(pages)  # the heading-free grid only when no table parser read one
+        return _grid_bom(pages) if _grid_wins(pages) else text_bom(pages)
     rows: list[BomRow] = []
     for k, m in enumerate(heads):
         end = heads[k + 1].start() if k + 1 < len(heads) else len(whole)
@@ -155,9 +159,15 @@ def _text_bom_per_circuit(pages: list[str]) -> list[BomRow]:
     return rows
 
 
+def _grid_wins(pages: list[str]) -> bool:
+    """The heading-free grid reads the doc when it finds more parts than the table parsers, which can
+    pick a few pairs out of the prose ('TR1 so', 'Q2 after' in Blues Power) that are filtered later."""
+    return len(_grid_bom(pages)) > len(text_bom(pages))
+
+
 _GRID_ONE = r"(?:R|C|D|Q|IC|U|LED|L|TR|VR|RV|SW|P)\d{1,3}[A-Z]?"
 _GRID_REF = re.compile(rf"^\*?{_GRID_ONE}(?:\s*[-–,]\s*(?:{_GRID_ONE}|\d{{1,3}}))*\*?$")  # 'R1', 'Q1 - Q4', 'D1, D2', 'D3-D6'
-_GRID_KNOB = re.compile(r"^\*?[A-Z][A-Za-z/. ]{1,13}\*?$")  # 'GAIN.BRT'
+_GRID_KNOB = re.compile(r"^\*?[A-Z][A-Za-z/. ]{1,13}\d?\*?$")  # 'GAIN.BRT', 'VOL2'
 _GRID_POT = re.compile(r"^([ABCW]?)\s?(\d+(?:\.\d+)?\s?[kKM]?)\s?([ABCW]?)(?:\s+(LIN|LINEAR|LOG|AUDIO|REV|REVLOG|TRIM|TRIMMER))?(?=\s|$)", re.I)
 _TAPER = {"LIN": "B", "LINEAR": "B", "LOG": "A", "AUDIO": "A", "REV": "C", "REVLOG": "C"}
 
@@ -199,6 +209,10 @@ def _grid_bom(pages: list[str]) -> list[BomRow]:
             ref, variant, cat, ptype = ref.strip("* "), "", "", ""
             value = re.sub(r"\s*\*+\s*", " ", value).strip()            # '1k8 *CLR', '*** J113'
             value = re.sub(r"\s*\(see notes?\)$", "", value, flags=re.I)
+            if m := re.fullmatch(r"(.+?)\s*\(([A-Za-z ]+)\)", value):     # 'Yellow (vibe)': the part's role is a note
+                value, note = m.group(1), "; ".join(x for x in (note, m.group(2)) if x)
+            if m := re.fullmatch(r"(\S*\d\S*)\s+-\s+(\d+(?:\.\d+)?\s?[vV])", value):  # '1N5232 - 5.6v': a zener's voltage
+                value, note = m.group(1), "; ".join(x for x in (note, m.group(2).replace(" ", "").upper()) if x)
             if m := re.match(r"^V(\d+)\s*[-–]\s*(.+?)\.?$", value):   # 'V4 - 1N5817.'
                 variant, value = f"V{m.group(1)}", m.group(2)
             if not _GRID_REF.match(ref):                                  # a named knob or switch
