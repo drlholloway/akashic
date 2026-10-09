@@ -89,7 +89,7 @@
 	{#if data.part.zeners?.length}
 		<section class="subs">
 			<h2 class="label strong">Zeners for {data.part.value.replace('V', '.').replace(/\.$/, '')} V</h2>
-			<p class="note">The parts list gives only the voltage, so any zener of that voltage fits. A 500 mW part in DO-35 suits clipping and most pedal uses; the 1 W and 1.3 W parts are larger (DO-41) and only needed where the zener carries real current, such as clamping a supply rail. Check the spacing on the board before ordering the bigger body.</p>
+			<p class="note">The parts list gives only the voltage, so any zener of that voltage fits. A 500 mW part in DO-35 suits clipping and most pedal uses; the 1 W and 1.3 W parts are larger (DO-41) and only needed where the zener carries real current, such as clamping a supply rail. Check the spacing on the board before ordering the bigger body.{#if parseFloat(data.part.value.replace('V', '.')) < 2.4} Below 2.4 V only the low-level 1N4678 series is made; a plain (not high-brightness) red LED drops about 1.8 V and is the common stand-in.{/if}</p>
 			<div class="scroll"><table class="sheet-table subs-table">
 				<thead><tr><th>Part</th><th>Series</th><th>Power</th><th>Package</th><th class="num">Boards</th><th>Datasheet</th></tr></thead>
 				<tbody>

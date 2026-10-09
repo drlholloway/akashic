@@ -208,6 +208,8 @@ _ZENER_SERIES: dict[str, float] = {
     **dict(zip(range(5221, 5258), [2.4, 2.5, 2.7, 2.8, 3.0, 3.3, 3.6, 3.9, 4.3, 4.7, 5.1, 5.6, 6.0, 6.2, 6.8, 7.5, 8.2, 8.7, 9.1,
                                    10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 25, 27, 28, 30, 33])),     # 1N5221-1N5257, 500 mW
     **dict(zip(range(746, 760), [3.3, 3.6, 3.9, 4.3, 4.7, 5.1, 5.6, 6.2, 6.8, 7.5, 8.2, 9.1, 10, 12])),           # 1N746-1N759
+    **dict(zip(range(4678, 4718), [1.8, 2.0, 2.2, 2.4, 2.7, 3.0, 3.3, 3.6, 3.9, 4.3, 4.7, 5.1, 5.6, 6.2, 6.8, 7.5, 8.2, 8.7, 9.1,
+                                   10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 22, 24, 25, 27, 28, 30, 33, 36, 39, 43])),  # 1N4678-1N4717, low level
 }
 
 
@@ -220,6 +222,7 @@ _ZENER_CHOICES = [
     ("BZX55", "BZX55C", "500 mW", "DO-35", "https://www.vishay.com/docs/85604/bzx55.pdf"),
     ("BZX79", "BZX79C", "500 mW", "DO-35", "https://assets.nexperia.com/documents/data-sheet/BZX79_SER.pdf"),
     ("1N7xxA", "1N746", "500 mW", "DO-35", "https://my.centralsemi.com/datasheets/1N746A-759A.PDF"),
+    ("1N4678-4717", "1N4678", "500 mW", "DO-35", "https://my.centralsemi.com/datasheets/1N4678-4717.PDF"),  # low level, down to 1.8 V
     ("1N47xxA", "1N4728", "1 W", "DO-41", "https://www.vishay.com/docs/85816/1n4728a.pdf"),
     ("BZX85", "BZX85C", "1.3 W", "DO-41", "https://www.vishay.com/docs/85607/bzx85.pdf"),
 ]
@@ -244,7 +247,7 @@ def zener_choices(voltage: str) -> list[dict]:
             num = next((n for n, z in _ZENER_SERIES.items() if z == v and start <= n < start + 40), None)
             if num is None:
                 continue
-            pn = f"1N{num}" + ("B" if series == "1N52xxB" else "A")
+            pn = f"1N{num}" + {"1N52xxB": "B", "1N4678-4717": ""}.get(series, "A")
         out.append({"pn": pn, "series": series, "power": power, "package": pkg, "datasheet": sheet})
     return out
 
