@@ -1,0 +1,30 @@
+{
+ "id": "expanon:vibrato-and-pitch-shift-misc-vibrato-effect-page-1",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "ESP (Elliott Sound Products) vibrato audio path: two JFET-controlled all-pass phase stages with 1458 op amps. Page 1 of 2; Q1 and the Mod/Bias LFO circuitry are on the other page.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "10k", "R", ""],
+  ["R2", "100k", "R", ""],
+  ["R3", "100", "R", ""],
+  ["R4", "33k", "R", ""],
+  ["R5", "33k", "R", ""],
+  ["R6", "33k", "R", ""],
+  ["R7", "33k", "R", ""],
+  ["R8", "100k", "R", ""],
+  ["R9", "100k", "R", ""],
+  ["R10", "33k", "R", ""],
+  ["R11", "33k", "R", ""],
+  ["R12", "560k", "R", ""],
+  ["R13", "560k", "R", ""],
+  ["C1", "22nF", "C", ""],
+  ["C2", "22nF", "C", ""],
+  ["Q2", "2N5459", "Q", "N-channel JFET"],
+  ["Q3", "2N5459", "Q", "N-channel JFET"],
+  ["U1", "1458", "IC", "dual op amp, sections U1A and U1B"],
+  ["U2", "1458", "IC", "dual op amp, section U2A used"],
+  ["Effect", "10k", "POT", "VR1"],
+  ["TP1", "10k", "TRIM", "FET Trim"],
+  ["TP2", "10k", "TRIM", "FET Trim"]
+ ]
+}

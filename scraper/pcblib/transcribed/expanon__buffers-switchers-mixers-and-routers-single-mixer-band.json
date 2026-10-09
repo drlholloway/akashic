@@ -1,0 +1,25 @@
+{
+ "id": "expanon:buffers-switchers-mixers-and-routers-single-mixer-band",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "ESP single mixer channel: Lo/Hi level inputs, NE5532 gain stage and buffer, +/-15V supply. Clean, fully legible drawing.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "68k", "R", ""],
+  ["R2", "68k", "R", ""],
+  ["R3", "150k", "R", ""],
+  ["R4", "68k", "R", ""],
+  ["R5", "10k", "R", ""],
+  ["R6", "15k", "R", ""],
+  ["R7", "68k", "R", ""],
+  ["R8", "68k", "R", ""],
+  ["C1", "100nF", "C", ""],
+  ["C2", "47uF", "C", "electrolytic"],
+  ["C3", "1uF", "C", ""],
+  ["C4", "10uF", "C", "electrolytic, supply bypass"],
+  ["C5", "10uF", "C", "electrolytic, supply bypass"],
+  ["C6", "100nF", "C", "supply bypass"],
+  ["C7", "100nF", "C", "supply bypass"],
+  ["U1", "NE5532", "IC", "dual op amp, U1A/U1B"],
+  ["VR1", "100k", "POT", "level"]
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "id": "expanon:adsr-generators-and-envelope-generators-morph-lag",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Harry Bissell's MorphLag, a Multisim drawing of a lag processor with separate attack and decay and a shape control; three op amp sections each labeled TL072 (AR1-AR3).",
+ "uncertain": [],
+ "rows": [
+  ["R1", "50K", "R", ""],
+  ["R2", "10K", "R", ""],
+  ["R3", "50K", "R", ""],
+  ["R4", "1K", "R", ""],
+  ["R7", "10K", "R", ""],
+  ["R9", "20K", "R", ""],
+  ["R10", "20K", "R", ""],
+  ["R11", "100", "R", ""],
+  ["R12", "100", "R", ""],
+  ["C1", "5uF", "C", ""],
+  ["D1", "Diode", "D", "no part number given"],
+  ["D2", "Diode", "D", "no part number given"],
+  ["AR1", "TL072", "IC", "drawn as a single op amp section"],
+  ["AR2", "TL072", "IC", "drawn as a single op amp section"],
+  ["AR3", "TL072", "IC", "drawn as a single op amp section; three sections need two TL072 packages"],
+  ["Attack", "1M", "POT", "R5; [A] is the simulator hotkey, not a taper"],
+  ["Decay", "1M", "POT", "R6; [D] is the simulator hotkey, not a taper"],
+  ["Shape", "10K", "POT", "R8; [S] is the simulator hotkey, not a taper"]
+ ]
+}

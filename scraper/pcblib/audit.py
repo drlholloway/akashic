@@ -58,7 +58,7 @@ def find_flags(db: sqlite3.Connection, tdb: sqlite3.Connection) -> tuple[list[di
 
 
     REF_OK = re.compile(r"^(?:R|C|D|Q|U|IC|L|VR|RV|P|POT|SW|S|J|LED|TR|T|K|Z|ZD|DZ|X|XT|Y|F|FB|LDR|OC|OK|TRIM|RP|RT|CP|CR|VT|JP|OP|OA|B|BR|M|LD|RL|TL|PR|CT|CV|RLED|LEDR|CLR|RPD|CPD|REG|VREG|CB|RB|RC|RE|CE|CF|RF|RG|RS|RD)\d{0,3}[A-Za-z]?(?:\.\d)?$", re.I)
-    RANGE_REF = re.compile(r"^[A-Z]{1,3}\d{1,3}\s*[-–]\s*[A-Z]{0,3}\d{1,3}$", re.I)
+    RANGE_REF = re.compile(r"^([A-Z]{1,3})(\d{1,3})\s*[-–]\s*([A-Z]{0,3})(\d{1,3})$", re.I)
     NAMED = re.compile(r"^[A-Za-z][A-Za-z .&/+\-]{1,24}\d?$")  # a named control or part ('VOLUME', 'Tone 2')
     QTY = re.compile(r"^(?:[A-Z]{2,6}-)?×\d+$", re.I)  # ×2, or VSM-×2 on a sheet of several circuits
 
@@ -155,10 +155,15 @@ def find_flags(db: sqlite3.Connection, tdb: sqlite3.Connection) -> tuple[list[di
         V = v.upper()
 
         # Designator
-        if RANGE_REF.match(ref):
+        rm = RANGE_REF.match(ref)
+        if rm and (not rm.group(3) or rm.group(3).upper() == rm.group(1).upper()) and int(rm.group(4)) > int(rm.group(2)):  # R1-R5, R1-5; not LED1-D1, P3-R27, C11-2
             flag(r, "medium", "Designator range was not expanded into one row per part", kind="format the library can't read")
-        elif not (REF_OK.match(ref) or REF_OK.match(re.sub(r"^[A-Z]{2,6}-", "", ref, flags=re.I)) or QTY.match(ref) or (cat in ("POT", "SW", "TRIM", "LED", "CONN", "HW", "OTHER") and NAMED.match(ref))):
-            if re.match(r"^[A-Z]{1,3}\d{4,}$", ref.upper()):
+        # a board or page prefix (UPPER-, P3-, LED1-) and a repeat suffix (C11-2) are designators too
+        elif not (REF_OK.match(ref) or REF_OK.match(re.sub(r"-\d$", "", re.sub(r"^[A-Z]{1,6}\d{0,2}-", "", ref, flags=re.I))) or QTY.match(ref) or (cat in ("POT", "SW", "TRIM", "LED", "CONN", "HW", "OTHER") and NAMED.match(ref))):
+            m4 = re.match(r"^([A-Z]{1,3})\d{4,}$", ref.upper())
+            if m4 and sum(n >= 1000 for n in nums[(cid, variant, m4.group(1))]) >= 5:
+                pass  # a board numbered in its thousands (Prophet-600 R4332)
+            elif m4:
                 flag(r, "medium", "Designator number has four or more digits (a part number read as a designator?)", kind="designator")
             elif re.match(r"^[A-Z]{1,3}\d+[A-Z0-9]{2,}$", ref.upper()) or re.search(r"\d[OISZ]\b|[OISZ]\d", ref.upper()[1:]):
                 flag(r, "medium", "Designator looks mangled by OCR (letters inside the number)", kind="designator")

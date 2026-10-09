@@ -1,0 +1,26 @@
+{
+ "id": "expanon:adsr-generators-and-envelope-generators-voltage-controlled-adsr",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Magnus Danielson 4069 CV-ADSR v0.1 (gEDA, 2001); attack, decay, sustain and release are control-voltage inputs, no pots. The author notes C1 and R11 values are placeholders.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "1M", "R", ""],
+  ["R2", "1M", "R", ""],
+  ["R3", "1M", "R", ""],
+  ["R4", "1M", "R", ""],
+  ["R5", "1M", "R", ""],
+  ["R6", "1M", "R", ""],
+  ["R7", "100R", "R", ""],
+  ["R8", "10k", "R", ""],
+  ["R9", "10k", "R", ""],
+  ["R10", "10k", "R", ""],
+  ["R11", "10k", "R", "drawing notes the value is provisional (bogus)"],
+  ["C1", "1u", "C", "drawing notes the value is provisional (bogus)"],
+  ["D1", "1N4148", "D", ""],
+  ["D2", "1N4148", "D", ""],
+  ["D3", "1N4148", "D", ""],
+  ["U1", "4069", "IC", "hex inverter, four sections used; powered from +9V and GND"],
+  ["U2", "4069UB", "IC", "drawn as a block with A/Ainv/B/Binv... pins"],
+  ["U3", "4069UB", "IC", "drawn as a block with A/Ainv/B/Binv... pins; +9V/-9V supply"]
+ ]
+}

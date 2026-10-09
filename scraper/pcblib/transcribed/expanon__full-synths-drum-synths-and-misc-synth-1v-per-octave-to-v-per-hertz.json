@@ -1,0 +1,29 @@
+{
+ "id": "expanon:full-synths-drum-synths-and-misc-synth-1v-per-octave-to-v-per-hertz",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Octave-to-Hertz converter (M. Danielson, 2000), a clean single-page CAD schematic: TL082 summer, MAT-02 exponential pair, OP-7 output. Q1 and Q2 are the two halves of one MAT-02, listed as one row.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "100k", "R", ""],
+  ["R2", "100k", "R", ""],
+  ["R3", "100k", "R", ""],
+  ["R4", "100k", "R", "1%"],
+  ["R5", "100k", "R", ""],
+  ["R6", "15k", "R", ""],
+  ["R7", "560k", "R", "1%"],
+  ["R8", "560k", "R", "1%"],
+  ["R9", "390k", "R", ""],
+  ["R10", "56k", "R", ""],
+  ["R11", "1k", "R", "tempco resistor"],
+  ["R12", "150k", "R", ""],
+  ["R13", "10k", "R", ""],
+  ["R14", "680R", "R", ""],
+  ["R15", "1k0", "R", ""],
+  ["C1", "100p", "C", ""],
+  ["Q1", "MAT-02", "Q", "dual matched NPN pair; Q1 = MAT-02A, Q2 = MAT-02B in one package"],
+  ["U1", "TL082", "IC", ""],
+  ["U2", "OP-7", "IC", ""],
+  ["P1", "100k", "TRIM", ""],
+  ["P2", "10k", "TRIM", ""]
+ ]
+}

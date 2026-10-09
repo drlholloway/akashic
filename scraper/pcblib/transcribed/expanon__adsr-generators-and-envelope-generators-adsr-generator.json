@@ -1,0 +1,34 @@
+{
+ "id": "expanon:adsr-generators-and-envelope-generators-adsr-generator",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Eagle schematic of a CMOS/comparator ADSR (LM339, 4555, 4001, 4066, TL072); the four pots are off-board wire points labelled with their values. No R5, D2 or IC5 on the sheet.",
+ "uncertain": [
+  "R8: no value printed on the drawing"
+ ],
+ "rows": [
+  ["R1", "10K", "R", ""],
+  ["R2", "100K", "R", ""],
+  ["R3", "100K", "R", ""],
+  ["R4", "100K", "R", ""],
+  ["R6", "100K", "R", ""],
+  ["R7", "10K", "R", ""],
+  ["R8", "?", "R", "no value drawn"],
+  ["R9", "1K", "R", ""],
+  ["R10", "1K", "R", ""],
+  ["R11", "1M", "R", ""],
+  ["R12", "10K", "R", ""],
+  ["C1", ".001uF", "C", ""],
+  ["C2", "10uF", "C", ""],
+  ["D1", "1N4148", "D", ""],
+  ["D3", "1N4148", "D", ""],
+  ["IC1", "LM339", "IC", "quad comparator, drawn LM339D"],
+  ["IC2", "4555", "IC", "dual 1-of-4 decoder, drawn 4555N"],
+  ["IC3", "4001", "IC", "quad NOR, drawn 4001D"],
+  ["IC4", "4066", "IC", "quad bilateral switch, drawn 4066D"],
+  ["IC6", "TL072", "IC", "drawn TL072D"],
+  ["Attack", "B1M", "POT", "off-board, labelled ATTACK 1MB"],
+  ["Decay", "1M", "POT", "off-board, labelled Decay Pot 1M"],
+  ["Sustain", "100K", "POT", "off-board, labelled SUSTAIN 100K"],
+  ["Release", "B1M", "POT", "off-board, labelled REL-1MB"]
+ ]
+}

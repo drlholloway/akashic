@@ -12,14 +12,14 @@ at the bottom; re-run them after parser changes.
   have no parts: utility boards (jack, switch, control and 3PDT breakout boards, the AMT M1 EQ,
   controls and switch boards) and four clones (SD9, TS 808 V2, Distortion +, Rat) for which no
   schematic image was fetched; worth a look on the project pages.
-- **Experimentalists Anonymous**: 672 of 781 schematics were read by eye (October 2026; the last 187,
-  which had kept a thin OCR list of under 8 rows, on October 9: 491 OCR rows became 7,644). 55 have no
-  parts: they were looked at and hold nothing to list (wiring diagrams, circuit-bending photos, articles,
-  PCB layouts, continuation pages, formula-only app-note figures), apart from two too big or too blurred
-  to read in one pass: the Roland TR-707/727 service notes (schematics on PDF pages 10, 13 and 14, a
-  few hundred parts) and the Roland System-100M M-110 (an 825x584 scan). 106 keep the OCR list, all
-  with 8 or more rows; 68 small circuits read by eye have fewer than 8. The Ibanez TS-10 keeps its
-  OCR rows plus its transistors and D1 from the drawing's note.
+- **Experimentalists Anonymous**: every schematic with parts on it was read by eye (779 of 781; the last
+  293 on October 9: 187 thin OCR lists, 491 rows to 7,644, and the 106 longer OCR lists, 3,168 rows to
+  12,481). 56 have no parts: they were looked at and hold nothing to list (wiring diagrams,
+  circuit-bending photos, articles, PCB layouts, continuation pages, formula-only app-note figures),
+  apart from two too big or too blurred to read in one pass: the Roland TR-707/727 service notes
+  (schematics on PDF pages 10, 13 and 14, a few hundred parts) and the Roland System-100M M-110 (an
+  825x584 scan). Multi-board service sets carry per-board or per-page prefixes (the Korg MS-50's P1- to
+  P12-, the Boss CE-300's LED1- to LED3-). The DigiTech PDS2020 .gif copy is sheet 2 of 2 only.
 - **Bent Fishbowl**: 8 of 33 schematics come back thin; busy drawings defeat the
   designator/value pairing.
 - **GuitarPCB**: most NostalgiTone docs carry their tables in the text layer and read exactly; OCR fills
@@ -94,7 +94,6 @@ at the bottom; re-run them after parser changes.
 | On The Road Effects | Guerrero Oro | The build-guide link is a 'Build Guide Coming Soon' placeholder; nothing to parse until the guide is published |
 | Dead Astronaut | Chasm Reverb, Ebe Delay, Timestream Reverb | Raster docs where thorough OCR still returns nothing |
 | GuitarPCB | G.B.O.F. (16-project fuzz board), NostalgiTone Dual Combo Creator | No parts table: the doc lists sixteen projects to build on one board and points to DIY Layout Creator drawings |
-| Experimentalists Anonymous | Scans in general | Junk pairs survive: bare one-digit resistor values ('R38 = 8'), mangled designators (the Obesifier's are fixed by hand) |
 | Effects Layouts | Schematic Fuzz | Build doc is drill templates only; the schematic is on the silkscreen |
 | Effects Layouts | Melody Malfunction, Cranky Speaker | Doc has only a shopping list (value, type, quantity), so rows are named by quantity (`×2`) and controls are a knob count |
 | Effects Layouts | Six Shooter, Strider, Soil Slinger | Only a drill template or a blog post is linked; no parts list |

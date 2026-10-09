@@ -1,0 +1,21 @@
+{
+ "id": "expanon:amplifiers-and-vcas-tube-buffered-amplifier",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Tube Buffered Clone (platenspeler.com): 6922 cathode follower with SK170 JFET current source driving an LM3886 power amp; clean drawing.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "1k", "R", ""],
+  ["R2", "16k", "R", ""],
+  ["R3", "470k", "R", ""],
+  ["R4", "470K", "R", ""],
+  ["R5", "0.1", "R", "0.1 ohm output resistor"],
+  ["R6", "6k8", "R", ""],
+  ["R7", "65", "R", ""],
+  ["C1", "2u2", "C", ""],
+  ["C2", "100n", "C", ""],
+  ["T1", "SK170", "Q", "2SK170 N-JFET current source"],
+  ["OP1", "LM3886", "IC", "power amp IC"],
+  ["Ro1", "6922", "OTHER", "dual triode tube (one section drawn)"],
+  ["P1", "50k", "POT", "input volume"]
+ ]
+}

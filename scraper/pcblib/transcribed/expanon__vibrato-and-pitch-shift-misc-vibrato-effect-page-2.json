@@ -1,0 +1,23 @@
+{
+ "id": "expanon:vibrato-and-pitch-shift-misc-vibrato-effect-page-2",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "ESP vibrato page 2: the LFO (1458 triangle/square oscillator, BC549 buffer) with depth and FET bias controls; the audio path with the FET is on page 1. Clean CAD drawing.",
+ "uncertain": [],
+ "rows": [
+  ["R14", "100", "R", ""],
+  ["R15", "33k", "R", ""],
+  ["R16", "33k", "R", ""],
+  ["R17", "33k", "R", ""],
+  ["R18", "10k", "R", ""],
+  ["R19", "5k6", "R", ""],
+  ["C3", "1uF", "C", "electrolytic"],
+  ["C4", "100uF", "C", "electrolytic"],
+  ["C5", "100uF", "C", "electrolytic"],
+  ["Q1", "BC549", "Q", "NPN emitter follower"],
+  ["U2", "1458", "IC", "U2B section; U2A is on the other page"],
+  ["Speed", "100k", "POT", "VR2"],
+  ["Depth", "100k", "POT", "VR3"],
+  ["FET Bias", "10k", "TRIM", "TP3"],
+  ["Vibrato On/Off", "SPST", "SW", "SW1"]
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "id": "expanon:amplifiers-and-vcas-true-balanced-input-differential-amplifer",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Instrumentation (true balanced input) differential amplifier on two NE5532s, gain 3; values in parentheses are the mic-preamp alternates (46 dB), given in the notes. C2 and C4 designators are each printed twice.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "1K", "R", "100 for mic preamp"],
+  ["R2", "10K", "R", ""],
+  ["R3", "4.7K", "R", ""],
+  ["R4", "4.7K", "R", "470 for mic preamp"],
+  ["R5", "1K", "R", "100 for mic preamp"],
+  ["R6", "10K", "R", ""],
+  ["R7", "4.7K", "R", ""],
+  ["R8", "10K", "R", "1K for mic preamp"],
+  ["R9", "9.1K", "R", ""],
+  ["R10", "10K", "R", "1K for mic preamp"],
+  ["R11", "10K", "R", ""],
+  ["R12", "100", "R", ""],
+  ["CIN1", "10uF", "C", "electrolytic"],
+  ["CIN2", "10uF", "C", "electrolytic"],
+  ["C1", "100pF", "C", ""],
+  ["C2", "51pF", "C", "U1:A feedback; C2 is printed twice"],
+  ["C3", "100pF", "C", ""],
+  ["C4", "51pF", "C", "U1:B feedback; C4 is printed twice"],
+  ["×2", "51pF", "C", "second C2 (across R9/RV1 at U2:B input) and second C4 (U2:B feedback); designators duplicated on the drawing"],
+  ["×2", "10uF", "C", "supply bypass, electrolytic"],
+  ["×2", "0.1uF", "C", "supply bypass"],
+  ["U1", "5532", "IC", "NE5532 dual op amp, sections A and B"],
+  ["U2", "5532", "IC", "NE5532, only section B drawn"],
+  ["RV1", "2K", "POT", "gain/CMRR set, no name"]
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "id": "expanon:oscillators-lfos-and-signal-generators-ehx-lfo",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Clean CAD schematic of the EH LFO circuit (RC4558 triangle LFO driving a 4047 for two-phase clock outputs), +15V supply. No C1-C4 drawn.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "910k", "R", ""],
+  ["R2", "15k", "R", ""],
+  ["R3", "3.3k", "R", ""],
+  ["R4", "13k", "R", ""],
+  ["R5", "12k", "R", ""],
+  ["R6", "10k", "R", ""],
+  ["R7", "27k", "R", ""],
+  ["R8", "910k", "R", ""],
+  ["R9", "27k", "R", ""],
+  ["R10", "10k", "R", ""],
+  ["R11", "10", "R", "10 ohm supply resistor"],
+  ["R12", "120k", "R", ""],
+  ["C5", "100uF", "C", "electrolytic, supply filter"],
+  ["C6", "4.7uF", "C", "tantalum"],
+  ["C7", "4.7uF", "C", "tantalum"],
+  ["C8", "1uF", "C", "polarized"],
+  ["C9", "1uF", "C", "polarized"],
+  ["C10", ".001uF", "C", ""],
+  ["C11", "240pF", "C", ""],
+  ["C12", ".001uF", "C", ""],
+  ["D1", "1N4001", "D", ""],
+  ["U1", "RC4558", "IC", "dual op amp (U1A/U1B)"],
+  ["U2", "4047", "IC", "CD4047 multivibrator; pins 5,6 to +Vcc, 7,8,9,12 to GND, 13 NC"],
+  ["R13", "100k", "POT", "variable resistor (rate), no taper given"],
+  ["SW1", "DPDT", "SW", "positions 1&4 = Echo, 3&6 = Chorus"]
+ ]
+}

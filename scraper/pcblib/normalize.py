@@ -293,7 +293,7 @@ def normalize_row(row: BomRow) -> BomRow:
         raw = re.sub(r"(?i)(?<=\d)\s*meg(?:ohms?)?$", "M", raw)  # '1meg', '5Meg'
         raw = re.sub(r"^(\d+)E(\d*)$", r"\1R\2", raw)           # '220E', '4E7': E for ohms, as European drawings write it
         raw = re.sub(r"^([ABCW]?)(\d+)([kKM])(\d+)$", r"\1\2.\4\3", raw)  # 'A4k7', 'B2K2' (a resistor's 4k7 reads already)
-    if row.category == "C" and (m := re.fullmatch(r"([1-9]\d)([1-6])", raw)):
+    if row.category == "C" and (m := re.fullmatch(r"([1-9]\d)([1-6])[JKM]?", raw)):  # '472J': a code with its tolerance letter
         raw = f"{int(m.group(1)) * 10 ** int(m.group(2))}p"  # the printed code: '104' is 10 x 10^4 pF (100n); '470' stays 470pF
     if row.category == "Q" and re.match(r"^2[58][ABCDJK]\d{2,4}", row.value.strip()):
         row.value = "2S" + row.value.strip()[2:]  # OCR reads 2S as 25 or 28: 25K30A-Y is 2SK30A-Y (no part number starts 25K)

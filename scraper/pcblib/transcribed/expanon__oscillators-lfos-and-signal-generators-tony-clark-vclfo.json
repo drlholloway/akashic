@@ -1,0 +1,31 @@
+{
+ "id": "expanon:oscillators-lfos-and-signal-generators-tony-clark-vclfo",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Clean CAD schematic of Tony Clark's CA3080-based voltage-controlled LFO (1998) with square and triangle outputs; all values printed clearly.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "1K", "R", ""],
+  ["R2", "6.04K", "R", ""],
+  ["R3", "10K", "R", ""],
+  ["R4", "50K", "R", ""],
+  ["R5", "100K", "R", ""],
+  ["R6", "10K", "R", ""],
+  ["R7", "220", "R", ""],
+  ["R8", "20K", "R", ""],
+  ["R9", "100K", "R", ""],
+  ["R10", "220", "R", ""],
+  ["R11", "6.9K", "R", ""],
+  ["R12", "100K", "R", ""],
+  ["R13", "100K", "R", ""],
+  ["R14", "100K", "R", ""],
+  ["R15", "100K", "R", ""],
+  ["C1", "0.047uF", "C", ""],
+  ["Q1", "NTE466", "Q", "N-channel JFET (sync reset switch)"],
+  ["Q2", "2N3906", "Q", "PNP"],
+  ["U1", "TL082", "IC", "dual op amp (U1A, U1B)"],
+  ["U2", "CA3080", "IC", "OTA"],
+  ["U3", "TL082", "IC", "dual op amp (U3A, U3B)"],
+  ["TR1", "50K", "TRIM", ""],
+  ["TR2", "100K", "TRIM", "offset trim between -15V and +15V"]
+ ]
+}

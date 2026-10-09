@@ -1,0 +1,22 @@
+{
+ "id": "expanon:oscillators-lfos-and-signal-generators-amplified-white-noise-generator",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Clean small schematic: two MPS3904 transistors as a noise source, a 741 gain stage and an LM386 output amp on +/-9V. The ICs carry no designators.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "1.0K", "R", ""],
+  ["R2", "100K", "R", ""],
+  ["R3", "1.0K", "R", ""],
+  ["R4", "4.7K", "R", ""],
+  ["R5", "3.3K", "R", ""],
+  ["C1", "100uF", "C", "electrolytic, output coupling"],
+  ["C2", "0.47uF", "C", "electrolytic, +9V supply bypass"],
+  ["C3", "0.47uF", "C", "electrolytic, -9V supply bypass"],
+  ["C4", "0.022uF", "C", ""],
+  ["Q1", "MPS3904", "Q", "NPN; base-emitter junction used as noise source"],
+  ["Q2", "MPS3904", "Q", "NPN"],
+  ["×1", "741", "IC", "op amp, no designator drawn"],
+  ["×1", "LM386", "IC", "power amp drawn as 386, no designator"],
+  ["VR1", "10K", "POT", "level; no taper given"]
+ ]
+}

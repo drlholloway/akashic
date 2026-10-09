@@ -124,7 +124,6 @@ CORRECTIONS: dict[str, dict[Key, str | None]] = {
     "expanon:full-synths-drum-synths-and-misc-synth-boss-dr-100": {"R23": "82K", "R134": "100K"},
     "expanon:full-synths-drum-synths-and-misc-synth-boss-dr-110": {"R23": "82K", "R134": "100K"},
     "expanon:full-synths-drum-synths-and-misc-synth-boss-dr-55": {"IC3": "CD4011UB"},
-    "expanon:full-synths-drum-synths-and-misc-synth-korg-ms50": {"R27": "2.2M", "R100": "100K"},
     "expanon:full-synths-drum-synths-and-misc-synth-misc-theremin": {"R17": "680"},
     "expanon:full-synths-drum-synths-and-misc-synth-roland-tb-303": {
         "R61": "10K", "R66": "100K", "R92": "100K", "R96": "10K", "R97": "10K", "R101": "10K", "R113": "100K",
@@ -153,8 +152,8 @@ CORRECTIONS: dict[str, dict[Key, str | None]] = {
     },
     # The .jpg files of titles the archive also holds as .pdf (the plain id; the .pdf is its own board).
     "expanon:full-synths-drum-synths-and-misc-synth-moog-taurus": {
-        "R132": "1K", "R134": "22K", "R147": "4.7K", "R202": "1K", "R203": "22K", "R213": "10K", "R304": "33K", "R305": "2.2M",
-        "R307": "2.2K", "R308": "10K", "R310": "12K", "R406": "20K", "R523": "330", "R527": "47K", "R707": "10K",
+        "R132": "1K", "R134": "22K", "R203": "22K", "R213": "10K", "R304": "33K", "R305": "2.2M",
+        "R307": "2.2K", "R308": "10K", "R310": "12K", "R406": "20K", "R523": "330", "R527": "47K",  # R147 is 47.5K MF as drawn; R202 and R707 are the Sustain and Osc B Tune pots (2026-10-09)
     },
     "expanon:delay-echo-and-samplers-digitech-pds2020": {"R60": "47K", "R90": "22K", "U22": "LM358", "D16": "1N4148"},  # LM958 is no part; D16 drawn 1N414B
     "expanon:oscillators-lfos-and-signal-generators-ar-317-vco": {"U3": "LM301A"},
@@ -163,7 +162,7 @@ CORRECTIONS: dict[str, dict[Key, str | None]] = {
     "expanon:oscillators-lfos-and-signal-generators-ehx-lfo": {"D1": "1N4001", "R9": "27k"},
     "expanon:oscillators-lfos-and-signal-generators-moog-901a": {"R4": "680K", "R5": "4.7M"},
     "expanon:oscillators-lfos-and-signal-generators-moog-901b": {
-        "Q10": "2N2646", "R312": None, "R32": "22K", "R29": "13K", "R30": "43K", "R2": None,  # R312 is R32 misread; R2 '4' a fragment
+        "Q10": "2N2646", "R312": None, "R32": "22K", "R29": "13K", "R30": "43K",  # R312 is R32 misread (R2 is 330, read by eye 2026-10-09)
     },
     "expanon:phasers-dod-fx20c": {"R27": "10K"},
     "expanon:phasers-ibanez-pt909": {"C106": "100P", "R134": "4.7K", "Q104": "2SK30AY"},  # Q104: legend 'Q101~104: 2SK30AY (SELECTED)' (2026-10-09)

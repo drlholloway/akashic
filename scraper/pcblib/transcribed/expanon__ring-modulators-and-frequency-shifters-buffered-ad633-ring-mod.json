@@ -1,0 +1,40 @@
+{
+ "id": "expanon:ring-modulators-and-frequency-shifters-buffered-ad633-ring-mod",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Roman Sowa ring modulator (2000, 2002): AD633 multiplier with AD482 quad op-amp buffers. Clean CAD drawing; there is no R6.",
+ "uncertain": [
+  "P1, P2: drawn as pots wired VCC to VSS (offset nulls); classed as trimmers, could be panel controls"
+ ],
+ "rows": [
+  ["R1", "1k", "R", ""],
+  ["R2", "1k", "R", ""],
+  ["R3", "270k", "R", ""],
+  ["R4", "270k", "R", ""],
+  ["R5", "30k", "R", ""],
+  ["R7", "15k", "R", ""],
+  ["R8", "38k3", "R", ""],
+  ["R9", "75k", "R", ""],
+  ["R10", "1k", "R", ""],
+  ["R11", "6k2", "R", ""],
+  ["R12", "6k2", "R", ""],
+  ["R13", "1M", "R", ""],
+  ["R14", "1M", "R", ""],
+  ["C1", "1u", "C", ""],
+  ["C2", "1u", "C", ""],
+  ["C3", "100n", "C", "supply bypass"],
+  ["C4", "100n", "C", "supply bypass"],
+  ["C5", "100n", "C", "supply bypass"],
+  ["C6", "100n", "C", "supply bypass"],
+  ["C7", "10u", "C", "electrolytic"],
+  ["C8", "10u", "C", "electrolytic"],
+  ["U1", "AD633", "IC", "analog multiplier"],
+  ["U2", "AD482", "IC", "quad op amp, sections A-D"],
+  ["Modulation", "100k", "POT", "P3, modulation input level"],
+  ["Carrier", "100k", "POT", "P4, carrier input level"],
+  ["P5", "10k", "POT", "between the multiplier buffer and the output stage"],
+  ["P1", "100k", "TRIM", "VCC-VSS offset adjust into AD633 X input"],
+  ["P2", "100k", "TRIM", "VCC-VSS offset adjust into AD633 Y input"],
+  ["S1", "SPDT", "SW", "modulation input AC/DC coupling"],
+  ["S2", "SPDT", "SW", "carrier input AC/DC coupling"]
+ ]
+}

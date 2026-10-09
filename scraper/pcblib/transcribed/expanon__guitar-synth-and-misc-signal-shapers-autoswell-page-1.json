@@ -1,0 +1,39 @@
+{
+ "id": "expanon:guitar-synth-and-misc-signal-shapers-autoswell-page-1",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "E&MM Auto Swell (Clive Button) magazine page 1 with Figure 1 circuit diagram; semiconductor types are not given on this page (probably in the parts list on a later page). S1 is the momentary foot switch that starts the ramp, left out with the jacks and battery.",
+ "uncertain": [
+  "TR1: polarity from a faint arrow, read as PNP",
+  "RV1/RV2: knob names (Range, Rate) not printed on the drawing"
+ ],
+ "rows": [
+  ["R1", "100k", "R", ""],
+  ["R2", "470k", "R", ""],
+  ["R3", "220k", "R", ""],
+  ["R4", "100k", "R", ""],
+  ["R5", "220k", "R", ""],
+  ["R6", "47k", "R", ""],
+  ["R7", "1M0", "R", ""],
+  ["R8", "1M0", "R", ""],
+  ["R9", "47k", "R", ""],
+  ["R10", "47k", "R", ""],
+  ["R11", "4k7", "R", ""],
+  ["R12", "100k", "R", ""],
+  ["R13", "100k", "R", ""],
+  ["R14", "10k", "R", ""],
+  ["C1", "100nF", "C", ""],
+  ["C2", "100nF", "C", ""],
+  ["C3", "100nF", "C", ""],
+  ["C4", "10uF", "C", "electrolytic"],
+  ["C5", "100nF", "C", ""],
+  ["C6", "10uF", "C", "electrolytic"],
+  ["C7", "10uF", "C", "electrolytic"],
+  ["TR1", "?", "Q", "bipolar transistor, part number not on this page (symbol looks PNP)"],
+  ["TR2", "?", "Q", "NPN bipolar transistor, part number not on this page"],
+  ["TR3", "?", "Q", "JFET (s/d/g marked), part number not on this page"],
+  ["IC1", "?", "IC", "dual op amp (IC1a/IC1b, pins 1-8), part number not on this page"],
+  ["RV1", "47k", "POT", "sets TR3 gate/divider; likely the Range control"],
+  ["RV2", "1M0", "POT", "ramp speed; likely the Rate control"],
+  ["RV3", "1M0", "TRIM", "preset"]
+ ]
+}

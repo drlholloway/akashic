@@ -1,0 +1,16 @@
+{
+ "id": "expanon:buffers-switchers-mixers-and-routers-passive-stereo-mixer",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Tomi Engdahl simple passive stereo line mixer: two stereo inputs, each through a ganged 10K dual pot and 10K mixing resistors. No taper given.",
+ "uncertain": [],
+ "rows": [
+  ["R5", "10K", "R", ""],
+  ["R6", "10K", "R", ""],
+  ["R7", "10K", "R", ""],
+  ["R8", "10K", "R", ""],
+  ["R1", "10K", "POT", "Input 1 level; ganged with R2 (dual pot)"],
+  ["R2", "10K", "POT", "Input 1 level; ganged with R1 (dual pot)"],
+  ["R3", "10K", "POT", "Input 2 level; ganged with R4 (dual pot)"],
+  ["R4", "10K", "POT", "Input 2 level; ganged with R3 (dual pot)"]
+ ]
+}
