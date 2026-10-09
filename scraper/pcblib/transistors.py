@@ -169,9 +169,10 @@ def _candidates(pn: str) -> list[str]:
     for q in list(out):
         if "-" in q:
             out.append(q.split("-")[0])
-    m = re.match(r"^MMBF(J?\d{3,4}[A-Z]?)$", p)  # SMD twins of the J and 2N JFETs
+    m = re.match(r"^MMBF(J?\d{3,4}[A-Z]?)$", p)  # SMD twins of the J and 2N JFETs: MMBFJ201, MMBF4393 (2N4393), MMBF201 (J201)
     if m:
-        out += [m.group(1), "2N" + m.group(1)] if not m.group(1).startswith("J") else [m.group(1)]
+        n = m.group(1)
+        out += [n] if n.startswith("J") else ["2N" + n] if re.match(r"\d{4}", n) else ["J" + n]
     # Package suffixes (2N5088BU, BC549CTA, 2N3904G): peel trailing letters one at a time.
     for q in list(out):
         while re.search(r"[0-9][A-Z]{1,4}$", q):

@@ -215,6 +215,27 @@ def all_sheets(part: str, link: str) -> list[dict]:
     return hosted(sheets_of(stem) if stem == own else [Path(link).name])
 
 
+def base_spellings(category: str, part: str) -> list[str]:
+    """Shorter spellings of the same part whose sheet covers it, most specific first: a Japanese gain
+    grade or package letter (2SC2240BL, 2SC2785K, 2SK222E, 2SC945-P -> 2SC2240, 2SC2785, 2SK222, 2SC945),
+    a BC gain letter (BC307B -> BC307), an IC grade or package letter (SAD1024A, SAD-1024 -> SAD1024;
+    UPC4558C -> UPC4558). Diodes are left alone: the D9B and D9K are different parts of one family."""
+    p = part.upper().strip()
+    if category == "Q":
+        from .transistors import _candidates
+        return [c for c in _candidates(p) if c != p]
+    if category == "IC":
+        q = p.replace("-", "")
+        out = [q] if q != p else []
+        while re.search(r"\d[A-Z]{1,3}$", q):
+            q = q[:-1]
+            out.append(q)
+        from .normalize import ic_name
+        name = ic_name(re.sub(r"^HD14(\d{3})", r"CD4\1", re.sub(r"^UPC(?=4558|4559|4570)", "", p)))  # Hitachi's HD14011 is the CD4011; NEC's uPC4558 the 4558
+        return list(dict.fromkeys(x for x in [*out, name] if x != p))
+    return []
+
+
 def is_selector(link: str) -> bool:
     """A hosted link ('datasheets/AC128.pdf') whose file is a selector table."""
     return not link.startswith("http") and Path(link).stem in SELECTOR

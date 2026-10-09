@@ -197,7 +197,7 @@ def datasheets(add: list[str] = typer.Option(None, help="'CAT:PART=URL', a link 
     import re
     import shutil
     from urllib.parse import urlparse
-    from .datasheets import COVERED_BY, DISCONTINUED, FINDCHIPS, HOSTED, HOSTED_LIST, NOT_HOSTED, SELECTOR, TABLE, candidates, has_own, hosted_list, is_selector, part_like, sheet_for, sheets_of, table
+    from .datasheets import COVERED_BY, DISCONTINUED, FINDCHIPS, HOSTED, HOSTED_LIST, NOT_HOSTED, SELECTOR, TABLE, base_spellings, candidates, has_own, hosted_list, is_selector, part_like, sheet_for, sheets_of, table
     from .datasheets import host as host_pdf
     from .fetch import Fetcher
     from .paths import CACHE_DIR, DATA_DIR
@@ -274,6 +274,18 @@ def datasheets(add: list[str] = typer.Option(None, help="'CAT:PART=URL', a link 
             if v in by_value and not own and (not have or is_selector(have) and not is_selector(link)):
                 known[f'{by_value[v]["category"]}:{v}'] = link
                 con.print(f"covers {v} <- {sheet_file}.pdf")
+    for v, p in sorted(by_value.items()):  # a grade or package spelling takes its base part's sheet ('2SC2240BL' <- 2SC2240)
+        key = f'{p["category"]}:{v}'
+        if known.get(key) or p["category"] not in ("IC", "Q"):
+            continue
+        for base in base_spellings(p["category"], v):
+            link = known.get(f'{p["category"]}:{base}', "")
+            if not link and base in sheet_of and sheets_of(sheet_of[base]):
+                link = f"datasheets/{sheets_of(sheet_of[base])[0]}"
+            if link:
+                known[key] = link
+                con.print(f"grade {key} <- {base}")
+                break
     open_hosts = {"www.ti.com", "ww1.microchip.com", "www.vishay.com", "www.nisshinbo-microdevices.co.jp", "www.diodes.com", "electricdruid.net"}
     to_check: dict[str, list[str]] = {}
     tried = 0
