@@ -9,9 +9,9 @@ from typing import Iterable
 from selectolax.lexbor import LexborHTMLParser
 
 from ..models import BomRow, Circuit
-from ..normalize import normalize_row, is_plausible
+from ..normalize import categorize, is_plausible, is_prose_value, normalize_row
 from ..paths import CACHE_DIR, DATA_DIR
-from ..pdf import parse_bom_columns, pdf_text_pages, render_page
+from ..pdf import expand_refs, parse_bom_columns, pdf_text_pages, render_page
 from ..taxonomy import classify, classify_within, find_enclosure
 from . import register
 from .base import Adapter, clean_text, html_to_text
@@ -112,6 +112,8 @@ class FuzzDog(Adapter):
             else:
                 per_page = [_parse_fuzzdog_bom(p) for p in pages]
                 c.bom = max(per_page + [parse_bom_columns(pages)], key=len) if pages else []
+                if pages and c.bom not in per_page:
+                    _whole_values(c.bom, max(per_page, key=len), pages)
             first = next((r.variant for r in c.bom if r.variant), "")
             pots = list({r.ref: r for r in c.bom if r.category == "POT" and r.ref.isalpha() and r.variant in ("", first)}.values())
             if pots and (not c.controls or c.controls[0].endswith("knobs")):
@@ -174,6 +176,24 @@ def _parse_fuzzdog_bom(page: str) -> list[BomRow]:
             if is_plausible(nr):
                 rows.append(nr)
     return rows
+
+
+def _whole_values(rows: list[BomRow], cells: list[BomRow], pages: list[str]) -> None:
+    """The column parser wins on count (it expands Q1-3 into three rows) but splits a value at its
+    first space: 'Low gain BJT*' comes out 'Low'. The cell parser kept the whole value; take it, or
+    read it off the page where the cell parser missed the row ('Q1-3 Low gain NPN BJT**', 'Q1,2  Low gain')."""
+    whole = {ref: r.value for r in cells for ref in expand_refs(r.ref)}
+    for m in re.finditer(r"\b([QD])(\d+(?:[-,]\d+)*)\s+([A-Za-z][^\n]*?)(?=\s{3,}|\s*$)", "\n".join(pages), re.M):
+        for piece in m.group(2).split(","):  # 'Q1,2,3', 'Q1-3'
+            for ref in expand_refs(m.group(1) + piece):
+                whole.setdefault(ref, m.group(3).strip())
+    for r in rows:
+        v = whole.get(r.ref)
+        cat = r.category
+        if (v and v != r.value and v.startswith(r.value + " ") and not is_prose_value(cat, r.value)
+                and categorize(r.ref, "", v) in (cat, "LED")):  # 'Low' -> 'Low gain BJT*'; not 'between' -> a note, nor a trimmer row
+            r.value, r.category, r.norm_value = v, "", ""
+            normalize_row(r)
 
 
 _PAGE_NOISE = re.compile(r"schematic\s*\+?\s*bom|schematic|\bbom\b|^\W*and the\b|\bversion\b|[-–:]+", re.I)

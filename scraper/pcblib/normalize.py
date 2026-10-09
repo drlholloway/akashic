@@ -118,11 +118,15 @@ def categorize(ref: str, part_type: str, value: str = "") -> str:
     v = value.upper()
     if re.search(r"\b[SD]P[SD]T\b|3PDT|4PDT|\b[SD]P3T\b", v) or re.fullmatch(r"ON[-/ ]?(?:OFF[-/ ]?)?ON", v.strip()) or re.fullmatch(r"[SD]P[SD]T|[34]PDT", r.upper()):
         return "SW"  # 'DP3T ON-ON-ON', a switch named 'SPDT' whose value is 'On-off-on'
-    if ("LED" in v or "LYSDIOD" in v) and not re.match(r"^(IC|U|Q)\d", r):  # Lysdiod: Swedish for LED (Moody)
+    if ("LED" in v or "LYSDIOD" in v) and (not re.match(r"^(IC|U|Q)\d", r) or re.search(r"\d\s?MM\b", v)):  # Lysdiod: Swedish for LED (Moody); '3mm Red LED' even at Q7
         return "LED"
-    if "TRIM" in r.upper():
-        return "TRIM"
     t0 = part_type.lower()
+    if "TRIM" in r.upper() or (re.search(r"\bTRIMMER\b", v) and not re.search(r"\s(?:/|OR)\s", v)) or (t0.startswith("trimmer") and re.match(r"^[ABCW]?\d", v)):
+        return "TRIM"  # 'Q3B  50k trimmer': the bias trimmer of Q3
+    if re.search(r"\bSOCKET\b", v):
+        return "CONN"  # 'IC1-S  DIP-8 socket'
+    if re.search(r"\d\s?[KM]HZ\b", v):
+        return "XTAL"  # a 32.768kHz crystal numbered Q1
     if re.match(r"^(IC|U)\d+[A-Z]?$", r, re.I):
         return "IC"  # an IC in a socket footprint is still an IC
     if re.match(r"^(RV|VR|POT|P|R)\d+$", r, re.I) and re.search(r"trim", t0):
@@ -302,6 +306,9 @@ def normalize_row(row: BomRow) -> BomRow:
         raw = re.sub(r"[*+†‡]+$", "", raw).strip()          # footnote markers: 2N5458**, 1N4148+
         raw = re.sub(r"\s+[A-Z]$", "", raw)                  # stray column bleed: "1N5817 S"
         raw = re.sub(r"(?i)^MPS-?A-?(\d)", r"MPSA\1", raw)    # 'MPS-A18', 'MPSA-13' as old drawings hyphenate them
+    if row.category == "Q":
+        raw = re.sub(r"(?i)^(?=[ABCDK][1-9]\d{1,3}[A-Z]{0,2}(?:-[A-Z]{1,2}|\([A-Z]{1,2}\))?$)", "2S", raw)  # C2240BL, K30A-Y: Japanese parts are marked without the 2S
+        raw = re.sub(r"^(?=[2-6]\d{3}(?:/\d{1,2})?$)", "2N", raw)  # 3904, 5088/89: the 2N left off
     if row.category in ("R", "C", "L", "TRIM"):
         m = re.match(r"^(\d+(?:[.,]\d+)?\s*[pnuµμmkKMRr]?\d*\s*(?:[Ff]|ohms?|H)?)\s+([A-Za-z(][^\n]*|\d+/\d+\s*W.*)$", raw)
         if m and _parse_si(m.group(1)) is not None:   # "100p Silver Mica" -> value 100p, type "Silver Mica"
@@ -383,8 +390,8 @@ def _repair_part_number(category: str, value: str) -> str:
 # Words a semiconductor row may carry without a part number ('Germanium', 'NPN JFET', 'Dual op amp').
 # Any other digit-free value is prose or a placeholder picked up as a part: 'for', 'are', 'Clipping',
 # 'empty or your choice', 'Jumper*', '(optional'.
-_PART_WORDS = {"ge", "si", "germanium", "germ", "silicon", "schottky", "led", "leds", "zener", "npn", "pnp", "jfet", "fet",
-               "mosfet", "bjt", "bjet", "transistor", "transistors", "diode", "diodes", "red", "green", "blue", "yellow", "white",
+_PART_WORDS = {"ge", "si", "germanium", "germaniums", "germ", "silicon", "schottky", "led", "leds", "zener", "npn", "pnp", "jfet", "fet",
+               "mosfet", "bjt", "bjet", "fets", "bjts", "transistor", "transistors", "diode", "diodes", "red", "green", "blue", "yellow", "white",
                "amber", "orange", "clear", "diffused", "bicolor", "bi-color", "bicolour", "rgb", "status", "ldr", "vactrol", "opamp",
                "op", "amp", "op-amp", "opamps", "dual", "quad", "single", "bbd", "pic", "microcontroller", "regulator", "charge", "pump",
                "low", "gain", "high", "medium", "noise", "matched", "pair", "n-channel", "p-channel", "channel", "small", "signal",
@@ -396,7 +403,8 @@ def is_prose_value(category: str, value: str) -> bool:
     """A diode, transistor or IC row whose value is a word or placeholder, not a part."""
     if category not in ("D", "Q", "IC", "OPTO"):
         return False
-    v = value.strip(" *†‡()[].,:;-")
+    v = re.sub(r"\((?:i{1,3}|iv|vi{0,3})\)", "", value, flags=re.I)  # 'NPN Ge(i)': a footnote numbered in roman
+    v = v.strip(" *†‡()[].,:;-")
     if not v or re.search(r"\d", v):
         return False
     words = re.findall(r"[a-z]+", v.lower())  # 'low-gain' is two words
@@ -440,7 +448,7 @@ _CATALOG_FIX = [
 ]
 
 
-_IC_ONLY = re.compile(r"^(?:BA6\d{3}|BA7\d\d\b|HD14\d{3}|L78L\d\d|NJM\d{4})")
+_IC_ONLY = re.compile(r"^(?:BA6\d{3}|BA7\d\d\b|HD14\d{3}|L78L\d\d|NJM\d{4}|ZXCT\d{4})")
 
 
 def catalog_category(category: str, key: str) -> str:
@@ -510,6 +518,8 @@ def catalog_keys(category: str, value: str) -> list[str]:
     and the like contribute nothing."""
     v = re.sub(r"\s+", " ", value.strip().upper().strip("*"))
     if category in ("D", "Q", "IC", "OPTO", "L", "XTAL"):
+        v = re.sub(r"^\(([^()]+)\)$", r"\1", v)  # '(J201)': the whole value in brackets
+        v = re.sub(r"_(?:EBC|ECB|CBE|CEB|BCE|BEC)?\b", "", v) if category == "Q" else v  # '2N2222A_CEB', 'BC184_'
         v = re.sub(r"\s*\([^)]*\)?\s*", " ", v).strip()  # "(optional)", "(wired in reverse)", "J201(IDSS>Q1)"
         if v in _CATALOG_WORDS:
             return [_CATALOG_WORDS[v]]

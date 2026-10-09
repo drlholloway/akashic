@@ -73,11 +73,11 @@ def find_flags(db: sqlite3.Connection, tdb: sqlite3.Connection) -> tuple[list[di
     Q_WORDS = {"NPN", "PNP", "JFET", "FET", "MOSFET", "GE", "SI", "GE PNP", "GE NPN", "PNP GE", "NPN GE", "NPN SI", "PNP SI"}
 
     flags = []
-    MARKS = re.compile(r"[*†‡#]+|\((?:optional|opt\.?|see notes?|ge|si)\)", re.I)
+    MARKS = re.compile(r"[*†‡#]+|\((?:optional|opt\.?|see notes?|ge|si|i{1,3}|iv|vi{0,3})\)", re.I)
     ALT = re.compile(r"\s*(?:/|,|\bor\b|\bOR\b)\s*|\s+\(\s*|\)\s*")  # 'BAT41 (1N4148)' splits; 'CD4069(UBE)' is one part
     LED_WORDS = re.compile(r"^(?:\d\s?mm|red|green|blue|yellow|white|orange|amber|clear|diffused|bi-?colou?r|rgb|status|led|leds|lysdiod|flat top|\s)+$", re.I)
     PLACEHOLDER = re.compile(r"^(?:your|your choice|nothing|none|jumper|\(jumper\)|omit|n/?a|-|–|optional|\(optional\)|see notes?|tbd)$", re.I)
-    GENERIC_Q = re.compile(r"^(?:(?:NPN|PNP|N-?CHANNEL|P-?CHANNEL|JFET|MOSFET|FET|BJT|GE|SI|GERMANIUM|SILICON|LOW|MEDIUM|HIGH|GAIN|HFE|TRANSISTOR|MATCHED|PAIR|\s|[()\[\]+.-])+)$", re.I)
+    GENERIC_Q = re.compile(r"^(?:(?:NPN|PNP|N-?CHANNEL|P-?CHANNEL|JFET|MOSFET|FET|BJT|GE|SI|GERMANIUMS?|SILICON|LOW|MEDIUM|HIGH|GAIN|HFE|TRANSISTORS?|BJTS?|FETS|MATCHED|PAIR|\((?:I{1,3}|IV|VI{0,3})\)|<>\d+HFE|\s|[()\[\]+.-])+)$", re.I)
     REGULATOR = re.compile(r"^(?:L?78L?\d{2}|L?79L?\d{2}|LM317|LM1117|AMS1117.*|LP2950.*|MCP1700.*|TL431.*|7660.*|ICL7660.*|TC1044.*|LT1054.*|MAX1044.*)", re.I)
     LOOSE_POT = re.compile(r"(?<![A-Za-z0-9])(?:[ABCWLG]\s?\d+(?:[.,]\d+)?\s?[kKmM]|\d+(?:[.,]\d+)?\s?[kKmM]\s?[ABCWLG]?|\d+(?:[.,]\d+)?\s?[kKmM]?\s?(?:lin|log|rev))(?![A-Za-z0-9])", re.I)
 

@@ -7,6 +7,7 @@ from; remove it when a parser learns to read the board right.
     CORRECTIONS[circuit_id][designator] = corrected value, or None to drop the row
     CORRECTIONS[circuit_id][(variant, designator)] = the same, for one build variant only
     (designators match regardless of case: 'CLEAN' corrects a knob stored as 'Clean')
+    CORRECTIONS[circuit_id]['=' + value] = the same, for a row whose designator others share ('×1')
 
 A document no parser can read (values printed on the parts of a wiring drawing) can be transcribed
 whole instead: TRANSCRIBED[circuit_id] is its parts list, which replaces whatever the parsers found.
@@ -116,11 +117,12 @@ CORRECTIONS: dict[str, dict[Key, str | None]] = {
     },
     "expanon:distortion-boost-and-overdrive-marshall-guvnor": {"R6": "680k"},
     "expanon:filters-wahs-and-vcfs-buchla-291-bandpass-vcf": {"C10": "10uF", "R24": "68", "R36": "68K"},
-    "expanon:filters-wahs-and-vcfs-minimoog-ladder-vcf-2": {"R32": "150", "R41": "150", "R46": "68K", "R67": "200"},
-    "expanon:filters-wahs-and-vcfs-moog-minimoog-filter": {"R32": "150", "R41": "150", "R46": "68K", "R67": "200"},
+    # (Q: no Q18 is drawn; it was Q28 TIS92 misread, and the TIS93 is Q26, 2026-10-09)
+    "expanon:filters-wahs-and-vcfs-minimoog-ladder-vcf-2": {"R32": "150", "R41": "150", "R46": "68K", "R67": "200", "Q18": None, "Q26": "TIS93", "Q28": "TIS92"},
+    "expanon:filters-wahs-and-vcfs-moog-minimoog-filter": {"R32": "150", "R41": "150", "R46": "68K", "R67": "200", "Q18": None, "Q26": "TIS93", "Q28": "TIS92"},
     "expanon:flangers-ibanez-fl301": {"C123": "180P", "R149": "510K"},
     "expanon:full-synths-drum-synths-and-misc-synth-ar-318-sample-and-hold-and-noise-generato": {
-        "Q2": "2N3393", "Q10": "2N4870",
+        "Q2": "2N3393", "Q10": "2N4870", "Q7": "2N3393",  # Q7 read 2N3383 (2026-10-09)
     },
     "expanon:full-synths-drum-synths-and-misc-synth-boss-dr-100": {"R23": "82K", "R134": "100K"},
     "expanon:full-synths-drum-synths-and-misc-synth-boss-dr-110": {"R23": "82K", "R134": "100K"},
@@ -168,7 +170,7 @@ CORRECTIONS: dict[str, dict[Key, str | None]] = {
         "Q10": "2N2646", "R312": None, "R32": "22K", "R29": "13K", "R30": "43K", "R2": None,  # R312 is R32 misread; R2 '4' a fragment
     },
     "expanon:phasers-dod-fx20c": {"R27": "10K"},
-    "expanon:phasers-ibanez-pt909": {"C106": "100P", "R134": "4.7K"},
+    "expanon:phasers-ibanez-pt909": {"C106": "100P", "R134": "4.7K", "Q104": "2SK30AY"},  # Q104: legend 'Q101~104: 2SK30AY (SELECTED)' (2026-10-09)
     "expanon:phasers-nobels-ph-d": {
         "R4": "68K", "R5": "33K", "R6": "24K", "R62": "2K7", "R65": "1M", "R71": "12K", "R72": "56K", "R73": "470",
         "C1": "47N", "C2": "2.2µF", "C62": "2.2µF", "C63": "2.2µF", "C72": "10µF", "C81": "47µF", "C82": "4.7µF",
@@ -189,6 +191,48 @@ CORRECTIONS: dict[str, dict[Key, str | None]] = {
     "fivecats:scorpion-boost": {"Q1": "2N2222A"},
     "madbean:freeloader": {"Q1": "2N2222A", "Q3": "2N2222A"},
     "otrfx:warm-fuzzies": {("Ritual Fuzz", "C"): "2N2222A"},
+    # Transistor audit (checked against each document 2026-10-09).
+    # Typos printed in the docs themselves:
+    "moonn:powerlifter": {"Q1": "2N3904"},  # parts list prints 1N3904
+    "parasit:higgsparticle": {"Q1": "2N3904"},  # prints 3N3904
+    "fuzzdog:rattlecrow": {("RATTLE CROW", "Q1"): "2SC1815**"},  # the Rattle Crow table prints 2NC1815; the Dirty Bird one 2SC1815
+    "deadendfx:flange-a-rama": {"Q1": "2SC2458BL", "Q2": "2SC2458BL",  # prints 2SC24588L: the BL grade of the 2SC2458
+                                "C45": None, "IC6": "MN3204"},  # 'C45 706' is OCR of the IC1 C4570C row; MIN3204 a slip
+    "opelectronics:hot-tubes": {"C5": "4.7u", "C6": "4.7u", "C15": "4.7u", "C16": "4.7u"},  # read .7u: the 4 taken for the quantity
+    "fuzzdog:scrambler": {"R12": None},  # '*': a jumper in place of the R12 trimmer, not a part
+    "deadendfx:kakehashi-s-nightmare": {"Q6": "BS170"},  # the schematic prints bs1707
+    "deadendfx:redstone": {"Q6": "MPF102", "Q7": "J201", "Q8": "J201"},  # the doc's own 2019 erratum: MPF201 and J102 were typos
+    "fuzzdog:tweed55": {f"Q{i}": "MPF4393/MMBF4393*" for i in range(1, 6)},  # prints MBF4393
+    # OCR misreads of clean print:
+    "deadendfx:trahald": {"Q6": "BS250"},  # read B5250
+    "deadendfx:fugu": {"Q3": "PN2222A"},  # read PN22234
+    "deadendfx:by-eck": {"Q6": "J113"},  # read 3113
+    "guitarpcb:nostalgitone-doom-prophet": {"Q1": "J113"},  # read 4113; the notes name the J113 at Q1
+    "zerogiod:vitarium-fuzz-pcb-and-faceplate": {"Q5": "2N1711"},  # read 2Nt711
+    "otherpedals:super-murid-64-pcb": {"Q2": "2N5458"},  # read '7 2N5458'
+    "tayda:ea-tremolo": {"Q3": "2N5457"},  # a stray '31' from the next column
+    "deadastronaut:nano-8-midi-drums": {"Q5": None},  # 'Qs 2.1mm DC sockets': no transistor
+    # Rows shifted or split by the table parsers:
+    "dirtmonger:fuzz-face-diy-pcb": {"Q1": "NPN Germanium (BC108C, BC109 etc.)", "Q2": "NPN Germanium (BC108C, BC109 etc.)", "D1": "coloured LED"},
+    "lectricfx:bloozehound-overdrive": {"Q1": "JFET*", "Q2": "JFET*", "Q4": "JFET*", "Q5": "JFET*"},  # '*' in the table: matched JFETs, 2SK117 suggested; Q5 had 6k8 from the quantities table
+    "guitarelectronics:bassdrive": {"Q1": "2N3904", "Q2": "2N7000"},  # the shopping list's quoted designators were read as values
+    "effects1776:britannia": {"Q2": None, "Q4": None, "TRIMQ2": "50k trimmer", "TRIMQ4": "50k trimmer"},  # 'Trim Q2  50k': the bias trimmers
+    "effectslayouts:earthbender": {"Q1": "Low gain NPN silicon", "Q2": "Low gain NPN silicon", "Q3": "Low gain NPN silicon"},
+    "fuzzdog:utilface": {"Q1": "Low-medium gain BJT***", "Q2": "Low-medium gain BJT***"},  # *** any low-medium gain NPN or PNP
+    "tayda:fuzz-face": {"Q1": "2N3906 / BC108 / BC109", "Q2": "2N3906 / BC108 / BC109"},  # PNP 2N3906, or NPN BC108 or BC109
+    "moody:tremolito-kit": {"=2N5809": "2N5089"},  # a typo for the 2N5089 (confirmed by Lane, 2026-10-09)
+    "tayda:fuzz-face-with-inverter": {"Q1": "2N3906 / BC108 / BC109", "Q2": "2N3906 / BC108 / BC109"},
+    # Experimentalists Anonymous: a legend or note value paired with the wrong designator (each label viewed, 2026-10-09).
+    "expanon:fuzz-and-fuzzy-noisemakers-maestro-brassmaster": {"Q2": "2N3392"},  # legend 'Q1-Q4, Q6, Q7 = 2N3392'; 1N4001 is D1-4
+    "expanon:guitar-synth-and-misc-signal-shapers-maestro-brassmaster": {"Q2": "2N3392"},
+    "expanon:filters-wahs-and-vcfs-dunlop-crybaby": {"Q1": "2N3904", "Q2": "2N3904"},  # '-Q1 & Q2 are 2n3904'; 1N4148 is D1
+    "expanon:oscillators-lfos-and-signal-generators-ems-vcs3-osillator": {"Q81": None},  # 'Q81' is the tempco resistor fitted at R176
+    "expanon:buffers-switchers-mixers-and-routers-rat-bypass": {"Q1": "2N5457"},  # 1N914 labels the LED-leg diodes
+    "expanon:distortion-boost-and-overdrive-ibanez-ts-10": {"Q1": "2SC1815", "Q6": "2SC1815", "Q7": "2SK118", "Q8": "2SK118", "D1": "1N4001"},  # the drawing's note
+    "expanon:oscillators-lfos-and-signal-generators-sine-wave-generation-techniques": {"Q1": "2N3904", "Q2": "2N3904", "Q3": "2N3904"},  # Figure 1: 'Q1-Q3 2N3904'; the LM313 is the reference
+    "expanon:chorus-boss-ce-1-gif": {"Q7": "2SC900"},  # legend 'Q1,Q2,Q7,Q10,Q16: 2SC900'; 1S1555 is every diode
+    "expanon:guitar-synth-and-misc-signal-shapers-saw-waveshaper": {"Q10": "2N3904", "Q11": "2N3906"},  # read 2H0904
+    "expanon:fuzz-and-fuzzy-noisemakers-60s-style-fuzzbox": {"Q1": "SK3020", "Q2": "SK3005", "Q3": "SK3020"},  # legend 'Q1, Q3 SK3020 / Q2 SK3005'
 }
 
 # circuit_id -> [(ref, value, category, note)], read off the document by a person.
@@ -396,6 +440,8 @@ def apply(circuit_id: str, bom: list[BomRow]) -> list[BomRow]:
     out: list[BomRow] = []
     for r in bom:
         key = (r.variant, r.ref.upper()) if (r.variant, r.ref.upper()) in fixes else (None, r.ref.upper())
+        if key not in fixes and (None, "=" + r.value.upper()) in fixes:
+            key = (None, "=" + r.value.upper())  # a shopping-list row ('×1') named by its value
         if key in fixes:
             seen.add(key)
             value = fixes[key]
@@ -407,7 +453,7 @@ def apply(circuit_id: str, bom: list[BomRow]) -> list[BomRow]:
                 normalize_row(r)
         out.append(r)
     for (variant, ref), value in fixes.items():
-        if value is None or (variant, ref) in seen:
+        if value is None or (variant, ref) in seen or ref.startswith("="):
             continue
         cat = ""
         if re.fullmatch(r"[A-Z]{3,}\d?", ref) and (re.match(r"^[ABCW]\d", value) or re.search(r"\btrim", value, re.I)):  # VOL2, GAIN1, PRES1; not RPD1 1M

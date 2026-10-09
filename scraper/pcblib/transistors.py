@@ -153,22 +153,30 @@ def _candidates(pn: str) -> list[str]:
     """Spellings to try for a parts-list value: '2SC1815-GR' -> 2SC1815-GR, 2SC1815;
     'MMBFJ201' -> J201; 'J201/MMBFJ201' -> J201; '2N5088BU' -> 2N5088."""
     p = pn.upper()
-    pieces = [x for x in re.split(r"\s+OR\s+|/|\(", p) if re.search(r"[A-Z0-9]", x)]
-    p = pieces[0] if pieces else ""  # "2N5088 OR 2N5089", "J201/MMBFJ201", "J201(IDSS>Q1)", "(J201)": the first name
+    pieces = [x for x in re.split(r"\s+OR\s+|/|,|\(", p) if re.search(r"[A-Z0-9]", x)]
+    p = pieces[0] if pieces else ""  # "2N5088 OR 2N5089", "J201/MMBFJ201", "2N3904, 2N5088", "J201(IDSS>Q1)": the first name
+    p = re.sub(r"\s*<>.*$", "", p)  # "2N3904 <>170HFE": a gain the builder should pick
+    p = re.sub(r"^(?:\d{1,2}\s+(?=[A-Z0-9]{4})|(?:N-?CH\s+)?(?:JFET|MOSFET|FET|NPN|PNP)\s+(?=\S*\d))", "", p.strip())  # "7 2N5458", "JFET J201"
     p = re.sub(r"^[^A-Z0-9]+|[^A-Z0-9]+$", "", p.strip()).replace(" ", "")  # "*2N3904", "(J201)"
+    p = re.sub(r"_(?:EBC|ECB|CBE|CEB|BCE|BEC)$", "", p)  # "2N2222A_CEB": the pinout the doc wants
     if not p:
         return []
     out = [p]
-    if "-" in p:
-        out.append(p.split("-")[0])
+    if re.match(r"^[ABCDK][1-9]\d{1,3}", p):  # Japanese parts are marked without their 2S: C2240BL, K30A-Y, A1005
+        out.append("2S" + p)
+    if re.fullmatch(r"[2-6]\d{3}", p):  # "3904", "5457", "4403": the 2N left off
+        out.append("2N" + p)
+    for q in list(out):
+        if "-" in q:
+            out.append(q.split("-")[0])
     m = re.match(r"^MMBF(J?\d{3,4}[A-Z]?)$", p)  # SMD twins of the J and 2N JFETs
     if m:
         out += [m.group(1), "2N" + m.group(1)] if not m.group(1).startswith("J") else [m.group(1)]
     # Package suffixes (2N5088BU, BC549CTA, 2N3904G): peel trailing letters one at a time.
-    q = p
-    while re.search(r"[0-9][A-Z]{1,4}$", q):
-        q = q[:-1]
-        out.append(q)
+    for q in list(out):
+        while re.search(r"[0-9][A-Z]{1,4}$", q):
+            q = q[:-1]
+            out.append(q)
     return list(dict.fromkeys(out))
 
 
@@ -199,10 +207,23 @@ def _digits(pn: str) -> str:
 # another register (CV7351 is the UK military number for the 2N1308; 1T308A is the Latin
 # spelling of the Soviet GT308A) or the closest listed equivalent (Mullard's OC139, an NPN
 # germanium type rated 20 V, 130 mW, hFE 30 minimum, against the ASY29's 15 V, 150 mW, hFE 30).
-_ALIASES = {"CV7351": "2N1308", "1T308A": "GT308A", "OC139": "ASY29", "OC140": "ASY29", "CV7112": "ASY29"}
+# FS36999 is Fairchild's house number for the 2N5133 in the early Big Muffs; TR1623 is the Danelectro
+# drawing's library name (TR- prefix, as its TR-KSA812L) for the 2SC1623; CV10805 is the UK military
+# BC108 in TO-18.
+_ALIASES = {"CV7351": "2N1308", "1T308A": "GT308A", "1T308B": "GT308B", "OC139": "ASY29", "OC140": "ASY29", "CV7112": "ASY29",
+            "FS36999": "2N5133", "TR1623": "2SC1623", "CV10805": "BC108"}
+# The database files the BF245 family as MOSFETs; they are N-channel JFETs.
+_KIND_FIX = {"BF245": "jfet", "BF245A": "jfet", "BF245B": "jfet", "BF245C": "jfet"}
 
 
 def lookup(conn: sqlite3.Connection, pn: str) -> dict | None:
+    spec = _lookup(conn, pn)
+    if spec and spec["partnum"].upper() in _KIND_FIX:
+        spec["kind"] = _KIND_FIX[spec["partnum"].upper()]
+    return spec
+
+
+def _lookup(conn: sqlite3.Connection, pn: str) -> dict | None:
     cols = [c[1] for c in conn.execute("PRAGMA table_info(specs)")]
     cands = _candidates(pn)
     for cand in cands:
@@ -219,9 +240,10 @@ def lookup(conn: sqlite3.Connection, pn: str) -> dict | None:
     for cand in cands:
         if len(cand) < 5:
             continue
-        row = conn.execute("SELECT * FROM specs WHERE partnum LIKE ? COLLATE NOCASE ORDER BY length(partnum), partnum LIMIT 1", (cand + "%",)).fetchone()
-        if row:
-            return dict(zip(cols, row))
+        # Only a longer spelling of the same number: 2SK30 is not the 2SK301, nor 2SK381 the 2SK3811.
+        for row in conn.execute("SELECT * FROM specs WHERE partnum LIKE ? COLLATE NOCASE ORDER BY length(partnum), partnum", (cand + "%",)):
+            if not row[cols.index("partnum")][len(cand)].isdigit():
+                return dict(zip(cols, row))
     return None
 
 
