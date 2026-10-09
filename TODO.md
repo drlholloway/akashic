@@ -117,17 +117,40 @@ at the bottom; re-run them after parser changes.
 
 ## Transistors
 
-Audit of October 9, 2026: 9,059 transistor rows name 461 distinct part numbers; 415 match the transistor
-database (`data/transistors.sqlite`) and 257 rows are generic ('NPN', 'Low gain BJT', '?'). Every
-mismatch was traced to its source and 55+ boards corrected (doc typos, OCR misreads, legend values on
-the wrong designator, shifted rows). The 46 still unmatched are real parts the database lacks: unijunctions
-(2N2646, 2N4870, 2N6027), Soviet KP303A/E/ZH and KR504NT3V, BC264A/D, the 2N4302, 2N5103, 2N5863, Japanese
-JFETs the lookup used to match to the wrong part (2SK34D, 2SK381/B, 2SK44C/SP, 3SK30), TI and Siliconix
-oddities (TIS-59, TIX882, E112, E212, U3078, P1069C, AD3958, MAT04), house numbers (Moog 991-002298/873,
-ARP TZ-81/TZ-581, Maestro P-2356, Heathkit X29A829, Korg TX-429D, Motorola HEP-50/801, NP4124, CV7353)
-and replacement lines (NTE466, SK3005, SK3020), plus InterFET's SMPJ201. `pcblib audit` flags a new one
-as 'Transistor not in the transistor database'; a part the database lacks but that has a close listed
-equivalent goes in `transistors._ALIASES`.
+Audit of October 9, 2026, recounted after the day's readings by eye: 10,531 transistor rows name 538
+distinct part numbers; 476 match the transistor database (`data/transistors.sqlite`) and 427 rows are
+generic ('NPN', 'Low gain BJT', '?'). Every mismatch in the first pass was traced to its source and 55+
+boards corrected (doc typos, OCR misreads, legend values on the wrong designator, shifted rows). The 62
+unmatched are real parts the database lacks: unijunctions (2N2646, 2N4870, 2N6027), Soviet KP303A/E/ZH
+and KR504NT3V, BC264A/D, the 2N4302, 2N5103, 2N5863, Japanese JFETs (2SK34D, 2SK381/B, 2SK44C/SP, 3SK30),
+TI and Siliconix oddities (TIS-59, TIX882, E112, E212, U3078, U307B, P1069C, AD3958, MAT04), house
+numbers (Moog 991-002298/873, ARP TZ-81/TZ-581, Maestro P-2356, Heathkit X29A829, Korg TX-429D, Motorola
+HEP-50/801, Gibson SF51234, NP4124, CV7353) and replacement lines (NTE466, SK3005, SK3020), plus InterFET's
+SMPJ201. `pcblib audit` flags a new one as 'Transistor not in the transistor database'; a part the
+database lacks but that has a close listed equivalent goes in `transistors._ALIASES`.
+
+- **Descriptions** ('Si NPN BJT TO-92 Through-Hole', `transistors.describe`): 485 of the 533 transistor
+  part numbers in the parts index are described, and 89% of transistor uses carry a package. The package
+  is the registered one, from `transistors._PACKAGES` (a table of well-known families; 'TO-18 / TO-92'
+  for metal-can parts also sold in plastic). Without a description (48): house numbers and parts the
+  database lacks (TX-429D, P-2356, NP4124, X29A829, TZ-81, U3078, TIX882, 2SK44SP/-C, 2SK381B, 2N5103).
+  Without a package (209): most germanium types (OC71, OC75, NKT275, 2N1308, 2N404A, 1T308A), the GE and
+  Fairchild TO-98 / TO-106 plastics (2N3392, 2N5172, 2N3565, 2N5133, 2N4058) and Japanese parts not in the
+  table (2SC2362, 2SC1849, 2SC1583, 2SK222). Extend the table only from a maker's sheet.
+- 'TR-KSA812L' (Danelectro DJ-17 drawing) is the drawing's library prefix on a KSA812; the lookup does
+  not strip 'TR-', so it is unmatched.
+
+## Diodes
+
+Descriptions (`diodes.describe`, October 9, 2026): 235 of the 265 diode part numbers in the parts index are
+described, 99% of diode uses, 88% with a package. Families whose package is not certain are described
+without one (the Japanese 1S and 1SS signal diodes, OA/D9/GA germaniums, Renesas RD and ROHM MTZ
+zeners, Sanken and Toshiba rectifiers). Undescribed (30): house numbers (Moog CL-1, Maestro
+919-004799, Dunlop ZL9M3, Guyatone SG3246/SG9150, Matsushita MA522), markings read off parts (51E,
+5C2, 10E-2, 2D503B) and values printed that way in their sources whose intended part is not certain:
+Five Cats Danish Pastry D5 '1N474A' (beside a 1N747A; 1N747A or 1N4742A?), EHX Clone Theory 1N4301 and
+1N9658, Moog 904B 'IN346', E-mu 1N4950, Griffin Hype-R Fuzz 35686G, PedalPCB Lenora SH270, Ibanez AFL
+'5.1EB'.
 
 ## Datasheets
 

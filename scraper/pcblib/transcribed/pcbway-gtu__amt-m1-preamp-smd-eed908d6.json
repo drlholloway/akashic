@@ -66,7 +66,7 @@
   ["×1", "100n", "C", "supply, 50V, no designator"],
   ["D1", "BAT54C", "D", ""],
   ["D2/D3", "BAT54C", "D", "one dual package"],
-  ["D4", "1N148", "D", "as printed; 1N4148"],
+  ["D4", "1N4148", "D", "printed 1N148"],
   ["×1", "1N5804", "D", "reverse-polarity protection"],
   ["T1", "MMBF5458", "Q", ""],
   ["T2", "2SK208R", "Q", ""],

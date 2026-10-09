@@ -151,6 +151,8 @@ def run(images: bool = False) -> None:
             (EXPORT_DIR / "circuits" / f"{c['file_id']}.json").write_text(json.dumps(c, ensure_ascii=False))
     sheets = datasheet_table()  # manufacturer links only; datasheets themselves are never exported
     descs = _transistor_descs([p["value"] for p in parts.values() if p["category"] == "Q"])
+    from .diodes import describe as describe_diode
+    descs.update({p["value"]: d for p in parts.values() if p["category"] == "D" and (d := describe_diode(p["value"]))})
     parts_out = sorted(
         ({**p, "circuits": sorted(p["circuits"]), "datasheet": sheets.get(p["key"], ""), "selector": is_selector(sheets.get(p["key"], "http")),
           "datasheets": all_sheets(p["value"], sheets.get(p["key"], "")), "types": [t for t, _ in sorted(p["types"].items(), key=lambda kv: (-kv[1], kv[0]))][:5],

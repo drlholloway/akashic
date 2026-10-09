@@ -32,7 +32,7 @@ Key = str | tuple[str, str]
 
 CORRECTIONS: dict[str, dict[Key, str | None]] = {
     # Dead End FX Zuul: OCR reads IC3 as 'LhI3Z24' (reported 2026-09-29).
-    "deadendfx:zuul": {"IC3": "LM324"},
+    "deadendfx:zuul": {"IC3": "LM324", "D5": "1N4148", "D6": "1N4148"},  # D5/D6 read '1n414' (2026-10-09)
     # Dead End FX 2952: the schematic prints CLEAN A15K, the parts table A20K; A20K is right (reported 2026-09-29).
     "deadendfx:2952": {"CLEAN": "A20K"},
     # Moonn Kloppe Gerät: the build doc itself prints 1A34A, a typo for the 1N34A germanium diode (reported 2026-09-30).
@@ -193,7 +193,7 @@ CORRECTIONS: dict[str, dict[Key, str | None]] = {
     "fuzzdog:rattlecrow": {("RATTLE CROW", "Q1"): "2SC1815**"},  # the Rattle Crow table prints 2NC1815; the Dirty Bird one 2SC1815
     "deadendfx:flange-a-rama": {"Q1": "2SC2458BL", "Q2": "2SC2458BL",  # prints 2SC24588L: the BL grade of the 2SC2458
                                 "C45": None, "IC6": "MN3204"},  # 'C45 706' is OCR of the IC1 C4570C row; MIN3204 a slip
-    "opelectronics:hot-tubes": {"C5": "4.7u", "C6": "4.7u", "C15": "4.7u", "C16": "4.7u"},  # read .7u: the 4 taken for the quantity
+    "opelectronics:hot-tubes": {"C5": "4.7u", "C6": "4.7u", "C15": "4.7u", "C16": "4.7u", "D1": "1N4001"},  # read .7u and N4001: the 1 or 4 taken for the quantity
     "fuzzdog:scrambler": {"R12": None},  # '*': a jumper in place of the R12 trimmer, not a part
     "deadendfx:kakehashi-s-nightmare": {"Q6": "BS170"},  # the schematic prints bs1707
     "deadendfx:redstone": {"Q6": "MPF102", "Q7": "J201", "Q8": "J201"},  # the doc's own 2019 erratum: MPF201 and J102 were typos
@@ -215,6 +215,19 @@ CORRECTIONS: dict[str, dict[Key, str | None]] = {
     "effectslayouts:earthbender": {"Q1": "Low gain NPN silicon", "Q2": "Low gain NPN silicon", "Q3": "Low gain NPN silicon"},
     "fuzzdog:utilface": {"Q1": "Low-medium gain BJT***", "Q2": "Low-medium gain BJT***"},  # *** any low-medium gain NPN or PNP
     "tayda:fuzz-face": {"Q1": "2N3906 / BC108 / BC109", "Q2": "2N3906 / BC108 / BC109"},  # PNP 2N3906, or NPN BC108 or BC109
+    # Diode audit (checked against each document 2026-10-09).
+    "fuzzdog:fatpig": {"D2": "1N4148", "D3": "1N4148"},  # the table prints 1N4147, which is no part
+    "fuzzdog:dualcrank": {"D2": "1N60P", "D3": "1N60P", "D4": "1N60P"},  # prints 1N50P beside the D9K germaniums
+    "pcbguitarmania:deathbyfuzziv": {"D1": "1N5227B*", "D2": "1N5227B*"},  # prints 1N5277B (160 V); its note says use a 3V6 zener
+    "fivecats:ztrem-zvex-trem-seeker-clone": {"D1": "1N757A"},  # prints '1N575A 9.1V Zener'; the 9.1 V part is the 1N757A
+    "guitarelectronics:signal-mixer": {"D1": "1N400X"},  # prints 400X
+    "deadendfx:duality": {"D5": "1N4148"},  # read IN4143
+    "lectricfx:abacus-8-step-analog-sequencer": {"D199": "1N5817"},  # read 1n8817
+    "otherpedals:skywater-pcb": {"D1": "1N5817"},  # read iNsai7; the schematic prints 1N5817
+    "deadendfx:silent-relay-bypass-pcb": {"D11": "1N4148W"},  # read INW4148, on a SOD-123 footprint
+    "lectricfx:o-zoan-v2-0-jfet-overdrive": {"D4": "1N400X", "D5": "1N400X"},  # read n400x, 4n400x
+    "guitarpcb:nostalgitone-dual-combo-creator-pcb": {"D1": None},  # '0C5' is OCR noise; the doc has no parts table
+    "deadendfx:string-ringer": {"D11": "Yellow 5mm LED"},
     "moody:tremolito-kit": {"=2N5809": "2N5089"},  # a typo for the 2N5089 (confirmed by Lane, 2026-10-09)
     "tayda:fuzz-face-with-inverter": {"Q1": "2N3906 / BC108 / BC109", "Q2": "2N3906 / BC108 / BC109"},
     # Experimentalists Anonymous: a legend or note value paired with the wrong designator (each label viewed, 2026-10-09).

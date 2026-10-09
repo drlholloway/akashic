@@ -69,7 +69,7 @@ export interface PartEntry {
 	/** Every sheet for the part, first its own: a discontinued part made by several fabs has one per maker. */
 	datasheets?: { href: string; maker: string; selector: boolean }[];
 	zeners?: { pn: string; series: string; power: string; package: string; datasheet: string }[];
-	desc?: string; // a transistor's kind: 'Si NPN BJT TO-92 Through-Hole' (see transistors.describe)
+	desc?: string; // what the part is: 'Si NPN BJT TO-92 Through-Hole', 'Si Schottky DO-41 Through-Hole' (transistors.describe, diodes.describe)
 	count: number;
 	slug: string;
 }

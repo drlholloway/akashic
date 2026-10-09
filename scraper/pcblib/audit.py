@@ -18,6 +18,7 @@ from datetime import datetime
 from pathlib import Path
 
 from . import transistors
+from .diodes import describe as describe_diode
 from .paths import CACHE_DIR, DATA_DIR
 
 AUDIT_DIR = CACHE_DIR / "audit"
@@ -234,7 +235,7 @@ def find_flags(db: sqlite3.Connection, tdb: sqlite3.Connection) -> tuple[list[di
             alts = alternatives(v)
             def diode_ok(a):
                 A = a.upper()
-                return bool(D_OK.match(A) or LED_WORDS.match(a) or re.fullmatch(r"\d{3,4}[A-Z]?|34A|60P?", A)
+                return bool(describe_diode(a) or D_OK.match(A) or LED_WORDS.match(a) or re.fullmatch(r"\d{3,4}[A-Z]?|34A|60P?", A)
                             or re.fullmatch(r"\d{1,2}(?:[.V]\d)?V?\s*(?:ZENER)?|ZENER.*|.*SCHOTTKY.*|GERM.*|1S\d+|2D\d+.*|MA\d+.*|BAS\d+.*|.*\bDIODES?\b.*|.*\bZENER\b.*|1N47\d\d[AB]?\b.*", A))
             if re.fullmatch(r"\d+(?:\.\d+)?\s*[pnuµ]F?", v, re.I) or re.fullmatch(r"\d+(?:\.\d+)?\s*[kKM]", v):
                 flag(r, "high", "Diode carries a capacitor or resistor value", kind="wrong category")
