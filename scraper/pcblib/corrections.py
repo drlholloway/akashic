@@ -158,7 +158,7 @@ CORRECTIONS: dict[str, dict[Key, str | None]] = {
         "R307": "2.2K", "R308": "10K", "R310": "12K", "R406": "20K", "R523": "330", "R527": "47K", "R707": "10K",
     },
     "expanon:full-synths-drum-synths-and-misc-synth-moog-rogue": {"R57": None, "R7": "20K", "R25": "620K", "R27": "205K", "R79": "62K"},
-    "expanon:delay-echo-and-samplers-digitech-pds2020": {"R60": "47K", "R90": "22K", "U22": "LM358"},  # LM958 is no part
+    "expanon:delay-echo-and-samplers-digitech-pds2020": {"R60": "47K", "R90": "22K", "U22": "LM358", "D16": "1N4148"},  # LM958 is no part; D16 drawn 1N414B
     "expanon:oscillators-lfos-and-signal-generators-ar-317-vco": {"U3": "LM301A"},
     "expanon:oscillators-lfos-and-signal-generators-ar-324-lag-and-lfo": {"R32": "120K"},
     "expanon:oscillators-lfos-and-signal-generators-e-music-vcdo": {"R9": "100k", "R14": "1M5"},
@@ -183,7 +183,6 @@ CORRECTIONS: dict[str, dict[Key, str | None]] = {
     # found while linking datasheets (2026-10-09). The 2N5008 (Dunwich Cthulhu, Whippoorwill) and NP4124
     # (DOD 280) are printed that way in the originals and stay.
     "bentfishbowl:pelota-2-pt2399-delay": {"D1": "1N4148"},
-    "expanon:delay-echo-and-samplers-digitech-pds2020": {"D16": "1N4148"},
     "fuzzdog:emperor": {"D5": "1N4148", "D6": "1N4148"},
     "rwlpedal:yellow-rumped-fuzz": {"D1": "1N4148"},
     "fivecats:the-m-drive-emerson-custom-em-drive-transparent-overdrive-clone": {"Q1": "2N2222A"},
