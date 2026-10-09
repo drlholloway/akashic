@@ -179,6 +179,17 @@ CORRECTIONS: dict[str, dict[Key, str | None]] = {
     },
     "expanon:tone-control-and-eqs-ibanez-be-10-graphic-bass-eq": {"R3": "100K", "R25": "330"},
     "expanon:tone-control-and-eqs-ibanez-graphic-eq": {"R3": "100K", "R25": "330"},
+    # Part numbers that do not exist, typos for the 1N4148 and 2N2222A in the documents or their reading;
+    # found while linking datasheets (2026-10-09). The 2N5008 (Dunwich Cthulhu, Whippoorwill) and NP4124
+    # (DOD 280) are printed that way in the originals and stay.
+    "bentfishbowl:pelota-2-pt2399-delay": {"D1": "1N4148"},
+    "expanon:delay-echo-and-samplers-digitech-pds2020": {"D16": "1N4148"},
+    "fuzzdog:emperor": {"D5": "1N4148", "D6": "1N4148"},
+    "rwlpedal:yellow-rumped-fuzz": {"D1": "1N4148"},
+    "fivecats:the-m-drive-emerson-custom-em-drive-transparent-overdrive-clone": {"Q1": "2N2222A"},
+    "fivecats:scorpion-boost": {"Q1": "2N2222A"},
+    "madbean:freeloader": {"Q1": "2N2222A", "Q3": "2N2222A"},
+    "otrfx:warm-fuzzies": {("Ritual Fuzz", "C"): "2N2222A"},
 }
 
 # circuit_id -> [(ref, value, category, note)], read off the document by a person.

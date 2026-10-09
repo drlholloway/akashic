@@ -7,12 +7,15 @@ at the bottom; re-run them after parser changes.
 
 ## Whole-vendor gaps
 
-- **PCBWay (Glory to Ukraine)**: parts are the schematic's value labels counted by OCR ('×4 470k'):
-  the drawings carry no designators and the member uploads no BOM (a login adds only a PDF of
-  the same drawing and a layout render). Counts are best effort where OCR misses a small label.
-- **Experimentalists Anonymous**: 331 of 770 schematics have no readable designators
-  (hand-drawn or low-resolution scans; 415 before Vision); 235 more have fewer than 8 rows.
-  Positional OCR only works on clean traced drawings.
+- **PCBWay (Glory to Ukraine)**: the drawings carry no designators and the member uploads no BOM,
+  so parts were read by eye from the schematic and grouped by value ('×4 470k'). 10 of 337 boards
+  have no parts: utility boards (jack, switch, control and 3PDT breakout boards, the AMT M1 EQ,
+  controls and switch boards) and four clones (SD9, TS 808 V2, Distortion +, Rat) for which no
+  schematic image was fetched; worth a look on the project pages.
+- **Experimentalists Anonymous**: 481 of 781 schematics were read by eye (October 2026). 45 have no
+  parts: 43 of them were looked at and hold nothing to list (wiring diagrams, circuit-bending photos,
+  articles, PCB layouts, continuation pages). 188 more came from positional OCR with fewer than 8
+  rows and were not read by eye; 39 small circuits read by eye also have fewer than 8.
 - **Bent Fishbowl**: 8 of 33 schematics come back thin; busy drawings defeat the
   designator/value pairing.
 - **GuitarPCB**: most NostalgiTone docs carry their tables in the text layer and read exactly; OCR fills
@@ -103,11 +106,25 @@ at the bottom; re-run them after parser changes.
 
 ## Datasheets
 
-Parts without a manufacturer datasheet link (checked October 2026): 1N34A and the rarer Panasonic BBDs (MN3101, MN3204, MN3001; no maker copy online; MN3102, MN3207,
-MN3205, MN3005 and MN3007 link to the Panasonic, Coolaudio or Xvive sheets hosted by the distributor Cabintech), CA3080 (Renesas obsolete), BAT41,
-2SC1815 and other discontinued Japanese parts, BC108/BC109 and the germanium transistors. Generic
-entries (GE, NPN, a bare zener voltage) cannot have one. Nexperia's site blocks scripts and was not
-checked; it may cover some BC and PMBT parts.
+Counts from `pcblib datasheets` as of October 2026: 511 of 1,119 part numbers link a datasheet. Every
+current part used more than once was searched by hand (`"<part> datasheet pdf"`, maker's own site only).
+
+- **Discontinued (hosted)**: 67 of the 237 sheets in `datasheets.DISCONTINUED` are hosted, 13 have
+  only a selector or catalog row (mostly germanium: AC176, OC139, 2N5308, OC71, OC75, AC127), and
+  157 are still to download. The most used: 1S1555, SAD1024, 2SK118, 2SC945, 2SK184, 2N4302,
+  1T308, NKT275, 2SC2785, KP303, CA3094. `pcblib datasheets` writes the worklist to
+  `data/cache/datasheets/discontinued.html`.
+- **Current parts still without a link**: 404, of which only 23 are used more than once. Those are
+  generic LDRs with no maker sheet (GL5516, GL5537-1, KE-10720, Morley's M79-211564-000), house
+  numbers (Maestro P-2356, DOD RCY568, TI592, A02650, Boss FD24006BP, the Korg 35 module), the
+  CEM3310 and CEM3360 (Alfa reissues with no sheet on Alfa's site), NTE103 (replacement-house spec
+  sheet, not checked), the 2N3965 (only a Central selector row) and misreads that belong in
+  `corrections.py`: 2N222A (2N2222A), NP4124 (PN4124), 2N5008 (2N5088), 1N414B and 1N1418 (1N4148).
+  The other 381 are used once, mostly OCR spellings of linked parts; not yet searched.
+- **Panasonic BBDs**: MN3204 and MN3001 have no maker copy online. The others link to the copies
+  that the distributor Cabintech hosts, named after the new production where there is one (MN3207
+  -> Coolaudio V3207, MN3101 -> Cabintech CT3101, BL3208 -> Coolaudio V3208).
+- Generic entries (GE, NPN, a bare zener voltage, LED colours) cannot have one.
 
 ## Parser wishes
 
