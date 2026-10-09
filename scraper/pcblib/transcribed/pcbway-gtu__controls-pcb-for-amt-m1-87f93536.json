@@ -1,0 +1,10 @@
+{
+ "id": "pcbway-gtu:controls-pcb-for-amt-m1-87f93536",
+ "read": "2026-10-09, by eye from the board render on the project page",
+ "comment": "Controls board of the member's AMT M1 build: only the pots and a 6-pin header; the values are printed on the silkscreen.",
+ "uncertain": [],
+ "rows": [
+  ["Gain", "A100K", "POT", ""],
+  ["Level", "A500K", "POT", ""]
+ ]
+}

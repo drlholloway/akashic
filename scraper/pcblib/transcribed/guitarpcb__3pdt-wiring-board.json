@@ -1,0 +1,11 @@
+{
+ "id": "guitarpcb:3pdt-wiring-board",
+ "read": "2026-10-09, by eye from the build document",
+ "comment": "GuitarPCB 3PDT wiring board (v4/v5/v6); the only parts are the LED, its CLR and the 3PDT switch, from the board-label list in the document.",
+ "uncertain": [],
+ "rows": [
+  ["CLR", "1K8", "R", "LED current limiting resistor: 1K8 (bright) to 4k7 (dim)"],
+  ["D1", "LED", "LED", "common-anode bicolor or standard status LED"],
+  ["×1", "3PDT", "SW", "foot switch soldered to the back of the board"]
+ ]
+}

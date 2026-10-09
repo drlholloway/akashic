@@ -1,0 +1,11 @@
+{
+ "id": "pcbway-gtu:eq-pcb-for-amt-m1-7ab54cc0",
+ "read": "2026-10-09, by eye from the board render on the project page",
+ "comment": "EQ board of the member's AMT M1 build: only the pots and a 6-pin header; the values are printed on the silkscreen.",
+ "uncertain": [],
+ "rows": [
+  ["Low", "A500K", "POT", ""],
+  ["Mid", "B10K", "POT", ""],
+  ["High", "B100K", "POT", ""]
+ ]
+}

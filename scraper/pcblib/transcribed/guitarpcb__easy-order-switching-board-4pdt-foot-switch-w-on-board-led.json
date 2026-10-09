@@ -1,0 +1,13 @@
+{
+ "id": "guitarpcb:easy-order-switching-board-4pdt-foot-switch-w-on-board-led",
+ "read": "2026-10-09, by eye from the build document",
+ "comment": "GuitarPCB build document for an effects-order switching board; the parts table on page 1 matches the FXCF v1a schematic. The intro text says 3PDT toggle but the board and BOM use a 4PDT footswitch.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "1k8", "R", "CLR; BOM says 1k8 to 4k, schematic prints 1k8"],
+  ["D1", "CA Bi-colour LED", "LED", "common anode; use D1 or DA/DB"],
+  ["DA", "LED", "LED", "alternative to D1"],
+  ["DB", "LED", "LED", "alternative to D1"],
+  ["SW1", "4PDT", "SW", "footswitch carried on the board; swaps FX1/FX2 order"]
+ ]
+}

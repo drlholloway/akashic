@@ -1,0 +1,18 @@
+{
+ "id": "guitarpcb:buffer-board",
+ "read": "2026-10-09, by eye from the build document",
+ "comment": "GuitarPCB 3PDT Buffer Board v3 build document; parts table read directly, matches the board silkscreen.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "1M", "R", ""],
+  ["R2", "1M", "R", ""],
+  ["R3", "100k", "R", ""],
+  ["CLR", "1k8", "R", "LED current limiting resistor"],
+  ["C1", "220n", "C", ""],
+  ["C2", "220n", "C", ""],
+  ["D1", "Status LED", "LED", "bi-color common anode or standard LED"],
+  ["D2", "1n5817", "D", "reverse polarity protection"],
+  ["IC1", "TL071", "IC", ""],
+  ["SW1", "3PDT", "SW", "3PDT footswitch mounted on the board"]
+ ]
+}

@@ -1,0 +1,11 @@
+{
+ "id": "guitarpcb:roto-tone",
+ "read": "2026-10-09, by eye from the build document",
+ "comment": "GuitarPCB Roto-Tone Deluxe document: an add-on board whose only fixed part is a 4-position rotary switch; the resistors, caps, diodes or trimmer in its four pad sections are chosen by the builder (the Muff R9/C10 variants are examples, not a fixed BOM). An optional off-board DPDT is described but not carried on the board.",
+ "uncertain": [
+  "×1 2P4T rotary: inferred from the footprint (two poles, eight throw lugs, four sections) and the text (\"all 4 switch positions\"); the doc never names the switch part"
+ ],
+ "rows": [
+  ["×1", "2P4T", "SW", "PCB-mount rotary switch (poles A and B, four positions); no designator printed"]
+ ]
+}

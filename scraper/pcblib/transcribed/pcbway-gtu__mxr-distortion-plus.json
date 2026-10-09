@@ -1,0 +1,26 @@
+{
+ "id": "pcbway-gtu:mxr-distortion-plus",
+ "read": "2026-10-09, by eye from the project page's images",
+ "comment": "Undesignated MXR Distortion+ schematic with a matching board layout (cap codes on the layout confirm values). Starred parts on the schematic have no legend explaining the asterisk.",
+ "uncertain": [
+  "1M count: schematic shows five 1M resistors, board layout shows four"
+ ],
+ "rows": [
+  ["×5", "1M", "R", "input pulldown (1M*), VB bias to +in, feedback, and the VB divider pair; the layout shows only four 1M, so the starred input pulldown may be optional"],
+  ["×2", "10k", "R", "input series and output series"],
+  ["×2", "4k7", "R", "Distortion leg and LED resistor"],
+  ["×1", "47", "R", "power (PWR) resistor"],
+  ["×2", "10n", "C", "input coupling and VA filter (10n*); layout 103"],
+  ["×2", "1n", "C", "input to ground and output to ground; layout 102"],
+  ["×1", "47n", "C", "Distortion leg; layout 473"],
+  ["×1", "10p", "C", "feedback; layout 100"],
+  ["×1", "1u", "C", "output coupling; layout 105"],
+  ["×1", "100u", "C", "electrolytic, VA supply"],
+  ["×1", "47u", "C", "electrolytic, VB bias"],
+  ["×1", "1N4001", "D", "supply"],
+  ["×2", "1N914", "D", "clipping diodes to ground"],
+  ["×1", "741", "IC", "op amp"],
+  ["Distortion", "C500K", "POT", "reverse-log taper as printed"],
+  ["Output", "A50K", "POT", ""]
+ ]
+}

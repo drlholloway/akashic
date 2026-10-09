@@ -1,0 +1,9 @@
+{
+ "id": "guitarpcb:easy-order-switching-board-3pdt-toggle-version",
+ "read": "2026-10-09, by eye from the build document",
+ "comment": "Two-page GuitarPCB doc for the FXCT order-switching board (Tonmann schematic); the only component is the 3PDT On-On toggle, everything else is jack and loop wiring pads.",
+ "uncertain": [],
+ "rows": [
+  ["SW1", "3PDT", "SW", "On-On solder-lug toggle; sections SW1A/SW1B/SW1C swap the order of two effects"]
+ ]
+}

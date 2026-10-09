@@ -1,0 +1,32 @@
+{
+ "id": "pcbway-gtu:ibanez-ts-808-v2-c51e1e64",
+ "read": "2026-10-09, by eye from the project page's images",
+ "comment": "PCBWay board layout render with values on the silkscreen and no designators, so parts are grouped by value. Pot values are printed with S/O for 5/0 (ASOOK = A500K, BIOOK = B100K).",
+ "uncertain": [],
+ "rows": [
+  ["×7", "10k", "R", ""],
+  ["×4", "1k", "R", ""],
+  ["×2", "4k7", "R", ""],
+  ["×2", "510k", "R", ""],
+  ["×1", "510", "R", ""],
+  ["×1", "1M", "R", ""],
+  ["×1", "51k", "R", ""],
+  ["×1", "220", "R", ""],
+  ["×1", "100", "R", ""],
+  ["×1", "473", "C", ""],
+  ["×2", "224", "C", ""],
+  ["×2", "105", "C", ""],
+  ["×1", "273", "C", ""],
+  ["×1", "104", "C", ""],
+  ["×1", "47u", "C", "electrolytic"],
+  ["×1", "100u", "C", "electrolytic"],
+  ["×2", "10u", "C", "electrolytic"],
+  ["×2", "1N914", "D", "silkscreen note 2xIN914"],
+  ["×1", "1N4001", "D", "silkscreen IN4001; polarity protection"],
+  ["×2", "2N3904", "Q", "silkscreen note 2x2N3904"],
+  ["×1", "4558", "IC", "dual op amp"],
+  ["Tone", "B20K", "POT", ""],
+  ["Gain", "A500K", "POT", "silkscreen reads ASOOK"],
+  ["Level", "B100K", "POT", "silkscreen reads BIOOK"]
+ ]
+}

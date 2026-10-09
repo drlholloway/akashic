@@ -1,0 +1,12 @@
+{
+ "id": "guitarpcb:3pdt-vari-brite",
+ "read": "2026-10-09, by eye from the build document",
+ "comment": "GuitarPCB 3PDT Vari-Brite wiring board; no parts table, values from the label list (CLR 1K8-2K, TR1 2K-5K), suggested 1K8 and 5K used.",
+ "uncertain": [],
+ "rows": [
+  ["CLR", "1K8", "R", "current limiting resistor, 1K8 to 2K"],
+  ["TR1", "5K", "TRIM", "LED brightness trimmer, 6mm, 2K to 5K"],
+  ["D1", "LED", "LED", "common anode bi-color or standard LED"],
+  ["×1", "3PDT", "SW", "footswitch mounted on the wiring board"]
+ ]
+}

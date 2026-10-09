@@ -1,0 +1,13 @@
+{
+ "id": "guitarpcb:new-guitarpcb-test-rig",
+ "read": "2026-10-09, by eye from the build document",
+ "comment": "GuitarPCB Test Rig utility board; parts from the build document's printed parts table (jacks, DC jack and the 4-way speaker terminal skipped).",
+ "uncertain": [],
+ "rows": [
+  ["R1", "2k", "R", ""],
+  ["R2", "1k8", "R", "LED CLR: 1k8 (bright) to 4k7 (dimmer)"],
+  ["Sag", "B10k", "POT", "9mm pot with plastic sleeve"],
+  ["SW1", "3PDT", "SW", "foot switch, solder lug"],
+  ["D1", "LED", "LED", "common-anode bicolor status LED (a standard LED also works)"]
+ ]
+}

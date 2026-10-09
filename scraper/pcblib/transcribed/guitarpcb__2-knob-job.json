@@ -1,0 +1,16 @@
+{
+ "id": "guitarpcb:2-knob-job",
+ "read": "2026-10-09, by eye from the build document",
+ "comment": "GuitarPCB 2 Knob Job v2 build document (no BOM; parts from the text and the 2KJ v2 schematic): a footswitch selects between two pots for one control of a host pedal. The parser's R14 '01' was a misread.",
+ "uncertain": [
+  "P1, P2 and TR1 values depend on the circuit the board is added to; none given"
+ ],
+ "rows": [
+  ["R1", "3k3", "R", "CLR; text suggests 3k3, 2k to 4k7 to taste"],
+  ["D1", "CA Bi-colour LED", "LED", "common anode; red for P1, green for P2/TR1"],
+  ["P1", "?", "POT", "value set by the host circuit"],
+  ["P2", "?", "POT", "value set by the host circuit; do not fit with TR1"],
+  ["TR1", "?", "TRIM", "alternative to P2"],
+  ["SW1", "3PDT", "SW", "footswitch carried on the board, selects P1 or P2/TR1"]
+ ]
+}

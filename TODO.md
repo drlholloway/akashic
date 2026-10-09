@@ -8,10 +8,13 @@ at the bottom; re-run them after parser changes.
 ## Whole-vendor gaps
 
 - **PCBWay (Glory to Ukraine)**: the drawings carry no designators and the member uploads no BOM,
-  so parts were read by eye from the schematic and grouped by value ('×4 470k'). 10 of 337 boards
-  have no parts: utility boards (jack, switch, control and 3PDT breakout boards, the AMT M1 EQ,
-  controls and switch boards) and four clones (SD9, TS 808 V2, Distortion +, Rat) for which no
-  schematic image was fetched; worth a look on the project pages.
+  so parts were read by eye from the schematic and grouped by value ('×4 470k'). 4 of 337 boards
+  have no parts, all with nothing to list: the Peavey 5150 jack board, the AMT M1 switch board, the
+  coil-cut push-pull board (its pot value is not given) and the 3PDT breakout. The SD9, TS 808 V2,
+  Distortion + and Rat were read on October 9 from the schematic and layout images on their project
+  pages, and the AMT M1 EQ and controls boards from the pot values on their silkscreen. The Rat is no
+  longer in the member's project list (its page still answers), so a scrape does not reach it; it was
+  stored once by hand with its file name, ProCo_Rat_Distortion.
 - **Experimentalists Anonymous**: every schematic with parts on it was read by eye (779 of 781; the last
   293 on October 9: 187 thin OCR lists, 491 rows to 7,644, and the 106 longer OCR lists, 3,168 rows to
   12,481). 56 have no parts: they were looked at and hold nothing to list (wiring diagrams,
@@ -20,12 +23,15 @@ at the bottom; re-run them after parser changes.
   (schematics on PDF pages 10, 13 and 14, a few hundred parts) and the Roland System-100M M-110 (an
   825x584 scan). Multi-board service sets carry per-board or per-page prefixes (the Korg MS-50's P1- to
   P12-, the Boss CE-300's LED1- to LED3-). The DigiTech PDS2020 .gif copy is sheet 2 of 2 only.
-- **Bent Fishbowl**: 8 of 33 schematics come back thin; busy drawings defeat the
-  designator/value pairing.
+- **Bent Fishbowl**: every board has parts (October 9). The adapter can cache the wrong image of a
+  post: for Clearglass it took the pedal photo (both schematics, Mk2 and Bk3, were read from the post as
+  two variants) and for the Dudson Narrowcast V2 the stripboard layout (read with the post's
+  schematic).
 - **GuitarPCB**: most NostalgiTone docs carry their tables in the text layer and read exactly; OCR fills
-  only parts the text does not list. 5 boards with no BOM and 7 thin after the thorough OCR pass; the rest
-  are selector and wiring boards with no BOM by design (Roto-Tone, 2 Knob Job, 3PDT
-  boards, Easy Order Switching); those and the knobless Emerald Ring are the only boards with no controls.
+  only parts the text does not list. The utility boards (Buffer, Test Rig, 2 Knob Job, Vari-Brite, 3PDT
+  wiring, both Easy Order Switching boards, Roto-Tone) were read from their docs by eye on October 9;
+  they carry a few parts by design, and they and the knobless Emerald Ring are the only boards with no
+  controls. Photon Phuzz has no parts: its build doc (`BD_Photon-Phuzz.pdf`) returns 404.
 - **Madbean**: 8 boards with no BOM: the utility boards (9mmBB, 14mm, MiniJack1, sProbe,
   Strober, TrueSoft) and Flunkee, whose PDF link is a 404. The VFE series docs carry a
   shopping list (qty, value, type) rather than a designator table, so their rows are named
