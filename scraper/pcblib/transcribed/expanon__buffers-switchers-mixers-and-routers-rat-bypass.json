@@ -1,0 +1,16 @@
+{
+ "id": "expanon:buffers-switchers-mixers-and-routers-rat-bypass",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Rat-style bypass wiring around an effects board with a DPDT footswitch (skipped) and a JFET-switched LED indicator; only the resistors, diodes and Q1 carry values.",
+ "uncertain": [
+  "Vol: no value given"
+ ],
+ "rows": [
+  ["×1", "22M", "R", "JFET gate to +9V"],
+  ["×1", "2k2", "R", "LED resistor"],
+  ["×2", "1N914", "D", ""],
+  ["×1", "LED", "LED", ""],
+  ["Q1", "2N5457", "Q", "JFET switch for the LED"],
+  ["Vol", "?", "POT", "no value given"]
+ ]
+}

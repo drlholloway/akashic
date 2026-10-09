@@ -1,0 +1,25 @@
+{
+ "id": "expanon:amplifiers-and-vcas-inverting-or-noninverting-amplifier",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Two NE5532 stages: non-inverting amplifier (15dB gain) and inverting unity-gain amplifier, with a note to chain them as an unbalanced-to-balanced converter (omitting C10); supply decoupling caps undesignated.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "1K", "R", ""],
+  ["R2", "10K", "R", ""],
+  ["R3", "4.7K", "R", ""],
+  ["R4", "1K", "R", ""],
+  ["R5", "100", "R", ""],
+  ["R10", "10K", "R", ""],
+  ["R11", "10K", "R", ""],
+  ["R12", "100", "R", ""],
+  ["C1", "10uF", "C", ""],
+  ["C2", "100pF", "C", ""],
+  ["C3", "100uF", "C", "electrolytic"],
+  ["C4", "100pF", "C", ""],
+  ["C10", "10uF", "C", "omit C10 when wiring the two halves as an unbalanced-to-balanced converter"],
+  ["C11", "15pF", "C", ""],
+  ["×2", "10uF", "C", "supply decoupling electrolytics, +15V and -15V"],
+  ["×2", ".1uF", "C", "supply decoupling, +15V and -15V"],
+  ["U1", "5532", "IC", "dual op amp; U1A drawn as U?:A, U1B"]
+ ]
+}

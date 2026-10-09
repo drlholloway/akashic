@@ -1,0 +1,9 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-single-oa-bandpass-filter-2-resistor",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Generic single-op-amp bandpass (twin-T style) design diagram with formulas only (R1=R2=R, C3=2C); no component values given.",
+ "uncertain": [],
+ "rows": [
+
+ ]
+}

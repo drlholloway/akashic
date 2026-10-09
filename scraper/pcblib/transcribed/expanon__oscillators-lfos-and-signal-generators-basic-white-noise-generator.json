@@ -1,0 +1,16 @@
+{
+ "id": "expanon:oscillators-lfos-and-signal-generators-basic-white-noise-generator",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Montalk 'Basic EM White Noise Generator': PN2222A pair noise source into an LM386 driving a wire loop; values from the drawing's own parts legend.",
+ "uncertain": [],
+ "rows": [
+  ["R2", "3.3k", "R", "drop voltage to transistors"],
+  ["R3", "220", "R", "amplifier gain"],
+  ["C3", ".1uF", "C", "coupling"],
+  ["C5", "47uF", "C", "coupling"],
+  ["T1", "PN2222A", "Q", "NPN"],
+  ["T2", "PN2222A", "Q", "same as T1; pair generates noise"],
+  ["IC1", "LM386N", "IC", "audio amplifier"],
+  ["S1", "SPST", "SW", "micro toggle switch (power)"]
+ ]
+}

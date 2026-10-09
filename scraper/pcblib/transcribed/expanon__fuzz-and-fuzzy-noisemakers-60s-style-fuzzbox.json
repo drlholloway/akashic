@@ -1,0 +1,20 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-60s-style-fuzzbox",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Jack Orman's '60s style Fuzz Box (1995); only transistors are designated, other parts listed by quantity.",
+ "uncertain": [],
+ "rows": [
+  ["×4", "100k", "R", ""],
+  ["×2", "2.7k", "R", ""],
+  ["×1", "3.3k", "R", ""],
+  ["×1", "15k", "R", ""],
+  ["×1", "47k", "R", ""],
+  ["×1", ".01uF", "C", ""],
+  ["×3", "5uF", "C", "electrolytic"],
+  ["Q1", "SK3020", "Q", "NPN"],
+  ["Q2", "SK3005", "Q", "PNP"],
+  ["Q3", "SK3020", "Q", "NPN"],
+  ["Fuzz", "5k", "POT", ""],
+  ["Vol", "10k", "POT", ""]
+ ]
+}

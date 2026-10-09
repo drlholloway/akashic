@@ -1,0 +1,13 @@
+{
+ "id": "expanon:tone-control-and-eqs-passive-mic-hp-filter",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Fig. 2 L.F. rolloff: a passive balanced-mic (XLR pins 1-3) high-pass with one series capacitor per leg and 2K across the pair; capacitor value is left to a formula. C1 is printed on both legs, so the second is listed as C1-2.",
+ "uncertain": [
+  "C1: no value drawn, calculated from the formula on the drawing for the desired cutoff"
+ ],
+ "rows": [
+  ["C1", "?", "C", "electrolytic in the pin 3 leg; no value drawn: C1 = 2 x 1/(2 pi F R), F = desired cutoff, R = Rin x 2000/(Rin + 2000)"],
+  ["C1b", "?", "C", "second C1 (drawing prints C1 twice), electrolytic in the pin 2 leg; same value as C1, computed from the cutoff formula"],
+  ["R2", "2K", "R", "across pins 2 and 3"]
+ ]
+}

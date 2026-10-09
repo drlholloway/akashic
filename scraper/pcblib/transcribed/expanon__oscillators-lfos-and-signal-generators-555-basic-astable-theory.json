@@ -1,0 +1,9 @@
+{
+ "id": "expanon:oscillators-lfos-and-signal-generators-555-basic-astable-theory",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "A 10-page collection of 555 application sketches (Tom Cat, Domain BBS); page 1, the basic astable, labels R1, R2, C2 and the 555 with no component values, only timing formulas. The other pages are different 555 circuits, so no parts list is given.",
+ "uncertain": [],
+ "rows": [
+
+ ]
+}

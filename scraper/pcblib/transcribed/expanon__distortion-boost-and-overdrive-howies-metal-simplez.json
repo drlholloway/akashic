@@ -1,0 +1,18 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-howies-metal-simplez",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Howie's Metal Simplex (HGA 9/06/01): two 2N3904 stages with a red LED in the second emitter, passive tone and volume; no designators drawn.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "10k", "R", "input series, Q1 collector, Q2 collector; no designator on drawing"],
+  ["×1", "100k", "R", "Q2 collector-base feedback; no designator on drawing"],
+  ["×2", ".1uF", "C", "input and interstage coupling; no designator on drawing"],
+  ["×1", ".01uF", "C", "tone cap; no designator on drawing"],
+  ["×1", "10uF", "C", "output coupling, electrolytic; no designator on drawing"],
+  ["×1", "Red LED", "LED", "Q2 emitter, used as bias/clipping element; no designator on drawing"],
+  ["×2", "2N3904", "Q", "hFE 225 (first) and 170 (second); no designator on drawing"],
+  ["Gain", "A100K", "POT", "drawn 100kA"],
+  ["Tone", "B50K", "POT", "drawn 50kB"],
+  ["Vol", "A100K", "POT", "drawn 100kA"]
+ ]
+}

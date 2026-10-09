@@ -1,0 +1,13 @@
+{
+ "id": "expanon:tone-control-and-eqs-passive-mic-lp-filter",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Fig. 3 H.F. rolloff: passive lowpass for a balanced mic line, two 470 ohm series resistors and one shunt cap between pins 2 and 3. Designator R1 printed twice; second renamed R1-2.",
+ "uncertain": [
+  "C1: no value drawn, formula only"
+ ],
+ "rows": [
+  ["R1", "470", "R", "balanced line, pin 3 leg"],
+  ["R1b", "470", "R", "pin 2 leg; drawing labels both resistors R1"],
+  ["C1", "?", "C", "value not given: computed as C1 = 1/(2*pi*F*R) for the desired cutoff"]
+ ]
+}

@@ -1,0 +1,30 @@
+{
+ "id": "expanon:ring-modulators-and-frequency-shifters-serge-ring-modulator",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Marjan Urekar's 2001 redraw of the Serge ring modulator (CA3080 plus PNP differential pair), +/-12V; only U1, U2 and Q1-Q3 carry designators, so the passives are listed by quantity.",
+ "uncertain": [],
+ "rows": [
+  ["×4", "220K", "R", "X trim, Y trim, diode bias and Q3 base-to-ground resistors; no designators drawn"],
+  ["×3", "330R", "R", "X trim divider, X AC input divider, RM OUT series"],
+  ["×1", "150K", "R", "X DC input"],
+  ["×2", "22K", "R", "X DC IN and X AC IN to ground"],
+  ["×2", "68K", "R", "X AC input series; U2 feedback"],
+  ["×1", "15K", "R", "U1 pin 5 bias"],
+  ["×4", "47K", "R", "Y DC input, initial amplitude, Y AC series, Y AC to ground"],
+  ["×2", "1K", "R", "Q1 and Q2 bases to ground"],
+  ["×1", "2K2", "R", "Q3 emitter"],
+  ["×4", "100n", "C", "supply decoupling"],
+  ["×1", "22p", "C", "U2 feedback; added to prevent oscillation, not in the original"],
+  ["×2", "470n", "C", "X AC IN and Y AC IN coupling"],
+  ["×1", "1N4148", "D", "original Serge used 1N914"],
+  ["Q1", "BC559", "Q", "original was matched PNP pair 2N4196; use matched PNPs"],
+  ["Q2", "BC559", "Q", "matched with Q1"],
+  ["Q3", "BC559", "Q", "original 2N4250; any PNP"],
+  ["U1", "CA3080A", "IC", "OTA; original CA3080E"],
+  ["U2", "TL071", "IC", "original LM307N"],
+  ["Initial Amplitude", "B22K", "POT", "22K LIN"],
+  ["CV Gain", "22K", "POT", "wired as variable resistor"],
+  ["X Trim", "22K", "TRIM", "original 25K"],
+  ["Y Trim", "22K", "TRIM", "original 25K"]
+ ]
+}

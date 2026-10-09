@@ -1,0 +1,24 @@
+{
+ "id": "expanon:oscillators-lfos-and-signal-generators-pink-noise-generator",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Flicker (pink) noise generator, figure from an article: a high-gain stage amplifying resistor noise followed by an RC pinking filter; no designators, so quantity refs.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "1k", "R", "first stage inverting input to ground"],
+  ["×2", "100k", "R", "first stage feedback; bias divider top"],
+  ["×1", "150k", "R", "noise-source resistor at non-inverting input"],
+  ["×2", "20k", "R", "second stage input; last leg of pinking network"],
+  ["×1", "33k", "R", "bias divider bottom (1.25 VDC)"],
+  ["×1", "470 ohm", "R", "pinking network"],
+  ["×1", "800 ohm", "R", "pinking network"],
+  ["×1", "2.2k", "R", "pinking network"],
+  ["×1", "6k", "R", "pinking network"],
+  ["×1", "0.018uF", "C", "pinking network"],
+  ["×1", "0.68uF", "C", "pinking network"],
+  ["×1", "2uF", "C", "pinking network, polarized"],
+  ["×1", "4.7uF", "C", "pinking network, polarized"],
+  ["×3", "22uF", "C", "electrolytic: +5V bypass, -5V bypass, bias filter"],
+  ["×1", "100uF", "C", "electrolytic output coupling"],
+  ["×1", "TLC2272", "IC", "dual op amp, both sections used"]
+ ]
+}

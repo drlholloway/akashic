@@ -1,0 +1,25 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-tube-distortion",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Tube Distortion (Guitar Player, Oct 1981, redrawn by Ron Black 1995): 747 op amp driving a 12AU7A at 12V, with its own mains supply; transformer, switch and plug skipped. Pots and passives have no designators.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "10k", "R", "6V divider; all resistors 1/2W 10%"],
+  ["×2", "180k", "R", "plate resistors"],
+  ["×2", "1M", "R", "grid resistors"],
+  ["×1", "470k", "R", "IC1a feedback"],
+  ["×1", "22k", "R", "IC1a gain to 6V"],
+  ["×1", "470uF", "C", "50V"],
+  ["×1", "1000uF", "C", "12V"],
+  ["×1", "100uF", "C", "6V"],
+  ["×2", "0.1uF", "C", "input and output"],
+  ["×3", "0.01uF", "C", "coupling"],
+  ["×1", "1N3600", "D", "across the regulator"],
+  ["×1", "Bridge rectifier", "D", "full wave, 50V 500mA minimum"],
+  ["IC1", "747", "IC", "dual op amp (IC1a, IC1b)"],
+  ["IC2", "LM340K-12", "IC", "12V regulator"],
+  ["×1", "12AU7A", "OTHER", "dual triode, both halves used"],
+  ["×1", "100k", "POT", "input level/gain, unnamed"],
+  ["×1", "500k", "POT", "output level, unnamed"]
+ ]
+}

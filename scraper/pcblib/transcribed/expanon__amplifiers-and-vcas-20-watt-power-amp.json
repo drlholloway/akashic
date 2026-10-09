@@ -1,0 +1,24 @@
+{
+ "id": "expanon:amplifiers-and-vcas-20-watt-power-amp",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Clean LM1875 20 W power amp schematic with a separate +/-24V supply bypass block whose four capacitors are undesignated.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "1K", "R", ""],
+  ["R2", "22K", "R", ""],
+  ["R3", "22K", "R", ""],
+  ["R4", "1K", "R", ""],
+  ["R5", "1K", "R", ""],
+  ["R6", "10", "R", "10 ohm, output isolation, parallel with L1"],
+  ["R7", "1 OHM", "R", "Zobel network with C5"],
+  ["C1", "10uF", "C", "input coupling"],
+  ["C2", "100pF", "C", ""],
+  ["C3", "100uF", "C", "electrolytic"],
+  ["C4", "100pF", "C", ""],
+  ["C5", ".22uF", "C", "Zobel network"],
+  ["×2", ".1uF", "C", "supply bypass, +24V and -24V rails (undesignated)"],
+  ["×2", "100uF", "C", "electrolytic supply bypass, +24V and -24V rails (undesignated)"],
+  ["U1", "LM1875", "IC", "power amp, +/-24V"],
+  ["L1", "10uH", "L", "output inductor"]
+ ]
+}

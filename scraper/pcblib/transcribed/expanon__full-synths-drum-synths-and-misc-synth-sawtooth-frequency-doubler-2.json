@@ -1,0 +1,13 @@
+{
+ "id": "expanon:full-synths-drum-synths-and-misc-synth-sawtooth-frequency-doubler-2",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Magnus Danielson's Sawtooth Frequency Doubler V2 (2000), a single-page drawing of two TL082 stages with four resistors; clean and fully legible.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "300k", "R", ""],
+  ["R2", "49k9", "R", ""],
+  ["R3", "49k9", "R", ""],
+  ["R4", "300k", "R", ""],
+  ["U1", "TL-082", "IC", "dual op amp, U1A and U1B"]
+ ]
+}

@@ -1,0 +1,30 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-voltage-controlled-1st-order-svf",
+ "read": "2026-10-09, by eye from the cached schematic image (PDF page 2)",
+ "comment": "THAT Corporation Design Note 130, VCA-controlled first-order state variable filter; parts read from Figure 2 on page 2 (Figure 1 is a generic topology with no values). Page 1 is article text, pages 3-5 math and response plots.",
+ "uncertain": [
+  "C1: drawn 4u7 but the design-note text calculates with C1 = 4.7nF; value kept as drawn"
+ ],
+ "rows": [
+  ["R1", "16k9", "R", ""],
+  ["R2", "5k1", "R", ""],
+  ["R3", "10k", "R", ""],
+  ["R4", "10k", "R", ""],
+  ["R5", "10k", "R", ""],
+  ["R6", "1k0", "R", ""],
+  ["R7", "6k81", "R", ""],
+  ["R8", "6k81", "R", ""],
+  ["R9", "23k2", "R", ""],
+  ["R10", "1k0", "R", ""],
+  ["C1", "4u7", "C", "sets the corner frequency with R1 (text: C1 = 4.7nF chosen for 632 Hz center; drawing says 4u7)"],
+  ["C2", "47u", "C", "electrolytic"],
+  ["C3", "22u", "C", "electrolytic"],
+  ["C4", "22u", "C", "electrolytic"],
+  ["C5", "100n", "C", ""],
+  ["C6", "10p", "C", ""],
+  ["U1", "2180A", "IC", "THAT 2180A VCA"],
+  ["U2", "5532", "IC", "NE5532 dual op amp (U2A, U2B)"],
+  ["U3", "LF351", "IC", "FET-input op amp integrator"],
+  ["U4", "?", "IC", "DAC (labeled DAC1), part number not given; driven from a microprocessor"]
+ ]
+}

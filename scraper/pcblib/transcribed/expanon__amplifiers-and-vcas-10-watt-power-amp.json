@@ -1,0 +1,27 @@
+{
+ "id": "expanon:amplifiers-and-vcas-10-watt-power-amp",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "TDA2030 power amp (DIBs Electronic Design, 1995) with Zobel network and L1/R6 output network, plus supply bypass caps without designators.",
+ "uncertain": [
+  "×1 1UF: -16V bypass drawn 1UF, may be .1UF with the dot dropped"
+ ],
+ "rows": [
+  ["R1", "2.2K", "R", ""],
+  ["R2", "22K", "R", ""],
+  ["R3", "22K", "R", ""],
+  ["R4", "1K", "R", ""],
+  ["R5", "2.2K", "R", ""],
+  ["R6", "10", "R", ""],
+  ["R7", "1 OHM", "R", ""],
+  ["C1", "10UF", "C", ""],
+  ["C2", "100PF", "C", ""],
+  ["C3", "100UF", "C", "electrolytic"],
+  ["C4", "100PF", "C", ""],
+  ["C5", ".22UF", "C", ""],
+  ["×1", ".1UF", "C", "+16V supply bypass, undesignated"],
+  ["×1", "1UF", "C", "-16V supply bypass, undesignated; drawn 1UF, likely .1UF to match the +16V side"],
+  ["×2", "100UF", "C", "supply bypass electrolytics, undesignated"],
+  ["U1", "TDA2030", "IC", ""],
+  ["L1", "10UH", "L", ""]
+ ]
+}

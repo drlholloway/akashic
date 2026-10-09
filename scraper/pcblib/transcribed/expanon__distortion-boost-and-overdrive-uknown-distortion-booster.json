@@ -1,0 +1,17 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-uknown-distortion-booster",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Clean single-page drawing of a two-transistor (BC108) booster with a diode clipper to ground at the output; resistors and caps are undesignated, so they are counted by value.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "3k3", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×3", "100k", "R", ""],
+  ["×1", "0.01uf", "C", ""],
+  ["×1", "0.1uf", "C", ""],
+  ["D1", "Diode", "D", "no part number given; silicon or germanium signal diode, builder's choice"],
+  ["D2", "Diode", "D", "no part number given; silicon or germanium signal diode, builder's choice"],
+  ["Q1", "BC108", "Q", ""],
+  ["Q2", "BC108", "Q", ""]
+ ]
+}

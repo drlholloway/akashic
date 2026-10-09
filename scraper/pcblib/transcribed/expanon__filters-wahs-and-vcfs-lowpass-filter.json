@@ -1,0 +1,19 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-lowpass-filter",
+ "read": "2026-10-09, by eye from the cached schematic image (PDF page 3)",
+ "comment": "National Semiconductor app note OA-27 (Low-Sensitivity, Lowpass Filter Design), 7 pages; the schematic is Figure 2 on page 3 (a 3rd-order Chebyshev lowpass, 53 MHz), drawn without values. Values are the 'Standard' column of the design tables on pages 3 and 4; Figure 1 on page 1 is the generic KRC biquad with no values.",
+ "uncertain": [],
+ "rows": [
+  ["R1A", "100", "R", "1% chip metal film; standard value from the design table (calculated 108)"],
+  ["R1B", "78.7", "R", "1%; standard value from the design table"],
+  ["R2B", "158", "R", "1%; standard value from the design table"],
+  ["R3B", "576", "R", "1%; standard value from the design table"],
+  ["RfB", "348", "R", "1%; CLC446 feedback resistor"],
+  ["RgB", "698", "R", "1%; standard value from the design table (calculated 696)"],
+  ["C2A", "47pF", "C", "1% ceramic chip"],
+  ["C4B", "3.6pF", "C", "1% ceramic chip; standard value from the design table"],
+  ["C5B", "47pF", "C", "1% ceramic chip"],
+  ["×1", "CLC111", "IC", "closed-loop video buffer, Section A"],
+  ["×1", "CLC446", "IC", "current-feedback op amp, Section B"]
+ ]
+}

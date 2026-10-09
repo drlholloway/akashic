@@ -1,0 +1,14 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-single-oa-active-bandpass-filter",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Multiple-feedback bandpass filter around one op amp (no part number given).",
+ "uncertain": [],
+ "rows": [
+  ["R1", "1.1K", "R", ""],
+  ["R2", "1.2K", "R", ""],
+  ["R3", "150K", "R", ""],
+  ["C1", ".01uF", "C", ""],
+  ["C2", ".01uF", "C", ""],
+  ["×1", "?", "IC", "op amp, no part number given"]
+ ]
+}

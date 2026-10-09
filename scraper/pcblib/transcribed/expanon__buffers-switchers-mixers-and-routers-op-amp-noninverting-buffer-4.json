@@ -1,0 +1,13 @@
+{
+ "id": "expanon:buffers-switchers-mixers-and-routers-op-amp-noninverting-buffer-4",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "TL071 unity-gain noninverting buffer biased at half of 9V.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "1M", "R", ""],
+  ["R2", "1M", "R", ""],
+  ["C1", "100nF", "C", ""],
+  ["C2", "10uF", "C", "electrolytic"],
+  ["U1", "TL071", "IC", ""]
+ ]
+}

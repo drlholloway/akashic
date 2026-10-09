@@ -1,0 +1,22 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-vox-tone-bender",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Fuzz Face-like two-transistor PNP fuzz; values as drawn, no R/C designators. Negative-ground 9V battery.",
+ "uncertain": [
+  "Volume pot: drawn as a range 50k - 100k"
+ ],
+ "rows": [
+  ["×1", "1k", "R", "supply to Q2 collector rail"],
+  ["×1", "10k", "R", "Q1 collector"],
+  ["×2", "8.2k", "R", "Q2 collector and emitter"],
+  ["×1", "47k", "R", "feedback to Q1 base"],
+  ["×1", ".022uF", "C", "input"],
+  ["×1", ".032uF", "C", "output"],
+  ["×1", "25uF", "C", "electrolytic, emitter bypass via 1k pot wiper"],
+  ["Q1", "SFT363", "Q", "PNP germanium; 2N3906 noted as substitute"],
+  ["Q2", "SFT337", "Q", "PNP germanium; 2N3906 noted as substitute"],
+  ["×1", "100K", "POT", "volume, drawn 50k - 100k"],
+  ["×1", "1K", "POT", "fuzz (Q2 emitter bypass), unnamed"],
+  ["S1", "DPDT", "SW", "bypass, drawn as 1/2 S1 twice"]
+ ]
+}

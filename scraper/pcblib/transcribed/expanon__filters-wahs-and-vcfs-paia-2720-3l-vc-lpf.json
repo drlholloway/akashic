@@ -1,0 +1,30 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-paia-2720-3l-vc-lpf",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "PAiA 2720-3L voltage-controlled lowpass filter (Figure 5): diode-ladder style filter with three control inputs and a single-transistor output amp. Clean drawing.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "330K", "R", ""],
+  ["R2", "330K", "R", ""],
+  ["R3", "330K", "R", ""],
+  ["R4", "330K", "R", ""],
+  ["R5", "330K", "R", ""],
+  ["R6", "330K", "R", ""],
+  ["R7", "47K", "R", ""],
+  ["R8", "47K", "R", ""],
+  ["R9", "47K", "R", ""],
+  ["R10", "150K", "R", ""],
+  ["R11", "6.8K", "R", ""],
+  ["R12", "680", "R", ""],
+  ["C1", ".005uF", "C", ""],
+  ["C2", ".005uF", "C", ""],
+  ["C3", ".1uF", "C", ""],
+  ["C4", ".1uF", "C", ""],
+  ["C5", "100uF", "C", "16V electrolytic"],
+  ["D1", "Diode", "D", "no part number given"],
+  ["D2", "Diode", "D", "no part number given"],
+  ["D3", "Diode", "D", "no part number given"],
+  ["D4", "Diode", "D", "no part number given"],
+  ["Q1", "?", "Q", "NPN transistor, no part number given"]
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "id": "expanon:compressors-gates-and-limiters-auto-volume-control",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Elektor 884023 automatic volume control: TL072 with a BF245C JFET in the feedback loop, TL071 output stage, +/-15V supply.",
+ "uncertain": [
+  "R2: small rotated text, reads 100 ohm (could be 100k but the suffix looks like an ohm sign)"
+ ],
+ "rows": [
+  ["R1", "10k", "R", ""],
+  ["R2", "100Ω", "R", "rotated text, ohm sign drawn"],
+  ["R3", "1k5", "R", ""],
+  ["R4", "15k", "R", ""],
+  ["R5", "10k", "R", ""],
+  ["R6", "100k", "R", ""],
+  ["R7", "1M", "R", ""],
+  ["R8", "1k5", "R", ""],
+  ["R9", "100k", "R", ""],
+  ["C1", "10uF", "C", "16V electrolytic"],
+  ["C2", "1uF", "C", ""],
+  ["C3", "1uF", "C", ""],
+  ["C4", "12n", "C", "marked # : f-3dB = 130Hz, see text"],
+  ["C5", "100n", "C", "supply decoupling"],
+  ["C6", "100n", "C", "supply decoupling"],
+  ["C7", "100n", "C", "supply decoupling"],
+  ["C8", "100n", "C", "supply decoupling"],
+  ["D1", "1N4148", "D", ""],
+  ["T1", "BF245C", "Q", "N-channel JFET used as variable resistor"],
+  ["IC1", "TL072", "IC", "A1, A2"],
+  ["IC2", "TL071", "IC", ""],
+  ["P1", "100k", "TRIM", "multi-turn (Mehrgang) preset"]
+ ]
+}

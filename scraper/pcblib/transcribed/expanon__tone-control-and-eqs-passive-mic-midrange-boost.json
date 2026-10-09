@@ -1,0 +1,16 @@
+{
+ "id": "expanon:tone-control-and-eqs-passive-mic-midrange-boost",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Fig. 5 of a magazine article: passive balanced-line midrange boost (series LC tank shunt); C1 and L1 values depend on formulas in Fig. 4, which is not part of this image.",
+ "uncertain": [
+  "C1: no value drawn",
+  "L1: no value drawn"
+ ],
+ "rows": [
+  ["R1", "470", "R", "pin 3 leg"],
+  ["×1", "470", "R", "pin 2 leg; also labeled R1 on the drawing (designator printed twice)"],
+  ["R2", "1K", "R", ""],
+  ["C1", "?", "C", "value not given; chosen by formula from Fig. 4 (not shown)"],
+  ["L1", "?", "L", "value not given; chosen by formula from Fig. 4 (not shown)"]
+ ]
+}

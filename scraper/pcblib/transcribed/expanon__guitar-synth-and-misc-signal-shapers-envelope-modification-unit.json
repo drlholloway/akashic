@@ -1,0 +1,40 @@
+{
+ "id": "expanon:guitar-synth-and-misc-signal-shapers-envelope-modification-unit",
+ "read": "2026-10-09, by eye from the cached schematic image (PDF page 2)",
+ "comment": "Popular Electronics July 1979 article (3 pages); schematic and parts list both on page 2, rows from the parts list cross-checked against the drawing. The list's extra 'R10 100 ohms' line is an erratum (R3 is the only 100-ohm resistor).",
+ "uncertain": [
+  "Attack/Delay: knob-to-designator mapping for R14 and R16 inferred from the circuit, the board labels Attack, Decay, Delay"
+ ],
+ "rows": [
+  ["R1", "10K", "R", ""],
+  ["R2", "10K", "R", ""],
+  ["R3", "100", "R", ""],
+  ["R4", "10K", "R", ""],
+  ["R5", "10K", "R", ""],
+  ["R6", "330K", "R", ""],
+  ["R7", "10K", "R", ""],
+  ["R8", "100K", "R", ""],
+  ["R9", "10K", "R", ""],
+  ["R10", "100K", "R", "parts list also prints a stray 'R10 100 ohms' line; schematic shows 100K"],
+  ["R11", "100K", "R", ""],
+  ["R12", "100K", "R", ""],
+  ["R13", "100K", "R", ""],
+  ["R17", "470", "R", ""],
+  ["C1", "1uF", "C", "electrolytic 25V"],
+  ["C2", ".001uF", "C", "disc"],
+  ["C3", "10uF", "C", "electrolytic 25V"],
+  ["C4", "10uF", "C", "electrolytic 25V"],
+  ["C5", ".01uF", "C", "disc"],
+  ["D1", "1N914", "D", "or similar switching diode"],
+  ["D2", "1N914", "D", ""],
+  ["D3", "1N914", "D", ""],
+  ["IC1", "5558", "IC", "dual op amp, or MC1458"],
+  ["IC2", "CA3080", "IC", "OTA"],
+  ["IC3", "5558", "IC", "dual op amp, or MC1458"],
+  ["IC4", "555", "IC", "timer"],
+  ["Attack", "B500K", "POT", "R14, linear; knob name inferred from circuit (charges C3 via D2)"],
+  ["Decay", "B500K", "POT", "R15, linear; text says C3 decays through R15"],
+  ["Delay", "B500K", "POT", "R16, linear; sets the 555 one-shot time"],
+  ["S1", "DPST", "SW", "power switch, both batteries"]
+ ]
+}

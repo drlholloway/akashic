@@ -1,0 +1,43 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-ehx-fuzz-wah-volume",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Redrawn schematic of the Electro-Harmonix Fuzz-Wah/Volume (model 3006): 1458 diode-clipping fuzz into a two-transistor inductor wah that S3 can turn into a volume pedal. Only diodes, transistors and switches carry designators; the rest are listed by value and quantity.",
+ "uncertain": [
+  "S2: three-position selector drawn with a single blade, read as SP3T",
+  "S3: read as a three-pole changeover from the dashed ganging line"
+ ],
+ "rows": [
+  ["×2", "100k", "R", "fuzz input resistor; wah bias divider"],
+  ["×3", "470k", "R", "1458 feedback; wah bias; Q2 base feed"],
+  ["×2", "10k", "R", "fuzz stage input; Q2 emitter"],
+  ["×2", "680k", "R", "1458 bias divider"],
+  ["×1", "1k", "R", "Q2 collector"],
+  ["×1", "33k", "R", "wah bias"],
+  ["×1", "22k", "R", "Q1 collector"],
+  ["×1", "1.5k", "R", "Q1 collector to output"],
+  ["×1", "68k", "R", "Q1 output"],
+  ["×1", "470Ω", "R", "Q1 emitter (drawn 470 ohms)"],
+  ["×2", ".022uf", "C", "fuzz input; wah output"],
+  ["×2", "10uf", "C", "electrolytic; 1458 bias and wah bias filter"],
+  ["×1", ".1uf", "C", "fuzz output"],
+  ["×2", ".22uf", "C", "wah feedback network"],
+  ["×1", ".0033uf", "C", "S4 tone position"],
+  ["×1", ".01uf", "C", "S4 tone position"],
+  ["×1", ".047uF", "C", "S4 tone position (drawn .047)"],
+  ["×1", ".1uf", "C", "S4 tone position"],
+  ["×1", ".0022uf", "C", "wah filter, always in circuit"],
+  ["D1", "Diode", "D", "note: any signal diode"],
+  ["D2", "Diode", "D", "note: any signal diode"],
+  ["Q1", "2n3565", "Q", "NPN (note: Q1 & Q2 are 2n3565)"],
+  ["Q2", "2n3565", "Q", "NPN"],
+  ["×1", "1458", "IC", "dual op amp, fuzz stages"],
+  ["×1", "500mh", "L", "wah inductor"],
+  ["×1", "100k", "POT", "fuzz level"],
+  ["×1", "100k", "POT", "wah/volume treadle pot, sweep reversed by S5"],
+  ["S1", "DPDT", "SW", "fuzz bypass"],
+  ["S2", "SP3T", "SW", "fuzz / wah-volume / fuzz into wah-volume"],
+  ["S3", "3PDT", "SW", "volume or wah-wah"],
+  ["S4", "SP4T", "SW", "filter tone"],
+  ["S5", "DPDT", "SW", "sweep reverse"]
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "id": "expanon:reverb-stage-center-reverb",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Craig Anderton's Stage Center Reverb (Guitar Player 1976), no designators except C1/C2; values from the drawing, C1/C2 value from the text (10-100uF), two 9V batteries for a split supply.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "1M", "R", ""],
+  ["×1", "22K", "R", ""],
+  ["×1", "470K", "R", "marked *: lower it if the reverb distorts"],
+  ["×1", "47K", "R", ""],
+  ["×1", "2.2M", "R", ""],
+  ["×1", "10K", "R", ""],
+  ["×2", "4.7K", "R", ""],
+  ["×1", "33K", "R", ""],
+  ["C1", "10uF", "C", "bypass cap, electrolytic; text says 10 to 100uF, 10V or more"],
+  ["C2", "10uF", "C", "bypass cap, electrolytic; text says 10 to 100uF, 10V or more"],
+  ["×2", "0.02uF", "C", ""],
+  ["×3", "0.22uF", "C", ""],
+  ["×1", "220pF", "C", ""],
+  ["×1", "0.01uF", "C", ""],
+  ["×2", "1N4001", "D", "battery polarity/supply diodes"],
+  ["×1", "4136", "IC", "quad op amp (RC4136); text: others may be substituted"],
+  ["×2", "50K", "POT", "unnamed: one sets the dry level, one the reverb return level"],
+  ["Cancel", "SPST", "SW", "shorts the reverb mix node to ground"]
+ ]
+}

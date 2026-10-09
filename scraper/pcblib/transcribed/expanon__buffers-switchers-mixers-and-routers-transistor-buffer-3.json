@@ -1,0 +1,16 @@
+{
+ "id": "expanon:buffers-switchers-mixers-and-routers-transistor-buffer-3",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Emitter-follower buffer. The drawing labels two resistors R2 (100K divider leg and 510K base resistor); the 510K is listed as R2b.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "100K", "R", ""],
+  ["R2", "100K", "R", "bias divider to ground"],
+  ["R2b", "510K", "R", "also printed 'R2' on the drawing (designator clash); base bias resistor"],
+  ["R3", "1K", "R", ""],
+  ["R4", "10K", "R", "emitter resistor"],
+  ["C1", "20nF", "C", ""],
+  ["C2", "100nF", "C", ""],
+  ["Q1", "2SC1815", "Q", "substitutes: 2N3904, 2N4401, 2N5088, MPSA18"]
+ ]
+}

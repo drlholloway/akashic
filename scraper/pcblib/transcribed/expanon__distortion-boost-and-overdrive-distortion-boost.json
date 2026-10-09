@@ -1,0 +1,17 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-distortion-boost",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Two-transistor 'Distortion Booster' (direct-coupled BC108 pair with diode clipping to ground at the output); resistors and caps are undesignated. No pots.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "100k", "R", "Q1 collector, Q1 base to ground, feedback from Q2 emitter"],
+  ["×1", "10k", "R", "Q2 collector"],
+  ["×1", "3k3", "R", "Q2 emitter"],
+  ["×1", "0.01uF", "C", "input"],
+  ["×1", "0.1uF", "C", "output"],
+  ["D1", "Diode", "D", "silicon or germanium signal diode, builder's choice; no part number given"],
+  ["D2", "Diode", "D", "silicon or germanium signal diode, builder's choice; no part number given"],
+  ["Q1", "BC108", "Q", ""],
+  ["Q2", "BC108", "Q", ""]
+ ]
+}

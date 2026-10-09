@@ -1,0 +1,9 @@
+{
+ "id": "expanon:tone-control-and-eqs-graphic-eq",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Generic 10-band graphic EQ drawing (IC1-IC12, R1-R7, C1-C3, VR1 repeated per band) with designators only; no component values are given anywhere.",
+ "uncertain": [],
+ "rows": [
+
+ ]
+}

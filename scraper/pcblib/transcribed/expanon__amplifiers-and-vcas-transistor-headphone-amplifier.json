@@ -1,0 +1,22 @@
+{
+ "id": "expanon:amplifiers-and-vcas-transistor-headphone-amplifier",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "electronics-diy.com three-transistor class AB headphone amp on +3V; only the transistor types are printed, no resistor, capacitor or pot values.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "?", "R", "no value on drawing; feedback/bias resistor"],
+  ["R2", "?", "R", "no value on drawing; bootstrap/collector load"],
+  ["R3", "?", "R", "no value on drawing"],
+  ["R4", "?", "R", "no value on drawing; supply series resistor"],
+  ["C1", "?", "C", "electrolytic, no value on drawing"],
+  ["C2", "?", "C", "electrolytic, no value on drawing"],
+  ["C3", "?", "C", "electrolytic supply bypass, no value on drawing"],
+  ["C4", "?", "C", "electrolytic output coupling, no value on drawing"],
+  ["D1", "Diode", "D", "no part number given; bias diode"],
+  ["D2", "Diode", "D", "no part number given; bias diode"],
+  ["Q1", "BC549", "Q", ""],
+  ["Q2", "BC549", "Q", ""],
+  ["Q3", "BC559", "Q", ""],
+  ["P1", "?", "POT", "volume pot, no value on drawing"]
+ ]
+}

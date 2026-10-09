@@ -1,0 +1,13 @@
+{
+ "id": "expanon:tone-control-and-eqs-passive-mic-midrange-cut",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Fig. 4 midrange cut: a passive series-LC notch across a balanced mic line (pins 1-3). Both series resistors are labeled R1; C1 and L1 are computed from the desired notch frequency, not given.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "470", "R", ""],
+  ["×1", "470", "R", "also labeled R1 on the drawing (designator printed twice)"],
+  ["R2", "1K", "R", ""],
+  ["C1", "?", "C", "value from formula C1 = 1/(2000 pi F), F = desired frequency"],
+  ["L1", "?", "L", "value from formula L1 = C x 10^6"]
+ ]
+}

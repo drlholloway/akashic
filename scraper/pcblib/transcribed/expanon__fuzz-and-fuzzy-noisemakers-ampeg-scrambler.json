@@ -1,0 +1,29 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-ampeg-scrambler",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Ampeg factory schematic B 56200 (Scrambler); no designators except D1, D2 and Q1-Q4. Three diodes marked with asterisks are 'not on units' per the notes and are left out; footswitch and battery omitted.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "1M", "R", "Q1 base bias"],
+  ["×3", "4.7K", "R", "Q1 emitter, Q2 collector, Q4 emitter"],
+  ["×2", "47K", "R", "bias network and output"],
+  ["×1", "2.2K", "R", ""],
+  ["×1", "470K", "R", ""],
+  ["×1", "220", "R", "Q2 emitter"],
+  ["×1", "8.2K", "R", ""],
+  ["×2", "220K", "R", "Q3 base bias"],
+  ["×1", "1K", "R", "Q4 collector"],
+  ["×1", ".01uF", "C", "input"],
+  ["×3", "5uF", "C", "12V electrolytic"],
+  ["×2", "1uF", "C", "12V electrolytic"],
+  ["×1", "125uF", "C", "4V electrolytic, Q2 emitter bypass"],
+  ["D1", "1N456", "D", "notes: all diodes 1N456"],
+  ["D2", "1N456", "D", ""],
+  ["Q1", "2N5306", "Q", ""],
+  ["Q2", "BC169B", "Q", ""],
+  ["Q3", "2N5306", "Q", ""],
+  ["Q4", "2N5306", "Q", ""],
+  ["Texture", "10K", "POT", "Texture Cont."],
+  ["Blend", "50K", "POT", "Blend Cont."]
+ ]
+}

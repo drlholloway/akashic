@@ -1,0 +1,21 @@
+{
+ "id": "expanon:oscillators-lfos-and-signal-generators-siren",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Two-transistor complementary siren oscillator driving an 8 ohm speaker; no designators on the drawing.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "100R", "R", "BC108B collector to 2N3702 base"],
+  ["×1", "22k", "R", "pushbutton to timing node"],
+  ["×1", "100k", "R", "timing node to BC108B base"],
+  ["×1", "47k", "R", "BC108B base to ground"],
+  ["×1", "56R", "R", "in series with speaker"],
+  ["×1", "22n", "C", "feedback, 2N3702 collector to BC108B base"],
+  ["×1", "10u", "C", "electrolytic, rise/fall timing"],
+  ["×1", "2u2", "C", "electrolytic, across speaker branch"],
+  ["×1", "BC108B", "Q", "NPN"],
+  ["×1", "2N3702", "Q", "PNP"],
+  ["×1", "SPST", "SW", "momentary pushbutton, charges the 10u to sweep the pitch"],
+  ["×1", "SPST", "SW", "power switch"],
+  ["×1", "8 ohm", "OTHER", "speaker"]
+ ]
+}

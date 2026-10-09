@@ -1,0 +1,26 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-shin-ei-fuzz-box",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Shin-ei Companion Fuzz Box FY-2, two-transistor fuzz with a switchable tone network; no designators on the drawing, bypass switching not shown.",
+ "uncertain": [
+  "unlabeled pot: no value drawn"
+ ],
+ "rows": [
+  ["×1", "100K", "R", "feedback, Q2 collector to Q1 collector"],
+  ["×1", "22K", "R", "Q1 collector"],
+  ["×1", "2M2", "R", "Q1 collector-base"],
+  ["×1", "1M2", "R", "Q2 collector-base"],
+  ["×1", "47K", "R", "Q2 collector"],
+  ["×1", "10K", "R", "tone network"],
+  ["×1", "15K", "R", "tone network"],
+  ["×3", "0.047uF", "C", "drawn .047: input coupling, interstage coupling, across the 100K"],
+  ["×2", "0.001uF", "C", "drawn .001: Q1 collector-base, tone network"],
+  ["×1", "0.0033uF", "C", "drawn .0033, Q2 output coupling"],
+  ["×1", "0.0022uF", "C", "drawn .0022, Q1 collector to pot wiper"],
+  ["×1", "0.1uF", "C", "drawn 0.1, tone network to ground"],
+  ["×2", "C536 F7G", "Q", "NPN (2SC536F), no designators"],
+  ["×1", "?", "POT", "unlabeled pot between Q2 output and tone network, wiper fed through the .0022; no value or name drawn"],
+  ["Vol", "B50K", "POT", "drawn 50KB"],
+  ["Tone Bypass", "DPDT", "SW", "six-lug switch drawn as dots, bypasses the tone network"]
+ ]
+}

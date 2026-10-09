@@ -1,0 +1,9 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-simple-op-amp-filters",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Maxim app-note figure of Sallen-Key lowpass (a) and highpass (b) filters around the MAX4174 (gain-set op amp with internal RF/RG); parts are labeled only R1, R2, C, with no values at all, so nothing to list.",
+ "uncertain": [],
+ "rows": [
+
+ ]
+}

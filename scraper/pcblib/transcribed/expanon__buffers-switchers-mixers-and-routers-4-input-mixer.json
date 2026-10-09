@@ -1,0 +1,30 @@
+{
+ "id": "expanon:buffers-switchers-mixers-and-routers-4-input-mixer",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Simple 4-input mixer with 5532 inverting summer and inverter for a balanced output, +/-15V. C4 is printed twice (input 4 coupling 10uF and U3:A feedback 100pF); the feedback cap is listed as C4B.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "10K", "R", ""],
+  ["R2", "10K", "R", ""],
+  ["R3", "10K", "R", ""],
+  ["R4", "10K", "R", ""],
+  ["R5", "10K", "R", ""],
+  ["R6", "100", "R", ""],
+  ["R7", "10K", "R", ""],
+  ["R8", "10K", "R", ""],
+  ["R9", "100", "R", ""],
+  ["C1", "10UF", "C", "input coupling, electrolytic"],
+  ["C2", "10UF", "C", "input coupling, electrolytic"],
+  ["C3", "10UF", "C", "input coupling, electrolytic"],
+  ["C4", "10UF", "C", "input coupling, electrolytic"],
+  ["C4B", "100PF", "C", "printed C4 on the drawing (clash with input cap C4); U3:A feedback"],
+  ["C5", "15PF", "C", ""],
+  ["×2", "10UF", "C", "supply decoupling, electrolytic"],
+  ["×2", ".1uF", "C", "supply decoupling"],
+  ["U3", "5532", "IC", "dual op amp, U3:A and U3:B"],
+  ["RV1", "10K", "POT", "input 1 level"],
+  ["RV2", "10K", "POT", "input 2 level"],
+  ["RV3", "10K", "POT", "input 3 level"],
+  ["RV4", "10K", "POT", "input 4 level"]
+ ]
+}

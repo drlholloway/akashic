@@ -1,0 +1,24 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-jsh-fuzz",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Clean typed schematic of the JSH Fuzz (Model FZIII), three-transistor fuzz; no designators except Q1-Q3, so parts are quantity refs.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "1M", "R", "Q1 base bias; no designators on drawing"],
+  ["×1", "10k", "R", "Q1 emitter"],
+  ["×1", "4.7k", "R", "into Q2 base"],
+  ["×1", "33k", "R", "Q2 collector"],
+  ["×1", "150k", "R", "feedback Q3 emitter to Q2 base"],
+  ["×1", "6.8k", "R", "Q3 collector"],
+  ["×1", "22", "R", "Q3 emitter"],
+  ["×3", "0.1uF", "C", "input, Q1-Q2 coupling, output"],
+  ["×1", "1n2", "C", "Q3 collector-base"],
+  ["×1", "22uF", "C", "electrolytic, across the 1k emitter pot"],
+  ["×2", "Diode", "D", "clipping pair to ground; 'pretty much any silicon signal diode'; no part number given"],
+  ["Q1", "BC238B", "Q", ""],
+  ["Q2", "BC239C", "Q", ""],
+  ["Q3", "BC239C", "Q", ""],
+  ["×1", "A50K", "POT", "output volume, '50k Log'"],
+  ["×1", "1k", "POT", "Q3 emitter pot with 22uF bypass (gain/fuzz), unnamed"]
+ ]
+}

@@ -1,0 +1,20 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-roger-mayer-classic-fuzz",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Clean two-transistor AC128 fuzz-face-style drawing; only the transistors have designators, the pots are unnamed.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "1k", "R", "supply"],
+  ["×1", "5k6", "R", "Q1 collector"],
+  ["×1", "18k", "R", "Q2 collector"],
+  ["×1", "100k", "R", "feedback, Q2 emitter to Q1 base"],
+  ["×1", "4u7", "C", "input, electrolytic"],
+  ["×1", "0.1uF", "C", "output coupling (drawn 0.1uf)"],
+  ["×1", ".0022uF", "C", "across volume pot, input to wiper"],
+  ["×1", "47uF", "C", "electrolytic, from 2k pot wiper"],
+  ["Q1", "AC128", "Q", "PNP germanium"],
+  ["Q2", "AC128", "Q", "PNP germanium"],
+  ["×1", "2k", "POT", "unnamed; Q2 emitter, acts as fuzz control"],
+  ["×1", "47k", "POT", "unnamed; output volume"]
+ ]
+}

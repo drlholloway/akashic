@@ -1,0 +1,24 @@
+{
+ "id": "expanon:phasers-mu-tron-bi-phase-page-3",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "ARP-drawn Mu-Tron Bi-Phase power supply sheet (BD3, drawing 77206): mains transformer, bridge and RC4195 regulator only. Transformer, fuse and neon lamp omitted.",
+ "uncertain": [
+  "CR15: printed 'CR13' (clash with the bridge diode); the notes give CR15 as the highest diode designator"
+ ],
+ "rows": [
+  ["R122", "1M", "R", ""],
+  ["C37", "470uF", "C", "electrolytic 35V"],
+  ["C38", "470uF", "C", "electrolytic 35V"],
+  ["C39", "47uF", "C", "electrolytic 16V"],
+  ["C40", "47uF", "C", "electrolytic 16V"],
+  ["C41", ".01uF", "C", "10%"],
+  ["C42", ".01uF", "C", "10%"],
+  ["CR11", "1N4002", "D", "bridge rectifier, per note"],
+  ["CR12", "1N4002", "D", "bridge rectifier, per note"],
+  ["CR13", "1N4002", "D", "bridge rectifier, per note"],
+  ["CR14", "1N4002", "D", "bridge rectifier, per note"],
+  ["CR15", "1N4148", "D", "drawn as 'CR 13'; renumbered CR15 per the highest-designator note"],
+  ["Z17", "RC4195TK", "IC", "dual +/-15V tracking regulator"],
+  ["S8", "SPST", "SW", "mains power switch"]
+ ]
+}

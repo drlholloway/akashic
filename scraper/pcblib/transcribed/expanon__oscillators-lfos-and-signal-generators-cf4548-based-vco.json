@@ -1,0 +1,14 @@
+{
+ "id": "expanon:oscillators-lfos-and-signal-generators-cf4548-based-vco",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "David Johnson and Associates '4584 CMOS Inverter VCO' (2002); the chip is a CD4584 (the listing's 'CF4548' is a typo). Includes a V-in/frequency table.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "2.2M", "R", "U1A feedback (timing)"],
+  ["×1", "4.7M", "R", "U2A feedback (bias)"],
+  ["×3", "0.1uF", "C", "control-input filter, +5V bypass, output coupling"],
+  ["×1", "220pF", "C", "timing capacitor"],
+  ["U1", "CD4584", "IC", "hex Schmitt inverter; U1A oscillator, U1B-U1F paralleled buffer"],
+  ["U2", "CD4069", "IC", "hex inverter; U2A used as linear voltage amp"]
+ ]
+}

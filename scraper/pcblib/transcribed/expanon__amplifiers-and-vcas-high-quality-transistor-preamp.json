@@ -1,0 +1,27 @@
+{
+ "id": "expanon:amplifiers-and-vcas-high-quality-transistor-preamp",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Three-transistor (BC178B/BC109C/BC108B) audio preamp run from 21V; no designators on the drawing, so parts are listed by quantity.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "180k", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×1", "47", "R", ""],
+  ["×1", "18k", "R", ""],
+  ["×1", "33k", "R", ""],
+  ["×2", "6.8k", "R", ""],
+  ["×1", "220", "R", ""],
+  ["×1", "68", "R", ""],
+  ["×2", "10uF", "C", "input and output coupling"],
+  ["×1", "3.3uF", "C", ""],
+  ["×1", "1.5nF", "C", ""],
+  ["×1", "125uF", "C", ""],
+  ["×1", "50uF", "C", ""],
+  ["×1", "22pF", "C", ""],
+  ["×1", "BC178B", "Q", "PNP input stage"],
+  ["×1", "BC108B", "Q", "NPN emitter follower"],
+  ["×1", "BC109C", "Q", "NPN gain stage"],
+  ["Gain", "100k", "POT", ""]
+ ]
+}

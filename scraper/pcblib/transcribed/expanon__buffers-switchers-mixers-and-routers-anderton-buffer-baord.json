@@ -1,0 +1,15 @@
+{
+ "id": "expanon:buffers-switchers-mixers-and-routers-anderton-buffer-baord",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Craig Anderton 1976 magazine column page; Fig. 4 is the 741 unity-gain buffer board with its dual-9V supply, read from that figure (Figs. 1-3 are concept sketches).",
+ "uncertain": [],
+ "rows": [
+  ["R1", "1Meg", "R", ""],
+  ["R2", "470", "R", "470 ohm output resistor"],
+  ["C1", ".05uF", "C", ""],
+  ["C2", "5pF", "C", ""],
+  ["×2", "10uF", "C", "supply filter electrolytics, drawn as 10-100 uf"],
+  ["IC1", "741", "IC", "op amp"],
+  ["S1", "DPDT", "SW", "power on-off switch for the two 9V batteries"]
+ ]
+}

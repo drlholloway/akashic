@@ -1,0 +1,27 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-guitar-effects-unit-octave-fuzz",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Clean single-page drawing from ETI-Canada (Jan 1980); no resistor or capacitor designators, values grouped by count. Runs on +/-9V from two batteries.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "6.8k", "R", "Q1 collector"],
+  ["×1", "680k", "R", "Q1 bias"],
+  ["×1", "270", "R", "Q1 emitter, drawn 270ohms"],
+  ["×5", "10k", "R", "op-amp input/feedback/summing"],
+  ["×1", "100k", "R", ""],
+  ["×1", "8.2k", "R", ""],
+  ["×1", "39k", "R", "Fuzz output divider; raise 820/lower 39k for more Fuzz level"],
+  ["×1", "820", "R", "drawn 820 ohms"],
+  ["×2", "1k", "R", "Struzz output divider"],
+  ["×2", "1.0uF", "C", "electrolytic, input and Q1 output coupling"],
+  ["×1", "560pF", "C", ""],
+  ["D1", "1N4148", "D", ""],
+  ["D2", "1N4148", "D", ""],
+  ["Q1", "MPS6515", "Q", "NPN"],
+  ["×1", "4558", "IC", "dual op amp (a/b sections); any low-noise dual op amp"],
+  ["×1", "1M", "POT", "variable resistor in op-amp a feedback, unnamed"],
+  ["S1", "DPST", "SW", "power on/off for the two 9V batteries"],
+  ["S2", "SPDT", "SW", "bypass"],
+  ["S3", "SPDT", "SW", "Fuzz/Struzz"]
+ ]
+}

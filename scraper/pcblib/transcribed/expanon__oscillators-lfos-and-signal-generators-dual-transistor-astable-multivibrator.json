@@ -1,0 +1,15 @@
+{
+ "id": "expanon:oscillators-lfos-and-signal-generators-dual-transistor-astable-multivibrator",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Textbook two-transistor astable multivibrator on +5V; transistor types not given.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "15K", "R", ""],
+  ["R2", "15K", "R", ""],
+  ["×2", "1K", "R", "collector resistors; no designator drawn"],
+  ["C1", "100uF", "C", "electrolytic"],
+  ["C2", "100uF", "C", "electrolytic"],
+  ["Q1", "?", "Q", "NPN, no part number given"],
+  ["Q2", "?", "Q", "NPN, no part number given"]
+ ]
+}

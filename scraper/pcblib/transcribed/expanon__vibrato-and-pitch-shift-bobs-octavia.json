@@ -1,0 +1,17 @@
+{
+ "id": "expanon:vibrato-and-pitch-shift-bobs-octavia",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Bob Starr's Octavia: LM386 driving a center-tapped transformer into a two-diode full-wave rectifier; no designators except T1.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "2.2k", "R", "Gain pot to ground"],
+  ["×1", "100k", "R", "9V to transformer center tap"],
+  ["×2", ".05uF", "C", "input and output coupling"],
+  ["×1", "220uF", "C", "LM386 output coupling"],
+  ["×2", "1N914", "D", "full-wave rectifier"],
+  ["×1", "LM386", "IC", ""],
+  ["T1", "Radio Shack 273-1380", "OTHER", "center-tapped audio transformer"],
+  ["Gain", "50K", "POT", ""],
+  ["Level", "50K", "POT", ""]
+ ]
+}

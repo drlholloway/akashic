@@ -1,0 +1,30 @@
+{
+ "id": "expanon:circuit-bending-and-modifications-mxr-dynacomp",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "The drawing is titled MXR Noise Gate (741 detector, 2N5952 JFET gate), not a Dynacomp; only the transistors carry designators, so other parts are listed by quantity.",
+ "uncertain": [
+  "1N5331: printed so; may be meant as a 1N5231 (5.1V zener)"
+ ],
+ "rows": [
+  ["×2", "100", "R", ""],
+  ["×1", "680", "R", ""],
+  ["×2", "1k", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×4", "22k", "R", ""],
+  ["×2", "100k", "R", ""],
+  ["×1", "150k", "R", ""],
+  ["×1", "470k", "R", ""],
+  ["×7", "1M", "R", ""],
+  ["×3", "10nF", "C", ""],
+  ["×2", "47nF", "C", ""],
+  ["×4", "1uF", "C", "three electrolytic, one film across the 100k"],
+  ["×3", "10uF", "C", "electrolytic"],
+  ["×1", "1N5331", "D", "zener on the bias rail, as printed"],
+  ["T1", "2SC1849", "Q", ""],
+  ["T2", "2SC1849", "Q", ""],
+  ["T3", "2N5952", "Q", "N-channel JFET"],
+  ["×2", "741", "IC", "two single op amps"],
+  ["Sensitivity", "600k", "POT", ""],
+  ["In/Out", "SPDT", "SW", "momentary"]
+ ]
+}

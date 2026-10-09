@@ -1,0 +1,14 @@
+{
+ "id": "expanon:buffers-switchers-mixers-and-routers-mosfet-buffer",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Single MOSFET source-follower buffer with a gate-protection zener; R1 returns to a bias voltage Vr.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "10M", "R", ""],
+  ["R2", "2.7k", "R", ""],
+  ["×1", "0.1uF", "C", "input cap, no designator"],
+  ["×1", "10uF", "C", "output electrolytic, no designator"],
+  ["D1", "Diode", "D", "zener, no part number given"],
+  ["Q1", "?", "Q", "N-channel MOSFET, no part number given"]
+ ]
+}

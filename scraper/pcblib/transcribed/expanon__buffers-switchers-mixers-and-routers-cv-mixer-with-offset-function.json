@@ -1,0 +1,9 @@
+{
+ "id": "expanon:buffers-switchers-mixers-and-routers-cv-mixer-with-offset-function",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "CV mixer with four input pots (P1-P4), R1-R8, P5 and two op amps (O1, O2) but no component values or op-amp type anywhere on the drawing.",
+ "uncertain": [],
+ "rows": [
+
+ ]
+}

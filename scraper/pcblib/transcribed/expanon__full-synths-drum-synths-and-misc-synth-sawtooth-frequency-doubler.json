@@ -1,0 +1,15 @@
+{
+ "id": "expanon:full-synths-drum-synths-and-misc-synth-sawtooth-frequency-doubler",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Clean CAD schematic by Magnus Danielson (1998), one page; ±5V sawtooth in and out.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "300k", "R", ""],
+  ["R2", "100k", "R", ""],
+  ["R3", "49k9", "R", "to -15V"],
+  ["R4", "100k", "R", ""],
+  ["R5", "100k", "R", ""],
+  ["D1", "1N4148", "D", ""],
+  ["U1", "TL-082", "IC", "dual op amp, sections U1A and U1B"]
+ ]
+}

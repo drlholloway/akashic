@@ -1,0 +1,16 @@
+{
+ "id": "expanon:amplifiers-and-vcas-single-ic-pre-amp",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Electret-mic preamp with one LM358 section; values from the printed parts list beside the drawing. The electret mic is not listed.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "10K", "R", ""],
+  ["R2", "1K", "R", ""],
+  ["R3", "10K", "R", ""],
+  ["R4", "10K", "R", ""],
+  ["C1", "0.1uF", "C", "disc"],
+  ["C2", "4.7uF", "C", "electrolytic"],
+  ["IC1", "LM358", "IC", "single-supply dual op amp, one section used"],
+  ["R5", "100K", "POT", "100K to 1M potentiometer, wired as variable feedback resistor (gain)"]
+ ]
+}

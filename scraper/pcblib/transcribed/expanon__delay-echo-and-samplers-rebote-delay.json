@@ -1,0 +1,38 @@
+{
+ "id": "expanon:delay-echo-and-samplers-rebote-delay",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Rebote Delay 1.0 (Francisco Pena, 2002) PT2399 sheet with printed parts list, layout and schematic; rows follow the printed parts list (undesignated, so quantity refs) with the schematic-only parts added and noted.",
+ "uncertain": [
+  "4.7uF count: parts list says 2, schematic draws 3",
+  "56k and 0.01uF are on the schematic but not the parts list",
+  "R at pin 6 has no value"
+ ],
+ "rows": [
+  ["×1", "5M1", "R", ""],
+  ["×2", "100k", "R", ""],
+  ["×1", "18k", "R", ""],
+  ["×2", "15k", "R", ""],
+  ["×4", "10k", "R", ""],
+  ["×1", "6k8", "R", ""],
+  ["×1", "5k6", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×1", "2k4", "R", ""],
+  ["×1", "56k", "R", "drawn on the schematic and layout (red) but missing from the parts list"],
+  ["R", "?", "R", "series resistor from pin 6 to the Delay pot; no value drawn and not in the parts list"],
+  ["×1", "100uF", "C", ""],
+  ["×2", "47uF", "C", ""],
+  ["×2", "10uF", "C", ""],
+  ["×2", "4.7uF", "C", "parts list; schematic shows three 4.7uF (input, and two at pins 16/15)"],
+  ["×3", "0.1uF", "C", ""],
+  ["×2", "0.082uF", "C", ""],
+  ["×1", "3900pF", "C", ""],
+  ["×1", "3300pF", "C", ""],
+  ["×2", "560pF", "C", ""],
+  ["×1", "0.01uF", "C", "drawn on the schematic at pin 14 filter, not in the parts list"],
+  ["Q1", "2N5457", "Q", ""],
+  ["IC1", "PT2399", "IC", ""],
+  ["IC2", "5V regulator", "IC", "5v Reg (78L05 type)"],
+  ["Delay", "B50K", "POT", "50k lin."],
+  ["Repeats", "A50K", "POT", "50k log."]
+ ]
+}

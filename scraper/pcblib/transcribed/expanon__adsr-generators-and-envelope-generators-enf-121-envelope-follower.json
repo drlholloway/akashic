@@ -1,0 +1,26 @@
+{
+ "id": "expanon:adsr-generators-and-envelope-generators-enf-121-envelope-follower",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Timothy Daugard ENF-121 envelope follower; the sheet says 2 identical sections, 1 shown, so the parts list is for one section. No transistor types given.",
+ "uncertain": [
+  "C4: drawn in gray, probably optional"
+ ],
+ "rows": [
+  ["R1", "1K8", "R", ""],
+  ["R2", "330K", "R", ""],
+  ["R3", "1K8", "R", ""],
+  ["R4", "100", "R", ""],
+  ["R5", "1K8", "R", ""],
+  ["R6", "18K", "R", ""],
+  ["R7", "18K", "R", ""],
+  ["R8", "100K", "R", ""],
+  ["C1", "1uf", "C", "electrolytic; bypassed by the AC/DC selection"],
+  ["C2", "10uf", "C", "electrolytic"],
+  ["C3", "1uf", "C", "electrolytic"],
+  ["C4", "10uf", "C", "electrolytic; drawn in gray (optional)"],
+  ["Q1", "?", "Q", "NPN transistor, no part number given"],
+  ["Q2", "?", "Q", "NPN transistor, no part number given"],
+  ["Rv1", "500K", "POT", "variable resistor"],
+  ["Rv2", "500K", "POT", "variable resistor"]
+ ]
+}

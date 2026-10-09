@@ -1,0 +1,14 @@
+{
+ "id": "expanon:tone-control-and-eqs-passive-tone-control",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Pictorial wiring drawing of a one-knob passive tone control (pot plus three caps and two resistors) with every value labelled.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "39K", "R", ""],
+  ["R2", "100K", "R", ""],
+  ["C1", ".004uF", "C", "code 402"],
+  ["C2", ".01uF", "C", "code 103"],
+  ["C3", ".1uF", "C", "code 104"],
+  ["×1", "B100K", "POT", "tone pot, unnamed, 100K linear"]
+ ]
+}

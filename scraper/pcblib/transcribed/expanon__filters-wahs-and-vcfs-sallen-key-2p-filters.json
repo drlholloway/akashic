@@ -1,0 +1,38 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-sallen-key-2p-filters",
+ "read": "2026-10-09, by eye from the cached schematic image (PDF page 2)",
+ "comment": "Electronic Design 1974 'Voltage-tunable active filter' (Steiner); page 1 is article text and a simplified Fig. 1, page 2 holds the full Fig. 2 schematic, read from it. Only C1/C2, Q1-Q4 and R6 carry designators; handwritten substitutes and value edits are on the scan.",
+ "uncertain": [
+  "0.1uF: printed '01µF', could be .01uF",
+  "input electrolytic value illegible",
+  "Q1-Q3 handwritten substitutes read BC547 (Q2's could be BC517)",
+  "1k count: one resistor label under C2 reads '1k' faintly"
+ ],
+ "rows": [
+  ["×5", "2k", "R", "undesignated"],
+  ["×4", "1k", "R", "undesignated (top bus, C2 to ground, Q1 base to ground, Q4 emitter)"],
+  ["×1", "360", "R", "from +12V supply"],
+  ["×1", "8.2k", "R", ""],
+  ["×1", "3.3M", "R", ""],
+  ["×1", "18k", "R", ""],
+  ["×2", "47k", "R", "signal input and voltage-control input"],
+  ["×1", "47K", "R", "handwritten, frequency trim to Q1 base"],
+  ["×1", "3.9k", "R", "emitter tail"],
+  ["×1", "82", "R", "to -10V"],
+  ["C1", "0.0047uF", "C", "two capacitors both labelled C1"],
+  ["C2", "0.0047uF", "C", ""],
+  ["×2", "150uF", "C", "supply decoupling"],
+  ["×1", "0.1uF", "C", "printed '01µF'; could be .01uF"],
+  ["×1", "10uF", "C", "output"],
+  ["×1", "?", "C", "input coupling electrolytic, value number illegible ('µF' only)"],
+  ["×8", "1N4148", "D", "note: diodes are 1N4148 or equiv; drawn as pairs labelled \"R1\" and \"R2\""],
+  ["Q1", "2N5172", "Q", "handwritten substitute BC547"],
+  ["Q2", "2N5172", "Q", "handwritten substitute BC547"],
+  ["Q3", "2N5172", "Q", "handwritten substitute BC547"],
+  ["Q4", "2N5138", "Q", "handwritten substitute BC557"],
+  ["Frequency", "25K", "POT", "'Frequency & Trim' pot, value handwritten"],
+  ["R6", "1k", "POT", "Q control, handwritten 'lin'"],
+  ["×1", "500K", "POT", "handwritten variable resistor in the Vc input, '1V/octave', later note 325K-350K"],
+  ["×1", "SP3T", "SW", "low-pass / high-pass / bandpass selector"]
+ ]
+}

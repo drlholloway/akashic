@@ -1,0 +1,18 @@
+{
+ "id": "expanon:tone-control-and-eqs-tone-booster",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Single-page PDF: the Everyday Electronics (Sept. 1978) two-transistor Tone Booster, which peaks around 5 kHz with a twin-T feedback network. Only Q1 and Q2 have designators, so the passives are listed by value with counts.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "4k7", "R", ""],
+  ["×1", "330k", "R", ""],
+  ["×1", "820k", "R", ""],
+  ["×2", "2k2", "R", "twin-T network"],
+  ["×3", "0.1uf", "C", "input, output and twin-T shunt"],
+  ["×1", "22000p", "C", "twin-T series cap"],
+  ["×1", "100p", "C", ""],
+  ["×1", "150uf", "C", "supply decoupling, electrolytic"],
+  ["Q1", "ZTX384", "Q", ""],
+  ["Q2", "BC415P", "Q", ""]
+ ]
+}

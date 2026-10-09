@@ -1,0 +1,15 @@
+{
+ "id": "expanon:buffers-switchers-mixers-and-routers-fet-buffer",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Generic JFET source-follower buffer; JFET type not given.",
+ "uncertain": [
+  "Q1: no part number"
+ ],
+ "rows": [
+  ["R1", "1M", "R", ""],
+  ["R2", "3k3", "R", ""],
+  ["×1", "0.1uF", "C", "input cap, undesignated"],
+  ["×1", "10uF", "C", "output electrolytic, undesignated"],
+  ["Q1", "?", "Q", "N-channel JFET, no part number given"]
+ ]
+}

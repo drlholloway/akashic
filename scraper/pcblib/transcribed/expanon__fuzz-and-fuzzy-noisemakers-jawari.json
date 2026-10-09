@@ -1,0 +1,21 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-jawari",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Jawari octave/sitar-buzz circuit, v6.3 10/02; values drawn on the sheet, part numbers from the notes (Q1 J201, Ge 1N34, Si 1N4148). DPDT bypass switch skipped.",
+ "uncertain": [
+  "10k source pot: drawn as a variable resistor with no name, pot or trimmer not stated"
+ ],
+ "rows": [
+  ["×1", "1M", "R", "gate to ground"],
+  ["×1", "1k", "R", "after the Si diode"],
+  ["×1", "100k", "R", "output pulldown"],
+  ["×1", "22uF", "C", "electrolytic, supply filter"],
+  ["×1", ".1uF", "C", "output coupling"],
+  ["×1", "1uF", "C", "electrolytic, on the source pot wiper"],
+  ["×2", "1N34", "D", "Ge, rectifier pair off the transformer secondary"],
+  ["×1", "1N4148", "D", "Si diode"],
+  ["Q1", "J201", "Q", "JFET"],
+  ["T1", "42TM018", "OTHER", "10k:10k audio transformer, Mouser 42TM018 or 42TL218"],
+  ["×1", "10k", "POT", "unnamed variable resistor in the source, wiper to the 1uF bypass; could be a trimmer"]
+ ]
+}

@@ -1,0 +1,30 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-axe-grinder",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "PAiA 5750 Axe Grinder (1995): clean CAD drawing with a part legend; resistors and capacitors carry no designators, so they are listed by quantity.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "1k", "R", "output"],
+  ["×1", "4k7", "R", "IC1d distorted input"],
+  ["×9", "10k", "R", "op amp inputs, IC1d feedback and mixer inputs, S1 pull-up, 4.5 V divider"],
+  ["×1", "12k", "R", "IC2b gain resistor"],
+  ["×1", "100k", "R", "IC1b feedback, beside the 500k pot"],
+  ["×1", "220k", "R", "IC1c feedback"],
+  ["×3", "10M", "R", "input bias pair and across IC2c"],
+  ["×1", "15pF", "C", "IC1b feedback"],
+  ["×1", "100pF", "C", "IC1c feedback"],
+  ["×4", "0.1uF", "C", "input, IC1b and IC1c coupling, tone"],
+  ["×5", "1uF", "C", "polarized, 16V"],
+  ["×2", "10uF", "C", "polarized, 16V; supply"],
+  ["D1", "1N914", "D", "or 1N4148"],
+  ["D2", "1N914", "D", "or 1N4148"],
+  ["IC1", "4136", "IC", "quad op amp"],
+  ["IC2", "4066", "IC", "quad bilateral switch"],
+  ["Tone", "5K", "POT", ""],
+  ["Distortion Intensity", "500K", "POT", "carries S2"],
+  ["Distortion Level", "100K", "POT", ""],
+  ["Clean Level", "100K", "POT", ""],
+  ["S1", "SPST", "SW", "Cancel Effect"],
+  ["S2", "SPST", "SW", "Full Intensity, switch on the 500k pot"]
+ ]
+}

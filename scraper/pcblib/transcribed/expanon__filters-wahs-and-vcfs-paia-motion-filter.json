@@ -1,0 +1,33 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-paia-motion-filter",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "PAiA 5720 Motion Filter/Follower (rev 10/29/95), clean CAD drawing; only ICs, diodes D1/D2 and S1 carry designators, so the rest are grouped by value.",
+ "uncertain": [],
+ "rows": [
+  ["×6", "1M", "R", "input bias (2), base bias, IC1c input and feedback, Vr divider"],
+  ["×1", "3M9", "R", ""],
+  ["×1", "150", "R", ""],
+  ["×1", "47k", "R", ""],
+  ["×1", "10", "R", ""],
+  ["×2", "10k", "R", ""],
+  ["×2", "100k", "R", ""],
+  ["×1", "1k", "R", ""],
+  ["×1", "100", "R", ""],
+  ["×5", "1uF", "C", "electrolytic"],
+  ["×1", "0.1uF", "C", ""],
+  ["×1", "100pF", "C", ""],
+  ["×2", "0.01uF", "C", ""],
+  ["×1", "100uF", "C", "electrolytic"],
+  ["×1", "0.05uF", "C", ""],
+  ["D1", "1N4148", "D", "or 1N914"],
+  ["D2", "1N4148", "D", "or 1N914"],
+  ["×1", "1N4001", "D", "reverse polarity protection"],
+  ["×1", "2N4124", "Q", ""],
+  ["IC1", "4136", "IC", "quad op amp"],
+  ["IC2", "4066", "IC", "quad switch"],
+  ["Sensitivity", "500k", "POT", ""],
+  ["Initial Frequency", "500k", "POT", ""],
+  ["Offset", "500k", "TRIM", ""],
+  ["S1", "SPST", "SW", "Cancel switch"]
+ ]
+}

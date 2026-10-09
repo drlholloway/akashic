@@ -1,0 +1,13 @@
+{
+ "id": "expanon:oscillators-lfos-and-signal-generators-simple-555-tone-generator",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "555 astable tone generator driving a speaker (SPK1, skipped), roughly 150Hz to 12kHz.",
+ "uncertain": [],
+ "rows": [
+  ["R2", "1k", "R", ""],
+  ["C1", ".01uF", "C", ""],
+  ["C2", ".1uF", "C", ""],
+  ["U1", "555", "IC", ""],
+  ["R1", "1M", "POT", "variable resistor (rheostat), marked 1M 40%"]
+ ]
+}

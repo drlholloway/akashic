@@ -1,0 +1,14 @@
+{
+ "id": "expanon:oscillators-lfos-and-signal-generators-high-output-noise-generator",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Elektor April 1975 article (J. Jacobs): two-BC237 noise generator, 10-30V supply. T1 can be replaced by a 6-8V zener.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "47k", "R", "sets the zener current, hence noise amplitude"],
+  ["×1", "2k2", "R", "T2 collector load"],
+  ["×1", "10uF", "C", "output coupling, 40V"],
+  ["×1", "47uF", "C", "electrolytic, 40V"],
+  ["T1", "BC237", "Q", "NPN, base-emitter used as zener"],
+  ["T2", "BC237", "Q", "NPN amplifier"]
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-ron-black-tube-distortion",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Ron Black's Tube Distortion from Guitar Player, October 1981: a 747 op amp gain stage into a 12AU7A run at 12V, with its own mains-powered 12V/6V supply. IC types come from the legend; the transformer is skipped.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "10k", "R", "6V divider; all resistors 1/2W"],
+  ["×1", "22k", "R", ""],
+  ["×2", "180k", "R", "plate resistors"],
+  ["×1", "470k", "R", ""],
+  ["×2", "1M", "R", "grid resistors"],
+  ["×3", "0.01uF", "C", "coupling"],
+  ["×2", "0.1uF", "C", "input and output coupling"],
+  ["×1", "100uF", "C", "electrolytic, 6V"],
+  ["×1", "470uF", "C", "electrolytic, 50V"],
+  ["×1", "1000uF", "C", "electrolytic, 12V"],
+  ["×1", "1N3600", "D", "across regulator"],
+  ["×1", "Bridge rectifier", "D", "full-wave, 50V 500mA minimum"],
+  ["IC1", "747", "IC", "dual op amp"],
+  ["IC2", "LM340K-12", "IC", "12V regulator"],
+  ["×1", "12AU7A", "OTHER", "dual triode, filament from 12V"],
+  ["×1", "100k", "POT", "input/drive pot, unnamed"],
+  ["×1", "500k", "POT", "output level pot, unnamed"],
+  ["×1", "SPST", "SW", "mains power switch"]
+ ]
+}

@@ -1,0 +1,37 @@
+{
+ "id": "expanon:ring-modulators-and-frequency-shifters-old-style-ring-mod",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Two cascaded diode-ring modulators with 600:600 transformers (42TL016 T1-T3, skipped) driven by two LM324 phase-shift oscillators with Tune pots; output RC lowpass. Only diodes and R1/R2 carry designators.",
+ "uncertain": [
+  "R1/R2: drawn as variable resistors labeled R1/R2; trimmer vs panel pot not stated"
+ ],
+ "rows": [
+  ["×1", "470", "R", "output filter series resistor, undesignated"],
+  ["×2", "100k", "R", "undesignated; one per oscillator (feedback/bias)"],
+  ["×2", "2.7k", "R", "undesignated; oscillator 1 feedback and bias divider"],
+  ["×2", "2.2k", "R", "undesignated; one per oscillator, to Tune pot"],
+  ["×2", "4.7k", "R", "undesignated; one per oscillator"],
+  ["×1", ".1uF", "C", "output filter, undesignated"],
+  ["×1", ".05uF", "C", "output filter, undesignated"],
+  ["×2", "4.7uF", "C", "electrolytic, carrier injection into R1/R2 wipers, undesignated"],
+  ["×2", "100uF", "C", "electrolytic, supply decoupling and bias bypass, undesignated"],
+  ["×6", ".0036uF", "C", "undesignated; three per phase-shift oscillator"],
+  ["D1", "Diode", "D", "no part number given; ring modulator 1"],
+  ["D2", "Diode", "D", "no part number given"],
+  ["D3", "Diode", "D", "no part number given"],
+  ["D4", "Diode", "D", "no part number given"],
+  ["D5", "Diode", "D", "no part number given; ring modulator 2"],
+  ["D6", "Diode", "D", "no part number given"],
+  ["D7", "Diode", "D", "no part number given"],
+  ["D8", "Diode", "D", "no part number given"],
+  ["D9", "Diode", "D", "no part number given; oscillator clipping pair"],
+  ["D10", "Diode", "D", "no part number given"],
+  ["D11", "Diode", "D", "no part number given"],
+  ["D12", "Diode", "D", "no part number given"],
+  ["×1", "LM324", "IC", "one quad op amp; sections at pins 1-3 and 5-7 used as the two oscillators"],
+  ["Tune 1", "10k", "POT", ""],
+  ["Tune 2", "10k", "POT", ""],
+  ["R1", "1K", "TRIM", "variable resistor across ring 1 input, carrier fed to wiper; balance adjust"],
+  ["R2", "1K", "TRIM", "variable resistor across ring 2 input, carrier fed to wiper; balance adjust"]
+ ]
+}

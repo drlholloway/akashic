@@ -12,14 +12,14 @@ at the bottom; re-run them after parser changes.
   have no parts: utility boards (jack, switch, control and 3PDT breakout boards, the AMT M1 EQ,
   controls and switch boards) and four clones (SD9, TS 808 V2, Distortion +, Rat) for which no
   schematic image was fetched; worth a look on the project pages.
-- **Experimentalists Anonymous**: 485 of 781 schematics were read by eye (October 2026; the Saw
-  Waveshaper, EMS VCS3 oscillator and both Minimoog filter copies joined after the transistor audit). 45
-  have no parts: 43 of them were looked at and hold nothing to list (wiring diagrams, circuit-bending
-  photos, articles, PCB layouts, continuation pages). 187 more came from positional OCR with fewer than
-  8 rows and were not read by eye (the Ibanez TS-10 among them: only its transistors and D1 are right,
-  from the drawing's note); 39 small circuits read by eye also have fewer than 8. The transistor audit
-  found the OCR boards' usual fault: a legend or note value ('All diodes are 1S1555', 'IC is a
-  NJZ4558') paired with the nearest designator, so a thin OCR board's transistors deserve a look.
+- **Experimentalists Anonymous**: 672 of 781 schematics were read by eye (October 2026; the last 187,
+  which had kept a thin OCR list of under 8 rows, on October 9: 491 OCR rows became 7,644). 55 have no
+  parts: they were looked at and hold nothing to list (wiring diagrams, circuit-bending photos, articles,
+  PCB layouts, continuation pages, formula-only app-note figures), apart from two too big or too blurred
+  to read in one pass: the Roland TR-707/727 service notes (schematics on PDF pages 10, 13 and 14, a
+  few hundred parts) and the Roland System-100M M-110 (an 825x584 scan). 106 keep the OCR list, all
+  with 8 or more rows; 68 small circuits read by eye have fewer than 8. The Ibanez TS-10 keeps its
+  OCR rows plus its transistors and D1 from the drawing's note.
 - **Bent Fishbowl**: 8 of 33 schematics come back thin; busy drawings defeat the
   designator/value pairing.
 - **GuitarPCB**: most NostalgiTone docs carry their tables in the text layer and read exactly; OCR fills

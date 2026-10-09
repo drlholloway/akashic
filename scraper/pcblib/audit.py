@@ -60,7 +60,7 @@ def find_flags(db: sqlite3.Connection, tdb: sqlite3.Connection) -> tuple[list[di
     REF_OK = re.compile(r"^(?:R|C|D|Q|U|IC|L|VR|RV|P|POT|SW|S|J|LED|TR|T|K|Z|ZD|DZ|X|XT|Y|F|FB|LDR|OC|OK|TRIM|RP|RT|CP|CR|VT|JP|OP|OA|B|BR|M|LD|RL|TL|PR|CT|CV|RLED|LEDR|CLR|RPD|CPD|REG|VREG|CB|RB|RC|RE|CE|CF|RF|RG|RS|RD)\d{0,3}[A-Za-z]?(?:\.\d)?$", re.I)
     RANGE_REF = re.compile(r"^[A-Z]{1,3}\d{1,3}\s*[-–]\s*[A-Z]{0,3}\d{1,3}$", re.I)
     NAMED = re.compile(r"^[A-Za-z][A-Za-z .&/+\-]{1,24}\d?$")  # a named control or part ('VOLUME', 'Tone 2')
-    QTY = re.compile(r"^×\d+$")
+    QTY = re.compile(r"^(?:[A-Z]{2,6}-)?×\d+$", re.I)  # ×2, or VSM-×2 on a sheet of several circuits
 
     D_OK = re.compile(r"^(?:1N\d{3,4}[A-Z]?|1S\d{3,4}|1SS\d{2,3}|BAT\d{2}[A-Z]?|BA\d{3}|BAV\d{2}|BAS\d{2}|OA\d{2,3}|AA\d{3}|1N34A?|D9[A-Z]|FDH\d+|BZX\d+.*|BZV\d+.*|ZENER.*|\d{1,2}V\d?|\d+(?:\.\d)?V\s*ZENER|LEDS?|.*LED.*|GE|SI|GERMANIUM|SILICON|SCHOTTKY|MA\d{3}|SB\d+|SR\d+|UF\d+|11DQ\d+|MUR\d+|1N60P?|GD\d+|DD\d+|RB\d+|S1M|SS\d{2}|FR\d{3}|IS\d+)$", re.I)
     IC_OK = re.compile(r"^(?:[A-Z]{1,6}-?\d{2,}[A-Z0-9\-/.()]*|\d{2,5}[A-Z]{0,6}\d{0,5}[A-Z]{0,4}(?:[-/][A-Z0-9]+)*|CD4\d{3}[A-Z()]*|FV-?1|V\d{4}|THAT\d+.*|SPIN.*|BTDR-\d+H?|.*OP-?AMP.*|.*REGULATOR.*|VTL\d.*|NSL-?\d+.*|.*\bMODULE\b.*|.*CHARGE PUMP.*)$", re.I)

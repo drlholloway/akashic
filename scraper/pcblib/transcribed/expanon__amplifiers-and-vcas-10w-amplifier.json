@@ -1,0 +1,29 @@
+{
+ "id": "expanon:amplifiers-and-vcas-10w-amplifier",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Magazine figure 'Practical power amplifier circuit' (quasi-complementary MJ480 output). R1, R2, C1 and C2 have no values on the drawing; they were presumably given in the article text.",
+ "uncertain": [
+  "R1, R2, C1, C2: no values on the drawing",
+  "R4: printed '22C', read as 220 ohms"
+ ],
+ "rows": [
+  ["R1", "?", "R", "1/2W; value not printed on the drawing (given in the article text)"],
+  ["R2", "?", "R", "1W; value not printed on the drawing"],
+  ["R3", "2.7k", "R", "1/4W"],
+  ["R4", "220", "R", "1/4W; drawn '22C'"],
+  ["R5", "100k", "R", "1/4W; adjust so that VE = 1/2 V"],
+  ["R6", "100k", "R", "1/4W"],
+  ["×1", "39k", "R", "1/4W, feedback/bias from +V; 22k for stereo"],
+  ["×1", "8.2k", "R", "1/4W, Tr4 collector load"],
+  ["×1", "2.2k", "R", "1/2W, Tr3 emitter"],
+  ["C1", "?", "C", "bootstrap electrolytic; value not printed"],
+  ["C2", "?", "C", "output coupling cap; value not printed"],
+  ["C3", "250uF", "C", "40V electrolytic"],
+  ["×1", "0.5uF", "C", "input coupling cap, drawn 0.5u"],
+  ["×1", "100uF", "C", "50V electrolytic"],
+  ["Tr1", "MJ480", "Q", "Motorola"],
+  ["Tr2", "MJ480", "Q", "Motorola"],
+  ["Tr3", "2N697", "Q", "or 2N1613"],
+  ["Tr4", "2N3906", "Q", "Motorola"]
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-paia-2720-3b-vc-bpf",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "PAiA 2720-3B voltage-controlled bandpass filter: a one-transistor twin-T bandpass whose tuning is set by the control current through D1, with an emitter-follower output. Clean drawing, every value legible.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "680K", "R", ""],
+  ["R2", "150K", "R", ""],
+  ["R3", "27K", "R", ""],
+  ["R4", "2.2K", "R", ""],
+  ["R5", "6.8K", "R", ""],
+  ["R7", "4.7K", "R", ""],
+  ["R8", "68K", "R", ""],
+  ["R9", "68K", "R", ""],
+  ["R10", "220K", "R", ""],
+  ["R11", "220K", "R", ""],
+  ["R12", "220K", "R", ""],
+  ["R13", "1K", "R", ""],
+  ["C1", "33uF", "C", "electrolytic, 6V"],
+  ["C2", ".1uF", "C", ""],
+  ["C3", ".22uF", "C", ""],
+  ["C4", ".001uF", "C", ""],
+  ["C5", ".001uF", "C", ""],
+  ["C6", ".1uF", "C", ""],
+  ["C7", "100uF", "C", "electrolytic, 16V"],
+  ["D1", "Diode", "D", "no part number given; forward-biased by the control current, acts as the variable resistance in the twin-T"],
+  ["Q1", "?", "Q", "NPN, no part number given"],
+  ["Q2", "?", "Q", "NPN emitter follower, no part number given"],
+  ["R6", "1K", "TRIM", "Q Adjust"]
+ ]
+}

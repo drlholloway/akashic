@@ -1,0 +1,13 @@
+{
+ "id": "expanon:buffers-switchers-mixers-and-routers-op-amp-noninverting-buffer-2",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Single-supply TL071 voltage-follower buffer with a 1M/1M bias divider.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "1M", "R", ""],
+  ["R2", "1M", "R", ""],
+  ["×1", "0.1uF", "C", "input coupling"],
+  ["×1", "10uF", "C", "output coupling, electrolytic"],
+  ["IC1", "TL071", "IC", "unity-gain follower; pin 7 V+, pin 4 ground"]
+ ]
+}

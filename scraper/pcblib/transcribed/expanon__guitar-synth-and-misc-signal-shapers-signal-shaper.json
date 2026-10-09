@@ -1,0 +1,20 @@
+{
+ "id": "expanon:guitar-synth-and-misc-signal-shapers-signal-shaper",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Hand-drawn 'Shape-that-son-of-A' by Christian Holmberg (LoFiAnti 2002); no designators or IC part numbers given.",
+ "uncertain": [
+  "point B resistor: value not drawn"
+ ],
+ "rows": [
+  ["×1", "1Meg", "R", "input bias to 1/2Vcc"],
+  ["×3", "10k", "R", "mux inputs and point A comparator"],
+  ["×1", "?", "R", "point B comparator input, no value drawn"],
+  ["×2", "1uF", "C", "input and output coupling"],
+  ["×4", "?", "IC", "four op-amp sections (gain, two comparators, output buffer), no part number"],
+  ["×1", "?", "IC", "SPDT MUX (analog switch), no part number"],
+  ["Gain", "100k", "POT", ""],
+  ["Shape", "10k", "POT", ""],
+  ["Point A", "100k", "POT", ""],
+  ["Point B", "100k", "POT", ""]
+ ]
+}

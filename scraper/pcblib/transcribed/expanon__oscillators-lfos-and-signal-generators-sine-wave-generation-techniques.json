@@ -1,0 +1,27 @@
+{
+ "id": "expanon:oscillators-lfos-and-signal-generators-sine-wave-generation-techniques",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "National Semiconductor AN-263, a 14-page app note with about a dozen separate oscillator circuits (Wien bridge, AC calibrator, LC, tuning fork, crystal, breakpoint and log shapers, VCO, digital ROM/DAC). Only Figure 1 on page 1, the 12 kHz phase-shift oscillator with LM386 output, is read here; the other figures are different circuits. The 8 ohm load and the LM386's internal 50k are left out.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "2k", "R", "Q3 bias; two in the RC phase-shift network"],
+  ["×1", "27k", "R", "Q1 base"],
+  ["×1", "3k", "R", "Q1 emitter"],
+  ["×1", "1M", "R", "to LM386 input"],
+  ["×1", "1.5M", "R", "Q2 collector-base feedback"],
+  ["×1", "10", "R", "Q2 emitter"],
+  ["×1", "100k", "R", "detector load"],
+  ["×1", "0.1uF", "C", "Q1 emitter decoupling"],
+  ["×1", "10uF", "C", "electrolytic, LM386 input coupling"],
+  ["×1", "250uF", "C", "electrolytic, LM386 output"],
+  ["×3", "1000pF", "C", "phase-shift network (drawn 3 x 1000 pF)"],
+  ["×1", "30pF", "C", ""],
+  ["×1", "5uF", "C", "electrolytic, detector filter"],
+  ["×1", "LM313", "D", "1.2V reference diode"],
+  ["×1", "1N914", "D", "output level detector"],
+  ["Q1", "2N3904", "Q", ""],
+  ["Q2", "2N3904", "Q", ""],
+  ["Q3", "2N3904", "Q", ""],
+  ["×1", "LM386", "IC", "power amp driving the 8 ohm load"]
+ ]
+}

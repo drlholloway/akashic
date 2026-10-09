@@ -1,0 +1,24 @@
+{
+ "id": "expanon:tremolos-and-panners-left-right-panner",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Pan-pot panner with an LM387 dual low-noise preamp, one half per output channel. Designators R1, R2, C1, C2 are formula labels repeated on several parts; repeats suffixed -2/-3/-4.",
+ "uncertain": [
+  "R2 (both): no value printed"
+ ],
+ "rows": [
+  ["R1", "15k", "R", "channel 1 input"],
+  ["R1b", "15k", "R", "channel 1, after pot tap; drawing labels all four 15k resistors R1"],
+  ["R1c", "15k", "R", "channel 2 input"],
+  ["R1d", "15k", "R", "channel 2, after pot tap"],
+  ["R2", "?", "R", "value not given; bias resistor from inverting input to C1 node (channel 1)"],
+  ["R2b", "?", "R", "value not given; channel 2; drawing labels both R2"],
+  ["×2", "51k", "R", "feedback, labeled 3.41R1, undesignated"],
+  ["C1", "0.1uF", "C", "drawing labels both C1"],
+  ["C1b", "0.1uF", "C", ""],
+  ["C2", "1uF", "C", "channel 1 input coupling"],
+  ["C2b", "1uF", "C", "channel 2 input coupling; drawing labels both C2"],
+  ["×1", "0.1uF", "C", "supply bypass at VS, undesignated"],
+  ["×1", "LM387", "IC", "dual preamp, both halves used"],
+  ["Pan", "10k", "POT", "labeled 0.707R1, wiper to ground"]
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-craig-anderton-octave-doubling-fuzz",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Craig Anderton octave-doubling fuzz redrawn by Justin Philpott 10-97; two NE5532s on a bipolar 9V supply, no resistor or capacitor designators.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "220k", "R", "input pulldown and IC2b feedback; resistors undesignated"],
+  ["×4", "10k", "R", "Overdrive series, mixer series, shunt to IC1b, IC2b input"],
+  ["×1", "15k", "R", ""],
+  ["×1", "22k", "R", "IC1b feedback"],
+  ["×1", "1M", "R", "IC2a feedback"],
+  ["×1", "470", "R", "below Overdrive pot"],
+  ["×1", "100nF", "C", "input"],
+  ["×4", "2u2", "C", "electrolytic, 2.2uF"],
+  ["×1", "10pF", "C", "IC2a feedback"],
+  ["×1", "220pF", "C", "switched in by Treble switch"],
+  ["×2", "10uF", "C", "supply filter"],
+  ["D1", "1N4001", "D", "legend D1-6 1N4001"],
+  ["D2", "1N4001", "D", ""],
+  ["D3", "1N4001", "D", ""],
+  ["D4", "1N4001", "D", ""],
+  ["D5", "1N4001", "D", "supply protection"],
+  ["D6", "1N4001", "D", "supply protection"],
+  ["IC1", "NE5532", "IC", "dual op amp"],
+  ["IC2", "NE5532", "IC", "dual op amp"],
+  ["Overdrive", "10k", "POT", ""],
+  ["Channel 2 Level", "10k", "POT", ""],
+  ["Volume", "10k", "POT", ""],
+  ["Treble", "SPST", "SW", ""],
+  ["Channel 1", "SPST", "SW", "channel 1 in/out"]
+ ]
+}

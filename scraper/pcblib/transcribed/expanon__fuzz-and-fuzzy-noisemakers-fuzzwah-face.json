@@ -1,0 +1,18 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-fuzzwah-face",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Dallas Arbiter Fuzz-Wah Face distortion section (c. 1972) drawn by Jack Orman; two-transistor NPN fuzz, only Q1 is designated and its type is unknown.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "270", "R", "supply feed to output stage"],
+  ["×2", "18k", "R", "one Q1 collector load, one series output resistor"],
+  ["×1", "10k", "R", "BC170B collector"],
+  ["×1", "68k", "R", "feedback, emitter to Q1 base"],
+  ["×1", "2.7k", "R", "BC170B emitter"],
+  ["×1", "100", "R", "in series with emitter bypass cap"],
+  ["×2", "0.1uF", "C", "input and output coupling"],
+  ["×1", "10uF", "C", "electrolytic, emitter bypass"],
+  ["Q1", "?", "Q", "NPN, unmarked in the original; drawing says probably a high-gain low-noise type"],
+  ["×1", "BC170B", "Q", "NPN, second stage, no designator"]
+ ]
+}

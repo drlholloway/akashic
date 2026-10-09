@@ -1,0 +1,14 @@
+{
+ "id": "expanon:buffers-switchers-mixers-and-routers-fet-buffer-3",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Simple JFET source-follower buffer; the two capacitors carry no designators and the JFET has no part number.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "1M", "R", ""],
+  ["R2", "3k3", "R", "source resistor"],
+  ["R3", "1M", "R", ""],
+  ["×1", "0.1uF", "C", "input coupling (undesignated)"],
+  ["×1", "10uF", "C", "electrolytic output coupling (undesignated)"],
+  ["Q1", "?", "Q", "N-channel JFET, no part number given"]
+ ]
+}

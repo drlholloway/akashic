@@ -1,0 +1,13 @@
+{
+ "id": "expanon:buffers-switchers-mixers-and-routers-passive-mic-attenuator",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Balanced passive mic pad (Fig. 1): two 470 ohm series resistors and a shunt R2 chosen by the printed formula. Both series resistors are labelled R1.",
+ "uncertain": [
+  "R2: no value drawn, set by formula"
+ ],
+ "rows": [
+  ["R1", "470", "R", ""],
+  ["×1", "470", "R", "second leg, also labelled R1 on the drawing"],
+  ["R2", "?", "R", "value computed from the formula for the desired loss and console input impedance"]
+ ]
+}

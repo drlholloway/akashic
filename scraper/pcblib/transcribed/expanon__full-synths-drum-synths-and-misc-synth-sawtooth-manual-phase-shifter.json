@@ -1,0 +1,13 @@
+{
+ "id": "expanon:full-synths-drum-synths-and-misc-synth-sawtooth-manual-phase-shifter",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Magnus Danielson's 2000 Sawtooth Phase Shifter, a single-page PDF: one TL082 and four resistors.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "300k", "R", ""],
+  ["R2", "49k9", "R", ""],
+  ["R3", "49k9", "R", ""],
+  ["R4", "300k", "R", ""],
+  ["U1", "TL-082", "IC", "dual op amp, U1A and U1B"]
+ ]
+}

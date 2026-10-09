@@ -1,0 +1,15 @@
+{
+ "id": "expanon:buffers-switchers-mixers-and-routers-transistor-buffer-2",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Generic NPN emitter-follower buffer biased to Vr; transistor type not given.",
+ "uncertain": [
+  "Q1: no part number"
+ ],
+ "rows": [
+  ["R1", "510k", "R", "to Vr bias"],
+  ["R2", "10k", "R", ""],
+  ["×1", "0.1uF", "C", "input cap, undesignated"],
+  ["×1", "10uF", "C", "output electrolytic, undesignated"],
+  ["Q1", "?", "Q", "NPN BJT, no part number given"]
+ ]
+}

@@ -1,0 +1,14 @@
+{
+ "id": "expanon:amplifiers-and-vcas-simple-npn-amplifier-2",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Two-transistor BC108C headphone amp (T.L. 2000) on +5V; no designators on the drawing.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "180k", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×1", "4k7", "R", ""],
+  ["×2", "10u", "C", "coupling electrolytics, undesignated"],
+  ["×1", "10n", "C", "undesignated"],
+  ["×2", "BC108C", "Q", "NPN, undesignated"]
+ ]
+}

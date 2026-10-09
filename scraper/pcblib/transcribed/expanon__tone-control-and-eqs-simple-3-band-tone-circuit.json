@@ -1,0 +1,22 @@
+{
+ "id": "expanon:tone-control-and-eqs-simple-3-band-tone-circuit",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Simple 3-band op-amp tone control from Graff's Encyclopedia / Popular Electronics; only R1 and R2 are designated and the note leaves both undetermined.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "?", "R", "gain resistor left to the builder"],
+  ["R2", "?", "R", "value unknown per note, experiment"],
+  ["×1", "10k", "R", "output load"],
+  ["×2", "1.8k", "R", ""],
+  ["×2", "3.6k", "R", ""],
+  ["×2", "11k", "R", ""],
+  ["×2", "0.005uF", "C", ""],
+  ["×1", "0.022uF", "C", ""],
+  ["×1", "0.05uF", "C", ""],
+  ["×1", "1uF", "C", "electrolytic"],
+  ["×1", "10uF", "C", "electrolytic"],
+  ["×2", "?", "IC", "op amps, any standard type per note"],
+  ["×2", "100k", "POT", "bass and mid controls"],
+  ["×1", "500k", "POT", "treble control"]
+ ]
+}

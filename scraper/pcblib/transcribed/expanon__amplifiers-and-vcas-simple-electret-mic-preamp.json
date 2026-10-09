@@ -1,0 +1,14 @@
+{
+ "id": "expanon:amplifiers-and-vcas-simple-electret-mic-preamp",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Simple one-transistor electret microphone preamp (collector-feedback biased 2N3904), 3 to 9 V supply; the electret mic itself is not listed.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "10K", "R", ""],
+  ["R2", "100K", "R", ""],
+  ["R3", "10K", "R", ""],
+  ["C1", "0.1uF", "C", ""],
+  ["C2", "0.1uF", "C", ""],
+  ["Q1", "2N3904", "Q", ""]
+ ]
+}

@@ -1,0 +1,20 @@
+{
+ "id": "expanon:buffers-switchers-mixers-and-routers-effects-swapper",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Effects-loop order swapper built from one 74HC4053 analog switch with a Vbias divider; select line chooses effect1>effect2 or effect2>effect1. R6 is printed twice on the drawing, so the second is listed as R6b.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "100K", "R", ""],
+  ["R2", "100K", "R", ""],
+  ["R3", "10K", "R", ""],
+  ["R4", "10K", "R", ""],
+  ["R5", "100K", "R", ""],
+  ["R6", "100K", "R", "pull to Vbias at U1C pin 3 junction"],
+  ["R6b", "100K", "R", "drawn as R6 a second time (at U1A pin 14); designator clash on the drawing"],
+  ["R7", "100K", "R", ""],
+  ["C1", "0.1uF", "C", ""],
+  ["C2", "10uF", "C", "electrolytic"],
+  ["C3", "10uF", "C", "electrolytic"],
+  ["U1", "74HC4053", "IC", "sections U1A, U1B, U1C"]
+ ]
+}

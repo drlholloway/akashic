@@ -1,0 +1,24 @@
+{
+ "id": "expanon:tone-control-and-eqs-active-3-band-tone-control",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Simple 3 Band Tone Control from Graff's Encyclopedia / Popular Electronics: inverting op amp input stage, three-band active network and output op amp. Only R1 and R2 are designated and neither has a value.",
+ "uncertain": [
+  "Pot roles (bass/mid/treble) inferred from the network, not labeled"
+ ],
+ "rows": [
+  ["R1", "?", "R", "left to the user depending on gain needs (op amp feedback)"],
+  ["R2", "?", "R", "value unknown per note, experiment"],
+  ["×1", "10k", "R", "output load"],
+  ["×2", "11k", "R", "bass network"],
+  ["×2", "3.6k", "R", "mid network"],
+  ["×2", "1.8k", "R", "treble network"],
+  ["×2", "0.005uF", "C", "one across the mid pot, one in the treble wiper"],
+  ["×1", "0.022uF", "C", "mid wiper"],
+  ["×1", "0.05uF", "C", "across the bass pot"],
+  ["×1", "1uF", "C", "electrolytic, coupling"],
+  ["×1", "10uF", "C", "electrolytic, output coupling"],
+  ["×2", "?", "IC", "op amp, type not given ('any standard ones could be used')"],
+  ["×2", "100k", "POT", "bass and mid controls, unnamed on the drawing"],
+  ["×1", "500k", "POT", "treble control, unnamed on the drawing"]
+ ]
+}

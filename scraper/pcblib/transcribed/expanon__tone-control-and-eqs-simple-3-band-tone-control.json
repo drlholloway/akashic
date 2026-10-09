@@ -1,0 +1,22 @@
+{
+ "id": "expanon:tone-control-and-eqs-simple-3-band-tone-control",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Graf's Encyclopedia / Popular Electronics three-band tone control; only R1 and R2 designated and both values left open by the text; pots unlabeled.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "?", "R", "feedback resistor of the input op amp; text: left to the user depending on gain needs"],
+  ["R2", "?", "R", "text: value unknown - experiment"],
+  ["×2", "11K", "R", ""],
+  ["×2", "3.6K", "R", ""],
+  ["×2", "1.8K", "R", ""],
+  ["×1", "10K", "R", "output pulldown"],
+  ["×1", "1uF", "C", "electrolytic"],
+  ["×1", "0.05uF", "C", ""],
+  ["×2", "0.005uF", "C", ""],
+  ["×1", "0.022uF", "C", ""],
+  ["×1", "10uF", "C", "electrolytic"],
+  ["×2", "?", "IC", "op amp, type not given; text: any standard op amp"],
+  ["×2", "100K", "POT", "unnamed band pots (top row likely bass, middle row mid)"],
+  ["×1", "500K", "POT", "unnamed band pot (likely treble)"]
+ ]
+}

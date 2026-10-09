@@ -1,0 +1,36 @@
+{
+ "id": "expanon:vibrato-and-pitch-shift-voice-changer",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Single-page web printout with schematic and parts list (values from the list). IC designator added as IC1; speaker skipped.",
+ "uncertain": [
+  "C5/C6: parts list gives C5 in both value lines and omits C6",
+  "XT1: frequency not given"
+ ],
+ "rows": [
+  ["R1", "10k", "R", ""],
+  ["R2", "100k", "R", ""],
+  ["R3", "10k", "R", ""],
+  ["R4", "10k", "R", ""],
+  ["R5", "10k", "R", "list reads 'R1, 3, 4. 5'"],
+  ["C1", "0.22uF", "C", ""],
+  ["C2", "33pF", "C", ""],
+  ["C3", "0.22uF", "C", ""],
+  ["C4", "33pF", "C", ""],
+  ["C5", "0.22uF", "C", "listed in both 0.22uf and 33pf lines; coupling cap on line input so 0.22uF"],
+  ["C6", "33pF", "C", "not in parts list; crystal load cap, taken as 33pF (list's second C5 likely meant C6)"],
+  ["C7", "33pF", "C", ""],
+  ["C8", "47uF", "C", "25V"],
+  ["C9", "47uF", "C", "25V"],
+  ["C10", "10uF", "C", "50V"],
+  ["C11", "10uF", "C", "50V"],
+  ["C12", "0.1uF", "C", "16V"],
+  ["C13", "0.1uF", "C", "16V"],
+  ["TR1", "BC338", "Q", ""],
+  ["IC1", "6322", "IC", "24-pin voice changer chip, as drawn"],
+  ["XT1", "?", "OTHER", "crystal; list says 'MHZ Crystal' with no frequency"],
+  ["RV1", "100k", "TRIM", ""],
+  ["SW1", "Pushbutton", "SW", "UP"],
+  ["SW2", "Pushbutton", "SW", "RESET"],
+  ["SW3", "Pushbutton", "SW", "DOWN"]
+ ]
+}

@@ -1,0 +1,26 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-mxr-distortion-plus",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Clean redrawn MXR Distortion+ with only D1, D2 and S1 designated; values counted by position. D1/D2 value from the note 'original diodes were germanium 1N270 types'.",
+ "uncertain": [],
+ "rows": [
+  ["×4", "1M", "R", "bias divider (2), + input bias, feedback"],
+  ["×1", "1M", "R", "input pulldown, click-prevention mod (dotted)"],
+  ["×2", "10k", "R", "input series and output series"],
+  ["×1", "4.7k", "R", "gain leg"],
+  ["×1", "2.2k", "R", "LED resistor"],
+  ["×2", ".001uF", "C", "input and output shunt"],
+  ["×1", ".01uF", "C", "input coupling"],
+  ["×1", ".047uF", "C", "gain leg"],
+  ["×1", "1uF", "C", "25V, bias filter"],
+  ["×1", "1uF", "C", "35V tantalum, output coupling"],
+  ["×1", "8-10pF", "C", "feedback cap, oscillation mod (dotted)"],
+  ["D1", "1N270", "D", "germanium; note suggests 1N34, 1N4148 or LEDs"],
+  ["D2", "1N270", "D", "germanium; note suggests 1N34, 1N4148 or LEDs"],
+  ["×1", "LED", "LED", "status LED"],
+  ["×1", "741", "IC", "op amp"],
+  ["×1", "1M", "POT", "gain (Distortion) pot, no taper given"],
+  ["×1", "10k", "POT", "output (Level) pot, no taper given"],
+  ["S1", "DPDT", "SW", "both poles labeled S1"]
+ ]
+}

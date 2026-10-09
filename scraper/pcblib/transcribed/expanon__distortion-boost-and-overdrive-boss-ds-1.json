@@ -1,0 +1,28 @@
+{
+ "id": "expanon:distortion-boost-and-overdrive-boss-ds-1",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Simple 741 op-amp distortion drawn 'Distortion by DGB' (filed as BOSS DS-1 but not the DS-1 circuit); no designators or knob names. Dashed boxes are optional add-ons (tone network, .001 cap); the SW1-2 bypass switch is skipped as the footswitch.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "1K", "R", "input"],
+  ["×1", "4.7K", "R", "gain leg to ground"],
+  ["×2", "10K", "R", "bias divider"],
+  ["×1", "12K", "R", "output filter"],
+  ["×1", "12K", "R", "in dashed tone add-on box"],
+  ["×2", "1M", "R", "feedback and bias"],
+  ["×1", "47P", "C", "input to ground; 47pF"],
+  ["×1", ".01uF", "C", "input coupling"],
+  ["×1", ".068uF", "C", "gain leg"],
+  ["×1", "1uF", "C", "output coupling, electrolytic"],
+  ["×1", "10uF", "C", "bias filter, electrolytic"],
+  ["×1", ".022uF", "C", "from 50K pot wiper"],
+  ["×2", ".022uF", "C", "in dashed tone add-on box"],
+  ["×1", ".001uF", "C", "in dashed box (optional)"],
+  ["×2", "Diode", "D", "clipping pair to ground; no part number given"],
+  ["×1", "741", "IC", "op amp; pins 1 and 5 (offset null) drawn but unconnected"],
+  ["×1", "C500K", "POT", "gain (drawn 500KC, in the gain leg)"],
+  ["×1", "50K", "POT", "after the 12K, wiper feeds the .022 to the clipping node; no taper given"],
+  ["×1", "B50K", "POT", "drawn 50KB, in dashed tone add-on box"],
+  ["×1", "A50K", "POT", "drawn 50KA, output level"]
+ ]
+}

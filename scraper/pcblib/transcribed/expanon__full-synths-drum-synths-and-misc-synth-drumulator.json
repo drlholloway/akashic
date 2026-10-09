@@ -1,0 +1,22 @@
+{
+ "id": "expanon:full-synths-drum-synths-and-misc-synth-drumulator",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "E-mu Drumulator 'Drum Mod 0.1' sheet: instructions plus a partial schematic of the clock/click/cassette-out section (schematic page 2). C75 (0.1uF) is removed and replaced with a jumper by the mod, so it is left out.",
+ "uncertain": [],
+ "rows": [
+  ["R81", "1.0K", "R", ""],
+  ["R82", "1.0K", "R", ""],
+  ["R84", "1.0K", "R", ""],
+  ["R85", "100K", "R", ""],
+  ["C74", "10uF", "C", "10V electrolytic; mod step 1 replaces it with a jumper on units before serial #2500"],
+  ["C76", "0.02uF", "C", ""],
+  ["×1", ".2uF", "C", "added by the mod, switched across C76"],
+  ["7E", "74LS74", "IC", "dual D flip-flop, half used"],
+  ["8E", "74LS32", "IC", "quad OR, one gate shown"],
+  ["8H", "74LS14", "IC", "hex Schmitt inverter, one section shown"],
+  ["13F", "74LS00", "IC", "quad NAND, one gate shown"],
+  ["15E", "74LS221", "IC", "dual monostable, half used"],
+  ["15F", "74LS32", "IC", "quad OR, one gate shown"],
+  ["×1", "DPST", "SW", "mod switch selecting the metronome timing capacitor"]
+ ]
+}

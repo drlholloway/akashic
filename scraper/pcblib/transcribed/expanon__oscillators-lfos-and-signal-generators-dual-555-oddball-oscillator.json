@@ -1,0 +1,30 @@
+{
+ "id": "expanon:oscillators-lfos-and-signal-generators-dual-555-oddball-oscillator",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Two-page PDF: schematic on page 1, parts list on page 2; values taken from the parts list. The list's capacitor designators are misnumbered (C8 twice, no C10).",
+ "uncertain": [
+  "C9, C10: parts list numbering garbled (C8 listed twice); assigned by the C1/C7, C2/C8... pairing"
+ ],
+ "rows": [
+  ["R2", "1K", "R", ""],
+  ["R4", "1K", "R", ""],
+  ["C1", "0.01uF", "C", ""],
+  ["C2", "0.047uF", "C", ""],
+  ["C3", "0.1uF", "C", ""],
+  ["C4", "0.47uF", "C", ""],
+  ["C5", "1uF", "C", "electrolytic 25V"],
+  ["C6", "5uF", "C", "electrolytic 25V"],
+  ["C7", "0.01uF", "C", ""],
+  ["C8", "0.047uF", "C", ""],
+  ["C9", "0.1uF", "C", "parts list prints 'C3, C8'; by the pattern this is C9"],
+  ["C10", "0.47uF", "C", "parts list prints 'C4, C9'; by the pattern this is C10"],
+  ["C11", "1uF", "C", "electrolytic 25V"],
+  ["C12", "5uF", "C", "electrolytic 25V"],
+  ["IC1", "555", "IC", "timer"],
+  ["IC2", "555", "IC", "timer"],
+  ["R1", "100K", "POT", ""],
+  ["R3", "100K", "POT", ""],
+  ["S1", "SP6T", "SW", "rotary, selects C1-C6"],
+  ["S2", "SP6T", "SW", "rotary, selects C7-C12"]
+ ]
+}

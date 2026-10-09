@@ -1,0 +1,14 @@
+{
+ "id": "expanon:buffers-switchers-mixers-and-routers-transistor-buffer-1",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Single NPN emitter-follower buffer. The emitter resistor is labeled R2 like the upper bias resistor, so it is listed as R2b; the capacitors carry no designators.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "220k", "R", ""],
+  ["R2", "220k", "R", "bias resistor to V+"],
+  ["R2b", "3k3", "R", "emitter resistor, drawn as R2 a second time; designator clash on the drawing"],
+  ["×1", "0.1uF", "C", "input coupling capacitor, no designator"],
+  ["×1", "10uF", "C", "output coupling electrolytic, no designator"],
+  ["Q1", "?", "Q", "NPN, no part number given"]
+ ]
+}

@@ -1,0 +1,23 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-active-dual-oa-bandpass-filter",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Two cascaded multiple-feedback op-amp bandpass stages sharing a 10K/10K bias divider; only the bias parts carry values, R1-R3 and C are left to a design formula not on the sheet, and the second stage reuses the first stage's designators.",
+ "uncertain": [
+  "R1-R3 and C: values not printed on the drawing"
+ ],
+ "rows": [
+  ["R1", "?", "R", "no value drawn; set by the bandpass design formula"],
+  ["R2", "?", "R", "no value drawn; set by the bandpass design formula"],
+  ["R3", "?", "R", "no value drawn; set by the bandpass design formula"],
+  ["U2-R1", "?", "R", "second stage, same designator as the first; no value drawn; set by the bandpass design formula"],
+  ["U2-R2", "?", "R", "second stage; no value drawn; set by the bandpass design formula"],
+  ["U2-R3", "?", "R", "second stage; no value drawn; set by the bandpass design formula"],
+  ["×1", "?", "R", "input resistor to ground; no value drawn"],
+  ["×2", "10K", "R", "bias divider"],
+  ["×4", "?", "C", "four caps labeled C (two per stage); no value drawn; set by the bandpass design formula"],
+  ["×1", "?", "C", "input coupling, electrolytic; no value drawn"],
+  ["×1", "100uF", "C", "bias filter, electrolytic"],
+  ["U1", "?", "IC", "single op amp (8-pin, pins 2/3/6/7/4); no part number given"],
+  ["U2", "?", "IC", "single op amp; no part number given"]
+ ]
+}

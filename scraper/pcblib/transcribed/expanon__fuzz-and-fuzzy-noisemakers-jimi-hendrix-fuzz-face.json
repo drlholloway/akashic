@@ -1,0 +1,26 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-jimi-hendrix-fuzz-face",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Clean redrawn schematic of the Dunlop JH-2 Fuzz Face (MPSA18 silicon version); only Q1/Q2 carry designators, so other parts use quantity refs. Bypass switch not listed.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "470", "R", "supply dropping resistor"],
+  ["×1", "330", "R", "Q2 collector to output cap"],
+  ["×1", "43k", "R", "Q1 collector"],
+  ["×1", "10k", "R", "Q2 collector"],
+  ["×1", "100", "R", "input series"],
+  ["×1", "68k", "R", "feedback Q2 emitter to Q1 base"],
+  ["×1", "180k", "R", "input pulldown"],
+  ["×1", "100uf", "C", "6V, supply filter"],
+  ["×1", "2.2uf", "C", "input, electrolytic"],
+  ["×1", "1n", "C", "Q1 base to ground"],
+  ["×1", "0.01uf", "C", "output"],
+  ["×1", "47pf", "C", "across 68k feedback"],
+  ["×1", "22uf", "C", "fuzz pot wiper to ground, electrolytic"],
+  ["×1", "1N5239B", "D", "9.1V zener on supply"],
+  ["Q1", "MPSA18", "Q", "per legend Q1 & Q2 are MPSA18"],
+  ["Q2", "MPSA18", "Q", "per legend"],
+  ["Level", "500k", "POT", ""],
+  ["Fuzz", "1k", "POT", ""]
+ ]
+}

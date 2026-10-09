@@ -1,0 +1,21 @@
+{
+ "id": "expanon:amplifiers-and-vcas-simple-differential-amplifer",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Unity-gain differential amplifier on one half of a 5532, +/-15V, with a 2K common-mode-rejection trimmer whose designator was left as R?.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "10K", "R", ""],
+  ["R2", "9.1K", "R", ""],
+  ["R3", "10K", "R", ""],
+  ["R4", "10K", "R", ""],
+  ["R5", "100", "R", ""],
+  ["C1", "10UF", "C", "electrolytic"],
+  ["C2", "100PF", "C", ""],
+  ["C3", "10UF", "C", "electrolytic"],
+  ["C4", "100PF", "C", ""],
+  ["×2", "10UF", "C", "supply decoupling, electrolytic"],
+  ["×2", ".1uF", "C", "supply decoupling"],
+  ["U1", "5532", "IC", "NE5532 dual op amp, one section used"],
+  ["CMR Adjust", "2K", "TRIM", "common mode rejection adjust; designator drawn as R?"]
+ ]
+}

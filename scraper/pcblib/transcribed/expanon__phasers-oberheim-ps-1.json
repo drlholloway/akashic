@@ -1,0 +1,37 @@
+{
+ "id": "expanon:phasers-oberheim-ps-1",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Oberheim PS-1 phase shifter, no designators: six 1458 all-pass stages with JFET resistors, a JFET output switcher, a transistor/op-amp LFO and a +/-15V zener supply. Legends apply 1458 to all ICs and 2N3638A to all bipolars; the six stage JFETs carry no part number.",
+ "uncertain": [
+  "Off/Slow Phase: switch type not drawn clearly (shown as a simple toggle to ground), SPST assumed"
+ ],
+ "rows": [
+  ["×2", "270", "R", "undesignated; +15 and -15 supply droppers"],
+  ["×12", "10K", "R", "undesignated; input, LFO, bias network"],
+  ["×4", "33K", "R", "undesignated"],
+  ["×6", "47K", "R", "undesignated; four in the output mix and JFET switching, two in the LFO"],
+  ["×18", "100k", "R", "undesignated; three per all-pass stage, six stages"],
+  ["×3", "100K", "R", "undesignated; switch drivers and medium-phase rate"],
+  ["×2", "150K", "R", "undesignated; LFO"],
+  ["×1", "220K", "R", "undesignated; LFO"],
+  ["×6", "1M", "R", "undesignated; JFET gates, LFO bias, DC offset feed"],
+  ["×6", "0.01uF", "C", "undesignated; one per all-pass stage"],
+  ["×2", "0.33uF", "C", "undesignated; input coupling and LFO integrator"],
+  ["×1", "47uF", "C", "undesignated; FET bias filter"],
+  ["×1", "220uF", "C", "undesignated; LFO"],
+  ["×2", "470uF", "C", "undesignated; 25V supply filters"],
+  ["×4", "1N4002", "D", "bridge rectifier"],
+  ["×2", "1N965", "D", "zener, 15V supply regulation"],
+  ["×4", "2N3638A", "Q", "PNP; legend: all bipolars 2N3638A"],
+  ["×3", "2N4302", "Q", "N-channel JFET; two output switches, one in LFO"],
+  ["×1", "P1069C", "Q", "JFET in LFO"],
+  ["×6", "?", "Q", "N-channel JFETs of the all-pass stages, marked selected; no part number given"],
+  ["×4", "1458", "IC", "dual op amp; legend: all ICs 1458; three for the six phase stages, one for the LFO"],
+  ["DC Offset", "10K", "TRIM", ""],
+  ["Osc. Ampl.", "10K", "TRIM", ""],
+  ["FET Bias", "10K", "TRIM", ""],
+  ["Off/Slow Phase", "SPST", "SW", "bypass/phase switch named in the adjustment procedure"],
+  ["Medium Phase", "SPST", "SW", "LFO rate select"],
+  ["Fast Phase", "SPST", "SW", "LFO rate select"]
+ ]
+}

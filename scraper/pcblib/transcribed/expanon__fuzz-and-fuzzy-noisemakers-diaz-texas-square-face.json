@@ -1,0 +1,19 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-diaz-texas-square-face",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Diaz Texas Square Face two-transistor fuzz drawn by Justin Philpott 3-98; no designators except Q1/Q2.",
+ "uncertain": [],
+ "rows": [
+  ["×1", "33k", "R", ""],
+  ["×1", "1.2k", "R", ""],
+  ["×1", "8.2k", "R", ""],
+  ["×1", "100k", "R", ""],
+  ["×1", "2.2uF", "C", "input, electrolytic"],
+  ["×1", ".01uF", "C", "output"],
+  ["×1", "22uF", "C", "electrolytic, from the 2k pot wiper"],
+  ["Q1", "NTE103", "Q", "NPN germanium"],
+  ["Q2", "NTE103", "Q", "NPN germanium"],
+  ["×1", "2k", "POT", "Q2 emitter, unnamed (bias/fuzz)"],
+  ["×1", "500k", "POT", "output level, unnamed"]
+ ]
+}

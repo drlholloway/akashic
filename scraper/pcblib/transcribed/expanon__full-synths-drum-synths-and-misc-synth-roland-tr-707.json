@@ -1,0 +1,9 @@
+{
+ "id": "expanon:full-synths-drum-synths-and-misc-synth-roland-tr-707",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "This is the whole 17-page Roland TR-707/727 Service Notes scan (specs, exploded views, parts list by Roland part number, block diagram, PCB views, MIDI chart). The schematics are the general circuit diagram on page 10 and the main/voicing board on pages 13-14: a microprocessor drum machine with several hundred parts (CPU, ROMs, gate arrays, resistor arrays, voice circuits) in a fuzzy scan, too large to read reliably by eye in this pass, so no rows are given; the one OCR row should be dropped. A dedicated multi-page read of pages 10, 13 and 14 at 300 dpi would be needed.",
+ "uncertain": [],
+ "rows": [
+
+ ]
+}

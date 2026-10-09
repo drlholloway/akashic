@@ -1,0 +1,30 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-dunlop-crybaby",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Clean redrawn Cry Baby wah; no resistor or capacitor designators, so values are grouped by quantity. Notes give D1 1N4148 and Q1/Q2 2N3904.",
+ "uncertain": [
+  "Wah pot: value drawn as '?'",
+  "Supply cap: drawn .0011uf (unusual)"
+ ],
+ "rows": [
+  ["×2", "1k", "R", ""],
+  ["×1", "22k", "R", ""],
+  ["×2", "470k", "R", ""],
+  ["×1", "68k", "R", ""],
+  ["×1", "470", "R", ""],
+  ["×1", "1.5k", "R", ""],
+  ["×1", "33k", "R", ""],
+  ["×1", "82k", "R", ""],
+  ["×1", "10k", "R", ""],
+  ["×2", ".001uF", "C", ""],
+  ["×1", ".0011uF", "C", "as drawn; supply filter cap"],
+  ["×2", ".01uF", "C", ""],
+  ["×1", "4.7uF", "C", "electrolytic"],
+  ["D1", "1N4148", "D", ""],
+  ["Q1", "2N3904", "Q", ""],
+  ["Q2", "2N3904", "Q", ""],
+  ["×1", "660mH", "L", "wah inductor"],
+  ["×1", "?", "POT", "wah pot; value printed as '?'"],
+  ["S1", "DPDT", "SW", "true bypass footswitch (two halves drawn)"]
+ ]
+}

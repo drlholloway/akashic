@@ -156,7 +156,6 @@ CORRECTIONS: dict[str, dict[Key, str | None]] = {
         "R132": "1K", "R134": "22K", "R147": "4.7K", "R202": "1K", "R203": "22K", "R213": "10K", "R304": "33K", "R305": "2.2M",
         "R307": "2.2K", "R308": "10K", "R310": "12K", "R406": "20K", "R523": "330", "R527": "47K", "R707": "10K",
     },
-    "expanon:full-synths-drum-synths-and-misc-synth-moog-rogue": {"R57": None, "R7": "20K", "R25": "620K", "R27": "205K", "R79": "62K"},
     "expanon:delay-echo-and-samplers-digitech-pds2020": {"R60": "47K", "R90": "22K", "U22": "LM358", "D16": "1N4148"},  # LM958 is no part; D16 drawn 1N414B
     "expanon:oscillators-lfos-and-signal-generators-ar-317-vco": {"U3": "LM301A"},
     "expanon:oscillators-lfos-and-signal-generators-ar-324-lag-and-lfo": {"R32": "120K"},
@@ -220,14 +219,7 @@ CORRECTIONS: dict[str, dict[Key, str | None]] = {
     "moody:tremolito-kit": {"=2N5809": "2N5089"},  # a typo for the 2N5089 (confirmed by Lane, 2026-10-09)
     "tayda:fuzz-face-with-inverter": {"Q1": "2N3906 / BC108 / BC109", "Q2": "2N3906 / BC108 / BC109"},
     # Experimentalists Anonymous: a legend or note value paired with the wrong designator (each label viewed, 2026-10-09).
-    "expanon:fuzz-and-fuzzy-noisemakers-maestro-brassmaster": {"Q2": "2N3392"},  # legend 'Q1-Q4, Q6, Q7 = 2N3392'; 1N4001 is D1-4
-    "expanon:guitar-synth-and-misc-signal-shapers-maestro-brassmaster": {"Q2": "2N3392"},
-    "expanon:filters-wahs-and-vcfs-dunlop-crybaby": {"Q1": "2N3904", "Q2": "2N3904"},  # '-Q1 & Q2 are 2n3904'; 1N4148 is D1
-    "expanon:buffers-switchers-mixers-and-routers-rat-bypass": {"Q1": "2N5457"},  # 1N914 labels the LED-leg diodes
     "expanon:distortion-boost-and-overdrive-ibanez-ts-10": {**{f"Q{i}": "2SC1815" for i in range(1, 7)}, "Q7": "2SK118", "Q8": "2SK118", "D1": "1N4001"},  # the drawing's note: 'Q1 to Q6 are 2SC1815, Q7 and Q8 are 2SK118'
-    "expanon:oscillators-lfos-and-signal-generators-sine-wave-generation-techniques": {"Q1": "2N3904", "Q2": "2N3904", "Q3": "2N3904"},  # Figure 1: 'Q1-Q3 2N3904'; the LM313 is the reference
-    "expanon:chorus-boss-ce-1-gif": {"Q7": "2SC900"},  # legend 'Q1,Q2,Q7,Q10,Q16: 2SC900'; 1S1555 is every diode
-    "expanon:fuzz-and-fuzzy-noisemakers-60s-style-fuzzbox": {"Q1": "SK3020", "Q2": "SK3005", "Q3": "SK3020"},  # legend 'Q1, Q3 SK3020 / Q2 SK3005'
 }
 
 # circuit_id -> [(ref, value, category, note)], read off the document by a person.

@@ -1,0 +1,32 @@
+{
+ "id": "expanon:fuzz-and-fuzzy-noisemakers-octave-doubling-fuzz",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Octave-Doubling Fuzz drawn by Justin Philpott (10-97), two NE5532s on a bipolar 9V supply; passives carry no designators.",
+ "uncertain": [],
+ "rows": [
+  ["×2", "220k", "R", "no designator drawn"],
+  ["×4", "10k", "R", "no designator drawn"],
+  ["×1", "15k", "R", "no designator drawn"],
+  ["×1", "22k", "R", "no designator drawn"],
+  ["×1", "1M", "R", "no designator drawn"],
+  ["×1", "470", "R", "no designator drawn"],
+  ["×1", "100nF", "C", "no designator drawn"],
+  ["×4", "2u2", "C", "electrolytic; no designator drawn"],
+  ["×1", "220pF", "C", "switched by Treble; no designator drawn"],
+  ["×1", "10pF", "C", "no designator drawn"],
+  ["×2", "10uF", "C", "supply filter; no designator drawn"],
+  ["D1", "1N4001", "D", ""],
+  ["D2", "1N4001", "D", ""],
+  ["D3", "1N4001", "D", ""],
+  ["D4", "1N4001", "D", ""],
+  ["D5", "1N4001", "D", "supply"],
+  ["D6", "1N4001", "D", "supply"],
+  ["IC1", "NE5532", "IC", ""],
+  ["IC2", "NE5532", "IC", ""],
+  ["Overdrive", "10k", "POT", ""],
+  ["Channel 2 Level", "10k", "POT", ""],
+  ["Volume", "10k", "POT", ""],
+  ["Treble", "SPST", "SW", ""],
+  ["Channel 1", "SPST", "SW", "channel 1 in/out"]
+ ]
+}

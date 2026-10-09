@@ -1,0 +1,25 @@
+{
+ "id": "expanon:filters-wahs-and-vcfs-electro-harmonix-doctor-q",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Clean redrawn E-H Doctor Q envelope filter; no designators on the drawing, so parts are listed by quantity.",
+ "uncertain": [],
+ "rows": [
+  ["×3", "470k", "R", ""],
+  ["×5", "47k", "R", ""],
+  ["×1", "47", "R", "op amp supply resistor from +9V"],
+  ["×1", "22k", "R", ""],
+  ["×1", "2.2M", "R", ""],
+  ["×1", "100", "R", ""],
+  ["×1", ".01uF", "C", ""],
+  ["×2", ".005uF", "C", ""],
+  ["×1", ".001uF", "C", ""],
+  ["×2", ".05uF", "C", ""],
+  ["×2", "10uF", "C", "electrolytic"],
+  ["×2", "1N914", "D", ""],
+  ["×1", "BC239C", "Q", "NPN; 2N3904 given as alternate"],
+  ["×1", "ECG778", "IC", "dual op amp, both sections used"],
+  ["Sensitivity", "100k", "POT", ""],
+  ["Range", "25k", "TRIM", "Range trim"],
+  ["Norm/Bass", "DPDT", "SW", "Norm/Bass switch"]
+ ]
+}

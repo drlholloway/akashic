@@ -1,0 +1,14 @@
+{
+ "id": "expanon:buffers-switchers-mixers-and-routers-op-amp-inverting-buffer",
+ "read": "2026-10-09, by eye from the cached schematic image",
+ "comment": "Single-supply TL071 inverting unity-gain buffer biased at Vr; capacitors have no designators.",
+ "uncertain": [],
+ "rows": [
+  ["R1", "1M", "R", ""],
+  ["R2", "1M", "R", ""],
+  ["×1", "0.1uF", "C", "input coupling"],
+  ["×1", "5pF", "C", "feedback"],
+  ["×1", "10uF", "C", "output coupling, electrolytic"],
+  ["IC1", "TL071", "IC", ""]
+ ]
+}
