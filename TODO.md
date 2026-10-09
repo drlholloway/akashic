@@ -130,10 +130,10 @@ Counts from `pcblib datasheets` as of October 9, 2026: 562 of 1,176 part numbers
 current part used more than once was searched by hand in early October (`"<part> datasheet pdf"`, maker's
 own site only); the counts below are since then.
 
-- **Discontinued (hosted)**: 67 of the 237 sheets in `datasheets.DISCONTINUED` are hosted, 13 have
-  only a selector or catalog row (mostly germanium: AC176, OC139, 2N5308, OC71, OC75, AC127), and
-  157 are still to download. The most used: 1S1555, SAD1024, 2SK118, 2SC945, 2SK184, 2N4302,
-  1T308, NKT275, 2SC2785, KP303, CA3094. `pcblib datasheets` writes the worklist to
+- **Discontinued (hosted)**: 69 of the 241 sheets in `datasheets.DISCONTINUED` are hosted (the NTE102/
+  NTE103 sheet joined on October 9), 13 have only a selector or catalog row (mostly germanium: AC176,
+  OC139, 2N5308, OC71, OC75, AC127), and 159 are still to download. The most used: 2SK118, SAD1024, the
+  Soviet D9 family, 1S1555, SR1K-2, 2SC945, 2SK184, 2N4302, 1T308, NKT275, MA522, 2SC2785, 1SS133. `pcblib datasheets` writes the worklist to
   `data/cache/datasheets/discontinued.html`.
 - **Current parts still without a link**: 439, of which 41 are used more than once. A grade or package
   spelling now takes its base part's sheet (`datasheets.base_spellings`: 2SC2240BL <- 2SC2240, HD14011BF
