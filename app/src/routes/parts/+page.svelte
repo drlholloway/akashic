@@ -18,6 +18,31 @@
 		})).filter((g) => g.items.length)
 	);
 
+	// Sections fold at their header. The choice is kept in this browser; a filter opens every
+	// section, so a match is never hidden in a folded one.
+	const KEY = 'akashic-parts-folded';
+	let folded = $state<string[]>([]);
+	$effect(() => {
+		try {
+			const v = JSON.parse(localStorage.getItem(KEY) ?? '[]');
+			if (Array.isArray(v)) folded = v.filter((k) => typeof k === 'string');
+		} catch {
+			// storage blocked or empty: every section open
+		}
+	});
+	function fold(keys: string[]) {
+		folded = keys;
+		try {
+			localStorage.setItem(KEY, JSON.stringify(keys));
+		} catch {
+			// the page still folds; it just forgets on reload
+		}
+	}
+	const toggle = (k: string) => fold(folded.includes(k) ? folded.filter((x) => x !== k) : [...folded, k]);
+	const filtering = $derived(q.trim() !== '');
+	const open = (k: string) => filtering || !folded.includes(k);
+	const allFolded = $derived(groups.every((g) => folded.includes(g.key)));
+
 	// Pots are grouped by taper, then ordered by resistance: A1k, A10k, A100k, A1M.
 	const TAPERS: [string, string][] = [['A', 'A · log'], ['B', 'B · linear'], ['C', 'C · reverse log'], ['W', 'W'], ['', 'No taper given']];
 	const POT_VALUE = /^([A-Z]?)(\d+(?:\.\d+)?)(k|M)?$/;
@@ -59,10 +84,18 @@
 			<span class="label">Filter</span>
 			<input type="search" bind:value={q} placeholder="LM308, 2N5088, PT2399, A100k…" autocomplete="off" spellcheck="false" />
 		</label>
+		{#if !filtering}
+			<button type="button" class="label all" onclick={() => fold(allFolded ? [] : PART_ORDER.slice())}>{allFolded ? 'Expand all' : 'Collapse all'}</button>
+		{/if}
 	</header>
 	{#each groups as g}
 		<section>
-			<h2 class="label strong">{g.name} <span class="mono dim">{g.items.length}</span></h2>
+			<h2 class="label strong">
+				<button type="button" aria-expanded={open(g.key)} aria-controls="parts-{g.key}" disabled={filtering} onclick={() => toggle(g.key)}>
+					<span class="chev" aria-hidden="true"></span>{g.name} <span class="mono dim">{g.items.length}</span>
+				</button>
+			</h2>
+			<div id="parts-{g.key}" hidden={!open(g.key)}>
 			{#if g.key === 'POT'}
 				{#each potGroups(g.items) as sub}
 					<h3 class="label sub">{sub.name} <span class="mono dim">{sub.items.length}</span></h3>
@@ -85,6 +118,7 @@
 					{/each}
 				</ul>
 			{/if}
+			</div>
 		</section>
 	{/each}
 </div>
@@ -97,7 +131,17 @@
 	.filter input { flex: 1; height: 38px; padding: 0 12px; border: 1px solid var(--rule-strong); border-radius: var(--radius); background: var(--sheet-2); }
 	.filter input:focus { outline: none; border-color: var(--coat); box-shadow: 0 0 0 3px var(--coat-tint); background: var(--sheet); }
 	section { margin-top: 28px; }
-	section h2 { padding-bottom: 6px; border-bottom: 1px solid var(--rule-strong); margin-bottom: 4px; }
+	section h2 { border-bottom: 1px solid var(--rule-strong); margin-bottom: 4px; }
+	section h2 button { display: flex; align-items: center; gap: 8px; width: 100%; padding: 6px 0; border: 0; background: none; font: inherit; letter-spacing: inherit; text-transform: inherit; color: inherit; text-align: left; cursor: pointer; }
+	section h2 button:disabled { cursor: default; }
+	section h2 button:focus-visible, .all:focus-visible { outline: 2px solid var(--coat); outline-offset: 2px; }
+	section h2 button:not(:disabled):hover .chev { border-color: var(--coat); }
+	.chev { width: 6px; height: 6px; border-right: 1.5px solid var(--ink-3); border-bottom: 1.5px solid var(--ink-3); transform: rotate(-45deg); transition: transform 0.12s; flex: none; }
+	button[aria-expanded='true'] .chev { transform: rotate(45deg) translate(-1px, -1px); }
+	button:disabled .chev { visibility: hidden; }
+	.all { margin-top: 14px; padding: 0; border: 0; background: none; color: var(--ink-2); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+	.all:hover { color: var(--ink); }
+	@media (prefers-reduced-motion: reduce) { .chev { transition: none; } }
 	.dim { color: var(--ink-3); }
 	h3.sub { margin: 14px 0 2px; color: var(--ink-2); }
 	ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, calc(var(--vw) + var(--nw) + var(--dw))), 1fr)); gap: 0 28px; }
