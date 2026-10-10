@@ -181,6 +181,7 @@ CORRECTIONS: dict[str, dict[Key, str | None]] = {
     # (DOD 280) are printed that way in the originals and stay.
     "bentfishbowl:pelota-2-pt2399-delay": {"D1": "1N4148"},
     "fuzzdog:emperor": {"D5": "1N4148", "D6": "1N4148"},
+    "fuzzdog:freqfree": {"U1": "78L05"},  # the build doc prints 70L05, a typo for the 78L05 regulator (reported 2026-10-09)
     "rwlpedal:yellow-rumped-fuzz": {"D1": "1N4148"},
     "fivecats:the-m-drive-emerson-custom-em-drive-transparent-overdrive-clone": {"Q1": "2N2222A"},
     "fivecats:scorpion-boost": {"Q1": "2N2222A"},
