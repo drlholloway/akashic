@@ -19,7 +19,7 @@ _OPAMP = [  # (number pattern, channels, input type)
     (r"LF35[16]", "Single", "JFET"), (r"LF353|LF412", "Dual", "JFET"), (r"LF347", "Quad", "JFET"),
     (r"OPA2134|OPA2604|AD712|OPA2132", "Dual", "JFET"), (r"OPA134|OPA604", "Single", "JFET"), (r"TLE207[14]", "Quad", "JFET"),
     (r"4558|4559|4580|1458|LM833|NE5532|MC3317[28]|M5218|UPC4570|4570|LM4562|LM358|LM258|2904|TL022|747", "Dual", "BJT"),
-    (r"4560|4565|3404A|5558|M5216|TA75558|LA6358|LT1013", "Dual", "BJT"), (r"BA718", "Dual", "BJT"),
+    (r"4560|4565|3404A|5558|M5216|TA75558|LA6358|LT1013", "Dual", "BJT"), (r"BA718", "Dual", "BJT"), (r"TL044", "Quad", "BJT"),
     (r"4741|LM348|2902|MC3307[49]|3317[49]|TL974", "Quad", "BJT"),
     (r"17741|72741|741|748|NE5534|LM301A?|LM308|LM307|709|776|LT1012|TS321|OP-?0?7", "Single", "BJT"), (r"LM324|3403|4136|HA1457", "Quad", "BJT"),
     (r"OP275", "Dual", "JFET/BJT"),
@@ -52,7 +52,7 @@ _IC: list[tuple[str, str, tuple[str, ...]]] = [
     (r"LM317T?", "Adjustable Positive Regulator", ("TO-220",)), (r"LM336", "2.5 V Shunt Reference", ("TO-92",)),
     (r"LM336Z?-5\.0", "5 V Shunt Reference", ("TO-92",)), (r"LM329(?:CZ)?", "6.9 V Precision Reference", ("TO-92",)),
     (r"TL431", "Adjustable Shunt Regulator", ("TO-92", "SOT-23")), (r"TL431(?:C|A|I)?LP", "Adjustable Shunt Regulator", ("TO-92",)),
-    (r"RC4195", "±15 V Dual Tracking Regulator", ()),
+    (r"RC4195", "±15 V Dual Tracking Regulator", ()), (r"TA7179P?", "±15 V Dual Tracking Regulator", ("DIP-14",)),
     (r"I[AE]B?0[15]\d{2}[SD]\d*|A0512S\w*", "Isolated DC/DC Converter", ()),
     # audio
     (r"LM1875T?", "Audio Power Amplifier", ("TO-220",)), (r"LM3886T?", "Audio Power Amplifier", ()),
@@ -62,7 +62,7 @@ _IC: list[tuple[str, str, tuple[str, ...]]] = [
     (r"LM387", "Dual Low-Noise Preamplifier", ("DIP-8",)), (r"(?:NE)?572", "Dual Compandor", _D16),
     (r"TA7136A?P", "Low-Noise Preamplifier", ("SIP-7",)), (r"BA662[AB]?", "OTA with Buffer", ()),
     (r"M5207L01", "Dual Linear-Control VCA", ()), (r"M51134P?", "Bass Sub-Harmonizer", ("DIP-20",)),
-    (r"BA3812L", "5-Band Graphic Equalizer", ()), (r"BA634", "T Flip-Flop", ("SIP-5",)),
+    (r"BA3812L", "5-Band Graphic Equalizer", ()), (r"BA634", "T Flip-Flop", ("SIP-5",)), (r"BA6124", "5-Dot LED Level Meter Driver", ()),
     (r"M51951A", "Voltage Detector and Reset", ("TO-92",)),
     (r"SSM2166", "Microphone Preamplifier with Compressor", _D14),
     (r"(?:THAT)?218[01]", "Voltage-Controlled Amplifier", ("SIP-8", "SOIC-8")), (r"(?:THAT)?2159", "Voltage-Controlled Amplifier", ("SIP-8",)),
@@ -78,7 +78,7 @@ _IC: list[tuple[str, str, tuple[str, ...]]] = [
     # delay
     (r"MN3204", "512-Stage Low-Voltage BBD", ("DIP-8",)), (r"MN3001", "Dual 512-Stage BBD", ()), (r"MN3209", "256-Stage BBD", ()),
     (r"MN3011", "Multi-Tap 3328-Stage BBD", ()), (r"TDA1022", "512-Stage BBD", ("DIP-16",)),
-    (r"M65831A?P?", "Digital Echo", ("DIP-24",)), (r"M50195P?", "Digital Echo", ()), (r"M50198P?", "Single-Chip Digital Delay", ()),
+    (r"M65831A?P?", "Digital Echo", ("DIP-24",)), (r"M50195P?", "Digital Echo", ()), (r"M50198P?", "Single-Chip Digital Delay", ()), (r"HT8955A?", "Digital Echo (Voice Delay)", ("DIP-24",)),
     (r"HT8950A", "Voice Modulator (Pitch Shift, Robot, Vibrato)", ("DIP-16",)), (r"HT8950", "Voice Modulator (Pitch Shift, Robot, Vibrato)", ("DIP-18",)),
     (r"ISD(?:25\d{2,3}|17\d{3}|1820|100A)", "Voice Record/Playback", ()), (r"APR9301(?:V2)?", "Voice Record/Playback", ()),
     # converters, memory, processors
@@ -89,7 +89,7 @@ _IC: list[tuple[str, str, tuple[str, ...]]] = [
     (r"27C?16", "16 Kbit EPROM", ("DIP-24",)), (r"27C?32", "32 Kbit EPROM", ("DIP-24",)),
     (r"6116(?:LP)?", "16 Kbit SRAM", ("DIP-24",)), (r"6264", "64 Kbit SRAM", ("DIP-28",)), (r"23LC1024", "1 Mbit SPI SRAM", _D8),
     (r"MK4116|4116", "16 Kbit DRAM", ("DIP-16",)), (r"4164", "64 Kbit DRAM", ("DIP-16",)), (r"41256", "256 Kbit DRAM", ("DIP-16",)),
-    (r"4464(?:-\d+)?", "256 Kbit DRAM", ("DIP-18",)), (r"93C46", "1 Kbit Microwire EEPROM", _D8),
+    (r"4464(?:-\d+)?", "256 Kbit DRAM", ("DIP-18",)), (r"M5M4246AP?(?:-\d+)?", "256 Kbit DRAM", ()), (r"93C46", "1 Kbit Microwire EEPROM", _D8),
     (r"PIC12F509", "8-bit Microcontroller", _D8), (r"PIC10F202", "8-bit Microcontroller", ("DIP-8", "SOT-23-6")),
     (r"(?:PIC)?16F68[48]", "8-bit Microcontroller", ("DIP-14", "SOIC-14")), (r"(?:PIC)?16F84A?(?:-04)?", "8-bit Microcontroller", ("DIP-18",)),
     (r"ATTINY13A?", "8-bit Microcontroller", _D8), (r"ATTINY841(?:-SSU)?", "8-bit Microcontroller", ("SOIC-14",)), (r"ATTINY84A?", "8-bit Microcontroller", ("DIP-14", "SOIC-14")),
@@ -197,6 +197,8 @@ def describe_ic(value: str) -> str:
                     return f"{ch} {inp}-Input Op-Amp SIP-8"  # Mitsubishi M5218L, JRC NJM4558L: L is the single-in-line package
                 if cand.startswith("BA718"):
                     return f"{ch} {inp}-Input Op-Amp SIP-9"
+                if num == "TL044":
+                    return f"{ch} Low-Power {inp}-Input Op-Amp DIP-16"  # two supply pairs, so 16 pins
                 if cand.startswith("M5") and re.fullmatch(r"A?", rest):
                     return f"{ch} {inp}-Input Op-Amp DIP-8 / SIP-8 / SOIC-8"  # Mitsubishi made each in all three
                 if cand.startswith("M5") and re.fullmatch(r"A?FP", rest):
