@@ -75,7 +75,7 @@
   ["PSU-C5", "10u", "C", "PSU board, 35V electrolytic"],
   ["PSU-C6", "10u", "C", "PSU board, 35V electrolytic"],
   ["D1", "1N4148", "D", ""],
-  ["PSU-BR1", "0A9 DIL", "D", "bridge rectifier, 0.9A DIL type"],
+  ["PSU-B1", "0A9 DIL", "D", "full-wave bridge rectifier, 4-pin DIL; rectifies the mains transformer's output for the ±15 V supply"],
   ["LED1", "red", "LED", "5 mm red LED, peak level indicator"],
   ["IC1", "TL074", "IC", ""],
   ["IC2", "LM358", "IC", ""],

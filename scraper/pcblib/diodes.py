@@ -36,6 +36,7 @@ _FAMILIES: list[tuple[re.Pattern, str, str, str]] = [(re.compile(rx), mat, kind,
     (r"^(?:SM581[789]|RB1\d\d)", "Si", "Schottky", "SMD"),
     (r"^BAT8[1-6]S$", "Si", "Schottky", ""),
     (r"^(?:B\d{2,3}C\d{2,4}|W-?0[0-9]M?|DI1[05]\d{2}|MP35\d\d)$", "Si", "Bridge Rectifier", ""),
+    (r"^0A9(?:DIL)?$", "Si", "Bridge Rectifier", "DIP-4"),  # a 4-pin DIL full bridge (Expanon MN3011 reverb PSU)
 ]]
 # Zener series: (pattern, power, package)
 _ZENER_PKG = [(re.compile(rx), pw, pkg) for rx, pw, pkg in [
