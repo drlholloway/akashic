@@ -18,6 +18,7 @@ _FAMILIES: list[tuple[re.Pattern, str, str, str]] = [(re.compile(rx), mat, kind,
     (r"^(?:1N400[1-7]|1N400X)$", "Si", "Rectifier", "DO-41"),
     (r"^UF400[1-7]$", "Si", "Ultrafast Rectifier", "DO-41"),
     (r"^1N540[0-8]$", "Si", "Rectifier", "DO-201AD"),
+    (r"^1N41(?:39|4[0-6])$", "Si", "Rectifier", "DO-27"),  # 3 A, 50 V (1N4139) to 1200 V (1N4146)
     (r"^(?:1N581[789]|SB1[2-6]0)$", "Si", "Schottky", "DO-41"),
     (r"^(?:BAT4[1-9]|BAT8[1-6]|1N5711|1N6263|SD101[ABC]?)$", "Si", "Schottky", "DO-35"),
     (r"^SB3[2-6]0$", "Si", "Schottky", "DO-201AD"),

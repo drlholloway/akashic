@@ -30,7 +30,7 @@
   ["×2", "220p", "C", "flip-flop"],
   ["×1", "0.1u", "C", "footswitch debounce"],
   ["×1", "1N4001", "D", "supply"],
-  ["×1", "1N4146", "D", "in the DC adaptor (-) lead; drawn 1N4146, probably a typo for 1N4148"],
+  ["×1", "1N4146", "D", "in the DC adaptor (-) lead"],
   ["×3", "1N916", "D", "clipping"],
   ["×2", "1N4148", "D", "JFET gates"],
   ["×1", "1N751", "D", "5.1V zener, LED supply"],

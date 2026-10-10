@@ -142,14 +142,14 @@ database lacks but that has a close listed equivalent goes in `transistors._ALIA
 
 ## Diodes
 
-Descriptions (`diodes.describe`, October 10, 2026): 248 of the 263 diode part numbers in the parts index are
+Descriptions (`diodes.describe`, October 10, 2026): 249 of the 263 diode part numbers in the parts index are
 described. Families whose package is not certain are described
 without one (the Japanese 1S and 1SS signal diodes, OA/D9/GA germaniums, Renesas RD and ROHM MTZ
 zeners, Sanken and Toshiba rectifiers, Nihon Inter 10E2, the Soviet 2D503B). The placeholders GE, SI,
-SCHOTTKY and ZENER say 'Any ...'; the Maestro house number 919-004799 says so. Undescribed (15): house
+SCHOTTKY and ZENER say 'Any ...'; the Maestro house number 919-004799 says so. Undescribed (14): house
 numbers (Moog CL-1, Dunlop ZL9M3, Guyatone SG3246/SG9150), markings read off parts (51E, 5C2, SSM14) and
 values printed that way in their sources whose intended part is not certain: Five Cats Danish Pastry D5
-'1N474A' (beside a 1N747A; 1N747A or 1N4742A?), BOSS SD-1 1N4146, EHX Clone Theory 1N4301 and 1N9658,
+'1N474A' (beside a 1N747A; 1N747A or 1N4742A?), EHX Clone Theory 1N4301 and 1N9658,
 E-mu 1N4950, MXR Dynacomp 1N5331, Griffin Hype-R Fuzz 35686G, Ibanez AFL '5.1EB'. PedalPCB Lenora
 'SH270' is described and linked as Central's CDSH270 without the build document having been checked.
 Datasheets still wanted: Matsushita MA522 (lambda diode; Datasheet Archive or Findchips by hand) and

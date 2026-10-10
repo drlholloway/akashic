@@ -32,6 +32,7 @@ DISCONTINUED: dict[str, list[str]] = {
     "OA90": ["OA90"], "AA112": ["AA112"], "AA119": ["AA119"], "BA282": ["BA282"], "BA482": ["BA482"],
     "1S1588": ["1S1588", "IS1588"], "1S2473": ["1S2473"], "MA150": ["MA150"], "MA856": ["MA856", "MA2C856"],
     "1S1555": ["1S1555", "IS1555"], "1S953": ["1S953"], "1S188": ["1S188", "1S188FM"], "1S2076": ["1S2076"],
+    "1N4146": ["1N4146"],  # Diode Semiconductor Korea 1N4139-4146, 3 A rectifiers
     "1SZ46A": ["1SZ46A"], "10E2": ["10E-2"],  # NEC reference diodes 1SZ45A-48A; Nihon Inter 1 A 200 V rectifier
     "1N276": ["1N276"], "1N3666": ["1N3666"], "OA47": ["OA47"], "FDH333": ["FDH333"],
     "MA522": ["MA522"], "BAS33": ["BAS33"], "1SS133": ["1SS133"], "RD11EB": ["RD11EB", "RD11EB3"],
@@ -146,7 +147,7 @@ MAKERS: list[tuple[str, str]] = [
     ("Intersil", r"intersil"), ("Harris", r"\bharris\b"), ("Exar", r"\bexar\b"), ("Signetics", r"signetics"),
     ("Analog Devices", r"analog\s+devices"), ("PerkinElmer", r"perkin\s*elmer"), ("Silonex", r"silonex"),
     ("Taitron", r"taitron"), ("BKC International", r"bkc\s+international"), ("Galaxy", r"galaxy\s+micro"),
-    ("Diodes Inc.", r"diodes\s+inc"), ("Nihon Inter", r"nihon\s+inter"), ("Germanium Power Devices", r"germanium\s+power"),
+    ("Diodes Inc.", r"diodes\s+inc"), ("Nihon Inter", r"nihon\s+inter"), ("Diode Semiconductor Korea", r"diode\s+semiconductor\s+korea"), ("Germanium Power Devices", r"germanium\s+power"),
 ]
 # A maker named in a downloaded file's name ('1N270.NTE.pdf', '2SK30ATM-Y.Tosh.A-139.pdf').
 _NAMED = {"nte": "NTE", "tosh": "Toshiba", "toshiba": "Toshiba", "fsc": "Fairchild", "fairchild": "Fairchild",
