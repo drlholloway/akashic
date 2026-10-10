@@ -1,10 +1,12 @@
 {
  "makers": {
+  "10E2.pdf": "Nihon Inter",
   "1N100.pdf": "Taitron",
   "1N270.pdf": "NTE",
   "1N346.pdf": "New Jersey Semiconductor",
   "1N60P.pdf": "Galaxy",
   "1S1588.pdf": "Toshiba",
+  "1SZ46A.pdf": "NEC",
   "2N1302.pdf": "Central Semiconductor",
   "2N1308.pdf": "Texas Instruments",
   "2N2646.Comset.pdf": "Comset",
@@ -50,9 +52,9 @@
   "M65831AP.pdf": "Mitsubishi",
   "MA150.pdf": "Panasonic",
   "MA856.pdf": "Panasonic",
+  "MN3011.pdf": "Panasonic",
   "MN3101.pdf": "Panasonic",
   "MPF4393.pdf": "Motorola",
-  "MN3011.pdf": "Panasonic",
   "NE570.pdf": "Philips",
   "NSL-32.pdf": "Silonex",
   "NTE103.pdf": "NTE",

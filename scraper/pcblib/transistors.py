@@ -350,10 +350,18 @@ def package_of(pn: str) -> str:
     return ""
 
 
+_HOUSE = {  # a maker's own stock number: the part behind it is not published
+    "991-002298": "Maestro house number, probably Ge",  # the Maestro Fuzz transistors
+    "991-002873": "Maestro house number",  # Maestro Boomerang 2, Q1 and Q2
+}
+
+
 def describe(conn: sqlite3.Connection, pn: str) -> str:
     """'Si NPN BJT TO-92 TH', 'Si N-ch JFET SOT-23 SMD', 'Ge PNP BJT TH':
     material, polarity or channel and kind from the transistor database (a part it lacks from
     _KIND_EXTRA), the package from the part number's family. '' when the part is not known."""
+    if pn.strip() in _HOUSE:
+        return _HOUSE[pn.strip()]
     cands = _candidates(pn)
     extra = next((_KIND_EXTRA[c] for c in cands if c in _KIND_EXTRA), None)
     spec = None if extra else lookup(conn, pn)

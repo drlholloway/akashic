@@ -23,15 +23,17 @@ _FAMILIES: list[tuple[re.Pattern, str, str, str]] = [(re.compile(rx), mat, kind,
     (r"^SB3[2-6]0$", "Si", "Schottky", "DO-201AD"),
     (r"^(?:1N34A?|1N270|1N695|1N100)$", "Ge", "Signal Diode", "DO-7"),
     (r"^(?:1N60P?|1N276|OA9[01]|OA47|OA79|OA81|OA85|AA11[2-9]|AA143|D9[A-Z]?|D18|D20|D311|GD\w+)$", "Ge", "Signal Diode", ""),
-    (r"^(?:1S1555|1S1588|1S2473|1S953|1S2076|1SS133|1SS174|1SS176|1SS188|1SS270|1SS302|1SS352|MA150|MA856|BAS33|DS448|OA200|KD5(?:10|21)A?)", "Si", "Signal Diode", ""),
+    (r"^(?:1S1555|1S1588|1S2473|1S953|1S2076|1SS133|1SS174|1SS176|1SS188|1SS270|1SS302|1SS352|MA150|MA856|BAS33|DS448|OA200|KD5(?:10|21)A?|[2K]D503[AB])", "Si", "Signal Diode", ""),  # 2D503B: the Soviet 2Д503Б pulse diode
     (r"^(?:FDH?-?333)$", "Si", "Signal Diode", "DO-35"),
     (r"^BAS28", "Si", "Dual Signal Diode", "SOT-143"),
     (r"^(?:DAN|DAP)20[12]|^MA157", "Si", "Dual Signal Diode", ""),
     (r"^BA[24]82$", "Si", "Band-Switching Diode", ""),
     (r"^(?:1S188(?:FM)?|1N3666|GA\d{3}|OA61)$", "Ge", "Signal Diode", ""),
-    (r"^(?:SR1K-?2|S5500G?|S5688G?|1S1885)$", "Si", "Rectifier", ""),
+    (r"^(?:SR1K-?2|S5500G?|S5688G?|1S1885|10E-?2)$", "Si", "Rectifier", ""),
     (r"^1N580[2-6]$", "Si", "Fast Rectifier", ""),
     (r"^1N(?:25[3-6]|33[2-9]|34\d)$", "Si", "Rectifier", "DO-4"),  # stud-base rectifiers (NJ Semi sheet: 1N346 is 200 V 0.6 A)
+    (r"^(?:CD)?SH270$", "Si", "Schottky", "DO-35"),  # Central's 1N270 replacement, leaded
+    (r"^MA522", "Si", "Lambda Diode", "TO-92"),  # Panasonic negative-resistance device
     (r"^CDSH\d", "Si", "Schottky", "SOD-323"),
     (r"^(?:SM581[789]|RB1\d\d)", "Si", "Schottky", "SMD"),
     (r"^BAT8[1-6]S$", "Si", "Schottky", ""),
@@ -49,6 +51,19 @@ _ZENER_PKG = [(re.compile(rx), pw, pkg) for rx, pw, pkg in [
     (r"^ZPD", "500 mW", "DO-35"),
 ]]
 
+_REFERENCE = {  # zeners whose number does not carry the voltage
+    "1N821": "Si Zener 6.2 V reference",
+    "1SZ46A": "Si Zener 6.4 V reference 250 mW DO-35 TH",  # NEC 1SZ45A-48A
+    "HZ5B1": "Si Zener 4.7 V 500 mW DO-35 TH",  # Hitachi HZ5 rank B1, 4.6-4.8 V
+}
+_GENERIC = {  # words a build document prints in place of a part number
+    "GE": "Any Ge Signal Diode TH (1N34A, D9 series ...)",
+    "SI": "Any Si Signal Diode (1N914, 1N4148 ...)",
+    "SCHOTTKY": "Any Si Schottky (1N5817, BAT41 ...)",
+    "ZENER": "Any Si Zener (voltage per the build document)",
+    "919-004799": "Maestro house number, probably Ge",  # the Maestro Fuzz diode; the part behind the number is not published
+}
+
 
 def _volts(v: str) -> str:
     """'9V1' -> '9.1 V', '12V' -> '12 V'."""
@@ -65,6 +80,8 @@ def _mount(pkg: str) -> str:
 def describe(value: str) -> str:
     """The description of a diode part number, or '' for anything not known (generic words, LEDs)."""
     p = re.sub(r"\s+", "", value.upper()).rstrip("*")
+    if p in _GENERIC:  # a placeholder, not a part: the builder picks the diode
+        return _GENERIC[p]
     p = re.sub(r"(?<=\d)-(?:\d|[A-Z])$", "", p) if not p.startswith(("RD", "UZ")) else p  # '1N4148-2', '1N5817-B': a library variant
     # a bare zener voltage ('9V1', '12V') from the parts index
     if re.fullmatch(r"\d{1,2}V\d?", p):
@@ -84,7 +101,7 @@ def describe(value: str) -> str:
             if pkg == "SMD":
                 return f"{mat} {kind} SMD"  # surface mount, package not certain
             return " ".join(x for x in (mat, kind, pkg, _mount(pkg)) if x)
-    if p == "1N821":
-        return "Si Zener 6.2 V reference"
+    if p in _REFERENCE:
+        return _REFERENCE[p]
     return ""
 
