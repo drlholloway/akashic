@@ -77,7 +77,7 @@ _IC: list[tuple[str, str, tuple[str, ...]]] = [
     (r"6N138", "Darlington Optocoupler", ("DIP-8",)), (r"H11F1", "Photo-FET Optocoupler", ("DIP-6",)),
     # delay
     (r"MN3204", "512-Stage Low-Voltage BBD", ("DIP-8",)), (r"MN3001", "Dual 512-Stage BBD", ()), (r"MN3209", "256-Stage BBD", ()),
-    (r"MN3011", "Multi-Tap 3328-Stage BBD", ()), (r"TDA1022", "512-Stage BBD", ("DIP-16",)),
+    (r"MN3011", "3328-Stage BBD with 6 Taps", ("DIP-12",)), (r"TDA1022", "512-Stage BBD", ("DIP-16",)),
     (r"M65831A?P?", "Digital Echo", ("DIP-24",)), (r"M50195P?", "Digital Echo", ()), (r"M50198P?", "Single-Chip Digital Delay", ()), (r"HT8955A?", "Digital Echo (Voice Delay)", ("DIP-24",)),
     (r"HT8950A", "Voice Modulator (Pitch Shift, Robot, Vibrato)", ("DIP-16",)), (r"HT8950", "Voice Modulator (Pitch Shift, Robot, Vibrato)", ("DIP-18",)),
     (r"ISD(?:25\d{2,3}|17\d{3}|1820|100A)", "Voice Record/Playback", ()), (r"APR9301(?:V2)?", "Voice Record/Playback", ()),
