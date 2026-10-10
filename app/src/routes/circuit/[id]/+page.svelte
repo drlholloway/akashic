@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { controlGroup } from '$lib/controls';
 	import { base } from '$app/paths';
 	import { page } from '$app/state';
 	import { wrongParseUrl } from '$lib/site';
@@ -85,7 +86,7 @@
 			{/if}
 			<dl class="specs">
 				<div><dt class="label">Category</dt><dd><a href="{base}/?cat={encodeURIComponent(c.category)}">{c.category}</a>{#if c.effect_type && c.effect_type !== c.category} <span class="dim">· {c.effect_type}</span>{/if}</dd></div>
-				{#if knobs.length}<div><dt class="label">Controls</dt><dd>{knobs.join(' · ')}</dd></div>{/if}
+				{#if knobs.length}<div><dt class="label">Controls</dt><dd>{#each knobs as k, i}{#if i}{' · '}{/if}{@const g = controlGroup(k)}{#if g}<a href="{base}/?ctl={encodeURIComponent(g.label)}" title="Circuits with a {g.label} control">{k}</a>{:else}{k}{/if}{/each}</dd></div>{/if}
 				{#if c.difficulty}<div><dt class="label">Difficulty</dt><dd>{c.difficulty}</dd></div>{/if}
 				<div><dt class="label">Price</dt><dd class="mono">{currency.format(c.price, c.currency) || 'see vendor'}{#if c.price != null && currency.convert(c.price, c.currency).converted}<span class="dim native">{currency.native(c.price, c.currency)} listed</span>{/if}{#if c.delisted}<span class="warn stock">no longer listed</span>{:else if c.in_stock === false}<span class="warn stock">out of stock</span>{:else if c.in_stock}<span class="dim stock">in stock</span>{/if}</dd></div>
 				{#if c.tags.length}<div><dt class="label">Tags</dt><dd>{c.tags.join(', ')}</dd></div>{/if}

@@ -9,6 +9,7 @@
 	import { currency } from '$lib/currency.svelte';
 	import { untrack } from 'svelte';
 	import CurrencySelect from '$lib/CurrencySelect.svelte';
+	import { controlLabels } from '$lib/controls';
 
 	let { data } = $props();
 	$effect.pre(() => buildSearch(data.index));
@@ -69,10 +70,22 @@
 		}
 		return [...m.entries()].sort((a, b) => a[0] - b[0]);
 	});
+	// Controls combine with AND (a circuit with both a Blend and a Bias knob), so each count is
+	// how many of the current results also have that control; the most common are shown.
+	let allControls = $state(false);
+	const controlFacet = $derived.by(() => {
+		const m = new Map<string, number>();
+		for (const e of results) for (const l of controlLabels(e.controls)) m.set(l, (m.get(l) ?? 0) + 1);
+		const all = [...m.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+		return allControls ? all : all.filter(([l], i) => i < 12 || filters.control.includes(l));
+	});
+	function toggleControl(label: string) {
+		update({ control: filters.control.includes(label) ? filters.control.filter((c) => c !== label) : [...filters.control, label] });
+	}
 	const totalVendors = $derived(new Set(data.index.map((e) => e.vendor)).size);
 	const shownVendors = $derived(new Set(results.map((e) => e.vendor)).size);
 	const active = $derived(
-		filters.vendor.length + filters.category.length + filters.enclosure.length + (filters.basedOn ? 1 : 0) + (filters.part ? 1 : 0) + (filters.knobs != null ? 1 : 0) + (filters.inStock ? 1 : 0)
+		filters.vendor.length + filters.category.length + filters.enclosure.length + (filters.basedOn ? 1 : 0) + (filters.part ? 1 : 0) + (filters.knobs != null ? 1 : 0) + filters.control.length + (filters.inStock ? 1 : 0)
 	);
 </script>
 
@@ -112,6 +125,15 @@
 				{#each knobFacet as [k, n]}
 					<button type="button" class="chip" aria-pressed={filters.knobs === k} onclick={() => update({ knobs: filters.knobs === k ? null : k })}>{k} <span class="count">{n}</span></button>
 				{/each}
+			</div>
+		</div>
+		<div class="facet">
+			<h2 class="label strong">Controls</h2>
+			<div class="chips">
+				{#each controlFacet as [l, n]}
+					<button type="button" class="chip" aria-pressed={filters.control.includes(l)} onclick={() => toggleControl(l)}>{l} <span class="count">{n}</span></button>
+				{/each}
+				<button type="button" class="chip more" onclick={() => (allControls = !allControls)}>{allControls ? 'Fewer' : 'More'}</button>
 			</div>
 		</div>
 		<div class="facet">
@@ -162,6 +184,7 @@
 	.facet { margin-bottom: 20px; }
 	.facet h2 { margin-bottom: 8px; }
 	.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+	.chip.more { color: var(--ink-3); }
 	.results { min-width: 0; padding: 12px var(--gutter) 24px 0; }
 	.bar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; padding: 4px 10px 12px; }
 	.bar .count { margin: 0; }
