@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+	import { folds } from '$lib/fold.svelte';
 	import { PART_CATEGORY_NAMES, PART_ORDER } from '$lib/types';
 
 	let { data } = $props();
@@ -20,28 +21,10 @@
 
 	// Sections fold at their header. The choice is kept in this browser; a filter opens every
 	// section, so a match is never hidden in a folded one.
-	const KEY = 'akashic-parts-folded';
-	let folded = $state<string[]>([]);
-	$effect(() => {
-		try {
-			const v = JSON.parse(localStorage.getItem(KEY) ?? '[]');
-			if (Array.isArray(v)) folded = v.filter((k) => typeof k === 'string');
-		} catch {
-			// storage blocked or empty: every section open
-		}
-	});
-	function fold(keys: string[]) {
-		folded = keys;
-		try {
-			localStorage.setItem(KEY, JSON.stringify(keys));
-		} catch {
-			// the page still folds; it just forgets on reload
-		}
-	}
-	const toggle = (k: string) => fold(folded.includes(k) ? folded.filter((x) => x !== k) : [...folded, k]);
+	const folded = folds('akashic-parts-folded');
 	const filtering = $derived(q.trim() !== '');
-	const open = (k: string) => filtering || !folded.includes(k);
-	const allFolded = $derived(groups.every((g) => folded.includes(g.key)));
+	const open = (k: string) => filtering || !folded.has(k);
+	const allFolded = $derived(groups.every((g) => folded.has(g.key)));
 
 	// Pots are grouped by taper, then ordered by resistance: A1k, A10k, A100k, A1M.
 	const TAPERS: [string, string][] = [['A', 'A · log'], ['B', 'B · linear'], ['C', 'C · reverse log'], ['W', 'W'], ['', 'No taper given']];
@@ -85,13 +68,13 @@
 			<input type="search" bind:value={q} placeholder="LM308, 2N5088, PT2399, A100k…" autocomplete="off" spellcheck="false" />
 		</label>
 		{#if !filtering}
-			<button type="button" class="label all" onclick={() => fold(allFolded ? [] : PART_ORDER.slice())}>{allFolded ? 'Expand all' : 'Collapse all'}</button>
+			<button type="button" class="label all" onclick={() => folded.set(allFolded ? [] : PART_ORDER.slice())}>{allFolded ? 'Expand all' : 'Collapse all'}</button>
 		{/if}
 	</header>
 	{#each groups as g}
 		<section>
 			<h2 class="label strong">
-				<button type="button" aria-expanded={open(g.key)} aria-controls="parts-{g.key}" disabled={filtering} onclick={() => toggle(g.key)}>
+				<button type="button" aria-expanded={open(g.key)} aria-controls="parts-{g.key}" disabled={filtering} onclick={() => folded.toggle(g.key)}>
 					<span class="chev" aria-hidden="true"></span>{g.name} <span class="mono dim">{g.items.length}</span>
 				</button>
 			</h2>

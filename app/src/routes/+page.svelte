@@ -10,6 +10,7 @@
 	import { untrack } from 'svelte';
 	import CurrencySelect from '$lib/CurrencySelect.svelte';
 	import { controlLabels } from '$lib/controls';
+	import { folds } from '$lib/fold.svelte';
 
 	let { data } = $props();
 	$effect.pre(() => buildSearch(data.index));
@@ -87,6 +88,14 @@
 	const active = $derived(
 		filters.vendor.length + filters.category.length + filters.enclosure.length + (filters.basedOn ? 1 : 0) + (filters.part ? 1 : 0) + (filters.knobs != null ? 1 : 0) + filters.control.length + (filters.inStock ? 1 : 0)
 	);
+	// Each filter folds at its header; a folded one still says how many of its choices are on.
+	const FACETS = ['vendor', 'category', 'enclosure', 'knobs', 'control'];
+	const folded = folds('akashic-filters-folded');
+	const allFolded = $derived(FACETS.every((k) => folded.has(k)));
+	const chosen = $derived<Record<string, number>>({
+		vendor: filters.vendor.length, category: filters.category.length, enclosure: filters.enclosure.length,
+		knobs: filters.knobs != null ? 1 : 0, control: filters.control.length
+	});
 </script>
 
 <svelte:head>
@@ -95,41 +104,49 @@
 
 <div class="index">
 	<aside class="facets" aria-label="Filters">
+		{#snippet head(key: string, name: string)}
+			<h2 class="label strong">
+				<button type="button" aria-expanded={!folded.has(key)} aria-controls="facet-{key}" onclick={() => folded.toggle(key)}>
+					<span class="chev" aria-hidden="true"></span>{name}{#if chosen[key] && folded.has(key)} <span class="mono on">{chosen[key]} on</span>{/if}
+				</button>
+			</h2>
+		{/snippet}
+		<button type="button" class="label all" onclick={() => folded.set(allFolded ? [] : FACETS)}>{allFolded ? 'Expand all' : 'Collapse all'}</button>
 		<div class="facet">
-			<h2 class="label strong">Vendor</h2>
-			<div class="chips">
+			{@render head('vendor', 'Vendor')}
+			<div class="chips" id="facet-vendor" hidden={folded.has('vendor')}>
 				{#each vendorFacet as [v, n]}
 					<button type="button" class="chip" aria-pressed={filters.vendor.includes(v)} onclick={() => toggle('vendor', v)}>{VENDOR_NAMES[v as keyof typeof VENDOR_NAMES] ?? v} <span class="count">{n}</span></button>
 				{/each}
 			</div>
 		</div>
 		<div class="facet">
-			<h2 class="label strong">Category</h2>
-			<div class="chips">
+			{@render head('category', 'Category')}
+			<div class="chips" id="facet-category" hidden={folded.has('category')}>
 				{#each categoryFacet as [v, n]}
 					<button type="button" class="chip" aria-pressed={filters.category.includes(v)} onclick={() => toggle('category', v)}>{v} <span class="count">{n}</span></button>
 				{/each}
 			</div>
 		</div>
 		<div class="facet">
-			<h2 class="label strong">Enclosure</h2>
-			<div class="chips">
+			{@render head('enclosure', 'Enclosure')}
+			<div class="chips" id="facet-enclosure" hidden={folded.has('enclosure')}>
 				{#each enclosureFacet as [v, n]}
 					<button type="button" class="chip" aria-pressed={filters.enclosure.includes(v)} onclick={() => toggle('enclosure', v)}>{v} <span class="count">{n}</span></button>
 				{/each}
 			</div>
 		</div>
 		<div class="facet">
-			<h2 class="label strong">Knobs</h2>
-			<div class="chips">
+			{@render head('knobs', 'Knobs')}
+			<div class="chips" id="facet-knobs" hidden={folded.has('knobs')}>
 				{#each knobFacet as [k, n]}
 					<button type="button" class="chip" aria-pressed={filters.knobs === k} onclick={() => update({ knobs: filters.knobs === k ? null : k })}>{k} <span class="count">{n}</span></button>
 				{/each}
 			</div>
 		</div>
 		<div class="facet">
-			<h2 class="label strong">Controls</h2>
-			<div class="chips">
+			{@render head('control', 'Controls')}
+			<div class="chips" id="facet-control" hidden={folded.has('control')}>
 				{#each controlFacet as [l, n]}
 					<button type="button" class="chip" aria-pressed={filters.control.includes(l)} onclick={() => toggleControl(l)}>{l} <span class="count">{n}</span></button>
 				{/each}
@@ -182,8 +199,18 @@
 		overflow-y: auto;
 	}
 	.facet { margin-bottom: 20px; }
-	.facet h2 { margin-bottom: 8px; }
+	.facet h2 { margin-bottom: 4px; }
+	.facet h2 button { display: flex; align-items: center; gap: 8px; width: 100%; padding: 4px 0; border: 0; background: none; font: inherit; letter-spacing: inherit; text-transform: inherit; color: inherit; text-align: left; cursor: pointer; }
+	.facet h2 button:focus-visible, .all:focus-visible { outline: 2px solid var(--coat); outline-offset: 2px; }
+	.facet h2 button:hover .chev { border-color: var(--coat); }
+	.chev { width: 6px; height: 6px; border-right: 1.5px solid var(--ink-3); border-bottom: 1.5px solid var(--ink-3); transform: rotate(-45deg); transition: transform 0.12s; flex: none; }
+	button[aria-expanded='true'] .chev { transform: rotate(45deg) translate(-1px, -1px); }
+	.facet h2 .on { color: var(--coat); font-size: 12px; letter-spacing: 0; text-transform: none; }
+	.all { display: block; margin-bottom: 14px; padding: 0; border: 0; background: none; color: var(--ink-2); cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+	.all:hover { color: var(--ink); }
+	@media (prefers-reduced-motion: reduce) { .chev { transition: none; } }
 	.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+	.chips[hidden] { display: none; }
 	.chip.more { color: var(--ink-3); }
 	.results { min-width: 0; padding: 12px var(--gutter) 24px 0; }
 	.bar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; padding: 4px 10px 12px; }
@@ -195,6 +222,7 @@
 		.index { grid-template-columns: 1fr; }
 		.facets { position: static; max-height: none; border-right: 0; border-bottom: 1px solid var(--rule); padding: 12px 16px; display: flex; flex-wrap: wrap; gap: 8px 24px; }
 		.facet { margin: 0; }
+		.all { flex-basis: 100%; margin: 0; text-align: left; }
 		.results { padding: 8px 16px 24px; }
 	}
 </style>
