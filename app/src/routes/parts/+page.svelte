@@ -35,6 +35,17 @@
 		if (other.length) groups.push({ name: 'Other', items: other });
 		return groups.filter((g) => g.items.length);
 	}
+
+	// Columns sized to a section's longest part number and count (both monospace), so every
+	// description in the section starts at the same place, and room for nine in ten of its
+	// descriptions (set smaller, so about 0.8ch a letter). A very long value wraps.
+	function cols(items: { value: string; count: number; desc?: string; types: string[] }[]) {
+		const vw = Math.min(16, Math.max(...items.map((p) => p.value.length)));
+		const nw = Math.max(...items.map((p) => String(p.count).length));
+		const lens = items.map((p) => (p.desc ?? p.types[0] ?? '').length).sort((a, b) => a - b);
+		const dw = Math.max(16, Math.min(44, Math.ceil(lens[Math.floor(lens.length * 0.9)] * 0.8)));
+		return `--vw: ${vw}ch; --nw: ${nw}ch; --dw: ${dw}ch`;
+	}
 </script>
 
 <svelte:head><title>Parts cross-reference · Akashic</title></svelte:head>
@@ -55,7 +66,7 @@
 			{#if g.key === 'POT'}
 				{#each potGroups(g.items) as sub}
 					<h3 class="label sub">{sub.name} <span class="mono dim">{sub.items.length}</span></h3>
-					<ul>
+					<ul style={cols(g.items)}>
 						{#each sub.items as p}
 							<li>
 								<a href="{base}/parts/{p.slug}"><span class="mono val">{p.value}</span><span class="mono n">{p.count}</span></a>
@@ -65,7 +76,7 @@
 					</ul>
 				{/each}
 			{:else}
-				<ul>
+				<ul style={cols(g.items)}>
 					{#each g.items as p}
 						<li>
 							<a href="{base}/parts/{p.slug}"><span class="mono val">{p.value}</span><span class="mono n">{p.count}</span></a>
@@ -89,10 +100,14 @@
 	section h2 { padding-bottom: 6px; border-bottom: 1px solid var(--rule-strong); margin-bottom: 4px; }
 	.dim { color: var(--ink-3); }
 	h3.sub { margin: 14px 0 2px; color: var(--ink-2); }
-	ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 0 24px; }
-	li { display: flex; align-items: baseline; gap: 10px; border-bottom: 1px solid var(--rule); padding: 5px 0; min-width: 0; }
-	li a { display: inline-flex; gap: 10px; align-items: baseline; }
-	.val { font-weight: 600; }
-	.n { color: var(--ink-3); font-size: 12px; }
+	ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, calc(var(--vw) + var(--nw) + var(--dw))), 1fr)); gap: 0 28px; }
+	li { display: grid; grid-template-columns: var(--vw) var(--nw) minmax(0, 1fr); column-gap: 10px; align-items: baseline; border-bottom: 1px solid var(--rule); padding: 5px 0; min-width: 0; }
+	li a { display: grid; grid-column: 1 / 3; grid-template-columns: subgrid; align-items: baseline; min-width: 0; }
+	.val { font-weight: 600; overflow-wrap: anywhere; }
+	.n { color: var(--ink-3); font-size: 12px; text-align: right; }
 	.type { color: var(--ink-3); font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+	@media (max-width: 600px) {
+		li { grid-template-columns: min(var(--vw), 11ch) var(--nw) minmax(0, 1fr); }
+		.type { white-space: normal; }
+	}
 </style>

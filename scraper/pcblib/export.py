@@ -190,7 +190,7 @@ def run(images: bool = False) -> None:
 
 
 def _transistor_descs(values: list[str]) -> dict[str, str]:
-    """'Si NPN BJT TO-92 Through-Hole' for each transistor part number the database or the package
+    """'Si NPN BJT TO-92 TH' for each transistor part number the database or the package
     rules know (see transistors.describe). Empty when the transistor database is absent."""
     from .transistors import TRANS_DB, describe
     import sqlite3 as _sq

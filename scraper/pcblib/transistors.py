@@ -214,7 +214,7 @@ def _digits(pn: str) -> str:
 # germanium, hFE about 30: the OC71 (PNP Ge, hFE 30, 20 V, 125 mW) is the closest listed part.
 _ALIASES = {"CV7351": "2N1308", "1T308A": "GT308A", "1T308B": "GT308B", "OC139": "ASY29", "OC140": "ASY29", "CV7112": "ASY29",
             "FS36999": "2N5133", "TR1623": "2SC1623", "CV10805": "BC108", "A02650": "OC71"}
-# The database files the BF245 family as MOSFETs; they are N-channel JFETs.
+# The database files the BF245 family as MOSFETs; they are N-ch JFETs.
 _KIND_FIX = {"BF245": "jfet", "BF245A": "jfet", "BF245B": "jfet", "BF245C": "jfet"}
 
 
@@ -335,10 +335,10 @@ _PACKAGES: list[tuple[re.Pattern, str]] = [(re.compile(rx), pkg) for rx, pkg in 
 _DARLINGTON = re.compile(r"^(?:MPSA1[2-4]|MPSA6[2-6]|2N530[5-8]|2N6426|2N6427|TIP1[0-4]\d|BC51[67]|BC87[56]|KSP1[34])")
 # Parts the database lists without parameters or not at all, where the kind is certain.
 _KIND_EXTRA = {"2N2646": ("Si", "UJT"), "2N4870": ("Si", "UJT"), "2N4871": ("Si", "UJT"), "2N6027": ("Si", "PUT"),
-               "2N4302": ("Si", "N-channel JFET"), "2N4303": ("Si", "N-channel JFET"), "2N4304": ("Si", "N-channel JFET"),
-               "BC264A": ("Si", "N-channel JFET"), "BC264B": ("Si", "N-channel JFET"), "BC264C": ("Si", "N-channel JFET"),
-               "BC264D": ("Si", "N-channel JFET"), "KP303A": ("Si", "N-channel JFET"), "KP303E": ("Si", "N-channel JFET"),
-               "KP303ZH": ("Si", "N-channel JFET"), "E112": ("Si", "N-channel JFET"), "E212": ("Si", "N-channel JFET"),
+               "2N4302": ("Si", "N-ch JFET"), "2N4303": ("Si", "N-ch JFET"), "2N4304": ("Si", "N-ch JFET"),
+               "BC264A": ("Si", "N-ch JFET"), "BC264B": ("Si", "N-ch JFET"), "BC264C": ("Si", "N-ch JFET"),
+               "BC264D": ("Si", "N-ch JFET"), "KP303A": ("Si", "N-ch JFET"), "KP303E": ("Si", "N-ch JFET"),
+               "KP303ZH": ("Si", "N-ch JFET"), "E112": ("Si", "N-ch JFET"), "E212": ("Si", "N-ch JFET"),
                "TIS92": ("Si", "NPN BJT"), "TIS93": ("Si", "PNP BJT"), "TIS97": ("Si", "NPN BJT"), "MAT04": ("Si", "NPN BJT, matched quad")}
 
 
@@ -351,7 +351,7 @@ def package_of(pn: str) -> str:
 
 
 def describe(conn: sqlite3.Connection, pn: str) -> str:
-    """'Si NPN BJT TO-92 Through-Hole', 'Si N-channel JFET SOT-23 SMD', 'Ge PNP BJT Through-Hole':
+    """'Si NPN BJT TO-92 TH', 'Si N-ch JFET SOT-23 SMD', 'Ge PNP BJT TH':
     material, polarity or channel and kind from the transistor database (a part it lacks from
     _KIND_EXTRA), the package from the part number's family. '' when the part is not known."""
     cands = _candidates(pn)
@@ -366,15 +366,15 @@ def describe(conn: sqlite3.Connection, pn: str) -> str:
             dar = "Darlington " if any(_DARLINGTON.match(c) for c in cands) else ""
             mat, kind = spec.get("mat") or "", f"{pol} {dar}BJT".strip()
         elif k in ("jfet", "mosfet"):
-            mat, kind = spec.get("mat") or "Si", f"{spec.get('ch') or ''}-channel {k.upper() if k == 'jfet' else 'MOSFET'}".lstrip("-")
+            mat, kind = spec.get("mat") or "Si", f"{spec.get('ch') or ''}-ch {k.upper() if k == 'jfet' else 'MOSFET'}".lstrip("-")
         else:
             return ""
     else:
         return ""
     pkg = package_of(pn)  # from the number as written: a bare VP3203 may be TO-92 or SOT-89
-    mount = "SMD" if pkg.startswith(("SOT", "SC-")) else "Through-Hole"
+    mount = "SMD" if pkg.startswith(("SOT", "SC-")) else "TH"
     if mat == "Ge" and not pkg:
-        mount = "Through-Hole"  # germanium parts are all leaded
+        mount = "TH"  # germanium parts are all leaded
     elif not pkg:
         mount = ""
     return " ".join(x for x in (mat, kind, pkg, mount) if x)

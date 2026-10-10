@@ -1,6 +1,6 @@
-"""Short descriptions of diode parts for the parts index: 'Si Signal Diode DO-35 Through-Hole',
-'Si Schottky DO-41 Through-Hole', 'Ge Signal Diode DO-7 Through-Hole', 'Si Zener 9.1 V 1 W DO-41
-Through-Hole'. The package is the one the part number is registered in, from a table of well-known
+"""Short descriptions of diode parts for the parts index: 'Si Signal Diode DO-35 TH',
+'Si Schottky DO-41 TH', 'Ge Signal Diode DO-7 TH', 'Si Zener 9.1 V 1 W DO-41
+TH'. The package is the one the part number is registered in, from a table of well-known
 families; a family whose package is not certain is described without one rather than guessed."""
 from __future__ import annotations
 
@@ -55,7 +55,7 @@ def _volts(v: str) -> str:
 
 
 def _mount(pkg: str) -> str:
-    return "SMD" if pkg.startswith(("SOD", "SOT", "SMA", "MELF")) else "Through-Hole" if pkg else ""
+    return "SMD" if pkg.startswith(("SOD", "SOT", "SMA", "MELF")) else "TH" if pkg else ""
 
 
 def describe(value: str) -> str:
@@ -76,7 +76,7 @@ def describe(value: str) -> str:
         if rx.match(p):
             kind = kind or ("Schottky" if p.startswith("B58") else "Signal Diode")
             if mat == "Ge" and not pkg:
-                return f"Ge {kind} Through-Hole"  # germanium diodes are all leaded
+                return f"Ge {kind} TH"  # germanium diodes are all leaded
             if pkg == "SMD":
                 return f"{mat} {kind} SMD"  # surface mount, package not certain
             return " ".join(x for x in (mat, kind, pkg, _mount(pkg)) if x)
