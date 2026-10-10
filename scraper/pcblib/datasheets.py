@@ -28,7 +28,7 @@ FINDCHIPS = "https://www.findchips.com/search/{}"
 DISCONTINUED: dict[str, list[str]] = {
     # diodes
     "D9": ["D9B", "D9E", "D9K", "D9V"],  # the Soviet D9 germanium family: one sheet lists every letter
-    "1N34A": ["1N34A"], "1N270": ["1N270"], "1N60P": ["1N60P"], "1N100": ["1N100"], "1N695": ["1N695"],
+    "1N34A": ["1N34A"], "1N346": ["1N346"], "1N270": ["1N270"], "1N60P": ["1N60P"], "1N100": ["1N100"], "1N695": ["1N695"],
     "OA90": ["OA90"], "AA112": ["AA112"], "AA119": ["AA119"], "BA282": ["BA282"], "BA482": ["BA482"],
     "1S1588": ["1S1588", "IS1588"], "1S2473": ["1S2473"], "MA150": ["MA150"], "MA856": ["MA856", "MA2C856"],
     "1S1555": ["1S1555", "IS1555"], "1S953": ["1S953"], "1S188": ["1S188", "1S188FM"], "1S2076": ["1S2076"],
@@ -252,7 +252,7 @@ def has_own(part: str) -> bool:
 
 
 # Pages to keep (1-based) where an archive copy runs on into the next sheet of a scanned data book.
-PAGES: dict[str, range] = {"LM308": range(1, 5), "2SD352": range(4, 7), "NTE103": range(1, 3)}
+PAGES: dict[str, range] = {"LM308": range(1, 5), "2SD352": range(4, 7), "NTE103": range(1, 3), "1N346": range(1, 3)}
 _AD = re.compile(r"findchips\.com|datasheetarchive|alldatasheet|datasheetcatalog|datasheet4u|icminer", re.I)
 
 TI = "https://www.ti.com/lit/ds/symlink/{}.pdf"

@@ -31,6 +31,7 @@ _FAMILIES: list[tuple[re.Pattern, str, str, str]] = [(re.compile(rx), mat, kind,
     (r"^(?:1S188(?:FM)?|1N3666|GA\d{3}|OA61)$", "Ge", "Signal Diode", ""),
     (r"^(?:SR1K-?2|S5500G?|S5688G?|1S1885)$", "Si", "Rectifier", ""),
     (r"^1N580[2-6]$", "Si", "Fast Rectifier", ""),
+    (r"^1N(?:25[3-6]|33[2-9]|34\d)$", "Si", "Rectifier", "DO-4"),  # stud-base rectifiers (NJ Semi sheet: 1N346 is 200 V 0.6 A)
     (r"^CDSH\d", "Si", "Schottky", "SOD-323"),
     (r"^(?:SM581[789]|RB1\d\d)", "Si", "Schottky", "SMD"),
     (r"^BAT8[1-6]S$", "Si", "Schottky", ""),
@@ -55,6 +56,8 @@ def _volts(v: str) -> str:
 
 
 def _mount(pkg: str) -> str:
+    if pkg in ("DO-4", "DO-5"):
+        return "Stud Mount"  # bolted to a chassis or heatsink
     return "SMD" if pkg.startswith(("SOD", "SOT", "SMA", "MELF")) else "TH" if pkg else ""
 
 
