@@ -92,7 +92,7 @@ _IC: list[tuple[str, str, tuple[str, ...]]] = [
     (r"4464(?:-\d+)?", "256 Kbit DRAM", ("DIP-18",)), (r"M5M4246AP?(?:-\d+)?", "256 Kbit DRAM", ()), (r"93C46", "1 Kbit Microwire EEPROM", _D8),
     (r"PIC12F509", "8-bit Microcontroller", _D8), (r"PIC10F202", "8-bit Microcontroller", ("DIP-8", "SOT-23-6")),
     (r"(?:PIC)?16F68[48]", "8-bit Microcontroller", ("DIP-14", "SOIC-14")), (r"(?:PIC)?16F84A?(?:-04)?", "8-bit Microcontroller", ("DIP-18",)),
-    (r"ATTINY13A?", "8-bit Microcontroller", _D8), (r"ATTINY841(?:-SSU)?", "8-bit Microcontroller", ("SOIC-14",)), (r"ATTINY84A?", "8-bit Microcontroller", ("DIP-14", "SOIC-14")),
+    (r"ATTINY13A?", "8-bit Microcontroller", _D8), (r"AVR(?:32|64|128)DB28", "8-bit Microcontroller", ("DIP-28", "SOIC-28", "SSOP-28")), (r"ATTINY841(?:-SSU)?", "8-bit Microcontroller", ("SOIC-14",)), (r"ATTINY84A?", "8-bit Microcontroller", ("DIP-14", "SOIC-14")),
     (r"ATTINY412(?:-SSNR?)?", "8-bit Microcontroller", ("SOIC-8",)),
     (r"ATMEGA328P?(?:-PU)?", "8-bit Microcontroller", ("DIP-28",)), (r"ESP32-?C3", "32-bit Wi-Fi Microcontroller", ()),
     (r"68B09", "8-bit Microprocessor", ("DIP-40",)), (r"Z-?80A?", "8-bit Microprocessor", ("DIP-40",)),

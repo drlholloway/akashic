@@ -155,9 +155,9 @@ Five Cats Danish Pastry D5 '1N474A' (beside a 1N747A; 1N747A or 1N4742A?), EHX C
 ## Other categories
 
 Descriptions (`describe.py`, October 9, 2026) for ICs, pots, trimmers, switches, optos, inductors,
-transformers and crystals. Coverage by use: IC 98% (504 of 593 part numbers), POT, TRIM, SW, XTAL 100%,
+transformers and crystals. Coverage by use: IC 98% (505 of 592 part numbers), POT, TRIM, SW, XTAL 100%,
 L 99%, XFM 95%, OPTO 83%. Two op-amps drawn with a wrong number are described as the part meant, the
-value kept as drawn: the TR-2's M5281AL (M5218AL) and the HM-2 redraw's M5616L (M5216L). The 89
+value kept as drawn: the TR-2's M5281AL (M5218AL) and the HM-2 redraw's M5616L (M5216L). The 87
 undescribed ICs are each on one or two boards: one whose number and role disagree on the schematic (the
 BL3208 echo's BA4450, labeled a dual op-amp; no datasheet found), parts not yet looked up (UPD444C, the NEC UPC/UPD parts, CEM3372/3374/3379, THAT4305, KORG35, Ensoniq ES56033,
 TMS57070), numbers that could be more than one part (558: NE558 quad timer or MC1558 op-amp; LF358;
