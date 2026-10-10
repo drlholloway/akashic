@@ -152,7 +152,7 @@ def run(images: bool = False) -> None:
     sheets = datasheet_table()  # manufacturer links only; datasheets themselves are never exported
     descs = _transistor_descs([p["value"] for p in parts.values() if p["category"] == "Q"])
     from .diodes import describe as describe_diode
-    descs.update({p["value"]: d for p in parts.values() if p["category"] == "D" and (d := describe_diode(p["value"]))})
+    diode_descs = {p["value"]: d for p in parts.values() if p["category"] == "D" and (d := describe_diode(p["value"]))}  # kept apart: 'GE' is a diode and a transistor
     from .describe import describe as describe_part
     top_types = {p["key"]: [t for t, _ in sorted(p["types"].items(), key=lambda kv: (-kv[1], kv[0]))] for p in parts.values()}
     parts_out = sorted(
@@ -160,7 +160,7 @@ def run(images: bool = False) -> None:
           "datasheets": all_sheets(p["value"], sheets.get(p["key"], "")), "types": [t for t, _ in sorted(p["types"].items(), key=lambda kv: (-kv[1], kv[0]))][:5],
           "count": len(p["circuits"]),
           **({"zeners": z} if p["category"] == "D" and (z := zener_choices(p["value"])) else {}),
-          **({"desc": d} if (d := descs.get(p["value"]) if p["category"] in ("Q", "D") else describe_part(p["category"], p["value"], top_types[p["key"]])) else {}),
+          **({"desc": d} if (d := descs.get(p["value"]) if p["category"] == "Q" else diode_descs.get(p["value"]) if p["category"] == "D" else describe_part(p["category"], p["value"], top_types[p["key"]])) else {}),
           "slug": re.sub(r"[^a-z0-9.]+", "-", p["key"].lower())} for p in parts.values()),
         key=lambda p: (-p["count"], p["key"]))
     # dedupe part slugs (different keys can collapse to one slug)
