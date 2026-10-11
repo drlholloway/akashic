@@ -19,7 +19,7 @@ from .paths import RAW_DIR
 
 USER_AGENT = (
     "Akashic/0.1 (personal DIY pedal reference; "
-    "contact via github.com/laneholloway)"
+    "contact via github.com/drlholloway)"
 )
 
 
