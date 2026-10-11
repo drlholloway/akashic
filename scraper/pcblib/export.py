@@ -10,6 +10,7 @@ Outputs (in app/static/data/):
 from __future__ import annotations
 
 import json
+from pathlib import Path
 import re
 import sqlite3
 import subprocess
@@ -18,7 +19,7 @@ from datetime import date, timedelta
 
 from . import db as dbm
 from .corrections import UNCERTAIN
-from .datasheets import all_sheets, is_selector, table as datasheet_table
+from .datasheets import SHEET_ONLY, all_sheets, is_selector, table as datasheet_table
 from .originals import COVERS, harmonize, key as original_key, learn_brands, original
 from .normalize import catalog_category, catalog_keys, ic_name, zener_choices
 from .paths import EXPORT_DIR, owner_schematic
@@ -193,6 +194,7 @@ def run(images: bool = False) -> None:
         ({**p, "circuits": sorted(p["circuits"]), "datasheet": sheets.get(p["key"], ""), "selector": is_selector(sheets.get(p["key"], "http")),
           "datasheets": all_sheets(p["value"], sheets.get(p["key"], "")), "types": [t for t, _ in sorted(p["types"].items(), key=lambda kv: (-kv[1], kv[0]))][:5],
           "count": len(p["circuits"]),
+          **({"sheet_only": True} if Path(sheets.get(p["key"], "")).stem in SHEET_ONLY else {}),
           **({"zeners": z} if p["category"] == "D" and (z := zener_choices(p["value"])) else {}),
           **({"desc": d} if (d := descs.get(p["value"]) if p["category"] == "Q" else diode_descs.get(p["value"]) if p["category"] == "D" else describe_part(p["category"], p["value"], top_types[p["key"]])) else {}),
           "slug": re.sub(r"[^a-z0-9.]+", "-", p["key"].lower())} for p in parts.values()),

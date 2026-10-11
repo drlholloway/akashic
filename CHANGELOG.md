@@ -6,6 +6,8 @@ GitHub Release notes.
 ## Unreleased
 
 ### Added
+- Datasheets for the audio transformers: Triad's own sheet for the TY-141P, and Xicon's 42TM, 42TL and 42TU series sheets hosted here, linked from 24 transformer part pages.
+- Datasheets for the five crystals: Abracon's AB38T sheet for the 32.768 kHz watch crystals, its HC-49 series sheet for the 16 and 20 MHz ones (the build documents give only a frequency), and the KDS DT-38 specification, hosted here as KDS no longer publishes it.
 - Offline use and install: the site now registers its service worker and links its web app manifest, which it built but never switched on. The circuits, originals and parts pages work without a connection, and so does any circuit opened before; one that was not says so.
 - 'Check before you build' on a circuit page: the values the person who read a layout or schematic by eye was not sure of, in their words, above the parts list (3,800 notes on 2,084 circuits).
 - Two Tagboard Effects posts that each hold several layouts are nine circuits, one per drawing (a charge pump, D*A*M 1966, LofoMofo, Rangemaster, Fuzzrite, Landgraff Boost, LPB1 and two Fuzz Faces).

@@ -53,6 +53,11 @@ DISCONTINUED: dict[str, list[str]] = {
     "UPC4558": ["UPC4558", "UPC4558C"],
     "BA6110": ["BA6110"], "BA718": ["BA718"], "OPA2604": ["OPA2604"], "74C42": ["74C42"], "HT8950": ["HT8950"], "TL044": ["TL044", "TL044CN"],
     "M5207L01": ["M5207L01"], "LM1496": ["LM1496"], "AM9709CN": ["AM9709CN"],
+    # crystals: KDS still lists the DT-38 but publishes no sheet for it; its 2009 specification survives at a distributor
+    "DT-38": ["DT-38"],
+    # Xicon (Mouser's house brand) audio transformers: one sheet per series, every part a row. Mouser's
+    # own copies sit behind its bot check; these came from a distributor's document store.
+    "42TM": ["42TM"], "42TL": ["42TL"], "42TU": ["42TU"],
     # transistors
 
     "2SC1815": ["2SC1815", "2SC1815-GR", "2SC1815L-GR", "2SC1815BL", "2SC1815GR", "2SC1815-BL", "2SC1815-Y", "2SC1815Y", "C1815"],
@@ -105,6 +110,9 @@ DISCONTINUED: dict[str, list[str]] = {
     "VTL5C2": ["VTL5C2"], "VTL5C3": ["VTL5C3"], "NSL-32": ["NSL-32", "NSL32-R3"], "CLM6000": ["CLM6000", "CLM600"],
     "NSL-19M51": ["NSL-19M51"],
 }
+# Hosted sheets of parts that may still be made: the sheet was not found on the maker's own site.
+SHEET_ONLY = {"DT-38", "42TM", "42TL", "42TU"}
+
 # Hosted files that are a row in a maker's selector table or catalog, not a full datasheet: the part
 # page says so, and the worklist keeps asking for the real sheet. Set by eye when a file is hosted.
 SELECTOR = {"2N1308", "2N5308", "AC176", "Philips-transistors-diodes"}

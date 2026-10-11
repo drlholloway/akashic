@@ -42,7 +42,7 @@
 		{:else if data.part.datasheet}
 			{@const maker = data.part.datasheets?.[0]?.maker}
 			{@const hosted = !/^https?:/.test(data.part.datasheet)}
-			<p class="sheet"><a href={hosted ? `${base}/${data.part.datasheet}` : data.part.datasheet} target="_blank" rel="noopener">{data.part.selector ? 'Selector table' : 'Datasheet'}</a> <span class="dim">· {data.part.selector ? 'a row in a maker\'s catalog, not a full datasheet; the part is discontinued' : hosted ? `archived copy${maker ? ` from ${maker}` : ''}; the part is discontinued and the maker no longer publishes it` : `${maker ? `${maker} · ` : ''}from ${new URL(data.part.datasheet).hostname.replace(/^www\./, '')}`}</span></p>
+			<p class="sheet"><a href={hosted ? `${base}/${data.part.datasheet}` : data.part.datasheet} target="_blank" rel="noopener">{data.part.selector ? 'Selector table' : 'Datasheet'}</a> <span class="dim">· {data.part.selector ? 'a row in a maker\'s catalog, not a full datasheet; the part is discontinued' : hosted ? `archived copy${maker ? ` from ${maker}` : ''}; ${data.part.sheet_only ? 'kept here as it was not found on the maker\'s own site' : 'the part is discontinued and the maker no longer publishes it'}` : `${maker ? `${maker} · ` : ''}from ${new URL(data.part.datasheet).hostname.replace(/^www\./, '')}`}</span></p>
 		{/if}
 	</header>
 	{#if subs}

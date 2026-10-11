@@ -103,6 +103,8 @@ export interface PartEntry {
 	zeners?: { pn: string; series: string; power: string; package: string; datasheet: string }[];
 	desc?: string; // what the part is: 'Si NPN BJT TO-92 TH', 'Si Schottky DO-41 TH' (transistors.describe, diodes.describe)
 	count: number;
+	/** The hosted sheet is of a part that may still be made: only the sheet is gone from the maker's site. */
+	sheet_only?: boolean;
 	slug: string;
 }
 
