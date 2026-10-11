@@ -1,6 +1,6 @@
 import MiniSearch from 'minisearch';
 import type { IndexEntry } from './types';
-import { VENDOR_NAMES, buildsOf } from './types';
+import { VENDOR_NAMES, buildsOf, originalsOf } from './types';
 import { controlLabels, controlSearchText } from './controls';
 
 export interface Filters {
@@ -97,7 +97,7 @@ export function applyFilters(entries: IndexEntry[], f: Filters): IndexEntry[] {
 	// A link may carry a vendor's own spelling ('EHX Big Muff', from before originals were settled):
 	// resolve it to the original that spelling now belongs to, so it opens the whole group.
 	let basedKey = f.basedOn ? normalizeOriginal(f.basedOn) : '';
-	if (basedKey && !entries.some((e) => normalizeOriginal(e.original) === basedKey)) {
+	if (basedKey && !entries.some((e) => originalsOf(e).some((o) => normalizeOriginal(o) === basedKey))) {
 		const hit = entries.find((e) => e.original && normalizeOriginal(e.based_on) === basedKey);
 		if (hit) basedKey = normalizeOriginal(hit.original);
 	}
@@ -108,7 +108,7 @@ export function applyFilters(entries: IndexEntry[], f: Filters): IndexEntry[] {
 		if (f.enclosure.length && !f.enclosure.includes(e.enclosure)) return false;
 		if (f.build.length && !buildsOf(e).some((b) => f.build.includes(b))) return false;
 		if (f.verified && e.verified !== true) return false;
-		if (basedKey && normalizeOriginal(e.original) !== basedKey && normalizeOriginal(e.based_on) !== basedKey) return false;
+		if (basedKey && !originalsOf(e).some((o) => normalizeOriginal(o) === basedKey) && normalizeOriginal(e.based_on) !== basedKey) return false;
 		if (f.part && !e.actives.includes(f.part)) return false;
 		if (f.knobs != null && knobsOf(e) !== f.knobs) return false;
 		if (f.control.length) {

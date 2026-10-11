@@ -3,7 +3,7 @@
 	import Faceplate from './Faceplate.svelte';
 	import { currency } from './currency.svelte';
 	import type { IndexEntry } from './types';
-	import { BUILD_NAMES, VENDOR_NAMES, buildsOf } from './types';
+	import { BUILD_NAMES, VENDOR_NAMES, buildsOf, originalsOf } from './types';
 
 	interface Props {
 		rows: IndexEntry[];
@@ -48,15 +48,18 @@
 						{#each buildsOf(e).filter((b) => b !== 'pcb') as b}<span class="build" title={e.verified === true ? 'Layout marked verified by its source' : e.verified === false ? 'Layout not yet verified by a build' : undefined}>{BUILD_NAMES[b]}{#if e.board && b === buildsOf(e)[0]} {e.board.replace('x', '×')}{/if}</span>{/each}
 						{#if e.verified === true}<span class="build ok" title="The layout's source marks it as verified: someone has built it and it works">Verified</span>{:else if e.verified === false}<span class="build no" title="No working build of this layout has been reported at its source yet">Unverified</span>{/if}
 						{#if e.actives.length}<span class="actives mono">{e.actives.slice(0, 4).join(' · ')}</span>{/if}
-						{#if e.based_on || e.enclosure}<span class="folded">{[e.original || e.based_on, e.enclosure].filter(Boolean).join(' · ')}</span>{/if}
+						{#if e.based_on || e.enclosure}<span class="folded">{[originalsOf(e).join(' / ') || e.based_on, e.enclosure].filter(Boolean).join(' · ')}</span>{/if}
 					</td>
 					<td class="based">
 						{#if e.original}
-							{#if onOriginal}
-								<button type="button" class="linkish" onclick={() => onOriginal(e.original)} title="Show every circuit based on the {e.original}">{e.original}</button>
-							{:else}
-								<a href="{base}/?based={encodeURIComponent(e.original)}">{e.original}</a>
-							{/if}
+							{#each originalsOf(e) as o, n}
+								{#if n}<span class="dim"> · </span>{/if}
+								{#if onOriginal}
+									<button type="button" class="linkish" onclick={() => onOriginal(o)} title="Show every circuit based on the {o}">{o}</button>
+								{:else}
+									<a href="{base}/?based={encodeURIComponent(o)}">{o}</a>
+								{/if}
+							{/each}
 						{:else if e.based_on}
 							<span class="dim">{e.based_on}</span>
 						{:else}

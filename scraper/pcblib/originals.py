@@ -230,6 +230,13 @@ def model_key(rest: str, loose: bool = True) -> str:
 
 _load_aliases()
 
+# A board that builds more than one original, as its vendor names them ('Ibanez BN5 / SP5'): {key(what the
+# vendor wrote): the originals it covers}. Such a board is listed under each. See original_covers.json.
+COVERS: dict[str, list[str]] = {}
+_COVERS_FILE = _ALIASES_FILE.with_name("original_covers.json")
+if _COVERS_FILE.exists():
+    COVERS.update({key(k): v for k, v in __import__("json").loads(_COVERS_FILE.read_text()).items()})
+
 
 def harmonize(names: list[str]) -> dict[str, str]:
     """Settle the originals of the whole library at once: a model written without its brand gets

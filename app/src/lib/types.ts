@@ -9,6 +9,8 @@ export interface IndexEntry {
 	based_on: string;
 	/** One name per original ('Electro-Harmonix Big Muff Pi' for 'EHX Big Muff'); '' when based_on is a description. */
 	original: string;
+	/** Every original, for a board its vendor says builds more than one ('Ibanez BN5 / SP5'); absent otherwise. */
+	originals?: string[];
 	category: string;
 	effect_type: string;
 	enclosure: string;
@@ -41,6 +43,8 @@ export type Build = 'pcb' | 'vero' | 'tagboard' | 'turret' | 'perfboard';
 export const BUILD_NAMES: Record<Build, string> = { pcb: 'PCB', vero: 'Vero', tagboard: 'Tagboard', turret: 'Turret board', perfboard: 'Perfboard' };
 export const BUILD_ORDER: Build[] = ['pcb', 'vero', 'perfboard', 'tagboard', 'turret'];
 const PCB_ONLY: Build[] = ['pcb'];
+/** The originals a circuit is based on: usually one, none for a description, several for a board that builds more than one. */
+export const originalsOf = (e: { original: string; originals?: string[] }): string[] => e.originals ?? (e.original ? [e.original] : []);
 export const buildsOf = (e: { builds?: Build[] }): Build[] => e.builds ?? PCB_ONLY;
 
 /** How a circuit that is not a bought PCB is built: a drawing on a layout site. */

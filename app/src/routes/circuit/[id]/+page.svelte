@@ -6,14 +6,15 @@
 	import Faceplate from '$lib/Faceplate.svelte';
 	import { currency } from '$lib/currency.svelte';
 	import { normalizeOriginal } from '$lib/search';
-	import { BUILD_NAMES, PART_CATEGORY_NAMES, PART_ORDER, VENDOR_NAMES, VENDOR_KIND, primaryAction, type BomRow } from '$lib/types';
+	import { BUILD_NAMES, PART_CATEGORY_NAMES, PART_ORDER, VENDOR_NAMES, VENDOR_KIND, originalsOf, primaryAction, type BomRow } from '$lib/types';
 
 	let { data } = $props();
 	const c = $derived(data.circuit);
 	const vendorWarning = $derived((data.vendors as Record<string, { warning?: string }> | undefined)?.[c.vendor]?.warning ?? '');
+	const mine = $derived(new Set(originalsOf(c).map(normalizeOriginal)));
 	const siblings = $derived(
 		c.original
-			? data.index.filter((e) => e.id !== c.id && e.original && normalizeOriginal(e.original) === normalizeOriginal(c.original))
+			? data.index.filter((e) => e.id !== c.id && originalsOf(e).some((o) => mine.has(normalizeOriginal(o))))
 			: []
 	);
 	const variants = $derived(c.variants ?? []);
@@ -82,7 +83,7 @@
 			<p class="label"><a href="{base}/?vendor={c.vendor}">{VENDOR_NAMES[c.vendor]}</a>{#if c.sku} · <span class="mono">{c.sku}</span>{/if}</p>
 			<h1>{c.name}{#if c.subtitle}<span class="sub">{c.subtitle}</span>{/if}{#if lay.verified === true}<span class="vtag" title="{VENDOR_NAMES[c.vendor]} marks this layout as verified: someone has built it and it works">Verified</span>{/if}</h1>
 			{#if c.original}
-				<p class="based">Based on the <a href="{base}/?based={encodeURIComponent(c.original)}">{c.original}</a>{#if siblings.length}<span class="dim"> · {siblings.length} other {siblings.length === 1 ? 'board clones' : 'boards clone'} it</span>{/if}</p>
+				<p class="based">Based on the {#each originalsOf(c) as o, n}{#if n} and the {/if}<a href="{base}/?based={encodeURIComponent(o)}">{o}</a>{/each}{#if siblings.length}<span class="dim"> · {siblings.length} other {siblings.length === 1 ? 'board clones' : 'boards clone'} {originalsOf(c).length > 1 ? 'one of them' : 'it'}</span>{/if}</p>
 			{:else if c.based_on}
 				<p class="based dim">Based on {c.based_on}</p>
 			{/if}
@@ -210,7 +211,7 @@
 
 	{#if siblings.length}
 		<section class="sibs">
-			<h2 class="label strong">Other boards based on the {c.original}</h2>
+			<h2 class="label strong">Other boards based on the {originalsOf(c).join(' or the ')}</h2>
 			<ul>
 				{#each siblings as s}
 					<li><Faceplate enclosure={s.enclosure} controls={s.controls} size={26} /> <a href="{base}/circuit/{s.file_id}">{s.name}</a> <span class="dim">{VENDOR_NAMES[s.vendor]}{s.enclosure ? ` · ${s.enclosure}` : ''}{s.price != null ? ` · ${currency.format(s.price, s.currency)}` : ''}</span></li>

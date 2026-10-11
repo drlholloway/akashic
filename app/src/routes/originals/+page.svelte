@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { normalizeOriginal } from '$lib/search';
-	import { BUILD_NAMES, BUILD_ORDER, VENDOR_NAMES, buildsOf, type Build, type Vendor } from '$lib/types';
+	import { BUILD_NAMES, BUILD_ORDER, VENDOR_NAMES, buildsOf, originalsOf, type Build, type Vendor } from '$lib/types';
 
 	let { data } = $props();
 	let q = $state('');
@@ -18,15 +18,17 @@
 	const groups = $derived.by(() => {
 		const m = new Map<string, { label: string; count: number; builds: Map<Build, number>; vendors: Set<Vendor>; categories: Set<string> }>();
 		for (const e of data.index) {
-			if (!e.original) continue; // a description ('Lots of Big Muff variants') names no single original
-			const k = normalizeOriginal(e.original);
-			if (!k) continue;
-			const g = m.get(k) ?? { label: e.original, count: 0, builds: new Map<Build, number>(), vendors: new Set<Vendor>(), categories: new Set<string>() };
-			g.count++;
-			for (const b of buildsOf(e)) g.builds.set(b, (g.builds.get(b) ?? 0) + 1); // a PCB with a layout beside it counts under both
-			g.vendors.add(e.vendor);
-			g.categories.add(e.category);
-			m.set(k, g);
+			// a description ('Lots of Big Muff variants') names no original; a board that builds two is counted under each
+			for (const original of originalsOf(e)) {
+				const k = normalizeOriginal(original);
+				if (!k) continue;
+				const g = m.get(k) ?? { label: original, count: 0, builds: new Map<Build, number>(), vendors: new Set<Vendor>(), categories: new Set<string>() };
+				g.count++;
+				for (const b of buildsOf(e)) g.builds.set(b, (g.builds.get(b) ?? 0) + 1); // a PCB with a layout beside it counts under both
+				g.vendors.add(e.vendor);
+				g.categories.add(e.category);
+				m.set(k, g);
+			}
 		}
 		const t = q.trim().toLowerCase();
 		return [...m.values()].filter((g) => !t || g.label.toLowerCase().includes(t)).sort((a, b) => byName.compare(a.label, b.label));
