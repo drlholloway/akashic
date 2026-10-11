@@ -8,9 +8,9 @@ export default defineConfig({
 		SvelteKitPWA({
 			registerType: 'autoUpdate',
 			manifest: {
-				name: 'Akashic: Guitar Effects PCB Lookup',
+				name: 'Akashic: Guitar Effects Circuit Lookup',
 				short_name: 'Akashic',
-				description: 'Guitar effects PCB lookup: every DIY pedal circuit, its parts list, and where to buy the board.',
+				description: 'Guitar effects circuit lookup: every DIY pedal circuit, its parts list, and where to buy the board or find the layout.',
 				theme_color: '#1c1f22',
 				background_color: '#f4f2ee',
 				display: 'standalone',

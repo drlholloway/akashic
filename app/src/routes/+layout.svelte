@@ -58,7 +58,7 @@
 
 <svelte:head>
 	{#if pwaInfo}{@html pwaInfo.webManifest.linkTag}{/if}
-	<title>Akashic: Guitar Effects PCB Lookup</title>
+	<title>Akashic: Guitar Effects Circuit Lookup</title>
 </svelte:head>
 
 <header class="titleblock" bind:this={titleblock}>
@@ -66,7 +66,7 @@
 		<Mark size={34} />
 		<span class="brand-text">
 			<span class="brand-name">Akashic</span>
-			<span class="brand-sub">Guitar effects PCB lookup</span>
+			<span class="brand-sub">Guitar effects circuit lookup</span>
 		</span>
 	</a>
 	<form class="search" role="search" onsubmit={submit}>
