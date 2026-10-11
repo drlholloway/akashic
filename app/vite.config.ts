@@ -23,7 +23,7 @@ export default defineConfig({
 			},
 			workbox: {
 				globPatterns: ['**/*.{js,css,html,svg,png,woff2,json}'],
-				maximumFileSizeToCacheInBytes: 8 * 1024 * 1024,
+				maximumFileSizeToCacheInBytes: 16 * 1024 * 1024, // the prerendered circuits page carries the whole index (8.4 MB with the layouts)
 				runtimeCaching: [
 					{
 						urlPattern: ({ url }) => url.pathname.startsWith('/data/circuits/'),
