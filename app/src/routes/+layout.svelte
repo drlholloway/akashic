@@ -9,6 +9,15 @@
 	import type { VendorInfo } from '$lib/types';
 	import { COFFEE_URL, ISSUES_URL, MAKER_NAME, MAKER_URL } from '$lib/site';
 	import Mark from '$lib/Mark.svelte';
+	import { pwaInfo } from 'virtual:pwa-info';
+	import { onMount } from 'svelte';
+
+	// The service worker (offline use, install): the kit plugin builds it but leaves registering it to the app.
+	onMount(async () => {
+		if (!pwaInfo) return;
+		const { registerSW } = await import('virtual:pwa-register');
+		registerSW({ immediate: true });
+	});
 
 	let { children, data }: { children: Snippet; data: { rates: import('$lib/currency.svelte').Rates | null; vendors: Record<string, VendorInfo> } } = $props();
 	const vendorList = $derived(Object.values(data.vendors ?? {}).sort((a, b) => a.name.localeCompare(b.name)));
@@ -48,6 +57,7 @@
 </script>
 
 <svelte:head>
+	{#if pwaInfo}{@html pwaInfo.webManifest.linkTag}{/if}
 	<title>Akashic: Guitar Effects PCB Lookup</title>
 </svelte:head>
 

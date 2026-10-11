@@ -17,6 +17,7 @@ from collections import defaultdict
 from datetime import date, timedelta
 
 from . import db as dbm
+from .corrections import UNCERTAIN
 from .datasheets import all_sheets, is_selector, table as datasheet_table
 from .originals import COVERS, harmonize, key as original_key, learn_brands, original
 from .normalize import catalog_category, catalog_keys, ic_name, zener_choices
@@ -104,6 +105,7 @@ def run(images: bool = False) -> None:
         img_dir.mkdir(exist_ok=True)
     (EXPORT_DIR / "circuits").mkdir(exist_ok=True)
     index = []
+    pending: list[dict] = []
     parts: dict[str, dict] = {}
     with dbm.connect() as conn:
         vendors = {r["id"]: {**dict(r), "kind": dbm.VENDOR_KIND.get(r["id"], "shop"), "warning": dbm.VENDOR_WARNING.get(r["id"], "")}
@@ -145,12 +147,16 @@ def run(images: bool = False) -> None:
                 **_build_fields(c["layout"]),
                 **({"originals": c["originals"]} if c.get("originals") else {}),
             })
-            for b in bom:
+            counted = {id(b) for b in bom}
+            for b in c["bom"]:
                 if b["category"] in ("R", "C", "LED", "HW", "CONN", "OTHER", ""):
                     continue  # passives and indicator LEDs are too common to be a useful cross-reference
                 for val in catalog_keys(b["category"], b["norm_value"] or b["value"]):
                     cat = catalog_category(b["category"], val)
                     key = f"{cat}:{val}"
+                    b.setdefault("xref", []).append(key)  # becomes [value, part page] once the pages are named
+                    if id(b) not in counted:
+                        continue  # a later variant's row links to the part but is not another board using it
                     p = parts.setdefault(key, {"key": key, "category": cat,
                                                "value": val, "circuits": set(),
                                                "types": {}})
@@ -174,7 +180,9 @@ def run(images: bool = False) -> None:
             c.pop("doc_local", None)
             c.pop("schematic_local", None)
             c["has_schematic"] = has_schematic
-            (EXPORT_DIR / "circuits" / f"{c['file_id']}.json").write_text(json.dumps(c, ensure_ascii=False))
+            if c["id"] in UNCERTAIN and any("by eye" in (r.get("notes") or "") for r in c.get("bom", [])):  # a by-eye reading's doubts, shown above the parts list
+                c["uncertain"] = UNCERTAIN[c["id"]]
+            pending.append(c)  # written once the part pages have their names: each row links to its own
     sheets = datasheet_table()  # manufacturer links only; datasheets themselves are never exported
     descs = _transistor_descs([p["value"] for p in parts.values() if p["category"] == "Q"])
     from .diodes import describe as describe_diode
@@ -197,6 +205,12 @@ def run(images: bool = False) -> None:
             p["slug"] = f"{p['slug']}-{seen[p['slug']]}"
         else:
             seen[p["slug"]] = 1
+    page = {p["key"]: [p["value"], p["slug"]] for p in parts_out}
+    for c in pending:
+        for b in c["bom"]:
+            if "xref" in b:
+                b["xref"] = [page[k] for k in b["xref"] if k in page]
+        (EXPORT_DIR / "circuits" / f"{c['file_id']}.json").write_text(json.dumps(c, ensure_ascii=False))
     (EXPORT_DIR / "subs.json").write_text(json.dumps(_transistor_subs(conn), ensure_ascii=False))
     (EXPORT_DIR / "index.json").write_text(json.dumps(index, ensure_ascii=False))
     (EXPORT_DIR / "parts.json").write_text(json.dumps(parts_out, ensure_ascii=False))

@@ -1,0 +1,53 @@
+{
+ "id": "tagboardeffects:2010-03-few-veros-mosrite-fuzzrite",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "One populated vero board (16 x 9). Q1 and Q2 are drawn with C/B/E pins but no type is given.",
+ "uncertain": [
+  "2nF (two, left of each transistor's collector): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×4",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "2nF",
+   "C",
+   ""
+  ],
+  [
+   "Q1",
+   "?",
+   "Q",
+   "value not given"
+  ],
+  [
+   "Q2",
+   "?",
+   "Q",
+   "value not given"
+  ],
+  [
+   "Depth",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,63 @@
+{
+ "id": "tagboardeffects:2010-03-and-few-more-dallas-rangemaster-npn",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "One populated vero board. The transistor is labeled only 'NPN' and the Boost pot has no value anywhere on the drawing.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3K9",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4n7",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47U",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "?",
+   "Q",
+   "value not given; drawing says only NPN"
+  ],
+  [
+   "D1",
+   "1N4002",
+   "D",
+   ""
+  ],
+  [
+   "Boost",
+   "?",
+   "POT",
+   "value not given"
+  ]
+ ],
+ "source": "layout"
+}

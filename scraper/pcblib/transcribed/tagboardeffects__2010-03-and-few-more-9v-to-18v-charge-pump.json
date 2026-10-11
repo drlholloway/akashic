@@ -1,5 +1,5 @@
 {
- "id": "tagboardeffects:2010-03-and-few-more",
+ "id": "tagboardeffects:2010-03-and-few-more-9v-to-18v-charge-pump",
  "read": "2026-10-11, by eye from the cached layout image",
  "comment": "Small vero layout, 'Simple Voltage Doubler' (12 x 4): populated board above a bare cuts view. Charge-pump IC, two diodes, three electrolytics printed 47U / 10U / 47U.",
  "uncertain": [],

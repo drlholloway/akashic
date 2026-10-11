@@ -1,0 +1,51 @@
+{
+ "id": "tagboardeffects:2010-03-and-few-more-lofomofo",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "One small populated vero board with a single 2N2222 transistor, a 1N5817 and two pots. The drawing does not name the effect type outright, but the gain knob is labeled 'Distortion', so it reads as a one-transistor distortion.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220p",
+   "C",
+   ""
+  ],
+  [
+   "Q1",
+   "2N2222",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Distortion",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "tagboardeffects:2010-03-few-veros-dallas-arbiter-fuzz-face-pnp",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "One populated vero board (20 x 9), positive ground (-9V supply), with a 10K trimmer on the board. Q1 and Q2 have no type given.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "470R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2U2",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Q1",
+   "?",
+   "Q",
+   "value not given; PNP"
+  ],
+  [
+   "Q2",
+   "?",
+   "Q",
+   "value not given; PNP"
+  ],
+  [
+   "Fuzz",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

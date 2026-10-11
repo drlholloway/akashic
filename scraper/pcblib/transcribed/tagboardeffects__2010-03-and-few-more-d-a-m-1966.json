@@ -1,0 +1,108 @@
+{
+ "id": "tagboardeffects:2010-03-and-few-more-d-a-m-1966",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "One populated vero board, positive ground (-9V supply). Q1 and Q2 are shown only as E/B/C pad letters with no type. A blue three-lug part off the board, wired to two strips and to Volume lug 3, looks like an unlabeled SPDT toggle choosing between the 10nF and 4n7 output capacitors.",
+ "uncertain": [
+  "'470' right of the 47p, between Q1's B and C: drawn as a small ceramic disc like the 47p, printed with no unit; taken as a capacitor (470pF likely) but it could be meant as a 470 ohm resistor",
+  "Blue three-lug part left of the board: no label; read as an SPDT toggle, could be another kind of connector"
+ ],
+ "rows": [
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "820R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4n7",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470",
+   "C",
+   "printed '470' with no unit, drawn as a ceramic disc"
+  ],
+  [
+   "×1",
+   "20K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Q1",
+   "?",
+   "Q",
+   "value not given; positive ground, so PNP"
+  ],
+  [
+   "Q2",
+   "?",
+   "Q",
+   "value not given; positive ground, so PNP"
+  ],
+  [
+   "Volume",
+   "B47K",
+   "POT",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "SPDT",
+   "SW",
+   "unlabeled three-lug part on the output capacitors (10nF / 4n7); function not named"
+  ]
+ ],
+ "source": "layout"
+}

@@ -40,12 +40,19 @@ _LINKS = re.compile(r"\b(\d{1,3})\s+(?:links?|jumpers?)\b", re.I)
 _IMAGE = re.compile(r'(?:href|src)="(https://blogger\.googleusercontent\.com/img/[^"]+|https?://\d\.bp\.blogspot\.com/[^"]+\.(?:png|jpe?g|gif))"', re.I)
 
 
+def _post_slug(url: str) -> str:
+    return url.rstrip("/").rsplit("/", 1)[-1].removesuffix(".html")
+
+
 class BloggerLayouts(Adapter):
     blog = ""           # '<name>.blogspot.com'
     build = "vero"      # what the blog draws unless a label says otherwise
     skip_labels: frozenset[str] = frozenset()  # posts that are not a layout: news, tools, off-board wiring
     not_makers: frozenset[str] = frozenset()   # labels that are neither a maker nor an effect type
     not_layouts: frozenset[str] = frozenset()  # posts with labels and pictures that are still no circuit, by post slug
+    # A post that holds several circuits, one drawing each: post slug -> (name, category) per picture, in the
+    # post's order. Each becomes its own circuit ('<post>#2' as its target, the name in its slug).
+    split: dict[str, list[tuple[str, str]]] = {}
 
     def __init__(self, fetcher):
         super().__init__(fetcher)
@@ -61,7 +68,8 @@ class BloggerLayouts(Adapter):
                 link = next((l["href"] for l in e.get("link", []) if l.get("rel") == "alternate"), "")
                 if link:
                     self._entries[link] = e
-                    yield link
+                    parts = self.split.get(_post_slug(link))
+                    yield from ([f"{link}#{i + 1}" for i in range(len(parts))] if parts else [link])
             if len(entries) < _PAGE:
                 return
             start += _PAGE
@@ -70,13 +78,15 @@ class BloggerLayouts(Adapter):
         return [c["term"].strip() for c in e.get("category", []) if c.get("term", "").strip()]
 
     def parse(self, url: str) -> Circuit | None:
+        url, _, nth = url.partition("#")
         e = self._entries.get(url)
         if e is None:
             return None
-        title = clean_text(_html.unescape(e["title"]["$t"]))
+        one = self.split[_post_slug(url)][int(nth) - 1] if nth else None  # one circuit of a post that holds several
+        title = one[0] if one else clean_text(_html.unescape(e["title"]["$t"]))
         labels = self.labels(e)
         low = {l.lower() for l in labels}
-        if not title or not labels or low & self.skip_labels or url.rstrip("/").rsplit("/", 1)[-1].removesuffix(".html") in self.not_layouts:
+        if not title or not labels or low & self.skip_labels or _post_slug(url) in self.not_layouts:
             return None  # every layout carries labels; a post without any is an announcement
         content = e.get("content", {}).get("$t", "")
         # The oldest posts link '/s1600-h/', a viewer page; the picture itself is at '/s1600/'.
@@ -87,6 +97,8 @@ class BloggerLayouts(Adapter):
         images = [u for u in found if not re.search(r"(?:=|/)w\d+-h\d+", u)]
         if not images:  # an unlinked drawing is embedded as a thumbnail; the same address serves it at full size
             images = [re.sub(r"/w\d+-h\d+(?:-[a-z]+)*/(?=[^/]+$)", "/s1600/", re.sub(r"=w\d+-h\d+(?:-[a-z]+)*$", "=s1600", u)) for u in found]
+        if one:
+            images = images[int(nth) - 1:int(nth)]
         if not images:
             return None  # a post without a drawing is news, not a layout
         body = html_to_text(content)
@@ -94,6 +106,8 @@ class BloggerLayouts(Adapter):
         status = next((_STATUS[l] for l in low if l in _STATUS), None)
         cats = [_CATEGORY[l.lower()] for l in labels if l.lower() in _CATEGORY]
         cats.sort(key=lambda c: c == "Bass")  # 'Bass' beside 'Fuzz' is a bass fuzz: the effect is the category
+        if one:  # the post's labels and text cover all of its circuits
+            cats, labels, body = ([one[1]] if one[1] else []), [l for l in labels if l.lower() in _STATUS or l.lower() in _BUILD_LABEL], f"One of {len(self.split[_post_slug(url)])} layouts in the post '{clean_text(_html.unescape(e['title']['$t']))}'."
         makers = [l for l in labels if l.lower() not in _CATEGORY and l.lower() not in _BUILD_LABEL
                   and l.lower() not in _STATUS and l.lower() not in _DIFFICULTY and not _BOX.match(l)
                   and l.lower() not in self.not_makers]
@@ -117,7 +131,7 @@ class BloggerLayouts(Adapter):
             docs.setdefault(label[:1].upper() + label[1:], _html.unescape(href))
             if len(docs) == 4:
                 break
-        slug = url.rstrip("/").rsplit("/", 1)[-1].removesuffix(".html")
+        slug = _post_slug(url) + ("-" + re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-") if one else "")
         year = url.split(self.blog + "/", 1)[-1][:7].replace("/", "-")
         return Circuit(
             vendor=self.vendor, slug=f"{year}-{slug}", name=title, url=url, based_on=self.based_on(title, makers),

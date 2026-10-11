@@ -413,10 +413,13 @@ _READ_NOTE = "read from the schematic by eye"
 _LAYOUT_NOTE = "read from the layout by eye"
 _READ: set[str] = set()
 _LAYOUT_READ: set[str] = set()  # board layouts (vero, perfboard): values printed on the parts of the drawing
+UNCERTAIN: dict[str, list[str]] = {}  # circuit_id -> what the reader could not be sure of, in their words
 for _f in sorted((Path(__file__).parent / "transcribed").glob("*.json")):
     _d = json.loads(_f.read_text())
     TRANSCRIBED[_d["id"]] = [tuple(r) for r in _d["rows"]]
     (_LAYOUT_READ if _d.get("source") == "layout" else _READ).add(_d["id"])
+    if _d.get("uncertain") and _d["rows"]:
+        UNCERTAIN[_d["id"]] = [str(u) for u in _d["uncertain"]]
 
 
 def _split(ref: str) -> tuple[str, int]:

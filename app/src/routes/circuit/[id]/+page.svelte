@@ -32,8 +32,6 @@
 		}
 		return PART_ORDER.filter((k) => m.has(k)).map((k) => ({ key: k, name: PART_CATEGORY_NAMES[k] ?? k, rows: m.get(k)! }));
 	});
-	const XREF = new Set(['IC', 'Q', 'D', 'OPTO', 'POT', 'TRIM', 'SW', 'LED', 'L', 'XTAL']);
-	const partSlug = (r: BomRow) => `${r.category}:${r.norm_value}`.toLowerCase().replace(/[^a-z0-9.]+/g, '-');
 
 	let copied = $state(false);
 	async function copyBom() {
@@ -184,6 +182,12 @@
 			{#if marked}
 				<p class="src-legend dim"><span class="src">ocr</span> read from an image · <span class="src">sch</span> paired from the schematic · <span class="src fixed">fixed</span> corrected by hand. Check marked values against the build document.</p>
 			{/if}
+			{#if c.uncertain?.length}
+				<details class="unsure" open={c.uncertain.length <= 4}>
+					<summary><span class="warn">Check before you build</span> <span class="dim">· {c.uncertain.length} {c.uncertain.length === 1 ? 'value' : 'values'} the reader of this {isLayout ? 'layout' : 'schematic'} was not sure of</span></summary>
+					<ul>{#each c.uncertain as u}<li>{u}</li>{/each}</ul>
+				</details>
+			{/if}
 			<table class="sheet-table parts">
 				<thead><tr><th>Ref</th><th>Value</th><th class="norm">Normalized</th><th>Type</th><th class="notes">Notes</th></tr></thead>
 				{#each groups as g}
@@ -195,8 +199,10 @@
 								<td class="mono ref">{r.ref}</td>
 								<td class="mono val">{r.value}{#if s.src}<span class="src" class:fixed={s.src.key === 'fixed'} title={s.src.title}>{s.src.label}</span>{/if}</td>
 								<td class="mono norm">
-									{#if XREF.has(r.category) && r.norm_value}
-										<a href="{base}/parts/{partSlug(r)}" title="Every circuit using {r.norm_value}">{r.norm_value}</a>
+									{#if r.xref?.length === 1}
+										<a href="{base}/parts/{r.xref[0][1]}" title="Every circuit using {r.xref[0][0]}">{r.norm_value || r.xref[0][0]}</a>
+									{:else if r.xref?.length}
+										{#each r.xref as [part, slug], i}{i ? ' / ' : ''}<a href="{base}/parts/{slug}" title="Every circuit using {part}">{part}</a>{/each}
 									{:else}{r.norm_value}{/if}
 								</td>
 								<td>{r.part_type}</td>
@@ -262,6 +268,10 @@
 	.src { margin-left: 6px; padding: 0 4px; border: 1px solid var(--rule-strong); border-radius: 3px; font-family: var(--label); font-weight: 600; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); vertical-align: 1px; cursor: help; }
 	.src.fixed { border-color: var(--coat); color: var(--coat); }
 	.src-legend { font-size: 12.5px; margin: 0 0 8px; }
+	.unsure { margin: 0 0 12px; padding: 8px 12px; border: 1px solid var(--rule-strong); border-left: 3px solid var(--warn); border-radius: var(--radius); }
+	.unsure summary { cursor: pointer; }
+	.unsure ul { margin: 8px 0 2px; padding-left: 18px; max-width: 90ch; }
+	.unsure li { margin-bottom: 4px; color: var(--ink-2); font-size: 14px; }
 	.src-legend .src { margin-left: 0; cursor: default; }
 	.parts .norm a { text-decoration: underline; text-decoration-color: var(--rule-strong); text-underline-offset: 3px; }
 	.sibs ul { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 6px 24px; }

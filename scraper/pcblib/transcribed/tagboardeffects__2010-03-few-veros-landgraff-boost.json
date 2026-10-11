@@ -1,0 +1,83 @@
+{
+ "id": "tagboardeffects:2010-03-few-veros-landgraff-boost",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "One populated vero board (14 x 9) with a MOSFET (D/G/S), two 1N914 and a 1N4001. The single pot is given a value but no name.",
+ "uncertain": [
+  "'47' round electrolytic at the bottom right corner: printed with no unit, read as 47uF"
+ ],
+ "rows": [
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "5k1",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic; printed '47'"
+  ],
+  [
+   "Q1",
+   "NTE490",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "×2",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Pot",
+   "C5K",
+   "POT",
+   "no name on the drawing; printed '5K Rev Log'"
+  ]
+ ],
+ "source": "layout"
+}

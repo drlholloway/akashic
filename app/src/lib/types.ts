@@ -67,9 +67,13 @@ export interface BomRow {
 	norm_value: string;
 	sort_key: number;
 	variant?: string;
+	/** The part pages this row belongs to, as [part, page slug]: one per alternative in '2N5088 or 2N5089'. */
+	xref?: [string, string][];
 }
 
 export interface Circuit extends IndexEntry {
+	/** What the person who read the parts list off the drawing could not be sure of. */
+	uncertain?: string[];
 	description: string;
 	sku: string;
 	extra_docs: Record<string, string>;

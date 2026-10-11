@@ -62,6 +62,7 @@ export function loadCircuit(fileId: string, fetchFn: Fetch = fetch): Promise<Cir
 	if (!p) {
 		p = getJson<Circuit>(fetchFn, `circuits/${fileId}.json`);
 		circuitCache.set(fileId, p);
+		p.catch(() => circuitCache.delete(fileId)); // a failed fetch (offline) is tried again on the next visit
 	}
 	return p;
 }

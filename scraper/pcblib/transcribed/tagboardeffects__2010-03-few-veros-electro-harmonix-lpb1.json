@@ -1,0 +1,65 @@
+{
+ "id": "tagboardeffects:2010-03-few-veros-electro-harmonix-lpb1",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "One populated vero board (12 x 9), one 2N5088. The single pot is given a value but no name.",
+ "uncertain": [
+  "'47' round electrolytic at the bottom right, beside the 1N4001: printed with no unit, read as 47uF"
+ ],
+ "rows": [
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "390R",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic; printed '47'"
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Pot",
+   "A100K",
+   "POT",
+   "no name on the drawing; printed '100K LOG'"
+  ]
+ ],
+ "source": "layout"
+}
