@@ -18,7 +18,7 @@ from datetime import date, timedelta
 
 from . import db as dbm
 from .datasheets import all_sheets, is_selector, table as datasheet_table
-from .originals import harmonize, original
+from .originals import harmonize, learn_brands, original
 from .normalize import catalog_category, catalog_keys, ic_name, zener_choices
 from .paths import EXPORT_DIR, owner_schematic
 
@@ -109,6 +109,8 @@ def run(images: bool = False) -> None:
         vendors = {r["id"]: {**dict(r), "kind": dbm.VENDOR_KIND.get(r["id"], "shop"), "warning": dbm.VENDOR_WARNING.get(r["id"], "")}
                    for r in conn.execute("SELECT * FROM vendors")}
         circuits = [_row(r) for r in conn.execute("SELECT * FROM circuits ORDER BY vendor, name")]
+        # The layout sites label each post with its maker: makers no fixed brand list knows ('One Control', 'VFE').
+        learn_brands([(c["name"], c["tags"]) for c in circuits if vendors[c["vendor"]]["kind"] == "layout"])
         settled = harmonize([original(c["based_on"]) for c in circuits])
         for c in circuits:
             bom = [dict(b) for b in conn.execute(

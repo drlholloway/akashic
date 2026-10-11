@@ -99,12 +99,68 @@ _NOT_ONE = re.compile(r"\binto\b|\s\+\s|\band\b|\bor\b|\bmeets\b|\bstyle\b|\bins
 _BRAND_PAIR = re.compile(r"^(?:e\.?h\.?x|electro[- ]?harmoni[cx]s?)\s*/\s*jhs\b", re.I)  # EHX/JHS Big Muff 2: one pedal
 
 
+# Makers learned from the library itself (see learn_brands): alias key -> the spelling most used.
+_LEARNED: dict[str, str] = {}
+_LEARNED_RE: re.Pattern | None = None
+# What a maker calls itself after its name: 'VFE Pedals' and 'VFE', 'Spaceman Effects' and 'Spaceman' are one maker.
+_COMPANY_WORDS = {"fx", "effects", "effect", "pedals", "pedal", "electronics", "electronic", "audio", "amps", "amplification",
+                  "amplifiers", "devices", "customs", "custom", "labs", "laboratories", "music", "sound", "sounds"}
+_NOT_A_MAKER = {"mask", "analog", "black", "dead", "big", "the", "mini", "bass", "fuzz", "super", "tone", "blue", "red", "green", "king"}
+
+
+def _core(label: str) -> str:
+    """'VFE Pedals' -> 'VFE': the maker's name without the company words it ends in ('' when nothing usable is left)."""
+    words = label.split()
+    while len(words) > 1 and key(words[-1]) in _COMPANY_WORDS:
+        words.pop()
+    core = " ".join(words)
+    k = key(core)
+    return core if core != label and (len(words) >= 2 or (len(k) >= 3 and k not in _NOT_A_MAKER)) else ""
+
+
+def learn_brands(named: list[tuple[str, list[str]]]) -> None:
+    """Makers the layout sites label their posts with. A post titled 'One Control Honey Bee Overdrive'
+    and labelled 'One Control' says One Control is a maker, which no fixed list of brands would know;
+    with it, a board based on the 'Honey Bee OD' finds its original. Takes (name, labels) pairs and
+    keeps the labels that start a name. A maker is known by its label and by the label without its
+    company words ('Spaceman Effects', 'Spaceman'), and shown under the spelling most used."""
+    global _LEARNED_RE
+    from collections import Counter
+    seen: dict[str, Counter] = {}  # maker key (of the core name) -> label spellings
+    for name, labels in named:
+        low = name.lower()
+        for lab in labels:
+            lab = lab.strip()
+            if len(lab) >= 2 and low.startswith(lab.lower()) and len(name) > len(lab) and not name[len(lab)].isalnum():
+                seen.setdefault(key(_core(lab) or lab), Counter())[lab] += 1
+    known = {key(n) for n, _ in _BRANDS}
+    _LEARNED.clear()
+    aliases: set[str] = set()
+    for k, c in seen.items():
+        if not k or k in known or k in _TYPE_WORDS or k in _NOT_A_MAKER:
+            continue
+        best = c.most_common(1)[0][0]
+        for lab in c:
+            for alias in {lab, _core(lab)} - {""}:
+                _LEARNED[key(alias)] = best
+                aliases.add(alias)
+    alts = sorted((re.escape(a) for a in aliases), key=len, reverse=True)
+    _LEARNED_RE = re.compile(rf"^({'|'.join(alts)})(?![A-Za-z0-9])(?:['’]s\b)?[\s:/-]*", re.I) if alts else None
+
+
 def _brand(text: str) -> tuple[str, str]:
     """(canonical brand, rest of the text) when the text starts with a brand alias, else ('', text)."""
     for name, rx in _BRAND_RE:
         m = rx.match(text)
         if m and m.end() < len(text):
             return name, text[m.end():].strip()
+    if _LEARNED_RE and (m := _LEARNED_RE.match(text)) and m.end() < len(text) and key(m.group(1)) in _LEARNED:
+        rest = text[m.end():].strip()
+        # 'Spaceman Effects Nebula' read through the alias 'Spaceman': the company word belongs to the maker
+        words = rest.split()
+        while len(words) > 1 and key(words[0]) in _COMPANY_WORDS:
+            words.pop(0)
+        return _LEARNED[key(m.group(1))], " ".join(words)
     return "", text
 
 
@@ -132,6 +188,30 @@ def key(name: str) -> str:
     return re.sub(r"[^a-z0-9+]+", " ", s).strip()
 
 
+# What an effect is, not what it is called: 'Honey Bee Overdrive' and 'Honey Bee OD' are one pedal.
+_TYPE_WORDS = {"overdrive", "od", "distortion", "dist", "fuzz", "boost", "booster", "pedal", "preamp", "compressor", "tremolo",
+               "delay", "reverb", "chorus", "phaser", "flanger", "vibrato", "drive", "effect", "fx"}
+# Left alone as the only word of a model: 'Bass Fuzz' is not 'Bass', 'Super Fuzz' is not 'Super'.
+_WEAK_WORDS = {"bass", "super", "mini", "micro", "big", "hot", "fat", "classic", "vintage", "tube", "metal", "blues", "mega",
+               "ultra", "turbo", "hyper", "dual", "double", "twin", "little", "clean", "dirty", "treble", "power", "tone", "octave"}
+
+
+def model_key(rest: str, loose: bool = True) -> str:
+    """Grouping key of a model name within one maker: the key without the effect-type words it ends in
+    ('honey bee overdrive' -> 'honey bee'), when a real name is left: two words, or one word of four
+    letters or more that is not a mere adjective. `loose=False` asks for two words, for matching a
+    name written without its maker."""
+    words = key(rest).split()
+    cut = list(words)
+    while cut and cut[-1] in _TYPE_WORDS:
+        cut.pop()
+    if cut == words or not cut:
+        return " ".join(words)
+    if len(cut) >= 2 or (loose and len(cut[0]) >= 4 and cut[0] not in _WEAK_WORDS and cut[0] not in _TYPE_WORDS):
+        return " ".join(cut)
+    return " ".join(words)
+
+
 def harmonize(names: list[str]) -> dict[str, str]:
     """Settle the originals of the whole library at once: a model written without its brand gets
     the brand when exactly one brand has that model in the library ('Woolly Mammoth' -> 'Z.Vex Woolly
@@ -144,18 +224,27 @@ def harmonize(names: list[str]) -> dict[str, str]:
     for n, c in counts.items():
         brand, rest = _brand(n)
         if brand:
-            brands_of[key(rest)].add(brand)
-            branded[(brand, key(rest))][n] += c
+            for k in {key(rest), model_key(rest, loose=False)}:
+                brands_of[k].add(brand)
+                branded[(brand, k)][n] += c
     out: dict[str, str] = {}
     for n in counts:
         brand, rest = _brand(n)
-        k = key(rest)
-        if not brand and len(brands_of.get(k, ())) == 1 and len(k) > 3:
-            b = next(iter(brands_of[k]))
-            out[n] = branded[(b, k)].most_common(1)[0][0]
-        else:
-            out[n] = n
+        out[n] = n
+        if brand:
+            continue
+        for k in (key(rest), model_key(rest, loose=False)):
+            if len(brands_of.get(k, ())) == 1 and len(k) > 3 and not set(k.split()) <= _TYPE_WORDS | _WEAK_WORDS:
+                b = next(iter(brands_of[k]))
+                out[n] = branded[(b, k)].most_common(1)[0][0]
+                break
+    # Every spelling of an original takes the group's most common one; within a maker, the effect-type
+    # word a name ends in does not split it ('One Control Honey Bee Overdrive', 'One Control Honey Bee OD').
+    def group(name: str) -> str:
+        brand, rest = _brand(name)
+        # spacing never splits a model: 'FX86' and 'FX-86', 'Thundertone' and 'Thunder Tone'
+        return f"{key(brand)}|{model_key(rest).replace(' ', '')}" if brand else model_key(name, loose=False).replace(" ", "")
     spelled: dict[str, Counter] = defaultdict(Counter)
     for n, c in counts.items():
-        spelled[key(out[n])][out[n]] += c
-    return {n: spelled[key(f)].most_common(1)[0][0] for n, f in out.items()}
+        spelled[group(out[n])][out[n]] += c
+    return {n: spelled[group(f)].most_common(1)[0][0] for n, f in out.items()}

@@ -5,6 +5,13 @@
 
 	let { data } = $props();
 	let q = $state('');
+	// The list is long (over 4,000 originals): the first rows are in the page, the rest come on request. The filter searches them all.
+	const PAGE = 200;
+	let shown = $state(PAGE);
+	$effect(() => {
+		q; // a new filter starts from the top
+		shown = PAGE;
+	});
 	// By name. An original is written maker first ('Boss DS-1', 'Electro-Harmonix Big Muff Pi'), so this is
 	// brand, then pedal; numbers compare as numbers (DS-1 before DS-2 before DS-10).
 	const byName = new Intl.Collator('en', { numeric: true, sensitivity: 'base' });
@@ -31,7 +38,7 @@
 <div class="originals">
 	<header class="head">
 		<h1>Originals</h1>
-		<p class="lede">The commercial pedals these boards are based on, listed by name, brand then pedal, with how many circuits clone each and how they are built: on a bought PCB, or from a vero, perfboard, tagboard or turret layout. Pick one to compare every take side by side.</p>
+		<p class="lede">The commercial pedals these boards are based on, {groups.length.toLocaleString()} listed by name, brand then pedal, with how many circuits clone each and how they are built: on a bought PCB, or from a vero, perfboard, tagboard or turret layout. Pick one to compare every take side by side.</p>
 		<label class="filter">
 			<span class="label">Filter</span>
 			<input type="search" bind:value={q} placeholder="Klon, Rat, Big Muff, Tube Screamer…" autocomplete="off" spellcheck="false" />
@@ -40,7 +47,7 @@
 	<table class="sheet-table">
 		<thead><tr><th>Original</th><th class="n">Circuits</th><th class="how">Built on</th><th class="src">Sources</th><th class="cat">Category</th></tr></thead>
 		<tbody>
-			{#each groups as g (g.label)}
+			{#each groups.slice(0, shown) as g (g.label)}
 				<tr>
 					<td><a href="{base}/?based={encodeURIComponent(g.label)}" class="name">{g.label}</a></td>
 					<td class="n mono">{g.count}</td>
@@ -51,6 +58,12 @@
 			{/each}
 		</tbody>
 	</table>
+	{#if shown < groups.length}
+		<div class="more">
+			<button class="btn ghost" type="button" onclick={() => (shown += PAGE * 2)}>Show {Math.min(PAGE * 2, groups.length - shown)} more of {(groups.length - shown).toLocaleString()} remaining</button>
+			<button class="btn ghost" type="button" onclick={() => (shown = groups.length)}>Show all</button>
+		</div>
+	{/if}
 </div>
 
 <style>
@@ -61,6 +74,7 @@
 	.filter input { flex: 1; height: 38px; padding: 0 12px; border: 1px solid var(--rule-strong); border-radius: var(--radius); background: var(--sheet-2); }
 	.filter input:focus { outline: none; border-color: var(--coat); box-shadow: 0 0 0 3px var(--coat-tint); background: var(--sheet); }
 	.name { font-weight: 600; }
+	.more { padding: 16px 10px; display: flex; gap: 10px; flex-wrap: wrap; }
 	.dim { color: var(--ink-3); }
 	.how { white-space: nowrap; }
 	@media (max-width: 900px) { .how { white-space: normal; } }

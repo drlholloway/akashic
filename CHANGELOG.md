@@ -202,6 +202,9 @@ GitHub Release notes.
   Designator / Qty / Name export; spreadsheet readers accept a Name column as the value.
 
 ### Changed
+- Originals page is paged: the first 200 originals are in the page, with Show more and Show all; the filter still searches every original (1.9 MB of HTML to 124 KB).
+- Originals match across PCBs and layouts: the makers the layout sites label their posts with (about 500, 'One Control', 'VFE', 'Spaceman') are learned at export, so a board based on the 'Honey Bee OD' joins the 'One Control Honey Bee Overdrive'. A maker's company words ('VFE Pedals' and 'VFE'), the effect-type word a name ends in ('Singing Tree' and 'Singing Tree OD') and spacing ('FX86' and 'FX-86') no longer split an original. 4,698 originals become 4,244.
+- Lighter pages and offline cache: the circuits page no longer carries the whole index inside its HTML (8.4 MB to 222 KB; the parts page 3.5 MB to 544 KB); the index is fetched once as `data/index.json` and shared by every page. The service worker precaches the app, the top pages and the indexes (71 files) where it used to precache every circuit and part page and every parts list (28,242 files, about 830 MB); those are now cached as they are opened, so a circuit never opened is not available offline.
 - Originals are listed by name, brand then pedal ('Boss DS-1' before 'Boss DS-2' before 'Electro-Harmonix Big Muff Pi'), instead of by how many boards clone them; the Boards column still gives the count.
 - Parts cross-reference: each category is listed alphabetically (numbers compared as numbers),
   and pots are grouped by taper (A, B, C, W, none) and ordered by resistance.

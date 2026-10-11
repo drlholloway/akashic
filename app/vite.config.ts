@@ -22,13 +22,24 @@ export default defineConfig({
 				]
 			},
 			workbox: {
+				// Precached for every visitor: the app, the five top pages and the library's indexes. The 8,700
+				// circuit pages, the part pages and each circuit's parts list are cached as they are opened
+				// (precaching them all cost a new visitor some 28,000 requests and 800 MB).
 				globPatterns: ['**/*.{js,css,html,svg,png,woff2,json}'],
-				maximumFileSizeToCacheInBytes: 16 * 1024 * 1024, // the prerendered circuits page carries the whole index (8.4 MB with the layouts)
+				globIgnores: ['**/circuit/**', '**/parts/**', '**/data/circuits/**', '**/data/owner/**'],
+				maximumFileSizeToCacheInBytes: 16 * 1024 * 1024, // data/index.json is 7 MB
+				// A page that is not precached comes from the network, never the home page in its place.
+				navigateFallbackDenylist: [/^\/circuit\//, /^\/parts\//, /^\/data\//, /^\/datasheets\//, /^\/kicad\//],
 				runtimeCaching: [
 					{
-						urlPattern: ({ url }) => url.pathname.startsWith('/data/circuits/'),
+						urlPattern: ({ url }) => url.pathname.startsWith('/data/circuits/') || url.pathname.startsWith('/data/owner/'),
 						handler: 'StaleWhileRevalidate',
 						options: { cacheName: 'circuits', expiration: { maxEntries: 2000 } }
+					},
+					{
+						urlPattern: ({ url, request }) => request.mode === 'navigate' && (url.pathname.startsWith('/circuit/') || url.pathname.startsWith('/parts/')),
+						handler: 'StaleWhileRevalidate',
+						options: { cacheName: 'pages', expiration: { maxEntries: 1000 } }
 					}
 				]
 			}

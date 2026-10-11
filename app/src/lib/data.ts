@@ -1,3 +1,4 @@
+import { browser } from '$app/environment';
 import { base } from '$app/paths';
 import type { ChangeWeek, Circuit, IndexEntry, PartEntry, SubsEntry, VendorInfo } from './types';
 
@@ -15,13 +16,22 @@ async function getJson<T>(fetchFn: Fetch, path: string): Promise<T> {
 	return (await res.json()) as T;
 }
 
+/** The library-wide files (7 MB and 3 MB). While prerendering they are read from disk, not fetched: SvelteKit
+ *  writes every response a page's load fetches into that page's HTML, which made the circuits page 8 MB.
+ *  In the browser they are fetched once and shared by every page. */
+async function getLibraryJson<T>(fetchFn: Fetch, path: string): Promise<T> {
+	if (browser) return getJson<T>(fetchFn, path);
+	const { readFileSync } = await import('node:fs');
+	return JSON.parse(readFileSync(`static/data/${path}`, 'utf8')) as T;
+}
+
 export function loadIndex(fetchFn: Fetch = fetch): Promise<IndexEntry[]> {
-	indexPromise ??= getJson<IndexEntry[]>(fetchFn, 'index.json');
+	indexPromise ??= getLibraryJson<IndexEntry[]>(fetchFn, 'index.json');
 	return indexPromise;
 }
 
 export function loadParts(fetchFn: Fetch = fetch): Promise<PartEntry[]> {
-	partsPromise ??= getJson<PartEntry[]>(fetchFn, 'parts.json');
+	partsPromise ??= getLibraryJson<PartEntry[]>(fetchFn, 'parts.json');
 	return partsPromise;
 }
 
