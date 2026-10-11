@@ -1,0 +1,99 @@
+{
+ "id": "dirtbox:2024-06-wampler-talent-booster",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 13x11 stripboard with two J201 JFETs, an on-board 25K trimmer and a legend naming the pots and the SPDT switch.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   "standing"
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1uF",
+   "C",
+   "film box"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "220uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "25K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Q1",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q2",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "SPDT on/off/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

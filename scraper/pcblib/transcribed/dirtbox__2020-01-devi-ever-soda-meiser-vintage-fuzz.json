@@ -1,0 +1,95 @@
+{
+ "id": "dirtbox:2020-01-devi-ever-soda-meiser-vintage-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 14x9 stripboard covering the Soda Meiser and, with Q4 turned 180 degrees, the Vintage Fuzz Master. Four transistors are drawn; the labels under the right-hand pair read 'Q2 Q4', the first of which must be Q3 (Q2 is already labelled at the top).",
+ "uncertain": [
+  "Q3: the transistor at columns 11-12 rows D-F is labelled 'Q2' a second time under the board; read as Q3 (MPSA18) from the legend 'Q1-Q3: MPSA18' and its position beside Q4"
+ ],
+ "rows": [
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "MPSA18",
+   "Q",
+   "labelled Q2 on the drawing"
+  ],
+  [
+   "Q4",
+   "2N2907A",
+   "Q",
+   "flip 180 for Vintage Fuzz Master"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Intensity",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "SPST",
+   "SW",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

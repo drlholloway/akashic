@@ -1,0 +1,81 @@
+{
+ "id": "tagboardeffects:2013-01-illumist-jfet-boost",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small 11x9 vero with a single JFET stage; populated board on the left, cuts/link view on the right. The board carries a 5K bias trimmer; the pot is called Boost in the legend but its wires are labelled Gain 2 / Gain 3.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "2SK117",
+   "Q",
+   "JFET, mind the pinout"
+  ],
+  [
+   "×1",
+   "5K",
+   "TRIM",
+   "adjust to ~5V at JFET drain"
+  ],
+  [
+   "Boost",
+   "B5K",
+   "POT",
+   "wires labelled Gain 2 / Gain 3"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,81 @@
+{
+ "id": "tagboardeffects:2013-03-analogman-sunface-bc108",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small 10x8 vero board drawn populated and bare; Fuzz Face variant with an on-board Clean trimmer and a Sundial bias pot.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1u",
+   "C",
+   "drawn as film cap"
+  ],
+  [
+   "×1",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "BC108C",
+   "Q",
+   ""
+  ],
+  [
+   "Clean",
+   "50K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Sundial",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A250K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

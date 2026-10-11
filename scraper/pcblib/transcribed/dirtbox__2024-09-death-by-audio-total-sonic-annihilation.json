@@ -1,0 +1,105 @@
+{
+ "id": "dirtbox:2024-09-death-by-audio-total-sonic-annihilation",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 14x11 stripboard around one dual op-amp; feedback-loop pedal with three pots, a phase toggle and a boost toggle. The 4PDT bypass footswitch is not listed.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×3",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "RC4558",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "C1M",
+   "POT",
+   ""
+  ],
+  [
+   "Limit",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Feedback",
+   "C500K",
+   "POT",
+   ""
+  ],
+  [
+   "Phase Sw",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Boost Sw",
+   "DPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

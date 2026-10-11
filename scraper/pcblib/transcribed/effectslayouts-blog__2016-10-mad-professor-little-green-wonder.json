@@ -1,0 +1,147 @@
+{
+ "id": "effectslayouts-blog:2016-10-mad-professor-little-green-wonder",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Storyboardist perfboard layout of the Mad Professor Little Green Wonder. The picture shows the circuit four times (populated perfboard, colour wiring diagram, bare underside, etched PCB); counted from the populated perfboard and confirmed against the colour diagram. The other pictures in the post are the schematic and a small copy of this drawing. The legend names the pot 'Drive' while the board pads are labelled 'Gain'.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "5.6K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "2K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4007",
+   "D",
+   ""
+  ],
+  [
+   "D1",
+   "3mm green LED",
+   "LED",
+   "on board"
+  ],
+  [
+   "D2",
+   "3mm green LED",
+   "LED",
+   "on board"
+  ],
+  [
+   "Q1",
+   "2N5457",
+   "Q",
+   "JFET"
+  ],
+  [
+   "×1",
+   "TLC272",
+   "IC",
+   ""
+  ],
+  [
+   "Drive",
+   "B500K",
+   "POT",
+   "board pads labelled Gain"
+  ],
+  [
+   "Body",
+   "B20K",
+   "POT",
+   "dual"
+  ],
+  [
+   "Volume",
+   "B50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,117 @@
+{
+ "id": "tagboardeffects:2016-08-hao-sole-pressure",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "13x11 vero drawn twice (populated, and bare with cuts and links); read from the populated board. One TL072 with two red LEDs as clippers.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2n2",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "Red LED",
+   "LED",
+   "clipping"
+  ],
+  [
+   "D2",
+   "Red LED",
+   "LED",
+   "clipping"
+  ],
+  [
+   "Gain",
+   "C500K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Bright",
+   "SPDT on/off/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

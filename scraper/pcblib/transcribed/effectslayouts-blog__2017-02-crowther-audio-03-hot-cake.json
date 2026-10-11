@@ -1,0 +1,117 @@
+{
+ "id": "effectslayouts-blog:2017-02-crowther-audio-03-hot-cake",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "First picture is the Divos schematic; the second is the storyboardist layout sheet (populated perfboard, colour wiring/PCB diagram, underside, etch mask); the third is a small copy of it. Read the populated perfboard view. The middle pot is labelled Tone on the perfboard view and Pres on the PCB view; the legend calls it Presence.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "220Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "82K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "56nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "82nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N5238",
+   "D",
+   "printed 5238; zener"
+  ],
+  [
+   "×1",
+   "TL071",
+   "IC",
+   ""
+  ],
+  [
+   "Drive",
+   "C50K",
+   "POT",
+   ""
+  ],
+  [
+   "Presence",
+   "B25K",
+   "POT",
+   "legend: B25k or B50k; labelled Tone on the perfboard view"
+  ],
+  [
+   "Level",
+   "A50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

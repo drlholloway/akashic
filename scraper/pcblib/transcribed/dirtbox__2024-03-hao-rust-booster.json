@@ -1,0 +1,93 @@
+{
+ "id": "dirtbox:2024-03-hao-rust-booster",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "One small populated 13x10 stripboard around a TL072; Boost and Level pots off board.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "56nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Boost",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

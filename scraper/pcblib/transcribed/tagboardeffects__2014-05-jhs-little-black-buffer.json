@@ -1,0 +1,39 @@
+{
+ "id": "tagboardeffects:2014-05-jhs-little-black-buffer",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small vero layout (12 x 8) of a TL072 buffer with the bare cuts-and-links view below; no pots or switches. The 470R feeds the LED+ wire.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "470R",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "TL072",
+   "IC",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

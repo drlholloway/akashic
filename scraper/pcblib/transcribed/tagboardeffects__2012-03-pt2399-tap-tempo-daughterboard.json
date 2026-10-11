@@ -1,0 +1,87 @@
+{
+ "id": "tagboardeffects:2012-03-pt2399-tap-tempo-daughterboard",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero daughterboard (14 x 16) adding tap tempo to a PT2399 delay: populated board on the left, cuts-and-links view on the right, switch wiring diagrams below. IC2 is fitted turned 180 degrees.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "IC1",
+   "Taptation",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "MCP41100",
+   "IC",
+   "digital pot, installed turned 180 degrees"
+  ],
+  [
+   "×1",
+   "78L05",
+   "IC",
+   "regulator"
+  ],
+  [
+   "×1",
+   "BS170",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "Depth",
+   "A25K",
+   "POT",
+   ""
+  ],
+  [
+   "Time",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "PWM Cycle Speed",
+   "SPST",
+   "SW",
+   ""
+  ],
+  [
+   "Double Time",
+   "SPST",
+   "SW",
+   ""
+  ],
+  [
+   "Tempo Scale",
+   "SPDT on/off/on",
+   "SW",
+   ""
+  ],
+  [
+   "Tempo Clock",
+   "SPST momentary",
+   "SW",
+   "stomp footswitch (tap)"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,87 @@
+{
+ "id": "effectslayouts-blog:2017-07-hofner-buzz-tone",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout drawn four ways (populated board, colour wiring diagram, underside, etched PCB); counted from the populated board and confirmed against the wiring diagram. All five capacitors are electrolytic cans. The 4.7K feeds the LED+ pad. The drawing does not number the three transistors individually.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "56K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "8.2K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   "LED resistor"
+  ],
+  [
+   "×3",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "×3",
+   "BC108B",
+   "Q",
+   "Q1-3: BC108B or BC172B"
+  ],
+  [
+   "Depth",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

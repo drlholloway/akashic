@@ -1,0 +1,107 @@
+{
+ "id": "tagboardeffects:2010-08-mxr-micro-amp",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated vero board (16 x 12) with one pot. The 8-pin IC is drawn without a part number and the pot has no knob name printed (it is the gain control).",
+ "uncertain": [
+  "15uF axial electrolytic at the right edge: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×1",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "56K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K2",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4u7",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "15uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "?",
+   "IC",
+   "value not given; 8-pin DIP"
+  ],
+  [
+   "Gain",
+   "C500K",
+   "POT",
+   "knob name not printed"
+  ]
+ ],
+ "source": "layout"
+}

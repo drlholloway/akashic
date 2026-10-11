@@ -1,0 +1,39 @@
+{
+ "id": "tagboardeffects:2012-07-greatly-improved-jfet-matcher",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small stripboard JFET test jig (not a pedal): populated board on the left, bare board with cuts and links on the right. G/S/D circles are JFET socket positions; Sw1-Sw6 wire to one DPDT on/off/on toggle.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "10R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic, drawn axial"
+  ],
+  [
+   "×1",
+   "TLC2262",
+   "IC",
+   "legend: IC is TLC2262 or similar"
+  ],
+  [
+   "Switch",
+   "DPDT on/off/on",
+   "SW",
+   "toggle; up Idss, centre off, down Vp"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,295 @@
+{
+ "id": "effectslayouts-blog:2017-04-spaceman-effects-gemini-iii-dual-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with a colour wiring diagram, the underside and an etched PCB; counted from the populated board plus the five resistors drawn on the two gain toggle switches. Xicon 42TL019-RC transformer on the board; D1 and D2 are drawn with no type anywhere.",
+ "uncertain": [
+  "308K at column 9, rows E-H: printed clearly, unusual value (the same in the wiring diagram)",
+  "18.5K on the Germanium Gain switch: printed clearly, unusual value",
+  "1uF at the right of the board is drawn as a rounded box, not a can: taken as a film capacitor"
+ ],
+ "rows": [
+  [
+   "×1",
+   "47.5Ω",
+   "R",
+   "on the Silicon Gain switch"
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   "one on the board, one on the Germanium Gain switch"
+  ],
+  [
+   "×3",
+   "2.1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3K",
+   "R",
+   "on the Silicon Gain switch"
+  ],
+  [
+   "×1",
+   "3.65K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15K",
+   "R",
+   "on the Germanium Gain switch"
+  ],
+  [
+   "×1",
+   "18.5K",
+   "R",
+   "on the Germanium Gain switch"
+  ],
+  [
+   "×3",
+   "21.5K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "36.5K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "308K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "430K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4.7M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1.8nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "5.6nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "68nF",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "120nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "680nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "D2",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "×1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "AC128",
+   "Q",
+   "germanium"
+  ],
+  [
+   "Q2",
+   "AC128",
+   "Q",
+   "germanium"
+  ],
+  [
+   "Q3",
+   "AC176",
+   "Q",
+   "germanium"
+  ],
+  [
+   "Q4",
+   "2N2222A",
+   "Q",
+   ""
+  ],
+  [
+   "Q5",
+   "2N2222A",
+   "Q",
+   ""
+  ],
+  [
+   "Q6",
+   "2N2222A",
+   "Q",
+   ""
+  ],
+  [
+   "Q7",
+   "2N2222A",
+   "Q",
+   ""
+  ],
+  [
+   "×1",
+   "Xicon 42TL019-RC",
+   "XFM",
+   ""
+  ],
+  [
+   "×1",
+   "25K",
+   "TRIM",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Filter",
+   "B50K",
+   "POT",
+   "dual"
+  ],
+  [
+   "Blend",
+   "B50K",
+   "POT",
+   "legend spells it 'Belnd'"
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Germanium Gain",
+   "DPDT on/off/on",
+   "SW",
+   "toggle, resistors on the lugs"
+  ],
+  [
+   "Silicon Gain",
+   "DPDT on/off/on",
+   "SW",
+   "toggle, resistors on the lugs"
+  ],
+  [
+   "Tone Mode",
+   "DPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

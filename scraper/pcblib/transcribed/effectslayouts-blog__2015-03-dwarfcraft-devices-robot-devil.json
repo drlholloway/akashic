@@ -1,0 +1,99 @@
+{
+ "id": "effectslayouts-blog:2015-03-dwarfcraft-devices-robot-devil",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small stripboard-style perfboard layout with populated board, wiring diagram, underside and PCB; two 16-pin CMOS chips. Legend: Octave 3 to Sw 2, +9v to Starve 1.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "3.3M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "CD4040",
+   "IC",
+   ""
+  ],
+  [
+   "×1",
+   "CD4049UBE",
+   "IC",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Octave",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Starve",
+   "B2K",
+   "POT",
+   ""
+  ],
+  [
+   "Sw",
+   "SPDT",
+   "SW",
+   "toggle; selects the octave tap (Sw1/Sw3 on the board, Octave 3 to Sw 2)"
+  ]
+ ],
+ "source": "layout"
+}

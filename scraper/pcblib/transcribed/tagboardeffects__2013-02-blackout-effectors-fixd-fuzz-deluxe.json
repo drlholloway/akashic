@@ -1,0 +1,203 @@
+{
+ "id": "tagboardeffects:2013-02-blackout-effectors-fixd-fuzz-deluxe",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "18x17 vero, populated board at left and a bare cuts/links view at right. Four DPDT switches (Sw1-Sw4, legend '2 position DPDT') switch the boost, two fuzzes and the filter in and out; they are listed as effect controls.",
+ "uncertain": [
+  "Sw1-Sw4: the legend says only '2 position DPDT'; they may be footswitches or toggles, entered as DPDT on/on"
+ ],
+ "rows": [
+  [
+   "×3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "2M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "39K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "390R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "3n3",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5089",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "MPSA13",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "MPS2222",
+   "Q",
+   ""
+  ],
+  [
+   "Q4",
+   "MPS2222",
+   "Q",
+   ""
+  ],
+  [
+   "Q5",
+   "2N5089",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "Boost",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Fuzz 1",
+   "A1K",
+   "POT",
+   ""
+  ],
+  [
+   "Fuzz 2",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Filter",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Output",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Sw1",
+   "DPDT on/on",
+   "SW",
+   "Boost; legend: 2 position DPDT"
+  ],
+  [
+   "Sw2",
+   "DPDT on/on",
+   "SW",
+   "Fuzz 1; legend: 2 position DPDT"
+  ],
+  [
+   "Sw3",
+   "DPDT on/on",
+   "SW",
+   "Fuzz 2; legend: 2 position DPDT"
+  ],
+  [
+   "Sw4",
+   "DPDT on/on",
+   "SW",
+   "Filter; legend: 2 position DPDT"
+  ]
+ ],
+ "source": "layout"
+}

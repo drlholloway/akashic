@@ -1,0 +1,215 @@
+{
+ "id": "effectslayouts-blog:2025-04-smd-rat",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "The post's one picture: a two-sided etched PCB (through-hole parts on top, 0805 SMD resistors and a SOT23 JFET underneath) with a printed parts table. The SMD parts carry only designators, so their values come from the table; the through-hole values printed on the top silkscreen agree with it.",
+ "uncertain": [
+  "C3 30p: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "R1",
+   "1M",
+   "R",
+   "0805 SMD"
+  ],
+  [
+   "R2",
+   "1M",
+   "R",
+   "0805 SMD"
+  ],
+  [
+   "R3",
+   "1K",
+   "R",
+   "0805 SMD"
+  ],
+  [
+   "R4",
+   "47Ω",
+   "R",
+   "0805 SMD"
+  ],
+  [
+   "R5",
+   "560Ω",
+   "R",
+   "0805 SMD"
+  ],
+  [
+   "R6",
+   "1K",
+   "R",
+   "0805 SMD"
+  ],
+  [
+   "R7",
+   "1.5K",
+   "R",
+   "0805 SMD"
+  ],
+  [
+   "R8",
+   "1M",
+   "R",
+   "0805 SMD"
+  ],
+  [
+   "R9",
+   "10K",
+   "R",
+   "0805 SMD"
+  ],
+  [
+   "R10",
+   "47Ω",
+   "R",
+   "0805 SMD"
+  ],
+  [
+   "R11",
+   "100K",
+   "R",
+   "0805 SMD"
+  ],
+  [
+   "R12",
+   "100K",
+   "R",
+   "0805 SMD"
+  ],
+  [
+   "CLR",
+   "4.7K",
+   "R",
+   "LED resistor, 0805 SMD"
+  ],
+  [
+   "C1",
+   "22n",
+   "C",
+   "0805 SMD or through-hole"
+  ],
+  [
+   "C2",
+   "1n",
+   "C",
+   "0805 SMD or through-hole"
+  ],
+  [
+   "C3",
+   "30p",
+   "C",
+   "0805 SMD or through-hole"
+  ],
+  [
+   "C4",
+   "100p",
+   "C",
+   "0805 SMD or through-hole"
+  ],
+  [
+   "C5",
+   "2.2u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C6",
+   "4.7u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C7",
+   "4.7u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C8",
+   "3.3n",
+   "C",
+   "0805 SMD or through-hole"
+  ],
+  [
+   "C9",
+   "22n",
+   "C",
+   "0805 SMD or through-hole"
+  ],
+  [
+   "C10",
+   "1u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C11",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C12",
+   "10n",
+   "C",
+   "0805 SMD or through-hole"
+  ],
+  [
+   "C13",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "IC1",
+   "LM308",
+   "IC",
+   "alternatives OP07, LM301; TL071 or LM741 can be used, but remove C3"
+  ],
+  [
+   "Q1",
+   "MMBF5458",
+   "Q",
+   "JFET, SOT23 SMD; alternatives include MMBFJ201 or other SOT23 JFET"
+  ],
+  [
+   "Distortion",
+   "A100K",
+   "POT",
+   "16mm PCB mount"
+  ],
+  [
+   "Tone",
+   "A100K",
+   "POT",
+   "16mm PCB mount"
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   "16mm PCB mount"
+  ]
+ ],
+ "source": "layout"
+}

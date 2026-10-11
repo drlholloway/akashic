@@ -1,0 +1,137 @@
+{
+ "id": "dirtbox:2021-05-spaceman-effects-apollo-vii-overdrive",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 20x18 stripboard, two dual op-amps and a TLE2426 rail splitter, drawn without the original relay bypass switching; two ferrite beads and two on-board red LEDs.",
+ "uncertain": [
+  "4.75K (two: column 8 rows D-H and column 14 rows F-I): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×5",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4.75K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "1uF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "4558",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "4558",
+   "IC",
+   ""
+  ],
+  [
+   "REG",
+   "TLE2426",
+   "IC",
+   ""
+  ],
+  [
+   "×4",
+   "1N4148",
+   "D",
+   "D1-D4"
+  ],
+  [
+   "×2",
+   "3mm red LED",
+   "LED",
+   "D5, D6"
+  ],
+  [
+   "D7",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "×2",
+   "Ferrite Bead",
+   "L",
+   "FB"
+  ],
+  [
+   "Gain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "SPDT on/off/on",
+   "SW",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

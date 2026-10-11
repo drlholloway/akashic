@@ -1,0 +1,117 @@
+{
+ "id": "dirtbox:2019-10-bjf-pnp-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 14x13 stripboard with two PNP germanium transistors, a 78L06 regulator and three on-board trimmers (50K, 25K, 5K) in addition to the three off-board pots.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "330Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "51K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "PNP Germanium",
+   "Q",
+   "35-100 Hfe, low leakage"
+  ],
+  [
+   "Q2",
+   "PNP Germanium",
+   "Q",
+   "35-100 Hfe, low leakage"
+  ],
+  [
+   "REG",
+   "78L06",
+   "IC",
+   "regulator"
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "50K",
+   "TRIM",
+   ""
+  ],
+  [
+   "×1",
+   "25K",
+   "TRIM",
+   ""
+  ],
+  [
+   "×1",
+   "5K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Fuzz",
+   "C5K",
+   "POT",
+   ""
+  ],
+  [
+   "Saturation",
+   "C50K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

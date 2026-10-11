@@ -1,0 +1,105 @@
+{
+ "id": "tagboardeffects:2017-05-black-arts-toneworks-revelation-super_10",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 17x13 stripboard, three MPSA12 transistors, three pots (Super Lead version); same board as the Super Bass with different values.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×5",
+   "15k",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "470k",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100r",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1k",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "560pF",
+   "C",
+   ""
+  ],
+  [
+   "×6",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "MPSA12",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "MPSA12",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "MPSA12",
+   "Q",
+   ""
+  ],
+  [
+   "×2",
+   "1N914",
+   "D",
+   "D1, D2"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Pre-Gain",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

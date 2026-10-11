@@ -1,0 +1,101 @@
+{
+ "id": "dirtbox:2026-06-parasit-studio-active-tilt-eq",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 16x12 stripboard with an on-board 500K Level trimmer. C1 and C2 carry no value on the board: a legend table picks them by center frequency; the first table row (64hz) is entered.",
+ "uncertain": [
+  "C1 and C2 (right edge, rows A-C and H-J): no fixed value, chosen from the center-frequency table; 100nF / 10nF is only the first row"
+ ],
+ "rows": [
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C1",
+   "100nF",
+   "C",
+   "sets center frequency: 64hz 100nF, 125hz 47nF, 250hz 22nF, 500hz 12nF, 1Khz 5.6nF, 2Khz 2.7nF, 4Khz 1.5nF"
+  ],
+  [
+   "C2",
+   "10nF",
+   "C",
+   "sets center frequency: 64hz 10nF, 125hz 4.7nF, 250hz 2.2nF, 500hz 1.2nF, 1Khz 560pF, 2Khz 270pF, 4Khz 150pF"
+  ],
+  [
+   "Level",
+   "500K",
+   "TRIM",
+   ""
+  ],
+  [
+   "IC1",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

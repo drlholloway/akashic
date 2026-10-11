@@ -1,0 +1,111 @@
+{
+ "id": "dirtbox:2022-05-death-by-audio-purple-card-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 19x14 stripboard with legend. One resistor is printed only as CLR (LED resistor).",
+ "uncertain": [],
+ "rows": [
+  [
+   "×6",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "6.8K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×8",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "LM567CN",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Frequency",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Pre Gain",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Post Gain",
+   "B1M",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

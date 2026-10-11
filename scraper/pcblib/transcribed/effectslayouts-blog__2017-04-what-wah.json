@@ -1,0 +1,141 @@
+{
+ "id": "effectslayouts-blog:2017-04-what-wah",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "First two pictures are the schematic (designators only, no values); the third is the layout sheet, the fourth a small copy. The sheet shows two alternative versions of the same generic wah board side by side, differing in transistor pinout (left Q1 E-B-C / Q2 C-B-E, right Q1 E-C-B / Q2 B-C-E); read the left populated perfboard. The drawing prints designators only and says 'See B.O.M.' (the values are in the blog post text, not in any picture), so every value is '?'.",
+ "uncertain": [],
+ "rows": [
+  [
+   "R1",
+   "?",
+   "R",
+   "value not given; drawing says 'See B.O.M.'"
+  ],
+  [
+   "R2",
+   "?",
+   "R",
+   "value not given; drawing says 'See B.O.M.'"
+  ],
+  [
+   "R3",
+   "?",
+   "R",
+   "value not given; drawing says 'See B.O.M.'"
+  ],
+  [
+   "R4",
+   "?",
+   "R",
+   "value not given; drawing says 'See B.O.M.'"
+  ],
+  [
+   "R5",
+   "?",
+   "R",
+   "value not given; drawing says 'See B.O.M.'"
+  ],
+  [
+   "R6",
+   "?",
+   "R",
+   "value not given; drawing says 'See B.O.M.'"
+  ],
+  [
+   "R7",
+   "?",
+   "R",
+   "value not given; drawing says 'See B.O.M.'"
+  ],
+  [
+   "R8",
+   "?",
+   "R",
+   "value not given; drawing says 'See B.O.M.'"
+  ],
+  [
+   "R9",
+   "?",
+   "R",
+   "value not given; drawing says 'See B.O.M.'"
+  ],
+  [
+   "R10",
+   "?",
+   "R",
+   "value not given; drawing says 'See B.O.M.'"
+  ],
+  [
+   "R11",
+   "?",
+   "R",
+   "value not given; drawing says 'See B.O.M.'"
+  ],
+  [
+   "C1",
+   "?",
+   "C",
+   "value not given; drawing says 'See B.O.M.'"
+  ],
+  [
+   "C2",
+   "?",
+   "C",
+   "electrolytic; value not given; drawing says 'See B.O.M.'"
+  ],
+  [
+   "C3",
+   "?",
+   "C",
+   "value not given; drawing says 'See B.O.M.'"
+  ],
+  [
+   "C4",
+   "?",
+   "C",
+   "value not given; drawing says 'See B.O.M.'"
+  ],
+  [
+   "C5",
+   "?",
+   "C",
+   "value not given; drawing says 'See B.O.M.'"
+  ],
+  [
+   "C6",
+   "?",
+   "C",
+   "electrolytic; value not given; drawing says 'See B.O.M.'"
+  ],
+  [
+   "D1",
+   "?",
+   "D",
+   "value not given; drawing says 'See B.O.M.'"
+  ],
+  [
+   "Q1",
+   "?",
+   "Q",
+   "value not given; drawing says 'See B.O.M.'"
+  ],
+  [
+   "Q2",
+   "?",
+   "Q",
+   "value not given; drawing says 'See B.O.M.'"
+  ],
+  [
+   "L1",
+   "?",
+   "L",
+   "wah inductor; value not given; drawing says 'See B.O.M.'"
+  ],
+  [
+   "Wah",
+   "?",
+   "POT",
+   "value not given; wires Wah 1 / Wah 2 / Wah 3"
+  ]
+ ],
+ "source": "layout"
+}

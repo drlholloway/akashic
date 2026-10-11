@@ -1,0 +1,105 @@
+{
+ "id": "tagboardeffects:2014-02-mid-fi-electronics-demo-tape-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard 18 x 10, populated board above and cuts/links view below. One dual op-amp; Trim is an off-board 25K pot wired by Trim 2 / Trim 3.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×5",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "3K6",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470R",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1u",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4n7",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   "1N5817 or 1N4001"
+  ],
+  [
+   "IC",
+   "JRC4558",
+   "IC",
+   ""
+  ],
+  [
+   "Trim",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Bass",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Treble",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

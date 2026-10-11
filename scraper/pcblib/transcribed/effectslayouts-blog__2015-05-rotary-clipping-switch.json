@@ -1,0 +1,107 @@
+{
+ "id": "effectslayouts-blog:2015-05-rotary-clipping-switch",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Utility PCB that mounts clipping options on a 12-position rotary switch (pads 1 and 12 marked, common A): nine axial diodes D1 to D9, two TO-92 FETs with pins marked S G D and five red LEDs D10 to D14; wiring view plus etched PCB. No part types or values are given anywhere.",
+ "uncertain": [
+  "The two TO-92 parts have no designator or type; pins printed S G D, so taken as FETs (likely MOSFETs used as clipping diodes)"
+ ],
+ "rows": [
+  [
+   "D1",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "D2",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "D3",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "D4",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "D5",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "D6",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "D7",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "D8",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "D9",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "D10",
+   "?",
+   "LED",
+   "value not given; drawn red"
+  ],
+  [
+   "D11",
+   "?",
+   "LED",
+   "value not given; drawn red"
+  ],
+  [
+   "D12",
+   "?",
+   "LED",
+   "value not given; drawn red"
+  ],
+  [
+   "D13",
+   "?",
+   "LED",
+   "value not given; drawn red"
+  ],
+  [
+   "D14",
+   "?",
+   "LED",
+   "value not given; drawn red"
+  ],
+  [
+   "×2",
+   "?",
+   "Q",
+   "value not given; TO-92 with pins marked S G D (FET)"
+  ],
+  [
+   "Rotary",
+   "1P12T rotary",
+   "SW",
+   "not every position wired"
+  ]
+ ],
+ "source": "layout"
+}

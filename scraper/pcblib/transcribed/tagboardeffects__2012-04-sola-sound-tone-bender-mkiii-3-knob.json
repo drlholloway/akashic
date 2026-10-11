@@ -1,0 +1,119 @@
+{
+ "id": "tagboardeffects:2012-04-sola-sound-tone-bender-mkiii-3-knob",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "21 x 9 vero, populated board above a bare view. Positive-ground (-9V) three-transistor fuzz; the legend gives no transistor type for Q1-Q3 and the diode has no designator.",
+ "uncertain": [
+  "220p between Q1 and the link (left half): reads 220p, distinct from the 220n on the right half; drawn as a pinched ceramic so the last letter is small"
+ ],
+ "rows": [
+  [
+   "×5",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3K3",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2n2",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic, axial; printed 10U"
+  ],
+  [
+   "×1",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "?",
+   "Q",
+   "value not given"
+  ],
+  [
+   "Q2",
+   "?",
+   "Q",
+   "value not given"
+  ],
+  [
+   "Q3",
+   "?",
+   "Q",
+   "value not given"
+  ],
+  [
+   "×1",
+   "1N270",
+   "D",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

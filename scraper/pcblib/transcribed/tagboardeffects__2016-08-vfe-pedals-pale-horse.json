@@ -1,0 +1,181 @@
+{
+ "id": "tagboardeffects:2016-08-vfe-pedals-pale-horse",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 20 x 16, populated board on the left and cuts/links view on the right. Two BS170, one 5484 JFET, a 2134 dual op-amp, a 7660S charge pump and two on-board trimmers (Imp, Freq); no diodes on the board.",
+ "uncertain": [
+  "IC printed only as '2134': entered as OPA2134",
+  "Transistor at the left edge printed only as '5484': entered as 2N5484",
+  "Drive pot printed 'D1M (try A1M)': taper letter D kept as printed"
+ ],
+ "rows": [
+  [
+   "×5",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100R",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10n",
+   "C",
+   "one ceramic disc, one film box"
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1u",
+   "C",
+   "film box"
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "BS170",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "×1",
+   "2N5484",
+   "Q",
+   "JFET, printed 5484"
+  ],
+  [
+   "×1",
+   "OPA2134",
+   "IC",
+   "printed 2134"
+  ],
+  [
+   "×1",
+   "7660S",
+   "IC",
+   "charge pump"
+  ],
+  [
+   "Imp",
+   "1M",
+   "TRIM",
+   ""
+  ],
+  [
+   "Freq",
+   "500R",
+   "TRIM",
+   ""
+  ],
+  [
+   "Comp",
+   "W1M",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "W20K",
+   "POT",
+   ""
+  ],
+  [
+   "Drive",
+   "D1M",
+   "POT",
+   "legend: D1M (try A1M)"
+  ],
+  [
+   "Level",
+   "A50K",
+   "POT",
+   ""
+  ],
+  [
+   "Low",
+   "C10K",
+   "POT",
+   ""
+  ],
+  [
+   "Hi",
+   "C10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

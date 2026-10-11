@@ -1,0 +1,117 @@
+{
+ "id": "dirtbox:2019-07-hermida-mosferatu-3-knob",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 18x11 stripboard, 3-knob version, with two 2N7000 MOSFETs and one dual op-amp; all values printed on the parts.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×5",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "270nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N7000",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "Q2",
+   "2N7000",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "IC1",
+   "AD712",
+   "IC",
+   "AD712 or OPA2604"
+  ],
+  [
+   "×2",
+   "1N34A",
+   "D",
+   "D1, D2"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

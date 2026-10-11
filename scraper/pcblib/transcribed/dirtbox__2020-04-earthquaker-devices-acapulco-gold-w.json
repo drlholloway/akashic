@@ -1,0 +1,75 @@
+{
+ "id": "dirtbox:2020-04-earthquaker-devices-acapulco-gold-w",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 10x12 stripboard with two JRC386D power amps; version with an added Gain pot.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "JRC386D",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "JRC386D",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "C1M",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

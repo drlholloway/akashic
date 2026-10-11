@@ -1,0 +1,125 @@
+{
+ "id": "dirtbox:2022-02-dam-black-on-black",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 14x12 stripboard, positive-ground Tonebender with three PNP germanium transistors. The legend gives D1 only as 'Germanium' (no type) and the transistors as generic PNP germanium with the original types in brackets.",
+ "uncertain": [
+  "430K at column 3, rows C-E: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×5",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "430K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "Germanium",
+   "D",
+   "legend: Germanium, type not given"
+  ],
+  [
+   "D2",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "OC76",
+   "Q",
+   "PNP Germanium"
+  ],
+  [
+   "Q2",
+   "CV7004",
+   "Q",
+   "PNP Germanium"
+  ],
+  [
+   "Q3",
+   "CV8314",
+   "Q",
+   "PNP Germanium"
+  ],
+  [
+   "Fuzz",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

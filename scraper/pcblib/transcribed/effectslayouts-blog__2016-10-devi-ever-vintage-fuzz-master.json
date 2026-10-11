@@ -1,0 +1,87 @@
+{
+ "id": "effectslayouts-blog:2016-10-devi-ever-vintage-fuzz-master",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout shown four ways (populated board, wiring diagram, underside, etched PCB); counted from the populated board and confirmed against the wiring diagram. Legend: rotate Q4 180 degrees to make the Soda Meiser.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3M",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   "printed 4001"
+  ],
+  [
+   "×3",
+   "MPSA18",
+   "Q",
+   "Q1-3"
+  ],
+  [
+   "Q4",
+   "2N2907A",
+   "Q",
+   "rotate 180° to make Soda Meiser"
+  ],
+  [
+   "Fuzz",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Chaos",
+   "SPST",
+   "SW",
+   ""
+  ],
+  [
+   "Noise",
+   "SPST",
+   "SW",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,174 @@
+{
+ "id": "effectslayouts-blog:2017-11-wampler-hot-wired-v1",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout of a two-channel overdrive: populated board, underside, colour wiring diagram and etched PCB of the same circuit; counted from the populated board and confirmed against the wiring diagram. The IC is printed RC4580 on the board and 4580DD on the diagram. The two glass diodes are labelled D3 and D6 on the board (D3 duplicating an LED's label) and 4148 on the diagram.",
+ "uncertain": [
+  "Two small glass diodes right of the IC: the board labels them only D3 and D6, the wiring diagram prints 4148 on both; entered as 1N4148",
+  "1uF by Tone B/Drive B and 1uF by Tone A are drawn as grey rounded boxes, not round cans: taken as non-polarised (film/box) caps, the round 1uF bottom left as electrolytic"
+ ],
+ "rows": [
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "820K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1uF",
+   "C",
+   "box"
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "RC4580",
+   "IC",
+   "wiring diagram prints 4580DD"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   "labelled D3 and D6 on the board, 4148 on the wiring diagram"
+  ],
+  [
+   "×4",
+   "Red LED",
+   "LED",
+   "D1-4: 3mm or 5mm red LEDs"
+  ],
+  [
+   "Volume B",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone B",
+   "C25K",
+   "POT",
+   ""
+  ],
+  [
+   "Drive B",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Drive A",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone A",
+   "C10K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume A",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Fat A",
+   "SPDT on/off/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Fat B",
+   "SPST",
+   "SW",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

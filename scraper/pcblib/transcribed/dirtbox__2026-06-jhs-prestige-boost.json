@@ -1,0 +1,81 @@
+{
+ "id": "dirtbox:2026-06-jhs-prestige-boost",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 11x9 stripboard, one MOSFET boost; all values printed clearly. Legend gives the Volume pot as '1mC' (reverse-log 1M).",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "180nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BS170",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "D1",
+   "12V Zener",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Volume",
+   "C1M",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

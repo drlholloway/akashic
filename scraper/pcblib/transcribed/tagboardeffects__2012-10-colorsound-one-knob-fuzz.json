@@ -1,0 +1,87 @@
+{
+ "id": "tagboardeffects:2012-10-colorsound-one-knob-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Tiny vero layout (10x8) shown populated and bare; all values clearly printed.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "82R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC109",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "BC108",
+   "Q",
+   ""
+  ],
+  [
+   "Volume",
+   "A500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

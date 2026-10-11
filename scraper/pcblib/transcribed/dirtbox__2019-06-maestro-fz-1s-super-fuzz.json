@@ -1,0 +1,217 @@
+{
+ "id": "dirtbox:2019-06-maestro-fz-1s-super-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 16x19 vero board with six transistors. Two resistors carry mod footnotes: the 470K left of Q3 (*, lower to 180K-220K) and the 1.5K (**, 390-560 Ohm for more output).",
+ "uncertain": [
+  "20nF (two, upper left): printed clearly, unusual value",
+  "50nF (two, lower middle): printed clearly, unusual value",
+  "Q4-Q5 legend part number 2N3155: printed clearly, unusual part number"
+ ],
+ "rows": [
+  [
+   "×1",
+   "1.5M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470K",
+   "R",
+   "one marked *: lower to 180K-220K for better balance between tone settings"
+  ],
+  [
+   "×2",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.5K",
+   "R",
+   "marked **: decrease to 390-560 Ohm for higher output"
+  ],
+  [
+   "×1",
+   "680Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "680pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "5.6nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "20nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "50nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   "2N5088 or BC109C"
+  ],
+  [
+   "Q2",
+   "2N5088",
+   "Q",
+   "2N5088 or BC109C"
+  ],
+  [
+   "Q3",
+   "2N5088",
+   "Q",
+   "2N5088 or BC109C"
+  ],
+  [
+   "Q4",
+   "2N3155",
+   "Q",
+   "2N3155 in original, try any NPN Silicon"
+  ],
+  [
+   "Q5",
+   "2N3155",
+   "Q",
+   "2N3155 in original, try any NPN Silicon"
+  ],
+  [
+   "Q6",
+   "2N5088",
+   "Q",
+   "2N5088 or BC109C"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Sustain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Balance",
+   "B50K",
+   "POT",
+   "dual"
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone Switch",
+   "SPDT",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

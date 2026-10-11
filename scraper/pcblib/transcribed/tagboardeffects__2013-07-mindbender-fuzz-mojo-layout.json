@@ -1,0 +1,105 @@
+{
+ "id": "tagboardeffects:2013-07-mindbender-fuzz-mojo-layout",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero 21x9, populated board above a bare cuts-and-links view; same circuit as the compact layout drawn with axial electrolytics and one large yellow box 10nF; 20K trimmer on the board.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.2K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "4.7uF",
+   "C",
+   "electrolytic, axial"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic, axial"
+  ],
+  [
+   "×1",
+   "20K",
+   "TRIM",
+   ""
+  ],
+  [
+   "D1",
+   "1N4002",
+   "D",
+   "legend: 1N4002 or 1N5817"
+  ],
+  [
+   "Q1",
+   "2N388",
+   "Q",
+   "legend: 2N388 (or any other NPN Ge)"
+  ],
+  [
+   "Q2",
+   "2N388",
+   "Q",
+   "legend: 2N388 (or any other NPN Ge)"
+  ],
+  [
+   "Q3",
+   "2N388",
+   "Q",
+   "legend: 2N388 (or any other NPN Ge)"
+  ],
+  [
+   "Attack",
+   "B2K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

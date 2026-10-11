@@ -1,0 +1,186 @@
+{
+ "id": "effectslayouts-blog:2017-05-auto-swell",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Scan of a 1980s E&MM magazine article. Page 1 (8b2012170321c44c.jpg) is text, a photo and the schematic; page 2 (7619c37d2581f452.jpg) has Figure 2, an etched PCB component overlay that prints DESIGNATORS ONLY (R1-R14, C1-C7, TR1-3, IC1, RV3, S1), no values on the parts. The values here are taken from the article's printed 'Parts list for Auto Swell' on page 3 (068966bcfb998d4d.jpg), matched to the overlay designators; all 14 resistors, 7 capacitors, 3 transistors, IC1, RV3 and S1 were found on the overlay. The other three pictures are thumbnails of the same pages.",
+ "uncertain": [
+  "R8 at the bottom edge of the overlay is printed blurred and reads as 'R6' or 'R8'; taken as R8 because R6 is clearly printed at the top right",
+  "R11 at the left edge is printed split over two lines ('R' / '11') and is partly smudged"
+ ],
+ "rows": [
+  [
+   "R1",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "470k",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "220k",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "R5",
+   "220k",
+   "R",
+   ""
+  ],
+  [
+   "R6",
+   "47k",
+   "R",
+   ""
+  ],
+  [
+   "R7",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "R8",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "R9",
+   "47k",
+   "R",
+   ""
+  ],
+  [
+   "R10",
+   "47k",
+   "R",
+   ""
+  ],
+  [
+   "R11",
+   "4k7",
+   "R",
+   ""
+  ],
+  [
+   "R12",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "R13",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "R14",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "C1",
+   "100n",
+   "C",
+   "disc ceramic"
+  ],
+  [
+   "C2",
+   "100n",
+   "C",
+   "disc ceramic"
+  ],
+  [
+   "C3",
+   "100n",
+   "C",
+   "disc ceramic"
+  ],
+  [
+   "C4",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C5",
+   "100n",
+   "C",
+   "disc ceramic"
+  ],
+  [
+   "C6",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C7",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "TR1",
+   "BC182L",
+   "Q",
+   ""
+  ],
+  [
+   "TR2",
+   "BC182L",
+   "Q",
+   ""
+  ],
+  [
+   "TR3",
+   "BF244",
+   "Q",
+   "JFET"
+  ],
+  [
+   "IC1",
+   "LF353",
+   "IC",
+   ""
+  ],
+  [
+   "RV3",
+   "1M",
+   "TRIM",
+   "horizontal preset"
+  ],
+  [
+   "Range",
+   "A47K",
+   "POT",
+   "RV1, 47k log"
+  ],
+  [
+   "Rate",
+   "A1M",
+   "POT",
+   "RV2, 1M log"
+  ],
+  [
+   "S1",
+   "SPST momentary",
+   "SW",
+   "push-to-make foot switch that starts the swell (effect control, not bypass)"
+  ]
+ ],
+ "source": "layout"
+}

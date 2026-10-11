@@ -1,0 +1,63 @@
+{
+ "id": "tagboardeffects:2014-01-the-tone-god-finish-line",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard 10x9 by mirosol, populated board left and bare board right. LM386 with a complementary transistor pair; D1 is added polarity protection.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "LM386",
+   "IC",
+   ""
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N5087",
+   "Q",
+   "PNP"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   "added polarity protection"
+  ],
+  [
+   "Drive",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Symmetry",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,180 @@
+{
+ "id": "effectslayouts-blog:2016-02-black-arts-toneworks-pharaoh",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout by storyboardist shown as populated board, wiring diagram, underside and PCB; counted from the populated board. The wiring diagram and PCB carry one extra part, a 2M resistor at the Out / Hi/Lo 2 pads, that is not drawn on the populated board, so it is not listed. The legend gives no transistor type; Q1-Q4 designators come from the wiring diagram.",
+ "uncertain": [
+  "2M resistor near Out (bottom right): present on the wiring diagram and PCB only, absent from the populated board; left out of rows",
+  "the two 10uF caps (right of centre and lower right) are drawn as yellow drop shapes, not round cans: read as tantalum, could be any small polarised/film cap"
+ ],
+ "rows": [
+  [
+   "×2",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "6.2K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "39K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "390K",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "470pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "tantalum"
+  ],
+  [
+   "×4",
+   "1N4148",
+   "D",
+   "D1, D2, D6, D7"
+  ],
+  [
+   "×3",
+   "germanium",
+   "D",
+   "D3, D4, D5"
+  ],
+  [
+   "×1",
+   "1N5817",
+   "D",
+   "printed 5817"
+  ],
+  [
+   "Q1",
+   "?",
+   "Q",
+   "value not given"
+  ],
+  [
+   "Q2",
+   "?",
+   "Q",
+   "value not given"
+  ],
+  [
+   "Q3",
+   "?",
+   "Q",
+   "value not given"
+  ],
+  [
+   "Q4",
+   "?",
+   "Q",
+   "value not given"
+  ],
+  [
+   "Fuzz",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Highs",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Hi/Lo",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Clipping",
+   "SPDT on/off/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

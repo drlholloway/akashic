@@ -1,0 +1,81 @@
+{
+ "id": "effectslayouts-blog:2015-03-greer-amps-green-giant",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Tiny one-transistor perfboard layout with populated board, wiring diagram, underside and PCB.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "680Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Blend",
+   "B25K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

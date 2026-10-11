@@ -1,0 +1,183 @@
+{
+ "id": "tagboardeffects:2014-04-black-arts-toneworks-black-forest",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Two vero boards that make one pedal: the 19 x 11 main board and a small daughterboard of input capacitors for the 6-way rotary switch; both populated boards summed (the 1M and six of the film caps are on the switch board). Bare cut views and the rotary wiring diagram not counted.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "1K8",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470R",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "6K8",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "5K6",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "39K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   "on the switch board"
+  ],
+  [
+   "×1",
+   "470p",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "10n",
+   "C",
+   "one on the switch board"
+  ],
+  [
+   "×2",
+   "220n",
+   "C",
+   "one on the switch board"
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "8n2",
+   "C",
+   "on the switch board"
+  ],
+  [
+   "×1",
+   "22n",
+   "C",
+   "on the switch board"
+  ],
+  [
+   "×1",
+   "47n",
+   "C",
+   "on the switch board"
+  ],
+  [
+   "×1",
+   "470n",
+   "C",
+   "on the switch board"
+  ],
+  [
+   "×2",
+   "4u7",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "BC109",
+   "Q",
+   ""
+  ],
+  [
+   "Drive",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Treble",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Bass",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Input cap",
+   "2P6T rotary",
+   "SW",
+   "6 position 2 pole rotary"
+  ]
+ ],
+ "source": "layout"
+}

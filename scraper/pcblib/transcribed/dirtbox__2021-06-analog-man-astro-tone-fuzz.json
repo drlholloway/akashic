@@ -1,0 +1,99 @@
+{
+ "id": "dirtbox:2021-06-analog-man-astro-tone-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 11x10 stripboard, two-transistor fuzz; the legend gives no transistor part number, only 'Medium gain NPN silicon'.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.8K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "?",
+   "Q",
+   "value not given; legend: Medium gain NPN silicon, try Hfe 150-400"
+  ],
+  [
+   "Q2",
+   "?",
+   "Q",
+   "value not given; legend: Medium gain NPN silicon, try Hfe 150-400"
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   "D1, D2; 1N4148/1N914"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

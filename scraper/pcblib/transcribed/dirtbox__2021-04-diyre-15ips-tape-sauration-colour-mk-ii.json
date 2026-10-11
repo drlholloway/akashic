@@ -1,0 +1,141 @@
+{
+ "id": "dirtbox:2021-04-diyre-15ips-tape-sauration-colour-mk-ii",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 19x17 stripboard running on +/-16v, seven transistors and eleven diodes; no pots. The drawing notes that caps should be rated at least 50v.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   "min 50v"
+  ],
+  [
+   "×1",
+   "22pF",
+   "C",
+   "min 50v"
+  ],
+  [
+   "×3",
+   "100uF",
+   "C",
+   "electrolytic, min 50v"
+  ],
+  [
+   "Q1",
+   "BC327",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "BC327",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "BC337",
+   "Q",
+   ""
+  ],
+  [
+   "Q4",
+   "BC337",
+   "Q",
+   ""
+  ],
+  [
+   "Q5",
+   "BC327",
+   "Q",
+   ""
+  ],
+  [
+   "Q6",
+   "BC337",
+   "Q",
+   ""
+  ],
+  [
+   "Q7",
+   "BC327",
+   "Q",
+   ""
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   "D1, D2"
+  ],
+  [
+   "×8",
+   "1N34A",
+   "D",
+   "D3-D10"
+  ],
+  [
+   "D11",
+   "3mm red LED",
+   "LED",
+   "on the board"
+  ]
+ ],
+ "source": "layout"
+}

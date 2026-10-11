@@ -1,0 +1,99 @@
+{
+ "id": "tagboardeffects:2016-12-fuzz-central-liquid-drive",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 18x12 vero board with values printed on every part; legend gives the IC, diodes and pots. The pot wired as Gain 1-3 is called Drive in the legend.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "100r",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.9k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "68nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1uF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "OPA2134AP",
+   "IC",
+   "Burr Brown"
+  ],
+  [
+   "D1",
+   "1N4002",
+   "D",
+   ""
+  ],
+  [
+   "×3",
+   "1N270",
+   "D",
+   "D2-D4, Ge diodes"
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Drive",
+   "C500K",
+   "POT",
+   "reverse log; wires labelled Gain 1-3"
+  ]
+ ],
+ "source": "layout"
+}

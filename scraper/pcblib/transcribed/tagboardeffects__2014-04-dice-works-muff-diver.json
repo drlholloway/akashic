@@ -1,0 +1,216 @@
+{
+ "id": "tagboardeffects:2014-04-dice-works-muff-diver",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 18 x 17 with a bare cuts view beside it, plus a separate 10 x 5 voltage inverter board (ICL7660S) and wiring diagrams for two clipping switches and the Cornish switch; the main board and the inverter board are summed. The pot the legend calls Gain is labelled Sustain on the wires.",
+ "uncertain": [
+  "835R at the top of the main board, right of the 39K2: printed clearly, unusual value (825R would be the E96 value)",
+  "2K74, 39K2 (two) and 12K1 on the main board: printed clearly, unusual (E96) values"
+ ],
+ "rows": [
+  [
+   "×4",
+   "390K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "82K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "39K2",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "8K2",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "150R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "12K1",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3K3",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K74",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "835R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470R",
+   "R",
+   "on the voltage inverter board"
+  ],
+  [
+   "×2",
+   "560p",
+   "C",
+   "ceramic"
+  ],
+  [
+   "×1",
+   "3n9",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×6",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic, on the voltage inverter board"
+  ],
+  [
+   "×3",
+   "100u",
+   "C",
+   "electrolytic; one on the main board, two on the voltage inverter board"
+  ],
+  [
+   "Q1",
+   "BC327-40",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "BC327-40",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "BC327-40",
+   "Q",
+   ""
+  ],
+  [
+   "Q4",
+   "BC327-40",
+   "Q",
+   ""
+  ],
+  [
+   "IC",
+   "ICL7660S",
+   "IC",
+   "voltage inverter board"
+  ],
+  [
+   "×4",
+   "1N914",
+   "D",
+   "D1 to D4, on the clipping switches"
+  ],
+  [
+   "×4",
+   "1N34A",
+   "D",
+   "D5 to D8, on the clipping switches; germanium (try 1N34A)"
+  ],
+  [
+   "Gain",
+   "B100K",
+   "POT",
+   "wires labelled Sustain"
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Cornish Switch",
+   "DPDT on/on",
+   "SW",
+   ""
+  ],
+  [
+   "Clip 1",
+   "DPDT on/off/on",
+   "SW",
+   ""
+  ],
+  [
+   "Clip 2",
+   "DPDT on/off/on",
+   "SW",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

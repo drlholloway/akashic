@@ -1,0 +1,125 @@
+{
+ "id": "tagboardeffects:2012-01-bjfe-sea-blue-eq",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Populated vero board above a bare cuts-and-links view; counted from the populated board. Two JFETs, two 1u box film caps.",
+ "uncertain": [
+  "14K7 (five of them): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×5",
+   "14K7",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "5K6",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4n7",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1u",
+   "C",
+   "box film"
+  ],
+  [
+   "×1",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5457",
+   "Q",
+   "JFET; legend: layout is correct for 2N5457 or 5458 etc"
+  ],
+  [
+   "Q2",
+   "2N5457",
+   "Q",
+   "JFET; legend: layout is correct for 2N5457 or 5458 etc"
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Treble",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Bass",
+   "A50K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

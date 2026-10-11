@@ -1,0 +1,129 @@
+{
+ "id": "effectslayouts-blog:2014-11-monolith-oracle-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout shown as populated board, underside, etched PCB and wiring diagram, plus a DPDT switch drawn with two resistors (100K, 12K) soldered across its lugs; those two are included. Transistors are PNP germanium, hfe 100/300 per legend.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "820Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   "one on the board, one on the switch"
+  ],
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "8.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "12K",
+   "R",
+   "on the switch"
+  ],
+  [
+   "×1",
+   "47pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "56nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "6.8nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "OC76",
+   "Q",
+   "PNP germanium, hfe 100"
+  ],
+  [
+   "Q2",
+   "OC76",
+   "Q",
+   "PNP germanium, hfe 300"
+  ],
+  [
+   "Density",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Color",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Output",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "DPDT on/on",
+   "SW",
+   "toggle, with the 100K and 12K resistors on its lugs"
+  ]
+ ],
+ "source": "layout"
+}

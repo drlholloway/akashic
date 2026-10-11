@@ -1,0 +1,216 @@
+{
+ "id": "tagboardeffects:2015-11-tech-21-sansamp-gt2",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard 32 x 25, populated board on top and cuts/links below. Four dual op-amps, one transistor, three 2P3T switches (Mic, Mod, Amp) off board. One 22K near the top centre is drawn semi-transparent (it sits over other parts) and is counted.",
+ "uncertain": [
+  "22K drawn semi-transparent at top centre, between the 10K and the 10n: counted as a real part",
+  "Transistor printed only as 5088 (taken as 2N5088)"
+ ],
+ "rows": [
+  [
+   "×11",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×10",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "330K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "3K3",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "6K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×2",
+   "220p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "560p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "2n2",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "4n7",
+   "C",
+   ""
+  ],
+  [
+   "×6",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×9",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "2u2",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "220u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TLC2262",
+   "IC",
+   "or TL072"
+  ],
+  [
+   "IC2",
+   "TLC2262",
+   "IC",
+   "or TL072"
+  ],
+  [
+   "IC3",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "IC4",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "×1",
+   "2N5088",
+   "Q",
+   "printed 5088"
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Drive",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "High",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Low",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch1 (Mic)",
+   "2P3T",
+   "SW",
+   "slide or rotary"
+  ],
+  [
+   "Switch2 (Mod)",
+   "2P3T",
+   "SW",
+   "slide or rotary"
+  ],
+  [
+   "Switch3 (Amp)",
+   "2P3T",
+   "SW",
+   "slide or rotary"
+  ]
+ ],
+ "source": "layout"
+}

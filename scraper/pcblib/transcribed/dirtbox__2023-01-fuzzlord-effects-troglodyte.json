@@ -1,0 +1,144 @@
+{
+ "id": "dirtbox:2023-01-fuzzlord-effects-troglodyte",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 14x11 stripboard with an on-board 20K trimmer. C2 is drawn with no value (legend: unknown, try 47-100pF); the legend gives the Volume pot as '500kB?' with a question mark.",
+ "uncertain": [
+  "Volume pot: legend prints '500kB?' with its own question mark",
+  "Q2: legend prints 'BC10xB' (any BC107/108/109 B), kept as printed"
+ ],
+ "rows": [
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "3.9nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470pF",
+   "C",
+   ""
+  ],
+  [
+   "C2",
+   "?",
+   "C",
+   "value not given; legend suggests 47-100pF"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "20K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Q1",
+   "2N1711",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "BC10xB",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Fuzz",
+   "C1K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B500K",
+   "POT",
+   "legend: 500kB?"
+  ],
+  [
+   "Bass",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Mid",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

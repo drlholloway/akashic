@@ -1,0 +1,228 @@
+{
+ "id": "dirtbox:2021-01-tesla-ayz-030-graphic-equalizer",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 22x19 stripboard: six BC149 transistors, an LM741 and five EQ band pots plus volume. Pot tapers are given in Tesla codes (100kN, 100kG) with suggested substitutes; values use decimal commas.",
+ "uncertain": [
+  "Pot tapers printed as '100kN' (EQ bands, legend: try 100kW or 100kB) and '100kG' (volume, legend: try 100kB): N and G are not A/B/C taper letters, entered letter-first as printed",
+  "Resistor count is dense (10x 330K, 5x 33K, 5x 2,2K); several bodies overlap neighbours, counted twice from overlapping tiles"
+ ],
+ "rows": [
+  [
+   "×10",
+   "330K",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "560K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "270K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "680pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1.5nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "6.8nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "150nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "330nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC149",
+   "Q",
+   "try BC549 or BC109"
+  ],
+  [
+   "Q2",
+   "BC149",
+   "Q",
+   "try BC549 or BC109"
+  ],
+  [
+   "Q3",
+   "BC149",
+   "Q",
+   "try BC549 or BC109"
+  ],
+  [
+   "Q4",
+   "BC149",
+   "Q",
+   "try BC549 or BC109"
+  ],
+  [
+   "Q5",
+   "BC149",
+   "Q",
+   "try BC549 or BC109"
+  ],
+  [
+   "Q6",
+   "BC149",
+   "Q",
+   "try BC549 or BC109"
+  ],
+  [
+   "IC1",
+   "LM741",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "80 Hz",
+   "N100K",
+   "POT",
+   "100kN, try 100kW or 100kB"
+  ],
+  [
+   "200 Hz",
+   "N100K",
+   "POT",
+   "100kN, try 100kW or 100kB"
+  ],
+  [
+   "600 Hz",
+   "N100K",
+   "POT",
+   "100kN, try 100kW or 100kB"
+  ],
+  [
+   "1.5 kHz",
+   "N100K",
+   "POT",
+   "100kN, try 100kW or 100kB"
+  ],
+  [
+   "4 kHz",
+   "N100K",
+   "POT",
+   "100kN, try 100kW or 100kB"
+  ],
+  [
+   "Volume",
+   "G100K",
+   "POT",
+   "100kG, try 100kB"
+  ]
+ ],
+ "source": "layout"
+}

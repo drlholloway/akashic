@@ -1,0 +1,174 @@
+{
+ "id": "dirtbox:2019-06-vox-tonebender-mk-iii-w-treble-and-bass",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 18x11 vero, 2-knob three-transistor fuzz. Pot values are marked unconfirmed in the legend; suggested mod is to decrease or jumper the 220K before the volume pot (not applied). One 220nF is drawn translucent over Q1 but is a real part.",
+ "uncertain": [
+  "25uF electrolytic near column G rows H-J: printed clearly, unusual value",
+  "DPDT switch: the legend does not call it a footswitch, but its wiring (Volume 2 to Switch 1, Switch 2 to Output) looks like the bypass switch; listed as printed"
+ ],
+ "rows": [
+  [
+   "×1",
+   "330Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.8K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "680K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "25uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N2926",
+   "Q",
+   "Try 2N2222, 2N3904, BC337 etc."
+  ],
+  [
+   "Q2",
+   "2N2926",
+   "Q",
+   "Try 2N2222, 2N3904, BC337 etc."
+  ],
+  [
+   "Q3",
+   "2N2926",
+   "Q",
+   "Try 2N2222, 2N3904, BC337 etc."
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Treble Bass",
+   "B100K",
+   "POT",
+   "unconfirmed pot value"
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   "unconfirmed pot value"
+  ],
+  [
+   "Switch",
+   "DPDT",
+   "SW",
+   "possibly the bypass switch"
+  ]
+ ],
+ "source": "layout"
+}

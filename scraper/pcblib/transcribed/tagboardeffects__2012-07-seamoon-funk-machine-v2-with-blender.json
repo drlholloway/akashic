@@ -1,0 +1,141 @@
+{
+ "id": "tagboardeffects:2012-07-seamoon-funk-machine-v2-with-blender",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "18 x 15 stripboard shown populated (left) and bare with cuts and links (right); counted from the populated view. Legend suggests 390K and 1M in place of the 47K and the 5M Frequency Shift pot.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "47K",
+   "R",
+   "legend: instead of 47K + 5M Freq Shift, try 390K & 1M"
+  ],
+  [
+   "×2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100R",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "4n7",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC",
+   "LM1458",
+   "IC",
+   "LM1458 or similar"
+  ],
+  [
+   "Q1",
+   "BF245",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q2",
+   "BF245",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q3",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Filter Depth Range",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Frequency Shift",
+   "B5M",
+   "POT",
+   "legend: or try 1M"
+  ],
+  [
+   "Blend",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

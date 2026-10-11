@@ -1,0 +1,87 @@
+{
+ "id": "tagboardeffects:2013-01-black-cat-od1-overdrive",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "15 x 10 stripboard shown populated and bare; values printed on the parts, single dual op-amp named in the legend.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "430R",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "220p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "OP275",
+   "IC",
+   ""
+  ],
+  [
+   "Gain",
+   "A50K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

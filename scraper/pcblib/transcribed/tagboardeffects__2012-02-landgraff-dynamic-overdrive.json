@@ -1,0 +1,173 @@
+{
+ "id": "tagboardeffects:2012-02-landgraff-dynamic-overdrive",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 19 x 15 with a bare cuts view below and a drawing of the 3-position mode switch carrying D1-D3 and two LEDs off board. Legend notes D2 may be omitted or a diode added in series with D3 as options.",
+ "uncertain": [
+  "20n film cap at the left edge, strips 6-8: printed clearly as 20n, unusual value (may be a clipped 220n)"
+ ],
+ "rows": [
+  [
+   "×1",
+   "100R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220R",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×8",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "510K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "51p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "20n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1u",
+   "C",
+   "film, not electrolytic"
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "JRC4558",
+   "IC",
+   ""
+  ],
+  [
+   "Q1",
+   "2SC1815",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2SC1815",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N914",
+   "D",
+   "on the switch"
+  ],
+  [
+   "D2",
+   "1N914",
+   "D",
+   "on the switch; legend: omit for symmetrical clipping"
+  ],
+  [
+   "D3",
+   "1N914",
+   "D",
+   "on the switch"
+  ],
+  [
+   "D4",
+   "3mm red LED",
+   "LED",
+   "on the switch"
+  ],
+  [
+   "D5",
+   "3mm red LED",
+   "LED",
+   "on the switch"
+  ],
+  [
+   "Drive",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Mode",
+   "DPDT on/off/on",
+   "SW",
+   "TS808 / diode lift / Marshall mode"
+  ]
+ ],
+ "source": "layout"
+}

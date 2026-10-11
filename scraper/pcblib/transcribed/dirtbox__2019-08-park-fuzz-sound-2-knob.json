@@ -1,0 +1,117 @@
+{
+ "id": "dirtbox:2019-08-park-fuzz-sound-2-knob",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 17x9 stripboard, positive-ground (-9v) three-transistor germanium fuzz, 2 knob version; legend gives the transistors and diode only as germanium, no part numbers.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "680K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "200pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "25uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "PNP Germanium",
+   "Q",
+   "part number not given"
+  ],
+  [
+   "Q2",
+   "PNP Germanium",
+   "Q",
+   "part number not given"
+  ],
+  [
+   "Q3",
+   "PNP Germanium",
+   "Q",
+   "part number not given"
+  ],
+  [
+   "D1",
+   "Germanium",
+   "D",
+   "part number not given"
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

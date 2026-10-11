@@ -1,0 +1,123 @@
+{
+ "id": "dirtbox:2020-12-lovetone-brown-source",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 17x17 stripboard with a TL072, a BC549C and a 3P4T rotary switch. The legend calls the output pot Level; the wire labels call it Volume.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "220Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "3.9K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1.2M",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "33nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC549C",
+   "Q",
+   ""
+  ],
+  [
+   "IC1",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   "D1, D2; legend: 1N4148/1N914"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Drive",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A10K",
+   "POT",
+   "wire labels: Volume"
+  ],
+  [
+   "Switch",
+   "3P4T rotary",
+   "SW",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,101 @@
+{
+ "id": "dirtbox:2020-07-dam-gt-73-graveyard-tramp",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 12x10 stripboard, two transistors, positive-ground (-9V) circuit. The legend gives no value for the Level pot (\"Unknown value, try 100k-500k\").",
+ "uncertain": [
+  "15uF electrolytic at B-C/3: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "820Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "180pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "15uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC179",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "OC82D",
+   "Q",
+   ""
+  ],
+  [
+   "Fuzz",
+   "A1K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "?",
+   "POT",
+   "value not given; legend: Unknown value, try 100k-500k"
+  ]
+ ],
+ "source": "layout"
+}

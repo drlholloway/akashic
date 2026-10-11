@@ -1,0 +1,175 @@
+{
+ "id": "dirtbox:2022-07-bearfoot-fx-bjfe-pale-green-compressor",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 22x19 stripboard: NE5534, three BC550, a 78L05 regulator (the TO-92 marked I/G/O, labelled REG), an LDR and a red LED D3 on the board facing it. The Tone pot is printed '20kW dual gange' (W taper, dual gang).",
+ "uncertain": [
+  "215Ω at column 16 rows P-R: printed clearly, unusual value",
+  "110Ω x2 at columns 21-22 (rows L-N and P-R): printed clearly, unusual value",
+  "Tone pot taper printed as W ('20kW'): kept as printed"
+ ],
+ "rows": [
+  [
+   "×3",
+   "5.6K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "200K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "110Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "215Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "NE5534",
+   "IC",
+   ""
+  ],
+  [
+   "REG",
+   "78L05",
+   "IC",
+   ""
+  ],
+  [
+   "×3",
+   "BC550",
+   "Q",
+   "Q1-Q3"
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   "D1, D2"
+  ],
+  [
+   "D3",
+   "red LED",
+   "LED",
+   "3 or 5 mm diffused red LED, on the board"
+  ],
+  [
+   "D4",
+   "1N400x",
+   "D",
+   ""
+  ],
+  [
+   "LDR",
+   "?",
+   "OPTO",
+   "value not given; legend: Socket and test"
+  ],
+  [
+   "Comp",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "W20K",
+   "POT",
+   "dual"
+  ],
+  [
+   "Volume",
+   "B50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

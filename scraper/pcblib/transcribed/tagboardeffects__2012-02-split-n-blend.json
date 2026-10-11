@@ -1,0 +1,45 @@
+{
+ "id": "tagboardeffects:2012-02-split-n-blend",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small vero board with two BF245 JFETs and an off-board Blend pot; single populated view. Legend suggests 2N5457 or J201 if BF245 is not to hand.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "BF245",
+   "Q",
+   "JFET; legend: If you don't have BF245 JFETs, try 2N5457 or J201"
+  ],
+  [
+   "Blend",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,219 @@
+{
+ "id": "effectslayouts-blog:2015-11-proco-rat-project",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Picture 1 is a ProCo RAT schematic without values; picture 3 is the layout sheet (populated perfboard, underside, wiring diagram, etched PCB; 2 and 4 are small copies). The layout prints designators only and says 'See BOM': the values are in the post's text, not in any picture, so every value is '?'. The populated perfboard labels two resistors R9; the upright one between C11 and C12 is R10 on the wiring diagram and is entered as R10.",
+ "uncertain": [],
+ "rows": [
+  [
+   "R1",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R2",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R3",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R4",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R5",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R6",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R7",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R8",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R9",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R10",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R11",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R12",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R13",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R14",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "C1",
+   "?",
+   "C",
+   "electrolytic, value not given"
+  ],
+  [
+   "C2",
+   "?",
+   "C",
+   "electrolytic, value not given"
+  ],
+  [
+   "C3",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C4",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C5",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C6",
+   "?",
+   "C",
+   "electrolytic, value not given"
+  ],
+  [
+   "C7",
+   "?",
+   "C",
+   "electrolytic, value not given"
+  ],
+  [
+   "C8",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C9",
+   "?",
+   "C",
+   "electrolytic, value not given"
+  ],
+  [
+   "C10",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C11",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C12",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C13",
+   "?",
+   "C",
+   "electrolytic, value not given"
+  ],
+  [
+   "D1",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "D2",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "D3",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "IC1",
+   "?",
+   "IC",
+   "8-pin DIP, value not given"
+  ],
+  [
+   "Q1",
+   "?",
+   "Q",
+   "JFET (pins marked D S G), value not given"
+  ],
+  [
+   "Distortion",
+   "?",
+   "POT",
+   "value not given"
+  ],
+  [
+   "Filter",
+   "?",
+   "POT",
+   "value not given"
+  ],
+  [
+   "Volume",
+   "?",
+   "POT",
+   "value not given"
+  ]
+ ],
+ "source": "layout"
+}

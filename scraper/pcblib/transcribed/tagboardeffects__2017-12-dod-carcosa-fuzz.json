@@ -1,0 +1,141 @@
+{
+ "id": "tagboardeffects:2017-12-dod-carcosa-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "19x17 vero, single populated view. The legend calls the pot wired as Volume 1-3 'Output', and adds an off-board 680pF cap from Volume 2 to ground. Transistors are not individually labelled on the board; five are drawn and the legend says Q1-Q5.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "1k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "9.1k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47k",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "220k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "510k",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "680pF",
+   "C",
+   "off-board, from Volume 2 to ground"
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×9",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×5",
+   "2N5089",
+   "Q",
+   "Q1-Q5"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "BAT41",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "BAT41",
+   "D",
+   ""
+  ],
+  [
+   "Output",
+   "A100K",
+   "POT",
+   "wires labelled Volume"
+  ],
+  [
+   "Before",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "After",
+   "C100K",
+   "POT",
+   ""
+  ],
+  [
+   "Hi Cut",
+   "A5K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "SPDT on/on",
+   "SW",
+   "toggle, wires Sw2 / Sw3"
+  ]
+ ],
+ "source": "layout"
+}

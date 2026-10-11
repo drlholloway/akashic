@@ -1,0 +1,113 @@
+{
+ "id": "tagboardeffects:2014-06-tiny-giant-amp",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "One 19x11 vero board with parts, and the bare cuts-and-links view below it. The regulator (pads A/O/I) and the TDA7240A amplifier (pads 1-7) mount on the board edge; IC1 is drawn rotated 180 degrees. Standby 1 / Standby 2 go to a standby switch whose type the drawing does not state; two wires, so entered as SPST. The two 1u are drawn as film capacitors, not cans.",
+ "uncertain": [
+  "Standby switch: type not stated in the drawing, SPST assumed from the two wires"
+ ],
+ "rows": [
+  [
+   "×2",
+   "2R2",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "120R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1u",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "470u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "×1",
+   "LM338T",
+   "IC",
+   "regulator"
+  ],
+  [
+   "×1",
+   "TDA7240A",
+   "IC",
+   "amplifier"
+  ],
+  [
+   "Volume",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Standby",
+   "SPST",
+   "SW",
+   "type not stated; two wires"
+  ]
+ ],
+ "source": "layout"
+}

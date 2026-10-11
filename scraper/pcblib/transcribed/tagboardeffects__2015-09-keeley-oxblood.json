@@ -1,0 +1,210 @@
+{
+ "id": "tagboardeffects:2015-09-keeley-oxblood",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 21 x 24, populated board above a bare cuts-and-links view; read from the populated board. Two 5532 op amps, a 1044 charge pump, a J201 and Q1. One 100K by the Tone pads is drawn semi-transparent (probably mounted differently); it is counted.",
+ "uncertain": [
+  "100K left of C1 near Tone 2/Tone 1: drawn faded over two track cuts, text partly obscured, read as 100K",
+  "D4, D5: legend says only 'Schottky (Experiment)', no part number"
+ ],
+ "rows": [
+  [
+   "×8",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100K",
+   "R",
+   "one drawn semi-transparent"
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2K4",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "390R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100R",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×5",
+   "1u",
+   "C",
+   "film box"
+  ],
+  [
+   "×2",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220p",
+   "C",
+   "ceramic"
+  ],
+  [
+   "×1",
+   "100p",
+   "C",
+   "ceramic"
+  ],
+  [
+   "C1",
+   "4n7",
+   "C",
+   "Exp. different values"
+  ],
+  [
+   "×1",
+   "1u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "NE5532",
+   "IC",
+   "printed 5532"
+  ],
+  [
+   "×1",
+   "1044",
+   "IC",
+   "charge pump, printed 1044"
+  ],
+  [
+   "×1",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q1",
+   "MMBT6429",
+   "Q",
+   "Original MMBT6429 (Try other NPN Si Hfe min. 500)"
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   "D2, D3"
+  ],
+  [
+   "×2",
+   "Schottky",
+   "D",
+   "D4, D5, Schottky (Experiment)"
+  ],
+  [
+   "Drive",
+   "A250K",
+   "POT",
+   "dual"
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch 1",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Switch 2",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,137 @@
+{
+ "id": "tagboardeffects:2012-04-merlin-blencowes-one-chip-chorus",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "18 x 14 vero, populated board above a bare cuts-and-links view. PT2399 chorus with on-board 78L05 regulator, BC337 and a 3mm red LED (D2) mounted on the board.",
+ "uncertain": [
+  "91K lower right beside the Depth 1 / Output wires: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "820K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "91K",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "4u7",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "PT2399",
+   "IC",
+   ""
+  ],
+  [
+   "×1",
+   "78L05",
+   "IC",
+   "regulator"
+  ],
+  [
+   "×1",
+   "BC337",
+   "Q",
+   "or similar NPN"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "3mm Red LED",
+   "LED",
+   "on the board"
+  ],
+  [
+   "Depth",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Rate",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

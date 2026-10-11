@@ -1,0 +1,113 @@
+{
+ "id": "tagboardeffects:2013-03-fromel-death-is-gain",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small vero 17x10 drawn twice (populated, then cuts and links only); read from the populated board. Diodes carry designators D1-D4, other parts only values.",
+ "uncertain": [
+  "28p ceramic between D2 and D4 near the top left: printed small, reads 28p but could be 20p or 22p; unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "20K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3K3",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "330R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "28p",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "150n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1u",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC",
+   "TL072",
+   "IC",
+   "IC is TL072 or similar"
+  ],
+  [
+   "×4",
+   "1N4148",
+   "D",
+   "D1, D2, D3, D4"
+  ],
+  [
+   "Gain",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

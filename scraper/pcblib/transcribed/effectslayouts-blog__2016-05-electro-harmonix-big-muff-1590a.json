@@ -1,0 +1,309 @@
+{
+ "id": "effectslayouts-blog:2016-05-electro-harmonix-big-muff-1590a",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "PCB layout (wiring diagram plus etch mask) for a 1590A Big Muff. Parts carry designators only (R2-R23, C1-C13, D1-D4, Q1-Q4); the legend says to see Kit Rae's schematics for the values, so only the 47uF and the 1N4001 have printed values. There is no R1; pots have no values.",
+ "uncertain": [],
+ "rows": [
+  [
+   "R2",
+   "?",
+   "R",
+   "value not given; legend says see Kit Rae schematics"
+  ],
+  [
+   "R3",
+   "?",
+   "R",
+   "value not given; legend says see Kit Rae schematics"
+  ],
+  [
+   "R4",
+   "?",
+   "R",
+   "value not given; legend says see Kit Rae schematics"
+  ],
+  [
+   "R5",
+   "?",
+   "R",
+   "value not given; legend says see Kit Rae schematics"
+  ],
+  [
+   "R6",
+   "?",
+   "R",
+   "value not given; legend says see Kit Rae schematics"
+  ],
+  [
+   "R7",
+   "?",
+   "R",
+   "value not given; legend says see Kit Rae schematics"
+  ],
+  [
+   "R8",
+   "?",
+   "R",
+   "value not given; legend says see Kit Rae schematics"
+  ],
+  [
+   "R9",
+   "?",
+   "R",
+   "value not given; legend says see Kit Rae schematics"
+  ],
+  [
+   "R10",
+   "?",
+   "R",
+   "value not given; legend says see Kit Rae schematics"
+  ],
+  [
+   "R11",
+   "?",
+   "R",
+   "value not given; legend says see Kit Rae schematics"
+  ],
+  [
+   "R12",
+   "?",
+   "R",
+   "value not given; legend says see Kit Rae schematics"
+  ],
+  [
+   "R13",
+   "?",
+   "R",
+   "value not given; legend says see Kit Rae schematics"
+  ],
+  [
+   "R14",
+   "?",
+   "R",
+   "value not given; legend says see Kit Rae schematics"
+  ],
+  [
+   "R15",
+   "?",
+   "R",
+   "value not given; legend says see Kit Rae schematics"
+  ],
+  [
+   "R16",
+   "?",
+   "R",
+   "value not given; legend says see Kit Rae schematics"
+  ],
+  [
+   "R17",
+   "?",
+   "R",
+   "value not given; legend says see Kit Rae schematics"
+  ],
+  [
+   "R18",
+   "?",
+   "R",
+   "value not given; legend says see Kit Rae schematics"
+  ],
+  [
+   "R19",
+   "?",
+   "R",
+   "value not given; legend says see Kit Rae schematics"
+  ],
+  [
+   "R20",
+   "?",
+   "R",
+   "value not given; legend says see Kit Rae schematics"
+  ],
+  [
+   "R21",
+   "?",
+   "R",
+   "value not given; legend says see Kit Rae schematics"
+  ],
+  [
+   "R22",
+   "?",
+   "R",
+   "value not given; legend says see Kit Rae schematics"
+  ],
+  [
+   "R23",
+   "?",
+   "R",
+   "value not given; legend says see Kit Rae schematics"
+  ],
+  [
+   "PDR",
+   "?",
+   "R",
+   "pulldown resistor, value not given"
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "C1",
+   "?",
+   "C",
+   "value not given; legend says see Kit Rae schematics"
+  ],
+  [
+   "C2",
+   "?",
+   "C",
+   "value not given; legend says see Kit Rae schematics"
+  ],
+  [
+   "C3",
+   "?",
+   "C",
+   "value not given; legend says see Kit Rae schematics"
+  ],
+  [
+   "C4",
+   "?",
+   "C",
+   "value not given; legend says see Kit Rae schematics"
+  ],
+  [
+   "C5",
+   "?",
+   "C",
+   "value not given; legend says see Kit Rae schematics"
+  ],
+  [
+   "C6",
+   "?",
+   "C",
+   "value not given; legend says see Kit Rae schematics"
+  ],
+  [
+   "C7",
+   "?",
+   "C",
+   "value not given; legend says see Kit Rae schematics"
+  ],
+  [
+   "C8",
+   "?",
+   "C",
+   "value not given; legend says see Kit Rae schematics"
+  ],
+  [
+   "C9",
+   "?",
+   "C",
+   "value not given; legend says see Kit Rae schematics"
+  ],
+  [
+   "C10",
+   "?",
+   "C",
+   "value not given; legend says see Kit Rae schematics"
+  ],
+  [
+   "C11",
+   "?",
+   "C",
+   "value not given; legend says see Kit Rae schematics"
+  ],
+  [
+   "C12",
+   "?",
+   "C",
+   "value not given; legend says see Kit Rae schematics"
+  ],
+  [
+   "C13",
+   "?",
+   "C",
+   "value not given; legend says see Kit Rae schematics"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "D2",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "D3",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "D4",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   "polarity protection"
+  ],
+  [
+   "Q1",
+   "?",
+   "Q",
+   "value not given"
+  ],
+  [
+   "Q2",
+   "?",
+   "Q",
+   "value not given"
+  ],
+  [
+   "Q3",
+   "?",
+   "Q",
+   "value not given"
+  ],
+  [
+   "Q4",
+   "?",
+   "Q",
+   "value not given"
+  ],
+  [
+   "Sustain",
+   "?",
+   "POT",
+   "value not given"
+  ],
+  [
+   "Tone",
+   "?",
+   "POT",
+   "value not given"
+  ],
+  [
+   "Volume",
+   "?",
+   "POT",
+   "value not given"
+  ]
+ ],
+ "source": "layout"
+}

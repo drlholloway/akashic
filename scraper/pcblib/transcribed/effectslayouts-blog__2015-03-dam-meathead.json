@@ -1,0 +1,105 @@
+{
+ "id": "effectslayouts-blog:2015-03-dam-meathead",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small perfboard layout of the D*A*M Meathead with underside view, colour wiring diagram and etched PCB repeating the same parts; counted from the populated perfboard. One pot (Volume), lug 2 goes to Out.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "820Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "120K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "BC182L",
+   "Q",
+   ""
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   "printed 4001"
+  ],
+  [
+   "Volume",
+   "B500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

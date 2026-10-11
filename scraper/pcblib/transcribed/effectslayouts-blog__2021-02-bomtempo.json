@@ -1,0 +1,99 @@
+{
+ "id": "effectslayouts-blog:2021-02-bomtempo",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout (title drawn as 'Bontempo') of a tap-tempo/modulation daughterboard for a PT2399 delay: ATtiny84 plus MCP41100 digital pot, with a wiring diagram, underside and etched PCB repeating the same parts. Regulator and MOSFET are printed only with pin letters on the perfboard view; their part numbers (78L05, BS170) are read from the wiring diagram. An off-board tempo LED is wired but not listed; the Tap momentary footswitch is listed as a switch because it is a control, not the bypass.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "ATTINY84",
+   "IC",
+   "microcontroller, needs firmware"
+  ],
+  [
+   "×1",
+   "MCP41100",
+   "IC",
+   "digital pot"
+  ],
+  [
+   "×1",
+   "78L05",
+   "IC",
+   "regulator, pins I G O; part number from the wiring diagram"
+  ],
+  [
+   "×1",
+   "BS170",
+   "Q",
+   "MOSFET, pins S G D; part number from the wiring diagram"
+  ],
+  [
+   "Depth",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Time",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Speed",
+   "C10K",
+   "POT",
+   ""
+  ],
+  [
+   "Division",
+   "SPDT",
+   "SW",
+   "on/off/on toggle"
+  ],
+  [
+   "Wave",
+   "SPDT",
+   "SW",
+   "on/off/on toggle"
+  ],
+  [
+   "Double",
+   "SPDT",
+   "SW",
+   "on/on toggle"
+  ],
+  [
+   "Tap",
+   "SPST",
+   "SW",
+   "momentary footswitch"
+  ]
+ ],
+ "source": "layout"
+}

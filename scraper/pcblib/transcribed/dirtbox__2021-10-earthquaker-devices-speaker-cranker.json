@@ -1,0 +1,93 @@
+{
+ "id": "dirtbox:2021-10-earthquaker-devices-speaker-cranker",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single small 12x9 stripboard, one transistor and four diodes; all values printed on the parts.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "68nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N60P",
+   "D",
+   "Schottky"
+  ],
+  [
+   "D2",
+   "1N60P",
+   "D",
+   "Schottky"
+  ],
+  [
+   "D3",
+   "1N60P",
+   "D",
+   "Schottky"
+  ],
+  [
+   "D4",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "More",
+   "B5K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

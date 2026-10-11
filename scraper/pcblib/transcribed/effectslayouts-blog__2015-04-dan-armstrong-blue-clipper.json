@@ -1,0 +1,105 @@
+{
+ "id": "effectslayouts-blog:2015-04-dan-armstrong-blue-clipper",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with a wiring diagram, underside and etched PCB of the same circuit; counted from the populated board. Wire labels Volume 3 / Volume 1 show a volume pot but no value is given anywhere.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "20K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "240K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "8.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.4K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "JRC4558",
+   "IC",
+   ""
+  ],
+  [
+   "Volume",
+   "?",
+   "POT",
+   "value not given"
+  ]
+ ],
+ "source": "layout"
+}

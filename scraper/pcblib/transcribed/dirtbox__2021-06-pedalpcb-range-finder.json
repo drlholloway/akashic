@@ -1,0 +1,129 @@
+{
+ "id": "dirtbox:2021-06-pedalpcb-range-finder",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 15x13 stripboard: germanium treble booster with eight switched input caps, a charge pump and a 5K bias trimmer on the board. The LED resistor is on the board as 'CLR'.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "6.8nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "film box"
+  ],
+  [
+   "×3",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "5K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Q1",
+   "PNP Germanium",
+   "Q",
+   "type not given"
+  ],
+  [
+   "IC1",
+   "MAX1044",
+   "IC",
+   "legend: MAX1044 / ICL7660SCPA / TC1044SCPA"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Boost",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "1P8T rotary",
+   "SW",
+   "or 1P12T set to 8 throws"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,125 @@
+{
+ "id": "tagboardeffects:2013-01-pearlvorg-warp-sound-filter",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "17x18 stripboard, populated view on the left and cuts/links view on the right, plus the bypass footswitch wiring (SW1/SW3 go to the footswitch, not listed). Two dual op-amps, a 100K trimmer on the board and an on-board LED resistor printed only as LED.",
+ "uncertain": [
+  "50nF x3 (two right of IC2, one lower centre): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×6",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "27Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×2",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "50nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "33uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100K",
+   "TRIM",
+   ""
+  ],
+  [
+   "IC1",
+   "C251C",
+   "IC",
+   "legend: ICs are originally NEC C251C (JRC4558/TL072, or any dual opamp should be fine)"
+  ],
+  [
+   "IC2",
+   "C251C",
+   "IC",
+   "legend: ICs are originally NEC C251C (JRC4558/TL072, or any dual opamp should be fine)"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   "legend: diodes unknown (try 1N4148)"
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   "legend: diodes unknown (try 1N4148)"
+  ],
+  [
+   "Envelope",
+   "B10K",
+   "POT",
+   "lug 1 not connected"
+  ],
+  [
+   "Output",
+   "A50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

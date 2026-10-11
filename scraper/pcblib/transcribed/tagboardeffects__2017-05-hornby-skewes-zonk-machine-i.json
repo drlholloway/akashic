@@ -1,0 +1,126 @@
+{
+ "id": "tagboardeffects:2017-05-hornby-skewes-zonk-machine-i",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 18x9 vero board with three germanium transistors; the legend names Q1-Q3 but the board does not mark which outline is which.",
+ "uncertain": [
+  "47nF at columns 15, rows E-H: the text is partly covered by the Q3 transistor outline, read as 47nF",
+  "Q1 part number printed 'A02650' in the legend: the second character could be a letter O (AO2650); printed clearly, unusual part number"
+ ],
+ "rows": [
+  [
+   "×1",
+   "4.7k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "56k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "25uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "A02650",
+   "Q",
+   "PNP Ge"
+  ],
+  [
+   "Q2",
+   "OC75",
+   "Q",
+   "PNP Ge"
+  ],
+  [
+   "Q3",
+   "OC44",
+   "Q",
+   "PNP Ge"
+  ],
+  [
+   "Fuzz",
+   "A50K",
+   "POT",
+   ""
+  ],
+  [
+   "Swell",
+   "A500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

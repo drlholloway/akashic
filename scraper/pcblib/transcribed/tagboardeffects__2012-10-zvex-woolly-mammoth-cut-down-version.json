@@ -1,0 +1,102 @@
+{
+ "id": "tagboardeffects:2012-10-zvex-woolly-mammoth-cut-down-version",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "14x9 stripboard with the two pots drawn wired above it and a bare cuts view to the right. An off-board toggle switch between Input and Sw5 carries two input caps (220n and 22n), counted here with the board parts.",
+ "uncertain": [
+  "Off-board toggle between Input and Sw5: drawn as a blue 6-lug body with 220n and 22n across the outer lug pairs, no type or name printed; read as a DPDT on/on input-cap selector",
+  "4K99 (three of them): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×1",
+   "51K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "20K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K2",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "4K99",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "220n",
+   "C",
+   "one on the board, one on the input switch"
+  ],
+  [
+   "×1",
+   "22n",
+   "C",
+   "on the input switch"
+  ],
+  [
+   "Q1",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "Pinch",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Output",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Input cap",
+   "DPDT on/on",
+   "SW",
+   "toggle, unnamed in the drawing; selects 220n or 22n input cap"
+  ]
+ ],
+ "source": "layout"
+}

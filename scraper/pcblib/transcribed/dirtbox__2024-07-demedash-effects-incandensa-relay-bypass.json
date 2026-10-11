@@ -1,0 +1,87 @@
+{
+ "id": "dirtbox:2024-07-demedash-effects-incandensa-relay-bypass",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Relay bypass board (555 plus 5V DPDT relay) drawn with jack wiring; the second board below is bare (cuts and links only). The SPST normally-open momentary stomp switch is the bypass footswitch and is not listed.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "100R",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "D4",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "IC1",
+   "555",
+   "IC",
+   ""
+  ],
+  [
+   "Relay",
+   "DPDT relay",
+   "OTHER",
+   "5V non-latching; Fujitsu Takamisawa NA-5W-K, Kemet EC2-5NU, Omron G6S-2"
+  ]
+ ],
+ "source": "layout"
+}

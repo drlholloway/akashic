@@ -1,0 +1,27 @@
+{
+ "id": "tagboardeffects:2014-01-millennium-bypass-2",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Tiny 5x5 stripboard for an LED bypass indicator, wired to the bypass footswitch; values come from the legend (R1, D1, Q1). No bare board view.",
+ "uncertain": [],
+ "rows": [
+  [
+   "R1",
+   "2K2",
+   "R",
+   ""
+  ],
+  [
+   "D1",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "BS170",
+   "Q",
+   "MOSFET"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,81 @@
+{
+ "id": "dirtbox:2020-09-fender-blender-3-knob-booster",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 9x8 stripboard, one JFET booster stage; only the Boost pot is on this layout despite the '3-knob' title.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5952",
+   "Q",
+   "JFET"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Boost",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

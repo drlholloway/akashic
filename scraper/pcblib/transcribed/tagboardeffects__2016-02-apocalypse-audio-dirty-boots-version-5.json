@@ -1,0 +1,102 @@
+{
+ "id": "tagboardeffects:2016-02-apocalypse-audio-dirty-boots-version-5",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 12x10 stripboard, positive-ground (-9V) fuzz with two PNP germanium transistors drawn without designators and two germanium diodes.",
+ "uncertain": [
+  "2nF film caps (two, columns B and D): printed clearly, unusual value",
+  "82nF film cap at column K: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×1",
+   "22r",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "82nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "GT313A",
+   "Q",
+   "try PNP Germanium"
+  ],
+  [
+   "Q2",
+   "GT313A",
+   "Q",
+   "try PNP Germanium"
+  ],
+  [
+   "D1",
+   "1N34A",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N34A",
+   "D",
+   ""
+  ],
+  [
+   "Pre",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

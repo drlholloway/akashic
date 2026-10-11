@@ -1,0 +1,137 @@
+{
+ "id": "effectslayouts-blog:2023-05-sarno-earth-drive",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout by storyboardist: populated board, colour wiring diagram, underside and etched PCB of the same circuit. D1 and D4 are given only as 'germanium'; the legend itself queries the IC ('4558?'). The wiring diagram labels the IC 'IC2', the board and legend 'IC1'.",
+ "uncertain": [
+  "IC1: the legend prints '4558?' with a question mark, so the type is the layout author's guess"
+ ],
+ "rows": [
+  [
+   "×2",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "5.6K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "680nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "?",
+   "D",
+   "value not given; legend says germanium"
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D4",
+   "?",
+   "D",
+   "value not given; legend says germanium"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "IC1",
+   "4558",
+   "IC",
+   "legend: 4558?"
+  ],
+  [
+   "Drive",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "C50K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,105 @@
+{
+ "id": "tagboardeffects:2014-02-joe-davisson-shocktave",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "20x11 vero shown populated and bare, five transistors. One link is a double link (noted on the drawing). All values large and clear.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×5",
+   "2N5089",
+   "Q",
+   "all transistors"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "B2K",
+   "POT",
+   ""
+  ],
+  [
+   "Mix",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

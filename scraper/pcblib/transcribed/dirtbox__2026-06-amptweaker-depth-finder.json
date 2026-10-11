@@ -1,0 +1,150 @@
+{
+ "id": "dirtbox:2026-06-amptweaker-depth-finder",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 17x13 stripboard (version with external Gain control) with a legend below. Two round electrolytic cans are printed with nF values (100nF and 22nF).",
+ "uncertain": [
+  "100nF on the round can at rows E-F, column 16 (right edge): printed clearly as 100nF on an electrolytic symbol, probably meant 100uF",
+  "22nF on the round can at rows L-M, column 16 (bottom right): printed clearly as 22nF on an electrolytic symbol, probably meant 22uF"
+ ],
+ "rows": [
+  [
+   "×3",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "560pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   "electrolytic; printed as 100nF on a round can"
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   "electrolytic; printed as 22nF on a round can"
+  ],
+  [
+   "IC1",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "×2",
+   "10V Zener",
+   "D",
+   "D1, D2"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "C250K",
+   "POT",
+   ""
+  ],
+  [
+   "Presence",
+   "C500K",
+   "POT",
+   ""
+  ],
+  [
+   "Resonance",
+   "C10K",
+   "POT",
+   "dual"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,213 @@
+{
+ "id": "dirtbox:2021-02-earthquaker-devices-data-corrupter",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single large populated 29x34 stripboard with seven ICs (TL072 plus six CMOS), 109 cuts and 49 links; five pots, three toggles and two 1P8T rotary switches off board. D1 is drawn at the 9v input but the legend gives no type for it.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "10Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×9",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×6",
+   "100nF",
+   "C",
+   "four film, two ceramic"
+  ],
+  [
+   "×5",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "CD4069UBE",
+   "IC",
+   ""
+  ],
+  [
+   "IC3",
+   "CD40106BE",
+   "IC",
+   ""
+  ],
+  [
+   "IC4",
+   "CD4024BE",
+   "IC",
+   ""
+  ],
+  [
+   "IC5",
+   "CD4046BE",
+   "IC",
+   ""
+  ],
+  [
+   "IC6",
+   "CD4017BE",
+   "IC",
+   ""
+  ],
+  [
+   "IC7",
+   "CD4017BE",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "?",
+   "D",
+   "value not given; at the 9v input"
+  ],
+  [
+   "Rate",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Square",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Sub Harmonic",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Oscillator",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Sub Root",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Glide",
+   "SPDT on/on",
+   "SW",
+   "toggle; wires labelled Glide/Vibrato Sw"
+  ],
+  [
+   "Osc Root",
+   "DPDT on/on/on",
+   "SW",
+   "toggle, type 2"
+  ],
+  [
+   "Osc",
+   "1P8T rotary",
+   "SW",
+   "wires labelled Osc Int Sw"
+  ],
+  [
+   "Sub",
+   "1P8T rotary",
+   "SW",
+   "wires labelled Sub Int Sw"
+  ]
+ ],
+ "source": "layout"
+}

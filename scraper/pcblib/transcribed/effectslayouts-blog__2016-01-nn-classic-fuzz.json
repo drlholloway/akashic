@@ -1,0 +1,81 @@
+{
+ "id": "effectslayouts-blog:2016-01-nn-classic-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout by storyboardist shown four ways (populated board, colour wiring diagram, underside, etched PCB); counted from the populated board and confirmed against the wiring diagram. No pots or switches.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "6.8K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   "printed 4001"
+  ],
+  [
+   "×2",
+   "germanium",
+   "D",
+   "D1, D2"
+  ],
+  [
+   "×4",
+   "BC550C",
+   "Q",
+   "Q1-Q4"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,63 @@
+{
+ "id": "tagboardeffects:2012-01-lovepedal-delux-sixty",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small 8x8 vero board with one BS170 MOSFET, populated view only; one link.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "3M3",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3K3",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BS170",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

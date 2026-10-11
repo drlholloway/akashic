@@ -1,0 +1,117 @@
+{
+ "id": "tagboardeffects:2012-03-schaller-tremolo",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Schaller Tremolo on 21 x 12 vero with the two pots and the switch drawn wired; populated board above, cuts-and-links view below.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "6K8",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "2K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "4U7",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "10U",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22U",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100U",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC170",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "BC109",
+   "Q",
+   "BC109 or BC173"
+  ],
+  [
+   "Q3",
+   "BC170",
+   "Q",
+   ""
+  ],
+  [
+   "Q4",
+   "BC170",
+   "Q",
+   ""
+  ],
+  [
+   "Depth",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Frequency",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "×1",
+   "SPDT",
+   "SW",
+   "2 position, unnamed"
+  ]
+ ],
+ "source": "layout"
+}

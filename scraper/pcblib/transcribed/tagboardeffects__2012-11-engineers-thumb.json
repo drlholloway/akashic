@@ -1,0 +1,17 @@
+{
+ "id": "tagboardeffects:2012-11-engineers-thumb",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Not the Engineer's Thumb circuit itself: the cached image is only a small CA3080 > LM13700 adapter daughterboard, an 8-strip board carrying one 16-pin IC with wires numbered for the CA3080 pins. No passives.",
+ "uncertain": [
+  "The IC on the board carries no printed label; LM13700 is taken from the drawing's title"
+ ],
+ "rows": [
+  [
+   "×1",
+   "LM13700",
+   "IC",
+   "16-pin, on a daughterboard replacing a CA3080; not labelled on the board, from the title"
+  ]
+ ],
+ "source": "layout"
+}

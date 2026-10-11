@@ -1,0 +1,99 @@
+{
+ "id": "tagboardeffects:2012-02-lovepedal-eternity-burst",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "17 x 11 vero, populated board above a bare cuts-and-links view; one 8-pin dual op amp and four clipping diodes D1-D4.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "390R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "150n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC",
+   "JRC4558",
+   "IC",
+   "legend: JRC4558 or similar to taste"
+  ],
+  [
+   "×4",
+   "1N914",
+   "D",
+   "D1, D2, D3, D4"
+  ],
+  [
+   "Drive",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,77 @@
+{
+ "id": "dirtbox:2019-06-jordan-bosstone-pasadenanashville",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 13x8 vero board, Nashville version: one NPN and one PNP transistor, two clipping diodes, two off-board pots. No electrolytic or protection diode drawn.",
+ "uncertain": [
+  "50pF at column M rows E-F: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "560K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "50pF",
+   "C",
+   ""
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "2N2222",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N3906",
+   "Q",
+   ""
+  ],
+  [
+   "Attack",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

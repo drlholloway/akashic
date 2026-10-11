@@ -1,0 +1,147 @@
+{
+ "id": "dirtbox:2020-10-jhs-3-series-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated stripboard (16x11) with three NPN transistors; legend names the transistor suggestions, three pots and the Fat switch. The LED resistor is on the board, printed CLR.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "330Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.8K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "8.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC548A",
+   "Q",
+   "Low gain NPN Silicon; Try BC548A, BC107A, 2N2369, 2N1613 etc.; BC848A SMD in original"
+  ],
+  [
+   "Q2",
+   "BC548A",
+   "Q",
+   "Low gain NPN Silicon; Try BC548A, BC107A, 2N2369, 2N1613 etc.; BC848A SMD in original"
+  ],
+  [
+   "Q3",
+   "BC548A",
+   "Q",
+   "Low gain NPN Silicon; Try BC548A, BC107A, 2N2369, 2N1613 etc.; BC848A SMD in original"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Bias",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Fat",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

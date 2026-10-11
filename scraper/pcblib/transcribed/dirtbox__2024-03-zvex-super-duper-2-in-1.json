@@ -1,0 +1,99 @@
+{
+ "id": "dirtbox:2024-03-zvex-super-duper-2-in-1",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 15x12 stripboard, two mirrored BS170 boost channels; CLR1 and CLR2 are the two LED resistors with no value. Sw A and Sw B are 3PDT footswitches that each bypass one channel, so neither is listed.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "5.1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "BS170",
+   "Q",
+   "Q1, Q2, MOSFET"
+  ],
+  [
+   "×2",
+   "9.1V Zener",
+   "D",
+   "D1, D2"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Gain A",
+   "C5K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain B",
+   "C5K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

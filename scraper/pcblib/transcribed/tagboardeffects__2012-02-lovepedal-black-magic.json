@@ -1,0 +1,93 @@
+{
+ "id": "tagboardeffects:2012-02-lovepedal-black-magic",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small vero layout 15 x 9 with a bare cuts view below; one LM386 and two pots.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4n7",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "LM386",
+   "IC",
+   ""
+  ],
+  [
+   "Distort",
+   "B500Ω",
+   "POT",
+   "printed '500 ohm Lin'"
+  ],
+  [
+   "Volume",
+   "B500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

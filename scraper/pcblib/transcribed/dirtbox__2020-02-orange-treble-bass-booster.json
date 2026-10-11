@@ -1,0 +1,84 @@
+{
+ "id": "dirtbox:2020-02-orange-treble-bass-booster",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single small populated stripboard (10x7) with one germanium transistor; negative supply / positive ground circuit, with an added Boost control.",
+ "uncertain": [
+  "80K resistor at column 3, rows B-E: printed clearly, unusual value; the text sits off-centre on the body so a leading digit could be hidden (180K?)",
+  "2K resistor at column 7, rows B-F: text sits off-centre on the body, could be a truncated value such as 2.2K"
+ ],
+ "rows": [
+  [
+   "×1",
+   "80K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "OC76",
+   "Q",
+   "germanium PNP"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Treble Bass",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Boost",
+   "B10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,95 @@
+{
+ "id": "tagboardeffects:2012-02-dam-grease-box",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "14x9 stripboard, populated view above a bare cuts/links view; positive-ground two-transistor fuzz. The transistors are drawn only as C/B/E pin labels with no body and no type given anywhere.",
+ "uncertain": [
+  "Two transistors (centre and right of board) shown only as CBE/CEB pin labels; type not given"
+ ],
+ "rows": [
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3K3",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "20K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "15n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "Ge",
+   "D",
+   "germanium, type not given"
+  ],
+  [
+   "×2",
+   "?",
+   "Q",
+   "value not given; positive ground circuit"
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Sustain",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

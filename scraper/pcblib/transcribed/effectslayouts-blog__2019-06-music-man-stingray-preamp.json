@@ -1,0 +1,101 @@
+{
+ "id": "effectslayouts-blog:2019-06-music-man-stingray-preamp",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout drawn four times (populated board, colour wiring diagram, underside, etched PCB); counted from the populated board and confirmed against the diagram. Single LM4250 op-amp, three pots.",
+ "uncertain": [
+  "500pF beside the LM4250: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.5M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "120pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "500pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1.8nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "LM4250",
+   "IC",
+   "no designator printed"
+  ],
+  [
+   "Treble",
+   "C1M",
+   "POT",
+   ""
+  ],
+  [
+   "Bass",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A25K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

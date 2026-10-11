@@ -1,0 +1,255 @@
+{
+ "id": "effectslayouts-blog:2017-09-maestro-bass-brassmaster",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout by storyboardist: populated board, underside, colour wiring diagram and etched PCB; counted from the populated board and confirmed against the diagram. Seven transistors given only as generic types (Q numbers come from the wiring diagram), a 42TM018 audio transformer on the board, and a 3PDT Brass switch wired to nine board pads.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "6.8K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "82K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1.5M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "820Ω",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "390Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×5",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "NPN silicon",
+   "Q",
+   "type not given"
+  ],
+  [
+   "Q2",
+   "NPN silicon",
+   "Q",
+   "type not given"
+  ],
+  [
+   "Q3",
+   "NPN silicon",
+   "Q",
+   "type not given"
+  ],
+  [
+   "Q4",
+   "NPN silicon",
+   "Q",
+   "type not given"
+  ],
+  [
+   "Q5",
+   "NPN darlington",
+   "Q",
+   "type not given"
+  ],
+  [
+   "Q6",
+   "NPN silicon",
+   "Q",
+   "type not given"
+  ],
+  [
+   "Q7",
+   "NPN silicon",
+   "Q",
+   "type not given"
+  ],
+  [
+   "×4",
+   "1N4148",
+   "D",
+   "printed 4148"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   "printed 4001"
+  ],
+  [
+   "×1",
+   "42TM018",
+   "XFM",
+   "audio transformer"
+  ],
+  [
+   "Bass",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Sensitivity",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Brass",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Harmonic",
+   "SPST",
+   "SW",
+   ""
+  ],
+  [
+   "Brass",
+   "3PDT on/on",
+   "SW",
+   "Brass Sw1-9"
+  ]
+ ],
+ "source": "layout"
+}

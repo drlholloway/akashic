@@ -1,0 +1,111 @@
+{
+ "id": "tagboardeffects:2017-06-keeler-designs-push",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Third picture of the post is the 17x9 stripboard layout (populated board above, bare cuts/links view below); the first two pictures are the traced schematic and its thumbnail. One populated board, read once. The schematic's sixth 10K (R9) is the off-board indicator LED resistor and is not on the board.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×5",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "330nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "6.8nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "4558",
+   "IC",
+   "dual opamp (try 4558, 072 or similar)"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "×2",
+   "3mm red LED",
+   "LED",
+   "D2, D3, clipping"
+  ],
+  [
+   "Gain",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

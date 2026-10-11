@@ -1,0 +1,105 @@
+{
+ "id": "dirtbox:2024-02-hao-sole-pressure",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 15x12 stripboard with a legend below. D1 and D2 are 3mm red clipping LEDs on the board.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "JRC4558",
+   "IC",
+   ""
+  ],
+  [
+   "×2",
+   "3mm red LED",
+   "LED",
+   "D1, D2, clipping"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Drive",
+   "C500K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "SPDT on/off/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,114 @@
+{
+ "id": "effectslayouts-blog:2020-08-spaceman-atlas-iii",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout by storyboardist with underside view, colour wiring diagram and etched PCB; counted from the populated board, confirmed on the diagram. Two parts marked FB (ferrite beads) sit at the input and the supply.",
+ "uncertain": [
+  "Q2, Q3: legend gives only 'low gain NPN silicon', no part number",
+  "30K at the top right (row C): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×5",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "30K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "180nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "×2",
+   "FB",
+   "L",
+   "ferrite bead"
+  ],
+  [
+   "Q1",
+   "LND150N3",
+   "Q",
+   "depletion MOSFET"
+  ],
+  [
+   "Q4",
+   "LND150N3",
+   "Q",
+   "depletion MOSFET"
+  ],
+  [
+   "Q2",
+   "low gain NPN silicon",
+   "Q",
+   "no part number given"
+  ],
+  [
+   "Q3",
+   "low gain NPN silicon",
+   "Q",
+   "no part number given"
+  ],
+  [
+   "Boost",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "SPDT",
+   "SW",
+   "on/on, wired to Sw1/Sw2/Sw3"
+  ]
+ ],
+ "source": "layout"
+}

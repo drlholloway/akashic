@@ -1,0 +1,69 @@
+{
+ "id": "dirtbox:2020-01-devi-ever-ruiner",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 11x9 stripboard with values printed on every part; legend names the transistors, diode and pots.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Intensity",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

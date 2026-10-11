@@ -1,0 +1,75 @@
+{
+ "id": "tagboardeffects:2013-01-dragonfly-sparkle-boost",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "9x9 stripboard, single JFET boost with a 100K drain bias trimmer on the board; the bare board with the one cut is drawn beside it.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100K",
+   "TRIM",
+   "drain bias, adjust JFET drain to ~4.5V"
+  ],
+  [
+   "×1",
+   "NTE458",
+   "Q",
+   "JFET; legend: NTE458 or J201"
+  ],
+  [
+   "Gain",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

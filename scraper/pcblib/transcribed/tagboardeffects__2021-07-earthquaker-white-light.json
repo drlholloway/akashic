@@ -1,0 +1,144 @@
+{
+ "id": "tagboardeffects:2021-07-earthquaker-white-light",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 14x15 stripboard. The legend names the 1M pot 'Gain' while the wires are labelled 'Drive'; Comp SW is an SPST switch.",
+ "uncertain": [
+  "22nF at column 4, rows C-E: the 1uF electrolytic covers the end of the text, reads '22n' with the F hidden",
+  "475k at column 5, rows F-H: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×5",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "3.3k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "39r",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "475k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "LM833",
+   "IC",
+   ""
+  ],
+  [
+   "×4",
+   "1N4148",
+   "D",
+   "D1, D2, D3, D4"
+  ],
+  [
+   "×4",
+   "1N60",
+   "D",
+   "D5, D6, D7, D8"
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Weight",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "A1M",
+   "POT",
+   "wires labelled Drive"
+  ],
+  [
+   "Comp SW",
+   "SPST",
+   "SW",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

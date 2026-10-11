@@ -1,0 +1,101 @@
+{
+ "id": "effectslayouts-blog:2016-11-culturejam-stein-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small perfboard layout of a two-transistor fuzz with a 50K trimmer on the board; the image also shows the underside, a colour wiring diagram and an etched PCB. Drawn for PNP (positive ground); the legend says NPN parts can be used instead.",
+ "uncertain": [
+  "100uF at the right edge is drawn as a green film-style body rather than a can; value printed clearly, entered as electrolytic"
+ ],
+ "rows": [
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "50K",
+   "TRIM",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "BC559",
+   "Q",
+   "legend: BC559 or 2N5087 (PNP) or BC550 or 2N5088 (NPN)"
+  ],
+  [
+   "Q2",
+   "BC559",
+   "Q",
+   "legend: BC559 or 2N5087 (PNP) or BC550 or 2N5088 (NPN)"
+  ],
+  [
+   "Drive",
+   "B2K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

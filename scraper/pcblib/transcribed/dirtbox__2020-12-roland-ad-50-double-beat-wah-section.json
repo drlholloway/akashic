@@ -1,0 +1,125 @@
+{
+ "id": "dirtbox:2020-12-roland-ad-50-double-beat-wah-section",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 19x12 stripboard with a large inductor on the right; wah section only of the AD-50.",
+ "uncertain": [
+  "20K at column 2, rows D-G: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "20K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   "2N5088, BC549C etc.; 2SC1000 in original"
+  ],
+  [
+   "Q2",
+   "2N3904",
+   "Q",
+   "2N3904, BC547B etc.; 2SC828 in original"
+  ],
+  [
+   "IND",
+   "500mH",
+   "L",
+   "wah inductor"
+  ],
+  [
+   "Wah",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

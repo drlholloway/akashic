@@ -1,0 +1,195 @@
+{
+ "id": "dirtbox:2021-11-guyatone-ps-106-double-octave",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 23x24 stripboard (titled PS-106 Dual Octave). R1 and C3 are drawn with designators only; the legend says their values are unknown and that 470k and 10uF work fine.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×9",
+   "56K",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "R1",
+   "?",
+   "R",
+   "value not given; legend suggests 470k"
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×3",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "330pF",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C3",
+   "?",
+   "C",
+   "electrolytic; value not given; legend suggests 10uF"
+  ],
+  [
+   "Q1",
+   "2N3904",
+   "Q",
+   "legend: 2N3904, 2N5088 etc. (2SC396-F in original)"
+  ],
+  [
+   "Q2",
+   "2N3904",
+   "Q",
+   "legend: 2N3904, 2N5088 etc. (2SC396-F in original)"
+  ],
+  [
+   "IC1",
+   "1458",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "1458",
+   "IC",
+   ""
+  ],
+  [
+   "IC4",
+   "1458",
+   "IC",
+   ""
+  ],
+  [
+   "IC3",
+   "CD4013",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   "legend: 1N4148/1N914 (1S953 in original)"
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   "legend: 1N4148/1N914 (1S953 in original)"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Normal",
+   "B50K",
+   "POT",
+   "legend: try 100kB for a bit more output volume"
+  ],
+  [
+   "Octave",
+   "B50K",
+   "POT",
+   "legend: try 100kB for a bit more output volume"
+  ],
+  [
+   "Switch",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

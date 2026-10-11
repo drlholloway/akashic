@@ -1,0 +1,33 @@
+{
+ "id": "effectslayouts-blog:2016-02-transistor-tester",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Tiny perfboard transistor (gain/leakage) tester: one trimmer and one resistor on the board, shown with underside, wiring diagram and etched PCB. Off-board polarity switch drawn separately; the note says to adjust the trimmer to 2.472k.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "5K",
+   "TRIM",
+   "adjust to 2.472k"
+  ],
+  [
+   "Gain",
+   "SPST",
+   "SW",
+   "Sw1/Sw2 pads"
+  ],
+  [
+   "Polarity",
+   "DPDT",
+   "SW",
+   "swaps +9v and ground for PNP/NPN"
+  ]
+ ],
+ "source": "layout"
+}

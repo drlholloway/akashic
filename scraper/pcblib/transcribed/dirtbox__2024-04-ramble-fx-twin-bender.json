@@ -1,0 +1,149 @@
+{
+ "id": "dirtbox:2024-04-ramble-fx-twin-bender",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 17x18 stripboard with a TC1044 charge pump and three germanium transistors drawn as round cans; two DPDT toggles (Mk. and Voice) wired off board.",
+ "uncertain": [
+  "120uF electrolytics (two, top left and right of IC1): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "47Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "8.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "15nF",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "100nF",
+   "C",
+   "one drawn as a ceramic"
+  ],
+  [
+   "×3",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "120uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "GT402D",
+   "Q",
+   "germanium"
+  ],
+  [
+   "Q2",
+   "GT402D",
+   "Q",
+   "germanium"
+  ],
+  [
+   "Q3",
+   "GT402B",
+   "Q",
+   "germanium"
+  ],
+  [
+   "IC1",
+   "TC1044SCPA",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Attack",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Imped",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Bias",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Mk. Sw",
+   "DPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Voice Sw",
+   "DPDT on/on/on",
+   "SW",
+   "toggle, type 2"
+  ]
+ ],
+ "source": "layout"
+}

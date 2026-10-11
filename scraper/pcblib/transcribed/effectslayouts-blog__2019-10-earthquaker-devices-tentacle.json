@@ -1,0 +1,123 @@
+{
+ "id": "effectslayouts-blog:2019-10-earthquaker-devices-tentacle",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Not a perfboard drawing: an etched-PCB layout (component silkscreen over blue copper, with the bare copper beside it) of the EarthQuaker Devices Tentacle octave-up, three transistors, no pots. Values are printed in lowercase without units (47n, 100µ). The board has pads for the bypass 3PDT, jacks and an indicator LED; the LED is listed with no type because none is printed.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "47k",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "68k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "18k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "560k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7k",
+   "R",
+   "LED resistor"
+  ],
+  [
+   "×1",
+   "6.2k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "160k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   "printed as 4148"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   "printed as 4001"
+  ],
+  [
+   "Q1",
+   "2N5089",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N3906",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "2N5089",
+   "Q",
+   ""
+  ],
+  [
+   "LED",
+   "?",
+   "LED",
+   "indicator, pads on the board, no type printed"
+  ]
+ ],
+ "source": "layout"
+}

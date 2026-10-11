@@ -1,0 +1,117 @@
+{
+ "id": "effectslayouts-blog:2019-05-face-bender",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with a wiring diagram, a reversed underside and an etched PCB of the same circuit; counted from the populated perfboard. Three-transistor germanium fuzz with a 10K bias trimmer on the board and an SPDT switch wired to Sw1/Sw3 (In to Sw2).",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "TRIM",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   "printed 4001"
+  ],
+  [
+   "Q1",
+   "NPN Germanium",
+   "Q",
+   "legend: Q1-3: NPN Germanium"
+  ],
+  [
+   "Q2",
+   "NPN Germanium",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "NPN Germanium",
+   "Q",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "SPDT on/on",
+   "SW",
+   "In to Sw2, board pads Sw1 and Sw3"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,99 @@
+{
+ "id": "dirtbox:2019-08-bjf-pnp-booster",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 12x10 stripboard with a legend; a PNP germanium transistor, a 78L33 regulator and a 100K trimmer on the board.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "51K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Q1",
+   "PNP Germanium",
+   "Q",
+   ""
+  ],
+  [
+   "REG",
+   "78L33",
+   "IC",
+   "regulator"
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Saturation",
+   "C50K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

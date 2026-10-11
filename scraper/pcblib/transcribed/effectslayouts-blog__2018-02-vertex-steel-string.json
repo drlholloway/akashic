@@ -1,0 +1,111 @@
+{
+ "id": "effectslayouts-blog:2018-02-vertex-steel-string",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout by storyboardist: populated board, colour wiring diagram, underside and etched PCB; counted from the populated board and confirmed against the wiring diagram. Four J201; the 4.7K feeds the LED+ pad (LED resistor).",
+ "uncertain": [],
+ "rows": [
+  [
+   "×11",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   "LED resistor, to LED+ pad"
+  ],
+  [
+   "×2",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "68nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "×4",
+   "J201",
+   "Q",
+   "Q1-4, JFET"
+  ],
+  [
+   "Gain",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Filter",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

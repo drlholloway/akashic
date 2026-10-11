@@ -1,0 +1,186 @@
+{
+ "id": "tagboardeffects:2017-03-dunlop-dunlop-gbc-95-modded-crybaby",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Main 21x12 wah board plus a separate 9x4 'Sweep Board' of six capacitors selected by a 2-pole 6-position rotary switch. The drawing prints only the designator for R1 on the main board and for C2-C6 on the sweep board (the first sweep cap is printed 10nF); their values are not in the image. Inductor value not given in the image. Wah pot taper not stated.",
+ "uncertain": [
+  "R1 (main board, between Q1 and Q2): only the designator is printed, no value",
+  "C2, C3, C4, C5, C6 on the sweep board: only designators are printed, no values"
+ ],
+ "rows": [
+  [
+   "×2",
+   "1k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.5k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "82k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.8M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "R1",
+   "?",
+   "R",
+   "value not printed"
+  ],
+  [
+   "×1",
+   "22pF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "10nF",
+   "C",
+   "two on the main board, one on the sweep board"
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C2",
+   "?",
+   "C",
+   "sweep board, value not printed"
+  ],
+  [
+   "C3",
+   "?",
+   "C",
+   "sweep board, value not printed"
+  ],
+  [
+   "C4",
+   "?",
+   "C",
+   "sweep board, value not printed"
+  ],
+  [
+   "C5",
+   "?",
+   "C",
+   "sweep board, value not printed"
+  ],
+  [
+   "C6",
+   "?",
+   "C",
+   "sweep board, value not printed"
+  ],
+  [
+   "Q1",
+   "MPSA13",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "L",
+   "labelled 'Inductor', value not printed"
+  ],
+  [
+   "Wah",
+   "100K",
+   "POT",
+   "taper not stated"
+  ],
+  [
+   "Sweep",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Voice",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "SW",
+   "2P6T",
+   "SW",
+   "rotary, 2 pole 6 position"
+  ]
+ ],
+ "source": "layout"
+}

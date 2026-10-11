@@ -1,0 +1,159 @@
+{
+ "id": "effectslayouts-blog:2016-08-earthquaker-devices-grey-channel",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout of a two-channel overdrive (channels A and B on one board), with a bare underside view, a colour wiring diagram and an etched PCB of the same circuit; counted from the populated board. Each channel has a clip toggle selecting between the on-board clipping pairs (LEDs/MOSFETs on A, 1N4148/1N34 on B).",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "20K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "×2",
+   "1N34",
+   "D",
+   "germanium"
+  ],
+  [
+   "D1",
+   "5mm Red LED",
+   "LED",
+   "clipping"
+  ],
+  [
+   "D2",
+   "5mm Red LED",
+   "LED",
+   "clipping"
+  ],
+  [
+   "Q1",
+   "2N7000",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "Q2",
+   "2N7000",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "IC1",
+   "1458",
+   "IC",
+   ""
+  ],
+  [
+   "Volume A",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume B",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain A",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Gain B",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Clip A",
+   "SPDT on/off/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Clip B",
+   "SPDT on/off/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

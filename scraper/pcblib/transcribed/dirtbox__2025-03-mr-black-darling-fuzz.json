@@ -1,0 +1,105 @@
+{
+ "id": "dirtbox:2025-03-mr-black-darling-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 14x13 stripboard: three-transistor fuzz. Wire labels name the pots Fuzz, Tone and Volume; the legend says 'Gain, Tone & Volume: 50kB', so Gain is the Fuzz pot.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B50K",
+   "POT",
+   "legend calls it Gain"
+  ],
+  [
+   "Tone",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,187 @@
+{
+ "id": "dirtbox:2025-03-aion-fx-penumbra",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "15x20 stripboard shown twice (bare cuts/jumpers view on top, populated view below); only the populated view was counted. Modified Zvex Wooly Mammoth with a pickup-simulator transformer (drawn as TR1, listed in the legend as X1).",
+ "uncertain": [
+  "68nF (col 19, rows L-N): partly hidden under the 100uF electrolytic, reads '68nF' on a grey film-cap body",
+  "TR1/X1: legend prints '42tL019', taken as the 42TL019 audio transformer",
+  "Volume pot: legend says 'B10k (try A10k)'"
+ ],
+ "rows": [
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2k2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "5k1",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "56k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1m",
+   "R",
+   "1M"
+  ],
+  [
+   "×1",
+   "2m2",
+   "R",
+   "2.2M"
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "68nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "film box"
+  ],
+  [
+   "×4",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2n5457",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q2",
+   "2n3904",
+   "Q",
+   "low gain, start at 150 hFE; PN2222 also suggested"
+  ],
+  [
+   "Q3",
+   "2n3904",
+   "Q",
+   "low gain, start at 150 hFE; PN2222 also suggested"
+  ],
+  [
+   "D1",
+   "1n5817",
+   "D",
+   ""
+  ],
+  [
+   "TR1",
+   "42TL019",
+   "XFM",
+   "X1 in the legend"
+  ],
+  [
+   "Pinch",
+   "B500k",
+   "POT",
+   ""
+  ],
+  [
+   "Fuzz",
+   "C5k",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B10k",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B10k",
+   "POT",
+   "try A10k"
+  ],
+  [
+   "Pickup Sim",
+   "DPDT",
+   "SW",
+   "on/on toggle"
+  ],
+  [
+   "Low",
+   "SPDT",
+   "SW",
+   "on/off/on toggle"
+  ]
+ ],
+ "source": "layout"
+}

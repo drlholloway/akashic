@@ -1,0 +1,145 @@
+{
+ "id": "dirtbox:2021-04-trip-hazard-2-disruption-pedal",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 17x22 stripboard with a 14-pin and an 8-pin IC, a vactrol and no transistors. Both ICs are labelled IC1 on the board; the legend calls the 14-pin one IC1 (TL084) and the 8-pin one IC2 (LF353N / TL072).",
+ "uncertain": [
+  "1.4K at column 16, rows E-H (right edge): printed clearly, unusual value",
+  "3M lying flat at row C, columns 6-9: printed clearly, unusual value",
+  "7.5K at column 3, rows K-N: printed clearly, less common value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "16K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "7.5K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.4K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "240Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "82Ω",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "68pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×6",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL084",
+   "IC",
+   "14-pin"
+  ],
+  [
+   "IC2",
+   "LF353N",
+   "IC",
+   "legend: LF353N / TL072; drawn labelled IC1"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Vactrol",
+   "VTL5C1",
+   "OPTO",
+   "or LDR/LED combo (LED: 3mm red, LDR: >20M dark / 2.5k light)"
+  ],
+  [
+   "Disrupt",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Output",
+   "A10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

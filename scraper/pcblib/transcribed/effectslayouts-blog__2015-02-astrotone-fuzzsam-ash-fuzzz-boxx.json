@@ -1,0 +1,81 @@
+{
+ "id": "effectslayouts-blog:2015-02-astrotone-fuzzsam-ash-fuzzz-boxx",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "First picture is a photo of a built board with pots; read the second, the 'AstroTone Fuzz' perfboard layout (populated board, wiring diagram, underside, PCB). Counted from the populated board, confirmed on the wiring diagram. The diode printed '4001' on the +9v row has no designator.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1.8K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "2N3904",
+   "Q",
+   "Q1, Q2; legend: NPN silicon (2N3904, 5088, etc.)"
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   "D1, D2"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Attack",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

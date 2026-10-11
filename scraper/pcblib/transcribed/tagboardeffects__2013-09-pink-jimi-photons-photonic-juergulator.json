@@ -1,0 +1,117 @@
+{
+ "id": "tagboardeffects:2013-09-pink-jimi-photons-photonic-juergulator",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 14x9 with a populated board and a bare cuts-and-links view; counted from the populated board. The legend gives the transistors only by type (Q1 PNP germanium, Q2 NPN silicon), no part numbers.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "PNP Ge",
+   "Q",
+   "part number not given"
+  ],
+  [
+   "Q2",
+   "NPN Si",
+   "Q",
+   "part number not given"
+  ],
+  [
+   "D1",
+   "1N60",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N34A",
+   "D",
+   ""
+  ],
+  [
+   "Percolation",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Harmonics",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tweak",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

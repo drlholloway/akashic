@@ -1,0 +1,30 @@
+{
+ "id": "tagboardeffects:2013-10-dod-555-performer-distortion",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "NOT the DOD 555 circuit: the cached image is a small 'Simple Voltage Doubler' vero layout by IvIark (9V in, about 17.5V out) that accompanies the post. The rows are the doubler's parts only, not the distortion's.",
+ "uncertain": [
+  "IC printed 'IC7660S' on the body; entered as ICL7660S",
+  "image is the auxiliary voltage doubler, not the pedal named in the post"
+ ],
+ "rows": [
+  [
+   "×1",
+   "ICL7660S",
+   "IC",
+   "printed IC7660S"
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "1N5817",
+   "D",
+   "or other Schottky"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,119 @@
+{
+ "id": "dirtbox:2019-06-black-arts-toneworks-revelation-super_25",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 15x14 stripboard, Revelation Super Lead: the same board as the Super Bass with different values and three MPSA12. One 100K resistor is drawn greyed/translucent and is counted.",
+ "uncertain": [
+  "560nF, small yellow ceramic at the left edge (column 1, rows H-J): printed clearly as 560nF, but drawn like the two 560pF ceramics and in the position where the Super Bass has 470pF, so it may be a misprint for 560pF"
+ ],
+ "rows": [
+  [
+   "×5",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "560pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "560nF",
+   "C",
+   "drawn as a small ceramic; possibly a misprint for 560pF"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "MPSA12",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "MPSA12",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "MPSA12",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N914",
+   "D",
+   "legend: 1N914/1N4148"
+  ],
+  [
+   "D2",
+   "1N914",
+   "D",
+   "legend: 1N914/1N4148"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Pre Gain",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

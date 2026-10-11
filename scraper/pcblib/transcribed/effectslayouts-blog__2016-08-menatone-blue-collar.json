@@ -1,0 +1,129 @@
+{
+ "id": "effectslayouts-blog:2016-08-menatone-blue-collar",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with a colour wiring diagram, the underside and an etched PCB; counted from the populated perfboard. D1-D3 carry designators only, no type anywhere on the drawing. The legend calls the pot Drive, the wire labels call it Gain.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "56pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "27nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "D2",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "D3",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "4558",
+   "IC",
+   ""
+  ],
+  [
+   "Drive",
+   "A500K",
+   "POT",
+   "wires labelled Gain"
+  ],
+  [
+   "Presence",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,138 @@
+{
+ "id": "tagboardeffects:2012-02-lovepedal-kalamazoo",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "16 x 12 vero ('corrected values'), populated board above a bare cuts-and-links view; five diodes, D5 being the supply polarity diode, and two empty pads at the left edge for an optional pF capacitor whose value is not given.",
+ "uncertain": [
+  "2K74 at the right edge: printed clearly, unusual value",
+  "332R at the bottom right: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3K3",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K74",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "332R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "150n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "?",
+   "C",
+   "optional, value not given (legend: 'Optional *pf cap at pads')"
+  ],
+  [
+   "IC",
+   "JRC4558",
+   "IC",
+   ""
+  ],
+  [
+   "×4",
+   "1N914",
+   "D",
+   "D1, D2, D3, D4"
+  ],
+  [
+   "D5",
+   "1N914",
+   "D",
+   "legend: consider 1N5817 or 1N4001 for D5"
+  ],
+  [
+   "Drive",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Glass",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

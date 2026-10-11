@@ -1,0 +1,123 @@
+{
+ "id": "dirtbox:2019-07-heavy-electronics-red-eyes-overdrive",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 17x11 stripboard with two transistors, two on-board trimmers and a pair of 3mm red clipping LEDs. The legend suggests raising the rightmost trimpot to 50k as a mod; the drawn value (10K) is used. The Volume pot is labelled Level on the wire labels.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "39K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "10K",
+   "TRIM",
+   "suggested mod: increase rightmost trimpot to 50k"
+  ],
+  [
+   "Q1",
+   "2N5089",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N5457",
+   "Q",
+   "JFET"
+  ],
+  [
+   "×2",
+   "3mm red LED",
+   "LED",
+   "D1, D2"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Tone",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   "labelled Level on the board"
+  ]
+ ],
+ "source": "layout"
+}

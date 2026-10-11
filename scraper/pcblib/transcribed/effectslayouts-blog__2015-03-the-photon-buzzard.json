@@ -1,0 +1,120 @@
+{
+ "id": "effectslayouts-blog:2015-03-the-photon-buzzard",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "The Photon Buzzard: populated perfboard with three board-mounted pots, colour wiring diagram, underside and etched PCB of the same circuit; counted from the perfboard and confirmed against the wiring diagram. Transistors and D1 are given by type only, no part numbers.",
+ "uncertain": [
+  "Q1, Q2 and D1: the legend gives only a type (high gain NPN silicon; NPN germanium or silicon; germanium), no part number",
+  "Phase pot 20K Lin: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "6.8nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100K",
+   "TRIM",
+   ""
+  ],
+  [
+   "D1",
+   "?",
+   "D",
+   "value not given; legend: Germanium"
+  ],
+  [
+   "D2",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "?",
+   "Q",
+   "value not given; legend: High gain NPN Silicon"
+  ],
+  [
+   "Q2",
+   "?",
+   "Q",
+   "value not given; legend: NPN Germanium or Silicon"
+  ],
+  [
+   "Shape",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Phase",
+   "B20K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

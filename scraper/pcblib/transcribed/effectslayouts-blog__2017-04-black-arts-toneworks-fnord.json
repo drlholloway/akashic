@@ -1,0 +1,123 @@
+{
+ "id": "effectslayouts-blog:2017-04-black-arts-toneworks-fnord",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Etched PCB layout (component overlay over the copper, plus the bare copper below), not a strip or perf board. Values are small and overprinted by drill crosshairs. SW1 is a two-pad switch connection with no type given.",
+ "uncertain": [
+  "100k, vertical resistor at the far left beside the IC: crosshair overlaps the middle digits, could be 180k or 150k",
+  "2.2n, vertical capacitor between that resistor and the IC: small and overprinted, could be 22n",
+  "10k, vertical resistor right of the 1M beside the 22u can: the first digits are overprinted",
+  "CD4070: the IC label is overprinted by the centre mark; read as CD4070 (14-pin)",
+  "10n, capacitor at the top right of the IC: overprinted, could be 100n"
+ ],
+ "rows": [
+  [
+   "×2",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.2n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "CD4070",
+   "IC",
+   ""
+  ],
+  [
+   "×1",
+   "MPSA13",
+   "Q",
+   ""
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "SW1",
+   "?",
+   "SW",
+   "value not given; two-pad switch connection"
+  ],
+  [
+   "Fnord",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Filter",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Silence",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,137 @@
+{
+ "id": "tagboardeffects:2012-08-mxr-phase-45-modded",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout, populated board on the left and the bare cuts/links view on the right. JC Maillet mods: Phase 45 / Univibe ratio switch (4PDT, drawn with four capacitors soldered across its lugs), Mix control, external Rate LED and Bias pot. The four switch capacitors are included in the counts.",
+ "uncertain": [
+  "4K1 lower right of the board (next to the 150K resistors): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×11",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K4",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3M9",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K1",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "47n",
+   "C",
+   "2 on the board, 2 on the switch"
+  ],
+  [
+   "×5",
+   "10n",
+   "C",
+   "4 on the board, 1 on the switch"
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   "on the switch"
+  ],
+  [
+   "×3",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "5V1 zener",
+   "D",
+   ""
+  ],
+  [
+   "×2",
+   "NE5532",
+   "IC",
+   ""
+  ],
+  [
+   "Q1",
+   "2N5458",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q2",
+   "2N5458",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Speed",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Bias",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Mix",
+   "B22K",
+   "POT",
+   ""
+  ],
+  [
+   "Phase 45 / Univibe",
+   "4PDT",
+   "SW",
+   "2 position"
+  ]
+ ],
+ "source": "layout"
+}

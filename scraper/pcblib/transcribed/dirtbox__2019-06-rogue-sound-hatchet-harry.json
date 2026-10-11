@@ -1,0 +1,105 @@
+{
+ "id": "dirtbox:2019-06-rogue-sound-hatchet-harry",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 12x8 stripboard, two-transistor fuzz. An unlabelled ceramic cap at column L (marked *) is an optional anti-oscillation cap, 47pF to 220pF per the legend.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.9K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "680K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47pF",
+   "C",
+   "optional cap to prevent oscillation, 47pF to 220pF; no value printed on the part"
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC337",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "BC337",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Attack",
+   "A1K",
+   "POT",
+   ""
+  ],
+  [
+   "Fury",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

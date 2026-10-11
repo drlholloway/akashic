@@ -1,0 +1,129 @@
+{
+ "id": "tagboardeffects:2013-04-lovepedal-les-lius",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard 13x11, populated board beside a bare cuts-and-links view. The legend calls the 1K pot Gain while the wires are labelled Drive; Q2 is given only as an unknown JFET.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "3K3",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3M3",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10p",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "?",
+   "Q",
+   "JFET, value not given (legend: unknown JFET)"
+  ],
+  [
+   "VR",
+   "78L05",
+   "IC",
+   "voltage regulator"
+  ],
+  [
+   "×2",
+   "1N914",
+   "D",
+   "D1, D2"
+  ],
+  [
+   "×3",
+   "BAT46",
+   "D",
+   "D3, D4, D5"
+  ],
+  [
+   "Gain",
+   "B1K",
+   "POT",
+   "wires labelled Drive"
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Sw1",
+   "SPST",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Sw2",
+   "SPDT on/off/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

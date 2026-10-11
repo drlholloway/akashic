@@ -1,0 +1,81 @@
+{
+ "id": "effectslayouts-blog:2017-01-earthquaker-devices-bellows",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Picture 1 (and its small copy) is the schematic, pictures 5 and 6 are a photo of the original pedal's PCB; picture 3 is the perfboard layout sheet (populated board with board-mounted pots, wiring diagram, underside, etch mask). Read from the populated board, confirmed against the wiring diagram. The layout adds a 1N5817 and a second 100uF for the supply that the schematic does not draw.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "200Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "68nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "PF5102",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q2",
+   "MPSA13",
+   "Q",
+   ""
+  ],
+  [
+   "Gain",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

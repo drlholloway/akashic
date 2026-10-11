@@ -1,0 +1,57 @@
+{
+ "id": "tagboardeffects:2014-04-acoustic-piezo-preamp",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small 11x8 vero board with a bare cuts/links view below; a single TL071 piezo buffer with a volume pot. Small image, read at 6x.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL071",
+   "IC",
+   ""
+  ],
+  [
+   "Volume",
+   "B10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

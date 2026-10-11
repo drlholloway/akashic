@@ -1,0 +1,141 @@
+{
+ "id": "tagboardeffects:2013-02-the-crank",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard 18 x 12, populated view on top and a bare cuts-and-links view below; counted from the populated view. Large clear print. Gain is a dual-gang 10K with no taper stated.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "30K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "6.8K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "680pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "NE5532",
+   "IC",
+   "legend: NE5532 or similar"
+  ],
+  [
+   "D1",
+   "1N914",
+   "D",
+   "legend: D1-D6 are 1N914 or 1N4148"
+  ],
+  [
+   "D2",
+   "1N914",
+   "D",
+   "1N914 or 1N4148"
+  ],
+  [
+   "D3",
+   "1N914",
+   "D",
+   "1N914 or 1N4148"
+  ],
+  [
+   "D4",
+   "1N914",
+   "D",
+   "1N914 or 1N4148"
+  ],
+  [
+   "D5",
+   "1N914",
+   "D",
+   "1N914 or 1N4148"
+  ],
+  [
+   "D6",
+   "1N914",
+   "D",
+   "1N914 or 1N4148"
+  ],
+  [
+   "D7",
+   "1N4001",
+   "D",
+   "legend: 1N4001 or 1N5817"
+  ],
+  [
+   "Gain",
+   "10K",
+   "POT",
+   "dual; taper not stated"
+  ],
+  [
+   "Volume",
+   "A10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

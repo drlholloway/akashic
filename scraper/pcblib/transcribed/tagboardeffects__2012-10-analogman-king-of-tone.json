@@ -1,0 +1,156 @@
+{
+ "id": "tagboardeffects:2012-10-analogman-king-of-tone",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "18 x 12 stripboard, populated board at the top and bare cuts-and-links view below, plus two switch wiring drawings carrying the clipping diodes D1-D6 off board. D7 and the Presence trimmer are on the board.",
+ "uncertain": [
+  "Switch type: the legend says only '2 position on/on'; both are drawn as 6-lug bodies, so entered as DPDT on/on",
+  "The second switch (D5/D6, between Tone 3 and Vol 1) has no name on the drawing; entered as Sw2"
+ ],
+ "rows": [
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "6K8",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100p",
+   "C",
+   ""
+  ],
+  [
+   "×5",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1u",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Presence",
+   "50K",
+   "TRIM",
+   ""
+  ],
+  [
+   "×1",
+   "JRC4580",
+   "IC",
+   ""
+  ],
+  [
+   "×4",
+   "MA856",
+   "D",
+   "D1 - D4, on Sw1"
+  ],
+  [
+   "×2",
+   "1S1588",
+   "D",
+   "D5, D6, on the second switch"
+  ],
+  [
+   "D7",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Drive",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Sw1",
+   "DPDT on/on",
+   "SW",
+   "toggle; legend: 2 position on/on; selects D1/D3 or D2/D4 clipping"
+  ],
+  [
+   "Sw2",
+   "DPDT on/on",
+   "SW",
+   "toggle, unnamed on the drawing; legend: 2 position on/on; switches D5/D6 between Tone 3 and Vol 1"
+  ]
+ ],
+ "source": "layout"
+}

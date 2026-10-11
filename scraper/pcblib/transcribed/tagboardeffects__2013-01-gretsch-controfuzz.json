@@ -1,0 +1,87 @@
+{
+ "id": "tagboardeffects:2013-01-gretsch-controfuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Pictures 1-2 are a photo of the pedal; picture 3 is the vero layout (populated board above, cuts and links below), picture 4 its thumbnail.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "1N4001",
+   "D",
+   "D1-D3"
+  ],
+  [
+   "IC1",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "Distort",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Boost",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

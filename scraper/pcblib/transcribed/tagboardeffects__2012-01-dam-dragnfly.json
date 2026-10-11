@@ -1,0 +1,114 @@
+{
+ "id": "tagboardeffects:2012-01-dam-dragnfly",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Populated vero board above a bare cuts-and-links view; counted from the populated board. Two small ceramic caps are printed without a unit.",
+ "uncertain": [
+  "Ceramic cap at the far left printed '470' with no unit: presumably 470p",
+  "Ceramic cap next to Q2 printed '47' with no unit: presumably 47p"
+ ],
+ "rows": [
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "820R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "56K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470",
+   "C",
+   "ceramic, printed without unit, presumably 470p"
+  ],
+  [
+   "×1",
+   "47",
+   "C",
+   "ceramic, printed without unit, presumably 47p"
+  ],
+  [
+   "×1",
+   "4n7",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Q1",
+   "BC337",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "CV7112",
+   "Q",
+   ""
+  ],
+  [
+   "Filter",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Attack",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "B500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

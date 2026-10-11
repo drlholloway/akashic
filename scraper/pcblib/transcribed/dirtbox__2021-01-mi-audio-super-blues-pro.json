@@ -1,0 +1,181 @@
+{
+ "id": "dirtbox:2021-01-mi-audio-super-blues-pro",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 17x18 stripboard with a charge pump (IC2); values printed on every part, legend for actives, pots and the two toggles. The LED resistor is printed only as CLR.",
+ "uncertain": [
+  "20pF ceramic at column 14, rows I-J: printed clearly, unusual value (the other two ceramics are 220pF)",
+  "Body pot: the legend prints '1mD', entered as D1M; taper letter D is not a standard taper",
+  "8.2M at column 9, rows K-M: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×3",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "8.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×2",
+   "1uF",
+   "C",
+   "film"
+  ],
+  [
+   "×2",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "20pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "220uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N7000",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "Q2",
+   "2N7000",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "IC1",
+   "LM833",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "MAX1044",
+   "IC",
+   "MAX1044 / ICL7660S"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Drive",
+   "A250K",
+   "POT",
+   ""
+  ],
+  [
+   "Trim",
+   "C10K",
+   "POT",
+   ""
+  ],
+  [
+   "Detail",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Body",
+   "D1M",
+   "POT",
+   "legend prints 1mD"
+  ],
+  [
+   "Volume",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch A",
+   "SPDT on/off/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Switch B",
+   "SPDT on/off/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

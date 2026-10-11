@@ -1,0 +1,51 @@
+{
+ "id": "tagboardeffects:2013-01-electro-harmonix-lpb1-with-trimmer",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "9x7 stripboard LPB1 with an on-board 100K trimmer in place of the boost pot; populated board on the left, bare board with one cut on the right. No off-board pots.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "390R",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "TRIM",
+   "on-board trimmer, value printed beside the board"
+  ]
+ ],
+ "source": "layout"
+}

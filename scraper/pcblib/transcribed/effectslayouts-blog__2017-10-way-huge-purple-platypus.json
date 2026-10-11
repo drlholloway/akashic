@@ -1,0 +1,153 @@
+{
+ "id": "effectslayouts-blog:2017-10-way-huge-purple-platypus",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout shown populated, as underside, as a colour wiring diagram and as an etched PCB; counted from the populated board. The legend gives the transistors only as PNP silicon and NPN silicon, with no part numbers.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×5",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "510K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "120pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "68nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "330uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "CD4049UBE",
+   "IC",
+   ""
+  ],
+  [
+   "Q1",
+   "PNP silicon",
+   "Q",
+   "part number not given"
+  ],
+  [
+   "Q2",
+   "NPN silicon",
+   "Q",
+   "part number not given"
+  ],
+  [
+   "D1",
+   "1N34A",
+   "D",
+   "1N34A or other germanium"
+  ],
+  [
+   "D2",
+   "1N34A",
+   "D",
+   "1N34A or other germanium"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Drive",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

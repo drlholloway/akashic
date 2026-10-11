@@ -1,0 +1,123 @@
+{
+ "id": "dirtbox:2026-09-runoffgroove-mr-eq",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated vero board (19x16) around a CD4049UBE, with three SPDT band switches and a level pot.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "560K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×7",
+   "270K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "15nF",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "330pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "680pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "CD4049UBE",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Level",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Hi",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Mid",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Lo",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

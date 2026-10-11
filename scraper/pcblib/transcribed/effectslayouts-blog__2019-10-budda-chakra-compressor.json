@@ -1,0 +1,135 @@
+{
+ "id": "effectslayouts-blog:2019-10-budda-chakra-compressor",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout by storyboardist with a colour wiring diagram, a bare underside and an etched PCB of the same circuit; counted from the populated board and confirmed against the diagram. Optical compressor: an on-board LED faces an LDR; D1-D4 are drawn with designators only.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×5",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×5",
+   "1uF",
+   "C",
+   "drawn as box film caps"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N5817",
+   "D",
+   "printed 5817"
+  ],
+  [
+   "D1",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "D2",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "D3",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "D4",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "×1",
+   "LED",
+   "LED",
+   "on board, drawn red, paired with the LDR; type not given"
+  ],
+  [
+   "×1",
+   "LDR",
+   "OPTO",
+   ""
+  ],
+  [
+   "×2",
+   "LF353P",
+   "IC",
+   ""
+  ],
+  [
+   "Comp",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Attack",
+   "B5K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

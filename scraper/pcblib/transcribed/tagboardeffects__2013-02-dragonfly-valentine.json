@@ -1,0 +1,99 @@
+{
+ "id": "tagboardeffects:2013-02-dragonfly-valentine",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "14x9 stripboard shown populated and bare (cuts only). One BJT and one JFET.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "5.1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "180K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "Q1",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "NTE458",
+   "Q",
+   "JFET; legend: NTE458 (or similar)"
+  ],
+  [
+   "Drive",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

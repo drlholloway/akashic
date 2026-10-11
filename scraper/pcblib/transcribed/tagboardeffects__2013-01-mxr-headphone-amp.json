@@ -1,0 +1,111 @@
+{
+ "id": "tagboardeffects:2013-01-mxr-headphone-amp",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Third picture of the post is the vero layout (17 x 13), drawn populated and bare; the first two pictures are a photo/thumbnail and the fourth a thumbnail of the layout. One Volume pot (lugs 1&2 and 3); output is split mono.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "3.9K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "56K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL071",
+   "IC",
+   ""
+  ],
+  [
+   "Q1",
+   "2N4401",
+   "Q",
+   "legend: try 2N3904/2N3906"
+  ],
+  [
+   "Q2",
+   "2N4403",
+   "Q",
+   "legend: try 2N3904/2N3906"
+  ],
+  [
+   "×2",
+   "1N914",
+   "D",
+   "D1, D2; legend: try 1N4148"
+  ],
+  [
+   "Volume",
+   "C500K",
+   "POT",
+   "rev. log"
+  ]
+ ],
+ "source": "layout"
+}

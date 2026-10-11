@@ -1,0 +1,69 @@
+{
+ "id": "tagboardeffects:2014-02-emerson-custom-guitars-paramount",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small 7x7 vero with one Darlington transistor, shown populated and bare. All values read clearly at zoom.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2n2",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "MPSA13",
+   "Q",
+   ""
+  ],
+  [
+   "Gain",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B250K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

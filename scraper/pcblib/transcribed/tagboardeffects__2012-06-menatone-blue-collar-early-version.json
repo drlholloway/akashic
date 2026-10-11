@@ -1,0 +1,111 @@
+{
+ "id": "tagboardeffects:2012-06-menatone-blue-collar-early-version",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard 16 x 10 with one dual op-amp, populated view on top and bare cuts/links view below; values read from the populated view.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "56p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "JRC4558",
+   "IC",
+   "JRC4558 or similar dual opamp"
+  ],
+  [
+   "×3",
+   "1N914",
+   "D",
+   "D1, D2, D3"
+  ],
+  [
+   "Gain",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Presence",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A250K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

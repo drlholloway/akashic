@@ -1,0 +1,144 @@
+{
+ "id": "dirtbox:2024-02-demeter-compulator",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Second picture is the 18x18 stripboard layout (the first is the schematic). Single populated board with two 8-pin ICs, a Vactrol and a 10K trimmer. The legend names only IC1, and its diode numbers (D1-D2, D3) do not match the board's (D2, D3, D4).",
+ "uncertain": [
+  "Diodes: board shows D2 and D3 drawn as red signal diodes and D4 as a black power diode; legend says D1-D2 1N4148, D3 1N5817. Read by body style (D2, D3 = 1N4148; D4 = 1N5817), the legend numbering looks off by one",
+  "IC2: no part number in the legend (only IC1: LF353N); may be meant as a second LF353N"
+ ],
+ "rows": [
+  [
+   "×5",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "619Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "film"
+  ],
+  [
+   "×2",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10K",
+   "TRIM",
+   ""
+  ],
+  [
+   "IC1",
+   "LF353N",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "?",
+   "IC",
+   "value not given"
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   "legend: D1-D2"
+  ],
+  [
+   "D3",
+   "1N4148",
+   "D",
+   "drawn as a signal diode; legend numbering offset"
+  ],
+  [
+   "D4",
+   "1N5817",
+   "D",
+   "drawn as a power diode; legend calls it D3"
+  ],
+  [
+   "Vactrol",
+   "VTL5C10",
+   "OPTO",
+   ""
+  ],
+  [
+   "Compress",
+   "A20K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A20K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

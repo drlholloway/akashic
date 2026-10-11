@@ -1,0 +1,135 @@
+{
+ "id": "dirtbox:2022-01-electronic-audio-experiments-mu-blaster",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 18x20 stripboard with values printed on every part; LT1054 charge pump with five 1N5817. Legend notes 10uF caps rated min 50v and 47uF caps rated min 35v.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×7",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "1uF",
+   "C",
+   "film box"
+  ],
+  [
+   "×3",
+   "10uF",
+   "C",
+   "electrolytic, rated min 50v"
+  ],
+  [
+   "×4",
+   "47uF",
+   "C",
+   "electrolytic, rated min 35v"
+  ],
+  [
+   "Q1",
+   "2N5457",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q2",
+   "2N5457",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q3",
+   "2N5457",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q4",
+   "2N5457",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q5",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "IC1",
+   "LT1054",
+   "IC",
+   ""
+  ],
+  [
+   "×5",
+   "1N5817",
+   "D",
+   "D1-D5"
+  ],
+  [
+   "Boost",
+   "C10K",
+   "POT",
+   ""
+  ],
+  [
+   "Depth",
+   "C1M",
+   "POT",
+   ""
+  ],
+  [
+   "Filter",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

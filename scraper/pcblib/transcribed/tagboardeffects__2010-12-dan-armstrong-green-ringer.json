@@ -1,0 +1,117 @@
+{
+ "id": "tagboardeffects:2010-12-dan-armstrong-green-ringer",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "19 x 9 stripboard drawn populated and bare; no pots. Some parts share a hole (diodes, 22K, 68K). D1/D2 are given only as a matched pair of Si, Ge or Schottky.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "2K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "560K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "6K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "160K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M5",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   "2N5088 or 2N5089"
+  ],
+  [
+   "Q2",
+   "2N3906",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "2N5088",
+   "Q",
+   "2N5088 or 2N5089"
+  ],
+  [
+   "D1",
+   "?",
+   "D",
+   "value not given; legend: matched pair of Si, Ge or Schottky"
+  ],
+  [
+   "D2",
+   "?",
+   "D",
+   "value not given; legend: matched pair of Si, Ge or Schottky"
+  ]
+ ],
+ "source": "layout"
+}

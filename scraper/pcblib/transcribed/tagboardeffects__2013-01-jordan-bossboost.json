@@ -1,0 +1,99 @@
+{
+ "id": "tagboardeffects:2013-01-jordan-bossboost",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "11x11 vero, populated board on the left and cuts/links view on the right. Two transistors and an optional polarity protection diode.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "680K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "Q1",
+   "2N3397",
+   "Q",
+   "try 2N3904"
+  ],
+  [
+   "Q2",
+   "2N3712",
+   "Q",
+   "try 2N2222"
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   "polarity protection, optional"
+  ],
+  [
+   "Treble",
+   "100K",
+   "POT",
+   "taper unknown (try linear)"
+  ],
+  [
+   "Bass",
+   "100K",
+   "POT",
+   "taper unknown (try linear)"
+  ]
+ ],
+ "source": "layout"
+}

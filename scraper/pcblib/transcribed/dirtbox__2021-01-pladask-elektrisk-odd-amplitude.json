@@ -1,0 +1,87 @@
+{
+ "id": "dirtbox:2021-01-pladask-elektrisk-odd-amplitude",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single small 10x10 stripboard around an LM567 tone decoder; three resistors, four electrolytics, five diodes, three pots and two SPDT toggles.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "LM567",
+   "IC",
+   ""
+  ],
+  [
+   "×4",
+   "1N4148",
+   "D",
+   "D1-D4"
+  ],
+  [
+   "D5",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Voltage",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Frequency",
+   "A250K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Channel",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Feedback",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

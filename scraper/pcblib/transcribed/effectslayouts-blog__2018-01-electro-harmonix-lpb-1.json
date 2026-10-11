@@ -1,0 +1,69 @@
+{
+ "id": "effectslayouts-blog:2018-01-electro-harmonix-lpb-1",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small perfboard layout with a colour wiring diagram, underside view and etched PCB of the same circuit; counted from the populated board and confirmed against the diagram.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "390Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   "2N5088 or similar"
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

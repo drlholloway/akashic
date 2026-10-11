@@ -1,0 +1,99 @@
+{
+ "id": "tagboardeffects:2012-02-baldwin-burns-buzzaround",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "15x10 vero, positive ground, drawn populated and bare. Three transistors drawn as pin letters only; legend says they are NKT213 and gives measured hfe for Q1-Q3. The diode is printed 'Ge', legend: 1N270 (or other Ge).",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "3K3",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "4u7",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N270",
+   "D",
+   "germanium; legend: 1N270 (or other Ge)"
+  ],
+  [
+   "×3",
+   "NKT213",
+   "Q",
+   "germanium PNP; measured hfe Q1 53, Q2 78, Q3 134"
+  ],
+  [
+   "Sustain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Balance",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Timbre",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

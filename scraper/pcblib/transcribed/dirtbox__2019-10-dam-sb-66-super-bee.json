@@ -1,0 +1,105 @@
+{
+ "id": "dirtbox:2019-10-dam-sb-66-super-bee",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 11x11 stripboard, positive-ground PNP germanium fuzz with a 22K trimmer on the board. Legend gives no transistor type beyond 'PNP Germanium'.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "820Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "TRIM",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "PNP Germanium",
+   "Q",
+   "type not given"
+  ],
+  [
+   "Q2",
+   "PNP Germanium",
+   "Q",
+   "type not given"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Attack",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "B500K",
+   "POT",
+   "legend: try 100kB for less low end"
+  ]
+ ],
+ "source": "layout"
+}

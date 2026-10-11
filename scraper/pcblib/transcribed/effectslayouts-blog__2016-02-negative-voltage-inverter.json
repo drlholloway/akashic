@@ -1,0 +1,27 @@
+{
+ "id": "effectslayouts-blog:2016-02-negative-voltage-inverter",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Tiny perfboard charge-pump board giving -9V from +9V, shown with a wiring diagram, underside and etched PCB; counted from the populated board. One 8-pin IC and two electrolytics.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1044/7660",
+   "IC",
+   "printed 1044/7660: a 1044 or 7660 charge pump"
+  ]
+ ],
+ "source": "layout"
+}

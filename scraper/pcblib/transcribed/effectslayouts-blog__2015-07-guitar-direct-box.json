@@ -1,0 +1,77 @@
+{
+ "id": "effectslayouts-blog:2015-07-guitar-direct-box",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout shown four ways (populated board, colour wiring diagram, underside, etched PCB); counted from the populated board and confirmed against the diagram. Balanced and unbalanced outputs, 9-18V supply.",
+ "uncertain": [
+  "IC1: legend prints 'OP2134 or TL072' clearly; OP2134 is presumably the OPA2134, kept as printed"
+ ],
+ "rows": [
+  [
+   "×7",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10Ω",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "470uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "220uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "IC1",
+   "OP2134",
+   "IC",
+   "legend: OP2134 or TL072"
+  ],
+  [
+   "Gain",
+   "C10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

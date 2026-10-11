@@ -1,0 +1,123 @@
+{
+ "id": "dirtbox:2019-09-skreddy-fuzz-driver",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 12x11 stripboard with two transistors; legend gives only generic types for Q1-Q2 (NPN Germanium) and D1 (Germanium), and five pots.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "56K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "NPN Germanium",
+   "Q",
+   "legend: NPN Germanium, no part number"
+  ],
+  [
+   "Q2",
+   "NPN Germanium",
+   "Q",
+   "legend: NPN Germanium, no part number"
+  ],
+  [
+   "D1",
+   "Germanium",
+   "D",
+   "legend: Germanium, no part number"
+  ],
+  [
+   "D2",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Fatness",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Bass",
+   "B2K",
+   "POT",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B2K",
+   "POT",
+   ""
+  ],
+  [
+   "Drive",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

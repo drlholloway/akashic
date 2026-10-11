@@ -1,0 +1,63 @@
+{
+ "id": "tagboardeffects:2012-08-dwarftcraft-great-destroyer",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small 10-strip vero with one 16-pin CMOS inverter, a trimmer and four passives; populated board on the left, cuts-only board on the right.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "3K3",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "MC14049BCP",
+   "IC",
+   "legend: MC14049BCP or CD4049 (buffered)"
+  ],
+  [
+   "×1",
+   "22K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Drive",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Starve",
+   "B2K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

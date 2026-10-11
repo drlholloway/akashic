@@ -1,0 +1,93 @@
+{
+ "id": "tagboardeffects:2012-05-rangemaster-with-switchable-input-caps",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout, 11 x 10, populated board plus a bare view and a pinout sketch of the 2-pole 6-way rotary that selects one of six input caps (second pole unused). Positive ground; the transistor is drawn only as B/C/E pads and described as PNP germanium, no type given.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4n7",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10n",
+   "C",
+   "one switched input cap, one output cap"
+  ],
+  [
+   "×1",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "68n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "150n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "5K",
+   "TRIM",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "Q",
+   "value not given; legend: Transistor is PNP germanium"
+  ],
+  [
+   "Boost",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Input caps",
+   "2P6T rotary",
+   "SW",
+   "2nd pole unused"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,189 @@
+{
+ "id": "tagboardeffects:2017-11-wampler-hot-wired-v1",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Populated 23x14 stripboard on the left, bare cuts view on the right (not counted). Two channels around one 4580DD; four clipping LEDs and two 1N4148 on the board.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "820R",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "470n",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "1u",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4580DD",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "5mm diffused red LED",
+   "LED",
+   ""
+  ],
+  [
+   "D2",
+   "5mm diffused red LED",
+   "LED",
+   ""
+  ],
+  [
+   "D3",
+   "5mm diffused red LED",
+   "LED",
+   ""
+  ],
+  [
+   "D4",
+   "5mm diffused red LED",
+   "LED",
+   ""
+  ],
+  [
+   "D5",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D6",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "Volume A",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume B",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Drive A",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Drive B",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone A",
+   "C10K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone B",
+   "C25K",
+   "POT",
+   ""
+  ],
+  [
+   "Fat A",
+   "SPDT on/off/on",
+   "SW",
+   "Switch 1, toggle"
+  ],
+  [
+   "Fat B",
+   "SPST",
+   "SW",
+   "Switch 2, toggle"
+  ]
+ ],
+ "source": "layout"
+}

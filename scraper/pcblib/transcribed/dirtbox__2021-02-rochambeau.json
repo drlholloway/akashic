@@ -1,0 +1,111 @@
+{
+ "id": "dirtbox:2021-02-rochambeau",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 13x9 stripboard (Scientistic Guitarist Rochambeau dirty boost) with an LM386 and two red clipping LEDs on the board; legend gives the actives and four pots.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "LM386",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "3mm red LED",
+   "LED",
+   ""
+  ],
+  [
+   "D2",
+   "3mm red LED",
+   "LED",
+   ""
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Tone",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Extra",
+   "C10K",
+   "POT",
+   ""
+  ],
+  [
+   "Dirt",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

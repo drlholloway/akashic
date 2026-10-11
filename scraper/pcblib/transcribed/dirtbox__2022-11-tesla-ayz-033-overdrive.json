@@ -1,0 +1,117 @@
+{
+ "id": "dirtbox:2022-11-tesla-ayz-033-overdrive",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "One small populated 15x12 stripboard with a single 1458 dual op-amp (2x MAA741 in the original), three rectifier clipping diodes and two pots. All values printed clearly.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "560K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "IC1",
+   "1458",
+   "IC",
+   "2x MAA741 in original"
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   "legend: 1N4001 or other silicon rectifier diodes (KA261 in original)"
+  ],
+  [
+   "D2",
+   "1N4001",
+   "D",
+   "legend: 1N4001 or other silicon rectifier diodes (KA261 in original)"
+  ],
+  [
+   "D3",
+   "1N4001",
+   "D",
+   "legend: 1N4001 or other silicon rectifier diodes (KA261 in original)"
+  ],
+  [
+   "D4",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Drive",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

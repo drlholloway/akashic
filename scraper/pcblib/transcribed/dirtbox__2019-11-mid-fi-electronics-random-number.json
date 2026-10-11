@@ -1,0 +1,81 @@
+{
+ "id": "dirtbox:2019-11-mid-fi-electronics-random-number",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 15x9 stripboard with four transistors and one volume pot; several resistors are drawn standing over cuts.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N4401",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "PN2222",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "Q4",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

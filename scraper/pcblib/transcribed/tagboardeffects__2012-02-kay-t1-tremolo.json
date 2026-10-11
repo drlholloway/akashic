@@ -1,0 +1,131 @@
+{
+ "id": "tagboardeffects:2012-02-kay-t1-tremolo",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 16 x 12 of the Kay T1 Tremolo with four transistors, populated board above a bare view; single Speed pot.",
+ "uncertain": [
+  "43K right of Q1: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×3",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "43K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "4u7",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2SC828",
+   "Q",
+   "try any high gain NPN silicon"
+  ],
+  [
+   "Q2",
+   "2SC828",
+   "Q",
+   "try any high gain NPN silicon"
+  ],
+  [
+   "Q3",
+   "2SC828",
+   "Q",
+   "try any high gain NPN silicon"
+  ],
+  [
+   "Q4",
+   "2SC828",
+   "Q",
+   "try any high gain NPN silicon"
+  ],
+  [
+   "Speed",
+   "B1K",
+   "POT",
+   "analogguru's scheme suggests 5K Lin"
+  ]
+ ],
+ "source": "layout"
+}

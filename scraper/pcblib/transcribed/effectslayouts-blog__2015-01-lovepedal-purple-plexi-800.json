@@ -1,0 +1,114 @@
+{
+ "id": "effectslayouts-blog:2015-01-lovepedal-purple-plexi-800",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with the populated board, a colour wiring diagram, the underside and an etched PCB; counted from the populated board and confirmed against the wiring diagram. The 2.2K at the right edge feeds the LED pad; there is no polarity diode on this board.",
+ "uncertain": [
+  "1.74K resistor below the 330Ω: printed clearly, unusual value",
+  "370pF ceramic at the bottom-left corner: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "10Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.74K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   "feeds the LED pad"
+  ],
+  [
+   "×2",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "370pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "LM386",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "BAT46",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "BAT46",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Frequency",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

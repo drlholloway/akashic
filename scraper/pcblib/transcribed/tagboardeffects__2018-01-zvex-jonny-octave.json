@@ -1,0 +1,132 @@
+{
+ "id": "tagboardeffects:2018-01-zvex-jonny-octave",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 25 x 20 with a bare cuts-and-links view beside it; two 42TL002 transformers, four BS170, two 2N3904, four 5K trimmers and three LED resistors marked CLR. The legend lists D3-11 as 1N34A but only eight are drawn (no D5 found).",
+ "uncertain": [
+  "Germanium diodes: D3, D4, D6, D7, D8, D9, D10, D11 are drawn (8); the legend says D3-11 (9) and no D5 could be found on the board",
+  "Octave 1 / Octave 2 switch: type not stated; six lugs (Sw 1-6) are wired, so entered as DPDT; it may be a footswitch"
+ ],
+ "rows": [
+  [
+   "×4",
+   "2K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "5K1",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×4",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "1u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×4",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×4",
+   "5K",
+   "TRIM",
+   ""
+  ],
+  [
+   "×4",
+   "BS170",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "×2",
+   "2N3904",
+   "Q",
+   "printed 3904"
+  ],
+  [
+   "D1",
+   "9V1 Zener",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "×8",
+   "1N34A",
+   "D",
+   "D3, D4, D6-D11 drawn; legend says D3-11"
+  ],
+  [
+   "×2",
+   "42TL002",
+   "XFM",
+   ""
+  ],
+  [
+   "Level 1",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Level 2",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Octave 1 / Octave 2",
+   "DPDT",
+   "SW",
+   "type not stated; six lugs wired"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,89 @@
+{
+ "id": "tagboardeffects:2011-04-hao-rust-driver",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "16x8 vero with one populated board and a bare cuts/links view; one off-board 500K Lin pot drawn without a name, wired between the board, Output and Ground.",
+ "uncertain": [
+  "Pot name: the drawing gives no knob name for the 500K Lin pot; 'Volume' is inferred from its wiring to Output and Ground"
+ ],
+ "rows": [
+  [
+   "×3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "56n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1n2",
+   "C",
+   ""
+  ],
+  [
+   "IC1",
+   "JRC4558",
+   "IC",
+   "legend: Dual opamp, JRC4558, TL072, LF353 etc"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   "legend: silicon 1N4148 or similar"
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   "legend: silicon 1N4148 or similar"
+  ],
+  [
+   "Volume",
+   "B500K",
+   "POT",
+   "unnamed in the drawing, printed 500K Lin"
+  ]
+ ],
+ "source": "layout"
+}

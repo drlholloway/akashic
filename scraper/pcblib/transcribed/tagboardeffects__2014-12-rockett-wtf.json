@@ -1,0 +1,135 @@
+{
+ "id": "tagboardeffects:2014-12-rockett-wtf",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "First picture is the schematic; the second and third are two versions of the 11x11 vero layout. Read the first (original) version; the 'modded' version differs only in a 2K in place of one 1K, 2N5088 for Q1 and 2N2907 for Q2. The 4n7 and 18n caps sit on the off-board EQ switch and are counted.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "560K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4n7",
+   "C",
+   "on the EQ switch"
+  ],
+  [
+   "×1",
+   "18n",
+   "C",
+   "on the EQ switch"
+  ],
+  [
+   "Q1",
+   "2N2222",
+   "Q",
+   "text suggests 2N5088"
+  ],
+  [
+   "Q2",
+   "2N3906",
+   "Q",
+   "text suggests 2N2907"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "B%st",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "WTF",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "EQ",
+   "DPDT on/off/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "B%st",
+   "3PDT",
+   "SW",
+   "boost footswitch"
+  ]
+ ],
+ "source": "layout"
+}

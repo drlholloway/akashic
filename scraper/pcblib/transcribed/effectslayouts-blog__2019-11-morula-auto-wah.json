@@ -1,0 +1,111 @@
+{
+ "id": "effectslayouts-blog:2019-11-morula-auto-wah",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with a colour wiring diagram, the bare underside and an etched PCB; counted from the populated board and confirmed against the diagram. One CMOS inverter IC and an LED mounted on the board as part of the circuit.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "4049UBE",
+   "IC",
+   "CD4049UBE hex inverter"
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   "printed 4001"
+  ],
+  [
+   "×1",
+   "LED",
+   "LED",
+   "on the board, drawn red, type not given"
+  ],
+  [
+   "Depth",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Rate",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

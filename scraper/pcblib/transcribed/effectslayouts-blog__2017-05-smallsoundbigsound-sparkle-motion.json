@@ -1,0 +1,111 @@
+{
+ "id": "effectslayouts-blog:2017-05-smallsoundbigsound-sparkle-motion",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with underside, colour wiring diagram and PCB. Input and the dual-gang EQ pot mount on the board; Q1 is given only as 'NPN germanium'.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "180K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "NPN germanium",
+   "Q",
+   "type not given beyond 'NPN germanium'"
+  ],
+  [
+   "Input",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "EQ",
+   "B100K",
+   "POT",
+   "dual"
+  ],
+  [
+   "Bias",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Treble",
+   "SPST",
+   "SW",
+   "toggle; wires Treb1/Treb2"
+  ]
+ ],
+ "source": "layout"
+}

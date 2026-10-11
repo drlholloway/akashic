@@ -1,0 +1,81 @@
+{
+ "id": "dirtbox:2021-09-hagerman-amplification-metal",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 15x15 stripboard, LM3900 fuzz/distortion; values printed on every part, two resistors and two capacitors lie flat along a strip.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1.5M",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "LM3900",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

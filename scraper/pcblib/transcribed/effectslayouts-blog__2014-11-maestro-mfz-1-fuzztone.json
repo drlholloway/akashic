@@ -1,0 +1,113 @@
+{
+ "id": "effectslayouts-blog:2014-11-maestro-mfz-1-fuzztone",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout shown as populated board, bare underside, etched PCB and colour wiring diagram; counted from the populated board, diagram agrees. D3 is given as 1N400X (any 1N400x).",
+ "uncertain": [
+  "Resistor at column B rows F-I (bottom left) is printed '1-2M' on both the board and the wiring diagram: probably means 1M to 2M (or 1.2M); kept as printed"
+ ],
+ "rows": [
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1-2M",
+   "R",
+   "printed '1-2M'"
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "1N400X",
+   "D",
+   "legend: 1N400X"
+  ],
+  [
+   "Drive",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

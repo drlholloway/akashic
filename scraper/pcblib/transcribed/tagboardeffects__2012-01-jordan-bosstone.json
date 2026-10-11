@@ -1,0 +1,71 @@
+{
+ "id": "tagboardeffects:2012-01-jordan-bosstone",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "16x9 vero, single populated view with the two pots wired below; no separate cuts drawing. Transistor types are given only as NPN silicon (Q1) and PNP silicon (Q2).",
+ "uncertain": [
+  "50p ceramic right of the two 18K resistors: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "560K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "22nF",
+   "C",
+   "box film"
+  ],
+  [
+   "×1",
+   "50p",
+   "C",
+   ""
+  ],
+  [
+   "Q1",
+   "NPN silicon",
+   "Q",
+   "type not given"
+  ],
+  [
+   "Q2",
+   "PNP silicon",
+   "Q",
+   "type not given"
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "Attack",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

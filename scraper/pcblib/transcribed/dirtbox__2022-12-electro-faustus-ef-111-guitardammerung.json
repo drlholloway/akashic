@@ -1,0 +1,87 @@
+{
+ "id": "dirtbox:2022-12-electro-faustus-ef-111-guitardammerung",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 18x14 stripboard with two CMOS ICs (CD4049UBE, CD4046BE), many links and four pots; Intensity and Tone share one legend line (100kB each).",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "150pF",
+   "C",
+   ""
+  ],
+  [
+   "×5",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "CD4049UBE",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "CD4046BE",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Intensity",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Speed",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A1M",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,93 @@
+{
+ "id": "dirtbox:2019-06-subdecay-stupid-box",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 14x9 stripboard with one op-amp, two clipping diodes and a polarity diode; three pots named in the legend.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "560pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL071",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Drive",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,84 @@
+{
+ "id": "tagboardeffects:2011-11-dam-red-rooster-vero-layout",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated vero board with both pots drawn above it; one germanium NPN transistor with no part number, a 5K trimmer on the board and three axial electrolytics.",
+ "uncertain": [
+  "Transistor: legend says only 'NPN Germanium', no part number",
+  "2u2 at the far left: drawn as an axial polarized can, taken as electrolytic"
+ ],
+ "rows": [
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2u2",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "5n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "5K",
+   "TRIM",
+   ""
+  ],
+  [
+   "×1",
+   "NPN Germanium",
+   "Q",
+   "no part number given"
+  ],
+  [
+   "Boost",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Range",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

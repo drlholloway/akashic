@@ -1,0 +1,167 @@
+{
+ "id": "dirtbox:2025-11-jurgen-haible-wasp-cv-filter-lm13700",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Two views of one 23x23 stripboard: bare board with cuts and jumpers on the left, populated board on the right (counted). Values are printed with lowercase k/m (4k7, 1m5, 1m); the megohm values are written here with a capital M. The legend suggests an optional SPST switch on the CV input and notes the original Cutoff pot is A10k; neither is listed.",
+ "uncertain": [
+  "1M5 at column 3, rows G-J: printed '1m5' and partly covered by the 10uF electrolytic, read as 1.5M"
+ ],
+ "rows": [
+  [
+   "×5",
+   "1k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4k7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×9",
+   "33k",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "51k",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   "printed 1m"
+  ],
+  [
+   "×1",
+   "1M5",
+   "R",
+   "printed 1m5"
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "68pF",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "CD4069",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "LM13700",
+   "IC",
+   ""
+  ],
+  [
+   "Reg",
+   "L78L05",
+   "IC",
+   "regulator"
+  ],
+  [
+   "×3",
+   "1N4148",
+   "D",
+   "D1-D3"
+  ],
+  [
+   "×2",
+   "BAT85",
+   "D",
+   "D4, D5"
+  ],
+  [
+   "D6",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Resonance",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Cutoff",
+   "C100K",
+   "POT",
+   "legend: original value is A10k"
+  ],
+  [
+   "Dist",
+   "DPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Mode",
+   "1P4T rotary",
+   "SW",
+   "rotary"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,131 @@
+{
+ "id": "dirtbox:2021-08-hagerman-amplification-transistor",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 17x13 stripboard. Three diodes are drawn (D1 and D2 as an antiparallel red-bodied clipping pair, D3 as a black polarity-protection diode by the 9v strip) but the legend names only 'D1: 1N5817'.",
+ "uncertain": [
+  "D1/D2/D3: legend gives only 'D1: 1N5817'; D1 and D2 are drawn as a red antiparallel clipping pair (cols 5-6, rows B-C) and D3 (col 16, rows A-C) is drawn in the usual 1N5817 style next to 9v, so the legend's D1 probably means D3 and the clipping diode type is not given"
+ ],
+ "rows": [
+  [
+   "×6",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N3906",
+   "Q",
+   "PNP"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   "per legend; drawn as a clipping diode antiparallel with D2, the legend probably means D3"
+  ],
+  [
+   "D2",
+   "?",
+   "D",
+   "value not given; clipping diode antiparallel with D1"
+  ],
+  [
+   "D3",
+   "?",
+   "D",
+   "value not given; drawn as the polarity-protection diode by 9v, probably the legend's 1N5817"
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

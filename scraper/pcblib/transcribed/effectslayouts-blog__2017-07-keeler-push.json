@@ -1,0 +1,117 @@
+{
+ "id": "effectslayouts-blog:2017-07-keeler-push",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout drawn four times (populated board, colour wiring diagram, underside, etched PCB); counted from the populated board and confirmed against the diagram. IC1 is given only as a dual opamp; D1-2 are 3mm red clipping LEDs on the board.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×5",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "6.8nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "330nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "film box"
+  ],
+  [
+   "×2",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "3mm red LED",
+   "LED",
+   "clipping"
+  ],
+  [
+   "D2",
+   "3mm red LED",
+   "LED",
+   "clipping"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   "printed 4001"
+  ],
+  [
+   "IC1",
+   "dual opamp",
+   "IC",
+   "type not specified"
+  ],
+  [
+   "Gain",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,117 @@
+{
+ "id": "effectslayouts-blog:2016-12-dan-armstrong-red-ranger",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with a wiring diagram, underside view and etched PCB of the same circuit; counted from the populated board, confirmed against the diagram. Three transistors drawn without designators; legend gives Q1-2 2N5088 and Q3 2N5087. Switch wires Sw1-Sw6, Sw3 unconnected.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "47Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "8.2K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N5817",
+   "D",
+   "printed 5817"
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "2N5087",
+   "Q",
+   "PNP"
+  ],
+  [
+   "Switch",
+   "DPDT on/off/on",
+   "SW",
+   "toggle; Sw3 unconnected"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,69 @@
+{
+ "id": "effectslayouts-blog:2015-09-devi-ever-electric-brown",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small perfboard layout with a matching PCB wiring diagram, underside and etch mask; counted from the populated perfboard. Two transistors drawn without designators, legend says Q1-2: MPSA18.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Pregain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

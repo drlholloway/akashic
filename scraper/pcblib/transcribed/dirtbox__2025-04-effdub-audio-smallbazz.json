@@ -1,0 +1,105 @@
+{
+ "id": "dirtbox:2025-04-effdub-audio-smallbazz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "13x11 stripboard, one populated view: two-transistor germanium fuzz with an on-board 10K trimmer, three diodes, Fuzz and Volume pots and an SPDT switch.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "TRIM",
+   "10K",
+   "TRIM",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   "one ceramic, two film"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N1101",
+   "Q",
+   "legend: 2N1101 or other low gain and low leakage NPN Ge"
+  ],
+  [
+   "Q2",
+   "2N1101",
+   "Q",
+   "legend: 2N1101 or other low gain and low leakage NPN Ge"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   "legend: 1N4148/1N4001"
+  ],
+  [
+   "D2",
+   "Germanium",
+   "D",
+   "type not given"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

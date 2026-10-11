@@ -1,0 +1,123 @@
+{
+ "id": "tagboardeffects:2014-04-death-by-audio-sound-saw",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Picture 1 is a hand-drawn schematic with a parts list; picture 2 is the vero layout (13 x 11, populated board left, cuts and links right), which is what was read. The board carries two 3K3 (the schematic's list has one; the second feeds the Bypass LED+ pad). Stomp 2 is a second 3PDT footswitch that selects the channel; the off-board LEDs have no type given.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "3K3",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2n2",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "6n8",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "33u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4u7",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Volume 1",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume 2",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Filter 1",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Filter 2",
+   "B100K",
+   "POT",
+   "dual"
+  ],
+  [
+   "Stomp 2",
+   "3PDT",
+   "SW",
+   "footswitch, channel select"
+  ]
+ ],
+ "source": "layout"
+}

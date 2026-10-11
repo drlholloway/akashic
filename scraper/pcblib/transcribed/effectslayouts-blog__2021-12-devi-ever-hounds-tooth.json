@@ -1,0 +1,87 @@
+{
+ "id": "effectslayouts-blog:2021-12-devi-ever-hounds-tooth",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small perfboard layout with a populated board, wiring diagram, underside and etched PCB; counted from the populated board. Four transistors in two pairs, designators Q1-Q4 taken from the wiring diagram and legend.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N2907",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q4",
+   "2N2907",
+   "Q",
+   ""
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Master",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

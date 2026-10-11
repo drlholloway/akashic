@@ -1,0 +1,65 @@
+{
+ "id": "tagboardeffects:2022-01-fal-treble-boosters",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single small 6x9 vero board (the grid header says 6 x 9, the drawing has 7 columns), FAL Treble Booster (1967), negative supply. No pots or switches named.",
+ "uncertain": [
+  "25uF electrolytic at bottom left: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×1",
+   "4.7k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "25uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "PNP Ge",
+   "Q",
+   "germanium PNP, type not specified"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,114 @@
+{
+ "id": "dirtbox:2023-07-foxx-wah-inductorless",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 15x12 stripboard of the inductorless Foxx wah, with a 50K trimmer drawn on the board in addition to the off-board 50kB wah pot. One 10nF is drawn translucent because it sits over a track cut.",
+ "uncertain": [
+  "2.8M at column 3, rows H-J: printed clearly, unusual value",
+  "50K trimmer at columns 11-14, rows D-G: drawn on the board with no name; taken as a trimmer separate from the wah pot, which has its own Wah 1/2/3 wires"
+ ],
+ "rows": [
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "6.8K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.8M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "50K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Q1",
+   "2N5133",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N5133",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Wah",
+   "B50K",
+   "POT",
+   "wah pot"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,129 @@
+{
+ "id": "dirtbox:2019-06-walco-chord-note-sustainer",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 17x11 vero, JFET plus three NPN sustainer with no pots. All capacitors are electrolytic; the legend gives transistor classes with suggestions and only 'Germanium' for the diodes.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "330Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.5M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "33uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2SK30A",
+   "Q",
+   "JFET; 3SK30 in original"
+  ],
+  [
+   "Q2",
+   "BC550C",
+   "Q",
+   "High gain NPN Silicon, try BC550C, BC109C, 2N5089 etc.; 2SC871 in original"
+  ],
+  [
+   "Q3",
+   "BC550C",
+   "Q",
+   "High gain NPN Silicon, try BC550C, BC109C, 2N5089 etc.; 2SC871 in original"
+  ],
+  [
+   "Q4",
+   "2N3904",
+   "Q",
+   "Medium gain NPN Silicon, try 2N3904, 2N2222 etc.; 2SC644 in original"
+  ],
+  [
+   "×2",
+   "Germanium",
+   "D",
+   "D1, D2; type not given"
+  ]
+ ],
+ "source": "layout"
+}

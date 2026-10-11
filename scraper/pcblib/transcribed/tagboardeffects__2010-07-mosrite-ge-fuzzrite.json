@@ -1,0 +1,83 @@
+{
+ "id": "tagboardeffects:2010-07-mosrite-ge-fuzzrite",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 17 x 9 stripboard, positive ground (-9V supply), two germanium transistors. Legend: reduce the 10M for less gain; raise the 2n2 capacitors (6n8 suggested) for a darker sound.",
+ "uncertain": [
+  "Depth pot 350K REV LOG: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10M",
+   "R",
+   "reduce for less gain"
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "2n2",
+   "C",
+   "6n8 suggested for a more balanced sound"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N2613",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N408",
+   "Q",
+   ""
+  ],
+  [
+   "Depth",
+   "C350K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

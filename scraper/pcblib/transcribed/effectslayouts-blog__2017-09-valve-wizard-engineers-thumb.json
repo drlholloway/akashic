@@ -1,0 +1,234 @@
+{
+ "id": "effectslayouts-blog:2017-09-valve-wizard-engineers-thumb",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "An etched-PCB drawing (component side over the copper, plus the bare transfer) that prints designators only; the legend says 'See BOM' and no value appears anywhere in the image, so every row is a designator with value '?'.",
+ "uncertain": [
+  "C3 (round can at the top right, between the Attack pot pads): the designator is tiny and faint, read as C3 by elimination since C1, C2, C4-C8 are found elsewhere",
+  "D1 and D2 (above the IN/GND/+9V/OUT pads): outlines look like LEDs or small radial parts rather than axial diodes; listed as D"
+ ],
+ "rows": [
+  [
+   "R1",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R2",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R3",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R4",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R5",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R6",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R7",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R8",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R9",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R10",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R11",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R12",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R13",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "C1",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C2",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C3",
+   "?",
+   "C",
+   "electrolytic, value not given"
+  ],
+  [
+   "C4",
+   "?",
+   "C",
+   "electrolytic, value not given"
+  ],
+  [
+   "C5",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C6",
+   "?",
+   "C",
+   "electrolytic, value not given"
+  ],
+  [
+   "C7",
+   "?",
+   "C",
+   "electrolytic, value not given"
+  ],
+  [
+   "C8",
+   "?",
+   "C",
+   "electrolytic, value not given"
+  ],
+  [
+   "D1",
+   "?",
+   "D",
+   "value not given; drawn with a round LED-style outline"
+  ],
+  [
+   "D2",
+   "?",
+   "D",
+   "value not given; drawn with a round LED-style outline"
+  ],
+  [
+   "D3",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "D4",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "D5",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "D6",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "Q1",
+   "?",
+   "Q",
+   "value not given"
+  ],
+  [
+   "IC1",
+   "?",
+   "IC",
+   "8-pin, value not given"
+  ],
+  [
+   "IC2",
+   "?",
+   "IC",
+   "8-pin, value not given"
+  ],
+  [
+   "IC3",
+   "?",
+   "IC",
+   "16-pin, value not given"
+  ],
+  [
+   "Release",
+   "?",
+   "POT",
+   "value not given"
+  ],
+  [
+   "Attack",
+   "?",
+   "POT",
+   "value not given"
+  ],
+  [
+   "Threshold",
+   "?",
+   "POT",
+   "value not given"
+  ],
+  [
+   "Ratio",
+   "?",
+   "POT",
+   "value not given"
+  ],
+  [
+   "Level",
+   "?",
+   "POT",
+   "value not given"
+  ],
+  [
+   "Bright",
+   "?",
+   "SW",
+   "two pads on the board, type not given"
+  ]
+ ],
+ "source": "layout"
+}

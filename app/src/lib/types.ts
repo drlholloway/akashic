@@ -1,4 +1,4 @@
-export type Vendor = 'pedalpcb' | 'aionfx' | 'madbean' | 'guitarpcb' | 'fuzzdog' | 'sheepylove' | 'deadendfx' | 'moonn' | 'fivecats' | 'parasit' | 'pcbway-gtu' | 'pcbguitarmania' | 'deadastronaut' | 'bentfishbowl' | 'ggg' | 'lectricfx' | 'expanon' | 'zerogiod' | 'otrfx' | 'dirtmonger' | 'maskaudio' | 'effectslayouts' | 'jmk' | 'eae' | 'c2c' | 'deadair' | 'rwlpedal' | 'sheepygit' | 'otherpedals' | 'godcity' | 'effects1776' | 'rullywow' | 'mas' | 'tonepad' | 'wraa' | 'frog' | 'thcustom' | 'guitarelectronics' | 'opelectronics' | 'griffin' | 'coda' | 'delyk' | 'tayda' | 'schalltechnik' | 'electricdruid' | 'zeppelin' | 'moody' | 'gigahearts' | 'scientificguitarist' | 'holyisland' | 'cryptid' | 'effdub';
+export type Vendor = 'pedalpcb' | 'aionfx' | 'madbean' | 'guitarpcb' | 'fuzzdog' | 'sheepylove' | 'deadendfx' | 'moonn' | 'fivecats' | 'parasit' | 'pcbway-gtu' | 'pcbguitarmania' | 'deadastronaut' | 'bentfishbowl' | 'ggg' | 'lectricfx' | 'expanon' | 'zerogiod' | 'otrfx' | 'dirtmonger' | 'maskaudio' | 'effectslayouts' | 'jmk' | 'eae' | 'c2c' | 'deadair' | 'rwlpedal' | 'sheepygit' | 'otherpedals' | 'godcity' | 'effects1776' | 'rullywow' | 'mas' | 'tonepad' | 'wraa' | 'frog' | 'thcustom' | 'guitarelectronics' | 'opelectronics' | 'griffin' | 'coda' | 'delyk' | 'tayda' | 'schalltechnik' | 'electricdruid' | 'zeppelin' | 'moody' | 'gigahearts' | 'scientificguitarist' | 'holyisland' | 'cryptid' | 'effdub' | 'tagboardeffects' | 'dirtbox' | 'effectslayouts-blog';
 
 export interface IndexEntry {
 	id: string;
@@ -29,6 +29,29 @@ export interface IndexEntry {
 	bom_count: number;
 	has_schematic: boolean;
 	has_kicad: boolean;
+	/** Every way the circuit can be built, first its own; absent for a plain PCB. */
+	builds?: Build[];
+	/** Stripboard size as the layout prints it, strips by holes ('18x18'). */
+	board?: string;
+	/** Whether the source marks the layout as verified by a build; absent when it does not say. */
+	verified?: boolean;
+}
+
+export type Build = 'pcb' | 'vero' | 'tagboard' | 'turret' | 'perfboard';
+export const BUILD_NAMES: Record<Build, string> = { pcb: 'PCB', vero: 'Vero', tagboard: 'Tagboard', turret: 'Turret board', perfboard: 'Perfboard' };
+export const BUILD_ORDER: Build[] = ['pcb', 'vero', 'perfboard', 'tagboard', 'turret'];
+const PCB_ONLY: Build[] = ['pcb'];
+export const buildsOf = (e: { builds?: Build[] }): Build[] => e.builds ?? PCB_ONLY;
+
+/** How a circuit that is not a bought PCB is built: a drawing on a layout site. */
+export interface Layout {
+	build?: Build;
+	board?: string;
+	cuts?: number;
+	links?: number;
+	verified?: boolean;
+	images?: string[];
+	also?: { build: Build; url: string }[];
 }
 
 export interface BomRow {
@@ -54,6 +77,7 @@ export interface Circuit extends IndexEntry {
 	bom: BomRow[];
 	variants?: string[];
 	scraped_at: string;
+	layout?: Layout;
 }
 
 export interface PartEntry {
@@ -135,14 +159,17 @@ export const VENDOR_NAMES: Record<Vendor, string> = {
 	scientificguitarist: 'Scientific Guitarist',
 	holyisland: 'Holy Island Audio',
 	cryptid: 'Cryptid Effects',
-	effdub: 'Eff Dub Audio'
+	effdub: 'Eff Dub Audio',
+	tagboardeffects: 'Tagboard Effects',
+	dirtbox: 'Dirtbox Layouts',
+	'effectslayouts-blog': 'Effects Layouts (blog)'
 };
 
-export type VendorKind = 'shop' | 'projects' | 'repo' | 'blog' | 'archive';
-export const VENDOR_KIND: Partial<Record<Vendor, VendorKind>> = { 'pcbway-gtu': 'projects', rwlpedal: 'repo', sheepygit: 'repo', scientificguitarist: 'repo', cryptid: 'repo', bentfishbowl: 'blog', effdub: 'blog', expanon: 'archive', schalltechnik: 'blog' };
+export type VendorKind = 'shop' | 'projects' | 'repo' | 'blog' | 'archive' | 'layout';
+export const VENDOR_KIND: Partial<Record<Vendor, VendorKind>> = { 'pcbway-gtu': 'projects', rwlpedal: 'repo', sheepygit: 'repo', scientificguitarist: 'repo', cryptid: 'repo', bentfishbowl: 'blog', effdub: 'blog', expanon: 'archive', schalltechnik: 'blog', tagboardeffects: 'layout', dirtbox: 'layout', 'effectslayouts-blog': 'layout' };
 export function primaryAction(v: Vendor): string {
 	const k = VENDOR_KIND[v] ?? 'shop';
-	return k === 'blog' ? `Read the post at ${VENDOR_NAMES[v]}` : k === 'archive' ? `Open the schematic at ${VENDOR_NAMES[v]}` : k === 'projects' ? `Order the board at ${VENDOR_NAMES[v]}` : k === 'repo' ? `Get the gerbers at ${VENDOR_NAMES[v]}` : `Buy the PCB at ${VENDOR_NAMES[v]}`;
+	return k === 'layout' ? `Open the layout at ${VENDOR_NAMES[v]}` : k === 'blog' ? `Read the post at ${VENDOR_NAMES[v]}` : k === 'archive' ? `Open the schematic at ${VENDOR_NAMES[v]}` : k === 'projects' ? `Order the board at ${VENDOR_NAMES[v]}` : k === 'repo' ? `Get the gerbers at ${VENDOR_NAMES[v]}` : `Buy the PCB at ${VENDOR_NAMES[v]}`;
 }
 
 export const PART_CATEGORY_NAMES: Record<string, string> = {

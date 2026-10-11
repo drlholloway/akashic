@@ -1,0 +1,215 @@
+{
+ "id": "dirtbox:2021-06-ibanez-no-95-renometer",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 23x21 stripboard: 5-band inductor EQ with a JFET input, dual op-amp and charge pump. Five band pots share the 'All Bands 1/3' wires; legend gives them as 20kG (graphic-EQ taper), 'Try 20kW'.",
+ "uncertain": [
+  "Band pots: legend prints '20kG' / 'Try 20kW'; taper letters G and W kept as printed, not a standard A/B/C taper"
+ ],
+ "rows": [
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "160Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "56K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "220Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "500mH",
+   "L",
+   ""
+  ],
+  [
+   "×1",
+   "100mH",
+   "L",
+   ""
+  ],
+  [
+   "×1",
+   "68mH",
+   "L",
+   ""
+  ],
+  [
+   "×1",
+   "27mH",
+   "L",
+   ""
+  ],
+  [
+   "Q1",
+   "2SK30A",
+   "Q",
+   "JFET"
+  ],
+  [
+   "IC1",
+   "4558",
+   "IC",
+   "legend: 4558 / TL082"
+  ],
+  [
+   "IC2",
+   "MAX1044",
+   "IC",
+   "legend: MAX1044 / ICL7660S"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Hi",
+   "G20K",
+   "POT",
+   "legend: 20kG, try 20kW"
+  ],
+  [
+   "Hi Mid",
+   "G20K",
+   "POT",
+   "legend: 20kG, try 20kW"
+  ],
+  [
+   "Mid",
+   "G20K",
+   "POT",
+   "legend: 20kG, try 20kW"
+  ],
+  [
+   "Lo Mid",
+   "G20K",
+   "POT",
+   "legend: 20kG, try 20kW"
+  ],
+  [
+   "Lo",
+   "G20K",
+   "POT",
+   "legend: 20kG, try 20kW"
+  ],
+  [
+   "Boost",
+   "DPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "High Boost",
+   "DPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

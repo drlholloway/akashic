@@ -1,0 +1,101 @@
+{
+ "id": "tagboardeffects:2012-03-devi-ever-disaster-fuzz-krackle-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "19x9 stripboard with four transistors; populated view above a bare cuts-and-links view. An SPST switch selects Disaster Fuzz or Krackle Fuzz.",
+ "uncertain": [
+  "20n x2 at lower centre of the board: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×6",
+   "3M3",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "20n",
+   "C",
+   ""
+  ],
+  [
+   "Q1",
+   "2N2222A",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "PN2907A",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "PN2907A",
+   "Q",
+   ""
+  ],
+  [
+   "Q4",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Control",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Disaster/Krackle",
+   "SPST",
+   "SW",
+   "switches between Disaster Fuzz and Krackle Fuzz"
+  ]
+ ],
+ "source": "layout"
+}

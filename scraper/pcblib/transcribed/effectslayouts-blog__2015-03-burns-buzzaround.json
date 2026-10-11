@@ -1,0 +1,111 @@
+{
+ "id": "effectslayouts-blog:2015-03-burns-buzzaround",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout (positive ground, -9v) with its underside, plus a PCB version and etch mask of the same circuit; counted from the perfboard. Transistors and D1 are given only as germanium types, no part number.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "Low gain Germanium",
+   "Q",
+   "Q1-3, no part number given"
+  ],
+  [
+   "D1",
+   "Germanium",
+   "D",
+   "no part number given"
+  ],
+  [
+   "D2",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Sustain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Balance",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Timbre",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

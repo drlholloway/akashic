@@ -1,0 +1,75 @@
+{
+ "id": "effectslayouts-blog:2015-10-mosrite-fuzzrite",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small perfboard layout with a colour wiring diagram, the underside and an etched PCB; counted from the populated perfboard, which the wiring diagram matches.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   "printed 4001"
+  ],
+  [
+   "Q1",
+   "2N3904",
+   "Q",
+   "legend: 2N3904, 2N2222, etc."
+  ],
+  [
+   "Q2",
+   "2N3904",
+   "Q",
+   "legend: 2N3904, 2N2222, etc."
+  ],
+  [
+   "Depth",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

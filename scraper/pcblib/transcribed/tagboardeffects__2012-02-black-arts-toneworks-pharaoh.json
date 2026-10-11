@@ -1,0 +1,207 @@
+{
+ "id": "tagboardeffects:2012-02-black-arts-toneworks-pharaoh",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout, 18 x 17, populated board plus a bare cuts-and-links view; two DPDT toggles drawn beside the board carry the 39K/390K input resistors (Sw1) and clipping diodes D3-D7 (Sw2). The legend also asks for a 2M pulldown resistor on the input, which is not drawn.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K2",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100R",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "6K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "39K",
+   "R",
+   "on Sw1"
+  ],
+  [
+   "×1",
+   "390K",
+   "R",
+   "on Sw1"
+  ],
+  [
+   "×1",
+   "2M",
+   "R",
+   "input pulldown, named in the legend, not drawn"
+  ],
+  [
+   "×1",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×6",
+   "470n",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "470p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "220u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N5089",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "2N5089",
+   "Q",
+   ""
+  ],
+  [
+   "Q4",
+   "2N5089",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "1N914",
+   "D",
+   "on Sw2"
+  ],
+  [
+   "D4",
+   "1N914",
+   "D",
+   "on Sw2"
+  ],
+  [
+   "D5",
+   "Ge",
+   "D",
+   "germanium, type not given; on Sw2"
+  ],
+  [
+   "D6",
+   "Ge",
+   "D",
+   "germanium, type not given; on Sw2"
+  ],
+  [
+   "D7",
+   "Ge",
+   "D",
+   "germanium, type not given; on Sw2"
+  ],
+  [
+   "Sustain",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Highs",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Sw1",
+   "DPDT on/on",
+   "SW",
+   "toggle, 2 position, input resistor select"
+  ],
+  [
+   "Sw2",
+   "DPDT on/off/on",
+   "SW",
+   "toggle, 3 position, clipping select"
+  ]
+ ],
+ "source": "layout"
+}

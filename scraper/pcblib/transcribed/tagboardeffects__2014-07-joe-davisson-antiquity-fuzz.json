@@ -1,0 +1,87 @@
+{
+ "id": "tagboardeffects:2014-07-joe-davisson-antiquity-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero 12x8, populated board on the left and a bare cuts-and-links view on the right; counted from the populated board. One 10K trimmer on the board; D2 is added polarity protection.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "8.2K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10K",
+   "TRIM",
+   ""
+  ],
+  [
+   "×2",
+   "2N5089",
+   "Q",
+   "legend: Transistors are 2N5089"
+  ],
+  [
+   "D1",
+   "1N914",
+   "D",
+   "legend: 1N914 or 1N4148"
+  ],
+  [
+   "D2",
+   "1N5817",
+   "D",
+   "added polarity protection"
+  ],
+  [
+   "Gain",
+   "B2K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

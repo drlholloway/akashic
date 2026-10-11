@@ -1,0 +1,109 @@
+{
+ "id": "tagboardeffects:2012-04-dunlop-eric-johnson-signature-fuzz-face",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Eric Johnson Fuzz Face on 10x9 stripboard, populated view on the left and bare cuts/link view on the right. 5K bias trimmer on the board (bias Q2 collector to 3V).",
+ "uncertain": [
+  "6K resistor next to the trimmer: printed clearly, unusual value",
+  "15u electrolytic at the bottom right: printed clearly, unusual value",
+  "1u capacitor at the left is drawn as a brown oval (not a can), type not stated"
+ ],
+ "rows": [
+  [
+   "×1",
+   "6K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "39K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "120K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "27R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "27p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1u",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "15u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "5K",
+   "TRIM",
+   "bias Q2 collector to 3V"
+  ],
+  [
+   "Q1",
+   "BC183L",
+   "Q",
+   "250 hfe"
+  ],
+  [
+   "Q2",
+   "BC183C",
+   "Q",
+   "650 hfe"
+  ],
+  [
+   "Fuzz",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "C500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

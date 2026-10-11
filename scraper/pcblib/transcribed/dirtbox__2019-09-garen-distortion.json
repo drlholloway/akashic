@@ -1,0 +1,153 @@
+{
+ "id": "dirtbox:2019-09-garen-distortion",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 16x14 stripboard, positive-ground three-transistor germanium distortion; two pots and a 4P3T rotary switch off board. No specific transistor type is given.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "47Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "820Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "5.6K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "120K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "390K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "PNP Germanium",
+   "Q",
+   "type not specified"
+  ],
+  [
+   "Q2",
+   "PNP Germanium",
+   "Q",
+   "type not specified"
+  ],
+  [
+   "Q3",
+   "PNP Germanium",
+   "Q",
+   "type not specified"
+  ],
+  [
+   "Distortion",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "4P3T rotary",
+   "SW",
+   "rotary"
+  ]
+ ],
+ "source": "layout"
+}

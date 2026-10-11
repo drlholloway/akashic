@@ -1,0 +1,123 @@
+{
+ "id": "tagboardeffects:2013-01-arc-effects-b3",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "28x9 vero (Buzzaround clone with a charge pump), populated board on top and cuts/links view below. The legend suggests an optional volume control but gives no value, so it is not listed.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3K3",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "4u7",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "NKT213",
+   "Q",
+   "germanium, hfe 53"
+  ],
+  [
+   "Q2",
+   "NKT213",
+   "Q",
+   "germanium, hfe 78"
+  ],
+  [
+   "Q3",
+   "NKT213",
+   "Q",
+   "germanium, hfe 134"
+  ],
+  [
+   "D1",
+   "1N270",
+   "D",
+   "or other Ge"
+  ],
+  [
+   "×1",
+   "ICL7660SCPA",
+   "IC",
+   ""
+  ],
+  [
+   "Sustain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Balance",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Timbre",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

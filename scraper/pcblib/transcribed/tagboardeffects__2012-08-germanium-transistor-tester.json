@@ -1,0 +1,31 @@
+{
+ "id": "tagboardeffects:2012-08-germanium-transistor-tester",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Geofex germanium transistor tester drawn as two alternative boards: one with a fixed 2K49 resistor, one with a trimmer set to 2.472K in its place. The first (fixed resistor) version is read; the C/B/E pads are for the transistor under test.",
+ "uncertain": [
+  "2K49 resistor: printed clearly, unusual value (text asks for 1% metal film as close to 2.472K as possible)",
+  "Toggle switch poles: drawn as a 3-lug switch body with two wires, type not stated; SPDT assumed",
+  "Trimmer in the alternative version has no value on the board; the text suggests a 5K multi-turn"
+ ],
+ "rows": [
+  [
+   "×1",
+   "2K49",
+   "R",
+   "1% metal film; alternative version uses a trimmer (5K multi-turn suggested) set to 2.472K"
+  ],
+  [
+   "×1",
+   "2M2",
+   "R",
+   "1% metal film"
+  ],
+  [
+   "Base",
+   "SPDT",
+   "SW",
+   "toggle, connects 2M2 to base"
+  ]
+ ],
+ "source": "layout"
+}

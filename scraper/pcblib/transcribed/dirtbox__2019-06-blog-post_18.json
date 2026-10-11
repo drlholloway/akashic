@@ -1,0 +1,83 @@
+{
+ "id": "dirtbox:2019-06-blog-post_18",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single small vero board (11x8), Solasound Tonebender Mk 1.5, two OC75 germanium transistors, positive ground. One populated view only.",
+ "uncertain": [
+  "5uF electrolytics (two, left edge, rows C-E and F-H): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "8.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "5uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "OC75",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "OC75",
+   "Q",
+   ""
+  ],
+  [
+   "Attack",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,125 @@
+{
+ "id": "dirtbox:2019-07-kay-f-1-fuzz-tone",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 19x13 stripboard with four transistors (Q1-Q4) and one Tone pot; two resistors (100K, 10K) are drawn standing. The legend says Q1-Q5 but only four transistors are drawn and labelled.",
+ "uncertain": [
+  "Transistor count: legend reads 'Q1-Q5' but the board shows only Q1-Q4; four listed"
+ ],
+ "rows": [
+  [
+   "×7",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1.8K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×4",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N3904",
+   "Q",
+   "2N3904, PN2222; 2SC644 and 2SC945 in original"
+  ],
+  [
+   "Q2",
+   "2N3904",
+   "Q",
+   "2N3904, PN2222; 2SC644 and 2SC945 in original"
+  ],
+  [
+   "Q3",
+   "2N3904",
+   "Q",
+   "2N3904, PN2222; 2SC644 and 2SC945 in original"
+  ],
+  [
+   "Q4",
+   "2N3904",
+   "Q",
+   "2N3904, PN2222; 2SC644 and 2SC945 in original"
+  ],
+  [
+   "×2",
+   "OA90",
+   "D",
+   "D1, D2"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Tone",
+   "B250K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,165 @@
+{
+ "id": "tagboardeffects:2012-03-tanabe-zenkudo",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "One populated 18x11 stripboard, a bare cuts/links view, and a wiring diagram for the 4-pole 3-way rotary switch. D3-D5 are red clipping LEDs on the board; the indicator is a separate 3-colour common-cathode LED wired through the rotary switch.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "3n3",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "470n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC",
+   "JRC4558",
+   "IC",
+   ""
+  ],
+  [
+   "Q1",
+   "2N7000",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "Q2",
+   "2N7000",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "D1",
+   "1N34A",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N34A",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "red LED",
+   "LED",
+   ""
+  ],
+  [
+   "D4",
+   "red LED",
+   "LED",
+   ""
+  ],
+  [
+   "D5",
+   "red LED",
+   "LED",
+   ""
+  ],
+  [
+   "×1",
+   "3 colour common cathode LED",
+   "LED",
+   "off-board indicator; green, blue and red anodes to the rotary switch"
+  ],
+  [
+   "Gain",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Voice",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "4P3T rotary",
+   "SW",
+   "3 position 4 pole, 2 poles unused"
+  ]
+ ],
+ "source": "layout"
+}

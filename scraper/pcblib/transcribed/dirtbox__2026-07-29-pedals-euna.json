@@ -1,0 +1,181 @@
+{
+ "id": "dirtbox:2026-07-29-pedals-euna",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 20x18 stripboard with a TL072 and a TC1044SCPA charge pump; three SPDT toggles and no pots. Legend: all polarized caps rated min 25v; 1uF, 1x10uF and 47uF caps are tantalum.",
+ "uncertain": [
+  "1uF caps: five on the board, two drawn as yellow tantalum beads (column 5 row F, column 19 row F) and three as red film boxes (left edge rows E-G, top row B, right edge rows K-M); the legend says '1uF ... caps are tantalum', which may mean only the two polarized ones",
+  "3pF at the top left (column 2): printed clearly, unusual value",
+  "11K at the top left (column 3): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×4",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "11K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "3.3M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "3pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "1uF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1uF",
+   "C",
+   "tantalum"
+  ],
+  [
+   "×6",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "tantalum"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "tantalum"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "TC1044SCPA",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "D4",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "D5",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "SW B",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "SW H",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "SW L",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

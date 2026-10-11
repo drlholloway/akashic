@@ -1,0 +1,186 @@
+{
+ "id": "dirtbox:2019-06-gyuatone-fs-6-sustainer",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Picture 1 is the schematic. The post has two stripboard drawings: the stock 17x15 layout (picture 3, read here) and a larger 19x17 version 'w. recovery stage' with a fourth transistor (picture 5, not read). The Q1 bias resistor is drawn socketed and printed 10K; the legend says 33k for the 2SK44C and 10k for a 2SK30. C2 is an optional cap with no value.",
+ "uncertain": [
+  "10nF at column 12, rows F-H: printed with a '?' beside it on the part (the trace's value is unconfirmed)",
+  "10K socketed resistor at column 4, rows C-E (Q1 bias): printed 10K but the legend says 'Socket 33k resistor to bias Q1, 10k works for 2SK30'"
+ ],
+ "rows": [
+  [
+   "×2",
+   "10K",
+   "R",
+   "one is the socketed Q1 bias resistor: legend says 33k for 2SK44C, 10k works for 2SK30"
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   "printed with a '?'"
+  ],
+  [
+   "×1",
+   "3.3nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "500pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C2",
+   "?",
+   "C",
+   "value not given; optional cap in case of oscillation, legend suggests 100pF-470pF"
+  ],
+  [
+   "Q1",
+   "2SK44C",
+   "Q",
+   "JFET; Try 2SK30, 2SK117 etc."
+  ],
+  [
+   "Q2",
+   "2SC536",
+   "Q",
+   "Try BC547B, 2N3904 etc."
+  ],
+  [
+   "Q3",
+   "2SC536",
+   "Q",
+   "Try BC547B, 2N3904 etc."
+  ],
+  [
+   "×4",
+   "1N4148",
+   "D",
+   "D1-D4; legend 1N4148/1N914"
+  ],
+  [
+   "D5",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,81 @@
+{
+ "id": "tagboardeffects:2013-01-vorpal-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 12x9, populated board on the left and a bare cuts/links view on the right. Three transistors, three pots.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "5.1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N4402",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "2N4402",
+   "Q",
+   ""
+  ],
+  [
+   "Bias",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B5K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

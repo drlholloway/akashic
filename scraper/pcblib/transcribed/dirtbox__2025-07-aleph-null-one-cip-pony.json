@@ -1,0 +1,75 @@
+{
+ "id": "dirtbox:2025-07-aleph-null-one-cip-pony",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 12x11 stripboard with one dual op-amp, drawn with the Gate control mod; the LED resistor is on the board as CLR.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "4558",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Gate",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

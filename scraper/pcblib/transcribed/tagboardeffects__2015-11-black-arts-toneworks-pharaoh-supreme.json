@@ -1,0 +1,193 @@
+{
+ "id": "tagboardeffects:2015-11-black-arts-toneworks-pharaoh-supreme",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Two populated boards summed: the 18x17 main board and a 15x5 clipping-diode board for the 6-position rotary; each has a bare cuts view beside or below it. On the diode board D12-D13 are jumpers and are not listed; the main board has its own D13-D14 (1N914), so the designator D13 is used twice.",
+ "uncertain": [
+  "D1-D2 'Ge' and D3-D4 'Ge Asym' on the diode board: no part number given",
+  "D8-D9 'MOSFET' on the diode board: no part number given",
+  "D10-D11 'LED': no colour or size given"
+ ],
+ "rows": [
+  [
+   "×4",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "470k",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2k2",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100r",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "6k2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "470pF",
+   "C",
+   ""
+  ],
+  [
+   "×6",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "220uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N5089",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "2N5089",
+   "Q",
+   ""
+  ],
+  [
+   "Q4",
+   "2N5089",
+   "Q",
+   ""
+  ],
+  [
+   "×2",
+   "Ge",
+   "D",
+   "D1, D2 on the diode board; germanium, type not given"
+  ],
+  [
+   "×2",
+   "Ge",
+   "D",
+   "D3, D4 on the diode board; legend: Ge Asym"
+  ],
+  [
+   "×3",
+   "1N914",
+   "D",
+   "D5-D7 on the diode board"
+  ],
+  [
+   "×2",
+   "MOSFET",
+   "D",
+   "D8, D9 on the diode board; MOSFETs used as clipping diodes, type not given"
+  ],
+  [
+   "×2",
+   "LED",
+   "LED",
+   "D10, D11 on the diode board"
+  ],
+  [
+   "×2",
+   "1N914",
+   "D",
+   "D13, D14 on the main board"
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Sustain",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Highs",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Pre-Gain",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Clipping",
+   "2P6T rotary",
+   "SW",
+   "legend: Switch is 6 position 2 pole"
+  ]
+ ],
+ "source": "layout"
+}

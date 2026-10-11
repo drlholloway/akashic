@@ -1,0 +1,59 @@
+{
+ "id": "effectslayouts-blog:2014-11-klon-buffer",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Klon buffer on perfboard drawn in two alternative versions, one for a TL072 and one for a TL071 (same passives, different routing), each with a wiring diagram, underside and etched PCB. Read the first (TL072) version only.",
+ "uncertain": [
+  "Small electrolytic bottom right (rows F-G, column I): read as .1uF (0.1uF), a small square dot precedes the 1; it could be a polarity mark, making it 1uF"
+ ],
+ "rows": [
+  [
+   "×3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "560Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "0.1uF",
+   "C",
+   "electrolytic; printed .1uF"
+  ],
+  [
+   "×1",
+   "TL072",
+   "IC",
+   "alternative version of the board uses a TL071"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   "printed 4001"
+  ]
+ ],
+ "source": "layout"
+}

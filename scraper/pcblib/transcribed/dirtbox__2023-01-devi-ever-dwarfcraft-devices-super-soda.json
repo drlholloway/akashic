@@ -1,0 +1,99 @@
+{
+ "id": "dirtbox:2023-01-devi-ever-dwarfcraft-devices-super-soda",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single small populated 15x11 stripboard with four transistors. The transistor callouts around the board read Q2 (top), Q1, Q2, Q4 (bottom); the second 'Q2' is taken as Q3, matching the legend 'Q1-Q3: MPSA18, Q4: 2N2907A'. A momentary footswitch is an effect control.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3M",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "MPSA18",
+   "Q",
+   "labelled Q2 a second time on the drawing"
+  ],
+  [
+   "Q4",
+   "2N2907A",
+   "Q",
+   "PNP"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Drone",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "SPST momentary footswitch",
+   "SW",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

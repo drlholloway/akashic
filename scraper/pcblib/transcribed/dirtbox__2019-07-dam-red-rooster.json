@@ -1,0 +1,81 @@
+{
+ "id": "dirtbox:2019-07-dam-red-rooster",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 13x10 vero, positive ground, with an on-board 5K trimmer.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "5K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Q1",
+   "PNP Germanium",
+   "Q",
+   ""
+  ],
+  [
+   "Range",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Boost",
+   "A10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

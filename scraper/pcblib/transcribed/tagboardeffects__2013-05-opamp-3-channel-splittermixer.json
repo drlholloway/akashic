@@ -1,0 +1,71 @@
+{
+ "id": "tagboardeffects:2013-05-opamp-3-channel-splittermixer",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "16 x 12 stripboard with one TL074, shown populated and bare, plus a wiring example for one channel pot. Three channel pots (send/return per channel) and one master pot; the post title marks the layout ON HOLD.",
+ "uncertain": [
+  "Pot count: legend says 'Channel pots 10K Lin' and 'Master 100K Lin'; three channels and a single master (Master 1 / Master 2 & 3 lugs) assumed"
+ ],
+ "rows": [
+  [
+   "×6",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×7",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "TL074",
+   "IC",
+   ""
+  ],
+  [
+   "Channel 1",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Channel 2",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Channel 3",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Master",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

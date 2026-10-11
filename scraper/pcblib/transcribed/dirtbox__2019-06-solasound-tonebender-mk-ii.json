@@ -1,0 +1,99 @@
+{
+ "id": "dirtbox:2019-06-solasound-tonebender-mk-ii",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 13x10 stripboard, three transistors given only as PNP germanium; negative supply, positive ground.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "8.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "PNP Germanium",
+   "Q",
+   "type not given"
+  ],
+  [
+   "Q2",
+   "PNP Germanium",
+   "Q",
+   "type not given"
+  ],
+  [
+   "Q3",
+   "PNP Germanium",
+   "Q",
+   "type not given"
+  ],
+  [
+   "Attack",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

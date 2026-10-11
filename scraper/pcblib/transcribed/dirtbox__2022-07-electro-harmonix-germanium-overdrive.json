@@ -1,0 +1,105 @@
+{
+ "id": "dirtbox:2022-07-electro-harmonix-germanium-overdrive",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 15x13 stripboard with a legend. Three ferrite beads are drawn on the board (two across, one upright).",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "62K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×5",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "Ferrite bead",
+   "L",
+   "FB"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "NKT275",
+   "Q",
+   "or other PNP Ge"
+  ],
+  [
+   "Q2",
+   "2N5087",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "2N5087",
+   "Q",
+   ""
+  ],
+  [
+   "Volts",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Bias",
+   "C100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

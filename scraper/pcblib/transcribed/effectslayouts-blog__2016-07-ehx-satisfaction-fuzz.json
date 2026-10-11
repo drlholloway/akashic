@@ -1,0 +1,87 @@
+{
+ "id": "effectslayouts-blog:2016-07-ehx-satisfaction-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small perfboard layout with board-mounted pots, plus a wiring diagram, bare underside and etched PCB of the same circuit; counted from the populated perfboard.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "560K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1.5nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "2N2222A",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N3906",
+   "Q",
+   ""
+  ],
+  [
+   "Attack",
+   "A100K",
+   "POT",
+   "printed 100K Log"
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   "printed 100K Log"
+  ]
+ ],
+ "source": "layout"
+}

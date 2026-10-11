@@ -1,0 +1,123 @@
+{
+ "id": "dirtbox:2019-06-vorg-f-502-warp-sound",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 17x14 vero with two dual op amps, external Distortion control. The legend's DPDT footswitch is the bypass switch and is not listed.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×6",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "270Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL072",
+   "IC",
+   "Dual op amps, Try TL072, 4558 etc."
+  ],
+  [
+   "IC2",
+   "TL072",
+   "IC",
+   "Dual op amps, Try TL072, 4558 etc."
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   "D1, D2"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Envelope",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Distortion",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

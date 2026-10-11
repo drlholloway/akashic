@@ -1,0 +1,75 @@
+{
+ "id": "effectslayouts-blog:2015-01-zvex-sho-crackle-okay",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small perfboard layout with board-mounted Crackle pot, plus wiring diagram, underside and etched PCB of the same circuit; counted from the populated board and confirmed on the diagram.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "82Ω",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "5.1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "D1",
+   "9.1V Zener",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "BS170",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "Crackle",
+   "C5K",
+   "POT",
+   "printed 5K Rev log"
+  ]
+ ],
+ "source": "layout"
+}

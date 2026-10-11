@@ -1,0 +1,93 @@
+{
+ "id": "dirtbox:2024-08-top-gear-treble-boost",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 12x11 stripboard, the 1973 Black Box version: a JFET and a BJT, values printed with decimal commas.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "3.9M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "8.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.7K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N3819",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q2",
+   "BC109C",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Treble",
+   "B1M",
+   "POT",
+   "legend: 1mB (try 500kB)"
+  ],
+  [
+   "Boost",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

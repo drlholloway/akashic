@@ -1,0 +1,81 @@
+{
+ "id": "effectslayouts-blog:2016-06-galactic-fissure",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small perfboard layout: populated board, colour wiring diagram, underside and etched PCB; read from the populated board. D1 and D2 are LEDs on the board with no type given.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "D1",
+   "?",
+   "LED",
+   "value not given; drawn as a red LED"
+  ],
+  [
+   "D2",
+   "?",
+   "LED",
+   "value not given; drawn as a green LED"
+  ],
+  [
+   "Q1",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "VR_A",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "VR_B",
+   "B10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,107 @@
+{
+ "id": "dirtbox:2021-07-blackhawk-amplifiers-azoth-baxandall",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 17x13 stripboard with one dual op-amp and a 100K trimmer on the board; four off-board pots, all 100kB.",
+ "uncertain": [
+  "33uF x3 electrolytics (column 3 rows C-E, column 16 rows G-H, column 9 rows L-M): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×3",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "150nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "33uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100K",
+   "TRIM",
+   "trimmer on the board"
+  ],
+  [
+   "IC1",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Treble",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Bass",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Mid",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

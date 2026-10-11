@@ -1,0 +1,237 @@
+{
+ "id": "tagboardeffects:2010-02-ts808hw",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Two turret boards making one TS808HW (summed). The drawing prints only designators (R1, C2, D1, Q1, IC1) and pot names; no values or part numbers appear anywhere in the image, so every value is '?'. Designator numbering has gaps (no R4, R19-R22, C6, D3, D4). Off-board LED drawn red but untyped, left out.",
+ "uncertain": [],
+ "rows": [
+  [
+   "R1",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R2",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R3",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R5",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R6",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R7",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R8",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R9",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R10",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R11",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R12",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R13",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R14",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R15",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R16",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R17",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R18",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R23",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "C1",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C2",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C3",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C4",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C5",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C7",
+   "?",
+   "C",
+   "value not given; drawn as an electrolytic"
+  ],
+  [
+   "C8",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C9",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C10",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C11",
+   "?",
+   "C",
+   "value not given; drawn as an electrolytic"
+  ],
+  [
+   "C12",
+   "?",
+   "C",
+   "value not given; drawn as an electrolytic"
+  ],
+  [
+   "D1",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "D2",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "D5",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "Q1",
+   "?",
+   "Q",
+   "value not given"
+  ],
+  [
+   "Q2",
+   "?",
+   "Q",
+   "value not given"
+  ],
+  [
+   "IC1",
+   "?",
+   "IC",
+   "value not given; 8-pin DIP"
+  ],
+  [
+   "Level",
+   "?",
+   "POT",
+   "value not given"
+  ],
+  [
+   "Tone",
+   "?",
+   "POT",
+   "value not given"
+  ],
+  [
+   "Drive",
+   "?",
+   "POT",
+   "value not given"
+  ]
+ ],
+ "source": "layout"
+}

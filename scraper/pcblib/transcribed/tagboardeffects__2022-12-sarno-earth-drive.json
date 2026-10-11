@@ -1,0 +1,129 @@
+{
+ "id": "tagboardeffects:2022-12-sarno-earth-drive",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "15x12 vero drawn twice (populated top, cuts/links bottom). Legend gives suggested parts only: IC1 'secret dual opamp (try TL072)', D1+D4 Ge (try 1N34A), D2+D3 Si (try 1N914).",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "5.6K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "680nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL072",
+   "IC",
+   "legend: secret dual opamp (try TL072)"
+  ],
+  [
+   "D1",
+   "1N34A",
+   "D",
+   "Ge (try 1N34A)"
+  ],
+  [
+   "D2",
+   "1N914",
+   "D",
+   "Si (try 1N914)"
+  ],
+  [
+   "D3",
+   "1N914",
+   "D",
+   "Si (try 1N914)"
+  ],
+  [
+   "D4",
+   "1N34A",
+   "D",
+   "Ge (try 1N34A)"
+  ],
+  [
+   "D5",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Drive",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "C50K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

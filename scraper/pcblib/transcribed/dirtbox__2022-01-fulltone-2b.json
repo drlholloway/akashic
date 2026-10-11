@@ -1,0 +1,101 @@
+{
+ "id": "dirtbox:2022-01-fulltone-2b",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 14x11 stripboard (buffer/booster) with values printed on every part; D1-D2 are given only as Germanium. The DPDT footswitch is wired to Gain 1 and the board (Switch 1/2), so it is listed as the boost control rather than a bypass.",
+ "uncertain": [
+  "Switch: legend says only 'DPDT footswitch'; listed as an effect control because it connects to Gain 1 on the board, but it may be the pedal's only footswitch"
+ ],
+ "rows": [
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "3.3M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "AD711J",
+   "IC",
+   "legend: AD711J or TL071"
+  ],
+  [
+   "×2",
+   "Germanium",
+   "D",
+   "D1, D2; type not given"
+  ],
+  [
+   "D3",
+   "1N5818",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Dynamics",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "DPDT",
+   "SW",
+   "footswitch"
+  ]
+ ],
+ "source": "layout"
+}

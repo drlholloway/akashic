@@ -1,0 +1,98 @@
+{
+ "id": "dirtbox:2019-06-guyatone-crazy-face",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single small populated vero (11x8), positive-ground two-transistor germanium fuzz; image is only 299x400 px so values are read from a low-resolution thumbnail.",
+ "uncertain": [
+  "8K resistor at column H (rows B-E): printed text reads '8K', a leading digit may be hidden (18K / 6.8K possible); unusual value",
+  "3uF electrolytic at lower left (column B, rows E-G): only '3uF' is visible, partly under Q1; could be 3.3uF or 33uF",
+  "30K resistor at column E: reads 30K, could be 39K at this resolution; unusual value",
+  "510Ω resistor at column D: reads 510Ω, low resolution"
+ ],
+ "rows": [
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "510Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "30K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "8K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "3uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2SA353",
+   "Q",
+   "PNP germanium; legend: 2SA353 or other PNP Germanium"
+  ],
+  [
+   "Q2",
+   "2SA353",
+   "Q",
+   "PNP germanium; legend: 2SA353 or other PNP Germanium"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,95 @@
+{
+ "id": "tagboardeffects:2010-02-zvex-fuzz-factory",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Turret layout of the ZVex Fuzz Factory, one board, values printed on every part; two AC128 and one 2N3904, five pots. A stray '10uF' label sits on the Drive pot body beside lug 2, whose wire runs to the radial 10uF on the board.",
+ "uncertain": [
+  "10uF: three electrolytics are drawn on the board (two axial, one radial); the extra '10uF' text on the Drive pot is read as a label for the radial one, not a fourth capacitor"
+ ],
+ "rows": [
+  [
+   "×2",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "5K1",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "AC128",
+   "Q",
+   "germanium"
+  ],
+  [
+   "×1",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "Stab",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Drive",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Comp",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Gate",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Vol",
+   "B5K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

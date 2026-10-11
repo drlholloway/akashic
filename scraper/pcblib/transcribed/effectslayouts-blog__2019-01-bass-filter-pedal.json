@@ -1,0 +1,77 @@
+{
+ "id": "effectslayouts-blog:2019-01-bass-filter-pedal",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small perfboard layout (design by bleepboxes) with a bare underside view, a wiring diagram and an etched PCB; counted from the populated perfboard. The TO-92 regulator is marked only O G I on the perfboard; the wiring diagram names it 78L06.",
+ "uncertain": [
+  "Regulator: type 78L06 is printed only on the wiring diagram, the perfboard shows just the pins O G I"
+ ],
+ "rows": [
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4148",
+   "D",
+   "printed 4148"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   "printed 4001"
+  ],
+  [
+   "×1",
+   "LM567",
+   "IC",
+   "printed 567, tone decoder"
+  ],
+  [
+   "×1",
+   "78L06",
+   "IC",
+   "regulator, named on the wiring diagram"
+  ],
+  [
+   "Filter",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

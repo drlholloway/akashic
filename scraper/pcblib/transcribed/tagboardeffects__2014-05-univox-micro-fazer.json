@@ -1,0 +1,155 @@
+{
+ "id": "tagboardeffects:2014-05-univox-micro-fazer",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 19x24 with a populated board and a bare cuts/links view; read from the populated board. Three dual op-amps, four JFETs, one on-board trimmer; the only pot is Rate.",
+ "uncertain": [
+  "Q1 to Q4: legend prints '2SK34D' clearly; unusual part number (possibly meant 2SK30A), kept as printed"
+ ],
+ "rows": [
+  [
+   "×14",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1u",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "33u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4u7",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "LM1458",
+   "IC",
+   "ICs are LM1458"
+  ],
+  [
+   "Q1",
+   "2SK34D",
+   "Q",
+   "JFET; legend: try 2N5457, BF245, 2N5952 etc and check pinout"
+  ],
+  [
+   "Q2",
+   "2SK34D",
+   "Q",
+   "JFET; legend: try 2N5457, BF245, 2N5952 etc and check pinout"
+  ],
+  [
+   "Q3",
+   "2SK34D",
+   "Q",
+   "JFET; legend: try 2N5457, BF245, 2N5952 etc and check pinout"
+  ],
+  [
+   "Q4",
+   "2SK34D",
+   "Q",
+   "JFET; legend: try 2N5457, BF245, 2N5952 etc and check pinout"
+  ],
+  [
+   "D1",
+   "4V7 zener",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Rate",
+   "A1M",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

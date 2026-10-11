@@ -1,0 +1,125 @@
+{
+ "id": "dirtbox:2023-05-dod-compressor-280",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 18x13 stripboard with a vactrol drawn across the top-left, one dual op-amp and two transistors. The only diode on the board is printed D2 while the legend lists D1: 1N5817.",
+ "uncertain": [
+  "Diode at the top right (row A, columns 15-16) is printed D2 on the board but the legend only gives 'D1: 1N5817'; taken as the same part, 1N5817"
+ ],
+ "rows": [
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "LM358",
+   "IC",
+   ""
+  ],
+  [
+   "Q1",
+   "2N3904",
+   "Q",
+   "2N3904, 2N5088 etc. (NP2141 in original)"
+  ],
+  [
+   "Q2",
+   "2N3904",
+   "Q",
+   "2N3904, 2N5088 etc. (NP2141 in original)"
+  ],
+  [
+   "D2",
+   "1N5817",
+   "D",
+   "printed D2 on the board, legend says D1: 1N5817"
+  ],
+  [
+   "Vactrol",
+   "VTL5C2",
+   "OPTO",
+   "or LDR-LED combo"
+  ],
+  [
+   "Comp",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

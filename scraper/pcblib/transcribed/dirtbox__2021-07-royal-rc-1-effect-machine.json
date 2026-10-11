@@ -1,0 +1,101 @@
+{
+ "id": "dirtbox:2021-07-royal-rc-1-effect-machine",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single small populated 14x12 stripboard, a wah/volume circuit with two transistors. All values read cleanly.",
+ "uncertain": [
+  "250pF (left edge, rows D-E): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "39K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "250pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×5",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N2222",
+   "Q",
+   "2N2222, 2N3904 etc. (2SC828-R in original)"
+  ],
+  [
+   "Q2",
+   "2N2222",
+   "Q",
+   "2N2222, 2N3904 etc. (2SC828-R in original)"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Wah",
+   "B50K",
+   "POT",
+   "50kC if using rotary potentiometer"
+  ],
+  [
+   "Volume",
+   "B50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

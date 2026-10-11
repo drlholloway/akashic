@@ -1,0 +1,105 @@
+{
+ "id": "tagboardeffects:2011-04-lovepedal-amp-eleven",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "17x11 vero with a populated board and a bare cuts/links view; pots are named only by wire labels and the legend. One 47u is a radial can, the other a large axial electrolytic; the two 1u are drawn as film caps.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "3K3",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K5",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "8K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100p",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1u",
+   "C",
+   "drawn as film"
+  ],
+  [
+   "×2",
+   "47u",
+   "C",
+   "electrolytic; one radial, one axial"
+  ],
+  [
+   "IC1",
+   "JRC4558",
+   "IC",
+   ""
+  ],
+  [
+   "×4",
+   "1N4148",
+   "D",
+   "D1, D2, D3, D4"
+  ],
+  [
+   "Drive",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Bass",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

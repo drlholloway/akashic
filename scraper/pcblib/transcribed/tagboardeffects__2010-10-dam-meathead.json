@@ -1,0 +1,103 @@
+{
+ "id": "tagboardeffects:2010-10-dam-meathead",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated vero board 16 x 9. The one pot is not named on the drawing; it feeds the output. Two small ceramic capacitors are printed without a unit.",
+ "uncertain": [
+  "Small ceramic cap left of the 2N3904 printed '470' with no unit, presumably 470pF",
+  "Small ceramic cap at board centre printed '47' with no unit, presumably 47pF",
+  "Pot is drawn without a knob name; entered as Volume because lug 2 goes to Output"
+ ],
+ "rows": [
+  [
+   "×1",
+   "120K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "820R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470",
+   "C",
+   "ceramic, unit not printed, presumably pF"
+  ],
+  [
+   "×1",
+   "47",
+   "C",
+   "ceramic, unit not printed, presumably pF"
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "BC182L",
+   "Q",
+   ""
+  ],
+  [
+   "Volume",
+   "B500K",
+   "POT",
+   "knob not named on the drawing; wired to Output"
+  ]
+ ],
+ "source": "layout"
+}

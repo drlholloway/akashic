@@ -1,0 +1,87 @@
+{
+ "id": "tagboardeffects:2012-09-nocturne-brain-seltzer-classic",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 14 x 9 vero board with parts, bare cuts view below. D1 is drawn with a designator but the legend names no type.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "240K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "IC",
+   "LM1458",
+   "IC",
+   "IC is LM1458 or similar"
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B250K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

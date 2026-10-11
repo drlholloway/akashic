@@ -1,0 +1,114 @@
+{
+ "id": "effectslayouts-blog:2015-08-dunlop-fuzz-face-eric-johnson",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Same circuit drawn twice populated (perfboard and PCB) plus underside and etch mask; counted once, both views agree. A 5K trimmer sits on the board.",
+ "uncertain": [
+  "6K resistor left of the 330Ω: printed clearly, unusual value",
+  "15uF electrolytic in the middle: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×1",
+   "6K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "39K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "27Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "120K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "27pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "15uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "BC183",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "BC183",
+   "Q",
+   ""
+  ],
+  [
+   "×1",
+   "5K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Volume",
+   "C500K",
+   "POT",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B1K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

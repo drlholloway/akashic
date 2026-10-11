@@ -1,0 +1,125 @@
+{
+ "id": "effectslayouts-blog:2019-03-skreddy-fuzz-driver",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout shown populated, as a colour wiring diagram, as the bare underside and as an etched PCB; counted from the populated board and confirmed against the wiring diagram. Five board-mounted pots; the legend gives Q1-2 only as NPN germanium and D1 only as germanium.",
+ "uncertain": [
+  "10uF at the top centre is drawn as a polarised drop (marked +), not a round can: taken as tantalum"
+ ],
+ "rows": [
+  [
+   "×1",
+   "330Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "56K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "tantalum"
+  ],
+  [
+   "×2",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "D1",
+   "germanium",
+   "D",
+   "type not given"
+  ],
+  [
+   "Q1",
+   "NPN germanium",
+   "Q",
+   "type not given"
+  ],
+  [
+   "Q2",
+   "NPN germanium",
+   "Q",
+   "type not given"
+  ],
+  [
+   "Drive",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Fatness",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Bass",
+   "B2K",
+   "POT",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B2K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

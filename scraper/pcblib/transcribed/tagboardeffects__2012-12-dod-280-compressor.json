@@ -1,0 +1,111 @@
+{
+ "id": "tagboardeffects:2012-12-dod-280-compressor",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero 19x12, populated board above a bare cuts-and-links view; read from the populated board. The vactrol is drawn as two parts, a resistor-shaped 'LDR' and the green LED 'D2', and is entered once as the VTL5C2 the legend names. D1 has no type anywhere.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "LM358",
+   "IC",
+   ""
+  ],
+  [
+   "×2",
+   "NP4121",
+   "Q",
+   "Transistors NP4121 (try 2N3904)"
+  ],
+  [
+   "D1",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "×1",
+   "VTL5C2",
+   "OPTO",
+   "vactrol, drawn as LDR + D2 (LED); or try LED+LDR with heatshrink"
+  ],
+  [
+   "Comp",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

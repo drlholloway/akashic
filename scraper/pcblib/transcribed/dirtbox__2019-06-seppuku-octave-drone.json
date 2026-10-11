@@ -1,0 +1,87 @@
+{
+ "id": "dirtbox:2019-06-seppuku-octave-drone",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 14x8 stripboard, Seppuku Octave Drone around an LM386. C1 has no value on the board; the legend says it is unconfirmed. One 15K and D1 are drawn semi-transparent (standing/over a cut) but are real parts.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "C1",
+   "?",
+   "C",
+   "value not given; legend: value unconfirmed, try values between 4.7nF and 47nF"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "IC1",
+   "LM386",
+   "IC",
+   ""
+  ],
+  [
+   "Input Gain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "SPDT",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

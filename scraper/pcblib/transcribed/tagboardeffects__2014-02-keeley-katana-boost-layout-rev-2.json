@@ -1,0 +1,105 @@
+{
+ "id": "tagboardeffects:2014-02-keeley-katana-boost-layout-rev-2",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard 14 x 13, populated board on the left and cuts/links view on the right. Two JFETs, a charge-pump IC, two on-board 10K trimmers; the DPDT on/on switch (Sw1-Sw5) is the boost switch, not a bypass.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "680R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "15n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100p",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "2N5484",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q2",
+   "2N5484",
+   "Q",
+   "JFET"
+  ],
+  [
+   "IC",
+   "ICL7660S",
+   "IC",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Volume",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "DPDT on/on",
+   "SW",
+   "Sw1-Sw5 wiring"
+  ]
+ ],
+ "source": "layout"
+}

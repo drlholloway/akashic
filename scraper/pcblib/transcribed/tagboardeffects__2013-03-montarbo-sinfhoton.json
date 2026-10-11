@@ -1,0 +1,117 @@
+{
+ "id": "tagboardeffects:2013-03-montarbo-sinfhoton",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "16x13 vero with two transistors and four diodes (D1-D4); populated board above, bare cuts-and-links view below. Pots are labelled T, B and V.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "BC149",
+   "Q",
+   "legend: BC149 (try BC549 or similar)"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   "legend: unknown Si (try 1N4148)"
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   "legend: unknown Si (try 1N4148)"
+  ],
+  [
+   "D3",
+   "1N4148",
+   "D",
+   "legend: unknown Si (try 1N4148)"
+  ],
+  [
+   "D4",
+   "1N4148",
+   "D",
+   "legend: unknown Si (try 1N4148)"
+  ],
+  [
+   "T",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "B",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "V",
+   "A10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

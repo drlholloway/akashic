@@ -1,0 +1,119 @@
+{
+ "id": "effectslayouts-blog:2020-10-grind-customs-fx-tenebrion",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout by storyboardist with underside view, colour wiring diagram and etched PCB; counted from the populated board, confirmed on the diagram. A BTDR-2 reverb module (6 pins) plugs into the board; the TO-92 regulator is marked only I/G/O on the board and 7805 on the diagram.",
+ "uncertain": [
+  "Regulator near the BTDR-2: board shows only pins I G O, the wiring diagram labels it 7805 (drawn as a TO-92, so probably 78L05)"
+ ],
+ "rows": [
+  [
+   "×7",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "×2",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "×1",
+   "7805",
+   "IC",
+   "regulator, TO-92 outline"
+  ],
+  [
+   "×1",
+   "BTDR-2",
+   "OTHER",
+   "reverb module"
+  ],
+  [
+   "Feedback",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Verb",
+   "B25K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

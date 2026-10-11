@@ -1,0 +1,108 @@
+{
+ "id": "tagboardeffects:2013-04-smallsoundbigsound-sparkle-motion",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard 12 x 8, populated view on top and a bare cuts-and-links view below. Single germanium NPN transistor, no part number given; the Eq pot is dual gang.",
+ "uncertain": [
+  "100pF ceramic at the bottom centre: partly covered by the 4.7K and the 33uF can, the unit letter is cut off",
+  "33uF electrolytic right of the transistor: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×1",
+   "180K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "33uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "NPN Ge",
+   "Q",
+   "Transistor is NPN Ge, no part number given"
+  ],
+  [
+   "Input",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Eq",
+   "B100K",
+   "POT",
+   "dual"
+  ],
+  [
+   "Bias",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Treble",
+   "SPST",
+   "SW",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

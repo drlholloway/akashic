@@ -1,0 +1,69 @@
+{
+ "id": "tagboardeffects:2013-02-dragonfly-saturn-five",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "14x8 stripboard shown populated and bare (cuts and links). Two BC108 transistors, no designators printed.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "BC108",
+   "Q",
+   "legend: Transistors are BC108"
+  ],
+  [
+   "Splat",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

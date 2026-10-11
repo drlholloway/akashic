@@ -1,0 +1,99 @@
+{
+ "id": "effectslayouts-blog:2015-05-jack-deville-vintage-two-knob-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout by storyboardist with a wiring diagram, underside and etched PCB of the same circuit; counted from the populated board. Two NPN germanium transistors and a 10K bias trimmer (set to about 4.5 V); pots mount on the board.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "820Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "TRIM",
+   "set to ~4.5v"
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "×2",
+   "NPN germanium",
+   "Q",
+   "Q1, Q2; legend: Q1-2: NPN germanium"
+  ],
+  [
+   "Volume",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Fuzz",
+   "C1K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

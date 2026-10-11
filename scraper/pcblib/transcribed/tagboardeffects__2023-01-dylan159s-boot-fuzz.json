@@ -1,0 +1,75 @@
+{
+ "id": "tagboardeffects:2023-01-dylan159s-boot-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small 10x11 vero drawn twice (populated, then bare with cuts and links); read from the populated board. Two NPN transistors with no designators, one pot.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47Ω",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "2N3904",
+   "Q",
+   "Transistors NPN (to taste, try 2N3904 or similar)"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Volume",
+   "A10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

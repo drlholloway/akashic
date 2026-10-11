@@ -1,0 +1,69 @@
+{
+ "id": "tagboardeffects:2014-03-earthquaker-devices-speaker-cranker",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "10x7 vero by IvIark, populated board above a bare cuts-and-links view. Small image but few parts, all legible at high zoom.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "330R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "68n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "×3",
+   "1N60P",
+   "D",
+   "D1, D2, D3"
+  ],
+  [
+   "More",
+   "B5K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

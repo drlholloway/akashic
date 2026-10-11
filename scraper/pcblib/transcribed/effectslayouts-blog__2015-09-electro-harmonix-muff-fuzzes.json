@@ -1,0 +1,75 @@
+{
+ "id": "effectslayouts-blog:2015-09-electro-harmonix-muff-fuzzes",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Muff Fuzz, transistor version: perfboard layout with a matching PCB wiring diagram, underside and etch mask; counted from the populated perfboard. The post title says 'fuzzes' but this cached image shows only the transistor version.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "×2",
+   "1N34A",
+   "D",
+   "germanium clipping pair"
+  ],
+  [
+   "Q1",
+   "2N3904",
+   "Q",
+   "legend: 2N3904, 2N5088, etc."
+  ],
+  [
+   "Q2",
+   "2N3904",
+   "Q",
+   "legend: 2N3904, 2N5088, etc."
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

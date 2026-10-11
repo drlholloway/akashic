@@ -1,0 +1,81 @@
+{
+ "id": "effectslayouts-blog:2015-05-run-off-groove-ruby",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout by storyboardist: populated board, colour wiring diagram, underside and etched PCB of the same circuit; counted from the populated board and confirmed against the diagram. Small amplifier, speaker outputs instead of an output jack.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1.5M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.9K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "220uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "LM386",
+   "IC",
+   ""
+  ],
+  [
+   "Q1",
+   "MPF102",
+   "Q",
+   "JFET; legend: MPF102 or 2N5457"
+  ],
+  [
+   "Volume",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "B1K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

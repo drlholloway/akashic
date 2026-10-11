@@ -1,0 +1,57 @@
+{
+ "id": "tagboardeffects:2012-09-runoffgroove-buzz-box",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "12 x 6 vero, populated board above a bare cuts-and-links view; two transistors, two diodes of different types, one volume pot.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N34A",
+   "D",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

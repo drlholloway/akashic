@@ -1,0 +1,123 @@
+{
+ "id": "dirtbox:2024-03-devi-ever-god-zilla",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "One populated 16x14 stripboard holding two fuzzes (Vintage Fuzz Master on the left, God Zilla on the right), each with its own 3PDT bypass footswitch; values printed on every part, transistors named in the legend.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×6",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "3.3M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×10",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q4",
+   "2N2907A",
+   "Q",
+   "TO-18"
+  ],
+  [
+   "Q5",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q6",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q7",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q8",
+   "2N2222A",
+   "Q",
+   "TO-18"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "VFM Gain",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "VFM Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "GZ Gain",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "GZ Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

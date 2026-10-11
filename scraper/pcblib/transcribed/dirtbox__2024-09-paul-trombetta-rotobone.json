@@ -1,0 +1,183 @@
+{
+ "id": "dirtbox:2024-09-paul-trombetta-rotobone",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 20x19 stripboard with values printed on every part; four transistors, two Ge/Si selector toggles, a power toggle and a 2P6T rotary that selects the X and Y capacitors.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "2K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "560K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "47pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "8.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "12nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "68nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "82nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "AC130",
+   "Q",
+   "germanium"
+  ],
+  [
+   "Q3",
+   "PN2907",
+   "Q",
+   ""
+  ],
+  [
+   "Q4",
+   "2N404",
+   "Q",
+   "germanium"
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   "D1, D2"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Octave",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Low/High Power",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Q1 Ge/Si",
+   "DPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Q2 Ge/Si",
+   "DPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Y & X",
+   "2P6T rotary",
+   "SW",
+   "rotary"
+  ]
+ ],
+ "source": "layout"
+}

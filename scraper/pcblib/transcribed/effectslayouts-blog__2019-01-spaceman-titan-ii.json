@@ -1,0 +1,131 @@
+{
+ "id": "effectslayouts-blog:2019-01-spaceman-titan-ii",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with a wiring diagram, underside and etched PCB of the same circuit; counted from the populated perfboard and confirmed against the wiring diagram. Two ferrite beads (FB) sit on the board.",
+ "uncertain": [
+  "4.65K at row D: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.65K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "27nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N2222A",
+   "Q",
+   "low gain NPN silicon (2N2222a, 2N2369, 2N3903, etc)"
+  ],
+  [
+   "Q2",
+   "2N2222A",
+   "Q",
+   "low gain NPN silicon (2N2222a, 2N2369, 2N3903, etc)"
+  ],
+  [
+   "Q3",
+   "2N2222A",
+   "Q",
+   "low gain NPN silicon (2N2222a, 2N2369, 2N3903, etc)"
+  ],
+  [
+   "×1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "×2",
+   "Ferrite bead",
+   "L",
+   "FB"
+  ],
+  [
+   "Gain",
+   "B2K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

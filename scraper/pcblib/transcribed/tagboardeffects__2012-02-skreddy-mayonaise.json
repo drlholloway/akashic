@@ -1,0 +1,192 @@
+{
+ "id": "tagboardeffects:2012-02-skreddy-mayonaise",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "19 x 17 stripboard, populated view above a bare cuts-and-links view; Big Muff style with four 2N5133. A 3-position DPDT mids switch (scooped/flat/boosted) carries two off-board caps, 4n7 and 10n. Legend: swap the 500p caps for 220p to 560p to suit transistors.",
+ "uncertain": [
+  "4n cap in the middle of the board (between the long link column and the 100n/18K, right of Q4's 390K): printed as '4n', probably a truncated 4n7",
+  "500p x3: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×4",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100R",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "8K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "390K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "820R",
+   "R",
+   ""
+  ],
+  [
+   "×8",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "500p",
+   "C",
+   "legend: swap for 220p to 560p to suit transistors"
+  ],
+  [
+   "×1",
+   "4n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4n7",
+   "C",
+   "on the mids switch"
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   "on the mids switch"
+  ],
+  [
+   "Q1",
+   "2N5133",
+   "Q",
+   "600 - 700 hfe alt."
+  ],
+  [
+   "Q2",
+   "2N5133",
+   "Q",
+   "600 - 700 hfe alt."
+  ],
+  [
+   "Q3",
+   "2N5133",
+   "Q",
+   "600 - 700 hfe alt."
+  ],
+  [
+   "Q4",
+   "2N5133",
+   "Q",
+   "600 - 700 hfe alt."
+  ],
+  [
+   "D1",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "D4",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "Dx",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Sustain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Mids",
+   "DPDT on/off/on",
+   "SW",
+   "Scooped / Flat / Boosted mids, 3 pos DPDT"
+  ]
+ ],
+ "source": "layout"
+}

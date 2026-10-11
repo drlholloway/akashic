@@ -1,0 +1,75 @@
+{
+ "id": "effectslayouts-blog:2020-12-dirt-master",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "First picture is the schematic; the second is the layout sheet (populated perfboard, underside, etched PCB and transfer image). Read from the populated perfboard, confirmed against the PCB view. The two 47uF are drawn as axial parts with a polarity stripe; the 4.7K feeds the LED+ pad.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "NPN germanium",
+   "Q",
+   "NPN germanium (higher hFE)"
+  ],
+  [
+   "Level",
+   "B10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,239 @@
+{
+ "id": "dirtbox:2019-06-black-arts-toneworks-pharaoh-supreme",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 19x21 stripboard: the Pharaoh with a Pre Gain pot, two 2N7000 MOSFETs and two red LEDs as extra clipping options chosen by a 2P6T rotary switch. Two 470K resistors are drawn greyed/translucent and are counted.",
+ "uncertain": [
+  "Germanium diodes D3-D7: legend gives no part number"
+ ],
+ "rows": [
+  [
+   "×5",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "6.2K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "470pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N5089",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "2N5089",
+   "Q",
+   ""
+  ],
+  [
+   "Q4",
+   "2N5089",
+   "Q",
+   ""
+  ],
+  [
+   "Q5",
+   "2N7000",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "Q6",
+   "2N7000",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   "legend: 1N4148/1N914"
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   "legend: 1N4148/1N914"
+  ],
+  [
+   "D3",
+   "Germanium",
+   "D",
+   "legend: Germanium, type not given"
+  ],
+  [
+   "D4",
+   "Germanium",
+   "D",
+   "legend: Germanium, type not given"
+  ],
+  [
+   "D5",
+   "Germanium",
+   "D",
+   "legend: Germanium, type not given"
+  ],
+  [
+   "D6",
+   "Germanium",
+   "D",
+   "legend: Germanium, type not given"
+  ],
+  [
+   "D7",
+   "Germanium",
+   "D",
+   "legend: Germanium, type not given"
+  ],
+  [
+   "D8",
+   "1N4148",
+   "D",
+   "legend: 1N4148/1N914"
+  ],
+  [
+   "D9",
+   "1N4148",
+   "D",
+   "legend: 1N4148/1N914"
+  ],
+  [
+   "D10",
+   "3mm red LED",
+   "LED",
+   "clipping LED"
+  ],
+  [
+   "D11",
+   "3mm red LED",
+   "LED",
+   "clipping LED"
+  ],
+  [
+   "D12",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Pre Gain",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Highs",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Sustain",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "2P6T rotary",
+   "SW",
+   "clipping selector; position 6 not connected"
+  ]
+ ],
+ "source": "layout"
+}

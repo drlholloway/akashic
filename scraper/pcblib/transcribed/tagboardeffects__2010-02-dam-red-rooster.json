@@ -1,0 +1,89 @@
+{
+ "id": "tagboardeffects:2010-02-dam-red-rooster",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Tagboard (turret) layout, one populated board: a single CV7112 transistor, a board-mounted trimmer drawn without a value, and Range and Boost pots.",
+ "uncertain": [
+  "Blue trimmer in the middle of the board (lugs marked '2 & 3' and '1'): no value printed anywhere"
+ ],
+ "rows": [
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "5nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2u2",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "CV7112",
+   "Q",
+   "pinout drawn B E C"
+  ],
+  [
+   "×1",
+   "?",
+   "TRIM",
+   "value not given"
+  ],
+  [
+   "Range",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Boost",
+   "A10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

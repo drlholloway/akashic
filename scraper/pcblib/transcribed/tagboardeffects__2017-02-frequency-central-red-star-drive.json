@@ -1,0 +1,81 @@
+{
+ "id": "tagboardeffects:2017-02-frequency-central-red-star-drive",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 11x10 vero board for a 5672 subminiature tube drive; Q1 is an LM317T regulator, the tube is wired off board (Pin 1-5).",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100r",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "LM317T",
+   "IC",
+   "regulator"
+  ],
+  [
+   "D1",
+   "?",
+   "D",
+   "value not given; legend: Clipping Diodes of Choice"
+  ],
+  [
+   "D2",
+   "?",
+   "D",
+   "value not given; legend: Clipping Diodes of Choice"
+  ],
+  [
+   "D3",
+   "?",
+   "D",
+   "value not given; legend: Clipping Diodes of Choice"
+  ],
+  [
+   "×1",
+   "5672",
+   "OTHER",
+   "subminiature tube, off board"
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

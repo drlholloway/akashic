@@ -1,0 +1,93 @@
+{
+ "id": "tagboardeffects:2012-01-runoffgroove-whisker-biscuit",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 18 x 9 with populated board and a bare cuts/links view; counted from the populated board. Pots are not drawn, only named in the legend.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100R",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "4n7",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5089",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "MPSA13",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "2N5089",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

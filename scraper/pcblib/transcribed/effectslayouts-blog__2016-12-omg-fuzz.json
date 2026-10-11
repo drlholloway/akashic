@@ -1,0 +1,105 @@
+{
+ "id": "effectslayouts-blog:2016-12-omg-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with board-mounted pots, shown as a populated board, a colour wiring diagram, the underside and an etched PCB; counted from the populated board. D1 is drawn as a round LED on the board with no type given.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "4.7K",
+   "R",
+   "to LED+"
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "56K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×5",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "2N5088",
+   "Q",
+   "Q1-3"
+  ],
+  [
+   "D1",
+   "?",
+   "LED",
+   "value not given; drawn as a round LED on the board"
+  ],
+  [
+   "×1",
+   "1N4004",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "B100K",
+   "POT",
+   "board mounted"
+  ],
+  [
+   "Level",
+   "B100K",
+   "POT",
+   "board mounted"
+  ]
+ ],
+ "source": "layout"
+}

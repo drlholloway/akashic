@@ -1,0 +1,173 @@
+{
+ "id": "dirtbox:2020-10-dead-astronaut-faze-filter",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 26x25 stripboard with four TL072 and four JFETs; two LED resistors are labelled CLR 1 and CLR 2 without values (the legend gives 4,7k for CLR 1), and the bypass and rate LEDs are off-board.",
+ "uncertain": [
+  "CLR 1 (right edge, column 25): no value on the part, 4.7K taken from the legend line 'CLR 1 is 4,7k in schematic'"
+ ],
+ "rows": [
+  [
+   "×10",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×8",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "56K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "680K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "CLR 1",
+   "4.7K",
+   "R",
+   "LED resistor; legend: CLR 1 is 4,7k in schematic"
+  ],
+  [
+   "CLR 2",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×6",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "×4",
+   "2N5457",
+   "Q",
+   "Q2-Q5, JFET; legend: 2N5457 or other J FETs"
+  ],
+  [
+   "×4",
+   "TL072",
+   "IC",
+   "IC1-IC4"
+  ],
+  [
+   "D1",
+   "5.1V Zener",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Depth",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Bias",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Speed",
+   "A1M",
+   "POT",
+   "legend: 1mA (try 1mC)"
+  ],
+  [
+   "Mix Vibe",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "SPDT on/off/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

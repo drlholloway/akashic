@@ -1,0 +1,137 @@
+{
+ "id": "effectslayouts-blog:2019-07-boss-od-1",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout drawn four times (populated board, colour wiring diagram, underside, etched PCB); counted from the populated board and confirmed against the diagram. Quad op-amp version (14-pin IC1) with asymmetric clipping from three diodes.",
+ "uncertain": [
+  "Three clipping diodes printed only as 1588: entered as 1S1588, the usual part in the OD-1"
+ ],
+ "rows": [
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "18nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "RC3403ADB",
+   "IC",
+   "quad op-amp"
+  ],
+  [
+   "×3",
+   "1S1588",
+   "D",
+   "printed 1588"
+  ],
+  [
+   "×1",
+   "1N5817",
+   "D",
+   "printed 5817"
+  ],
+  [
+   "Drive",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "B10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,95 @@
+{
+ "id": "effectslayouts-blog:2015-10-escobedo-idiot-wah",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout shown four ways (populated board, colour wiring diagram, underside, etched PCB); counted from the populated board and confirmed against the diagram. The sweep control VR is a 50k pot or an LDR; a resonance switch connects at Res Sw1/Sw2.",
+ "uncertain": [
+  "Res switch: the drawing shows only two wires (Res Sw1, Res Sw2) and does not state the switch type; SPST assumed"
+ ],
+ "rows": [
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "680pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "MPSA13",
+   "Q",
+   ""
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   "printed 4001"
+  ],
+  [
+   "VR",
+   "50K",
+   "POT",
+   "50k pot or LDR"
+  ],
+  [
+   "Res",
+   "SPST",
+   "SW",
+   "type not stated; two wires Res Sw1/Sw2"
+  ]
+ ],
+ "source": "layout"
+}

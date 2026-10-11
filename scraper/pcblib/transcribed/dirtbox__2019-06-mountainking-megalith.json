@@ -1,0 +1,189 @@
+{
+ "id": "dirtbox:2019-06-mountainking-megalith",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "One populated 20x12 stripboard with the toggle switch mod, plus a drawing of the Notch Shift switch carrying three capacitors (33nF, 22nF, 10nF), which are counted here. One 47K is drawn translucent (mounted under/over other parts) and is counted. The image is cut off below the last wiring note.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47K",
+   "R",
+   "one drawn translucent beside Q1"
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "51K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1nF",
+   "C",
+   "one film, one ceramic"
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "22nF",
+   "C",
+   "one on the board, one on the Notch Shift switch"
+  ],
+  [
+   "×1",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33nF",
+   "C",
+   "on the Notch Shift switch"
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   "on the Notch Shift switch"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×5",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "220uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC338",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "BC338",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "3mm orange LED",
+   "LED",
+   "on the board"
+  ],
+  [
+   "D2",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Input",
+   "C1M",
+   "POT",
+   ""
+  ],
+  [
+   "Notch",
+   "A50K",
+   "POT",
+   ""
+  ],
+  [
+   "More",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Slope",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Output",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Notch Shift",
+   "DPDT on/off/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "More Heavy",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

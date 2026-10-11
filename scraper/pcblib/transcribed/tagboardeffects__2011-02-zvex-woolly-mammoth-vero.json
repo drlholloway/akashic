@@ -1,0 +1,102 @@
+{
+ "id": "tagboardeffects:2011-02-zvex-woolly-mammoth-vero",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout, 13 x 9, populated board above a bare cuts view, four pots drawn above. Two 2N3904 transistors.",
+ "uncertain": [
+  "4K99 right of the link: printed clearly, unusual value",
+  "20K upper left: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×1",
+   "51K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "20K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K99",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "Wool",
+   "B2K",
+   "POT",
+   ""
+  ],
+  [
+   "Pinch",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "EQ",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Output",
+   "B10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,93 @@
+{
+ "id": "dirtbox:2019-07-vox-distortion-module-1358b",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 11x10 stripboard with added Level control; the drawing is titled 'Distortion Module 1348B'. C5 is an optional cap with no value on the part. Legend note: increase the 150 Ohm resistor to 680 Ohm-1.2K for more output volume. The 2.7K resistor is drawn semi-transparent over Q2.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150Ω",
+   "R",
+   "increase to 680Ω-1.2K for more output volume"
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C5",
+   "?",
+   "C",
+   "value not given; optional cap, legend suggests 100pF-470pF"
+  ],
+  [
+   "×2",
+   "BC108A",
+   "Q",
+   "Q1, Q2"
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Fuzz",
+   "C1K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "B500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

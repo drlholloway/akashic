@@ -1,0 +1,83 @@
+{
+ "id": "dirtbox:2019-06-mosrite-fuzzrite-silicon",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 11x9 stripboard, silicon version with a vintage/modern switch; values printed on every part. The legend names the transistors only by type (low and medium gain NPN silicon), no part numbers.",
+ "uncertain": [
+  "50nF x2 and 2nF x2: printed clearly, unusual values"
+ ],
+ "rows": [
+  [
+   "×4",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "50nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "Low gain NPN silicon",
+   "Q",
+   "no part number given"
+  ],
+  [
+   "Q2",
+   "Medium gain NPN silicon",
+   "Q",
+   "no part number given"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Depth",
+   "B500K",
+   "POT",
+   "350kB in original"
+  ],
+  [
+   "Volume",
+   "A50K",
+   "POT",
+   "33kB in original"
+  ],
+  [
+   "Switch",
+   "SPST",
+   "SW",
+   "vintage/modern toggle"
+  ]
+ ],
+ "source": "layout"
+}

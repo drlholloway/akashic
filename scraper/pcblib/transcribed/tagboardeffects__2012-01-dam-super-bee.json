@@ -1,0 +1,93 @@
+{
+ "id": "tagboardeffects:2012-01-dam-super-bee",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Two alternative layouts of the same positive-ground germanium circuit, Compact (10 x 9) and Axial (16 x 9), each with a bare cuts view below; read from the first, Compact, and the Axial one carries the same parts and values.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "820R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470p",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "15uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "OC76",
+   "Q",
+   "legend: OC76/OC84/OC71/OC78/OC42/CV5416"
+  ],
+  [
+   "Q2",
+   "OC76",
+   "Q",
+   "legend: OC76/OC84/OC71/OC78D/OC41/CV5416"
+  ],
+  [
+   "VR1",
+   "22K",
+   "TRIM",
+   "to bias Q2"
+  ],
+  [
+   "Attack",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

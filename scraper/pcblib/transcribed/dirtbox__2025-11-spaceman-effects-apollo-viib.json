@@ -1,0 +1,165 @@
+{
+ "id": "dirtbox:2025-11-spaceman-effects-apollo-viib",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 18x17 stripboard with a legend; one 14-pin IC, a TO-92 rail-splitter regulator labelled REG and two ferrite beads labelled FB.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "680pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "270nF",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1uF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1.8nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "27nF",
+   "C",
+   ""
+  ],
+  [
+   "IC1",
+   "TLC2264",
+   "IC",
+   ""
+  ],
+  [
+   "REG",
+   "TLE2426",
+   "IC",
+   "rail splitter"
+  ],
+  [
+   "×2",
+   "3mm red LED",
+   "LED",
+   "D1, D2"
+  ],
+  [
+   "×3",
+   "9.1V Zener",
+   "D",
+   "D3, D4, D5"
+  ],
+  [
+   "D6",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "×2",
+   "Ferrite Bead",
+   "L",
+   "FB"
+  ],
+  [
+   "Gain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "SPDT on/off/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

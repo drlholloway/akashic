@@ -1,0 +1,75 @@
+{
+ "id": "tagboardeffects:2013-06-knight-kg389-fuzz-box",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Third picture is the vero layout (15 x 8, populated board above a cuts-and-links view); the first two smaller pictures were not opened and the fourth is a 320 px thumbnail-size picture, taken to be the same layout. The wires FT 1-3 go to the Fuzz Tone pot.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1.5nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "BC108C",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   "legend: Si (try 1N4148 similar)"
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   "legend: Si (try 1N4148 similar)"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Fuzz Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

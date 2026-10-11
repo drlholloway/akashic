@@ -1,0 +1,87 @@
+{
+ "id": "tagboardeffects:2013-01-mid-fi-electronics-random-number",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero 20x7, populated board on top and the bare cuts/links board below. Four transistors, one Volume pot.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N4401",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "PN2222",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "Q4",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

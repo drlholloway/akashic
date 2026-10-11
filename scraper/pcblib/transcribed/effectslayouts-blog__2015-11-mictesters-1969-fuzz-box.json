@@ -1,0 +1,99 @@
+{
+ "id": "effectslayouts-blog:2015-11-mictesters-1969-fuzz-box",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout shown four ways (populated board, colour wiring diagram, underside, etched PCB); counted from the populated board and confirmed against the wiring diagram. Two-transistor fuzz with Fuzz and Level pots.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "390K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.5M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "×2",
+   "BC109C",
+   "Q",
+   "Q1-2: BC109C, BC549C, etc."
+  ],
+  [
+   "Fuzz",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

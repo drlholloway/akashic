@@ -1,0 +1,111 @@
+{
+ "id": "effectslayouts-blog:2015-08-fulltone-69",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with a colour wiring diagram, bare underside and etched PCB; counted from the populated board. The board drawing is the PNP positive-ground version (-9v, + Ground) while the diagram is labelled +9v / - Ground; Q1 and Q2 are named only on the diagram and the legend says only 'Q1-2: Germanium'.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "TRIM",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "?",
+   "Q",
+   "value not given; legend says Germanium"
+  ],
+  [
+   "Q2",
+   "?",
+   "Q",
+   "value not given; legend says Germanium"
+  ],
+  [
+   "Fuzz",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Bias",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Contour",
+   "B1K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

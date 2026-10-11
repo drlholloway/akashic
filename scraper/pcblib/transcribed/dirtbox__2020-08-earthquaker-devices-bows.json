@@ -1,0 +1,81 @@
+{
+ "id": "dirtbox:2020-08-earthquaker-devices-bows",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 13x7 stripboard, one germanium transistor (OC139) and an off-board SPDT toggle wired to Switch 1/2/3.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "OC139",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Level",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

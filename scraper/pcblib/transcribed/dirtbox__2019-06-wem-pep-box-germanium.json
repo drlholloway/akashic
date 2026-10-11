@@ -1,0 +1,108 @@
+{
+ "id": "dirtbox:2019-06-wem-pep-box-germanium",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 12x9 stripboard, positive ground, two germanium PNP transistors. One capacitor drawn as an electrolytic can is printed 25nF.",
+ "uncertain": [
+  "25nF at G-H/F: drawn as an electrolytic can but printed '25nF'; probably meant 25uF (the other can is 25uF)",
+  "16K at E/D-F: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "16K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "820K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "56K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "25uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "25nF",
+   "C",
+   "electrolytic; printed 25nF, drawn as a can"
+  ],
+  [
+   "×1",
+   "3.3nF",
+   "C",
+   ""
+  ],
+  [
+   "Q1",
+   "ACY41",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "ACY41",
+   "Q",
+   ""
+  ],
+  [
+   "Effect",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

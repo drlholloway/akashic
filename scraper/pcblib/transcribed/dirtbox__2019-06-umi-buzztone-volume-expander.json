@@ -1,0 +1,93 @@
+{
+ "id": "dirtbox:2019-06-umi-buzztone-volume-expander",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 13x10 stripboard, positive ground (-9v supply). Transistors and D1 are given only as types (PNP germanium, germanium); legend says all pots are 100kB and suggests 200kB for Buzz and Volume for more output and gain.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "150nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "6.8nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "PNP Germanium",
+   "Q",
+   "type only, no part number given"
+  ],
+  [
+   "Q2",
+   "PNP Germanium",
+   "Q",
+   "type only, no part number given"
+  ],
+  [
+   "D1",
+   "Germanium",
+   "D",
+   "type only, no part number given"
+  ],
+  [
+   "D2",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   "try 200kB for more output and gain"
+  ],
+  [
+   "Buzz",
+   "B100K",
+   "POT",
+   "try 200kB for more output and gain"
+  ],
+  [
+   "Contour",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

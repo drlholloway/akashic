@@ -1,0 +1,83 @@
+{
+ "id": "tagboardeffects:2017-03-lovepedal-champ",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small 11x7 stripboard drawn twice (populated, then cuts and links only); read from the populated view. The transistor is labelled only '5088' above the board.",
+ "uncertain": [
+  "transistor printed as '5088' above the board: entered as 2N5088"
+ ],
+ "rows": [
+  [
+   "×2",
+   "330R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3K3",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N60P",
+   "D",
+   "legend: 1n60p (Test)"
+  ],
+  [
+   "D2",
+   "1N60P",
+   "D",
+   "legend: 1n60p (Test)"
+  ],
+  [
+   "×1",
+   "2N5088",
+   "Q",
+   "printed 5088"
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

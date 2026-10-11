@@ -1,0 +1,101 @@
+{
+ "id": "dirtbox:2019-08-seamoon-fresh-fuzz-dual-op-amp-version",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 16x9 vero board, dual op amp version; two pots (Bite, Gain) off board.",
+ "uncertain": [
+  "50nF (three film caps): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×1",
+   "560Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "82pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "50nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "JRC4558",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Bite",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "B50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

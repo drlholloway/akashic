@@ -72,7 +72,12 @@ class Parasit(Adapter):
         )
         for t, h in links.items():
             if h.lower().endswith(".pdf") and h != doc_url and h.split("/")[-1] != doc_url.split("/")[-1]:
-                c.extra_docs[t.title() if t else h.rsplit("/", 1)[-1]] = h if h.startswith("http") else BASE + h
+                full = h if h.startswith("http") else BASE + h
+                if "stripboard" in t or "vero" in h.lower():
+                    # The same circuit on stripboard: a second way to build this board, not a second circuit.
+                    c.layout.setdefault("also", []).append({"build": "vero", "url": full})
+                else:
+                    c.extra_docs[t.title() if t else h.rsplit("/", 1)[-1]] = full
         if pcb_url and pcb_url != c.url:
             c.extra_docs["PCB in the shop"] = pcb_url
         img = main.css_first("img[src]")

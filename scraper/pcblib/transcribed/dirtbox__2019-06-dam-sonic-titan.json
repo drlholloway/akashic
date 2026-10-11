@@ -1,0 +1,93 @@
+{
+ "id": "dirtbox:2019-06-dam-sonic-titan",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 14x10 vero with a 10K trimmer on the board, one JFET and an LM386; legend gives actives and three pots.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Q1",
+   "2N5457",
+   "Q",
+   "JFET"
+  ],
+  [
+   "IC1",
+   "LM386",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Drive",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

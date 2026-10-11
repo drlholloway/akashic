@@ -1,0 +1,77 @@
+{
+ "id": "tagboardeffects:2016-12-byoc-confidence-booster",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "10x10 vero, single populated view: one transistor, one 8-pin IC, five resistors, three 100nF and a 100uF.",
+ "uncertain": [
+  "360r in the centre of the board: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×1",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "360r",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   "2N5088, MPSA18,2N3904, etc."
+  ],
+  [
+   "IC1",
+   "4558",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

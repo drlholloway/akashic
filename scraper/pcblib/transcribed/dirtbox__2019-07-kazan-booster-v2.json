@@ -1,0 +1,165 @@
+{
+ "id": "dirtbox:2019-07-kazan-booster-v2",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 18x16 stripboard, four PNP germanium transistors, positive ground. Legend suggests an SPST switch instead of the Timbre pot and 10k-25k for the Level pot for more output.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "2.4K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "6.8K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "510Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "7.5K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "150nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "MP39B",
+   "Q",
+   "PNP Ge w low Hfe and leakage"
+  ],
+  [
+   "Q2",
+   "MP39B",
+   "Q",
+   "PNP Ge w low Hfe and leakage"
+  ],
+  [
+   "Q3",
+   "MP42B",
+   "Q",
+   "PNP Ge w low Hfe and leakage"
+  ],
+  [
+   "Q4",
+   "MP42B",
+   "Q",
+   "PNP Ge w low Hfe and leakage"
+  ],
+  [
+   "D1",
+   "D2D",
+   "D",
+   "or other ge diodes"
+  ],
+  [
+   "D2",
+   "D2D",
+   "D",
+   "or other ge diodes"
+  ],
+  [
+   "D3",
+   "D18",
+   "D",
+   "or other ge diodes"
+  ],
+  [
+   "D4",
+   "D18",
+   "D",
+   "or other ge diodes"
+  ],
+  [
+   "Timbre",
+   "B1M",
+   "POT",
+   "Try a SPST switch"
+  ],
+  [
+   "Level",
+   "B2.2K",
+   "POT",
+   "Try 10k-25k for more output"
+  ]
+ ],
+ "source": "layout"
+}

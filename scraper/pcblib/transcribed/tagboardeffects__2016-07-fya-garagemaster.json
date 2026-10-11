@@ -1,0 +1,93 @@
+{
+ "id": "tagboardeffects:2016-07-fya-garagemaster",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard 20x7, populated board above and the bare cuts/links view below; read from the populated board. One transistor drawn only as C-B-E pads; the legend says it is a selected, secret germanium type.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "12nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "220uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "?",
+   "Q",
+   "value not given; legend: selected, secret germanium type"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Bias",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "EQ SW",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "tagboardeffects:2017-03-earthquaker-devices-black-eye",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 11x9 stripboard with an on-board trimmer VR1; legend gives Q1, the diodes, the trimmer and the Boost pot.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "BS170",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "VR1",
+   "5k",
+   "TRIM",
+   ""
+  ],
+  [
+   "Boost",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

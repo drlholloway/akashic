@@ -1,0 +1,147 @@
+{
+ "id": "effectslayouts-blog:2016-02-run-off-groove-ube-screamer",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with a colour wiring diagram, underside and etched PCB; counted from the populated perfboard. D1 and D2 carry only designators on the board and are printed 4148 in the wiring diagram. An optional DPDT pickup switch is drawn separately with a 100K and a 220K soldered across its lugs; those two resistors are listed in their own rows.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   "on the optional pickup switch"
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   "on the optional pickup switch"
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1.5nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "150pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   "value from the wiring diagram"
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   "value from the wiring diagram"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "CD4049UBE",
+   "IC",
+   ""
+  ],
+  [
+   "Gain",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Pickup",
+   "DPDT",
+   "SW",
+   "optional pickup switch"
+  ]
+ ],
+ "source": "layout"
+}

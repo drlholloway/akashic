@@ -1,0 +1,87 @@
+{
+ "id": "effectslayouts-blog:2017-11-dwarfcraft-great-destroyer",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small L-shaped perfboard shown populated, as underside, as a colour wiring diagram and as an etched PCB; counted from the populated board. IC1 is a 16-pin hex inverter named only in the legend.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "MC14049",
+   "IC",
+   "MC14049 or CD4049 (buffered)"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Drive",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Starve",
+   "B2K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

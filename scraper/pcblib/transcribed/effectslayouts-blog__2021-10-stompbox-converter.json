@@ -1,0 +1,69 @@
+{
+ "id": "effectslayouts-blog:2021-10-stompbox-converter",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout shown populated, as a colour wiring diagram, underside and etched PCB; counted from the populated board and confirmed against the diagram. Level converter with send/return pads; legend says all pots A100k.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "5.1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "TL071",
+   "IC",
+   ""
+  ],
+  [
+   "Input",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Output",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

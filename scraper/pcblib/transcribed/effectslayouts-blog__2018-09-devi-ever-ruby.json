@@ -1,0 +1,81 @@
+{
+ "id": "effectslayouts-blog:2018-09-devi-ever-ruby",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with a PCB wiring diagram, the underside and an etch mask repeating the same parts; counted from the populated perfboard and confirmed on the diagram. Two transistor fuzz.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   "printed 4001"
+  ],
+  [
+   "Q1",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Intensity",
+   "B100K",
+   "POT",
+   "printed 100K Lin"
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   "printed 100K Lin"
+  ]
+ ],
+ "source": "layout"
+}

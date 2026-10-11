@@ -1,0 +1,69 @@
+{
+ "id": "dirtbox:2019-07-dwarfcraft-devices-great-destroyer",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single small populated 9x12 stripboard around one CD4049, two resistors and four electrolytics; four pots.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "CD4049BE",
+   "IC",
+   "legend: CD4049BE or MC14049BCP (buffered)"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Starve",
+   "B2K",
+   "POT",
+   ""
+  ],
+  [
+   "Drive",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

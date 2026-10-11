@@ -1,0 +1,135 @@
+{
+ "id": "dirtbox:2022-05-madbean-chaos-agent",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 15x13 stripboard with three transistors; values printed on every part. The legend gives no transistor type, only 'NPN silicon, Hfe 150-300'.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "NPN silicon",
+   "Q",
+   "Hfe 150-300, no type given"
+  ],
+  [
+   "Q2",
+   "NPN silicon",
+   "Q",
+   "Hfe 150-300, no type given"
+  ],
+  [
+   "Q3",
+   "NPN silicon",
+   "Q",
+   "Hfe 150-300, no type given"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Drive",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Gate",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Comp",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Squish",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Chaos",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A5K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

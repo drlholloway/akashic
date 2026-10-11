@@ -1,0 +1,149 @@
+{
+ "id": "dirtbox:2019-07-goya-panther-treble-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 13x16 vero board, positive ground, marked Verified. One 1M resistor is drawn semi-transparent under Q1's area at column F. One ceramic cap is printed '?' and the legend says its value is unknown. Two effect switches (Treble Boost and Fuzz) are stompswitches.",
+ "uncertain": [
+  "50uF electrolytic at K, rows H-I: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×3",
+   "1M",
+   "R",
+   "one drawn under other parts at column F"
+  ],
+  [
+   "×2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "5.1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330Ω",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "C",
+   "value not given; legend: unknown value on the '?' cap"
+  ],
+  [
+   "×4",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "50uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "PNP Germanium",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "PNP Germanium",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "PNP Germanium",
+   "Q",
+   ""
+  ],
+  [
+   "Treble",
+   "B5K",
+   "POT",
+   "some units have 10kB pots"
+  ],
+  [
+   "Fuzz Attack",
+   "B5K",
+   "POT",
+   "some units have 10kB pots"
+  ],
+  [
+   "Fuzz Intensity",
+   "B5K",
+   "POT",
+   "some units have 10kB pots"
+  ],
+  [
+   "Treble Boost",
+   "SPDT",
+   "SW",
+   "SPDT or DPDT stompswitch"
+  ],
+  [
+   "Fuzz",
+   "SPDT",
+   "SW",
+   "SPDT or DPDT stompswitch"
+  ]
+ ],
+ "source": "layout"
+}

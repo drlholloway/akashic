@@ -1,0 +1,27 @@
+{
+ "id": "tagboardeffects:2012-05-negative-voltage-inverter",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Tiny 7x5 stripboard daughterboard (one view): a charge pump IC and two electrolytics turning +9V into -9V for positive-ground effects.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "ICL7660S",
+   "IC",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

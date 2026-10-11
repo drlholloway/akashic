@@ -1,0 +1,39 @@
+{
+ "id": "tagboardeffects:2014-08-buffers",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Four alternative buffer boards on one sheet: TL071 on vero (10x6), TL071 on perfboard (9x5), and two 2N5457 JFET buffers (5x6 and 8x7), each beside its bare board. Only the first (TL071 vero) is read here. The others: perf TL071 = 10u, 100n, 3x 1M, TL071; JFET 5x6 = 10u, 100n, 1M, 3K3, 2N5457; JFET 8x7 = 10u, 100n, 1M, 2x 10K, 3K3, 2N5457.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "TL071",
+   "IC",
+   "no designator printed"
+  ]
+ ],
+ "source": "layout"
+}

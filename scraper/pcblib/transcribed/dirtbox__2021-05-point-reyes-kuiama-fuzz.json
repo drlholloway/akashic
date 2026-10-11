@@ -1,0 +1,125 @@
+{
+ "id": "dirtbox:2021-05-point-reyes-kuiama-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 16x16 stripboard with a charge-pump IC, three PNP germanium transistors and three on-board trimmers (drawn as purple squares: 50K, 50K, 10K).",
+ "uncertain": [
+  "5uF electrolytics (two: left edge rows I-K, right edge rows E-F): printed clearly as 5uF with the text centred in the can, unusual value; a clipped 15uF cannot be fully ruled out"
+ ],
+ "rows": [
+  [
+   "×2",
+   "50K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "5uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "50K",
+   "TRIM",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "TRIM",
+   ""
+  ],
+  [
+   "IC1",
+   "1044",
+   "IC",
+   "legend: 1044 / 7660S"
+  ],
+  [
+   "Q1",
+   "MP40",
+   "Q",
+   "PNP Ge. Low leakage and gain"
+  ],
+  [
+   "Q2",
+   "MP40",
+   "Q",
+   "PNP Ge. Low leakage and gain"
+  ],
+  [
+   "Q3",
+   "MP40",
+   "Q",
+   "PNP Ge. Low leakage and gain"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

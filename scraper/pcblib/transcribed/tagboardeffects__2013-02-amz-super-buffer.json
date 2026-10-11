@@ -1,0 +1,63 @@
+{
+ "id": "tagboardeffects:2013-02-amz-super-buffer",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "15x13 vero, populated board on top and a bare cuts/links view below; two dual op-amps, all values printed large and clear.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL072",
+   "IC",
+   "ICs are TL072 or similar"
+  ],
+  [
+   "IC2",
+   "TL072",
+   "IC",
+   "ICs are TL072 or similar"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   "D1 is 1N5817 or 1N4001"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,99 @@
+{
+ "id": "tagboardeffects:2013-01-runoffgroove-mockman",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "17x10 stripboard (Mockman v2), populated view on top and a bare cuts-and-links view below. One dual op-amp; a Modern/Classic SPST switch on the SW1/SW2 wires.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "6.8nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL072",
+   "IC",
+   "any dual opamp (try TL072, JRC4558, NE5532 or TLC2272)"
+  ],
+  [
+   "Volume",
+   "A50K",
+   "POT",
+   ""
+  ],
+  [
+   "Modern/Classic",
+   "SPST",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

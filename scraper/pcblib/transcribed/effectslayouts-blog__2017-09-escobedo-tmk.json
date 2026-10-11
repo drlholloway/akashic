@@ -1,0 +1,123 @@
+{
+ "id": "effectslayouts-blog:2017-09-escobedo-tmk",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout by storyboardist: populated board, underside, colour wiring diagram and etched PCB of the same circuit; counted from the populated board and confirmed against the diagram. The 1uF is drawn as a box film cap, not a can. D1-2 are red clipping LEDs on the board.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "box film"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL062",
+   "IC",
+   ""
+  ],
+  [
+   "×2",
+   "3mm red LED",
+   "LED",
+   "D1, D2"
+  ],
+  [
+   "×5",
+   "1N4148",
+   "D",
+   "D3-D7"
+  ],
+  [
+   "×1",
+   "1N5817",
+   "D",
+   "printed 5817, no designator"
+  ],
+  [
+   "Feedback",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain/Color",
+   "B50K",
+   "POT",
+   "board label Gain"
+  ],
+  [
+   "Oct./Fund. Blend",
+   "B10K",
+   "POT",
+   "board label Blend"
+  ],
+  [
+   "Input Z",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "X-over Dist.",
+   "B250K",
+   "POT",
+   "board label Xover"
+  ],
+  [
+   "Volume",
+   "B250K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

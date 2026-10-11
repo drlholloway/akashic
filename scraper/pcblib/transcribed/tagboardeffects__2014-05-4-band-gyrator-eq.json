@@ -1,0 +1,185 @@
+{
+ "id": "tagboardeffects:2014-05-4-band-gyrator-eq",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout (16 x 17) of the 4 band version of the gyrator EQ; populated board on the left, bare board on the right. The band parts are printed as designators (R1/R2/C1/C2 for bands A-D) and chosen from an example table: every table row gives R1 100000 ohms, C1 0.1uF and C2 0.01uF, while R2 sets the band frequency (22 ohms to 10K) and is left as not given.",
+ "uncertain": [
+  "R1, C1 and C2 of each band carry no value on the board; the values entered are the ones the example table gives for every row"
+ ],
+ "rows": [
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3K3",
+   "R",
+   ""
+  ],
+  [
+   "R1 A",
+   "100K",
+   "R",
+   "from the example component table"
+  ],
+  [
+   "R1 B",
+   "100K",
+   "R",
+   "from the example component table"
+  ],
+  [
+   "R1 C",
+   "100K",
+   "R",
+   "from the example component table"
+  ],
+  [
+   "R1 D",
+   "100K",
+   "R",
+   "from the example component table"
+  ],
+  [
+   "R2 A",
+   "?",
+   "R",
+   "value not given; sets the band frequency, example table lists 22 ohms to 10K"
+  ],
+  [
+   "R2 B",
+   "?",
+   "R",
+   "value not given; sets the band frequency, example table lists 22 ohms to 10K"
+  ],
+  [
+   "R2 C",
+   "?",
+   "R",
+   "value not given; sets the band frequency, example table lists 22 ohms to 10K"
+  ],
+  [
+   "R2 D",
+   "?",
+   "R",
+   "value not given; sets the band frequency, example table lists 22 ohms to 10K"
+  ],
+  [
+   "×1",
+   "1u",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C1 A",
+   "0.1uF",
+   "C",
+   "from the example component table"
+  ],
+  [
+   "C1 B",
+   "0.1uF",
+   "C",
+   "from the example component table"
+  ],
+  [
+   "C1 C",
+   "0.1uF",
+   "C",
+   "from the example component table"
+  ],
+  [
+   "C1 D",
+   "0.1uF",
+   "C",
+   "from the example component table"
+  ],
+  [
+   "C2 A",
+   "0.01uF",
+   "C",
+   "from the example component table"
+  ],
+  [
+   "C2 B",
+   "0.01uF",
+   "C",
+   "from the example component table"
+  ],
+  [
+   "C2 C",
+   "0.01uF",
+   "C",
+   "from the example component table"
+  ],
+  [
+   "C2 D",
+   "0.01uF",
+   "C",
+   "from the example component table"
+  ],
+  [
+   "×1",
+   "10K",
+   "TRIM",
+   ""
+  ],
+  [
+   "IC1",
+   "TL072",
+   "IC",
+   "TL072 or similar"
+  ],
+  [
+   "IC2",
+   "TL074",
+   "IC",
+   "TL074 or similar; rotated 180 degrees"
+  ],
+  [
+   "Band A",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Band B",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Band C",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Band D",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,117 @@
+{
+ "id": "dirtbox:2019-06-jen-fuzz-iii",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 12x11 stripboard, values printed on the parts; includes an LED resistor printed only as CLR.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "6.8K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "1.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC239C",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "BC239C",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "BC239C",
+   "Q",
+   ""
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   "D1, D2; 1N4148 or 1N914, ITT 125 in original"
+  ],
+  [
+   "Fuzz",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

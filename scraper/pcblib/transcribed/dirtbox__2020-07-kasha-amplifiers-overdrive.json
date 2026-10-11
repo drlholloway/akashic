@@ -1,0 +1,123 @@
+{
+ "id": "dirtbox:2020-07-kasha-amplifiers-overdrive",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 18x13 stripboard with two JFETs and two 50K trimmers; one pot, a 3P4T rotary channel switch and a Normal/Turbo toggle. Legend notes BF862 in the original.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×5",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "820Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "50K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Q1",
+   "J201",
+   "Q",
+   "JFET; J201, PF5102, 2N5457 etc; BF862 in original"
+  ],
+  [
+   "Q2",
+   "J201",
+   "Q",
+   "JFET; J201, PF5102, 2N5457 etc; BF862 in original"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "A250K",
+   "POT",
+   ""
+  ],
+  [
+   "Channel",
+   "3P4T rotary",
+   "SW",
+   "rotary"
+  ],
+  [
+   "Normal/Turbo",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

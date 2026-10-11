@@ -1,0 +1,93 @@
+{
+ "id": "tagboardeffects:2012-01-dam-sonic-titan-with-modified-tone",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "15 x 9 vero, the Sonic Titan with a changed tone stack: LM386, 2N3819 JFET and a 10K trimmer; populated board above, bare cuts view below.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "2K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4M7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4n7",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "4u7",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "LM386",
+   "IC",
+   ""
+  ],
+  [
+   "×1",
+   "2N3819",
+   "Q",
+   "JFET"
+  ],
+  [
+   "×1",
+   "10K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Drive",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

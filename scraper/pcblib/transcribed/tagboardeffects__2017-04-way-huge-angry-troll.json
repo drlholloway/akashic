@@ -1,0 +1,132 @@
+{
+ "id": "tagboardeffects:2017-04-way-huge-angry-troll",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 17x13 stripboard around one dual op-amp; the Sw1-6 and SwA wires go to a 1-pole 6-position rotary switch.",
+ "uncertain": [
+  "3.3k resistor at col 10, rows I-L: partly covered by the 100uF can, first digit read through the overlap",
+  "6.2k resistor at col 12: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×3",
+   "22k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.7M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100r",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10r",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "6.2k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "27k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.5k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "film"
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "330pF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "LM833N",
+   "IC",
+   ""
+  ],
+  [
+   "Volume",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "1P6T rotary",
+   "SW",
+   "legend: 1Pole6Position"
+  ]
+ ],
+ "source": "layout"
+}

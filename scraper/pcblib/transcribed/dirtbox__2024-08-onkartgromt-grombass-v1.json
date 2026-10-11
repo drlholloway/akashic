@@ -1,0 +1,159 @@
+{
+ "id": "dirtbox:2024-08-onkartgromt-grombass-v1",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "One populated 17x16 stripboard with an unnamed 1K trimmer on the board and two clipping LEDs. The 1uF caps are drawn as film boxes, not cans. D5-D6 are given only as Germanium.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1.2K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "560Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "1uF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "IC1",
+   "NE5532",
+   "IC",
+   ""
+  ],
+  [
+   "×2",
+   "3mm red LED",
+   "LED",
+   "D1, D2"
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   "D3, D4"
+  ],
+  [
+   "×2",
+   "Germanium",
+   "D",
+   "D5, D6; type not given"
+  ],
+  [
+   "D7",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "TRIM",
+   "unnamed trimmer on the board"
+  ],
+  [
+   "Gear",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Turbo",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Clipping Sw",
+   "SPDT on/off/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Hi Cut Sw",
+   "SPDT on/off/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

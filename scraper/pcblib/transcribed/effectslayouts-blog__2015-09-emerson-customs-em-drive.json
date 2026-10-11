@@ -1,0 +1,45 @@
+{
+ "id": "effectslayouts-blog:2015-09-emerson-customs-em-drive",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Two alternative versions on one sheet, each with perfboard, wiring diagram, underside and etch mask. Read the first (large) one, which uses two big box-film 100nF capacitors. The second, compact version adds 2x 1N4148, a 1N4001 and a 47uF electrolytic to the same 4.7K/2M/100nF parts; those are not counted here. One of the 4.7K resistors feeds the LED pad.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "4.7K",
+   "R",
+   "one is the LED resistor"
+  ],
+  [
+   "×2",
+   "2M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   "large box film"
+  ],
+  [
+   "Q1",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Gain",
+   "A250K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A250K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

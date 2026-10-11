@@ -1,0 +1,75 @@
+{
+ "id": "tagboardeffects:2010-09-fuzz-face-pnp-tagboard",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Tagboard (turret) layout, single populated view; the two transistors sit above the board on the tags. Legend says only that the transistors are PNP germanium, Q1 about 80 hFE and Q2 about 120 hFE.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "8k2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "20u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "2u2",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "Q1",
+   "?",
+   "Q",
+   "value not given; PNP germanium, about 80 hFE"
+  ],
+  [
+   "Q2",
+   "?",
+   "Q",
+   "value not given; PNP germanium, about 120 hFE"
+  ],
+  [
+   "Fuzz",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

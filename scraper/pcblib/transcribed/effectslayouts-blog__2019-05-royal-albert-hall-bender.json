@@ -1,0 +1,105 @@
+{
+ "id": "effectslayouts-blog:2019-05-royal-albert-hall-bender",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with a wiring diagram, a reversed underside and an etched PCB of the same circuit; counted from the populated perfboard. Three PNP germanium transistors, positive ground, four pots.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   "printed 4001"
+  ],
+  [
+   "Q1",
+   "2N404",
+   "Q",
+   "legend: Q1-3: 2N404 or similar, PNP germanium transistors"
+  ],
+  [
+   "Q2",
+   "2N404",
+   "Q",
+   "2N404 or similar, PNP germanium"
+  ],
+  [
+   "Q3",
+   "2N404",
+   "Q",
+   "2N404 or similar, PNP germanium"
+  ],
+  [
+   "Attack",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Bias",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Pre Gain",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

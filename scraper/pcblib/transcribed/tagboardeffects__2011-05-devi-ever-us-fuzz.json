@@ -1,0 +1,81 @@
+{
+ "id": "tagboardeffects:2011-05-devi-ever-us-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero 16x9, populated board above a bare cuts-and-links view. Four transistors without designators, labelled by type above and below the board: alternating MPSA18, 2N2222A, MPSA18, 2N2222A from left to right.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "MPSA18",
+   "Q",
+   "1st and 3rd from the left"
+  ],
+  [
+   "×2",
+   "2N2222A",
+   "Q",
+   "2nd and 4th from the left"
+  ],
+  [
+   "Intensity",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

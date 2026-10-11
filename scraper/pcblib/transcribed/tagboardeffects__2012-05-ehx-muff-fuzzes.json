@@ -1,0 +1,75 @@
+{
+ "id": "tagboardeffects:2012-05-ehx-muff-fuzzes",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Two alternative versions drawn side by side, each with a populated and a bare board: Opamp (14x8) and Transistor (12x8). Per convention the first one, the Opamp version, is read here. The Transistor version is a different circuit: 10K, 3x 100K, 2K7, 47uF electrolytic, 2x 100n, Q1 and Q2 2N5088, D1 and D2 1N34A, Volume 100K Log.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "680K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC",
+   "JRC4558",
+   "IC",
+   "legend: JRC4558 or other dual opamp"
+  ],
+  [
+   "D1",
+   "1N34A",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N34A",
+   "D",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,57 @@
+{
+ "id": "tagboardeffects:2013-02-ne555-voltage-doubler",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard 13 x 9 drawn twice (populated, then cuts and links only); read from the populated view. A 9V to 18V charge-pump utility board, no pots.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "220uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "470uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "NE555",
+   "IC",
+   ""
+  ],
+  [
+   "×2",
+   "BAT85",
+   "D",
+   "D1, D2; barrier Schottkys, like BAT85, 1N5817, 1N5819 or 1N4001-1N4007"
+  ]
+ ],
+ "source": "layout"
+}

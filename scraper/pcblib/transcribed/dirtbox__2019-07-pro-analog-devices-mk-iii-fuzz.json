@@ -1,0 +1,137 @@
+{
+ "id": "dirtbox:2019-07-pro-analog-devices-mk-iii-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 14x10 stripboard, three PNP germanium transistors, positive-ground circuit with a gain boost switch; legend gives no transistor part number.",
+ "uncertain": [
+  "Round can at column 13, rows H-J is printed '4,7nF' but drawn as an electrolytic like the 4,7uF at column 2; possibly a typo for 4.7uF"
+ ],
+ "rows": [
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "8.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.8K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   "electrolytic; printed 4,7nF on a round can"
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47pF",
+   "C",
+   ""
+  ],
+  [
+   "Q1",
+   "PNP Germanium",
+   "Q",
+   "low gain and low leakage"
+  ],
+  [
+   "Q2",
+   "PNP Germanium",
+   "Q",
+   "low gain and low leakage"
+  ],
+  [
+   "Q3",
+   "PNP Germanium",
+   "Q",
+   "higher gain with leakage"
+  ],
+  [
+   "Fuzz",
+   "C1K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "SPST",
+   "SW",
+   "gain boost"
+  ]
+ ],
+ "source": "layout"
+}

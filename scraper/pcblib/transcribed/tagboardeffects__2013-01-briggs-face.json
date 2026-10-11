@@ -1,0 +1,29 @@
+{
+ "id": "tagboardeffects:2013-01-briggs-face",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "The cached image for this post is a small voltage-doubler board (Simple Voltage Doubler, 9V to about 17.5V), not a fuzz circuit: one charge-pump IC, two diodes and two electrolytics, no bare-board view.",
+ "uncertain": [
+  "IC is printed 'IC7660S' on the body; entered as ICL7660S"
+ ],
+ "rows": [
+  [
+   "×1",
+   "ICL7660S",
+   "IC",
+   "printed IC7660S"
+  ],
+  [
+   "×2",
+   "10U",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "1N5817",
+   "D",
+   "1N5817 or other Schottky"
+  ]
+ ],
+ "source": "layout"
+}

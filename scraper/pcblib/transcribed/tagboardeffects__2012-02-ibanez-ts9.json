@@ -1,0 +1,150 @@
+{
+ "id": "tagboardeffects:2012-02-ibanez-ts9",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 19 x 12 of a TS9 without the output buffer and with an off-board symmetrical/asymmetrical clipping switch; the clipping diodes sit on the switch (D1, D2, D3 and two labelled D4) and the legend gives no diode or transistor type.",
+ "uncertain": [
+  "20n left of the 510K: printed clearly, unusual value",
+  "The second of the two diodes at the bottom of the switch is also printed D4 (probably meant D5)"
+ ],
+ "rows": [
+  [
+   "×4",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "510K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "51K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "51p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "20n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1u",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "JRC4558",
+   "IC",
+   ""
+  ],
+  [
+   "Q1",
+   "?",
+   "Q",
+   "value not given; legend says NPN silicon"
+  ],
+  [
+   "D1",
+   "?",
+   "D",
+   "value not given; on the clipping switch"
+  ],
+  [
+   "D2",
+   "?",
+   "D",
+   "value not given; on the clipping switch"
+  ],
+  [
+   "D3",
+   "?",
+   "D",
+   "value not given; on the clipping switch"
+  ],
+  [
+   "×2",
+   "?",
+   "D",
+   "value not given; both printed D4, on the clipping switch"
+  ],
+  [
+   "Drive",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Sw1",
+   "DPDT on/on",
+   "SW",
+   "symmetrical / asymmetrical clipping toggle, 2 position"
+  ]
+ ],
+ "source": "layout"
+}

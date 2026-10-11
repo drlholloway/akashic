@@ -1,0 +1,93 @@
+{
+ "id": "tagboardeffects:2018-02-lovepedal-jubilee",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small 11x10 vero board drawn twice (populated, then cuts and links only); read from the populated view. One 386 amp chip, printed 386D.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K8",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4n7",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "390p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "386D",
+   "IC",
+   "printed 386D (LM386)"
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Drive",
+   "A250K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

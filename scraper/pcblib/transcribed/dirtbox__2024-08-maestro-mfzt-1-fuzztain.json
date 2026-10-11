@@ -1,0 +1,257 @@
+{
+ "id": "dirtbox:2024-08-maestro-mfzt-1-fuzztain",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Drawing shows the 28x28 board twice (bare with cuts and jumpers on the left, populated on the right); read from the populated one. The legend gives two alternatives for the Mode control: stock (SPDT on/on toggle, R21 22k, R28 47k) and the EAE Blend mod (B50k pot, R21 1k, R28 1k); the stock version is entered here. R21, R28, C9 and C22 are printed as designators with values in the legend.",
+ "uncertain": [
+  "R21, R28 and the Mode control: stock values entered (22k, 47k, SPDT toggle); the EAE Blend mod uses 1k, 1k and a B50k pot instead"
+ ],
+ "rows": [
+  [
+   "×1",
+   "47Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1k5",
+   "R",
+   ""
+  ],
+  [
+   "×7",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "51k",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "200k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "510k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2M",
+   "R",
+   "printed 2m"
+  ],
+  [
+   "R21",
+   "22k",
+   "R",
+   "stock mode switch; 1k for the EAE Blend mod"
+  ],
+  [
+   "R28",
+   "47k",
+   "R",
+   "stock mode switch; 1k for the EAE Blend mod"
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "3n3",
+   "C",
+   ""
+  ],
+  [
+   "C9",
+   "10nF",
+   "C",
+   "EAE recommends lower, try 4n7-6n8"
+  ],
+  [
+   "×4",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "330nF",
+   "C",
+   ""
+  ],
+  [
+   "C22",
+   "1uF",
+   "C",
+   "film box; EAE says a different value affects compressor release time"
+  ],
+  [
+   "×5",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL072",
+   "IC",
+   "EAE says try NE5532"
+  ],
+  [
+   "IC2",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "IC3",
+   "TL072",
+   "IC",
+   "EAE says try NE5532"
+  ],
+  [
+   "IC4",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "IC5",
+   "CD4007",
+   "IC",
+   "both UBE & AE work"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   "D2, D3; EAE says try 3mm red LEDs for LOUD"
+  ],
+  [
+   "Q1",
+   "BC337",
+   "Q",
+   "EAE used 2n3904, mind the pinout"
+  ],
+  [
+   "Q2",
+   "BC337",
+   "Q",
+   "EAE used 2n3904, mind the pinout"
+  ],
+  [
+   "Q3",
+   "BC337",
+   "Q",
+   "EAE used 2n3904, mind the pinout"
+  ],
+  [
+   "Sustain",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Fuzz",
+   "C1M",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A25K",
+   "POT",
+   ""
+  ],
+  [
+   "Mode",
+   "SPDT on/on",
+   "SW",
+   "toggle, stock; EAE Blend mod replaces it with a B50k pot"
+  ]
+ ],
+ "source": "layout"
+}

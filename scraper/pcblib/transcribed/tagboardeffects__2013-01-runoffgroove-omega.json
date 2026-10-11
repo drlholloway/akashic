@@ -1,0 +1,89 @@
+{
+ "id": "tagboardeffects:2013-01-runoffgroove-omega",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "12x8 stripboard, populated view on top and a bare cuts-and-links view below. JFET plus MOSFET booster with a 100K bias trimmer (set to 4.75V at Q1 drain); the LED resistor is on the board with no value.",
+ "uncertain": [
+  "Trimmer at lower left: printed 100K on the part, no designator; the legend does not repeat its value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "3.3nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100K",
+   "TRIM",
+   "bias trimmer, adjust to 4.75V at Q1 drain"
+  ],
+  [
+   "Q1",
+   "2N5457",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q2",
+   "2N7000",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "Range",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Master",
+   "A10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

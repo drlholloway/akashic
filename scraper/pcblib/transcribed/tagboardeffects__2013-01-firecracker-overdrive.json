@@ -1,0 +1,71 @@
+{
+ "id": "tagboardeffects:2013-01-firecracker-overdrive",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 11x9 stripboard, MOSFET overdrive (Dragonfly Firecracker OD) with four diodes D1-D4 and a 20K part drawn as a transparent outline over the top-left of the board.",
+ "uncertain": [
+  "20K at top centre: drawn as a transparent outline with three pads in a triangle, read as a board-mounted trimmer; not named in the legend"
+ ],
+ "rows": [
+  [
+   "×2",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.7K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "20K",
+   "TRIM",
+   ""
+  ],
+  [
+   "×1",
+   "BS170",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "×4",
+   "1N4001",
+   "D",
+   "D1-D4"
+  ],
+  [
+   "Gain",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

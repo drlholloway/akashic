@@ -1,0 +1,111 @@
+{
+ "id": "dirtbox:2024-06-lovepedal-les-luis-w-twill-deluxe-mods",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small 14x11 stripboard drawn twice (populated, then cuts and links only); read from the populated view. Two resistors are printed only as CLR (status LED and boost LED).",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "330Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3k3",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1m",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3m3",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   "one ceramic, one film"
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "×2",
+   "1N914",
+   "D",
+   "D2, D3"
+  ],
+  [
+   "×3",
+   "BAT46",
+   "D",
+   "D4, D5, D6"
+  ],
+  [
+   "Gain",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Boost SW",
+   "DPDT",
+   "SW",
+   "stomp footswitch for the boost"
+  ],
+  [
+   "Mode SW",
+   "SPDT on/off/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

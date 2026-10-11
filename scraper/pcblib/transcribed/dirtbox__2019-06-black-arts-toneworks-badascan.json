@@ -1,0 +1,197 @@
+{
+ "id": "dirtbox:2019-06-black-arts-toneworks-badascan",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 19x17 stripboard, four MPSA12 transistors, two clipping LEDs and four clipping diodes on the board, two toggle switches off board. The board draws the supply diode as D7 while the legend calls it 'D5: 1N5817' (D5 and D6 are the LEDs).",
+ "uncertain": [
+  "D7 at the left edge (row I): the legend gives no D7 and lists 'D5: 1N5817' a second time, taken as the legend's typo for D7"
+ ],
+ "rows": [
+  [
+   "×3",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.2K",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "39K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "390K",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "560pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×8",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "MPSA12",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "MPSA12",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "MPSA12",
+   "Q",
+   ""
+  ],
+  [
+   "Q4",
+   "MPSA12",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   "legend: 1N4148/1N914"
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   "legend: 1N4148/1N914"
+  ],
+  [
+   "D3",
+   "1N4148",
+   "D",
+   "legend: 1N4148/1N914"
+  ],
+  [
+   "D4",
+   "1N4148",
+   "D",
+   "legend: 1N4148/1N914"
+  ],
+  [
+   "D5",
+   "3mm red LED",
+   "LED",
+   ""
+  ],
+  [
+   "D6",
+   "3mm red LED",
+   "LED",
+   ""
+  ],
+  [
+   "D7",
+   "1N5817",
+   "D",
+   "legend prints it as 'D5: 1N5817'"
+  ],
+  [
+   "Tone",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Highs",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Sustain",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Pre Gain",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Clip",
+   "SPDT on/off/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

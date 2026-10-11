@@ -1,0 +1,141 @@
+{
+ "id": "dirtbox:2020-09-yamaha-od-10mii-overdrive",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 17x15 stripboard; legend gives substitutes for the original Japanese parts (2SC1815, TA755595, 1SS119-041).",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "560pF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   "legend: 2N5088, 2N3904 etc.; 2SC1815 in original"
+  ],
+  [
+   "IC1",
+   "4558",
+   "IC",
+   "legend: 4558, 1458, 5532 etc.; TA755595 in original"
+  ],
+  [
+   "×4",
+   "1N4148",
+   "D",
+   "D1-D4; legend: 1N4148/1N914, 1SS119-041 in original"
+  ],
+  [
+   "D5",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Tone",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Out Level",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Over Drive",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,105 @@
+{
+ "id": "dirtbox:2024-03-frost-giant-electronics-black-gold",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "One populated 12x14 stripboard with two LM386-4 amplifiers; the LED resistor is on the board and printed only as CLR.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   "one film, one ceramic"
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "film"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "LM386-4",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "LM386-4",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Bright",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

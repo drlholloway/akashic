@@ -1,0 +1,77 @@
+{
+ "id": "tagboardeffects:2014-06-soft-latch-relay-bypass-daughterboard",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "One 15x11 vero board (soft latch true bypass, grounded input) with parts, and the bare cuts-and-links view below it. The relay sits on the board; the momentary stomp switch (Stomp 1 / Stomp 2) is the bypass switch and is not listed.",
+ "uncertain": [
+  "220n film capacitor left of centre: the label is wider than the part and its last letter is clipped, read as 220n"
+ ],
+ "rows": [
+  [
+   "×3",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "Q1",
+   "BC550",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "BC550",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "BC560",
+   "Q",
+   ""
+  ],
+  [
+   "×1",
+   "DPCO 9V relay",
+   "OTHER",
+   "Relay is DPCO 9V Omron or similar. 12V should work fine but check supply tolerance"
+  ]
+ ],
+ "source": "layout"
+}

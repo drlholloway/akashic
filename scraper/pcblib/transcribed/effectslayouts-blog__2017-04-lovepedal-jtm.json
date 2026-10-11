@@ -1,0 +1,75 @@
+{
+ "id": "effectslayouts-blog:2017-04-lovepedal-jtm",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small perfboard layout with a colour wiring diagram, the underside and an etched PCB of the same circuit; counted from the populated perfboard and confirmed against the diagram. Only control is a Bias pot.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5089",
+   "Q",
+   ""
+  ],
+  [
+   "×2",
+   "BAT46",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Bias",
+   "B5K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

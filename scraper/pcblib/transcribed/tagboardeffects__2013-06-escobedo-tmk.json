@@ -1,0 +1,111 @@
+{
+ "id": "tagboardeffects:2013-06-escobedo-tmk",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 16 x 12, populated board above a bare cuts-and-links view; read from the populated board. D1-D2 are 3mm red LEDs mounted on the board; six pots.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL062",
+   "IC",
+   ""
+  ],
+  [
+   "×2",
+   "3mm red LED",
+   "LED",
+   "D1, D2"
+  ],
+  [
+   "×5",
+   "1N4148",
+   "D",
+   "D3-D7"
+  ],
+  [
+   "Feedback",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Input Z",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain/Color",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Xover",
+   "B250K",
+   "POT",
+   "X-Over Distortion"
+  ],
+  [
+   "O/F Blend",
+   "B10K",
+   "POT",
+   "Oct/Fund. Blend"
+  ],
+  [
+   "Volume",
+   "B250K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

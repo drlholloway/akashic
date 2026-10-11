@@ -1,0 +1,51 @@
+{
+ "id": "tagboardeffects:2017-09-nine-volt-nirvana-tape-measure-boost",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 11x8 vero board: one transistor, four resistors, two electrolytics and a board-mounted 100k trimmer; no pots.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "470k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150r",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N2222",
+   "Q",
+   ""
+  ],
+  [
+   "×1",
+   "100k",
+   "TRIM",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,93 @@
+{
+ "id": "dirtbox:2019-08-way-huge-red-llama",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 12x9 stripboard with one CD4049UBE and an off-board Rhythm/Lead switch; all values printed on the parts, no diodes drawn.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "51pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "68nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "220uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "CD4049UBE",
+   "IC",
+   ""
+  ],
+  [
+   "Gain",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "SPDT on/on",
+   "SW",
+   "Rhythm/Lead; legend: SPDT on/on or DPDT footswitch"
+  ]
+ ],
+ "source": "layout"
+}

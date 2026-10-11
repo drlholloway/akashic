@@ -1,0 +1,93 @@
+{
+ "id": "tagboardeffects:2013-01-dod-fx55-distortion",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Pictures 1-2 are a photo of the pedal; picture 3 is the vero layout (populated board above, cuts and links below), picture 4 its thumbnail.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.9M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×4",
+   "1N4148",
+   "D",
+   "D1-D4"
+  ],
+  [
+   "D5",
+   "1N5817",
+   "D",
+   "polarity protection"
+  ],
+  [
+   "IC1",
+   "TL061",
+   "IC",
+   ""
+  ],
+  [
+   "Distortion",
+   "C500K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,81 @@
+{
+ "id": "dirtbox:2019-07-death-by-audio-interstellar-overdriver",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 13x9 stripboard, three transistors, dual-gang Drive pot and a Level pot. No diodes on the board.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "910K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "180K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5089",
+   "Q",
+   "Try MPSA18 for less gating"
+  ],
+  [
+   "Q2",
+   "2N5089",
+   "Q",
+   "Try MPSA18 for less gating"
+  ],
+  [
+   "Q3",
+   "2N5089",
+   "Q",
+   "Try MPSA18 for less gating"
+  ],
+  [
+   "Drive",
+   "B100K",
+   "POT",
+   "dual"
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

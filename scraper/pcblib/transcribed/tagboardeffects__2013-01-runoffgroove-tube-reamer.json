@@ -1,0 +1,117 @@
+{
+ "id": "tagboardeffects:2013-01-runoffgroove-tube-reamer",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "15x12 stripboard, populated view above a bare cuts-and-links view; one dual op amp, values printed on every part. The LED resistor is on the board with no value.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "51K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "150pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "JRC4558",
+   "IC",
+   "or similar"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "Drive",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

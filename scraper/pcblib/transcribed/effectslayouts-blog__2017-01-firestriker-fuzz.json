@@ -1,0 +1,205 @@
+{
+ "id": "effectslayouts-blog:2017-01-firestriker-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Etched PCB layout (board-mounted pots and jacks) whose silkscreen prints designators only: no component value appears anywhere in the image and there is no legend. Rows list the parts drawn, all with value not given.",
+ "uncertain": [
+  "Every value: the drawing gives designators only, nothing to read",
+  "D2: small two-pin footprint beside C8, could be an LED rather than a diode",
+  "C1, C4, C8 are drawn as round polarised cans (electrolytic); C2, C3, C5, C6, C7 as film/ceramic outlines"
+ ],
+ "rows": [
+  [
+   "R1",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R2",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R3",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R4",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R5",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R6",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R7",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R8",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R9",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R10",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R11",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R12",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "C1",
+   "?",
+   "C",
+   "electrolytic, value not given"
+  ],
+  [
+   "C2",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C3",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C4",
+   "?",
+   "C",
+   "electrolytic, value not given"
+  ],
+  [
+   "C5",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C6",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C7",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C8",
+   "?",
+   "C",
+   "electrolytic, value not given"
+  ],
+  [
+   "D1",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "D2",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "Q1",
+   "?",
+   "Q",
+   "value not given"
+  ],
+  [
+   "Q2",
+   "?",
+   "Q",
+   "value not given"
+  ],
+  [
+   "Q3",
+   "?",
+   "Q",
+   "value not given"
+  ],
+  [
+   "Q4",
+   "?",
+   "Q",
+   "value not given"
+  ],
+  [
+   "BIAS",
+   "?",
+   "TRIM",
+   "value not given"
+  ],
+  [
+   "Fuzz",
+   "?",
+   "POT",
+   "value not given"
+  ],
+  [
+   "Tone",
+   "?",
+   "POT",
+   "value not given"
+  ],
+  [
+   "Thickness",
+   "?",
+   "POT",
+   "value not given"
+  ],
+  [
+   "Level",
+   "?",
+   "POT",
+   "value not given"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,87 @@
+{
+ "id": "tagboardeffects:2012-04-boob-tube-v15",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Tagboard (turret) layout, one populated view only; numbered wires go to the pins of an off-board 12AU7 tube, supply 23-40V with 12VDC to the heater pin 5.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K5",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "120K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100p",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "150n",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1u",
+   "C",
+   "electrolytic, axial"
+  ],
+  [
+   "×1",
+   "12AU7",
+   "OTHER",
+   "vacuum tube, off board"
+  ],
+  [
+   "Gain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

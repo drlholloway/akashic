@@ -1,0 +1,180 @@
+{
+ "id": "tagboardeffects:2015-10-death-by-audio-evil-filter",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated vero board 23x19 (no bare view), with a long off-board wiring legend. The two 3PDT footswitches (Fuzz, Filter) are the bypass switches of the two halves and are left out; the expression jack is not listed.",
+ "uncertain": [
+  "Q1-Q3: legend prints 'MPSA05G / MPSA05RA', entered as MPSA05G",
+  "IC printed only as '1044' (charge pump, top left): kept as printed"
+ ],
+ "rows": [
+  [
+   "×7",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "180K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "910K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1u",
+   "C",
+   "film (box)"
+  ],
+  [
+   "×3",
+   "4u7",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1044",
+   "IC",
+   "charge pump, printed '1044'"
+  ],
+  [
+   "×1",
+   "UAF42AP",
+   "IC",
+   ""
+  ],
+  [
+   "×2",
+   "H11F1",
+   "OPTO",
+   "check orientation (legend)"
+  ],
+  [
+   "Q1",
+   "MPSA05G",
+   "Q",
+   "legend: MPSA05G / MPSA05RA"
+  ],
+  [
+   "Q2",
+   "MPSA05G",
+   "Q",
+   "legend: MPSA05G / MPSA05RA"
+  ],
+  [
+   "Q3",
+   "MPSA05G",
+   "Q",
+   "legend: MPSA05G / MPSA05RA"
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Filter Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Fuzz Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Resonance",
+   "C100K",
+   "POT",
+   ""
+  ],
+  [
+   "Frequency",
+   "C500K",
+   "POT",
+   ""
+  ],
+  [
+   "Hi/Low Resonance",
+   "DPDT",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Filter Selector",
+   "4P3T rotary",
+   "SW",
+   ""
+  ],
+  [
+   "Fuzz Type",
+   "DPDT",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,137 @@
+{
+ "id": "dirtbox:2021-05-mid-fi-electronics-pitch-pirate",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 20x19 stripboard with three ICs, a 78L05 regulator (drawn as a TO-92 with I/G/O pins, labelled REG under the board) and an on-board LED/LDR pair; the LDR has no fixed value, the legend says 'Try 1M'.",
+ "uncertain": [
+  "LDR at column 8, rows M-O: no value on the part, legend only says 'Try 1M'"
+ ],
+ "rows": [
+  [
+   "×7",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×4",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "LM386",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "PT2399",
+   "IC",
+   ""
+  ],
+  [
+   "IC3",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "REG",
+   "78L05",
+   "IC",
+   "regulator"
+  ],
+  [
+   "D1",
+   "3mm LED",
+   "LED",
+   "on board, faces the LDR; legend: 3mm LED (test)"
+  ],
+  [
+   "D2",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "LDR",
+   "1M",
+   "OPTO",
+   "LDR; legend: Try 1M"
+  ],
+  [
+   "Speed",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Wave",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Depth",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Blend",
+   "B25K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

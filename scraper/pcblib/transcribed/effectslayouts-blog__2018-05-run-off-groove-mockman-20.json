@@ -1,0 +1,105 @@
+{
+ "id": "effectslayouts-blog:2018-05-run-off-groove-mockman-20",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout shown as populated board, colour wiring diagram, underside and etched PCB; counted from the populated board. IC1 is given only as 'dual opamp' and one capacitor is labelled Cx with no value; the Classic/Modern SPST switch connects at Sw1/Sw2.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "6.8nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "Cx",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "IC1",
+   "dual opamp",
+   "IC",
+   "legend: dual opamp, no part number given"
+  ],
+  [
+   "Volume",
+   "A50K",
+   "POT",
+   ""
+  ],
+  [
+   "Classic/Modern",
+   "SPST",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

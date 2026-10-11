@@ -1,0 +1,240 @@
+{
+ "id": "tagboardeffects:2018-09-mcspunckle-gnomeratron-vtf",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Large vero 27 x 31, populated board on the left and the bare cuts/links view on the right; read from the populated board. Eleven transistors (nine BJT, two J201), five 5K trimmers, four LEDs and eight 1N914 on the board, six pots and nine switches off board.",
+ "uncertain": [
+  "2N3906: the '3906' note sits in the top margin above column ~x400; it marks one of the nine BJTs, either the one at the top edge (right of the 470K) or the one two rows below in that column; the count of one 3906 and eight MPSA18 holds either way",
+  "J201 x2: the two 'J201' margin notes (left edge and bottom edge) are taken to mark the two D-S-G transistors in the lower left"
+ ],
+ "rows": [
+  [
+   "×12",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×8",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "3K3",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "39K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "5K6",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×2",
+   "10n",
+   "C",
+   "one ceramic, one film"
+  ],
+  [
+   "×10",
+   "100n",
+   "C",
+   "one ceramic, nine film"
+  ],
+  [
+   "×1",
+   "270n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1u",
+   "C",
+   "film"
+  ],
+  [
+   "×6",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×5",
+   "5K",
+   "TRIM",
+   ""
+  ],
+  [
+   "×8",
+   "MPSA18",
+   "Q",
+   "Transistors are MPSA18 except where noted"
+  ],
+  [
+   "×1",
+   "2N3906",
+   "Q",
+   "printed 3906"
+  ],
+  [
+   "×2",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "×4",
+   "3mm Red LED",
+   "LED",
+   "D1-D4, on the board"
+  ],
+  [
+   "×8",
+   "1N914",
+   "D",
+   "D5-D12"
+  ],
+  [
+   "Fuzz",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Cleanish",
+   "A100K",
+   "POT",
+   "wires labelled Clean"
+  ],
+  [
+   "Gain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone2",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Gate",
+   "C100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone1",
+   "A5K",
+   "POT",
+   ""
+  ],
+  [
+   "Filter",
+   "SPDT on/off/on",
+   "SW",
+   "Switch 1"
+  ],
+  [
+   "Diode 1",
+   "DPDT",
+   "SW",
+   "Switch 2"
+  ],
+  [
+   "Diode 2",
+   "DPDT",
+   "SW",
+   "Switch 3"
+  ],
+  [
+   "Octave",
+   "DPDT",
+   "SW",
+   "Switch 4"
+  ],
+  [
+   "Magic",
+   "DPDT",
+   "SW",
+   "Switch 5"
+  ],
+  [
+   "Switch 6",
+   "SPDT",
+   "SW",
+   ""
+  ],
+  [
+   "Switch 7",
+   "SPDT",
+   "SW",
+   ""
+  ],
+  [
+   "Switch 8",
+   "SPST",
+   "SW",
+   ""
+  ],
+  [
+   "Switch 9",
+   "SPST",
+   "SW",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

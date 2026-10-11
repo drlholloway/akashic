@@ -1,0 +1,138 @@
+{
+ "id": "tagboardeffects:2016-05-lm13700-janglebox",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "19 x 20 stripboard, populated view on top and the bare cuts/links view below; read from the populated view. All capacitors of 2.2uF and 22uF are drawn as round cans.",
+ "uncertain": [
+  "92K at the far right near Gain 3: printed clearly, unusual value",
+  "1M in column L beside the LM13700 is drawn semi-transparent over two cuts; counted as a real part"
+ ],
+ "rows": [
+  [
+   "×8",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "8.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "92K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470pF",
+   "C",
+   ""
+  ],
+  [
+   "×5",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "LM13700",
+   "IC",
+   ""
+  ],
+  [
+   "×5",
+   "2N5088",
+   "Q",
+   "transistors are 2N5088"
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   "D1, D2"
+  ],
+  [
+   "TR1",
+   "1K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Attack",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "SW",
+   "SPDT on/off/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

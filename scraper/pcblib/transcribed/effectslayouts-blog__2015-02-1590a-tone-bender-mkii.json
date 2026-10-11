@@ -1,0 +1,99 @@
+{
+ "id": "effectslayouts-blog:2015-02-1590a-tone-bender-mkii",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout for a 1590A, shown with parts, as a colour wiring diagram, the underside and an etched PCB; counted from the populated vero and confirmed against the diagram. Three NPN germanium transistors, no type given.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "8.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "NPN germ.",
+   "Q",
+   "legend: Q1-3: NPN germ."
+  ],
+  [
+   "Q2",
+   "NPN germ.",
+   "Q",
+   "legend: Q1-3: NPN germ."
+  ],
+  [
+   "Q3",
+   "NPN germ.",
+   "Q",
+   "legend: Q1-3: NPN germ."
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Attack",
+   "B1K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

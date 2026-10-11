@@ -1,0 +1,87 @@
+{
+ "id": "tagboardeffects:2013-01-dearmond-square-wave-distortion",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "13x10 stripboard with parts on the left and the bare board on the right; pot values are marked by the author as assumed on the schematic.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "5.6K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1.5nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "15pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "LM741",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N34A",
+   "D",
+   "Diodes are Ge (1N34A, 1N270..)"
+  ],
+  [
+   "D2",
+   "1N34A",
+   "D",
+   "Diodes are Ge (1N34A, 1N270..)"
+  ],
+  [
+   "Intensity",
+   "A500K",
+   "POT",
+   "value assumed on schematic"
+  ],
+  [
+   "Output",
+   "B10K",
+   "POT",
+   "value assumed on schematic"
+  ]
+ ],
+ "source": "layout"
+}

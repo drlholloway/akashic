@@ -1,0 +1,93 @@
+{
+ "id": "tagboardeffects:2012-02-dam-meathead-with-switchable-caps",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "The only cached picture is a 291x320 thumbnail of the stripboard layout (10 x 9 board, pot and two cap-selector switches). The board shows 6 resistors, 2 electrolytics, 2 small caps and 2 transistors, but the values printed on the board parts are not legible at this size; only the large labels (transistors, pot, switch caps, notes) can be read. Needs the full-size image.",
+ "uncertain": [
+  "All 6 board resistors: values illegible in the thumbnail",
+  "Both board electrolytics (top right, bottom left): values illegible",
+  "The two small caps on the board: read as 10n and 22n only from the note 'Meathead stock values (10n & 22n)' and the 10n / 22n labels at the switch commons, not from the parts themselves",
+  "Transistor labels 2N3904 (left) and BC182L (right) are blurred; best reading",
+  "Pot name is not printed; it is wired to Output"
+ ],
+ "rows": [
+  [
+   "×6",
+   "?",
+   "R",
+   "value unreadable in thumbnail"
+  ],
+  [
+   "×2",
+   "?",
+   "C",
+   "electrolytic; value unreadable in thumbnail"
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   "stock input cap, per the note"
+  ],
+  [
+   "×1",
+   "22n",
+   "C",
+   "stock output cap, per the note"
+  ],
+  [
+   "×1",
+   "12n",
+   "C",
+   "on the input cap switch"
+  ],
+  [
+   "×1",
+   "33n",
+   "C",
+   "on the input cap switch"
+  ],
+  [
+   "×1",
+   "47n",
+   "C",
+   "on the output cap switch"
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   "on the output cap switch"
+  ],
+  [
+   "×1",
+   "2N3904",
+   "Q",
+   "left transistor"
+  ],
+  [
+   "×1",
+   "BC182L",
+   "Q",
+   "right transistor"
+  ],
+  [
+   "Volume",
+   "B500K",
+   "POT",
+   "printed '500K LIN'; knob name not printed"
+  ],
+  [
+   "Input caps",
+   "DPDT on/off/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Output caps",
+   "DPDT on/off/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

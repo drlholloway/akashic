@@ -1,0 +1,81 @@
+{
+ "id": "tagboardeffects:2012-08-ross-distortion",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 13 x 9 of the tan Ross Distortion, populated board on top and the bare cuts/links view below. The two 1u caps are drawn as round cans but the legend says they are tantalum. The wire label reads Gain 3 while the legend calls the pot Distort.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1u",
+   "C",
+   "tantalum"
+  ],
+  [
+   "D1",
+   "1N270",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N270",
+   "D",
+   ""
+  ],
+  [
+   "IC1",
+   "RC4558P",
+   "IC",
+   ""
+  ],
+  [
+   "Distort",
+   "C500K",
+   "POT",
+   "wire label on the board says Gain"
+  ],
+  [
+   "Output",
+   "B50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

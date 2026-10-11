@@ -1,0 +1,125 @@
+{
+ "id": "tagboardeffects:2017-10-nine-volt-nirvana-nitroburner-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 15x12 stripboard, positive-ground (-9V) three-transistor fuzz with one 10k trimmer; values are large and clear. Volume 2 to Output.",
+ "uncertain": [
+  "5nF film cap at column 3, rows E-G: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×1",
+   "33k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "390r",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.7k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "5nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "drawn as a film box"
+  ],
+  [
+   "×1",
+   "10k",
+   "TRIM",
+   ""
+  ],
+  [
+   "Q1",
+   "2N3906",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2SB172",
+   "Q",
+   "High Gain PNP Ge"
+  ],
+  [
+   "Q3",
+   "2N3906",
+   "Q",
+   ""
+  ],
+  [
+   "Volume",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Fuel",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Bias",
+   "B5K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

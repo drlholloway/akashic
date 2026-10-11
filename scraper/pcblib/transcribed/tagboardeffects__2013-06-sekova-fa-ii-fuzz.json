@@ -1,0 +1,117 @@
+{
+ "id": "tagboardeffects:2013-06-sekova-fa-ii-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "20x10 stripboard shown populated and bare; two PNP germanium transistors drawn as C/B/E pads, positive ground (-9V supply). Electrolytics overlap each other on the right side.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "5.6K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "33uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "Q1",
+   "2SB173",
+   "Q",
+   "try any PNP Ge"
+  ],
+  [
+   "Q2",
+   "2SB173",
+   "Q",
+   "try any PNP Ge"
+  ],
+  [
+   "D1",
+   "1N270",
+   "D",
+   "Ge (try 1N270 or 1N34A)"
+  ],
+  [
+   "D2",
+   "1N270",
+   "D",
+   "Ge (try 1N270 or 1N34A)"
+  ],
+  [
+   "Attack",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

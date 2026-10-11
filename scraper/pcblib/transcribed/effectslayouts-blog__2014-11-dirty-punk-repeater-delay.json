@@ -1,0 +1,107 @@
+{
+ "id": "effectslayouts-blog:2014-11-dirty-punk-repeater-delay",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard PT2399 delay shown four ways (populated vero, colour wiring diagram, underside, etched PCB); counted from the populated vero and confirmed against the wiring diagram. Q1 is a 78L05 regulator.",
+ "uncertain": [
+  "250K resistor under the PT2399 (row K): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "5.6K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "250K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×8",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "PT2399",
+   "IC",
+   ""
+  ],
+  [
+   "Q1",
+   "78L05",
+   "IC",
+   "regulator"
+  ],
+  [
+   "Q2",
+   "BC549B",
+   "Q",
+   "printed BC549b"
+  ],
+  [
+   "Time",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Repeat",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,105 @@
+{
+ "id": "effectslayouts-blog:2016-08-korg-ms-20-filter",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with a colour wiring diagram, the underside and an etched PCB; counted from the populated perfboard. D1 and D2 are drawn as red LEDs with no type given; the DPDT switch takes the input on lugs 3 and 4.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "680pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "?",
+   "LED",
+   "value not given, drawn as a red LED"
+  ],
+  [
+   "D2",
+   "?",
+   "LED",
+   "value not given, drawn as a red LED"
+  ],
+  [
+   "×1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "LM13600",
+   "IC",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Frequency",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Resonance",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "DPDT",
+   "SW",
+   "wires Sw1, Sw2, Sw5, Sw6; In to Sw 3 and 4"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,117 @@
+{
+ "id": "effectslayouts-blog:2014-11-rog-peppermill",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with populated board, wiring diagram, underside and PCB; counted from the populated board. On-board 50k trimmer; D1 is a red LED on the board.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "8.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "6.8nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "D1",
+   "Red LED",
+   "LED",
+   ""
+  ],
+  [
+   "Q1",
+   "2N7000",
+   "Q",
+   "MOSFET; legend: 2N7000, BS170"
+  ],
+  [
+   "Q2",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "×1",
+   "50K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Gain",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

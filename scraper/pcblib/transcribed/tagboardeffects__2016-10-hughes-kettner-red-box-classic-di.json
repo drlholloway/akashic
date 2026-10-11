@@ -1,0 +1,141 @@
+{
+ "id": "tagboardeffects:2016-10-hughes-kettner-red-box-classic-di",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Two alternative vero layouts in the post; read the first (20 x 16, 19 cuts, 10 links, with the ground-lift switch), populated board on the left. The second drawing is the same circuit without the ground-lift switch (it drops one 470R and one 100n). First picture is a product photo.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "470R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "6K8",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1n2",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4n7",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "470n",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "22u",
+   "C",
+   "electrolytic, legend: caps min. 25V"
+  ],
+  [
+   "×1",
+   "TL064",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "27V Zener",
+   "D",
+   "BZX 85C 27"
+  ],
+  [
+   "×2",
+   "1N4007",
+   "D",
+   "D2, D3"
+  ],
+  [
+   "Ground Lift",
+   "SPST",
+   "SW",
+   "Switch 1"
+  ],
+  [
+   "Cab",
+   "SPST",
+   "SW",
+   "Switch 2"
+  ]
+ ],
+ "source": "layout"
+}

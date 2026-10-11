@@ -1,0 +1,205 @@
+{
+ "id": "dirtbox:2021-01-multivox-big-jam-se-4-octave-box",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 22x24 stripboard with two ICs and four transistors (Q1-Q4 labelled around the board); the legend names only Q1-Q2 and gives the switch as '3PDT on/off/on?' with its own question mark.",
+ "uncertain": [
+  "Q3 and Q4 (top of board): drawn and labelled but the legend lists only 'Q1-Q2: 2N5088,2N3904 etc.', which probably means Q1-Q4",
+  "33uF electrolytic at column 8, rows V-W: text partly hidden by the can's stripe, read as 33uF; printed clearly enough, unusual value",
+  "Switch: legend itself says '3PDT on/off/on?'"
+ ],
+ "rows": [
+  [
+   "×6",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "56K",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "680Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "33nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "15nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "680pF",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "33uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   "legend: 2N5088, 2N3904 etc.; 2SC945-Q in original"
+  ],
+  [
+   "Q2",
+   "2N5088",
+   "Q",
+   "legend: 2N5088, 2N3904 etc.; 2SC945-Q in original"
+  ],
+  [
+   "Q3",
+   "?",
+   "Q",
+   "value not given; legend lists only Q1-Q2 (2N5088, 2N3904 etc.)"
+  ],
+  [
+   "Q4",
+   "?",
+   "Q",
+   "value not given; legend lists only Q1-Q2 (2N5088, 2N3904 etc.)"
+  ],
+  [
+   "IC1",
+   "4558",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "CD4013",
+   "IC",
+   ""
+  ],
+  [
+   "×2",
+   "1N60",
+   "D",
+   "D1, D2"
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   "D3, D4; legend: 1N4148/1N914, 1S2473 in original"
+  ],
+  [
+   "D5",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Tone",
+   "A50K",
+   "POT",
+   ""
+  ],
+  [
+   "Balance",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "3PDT on/off/on",
+   "SW",
+   "legend: 3PDT on/off/on?"
+  ]
+ ],
+ "source": "layout"
+}

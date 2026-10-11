@@ -1,0 +1,83 @@
+{
+ "id": "tagboardeffects:2010-07-guitar-and-bass-paralooper",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Populated 21 x 14 vero board ('Paralooper - Full Range') above a bare cuts-and-links view; parts counted from the populated board only. The 14-pin IC and the Blend and Vol pots are drawn or labelled without any type or value.",
+ "uncertain": [
+  "Electrolytics printed only '10' (three) and '100' (two), no unit, taken as 10uF and 100uF"
+ ],
+ "rows": [
+  [
+   "×4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "1u",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "10uF",
+   "C",
+   "electrolytic, printed '10'"
+  ],
+  [
+   "×2",
+   "100uF",
+   "C",
+   "electrolytic, printed '100'"
+  ],
+  [
+   "×1",
+   "?",
+   "IC",
+   "value not given; 14-pin DIP"
+  ],
+  [
+   "Blend",
+   "?",
+   "POT",
+   "value not given"
+  ],
+  [
+   "Vol",
+   "?",
+   "POT",
+   "value not given"
+  ]
+ ],
+ "source": "layout"
+}

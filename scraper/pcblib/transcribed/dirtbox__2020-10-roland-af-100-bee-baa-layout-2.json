@@ -1,0 +1,189 @@
+{
+ "id": "dirtbox:2020-10-roland-af-100-bee-baa-layout-2",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 18x17 stripboard (Roland AF-100 Bee Baa, layout 2) with legend; four pots (Volume, Tone, Sustain, Boost) all given as 100kB. Board is dense with several standing resistors.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×6",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1.8K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "6.8nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×5",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC549C",
+   "Q",
+   "BC549C, 2N5088 etc.; 2SC644 R in original"
+  ],
+  [
+   "Q2",
+   "BC549B",
+   "Q",
+   "BC549B, 2N3904 etc.; 2SC828 Q in original"
+  ],
+  [
+   "Q3",
+   "BC549B",
+   "Q",
+   "BC549B, 2N3904 etc.; 2SC828 Q in original"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   "try 100kA"
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   "try 100kA"
+  ],
+  [
+   "Sustain",
+   "B100K",
+   "POT",
+   "try 100kA"
+  ],
+  [
+   "Boost",
+   "B100K",
+   "POT",
+   "try 100kA"
+  ],
+  [
+   "Boost/Sustain",
+   "DPDT on/on",
+   "SW",
+   "or footswitch"
+  ],
+  [
+   "Tone Selector",
+   "SPDT on/on",
+   "SW",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

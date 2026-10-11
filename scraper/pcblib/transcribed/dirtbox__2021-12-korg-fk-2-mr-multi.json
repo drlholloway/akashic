@@ -1,0 +1,246 @@
+{
+ "id": "dirtbox:2021-12-korg-fk-2-mr-multi",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 30x30 stripboard (with mods by Deadend Fx): two ICs, five JFETs, three trimmers on the board (Depth 10K, Bias 10K, Sweep 500K), plus an off-board Depth pot, a wah-style Pedal pot and two 4P3T rotary switches.",
+ "uncertain": [
+  "Depth appears twice: a 10K trimmer labelled Depth on the board and a 100kB Depth pot in the legend (wired at Depth 1/2/3); both are listed",
+  "D1 is given only as a 3,5 -> 4,1v Zener (a range, no part number)"
+ ],
+ "rows": [
+  [
+   "×1",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "8.2K",
+   "R",
+   ""
+  ],
+  [
+   "×10",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "39K",
+   "R",
+   ""
+  ],
+  [
+   "×11",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330K",
+   "R",
+   ""
+  ],
+  [
+   "×10",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×7",
+   "100nF",
+   "C",
+   "six film, one ceramic"
+  ],
+  [
+   "×5",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "6.8uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "33uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "220uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Depth",
+   "10K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Bias",
+   "10K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Sweep",
+   "500K",
+   "TRIM",
+   ""
+  ],
+  [
+   "IC1",
+   "LM358",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "LM324",
+   "IC",
+   ""
+  ],
+  [
+   "Q1",
+   "2SK30-GR",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q2",
+   "2SK30-GR",
+   "Q",
+   "JFET, Q2-Q4 matched"
+  ],
+  [
+   "Q3",
+   "2SK30-GR",
+   "Q",
+   "JFET, Q2-Q4 matched"
+  ],
+  [
+   "Q4",
+   "2SK30-GR",
+   "Q",
+   "JFET, Q2-Q4 matched"
+  ],
+  [
+   "Q5",
+   "2SK30-GR",
+   "Q",
+   "JFET"
+  ],
+  [
+   "D1",
+   "3.5-4.1V Zener",
+   "D",
+   "legend: 3,5 -> 4,1v Zener"
+  ],
+  [
+   "×3",
+   "1N4148",
+   "D",
+   "D2, D3, D4"
+  ],
+  [
+   "D5",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Depth",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Pedal",
+   "B1M",
+   "POT",
+   "wah pot"
+  ],
+  [
+   "Mode",
+   "4P3T rotary",
+   "SW",
+   "1: Phase, 2: Wah, 3: Phase + Wah"
+  ],
+  [
+   "Auto/Pedal",
+   "4P3T rotary",
+   "SW",
+   "set to 2 throws"
+  ]
+ ],
+ "source": "layout"
+}

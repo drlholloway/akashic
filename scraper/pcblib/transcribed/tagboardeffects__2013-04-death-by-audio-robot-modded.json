@@ -1,0 +1,163 @@
+{
+ "id": "tagboardeffects:2013-04-death-by-audio-robot-modded",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "16x18 stripboard, populated view on the left and cuts/links view on the right, plus a wiring sketch of four momentary switches. Small image, read from 6x crops.",
+ "uncertain": [
+  "43R, two of them (left edge by the Input wire, and right of IC2): printed clearly, unusual value; a 43K is also on the board lower left",
+  "430K top right next to Z1: printed clearly, unusual value",
+  "2u2 right of IC1: drawn as a blue box, not a round can, so not marked electrolytic"
+ ],
+ "rows": [
+  [
+   "×2",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "43R",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "430K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K5",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "43K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "5K6",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "330n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2u2",
+   "C",
+   "drawn as a box"
+  ],
+  [
+   "×2",
+   "33u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "HT8950",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "Z1",
+   "1N5227",
+   "D",
+   "zener"
+  ],
+  [
+   "Z2",
+   "1N5227",
+   "D",
+   "zener"
+  ],
+  [
+   "Control",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Up",
+   "SPST momentary",
+   "SW",
+   ""
+  ],
+  [
+   "Down",
+   "SPST momentary",
+   "SW",
+   ""
+  ],
+  [
+   "Vibrato",
+   "SPST momentary",
+   "SW",
+   ""
+  ],
+  [
+   "Robot",
+   "SPST momentary",
+   "SW",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

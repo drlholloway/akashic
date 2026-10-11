@@ -1,0 +1,129 @@
+{
+ "id": "dirtbox:2019-06-colorsound-tonebender-mk-iii-pre-1972_17",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 17x9 stripboard, pre-1972 spec, positive ground; the legend names the transistors and diode only as germanium, and recommends reducing or jumpering the 220K before the volume pot.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×5",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "680K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   "legend: reduce or jumper for more output"
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "PNP Germanium",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "PNP Germanium",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "PNP Germanium",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "Germanium",
+   "D",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Treble n' Bass",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

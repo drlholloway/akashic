@@ -1,0 +1,87 @@
+{
+ "id": "dirtbox:2019-07-dam-fuzzrong-fr-69",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 13x9 stripboard, two PNP germanium transistors, values printed on every part.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "PNP Germanium",
+   "Q",
+   "high gain"
+  ],
+  [
+   "Q2",
+   "PNP Germanium",
+   "Q",
+   "low gain"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Depth",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

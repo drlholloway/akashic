@@ -1,0 +1,135 @@
+{
+ "id": "effectslayouts-blog:2015-12-bass-fuzzdrive",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout shown four ways (populated board, colour wiring diagram, underside, etched PCB); counted from the populated board and confirmed against the wiring diagram. A 100K trimmer sits on the board; all five polarised capacitors below 47uF are drawn as round cans.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "TRIM",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "J201",
+   "Q",
+   "JFET; legend: Q1-2: J201, 2N5457, etc."
+  ],
+  [
+   "Q2",
+   "J201",
+   "Q",
+   "JFET; legend: Q1-2: J201, 2N5457, etc."
+  ],
+  [
+   "Q3",
+   "MPSA13",
+   "Q",
+   ""
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   "printed 4001"
+  ],
+  [
+   "×3",
+   "1N4148",
+   "D",
+   "printed 4148"
+  ],
+  [
+   "×1",
+   "1N34A",
+   "D",
+   "printed 34A"
+  ],
+  [
+   "Blend",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,263 @@
+{
+ "id": "tagboardeffects:2017-10-earthquaker-devices-palisades",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero 23x23 shown populated (left) and bare with cuts (right); read from the populated view. Transistor types are printed above and below the board; two rotary switches and two effect footswitches are off board.",
+ "uncertain": [
+  "1M vs 1u at the left edge beside SW 5: the full image suggests two 1M side by side, the zoom shows one 1M resistor and a 1u film cap; counted as the zoom shows"
+ ],
+ "rows": [
+  [
+   "×7",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "560K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "1u",
+   "C",
+   "four film, one ceramic"
+  ],
+  [
+   "×2",
+   "68n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "330n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "150n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100p",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "2N7000",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "×2",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "×1",
+   "MPSA13",
+   "Q",
+   ""
+  ],
+  [
+   "IC",
+   "LM833",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "3mm Diffused Red LED",
+   "LED",
+   "on board"
+  ],
+  [
+   "×2",
+   "3mm Green LED",
+   "LED",
+   "D2, D3; on board"
+  ],
+  [
+   "×3",
+   "1N916",
+   "D",
+   "D4, D5, D6"
+  ],
+  [
+   "×2",
+   "BAT41",
+   "D",
+   "D7, D8; BAT41 or BAT43"
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   "D9, D10"
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Boost",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain A",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain B",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Bandwidth",
+   "2P6T rotary",
+   "SW",
+   "Switch 1, set on 5"
+  ],
+  [
+   "Voice",
+   "2P6T rotary",
+   "SW",
+   "Switch 2"
+  ],
+  [
+   "Boost",
+   "3PDT",
+   "SW",
+   "Switch 3, footswitch"
+  ],
+  [
+   "Gain",
+   "DPDT",
+   "SW",
+   "Switch 4, footswitch"
+  ],
+  [
+   "Buffer",
+   "SPDT",
+   "SW",
+   "Switch 5"
+  ],
+  [
+   "Bright",
+   "SPDT",
+   "SW",
+   "Switch 6"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "effectslayouts-blog:2015-11-escobedo-tytewadd",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small perfboard layout with board-mounted pots, plus its underside, a colour wiring diagram and an etched PCB; counted from the populated perfboard. Q1 is a BJT (pins C B E), Q2 a JFET (G S D).",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "2N3904",
+   "Q",
+   "legend: 2N3904, 2N5088, etc"
+  ],
+  [
+   "Q2",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Gain",
+   "B250K",
+   "POT",
+   "printed 250K Lin"
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   "printed 100K Log"
+  ]
+ ],
+ "source": "layout"
+}

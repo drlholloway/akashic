@@ -1,0 +1,72 @@
+{
+ "id": "tagboardeffects:2012-02-hornby-skewes-treble-booster",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard 9x8, single populated view, positive ground, no pots. Legend suggests replacing the 100K resistor with a volume pot (Blackmore mod); not counted.",
+ "uncertain": [
+  "80u electrolytic in the middle of the board: printed clearly, unusual value",
+  "10K resistor right of the 62K: partly covered by the 80u cap, last letter clipped"
+ ],
+ "rows": [
+  [
+   "×1",
+   "62K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3K9",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   "may be replaced by a volume pot (Blackmore mod)"
+  ],
+  [
+   "×1",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "80u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N4061",
+   "Q",
+   "PNP; try other PNP silicon, 90-330 hFE"
+  ]
+ ],
+ "source": "layout"
+}

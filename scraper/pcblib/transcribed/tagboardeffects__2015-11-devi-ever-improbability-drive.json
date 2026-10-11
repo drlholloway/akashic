@@ -1,0 +1,150 @@
+{
+ "id": "tagboardeffects:2015-11-devi-ever-improbability-drive",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "20x13 vero, populated board on the left and bare cuts/links view on the right. Six transistors are drawn; the type labels sit above and below the board.",
+ "uncertain": [
+  "Transistor types: six transistors but the labels are 'Q1' and '2n 2907' above the board and '2n 2907, 2n 2222, 2n 2907, MPSA18' below; Q1 is entered as 2N3391 from the legend, and the '2n 2907' above is taken to be the transistor under Q1, giving three 2N2907",
+  "20n at top left, 30n (two) and 50n: printed clearly, unusual values"
+ ],
+ "rows": [
+  [
+   "×10",
+   "3M3",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "20n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "30n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "50n",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×6",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "Q1",
+   "2N3391",
+   "Q",
+   "legend: original is 2n3391 (pinout from top: BCE)"
+  ],
+  [
+   "×3",
+   "2N2907",
+   "Q",
+   ""
+  ],
+  [
+   "×1",
+   "2N2222",
+   "Q",
+   ""
+  ],
+  [
+   "×1",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "IN Volume",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "OUT Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "I",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "II",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "III",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch A",
+   "SPST",
+   "SW",
+   ""
+  ],
+  [
+   "Switch B",
+   "SPST",
+   "SW",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

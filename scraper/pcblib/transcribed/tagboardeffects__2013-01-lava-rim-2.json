@@ -1,0 +1,71 @@
+{
+ "id": "tagboardeffects:2013-01-lava-rim-2",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard 15x10, populated view above a cuts-and-links view. Three outlines on the board printed 100K, 50K and 5K match the three legend pots (Bias, Volume, Drive), which also have off-board wires; read as the same three pots, counted once.",
+ "uncertain": [
+  "Outlines 100K (top centre), 50K (top right), 5K (bottom right): taken as the Bias/Volume/Drive pots shown in place, not as extra trimmers; the 5K pads sit on the Drive wire strips, the others could not be confirmed"
+ ],
+ "rows": [
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "2N3904",
+   "Q",
+   "legend: 2N3904 (or similar)"
+  ],
+  [
+   "×2",
+   "1N914",
+   "D",
+   "D1, D2"
+  ],
+  [
+   "Bias",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Drive",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

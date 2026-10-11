@@ -1,0 +1,111 @@
+{
+ "id": "effectslayouts-blog:2016-06-devils-triangle-drone",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Long vero layout with underside view, wiring diagram and etched PCB: three identical oscillator sections plus a fourth 358. ICs are printed only as '358', entered as LM358.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×5",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×4",
+   "LM358",
+   "IC",
+   "printed 358"
+  ],
+  [
+   "×3",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Pinch A",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Level A",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Pinch B",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Level B",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Pinch C",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Level C",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

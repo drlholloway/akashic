@@ -1,0 +1,89 @@
+{
+ "id": "tagboardeffects:2014-05-axess-bs-2-buffer",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "13 x 12 stripboard with a bare cuts-and-links view beside it. Buffer with an NE5532 and a charge pump (IC2); no pots, one 1K trimmer on the board.",
+ "uncertain": [
+  "4K75 left of IC1: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K75",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "470u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "NE5532",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "ICL7660S",
+   "IC",
+   "legend: ICL7660S or MAX1044"
+  ],
+  [
+   "×1",
+   "1K",
+   "TRIM",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

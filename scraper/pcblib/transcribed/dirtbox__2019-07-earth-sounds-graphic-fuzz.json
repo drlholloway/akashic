@@ -1,0 +1,63 @@
+{
+ "id": "dirtbox:2019-07-earth-sounds-graphic-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 17x7 stripboard, one LM741, with a power supply mod (220Ω and 1uF) noted in the subtitle. Legend gives the pots as 'Freq: 1mB' and 'Level: 10kA'.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220Ω",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "LM741",
+   "IC",
+   ""
+  ],
+  [
+   "Freq",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

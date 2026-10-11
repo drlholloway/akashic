@@ -1,0 +1,105 @@
+{
+ "id": "dirtbox:2019-08-tecamp-dream-buzz-deluxe",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 10x11 stripboard, two PNP germanium transistors, positive-ground circuit; five pots and an SPST switch named in the legend.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "330nF",
+   "C",
+   ""
+  ],
+  [
+   "Q1",
+   "AC151",
+   "Q",
+   "PNP germanium; legend: AC151 or other PNP Germanium"
+  ],
+  [
+   "Q2",
+   "AC151",
+   "Q",
+   "PNP germanium; legend: AC151 or other PNP Germanium"
+  ],
+  [
+   "Buzz",
+   "C1K",
+   "POT",
+   ""
+  ],
+  [
+   "Bass",
+   "B20K",
+   "POT",
+   ""
+  ],
+  [
+   "Contour",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Colour",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "SPST",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,157 @@
+{
+ "id": "tagboardeffects:2016-07-smallsoundbigsound-mini-overdrive",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "21x14 vero drawn twice (populated left, cuts/links right); read the populated board. Four transistors named by edge labels (5089, J201 x2, 5457), three on-board trimmers (two 50K Bias, one unlabelled 10K) and five pots including a dual-gang Gain.",
+ "uncertain": [
+  "The edge label '5457' sits under the right-hand part of the board; taken to be the JFET at upper right (D-S-G, below the 10K trimmer), with the two J201 labels on the top-centre and bottom-centre JFETs",
+  "Transistors labelled only '5089' and '5457'; entered as 2N5089 and 2N5457",
+  "10K trimmer at top right has no name printed"
+ ],
+ "rows": [
+  [
+   "×6",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "15n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "1u",
+   "C",
+   "film (box)"
+  ],
+  [
+   "×3",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "220u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "2N5089",
+   "Q",
+   "printed 5089"
+  ],
+  [
+   "×2",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "×1",
+   "2N5457",
+   "Q",
+   "JFET, printed 5457"
+  ],
+  [
+   "×2",
+   "50K",
+   "TRIM",
+   "Bias"
+  ],
+  [
+   "×1",
+   "10K",
+   "TRIM",
+   "unlabelled"
+  ],
+  [
+   "Treble",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Bias",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "A100K",
+   "POT",
+   "dual"
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Bass",
+   "C500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

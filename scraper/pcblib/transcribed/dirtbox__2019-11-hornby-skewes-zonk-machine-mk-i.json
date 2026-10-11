@@ -1,0 +1,125 @@
+{
+ "id": "dirtbox:2019-11-hornby-skewes-zonk-machine-mk-i",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 16x10 stripboard, three PNP germanium transistors, positive-ground circuit (-9v supply), with a 10K trimmer on the board.",
+ "uncertain": [
+  "Q1 part number: legend prints 'A02650' (second character looks like a zero, could be the letter O); not a familiar type, kept as printed"
+ ],
+ "rows": [
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "56K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "A02650",
+   "Q",
+   "PNP germanium"
+  ],
+  [
+   "Q2",
+   "OC75",
+   "Q",
+   "PNP germanium"
+  ],
+  [
+   "Q3",
+   "OC44",
+   "Q",
+   "PNP germanium"
+  ],
+  [
+   "×1",
+   "10K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Fuzz",
+   "A50K",
+   "POT",
+   ""
+  ],
+  [
+   "Swell",
+   "A500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

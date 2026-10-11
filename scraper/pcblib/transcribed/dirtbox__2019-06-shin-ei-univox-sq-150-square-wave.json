@@ -1,0 +1,138 @@
+{
+ "id": "dirtbox:2019-06-shin-ei-univox-sq-150-square-wave",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 15x11 vero with an on-board 20K trimmer; C6 is an optional noise cap with no value on the part.",
+ "uncertain": [
+  "33uF electrolytic at column 14, rows E-G: first digit partly hidden by the can's stripe, read as 33uF",
+  "2M resistor at column 4, rows E-G: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "560K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "680Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.9K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "270K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "33uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C6",
+   "?",
+   "C",
+   "value not given; optional cap to eliminate noise, legend suggests 100pF"
+  ],
+  [
+   "×1",
+   "20K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   "2SC1312G in original; try 2N5088, BC550C etc"
+  ],
+  [
+   "Q2",
+   "2N5457",
+   "Q",
+   "JFET; 2SK34C in original; try 2N5457, J113 etc."
+  ],
+  [
+   "×2",
+   "Germanium",
+   "D",
+   "D1, D2; type not given; Try 1N4148/1N914 for more output volume"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Distortion",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Balance",
+   "A50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

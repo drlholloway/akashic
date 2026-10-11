@@ -1,0 +1,63 @@
+{
+ "id": "tagboardeffects:2012-01-devi-ever-karaoke-party",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "10 x 6 vero with one MPSA18 and the two pots drawn above the board; bare cuts view below.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3M3",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Control",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

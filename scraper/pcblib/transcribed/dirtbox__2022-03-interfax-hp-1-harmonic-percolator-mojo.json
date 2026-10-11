@@ -1,0 +1,115 @@
+{
+ "id": "dirtbox:2022-03-interfax-hp-1-harmonic-percolator-mojo",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 14x13 stripboard drawn with vintage-style parts (carbon-comp resistors, can transistors); one germanium and one silicon transistor.",
+ "uncertain": [
+  "D1, D2: legend prints '1N965' clearly (a Zener number; the Percolator normally uses 1N695), kept as printed",
+  "50nF green cap at column 6, rows I-K: printed clearly, unusual value",
+  "91K, 750K, 20K resistors: printed clearly, unusual values"
+ ],
+ "rows": [
+  [
+   "×1",
+   "91K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "750K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "20K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "50nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N404A",
+   "Q",
+   "germanium PNP"
+  ],
+  [
+   "Q2",
+   "2N3565",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N965",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N965",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Harmonics",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Balance",
+   "A50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

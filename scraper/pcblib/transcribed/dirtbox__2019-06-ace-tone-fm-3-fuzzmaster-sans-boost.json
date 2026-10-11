@@ -1,0 +1,203 @@
+{
+ "id": "dirtbox:2019-06-ace-tone-fm-3-fuzzmaster-sans-boost",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 19x17 vero, four transistors, version without the boost. The legend calls the toggle 'SPST on/off/on' (three positions, so most likely an SPDT centre-off); kept as printed.",
+ "uncertain": [
+  "Switch: legend prints 'SPST on/off/on', which is not a real switch type; probably SPDT on/off/on"
+ ],
+ "rows": [
+  [
+   "×3",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "820Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.7K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "8.2K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×7",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "390K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "250pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1.5nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "3.3nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "6.8nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×8",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC549C",
+   "Q",
+   "legend: NPN Silicon, try BC549C, 2N5088 etc; 2SC1000 in original"
+  ],
+  [
+   "Q2",
+   "BC549C",
+   "Q",
+   "legend: NPN Silicon, try BC549C, 2N5088 etc; 2SC1000 in original"
+  ],
+  [
+   "Q3",
+   "BC549C",
+   "Q",
+   "legend: NPN Silicon, try BC549C, 2N5088 etc; 2SC1000 in original"
+  ],
+  [
+   "Q4",
+   "BC549C",
+   "Q",
+   "legend: NPN Silicon, try BC549C, 2N5088 etc; 2SC1000 in original"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   "legend: 1N4148/1N914"
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   "legend: 1N4148/1N914"
+  ],
+  [
+   "D3",
+   "1N4148",
+   "D",
+   "legend: 1N4148/1N914"
+  ],
+  [
+   "D4",
+   "1N4148",
+   "D",
+   "legend: 1N4148/1N914"
+  ],
+  [
+   "D5",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Sustain",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "SPST on/off/on",
+   "SW",
+   "toggle, as printed in the legend"
+  ]
+ ],
+ "source": "layout"
+}

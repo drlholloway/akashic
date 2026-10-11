@@ -1,0 +1,135 @@
+{
+ "id": "dirtbox:2021-06-death-by-audio-super-fuzz-war-boost",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated stripboard (17x19), boost section only, with an 8-pole DIP switch on the board (settings 1-4 voicing, 6-8 clip); values clearly printed.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "3.6K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "750K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.7M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "820pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "LM741",
+   "IC",
+   ""
+  ],
+  [
+   "×2",
+   "1N4002",
+   "D",
+   "D1, D2"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Boost",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "DIP Sw",
+   "8-pole DIP",
+   "SW",
+   "on the board"
+  ]
+ ],
+ "source": "layout"
+}

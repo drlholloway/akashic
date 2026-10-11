@@ -1,0 +1,339 @@
+{
+ "id": "tagboardeffects:2012-04-amt-s1-legend",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Two populated stripboards, each with its bare cuts view: the S1 Legend (21x18) and a separate Cab Sim board (16x9); both are summed here. Designators Q1-Q3 are reused on the cab sim board, so its three J201 are a counted row.",
+ "uncertain": [
+  "330n? at the lower left of the main board (input cap): printed with a question mark, the legend says it is a guess based on the AMT B1",
+  "electrolytic at the top of the main board left of VR1: printed '1000' with no unit, could be 1000u or a typo for 100u",
+  "300K on the cab sim board next to Q2 (right side): reads 300K when zoomed, printed clearly, unusual value; could be 390K",
+  "1M9 at the left of the main board: printed clearly, unusual value",
+  "33R on the main board below VR1, next to a 33K: printed clearly as 33R"
+ ],
+ "rows": [
+  [
+   "×3",
+   "100K",
+   "R",
+   "2 main board, 1 cab sim"
+  ],
+  [
+   "×4",
+   "10K",
+   "R",
+   "2 main board, 2 cab sim"
+  ],
+  [
+   "×1",
+   "470R",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220R",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "47K",
+   "R",
+   "2 main board, 1 cab sim"
+  ],
+  [
+   "×1",
+   "1M9",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "16K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "680R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K3",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K5",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "12K",
+   "R",
+   "1 main board, 3 cab sim"
+  ],
+  [
+   "×1",
+   "100R",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "390K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "620R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3M3",
+   "R",
+   "cab sim"
+  ],
+  [
+   "×1",
+   "680K",
+   "R",
+   "cab sim"
+  ],
+  [
+   "×1",
+   "150K",
+   "R",
+   "cab sim"
+  ],
+  [
+   "×1",
+   "300K",
+   "R",
+   "cab sim"
+  ],
+  [
+   "×1",
+   "6K2",
+   "R",
+   "cab sim"
+  ],
+  [
+   "×3",
+   "100u",
+   "C",
+   "electrolytic; 2 main board, 1 cab sim"
+  ],
+  [
+   "×1",
+   "1000",
+   "C",
+   "electrolytic; unit not printed"
+  ],
+  [
+   "×2",
+   "3u3",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "470n",
+   "C",
+   ""
+  ],
+  [
+   "×5",
+   "10n",
+   "C",
+   "3 main board, 2 cab sim"
+  ],
+  [
+   "×4",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "1n",
+   "C",
+   "1 main board, 3 cab sim"
+  ],
+  [
+   "×1",
+   "330n",
+   "C",
+   "printed 330n?, a guess based on the AMT B1"
+  ],
+  [
+   "×2",
+   "220n",
+   "C",
+   "1 main board, 1 cab sim"
+  ],
+  [
+   "×1",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "3n3",
+   "C",
+   ""
+  ],
+  [
+   "VR1",
+   "20K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Q1",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q2",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q3",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q4",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q5",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q6",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "×3",
+   "J201",
+   "Q",
+   "JFET; cab sim Q1-Q3"
+  ],
+  [
+   "D1",
+   "BAT41",
+   "D",
+   "or similar Schottky"
+  ],
+  [
+   "D2",
+   "BAT41",
+   "D",
+   "or similar Schottky"
+  ],
+  [
+   "D3",
+   "BAT41",
+   "D",
+   "or similar Schottky"
+  ],
+  [
+   "D4",
+   "BAT41",
+   "D",
+   "or similar Schottky"
+  ],
+  [
+   "D5",
+   "BAT41",
+   "D",
+   "or similar Schottky"
+  ],
+  [
+   "Gain",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Treble",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Bass",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Mid",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

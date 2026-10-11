@@ -1,0 +1,63 @@
+{
+ "id": "effectslayouts-blog:2016-01-555-charge-pump",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small perfboard voltage doubler (+9v to +18v) around a 555, shown as populated board, underside, colour wiring diagram and etched PCB; read from the populated board. No pots or switches.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "220uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "470uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   "legend: 1N5817, 1N400x, etc."
+  ],
+  [
+   "D2",
+   "1N5817",
+   "D",
+   "legend: 1N5817, 1N400x, etc."
+  ],
+  [
+   "×1",
+   "555",
+   "IC",
+   "timer, printed as 555"
+  ]
+ ],
+ "source": "layout"
+}

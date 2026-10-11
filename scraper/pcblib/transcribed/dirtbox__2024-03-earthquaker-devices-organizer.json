@@ -1,0 +1,168 @@
+{
+ "id": "dirtbox:2024-03-earthquaker-devices-organizer",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Two views of a 22x25 stripboard: bare cuts/jumpers on the left, populated on the right (read from the right). FV-1 DSP with an 8-pin EEPROM, TL074, 78L33 regulator (labelled Q1) and a 32768 crystal; six pots, all B100k.",
+ "uncertain": [
+  "EEPROM: no part number printed on the drawing or in the legend",
+  "1m resistor at column 3 rows J-K: printed lower case 'm', read as 1M"
+ ],
+ "rows": [
+  [
+   "×5",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "20k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   "printed 1m"
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×9",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   "one film, one ceramic"
+  ],
+  [
+   "×1",
+   "2n2",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "15pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "TL074",
+   "IC",
+   ""
+  ],
+  [
+   "×1",
+   "FV-1",
+   "IC",
+   "printed FV1"
+  ],
+  [
+   "×1",
+   "EEPROM",
+   "IC",
+   "8-pin, part number not given"
+  ],
+  [
+   "Q1",
+   "78L33",
+   "IC",
+   "regulator"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "X1",
+   "32768 crystal",
+   "OTHER",
+   "32.768 kHz"
+  ],
+  [
+   "Mix",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Up",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Down",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Choir",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Lag",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,126 @@
+{
+ "id": "dirtbox:2022-07-bjfe-folk-boost",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 14x11 stripboard around one NE5534, with one Boost pot.",
+ "uncertain": [
+  "2K at column 5 rows E-H: printed clearly, unusual value",
+  "510K at column 9 rows H-K: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "510K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "560pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "NE5534",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N4002",
+   "D",
+   ""
+  ],
+  [
+   "Boost",
+   "C50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,141 @@
+{
+ "id": "dirtbox:2019-08-borisov-solo-ii-distortion",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 16x10 stripboard (Borisov Solo II Distortion with Gain & Body controls) with a legend. C7 is optional (in case of noise) and has no fixed value; D3 has no type given.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "15nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C7",
+   "?",
+   "C",
+   "value not given; optional in case of noise, legend suggests 47pF-470pF"
+  ],
+  [
+   "IC1",
+   "K140UD6",
+   "IC",
+   "Try LM741, TI061 etc"
+  ],
+  [
+   "D1",
+   "D220",
+   "D",
+   "Try 1N4148/1N914"
+  ],
+  [
+   "D2",
+   "D220",
+   "D",
+   "Try 1N4148/1N914"
+  ],
+  [
+   "D3",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "Gain",
+   "B2M",
+   "POT",
+   ""
+  ],
+  [
+   "Body",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

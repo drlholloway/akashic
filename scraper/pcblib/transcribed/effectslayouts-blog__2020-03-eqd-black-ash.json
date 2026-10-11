@@ -1,0 +1,132 @@
+{
+ "id": "effectslayouts-blog:2020-03-eqd-black-ash",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "First picture is the schematic; the second is the layout sheet (the third is a small copy of it). Sheet shows a populated perfboard, its underside, and an etched PCB with transfer image of the same circuit; read from the populated perfboard, confirmed against the PCB view. The board labels the output pot 'Level', the legend calls it 'Volume'.",
+ "uncertain": [
+  "46K at row F: printed clearly, unusual value",
+  "4.6K at row K: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "46K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.6K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "2N3903",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N3903",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "2N3903",
+   "Q",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "TRIM",
+   "bias trimmer"
+  ],
+  [
+   "Fuzz",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Top",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   "labeled Level on the board"
+  ]
+ ],
+ "source": "layout"
+}

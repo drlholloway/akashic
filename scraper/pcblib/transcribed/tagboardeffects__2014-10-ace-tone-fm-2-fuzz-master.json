@@ -1,0 +1,135 @@
+{
+ "id": "tagboardeffects:2014-10-ace-tone-fm-2-fuzz-master",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout, populated board on top and the cuts/links view below; read from the populated board. Five transistors (the top-right one is labelled Q4 a second time, evidently Q3). SW1/SW2/SW3 are the three lugs of the one tone switch.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×7",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1.8K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×7",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×8",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×5",
+   "2N3904",
+   "Q",
+   "Q1-Q5; 2N3904, 2N5088 or similar (C369 in original, mind the pinout)"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   "added polarity protection"
+  ],
+  [
+   "×2",
+   "1N34A",
+   "D",
+   "D2, D3; small signal diodes (try 1N34A, 1N4148, 1N4001 etc.)"
+  ],
+  [
+   "Fuzz Adjust",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

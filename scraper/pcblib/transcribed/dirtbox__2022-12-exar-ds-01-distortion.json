@@ -1,0 +1,156 @@
+{
+ "id": "dirtbox:2022-12-exar-ds-01-distortion",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 19x18 stripboard with an LM741 and three BJTs; a few parts are drawn translucent over cuts (a 10K, two 47nF).",
+ "uncertain": [
+  "459Ω at column 17, rows N-P (right of the lower 1uF): printed clearly, unusual value; could be meant as 453Ω like the two 453K",
+  "453K ×2 (columns 2 and 8): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×6",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "453K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "459Ω",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×5",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC547B",
+   "Q",
+   "BC547B, BC337 etc. (BC413B in original)"
+  ],
+  [
+   "Q2",
+   "BC547B",
+   "Q",
+   "BC547B, BC337 etc. (BC413B in original)"
+  ],
+  [
+   "Q3",
+   "BC547B",
+   "Q",
+   "BC547B, BC337 etc. (BC413B in original)"
+  ],
+  [
+   "IC1",
+   "LM741",
+   "IC",
+   ""
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   "D1, D2"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Distortion",
+   "A220K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "A22K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "B10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

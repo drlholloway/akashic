@@ -1,0 +1,108 @@
+{
+ "id": "dirtbox:2020-09-cornish-buffer",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "One populated 14x9 stripboard, a single view; one BC549C, 10 resistors, 5 capacitors and no pots. The legend calls the diode G1 but the board labels it D1.",
+ "uncertain": [
+  "50K at column 11: printed clearly, unusual value",
+  "20K at column 12 and 200K at column 8: printed clearly, unusual values"
+ ],
+ "rows": [
+  [
+   "×1",
+   "51Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "7.5K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "20K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "50K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "120K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "200K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC549C",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   "legend prints it as G1"
+  ]
+ ],
+ "source": "layout"
+}

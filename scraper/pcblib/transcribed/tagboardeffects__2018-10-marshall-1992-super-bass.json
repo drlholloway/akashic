@@ -1,0 +1,151 @@
+{
+ "id": "tagboardeffects:2018-10-marshall-1992-super-bass",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated vero board, 19 x 16, with three 20k bias trimmers along the top, four J201 JFETs and an off-board DPDT on/on/on channel switch drawn beside it.",
+ "uncertain": [
+  "320uF, two electrolytics in the middle of the board (columns 7 and 10): printed clearly, unusual value",
+  "500pF at column 18, right side: printed clearly, unusual value",
+  "250pF at column 3, bottom left: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×3",
+   "820r",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "68k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "56k",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "500pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "250pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "320uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "20k",
+   "TRIM",
+   "bias Q1 & Q2 to 6.5V, Q3 to 5V"
+  ],
+  [
+   "Q1",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q2",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q3",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q4",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Treble",
+   "A250K",
+   "POT",
+   ""
+  ],
+  [
+   "Bass",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Mid",
+   "A25K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain Bass",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Gain Treble",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Channel",
+   "DPDT on/on/on",
+   "SW",
+   "toggle, Treble / Bass channel switch"
+  ]
+ ],
+ "source": "layout"
+}

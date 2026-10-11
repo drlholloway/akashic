@@ -1,0 +1,93 @@
+{
+ "id": "dirtbox:2019-07-dam-fuzzrong-fr-70",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 13x9 stripboard, two silicon transistors; the 1nF capacitor is drawn translucent over cuts. Legend suggests alternative transistors and Depth pot values.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "KSP42",
+   "Q",
+   "Try 2N2369, 2N3903, MPSA42 etc."
+  ],
+  [
+   "Q2",
+   "2N4401",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Depth",
+   "B500K",
+   "POT",
+   "Try 500kC or 250kB for better sweep"
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

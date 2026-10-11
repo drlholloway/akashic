@@ -1,0 +1,87 @@
+{
+ "id": "tagboardeffects:2010-07-nick-greer-ghetto-stomp",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated stripboard, one transistor, two clipping diodes and three pots; an LED + pad is taken off the board through the 2K2 resistor.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "680R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   "Diodes are 1N4148 or 1N914"
+  ],
+  [
+   "×1",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "Gain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Vol",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

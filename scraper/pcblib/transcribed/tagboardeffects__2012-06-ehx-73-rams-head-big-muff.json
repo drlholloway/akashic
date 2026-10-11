@@ -1,0 +1,167 @@
+{
+ "id": "tagboardeffects:2012-06-ehx-73-rams-head-big-muff",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Pictures 1-2 are a photo of the original pedal; the vero layout is the third picture (19x17, populated board on top, cuts and links below). The Scooped / Flat / Boosted mids switch inset (3 pos DPDT carrying a 4n7 and a 10n between Tone 3 and Sw1) is drawn as part of the build and its switch and two caps are included.",
+ "uncertain": [
+  "4n left of the 12K in the centre of the board: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×4",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3K3",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "820R",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "390K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "7K5",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "150n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10n",
+   "C",
+   "one on the board, one on the mids switch"
+  ],
+  [
+   "×1",
+   "4n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4n7",
+   "C",
+   "on the mids switch"
+  ],
+  [
+   "×3",
+   "470p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5089",
+   "Q",
+   "legend: Transistors were 2N5133 which will be hard to source, try 2N5089, BC550C or similar"
+  ],
+  [
+   "Q2",
+   "2N5089",
+   "Q",
+   "legend: Transistors were 2N5133 which will be hard to source, try 2N5089, BC550C or similar"
+  ],
+  [
+   "Q3",
+   "2N5089",
+   "Q",
+   "legend: Transistors were 2N5133 which will be hard to source, try 2N5089, BC550C or similar"
+  ],
+  [
+   "Q4",
+   "2N5089",
+   "Q",
+   "legend: Transistors were 2N5133 which will be hard to source, try 2N5089, BC550C or similar"
+  ],
+  [
+   "×4",
+   "1N914",
+   "D",
+   "D1 to D4"
+  ],
+  [
+   "Dx",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Sustain",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Mids",
+   "DPDT on/off/on",
+   "SW",
+   "toggle, Scooped / Flat / Boosted mids, 3 pos DPDT"
+  ]
+ ],
+ "source": "layout"
+}

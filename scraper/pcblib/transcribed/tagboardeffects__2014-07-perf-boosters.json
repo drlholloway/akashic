@@ -1,0 +1,123 @@
+{
+ "id": "tagboardeffects:2014-07-perf-boosters",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "One page with two separate booster circuits on 9x6 perfboard, a Super Hard On and an LPB1; they are different circuits, not versions of one, so both are listed with the board named in each note. Each is drawn three times (parts, traces, wired); only the top parts view was counted.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "100K",
+   "R",
+   "Super Hard On"
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   "Super Hard On"
+  ],
+  [
+   "×2",
+   "10M",
+   "R",
+   "Super Hard On"
+  ],
+  [
+   "×1",
+   "5K1",
+   "R",
+   "Super Hard On"
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   "Super Hard On"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic, Super Hard On"
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic, Super Hard On"
+  ],
+  [
+   "D1",
+   "9V1 zener",
+   "D",
+   "Super Hard On"
+  ],
+  [
+   "×1",
+   "BS170",
+   "Q",
+   "MOSFET, Super Hard On"
+  ],
+  [
+   "Gain",
+   "C5K",
+   "POT",
+   "Super Hard On"
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   "LPB1"
+  ],
+  [
+   "×1",
+   "390R",
+   "R",
+   "LPB1"
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   "LPB1"
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   "LPB1"
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   "LPB1"
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   "LPB1"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic, LPB1"
+  ],
+  [
+   "×1",
+   "2N5088",
+   "Q",
+   "LPB1"
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   "LPB1"
+  ]
+ ],
+ "source": "layout"
+}

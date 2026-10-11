@@ -1,0 +1,171 @@
+{
+ "id": "dirtbox:2019-06-shin-ei-fy-6-super-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 20x18 vero, dense, values printed on every part; six transistors named only as low gain NPN with suggestions.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×7",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1.8K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×11",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N2369",
+   "Q",
+   "Low gain NPN Silicon; Try 2N2369, BC107A, MPSA05 etc.; 2SC828-Q in original"
+  ],
+  [
+   "Q2",
+   "2N2369",
+   "Q",
+   "Low gain NPN Silicon; Try 2N2369, BC107A, MPSA05 etc.; 2SC828-Q in original"
+  ],
+  [
+   "Q3",
+   "2N2369",
+   "Q",
+   "Low gain NPN Silicon; Try 2N2369, BC107A, MPSA05 etc.; 2SC828-Q in original"
+  ],
+  [
+   "Q4",
+   "2N2369",
+   "Q",
+   "Low gain NPN Silicon; Try 2N2369, BC107A, MPSA05 etc.; 2SC828-Q in original"
+  ],
+  [
+   "Q5",
+   "2N2369",
+   "Q",
+   "Low gain NPN Silicon; Try 2N2369, BC107A, MPSA05 etc.; 2SC828-Q in original"
+  ],
+  [
+   "Q6",
+   "2N2369",
+   "Q",
+   "Low gain NPN Silicon; Try 2N2369, BC107A, MPSA05 etc.; 2SC828-Q in original"
+  ],
+  [
+   "×2",
+   "OA90",
+   "D",
+   "D1, D2"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Expander",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Balance",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

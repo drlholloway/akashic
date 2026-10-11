@@ -1,0 +1,111 @@
+{
+ "id": "dirtbox:2019-07-rogue-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 15x9 stripboard with values printed on the parts. The legend gives only generic types for Q1, Q2 and D1 (NPN Silicon, NPN Germanium, Germanium), no part numbers.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "5.6K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "NPN Silicon",
+   "Q",
+   "no part number given"
+  ],
+  [
+   "Q2",
+   "NPN Germanium",
+   "Q",
+   "no part number given"
+  ],
+  [
+   "D1",
+   "Germanium",
+   "D",
+   "no part number given"
+  ],
+  [
+   "D2",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Sustain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

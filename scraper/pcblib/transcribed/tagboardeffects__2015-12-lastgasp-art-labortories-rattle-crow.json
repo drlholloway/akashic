@@ -1,0 +1,125 @@
+{
+ "id": "tagboardeffects:2015-12-lastgasp-art-labortories-rattle-crow",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero 19 x 11 by Travis: populated board on top, cuts/links view below; only the populated board counted. One transistor, a TL072 and two diodes of unknown type.",
+ "uncertain": [
+  "D1 and D2 (centre of board, next to the transistor): type not given, legend says 'unknown black glass measured at 0.57Vf'"
+ ],
+ "rows": [
+  [
+   "×3",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "56pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "6.8nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "2SC1815-Y",
+   "Q",
+   "legend: transistor is 2SC1815-Y"
+  ],
+  [
+   "D1",
+   "?",
+   "D",
+   "value not given; legend: unknown black glass measured at 0.57Vf"
+  ],
+  [
+   "D2",
+   "?",
+   "D",
+   "value not given; legend: unknown black glass measured at 0.57Vf"
+  ],
+  [
+   "×1",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "Sens",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Freq",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

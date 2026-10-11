@@ -1,0 +1,199 @@
+{
+ "id": "tagboardeffects:2017-03-shin-ei-8tr-fuzz-wah",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Two populated vero boards that make one pedal, a 21x20 fuzz section and a 14x11 wah section; the rows are the sum of both. Six transistors are drawn on the fuzz board although its legend says Q1-Q4, plus two on the wah board (eight in all, as the name 8TR implies).",
+ "uncertain": [
+  "200nF x2 on the wah board (top centre and right): printed clearly, unusual value",
+  "30nF on the wah board (right edge): printed clearly, unusual value",
+  "Transistor count: fuzz legend says Q1-Q4 but six transistors are drawn on the fuzz board; counted as drawn (6 + 2 wah)"
+ ],
+ "rows": [
+  [
+   "×8",
+   "10k",
+   "R",
+   "7 fuzz, 1 wah"
+  ],
+  [
+   "×7",
+   "100k",
+   "R",
+   "6 fuzz, 1 wah"
+  ],
+  [
+   "×6",
+   "22k",
+   "R",
+   "4 fuzz, 2 wah"
+  ],
+  [
+   "×3",
+   "47k",
+   "R",
+   "fuzz"
+  ],
+  [
+   "×3",
+   "470k",
+   "R",
+   "1 fuzz, 2 wah"
+  ],
+  [
+   "×3",
+   "470r",
+   "R",
+   "2 fuzz, 1 wah"
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   "fuzz"
+  ],
+  [
+   "×1",
+   "220k",
+   "R",
+   "fuzz"
+  ],
+  [
+   "×1",
+   "150k",
+   "R",
+   "fuzz"
+  ],
+  [
+   "×1",
+   "15k",
+   "R",
+   "fuzz"
+  ],
+  [
+   "×1",
+   "3.3k",
+   "R",
+   "fuzz"
+  ],
+  [
+   "×1",
+   "2k",
+   "R",
+   "fuzz"
+  ],
+  [
+   "×1",
+   "1.8k",
+   "R",
+   "fuzz"
+  ],
+  [
+   "×1",
+   "1k",
+   "R",
+   "fuzz"
+  ],
+  [
+   "×1",
+   "1.5k",
+   "R",
+   "wah"
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   "fuzz"
+  ],
+  [
+   "×1",
+   "2.2nF",
+   "C",
+   "fuzz"
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   "wah"
+  ],
+  [
+   "×1",
+   "30nF",
+   "C",
+   "wah"
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   "fuzz"
+  ],
+  [
+   "×2",
+   "200nF",
+   "C",
+   "wah"
+  ],
+  [
+   "×13",
+   "10uF",
+   "C",
+   "electrolytic; 12 fuzz, 1 wah"
+  ],
+  [
+   "×8",
+   "2SC828",
+   "Q",
+   "6 on the fuzz board (legend: Q1-Q4), 2 on the wah board (Q1 & Q2); legend: Try 2N5088"
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   "D1, D2; legend: Si Diodes"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   "legend: 1N5817 or Similar (Polarity Protection)"
+  ],
+  [
+   "TR1",
+   "10k",
+   "TRIM",
+   ""
+  ],
+  [
+   "×1",
+   "500mH",
+   "L",
+   "wah inductor"
+  ],
+  [
+   "Expander",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Balance",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Wah",
+   "50K",
+   "POT",
+   "taper not stated"
+  ],
+  [
+   "Switch",
+   "SPDT on/on",
+   "SW",
+   "Sw 1-3"
+  ]
+ ],
+ "source": "layout"
+}

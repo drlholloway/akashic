@@ -1,0 +1,57 @@
+{
+ "id": "tagboardeffects:2015-08-germanium-giant",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "12 x 6 stripboard, single populated view. The transistor and the two diodes carry no part number on the board; the legend gives examples only. A trimmer on the board sets the bias.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "Q1",
+   "MP38",
+   "Q",
+   "NPN Ge like MP38, hfe 50 and up"
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   "D1, D2; Si example 1n4148 (snarls), Ge example D9K (growls)"
+  ],
+  [
+   "×1",
+   "5k",
+   "TRIM",
+   "for biasing"
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Clean",
+   "B25K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

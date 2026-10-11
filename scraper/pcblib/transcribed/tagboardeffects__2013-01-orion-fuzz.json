@@ -1,0 +1,81 @@
+{
+ "id": "tagboardeffects:2013-01-orion-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "12x10 stripboard, populated view on the left and cuts/link view on the right; read from the populated view. Transistor types are unknown in the original, the legend only suggests substitutes.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N3906",
+   "Q",
+   "legend: transistors unknown, Q1 is PNP Si (try 2N3906, 2N2907)"
+  ],
+  [
+   "Q2",
+   "2N3904",
+   "Q",
+   "legend: Q2 is NPN Si (try 2N3904, 2N2222)"
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B500Ω",
+   "POT",
+   "legend: 500 Ohm lin (try 1K)"
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

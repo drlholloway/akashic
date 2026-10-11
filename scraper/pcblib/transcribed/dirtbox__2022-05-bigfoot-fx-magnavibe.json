@@ -1,0 +1,123 @@
+{
+ "id": "dirtbox:2022-05-bigfoot-fx-magnavibe",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 17x12 stripboard for the Bigfoot FX Magnavibe: two transistors, an on-board LED (D1) facing an LDR, both 'socket and test' with no type given.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "1.5M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "7.5K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.8K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "3-5mm LED",
+   "LED",
+   "on the board, facing the LDR; socket and test"
+  ],
+  [
+   "D2",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "LDR",
+   "?",
+   "OPTO",
+   "value not given; socket and test"
+  ],
+  [
+   "Depth",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Speed",
+   "B25K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

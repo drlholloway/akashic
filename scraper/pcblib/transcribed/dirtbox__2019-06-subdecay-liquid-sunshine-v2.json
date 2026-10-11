@@ -1,0 +1,153 @@
+{
+ "id": "dirtbox:2019-06-subdecay-liquid-sunshine-v2",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 18x12 vero board with three 2N5458 JFETs and two 50K trimmers; the LED resistor is on the board, printed CLR.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "50K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Q1",
+   "2N5458",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q2",
+   "2N5458",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q3",
+   "2N5458",
+   "Q",
+   "JFET"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Drive A",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Drive B",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Bass Sw",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Treble Cut Sw",
+   "SPDT on/off/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

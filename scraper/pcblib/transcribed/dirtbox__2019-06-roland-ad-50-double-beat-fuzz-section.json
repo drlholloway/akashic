@@ -1,0 +1,162 @@
+{
+ "id": "dirtbox:2019-06-roland-ad-50-double-beat-fuzz-section",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated stripboard (17x14), fuzz section only of the Roland AD-50, with a 4P3T rotary switch off board. The one diode on the board is printed 'D3' while the legend calls it D1 (1N5817).",
+ "uncertain": [
+  "250pF at column 15, rows J-L: printed clearly, unusual value",
+  "Diode at column 9, rows H-J is labelled D3 on the board but the legend only lists D1: 1N5817; taken as the same part"
+ ],
+ "rows": [
+  [
+   "×3",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "120K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "820K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "6.8nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "250pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N2222",
+   "Q",
+   "legend: 2N2222, 2N3904, MPSA06 etc; 2SC1000 in original"
+  ],
+  [
+   "Q2",
+   "2N2222",
+   "Q",
+   "legend: 2N2222, 2N3904, MPSA06 etc; 2SC1000 in original"
+  ],
+  [
+   "Q3",
+   "2N2222",
+   "Q",
+   "legend: 2N2222, 2N3904, MPSA06 etc; 2SC1000 in original"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   "printed D3 on the board"
+  ],
+  [
+   "Sustain",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "4P3T rotary",
+   "SW",
+   "rotary"
+  ]
+ ],
+ "source": "layout"
+}

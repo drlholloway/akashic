@@ -1,0 +1,143 @@
+{
+ "id": "dirtbox:2019-06-ibanez-fuzz-no-83",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 15x12 stripboard with two JFETs, one BJT and germanium clipping diodes; R10 is drawn with a designator only (not fitted in original units).",
+ "uncertain": [
+  "2.2uF at A12-14 is drawn as a transparent outline lying across the strip, taken as an electrolytic like the other 2.2uF"
+ ],
+ "rows": [
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "R10",
+   "?",
+   "R",
+   "value not given; legend: not fitted in original units, use 1M to eliminate pop from the tone switch"
+  ],
+  [
+   "×1",
+   "47pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2SK30A",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q2",
+   "2N5088",
+   "Q",
+   "2SC644R in original"
+  ],
+  [
+   "Q3",
+   "2SK30A",
+   "Q",
+   "JFET"
+  ],
+  [
+   "D1",
+   "Germanium",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "Germanium",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Fuzz Depth",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Balance",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

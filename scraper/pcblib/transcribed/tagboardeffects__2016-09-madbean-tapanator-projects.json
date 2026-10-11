@@ -1,0 +1,150 @@
+{
+ "id": "tagboardeffects:2016-09-madbean-tapanator-projects",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard 20x21 shown populated and bare; PIC TapLFO tap-tempo LFO with 7805 regulator, 20MHz crystal, four 2N3904 and three 5K LED-brightness trimmers. Five pots inferred from the wire labels (Rate, Wave, Dist, Multi, Depth), legend says all pots are B10K.",
+ "uncertain": [
+  "Wave is listed as a B10K pot from the Wave 1/2/3 wire labels; the legend does not name the pots individually",
+  "'Mss' footswitch name kept as printed (probably multiplier/mode select)"
+ ],
+ "rows": [
+  [
+   "×5",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "330R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3K6",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22p",
+   "C",
+   ""
+  ],
+  [
+   "×5",
+   "100n",
+   "C",
+   "one ceramic, four box film"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "7805",
+   "IC",
+   "regulator"
+  ],
+  [
+   "PIC",
+   "TapLFO",
+   "IC",
+   "PIC"
+  ],
+  [
+   "Xtal",
+   "20MHz",
+   "OTHER",
+   "crystal"
+  ],
+  [
+   "×4",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "T1",
+   "5K",
+   "TRIM",
+   "LED brightness"
+  ],
+  [
+   "T2",
+   "5K",
+   "TRIM",
+   "LED brightness"
+  ],
+  [
+   "T3",
+   "5K",
+   "TRIM",
+   "LED brightness"
+  ],
+  [
+   "Rate",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Wave",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Dist",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Multi",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Depth",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Tap",
+   "SPST momentary",
+   "SW",
+   "footswitch"
+  ],
+  [
+   "Mss",
+   "SPST momentary",
+   "SW",
+   "footswitch"
+  ]
+ ],
+ "source": "layout"
+}

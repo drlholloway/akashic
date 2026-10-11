@@ -1,0 +1,171 @@
+{
+ "id": "tagboardeffects:2012-07-cmat-mods-signa-drive",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 19 x 15 with a populated board and a bare cuts/links view; RC4558P, two 2N3904, D5 on the board, and clipping diodes D1-D2 (1N914) and D3-D4 (3mm red LEDs) mounted on the off-board DPDT on/off/on switch.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×8",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "620K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220R",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1u",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "51p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "RC4558P",
+   "IC",
+   ""
+  ],
+  [
+   "Q1",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N914",
+   "D",
+   "on the switch"
+  ],
+  [
+   "D2",
+   "1N914",
+   "D",
+   "on the switch"
+  ],
+  [
+   "D3",
+   "3mm red LED",
+   "LED",
+   "on the switch"
+  ],
+  [
+   "D4",
+   "3mm red LED",
+   "LED",
+   "on the switch"
+  ],
+  [
+   "D5",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Drive",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B2K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "SW1",
+   "DPDT on/off/on",
+   "SW",
+   "toggle, clipping select"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,129 @@
+{
+ "id": "effectslayouts-blog:2017-04-hornby-skewes-zonk-machine",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with board-mounted pots, plus a colour wiring diagram, the underside and an etched PCB of the same circuit; counted from the populated perfboard and confirmed against the diagram. Positive-ground circuit with three PNP germanium transistors.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "56K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "TI A02 650",
+   "Q",
+   "PNP germanium"
+  ],
+  [
+   "Q2",
+   "OC75",
+   "Q",
+   "PNP germanium"
+  ],
+  [
+   "Q3",
+   "OC44",
+   "Q",
+   "PNP germanium"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Swell",
+   "A500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

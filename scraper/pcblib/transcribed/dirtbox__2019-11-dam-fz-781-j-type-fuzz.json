@@ -1,0 +1,143 @@
+{
+ "id": "dirtbox:2019-11-dam-fz-781-j-type-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 15x11 stripboard, positive-ground PNP germanium fuzz with a 3P4T rotary switch selecting capacitors; values printed on the parts.",
+ "uncertain": [
+  "25nF at columns 14, rows G-I (right edge): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "8.2K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "5.6nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "15nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "25nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "56nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "OC82DM",
+   "Q",
+   "PNP Germanium"
+  ],
+  [
+   "Q2",
+   "OC82DM",
+   "Q",
+   "PNP Germanium"
+  ],
+  [
+   "Q3",
+   "OC82DM",
+   "Q",
+   "PNP Germanium"
+  ],
+  [
+   "Fuzz",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Filter",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "3P4T rotary",
+   "SW",
+   "rotary"
+  ]
+ ],
+ "source": "layout"
+}

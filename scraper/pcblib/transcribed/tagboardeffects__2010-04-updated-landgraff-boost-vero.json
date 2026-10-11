@@ -1,0 +1,84 @@
+{
+ "id": "tagboardeffects:2010-04-updated-landgraff-boost-vero",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 14 x 9 vero board with one off-board pot; the pot is not named, only marked '5K Rev Log'. Q1 is drawn with D/G/S pins and the legend names it NTE490.",
+ "uncertain": [
+  "47 electrolytic at the bottom right: printed only '47', no unit, taken as 47uF",
+  "4001 diode at the bottom right edge: very small print, read as 4001"
+ ],
+ "rows": [
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "5k1",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic, printed '47'"
+  ],
+  [
+   "×2",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "NTE490",
+   "Q",
+   "MOSFET, pins drawn D/G/S"
+  ],
+  [
+   "Pot",
+   "C5K",
+   "POT",
+   "5K Rev Log, knob not named"
+  ]
+ ],
+ "source": "layout"
+}

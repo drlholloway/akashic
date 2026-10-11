@@ -1,0 +1,240 @@
+{
+ "id": "tagboardeffects:2016-08-vfe-pedals-triumvirate",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 21 x 27, populated board on the left and cuts/links view on the right. Two 14-pin 2074 op-amps, a 7660S charge pump, two BS170, two on-board clipping LEDs and ten on-board trimmers.",
+ "uncertain": [
+  "ICs printed only as '2074' (14-pin): kept as printed, prefix not given",
+  "10u below the lower 2074, beside the 100p: drawn as a dark red disc like the ceramics, not as an electrolytic can; type unclear (possibly tantalum)"
+ ],
+ "rows": [
+  [
+   "×9",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4n7",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1u",
+   "C",
+   "film box"
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "drawn as a red disc, not a can"
+  ],
+  [
+   "×2",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "3mm red LED",
+   "LED",
+   "D1, D2, on the board"
+  ],
+  [
+   "×4",
+   "1N4148",
+   "D",
+   "D3, D4, D5, D6"
+  ],
+  [
+   "D7",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "×2",
+   "2074",
+   "IC",
+   "14-pin"
+  ],
+  [
+   "×1",
+   "7660S",
+   "IC",
+   "charge pump"
+  ],
+  [
+   "×2",
+   "BS170",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "High1",
+   "5K",
+   "TRIM",
+   ""
+  ],
+  [
+   "High2",
+   "50K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Cut",
+   "10K",
+   "TRIM",
+   ""
+  ],
+  [
+   "HI Mid 2",
+   "20K",
+   "TRIM",
+   ""
+  ],
+  [
+   "HI Mid 1",
+   "2K",
+   "TRIM",
+   ""
+  ],
+  [
+   "LO Mid 2",
+   "50K",
+   "TRIM",
+   ""
+  ],
+  [
+   "LO Mid 1",
+   "5K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Pre",
+   "10K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Low1",
+   "5K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Low2",
+   "50K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Bass Gain",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Mid Gain",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Treble Gain",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Bass",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Mid",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Treble",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

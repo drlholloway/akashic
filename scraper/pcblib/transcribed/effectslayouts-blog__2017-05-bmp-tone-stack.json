@@ -1,0 +1,39 @@
+{
+ "id": "effectslayouts-blog:2017-05-bmp-tone-stack",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Two alternative perfboard versions side by side, each also shown as underside, wiring diagram and PCB: a passive Big Muff tone stack (left) and the same stack with a one-transistor recovery stage (right). Read the first (left, passive) one. C1, C2, R1, R2 carry no value on the board; a table gives six variants, the first (Triangle) is entered. The right-hand version adds 2.7K, 100K, 470K, 10K, 2x 100nF and Q1 (BC549C, BC550C, 2N5088, 2N5089, MPSA18, etc.).",
+ "uncertain": [],
+ "rows": [
+  [
+   "C1",
+   "3.9nF",
+   "C",
+   "Triangle; table: 3.9nF for Triangle, 73/75 Ram's Head, Russian; 10nF for Flat Mids, Mids Bump"
+  ],
+  [
+   "C2",
+   "10nF",
+   "C",
+   "Triangle; table: 10nF for all variants except Mids Bump 5.6nF"
+  ],
+  [
+   "R1",
+   "22k",
+   "R",
+   "Triangle; table: 22k for all variants except 73 Ram's Head 33k"
+  ],
+  [
+   "R2",
+   "22k",
+   "R",
+   "Triangle; table: 73 Ram's Head 33k, 75 Ram's Head 39k, Russian 20k, Flat Mids 39k, Mids Bump 39k"
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   "100K Lin"
+  ]
+ ],
+ "source": "layout"
+}

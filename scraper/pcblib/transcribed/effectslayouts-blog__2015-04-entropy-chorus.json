@@ -1,0 +1,135 @@
+{
+ "id": "effectslayouts-blog:2015-04-entropy-chorus",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout of the Valve Wizard (Merlin Blencowe) Entropy Chorus: populated board, colour wiring diagram, underside and etched PCB of the same circuit; counted from the populated board and confirmed on the diagram. Q1 is a 78L05 regulator and D1 a red LED on the board.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "91K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "820K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×5",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "PT2399",
+   "IC",
+   ""
+  ],
+  [
+   "Q1",
+   "78L05",
+   "IC",
+   "regulator"
+  ],
+  [
+   "Q2",
+   "NPN Silicon",
+   "Q",
+   "legend: NPN Silicon"
+  ],
+  [
+   "D1",
+   "Red LED",
+   "LED",
+   "on the board"
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Rate",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Depth",
+   "B10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

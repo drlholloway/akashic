@@ -1,6 +1,6 @@
 import MiniSearch from 'minisearch';
 import type { IndexEntry } from './types';
-import { VENDOR_NAMES } from './types';
+import { VENDOR_NAMES, buildsOf } from './types';
 import { controlLabels, controlSearchText } from './controls';
 
 export interface Filters {
@@ -8,6 +8,8 @@ export interface Filters {
 	vendor: string[];
 	category: string[];
 	enclosure: string[];
+	build: string[]; // 'pcb', 'vero', 'tagboard': any one of them
+	verified: boolean; // layouts their source marks as verified by a build
 	basedOn: string; // exact match on based_on
 	part: string; // active part value (IC/Q/OPTO) exact match
 	knobs: number | null;
@@ -20,6 +22,8 @@ export const EMPTY_FILTERS: Filters = {
 	vendor: [],
 	category: [],
 	enclosure: [],
+	build: [],
+	verified: false,
 	basedOn: '',
 	part: '',
 	knobs: null,
@@ -102,6 +106,8 @@ export function applyFilters(entries: IndexEntry[], f: Filters): IndexEntry[] {
 		if (f.vendor.length && !f.vendor.includes(e.vendor)) return false;
 		if (f.category.length && !f.category.includes(e.category)) return false;
 		if (f.enclosure.length && !f.enclosure.includes(e.enclosure)) return false;
+		if (f.build.length && !buildsOf(e).some((b) => f.build.includes(b))) return false;
+		if (f.verified && e.verified !== true) return false;
 		if (basedKey && normalizeOriginal(e.original) !== basedKey && normalizeOriginal(e.based_on) !== basedKey) return false;
 		if (f.part && !e.actives.includes(f.part)) return false;
 		if (f.knobs != null && knobsOf(e) !== f.knobs) return false;
@@ -124,6 +130,8 @@ export function filtersFromParams(p: URLSearchParams): Filters {
 		vendor: list('vendor'),
 		category: list('cat'),
 		enclosure: list('enc'),
+		build: list('build'),
+		verified: p.get('verified') === '1',
 		basedOn: p.get('based') ?? '',
 		part: p.get('part') ?? '',
 		knobs: knobs ? Number(knobs) : null,
@@ -138,6 +146,8 @@ export function paramsFromFilters(f: Filters): URLSearchParams {
 	if (f.vendor.length) p.set('vendor', f.vendor.join(','));
 	if (f.category.length) p.set('cat', f.category.join(','));
 	if (f.enclosure.length) p.set('enc', f.enclosure.join(','));
+	if (f.build.length) p.set('build', f.build.join(','));
+	if (f.verified) p.set('verified', '1');
 	if (f.basedOn) p.set('based', f.basedOn);
 	if (f.part) p.set('part', f.part);
 	if (f.knobs != null) p.set('knobs', String(f.knobs));

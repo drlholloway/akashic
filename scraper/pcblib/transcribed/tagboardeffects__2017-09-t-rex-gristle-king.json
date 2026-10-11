@@ -1,0 +1,251 @@
+{
+ "id": "tagboardeffects:2017-09-t-rex-gristle-king",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero 21x20 shown populated (left) and bare with cuts (right); read from the populated view. Two footswitches each switch one half of the pedal (Gristle overdrive, More boost) and a 3PDT toggle sets their order; transistors and IC are marked '(Test)' in the legend with no part numbers for Q1-Q3.",
+ "uncertain": [
+  "20n film cap at left, between 100K and 2K2 below Q1: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×7",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K5",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470R",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×3",
+   "1u",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100p",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "33n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "20n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "390p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "50K",
+   "TRIM",
+   ""
+  ],
+  [
+   "×2",
+   "Ge diode",
+   "D",
+   "D1, D2; legend: Ge Diodes"
+  ],
+  [
+   "×3",
+   "1N4007",
+   "D",
+   "D3, D4, D5"
+  ],
+  [
+   "D6",
+   "Red LED",
+   "LED",
+   "on board"
+  ],
+  [
+   "×2",
+   "NPN silicon",
+   "Q",
+   "Q1, Q2; legend: NPN Silicon (Test), no part number"
+  ],
+  [
+   "Q3",
+   "JFET",
+   "Q",
+   "legend: JFet (Test), no part number"
+  ],
+  [
+   "IC",
+   "JRC4560",
+   "IC",
+   "legend: JRC4560 (Test)"
+  ],
+  [
+   "More",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Gravy",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Gristle",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Gristle",
+   "3PDT",
+   "SW",
+   "Switch 1, footswitch for the overdrive side"
+  ],
+  [
+   "More",
+   "3PDT",
+   "SW",
+   "Switch 2, footswitch for the boost side"
+  ],
+  [
+   "Pre/Post",
+   "3PDT",
+   "SW",
+   "Switch 3, toggle"
+  ],
+  [
+   "Flavor",
+   "SPDT",
+   "SW",
+   "Switch 4"
+  ],
+  [
+   "Phat",
+   "SPDT",
+   "SW",
+   "Switch 5"
+  ]
+ ],
+ "source": "layout"
+}

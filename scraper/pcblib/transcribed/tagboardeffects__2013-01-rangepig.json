@@ -1,0 +1,71 @@
+{
+ "id": "tagboardeffects:2013-01-rangepig",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout, 14 x 8, populated board above a bare cuts-and-links view. The 100K is drawn as a three-pin trimmer outline in the middle of the board. Negative supply (-9V), PNP circuit.",
+ "uncertain": [
+  "100K in the middle of the board: drawn as a square outline with three pins, read as a trimmer rather than a fixed resistor"
+ ],
+ "rows": [
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.9K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "6.8nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Q1",
+   "OC44",
+   "Q",
+   "PNP Ge (OC44, AC128...)"
+  ],
+  [
+   "Q2",
+   "2N3906",
+   "Q",
+   ""
+  ],
+  [
+   "Level",
+   "A10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

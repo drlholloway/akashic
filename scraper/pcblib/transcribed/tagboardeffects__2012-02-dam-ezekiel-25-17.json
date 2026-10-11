@@ -1,0 +1,173 @@
+{
+ "id": "tagboardeffects:2012-02-dam-ezekiel-25-17",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "19x12 stripboard, populated view above a bare cuts/links view; dual op-amp, eight diodes D1-D8 (two are 3mm LEDs on the board), four pots and a rotary clipping selector.",
+ "uncertain": [
+  "Two small ceramic caps (right of the IC, and right side near Rotary 4) are printed '470' with no unit; entered as 470p"
+ ],
+ "rows": [
+  [
+   "×3",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2n2",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "470p",
+   "C",
+   "printed 470, no unit"
+  ],
+  [
+   "×4",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N34A",
+   "D",
+   "Ge (try 1N34A)"
+  ],
+  [
+   "D2",
+   "1N34A",
+   "D",
+   "Ge (try 1N34A)"
+  ],
+  [
+   "D3",
+   "1N34A",
+   "D",
+   "Ge (try 1N34A)"
+  ],
+  [
+   "D4",
+   "1N4148",
+   "D",
+   "Si (try 1N4148)"
+  ],
+  [
+   "D5",
+   "1N4148",
+   "D",
+   "Si (try 1N4148)"
+  ],
+  [
+   "D6",
+   "3mm LED",
+   "LED",
+   ""
+  ],
+  [
+   "D7",
+   "3mm LED",
+   "LED",
+   ""
+  ],
+  [
+   "D8",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "JRC4562D",
+   "IC",
+   "try JRC4558 or similar"
+  ],
+  [
+   "Blend",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Filter",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Rotary",
+   "3P4T rotary",
+   "SW",
+   "4 position 3 pole, only 1 pole used"
+  ]
+ ],
+ "source": "layout"
+}

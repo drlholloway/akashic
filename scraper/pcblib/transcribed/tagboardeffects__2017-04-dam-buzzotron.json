@@ -1,0 +1,123 @@
+{
+ "id": "tagboardeffects:2017-04-dam-buzzotron",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small vero layout, 15 x 10, populated board on top and the bare cuts/links view below. Positive ground (-9V supply), three germanium transistors and one germanium diode.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "680K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3K3",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2u2",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4u7",
+   "C",
+   "electrolytic, axial"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "NKT213",
+   "Q",
+   "germanium PNP"
+  ],
+  [
+   "×1",
+   "1N34A",
+   "D",
+   "printed Ge; legend: 1N34A (or other Ge)"
+  ],
+  [
+   "Sustain",
+   "C100K",
+   "POT",
+   "Rev Log"
+  ],
+  [
+   "Balance",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Attack",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

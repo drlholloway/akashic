@@ -1,0 +1,99 @@
+{
+ "id": "dirtbox:2023-06-black-arts-toneworks-oath",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 17x15 stripboard, three transistors with a diode pair; the Volume control is a 100K trimmer drawn on the board, no off-board pots.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "6.2K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "470pF",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Volume",
+   "100K",
+   "TRIM",
+   "on-board trimmer"
+  ],
+  [
+   "Q1",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N5089",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "2N5089",
+   "Q",
+   ""
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   "D1, D2"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "tagboardeffects:2017-05-diaz-texas-square-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single small 8x10 vero board, two germanium NPN transistors, all values large and clear.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1.2k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "8.2k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "NTE103",
+   "Q",
+   "NPN Ge"
+  ],
+  [
+   "Q2",
+   "NTE103",
+   "Q",
+   "NPN Ge"
+  ],
+  [
+   "Fuzz",
+   "B2K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

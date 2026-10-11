@@ -1,0 +1,117 @@
+{
+ "id": "tagboardeffects:2012-01-hermida-mosferatu",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "17x11 vero drawn twice (populated, then cuts and links only); read from the populated view. Legend: try a 1M Gain pot for more gain; Volume 1 to ground, Volume 2 to output.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×5",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220R",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470n",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "270n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC",
+   "AD712",
+   "IC",
+   "IC is AD712 or OPA2604"
+  ],
+  [
+   "Q1",
+   "2N7000",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "Q2",
+   "2N7000",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "D1",
+   "1N34A",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N34A",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "B500K",
+   "POT",
+   "try 1M for gain increase"
+  ],
+  [
+   "Tone",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,179 @@
+{
+ "id": "tagboardeffects:2012-09-rockbox-boiling-point",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "19 x 15 vero board with parts, bare cuts view below, plus a switch wiring diagram: D1-D4 and the two red LEDs D5/D6 hang off a DPDT on/off/on clipping switch, and 220n and 470n capacitors off a 2 position DPDT; those off-board parts are included.",
+ "uncertain": [
+  "4M99 at the lower left next to 4K7: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×5",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×8",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "620K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4M99",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "510K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "51p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "150n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1u",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220n",
+   "C",
+   "on the 2 position switch"
+  ],
+  [
+   "×1",
+   "470n",
+   "C",
+   "on the 2 position switch"
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC",
+   "RC4558P",
+   "IC",
+   ""
+  ],
+  [
+   "Q1",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "×4",
+   "1N4148",
+   "D",
+   "D1-D4, on the clipping switch"
+  ],
+  [
+   "×2",
+   "3mm red LED",
+   "LED",
+   "D5, D6, on the clipping switch"
+  ],
+  [
+   "Drive",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B2K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Sw1",
+   "DPDT on/off/on",
+   "SW",
+   "clipping selector"
+  ],
+  [
+   "Sw2",
+   "DPDT on/on",
+   "SW",
+   "2 position, selects 220n / 470n"
+  ]
+ ],
+ "source": "layout"
+}

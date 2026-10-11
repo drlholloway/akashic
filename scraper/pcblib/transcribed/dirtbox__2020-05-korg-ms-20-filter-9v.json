@@ -1,0 +1,117 @@
+{
+ "id": "dirtbox:2020-05-korg-ms-20-filter-9v",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 17x15 stripboard, MS-20 filter modified for 9v around one OTA; two red 3mm LEDs on the board as D1-D2; three pots and a DPDT toggle.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×5",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×2",
+   "680pF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "LM13600",
+   "IC",
+   "legend: LM13600/LM13700"
+  ],
+  [
+   "D1",
+   "3mm red LED",
+   "LED",
+   "on board"
+  ],
+  [
+   "D2",
+   "3mm red LED",
+   "LED",
+   "on board"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Resonance",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Freq",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "DPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

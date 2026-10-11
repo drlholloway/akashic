@@ -1,0 +1,63 @@
+{
+ "id": "effectslayouts-blog:2018-11-demedash-effects-incandenza-bypass",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Relay bypass board (not an effect), perfboard, shown four times (populated board, wiring diagram, underside, etched PCB). Parts read from the populated board. The Sw1/Sw2 pads go to a normally open momentary SPST, which is this circuit's footswitch; it is listed because the legend names it as a specific part.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "1N4001",
+   "D",
+   "1N4001"
+  ],
+  [
+   "×1",
+   "555",
+   "IC",
+   ""
+  ],
+  [
+   "×1",
+   "non-latching DPDT relay",
+   "OTHER",
+   "relay"
+  ],
+  [
+   "×1",
+   "LED",
+   "LED",
+   "on the board"
+  ],
+  [
+   "Sw",
+   "SPST",
+   "SW",
+   "normally open momentary; the footswitch"
+  ]
+ ],
+ "source": "layout"
+}

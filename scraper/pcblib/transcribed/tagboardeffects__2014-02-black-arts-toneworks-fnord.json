@@ -1,0 +1,111 @@
+{
+ "id": "tagboardeffects:2014-02-black-arts-toneworks-fnord",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "16 x 10 stripboard, populated view above a bare view; D1 and D2 are drawn off board across a DPDT on/on toggle wired between Silence 3 and ground.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "100R",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2n2",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC",
+   "CD4070",
+   "IC",
+   ""
+  ],
+  [
+   "Q1",
+   "MPSA13",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N914",
+   "D",
+   "on the switch"
+  ],
+  [
+   "D2",
+   "1N914",
+   "D",
+   "on the switch"
+  ],
+  [
+   "Fnord",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Filter",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Silence",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "DPDT on/on",
+   "SW",
+   "toggle, unnamed; carries D1 and D2"
+  ]
+ ],
+ "source": "layout"
+}

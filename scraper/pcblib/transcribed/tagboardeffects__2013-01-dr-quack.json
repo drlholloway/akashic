@@ -1,0 +1,144 @@
+{
+ "id": "tagboardeffects:2013-01-dr-quack",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 19 x 16 (envelope filter), populated board on the left and a bare cuts-and-links view on the right; counted from the populated board. Two red LEDs sit on the board and a DPDT Bass/Norm toggle is wired off board (SW1, SW2, SW4, SW5).",
+ "uncertain": [
+  "50nF x3 (two at the left edge, one right of IC1): printed clearly, unusual value",
+  "5nF x2 (right of IC1): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "5nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "50nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5457",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q2",
+   "BC239C",
+   "Q",
+   "BC239C or 2N3904"
+  ],
+  [
+   "IC1",
+   "JRC4558",
+   "IC",
+   "any dual opamp (try JRC4558, NE5532, TL072 etc)"
+  ],
+  [
+   "D1",
+   "3mm red LED",
+   "LED",
+   ""
+  ],
+  [
+   "D2",
+   "3mm red LED",
+   "LED",
+   ""
+  ],
+  [
+   "D3",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "Sensitivity",
+   "B100K",
+   "POT",
+   "wires labelled Sens"
+  ],
+  [
+   "Range",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Bass/Norm",
+   "DPDT on/on",
+   "SW",
+   "toggle; legend says 2PDT On-On"
+  ]
+ ],
+ "source": "layout"
+}

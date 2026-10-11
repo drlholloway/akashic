@@ -1,0 +1,107 @@
+{
+ "id": "tagboardeffects:2012-12-schaller-fuzz-72",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 12 x 9 by mirosol, populated board above a bare cuts-and-links view; read from the populated board. The first picture is a photo of the original pedal. The unnamed diode on the top strip is the optional polarity-protection diode.",
+ "uncertain": [
+  "470Ω at column G, top: the last character overlaps the resistor's colour bands; read as 470Ω (bands yellow-violet-black-black agree)"
+ ],
+ "rows": [
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   "ceramic"
+  ],
+  [
+   "×1",
+   "47pF",
+   "C",
+   "ceramic"
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "25uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC239B",
+   "Q",
+   "BC239B or BC109B"
+  ],
+  [
+   "Q2",
+   "BC239B",
+   "Q",
+   "BC239B or BC109B"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   "optional, polarity protection; legend: use 1N4001 or 1N5817"
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B1K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

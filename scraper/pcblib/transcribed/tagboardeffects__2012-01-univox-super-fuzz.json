@@ -1,0 +1,138 @@
+{
+ "id": "tagboardeffects:2012-01-univox-super-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 32 x 12 with populated board, a bare cuts view and a reverse view; counted from the populated board. Two of the 10u cans are drawn semi-transparent (overlapping other parts) and an unlabelled three-lug toggle is wired off board.",
+ "uncertain": [
+  "22K right of centre (about column 20): partly hidden under a semi-transparent 10u can, read as 22K",
+  "Off-board blue three-lug toggle is not named or typed in the drawing: entered as SPDT (the Super-Fuzz tone switch)"
+ ],
+ "rows": [
+  [
+   "×7",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K8",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×11",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic, axial"
+  ],
+  [
+   "×2",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×6",
+   "BC550C",
+   "Q",
+   "Q1-Q6; legend: originals were 2SC828, layout based on CBE pinout transistors such as the BC550C"
+  ],
+  [
+   "D1",
+   "OA90",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "OA90",
+   "D",
+   ""
+  ],
+  [
+   "Expander",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Balance",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "×1",
+   "SPDT",
+   "SW",
+   "toggle, unlabelled"
+  ]
+ ],
+ "source": "layout"
+}

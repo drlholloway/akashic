@@ -1,0 +1,77 @@
+{
+ "id": "tagboardeffects:2014-01-lotus-pedals-thdn",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard 12x7 shown populated on top and bare below. The wires are labelled Gain 1 / Gain 2 while the legend calls the same pot Drive.",
+ "uncertain": [
+  "Electrolytic at the bottom centre: read as 22u, the digits are tightly set and it could be 2.2u"
+ ],
+ "rows": [
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N3906",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "Gain",
+   "B100K",
+   "POT",
+   "legend calls it Drive"
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

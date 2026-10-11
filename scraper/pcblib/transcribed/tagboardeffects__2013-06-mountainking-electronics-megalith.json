@@ -1,0 +1,183 @@
+{
+ "id": "tagboardeffects:2013-06-mountainking-electronics-megalith",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small vero layout 18x12 with a bare cuts/links view below; three capacitors (22n, 10n, 12n) are drawn mounted on toggle Sw1 and are counted. D2 is an LED on the board. Sw2 is a second footswitch for the More Heavy function, not the bypass.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4M7",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "51K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4n7",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   "on Sw1"
+  ],
+  [
+   "×1",
+   "12n",
+   "C",
+   "on Sw1"
+  ],
+  [
+   "×2",
+   "22n",
+   "C",
+   "one on the board, one on Sw1"
+  ],
+  [
+   "×1",
+   "470n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×6",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC338",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "BC338",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "3mm orange LED",
+   "LED",
+   "on the board"
+  ],
+  [
+   "Input",
+   "C1M",
+   "POT",
+   ""
+  ],
+  [
+   "Notch",
+   "A50K",
+   "POT",
+   ""
+  ],
+  [
+   "Slope",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "More Heavy",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Output",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Sw1",
+   "DPDT on/off/on",
+   "SW",
+   "toggle, Notch Shift"
+  ],
+  [
+   "Sw2",
+   "DPDT",
+   "SW",
+   "stomp footswitch, More Heavy"
+  ]
+ ],
+ "source": "layout"
+}

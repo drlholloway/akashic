@@ -1,0 +1,204 @@
+{
+ "id": "dirtbox:2022-11-mxr-m109-six-band-graphic-equalizer",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "One populated 24x21 stripboard with four dual op-amps and six band pots (one per frequency label). The legend's IC lines overlap (\"IC1-IC2: 1458\", \"IC2-IC3: TL022\") although four ICs are drawn; read as IC1-IC2 1458 and IC3-IC4 TL022. All pots are given as 50kB or 50kW.",
+ "uncertain": [
+  "IC2, IC3, IC4 types: legend prints 'IC1-IC2: 1458' and 'IC2-IC3: TL022' for four ICs; taken as IC1-IC2 1458, IC3-IC4 TL022",
+  "20K at column 21 rows O-R: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×5",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "24K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "20K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.2K",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "120nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "68nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "15nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "1458",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "1458",
+   "IC",
+   "legend also names IC2 in 'IC2-IC3: TL022'"
+  ],
+  [
+   "IC3",
+   "TL022",
+   "IC",
+   ""
+  ],
+  [
+   "IC4",
+   "TL022",
+   "IC",
+   "legend says 'IC2-IC3: TL022'; taken to mean IC3-IC4"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "100Hz",
+   "B50K",
+   "POT",
+   "or 50kW"
+  ],
+  [
+   "200Hz",
+   "B50K",
+   "POT",
+   "or 50kW"
+  ],
+  [
+   "400 Hz",
+   "B50K",
+   "POT",
+   "or 50kW"
+  ],
+  [
+   "800 Hz",
+   "B50K",
+   "POT",
+   "or 50kW"
+  ],
+  [
+   "1.6 kHz",
+   "B50K",
+   "POT",
+   "or 50kW"
+  ],
+  [
+   "3.2 kHz",
+   "B50K",
+   "POT",
+   "or 50kW"
+  ]
+ ],
+ "source": "layout"
+}

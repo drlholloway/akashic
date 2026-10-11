@@ -1,0 +1,72 @@
+{
+ "id": "tagboardeffects:2017-04-way-huge-tone-leper",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 15x10 stripboard, one dual op-amp. Pot tapers given in words (Log/Linear) and converted to A/B. Legend prints the IC as LM353 (probably means LF353).",
+ "uncertain": [
+  "5.6k resistor at column 5, rows E-G: the label is clipped by the resistor body and reads '5.6l'; the unit letter is taken as k",
+  "IC1: legend prints 'LM353', which is not a common part number; likely LF353, recorded as printed"
+ ],
+ "rows": [
+  [
+   "×6",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "5.6k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "LM353",
+   "IC",
+   "as printed in the legend"
+  ],
+  [
+   "Volume",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "B10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

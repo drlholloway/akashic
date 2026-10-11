@@ -1,0 +1,93 @@
+{
+ "id": "dirtbox:2021-07-blackhawk-amplifiers-morgul-boost",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 14x11 vero board. Gain (100K) and Tone (10K) are drawn as trimmers on the board; the legend gives an optional external Gain pot (100kA, in brackets, with bracketed Gain wire labels) in place of the Gain trimmer. C6 is a compensation cap whose value depends on the op amp chosen.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "33uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C6",
+   "?",
+   "C",
+   "value not given; external compensation cap: legend suggests 33pF for LM308, 100pF or more for CA3130EZ, not needed for LM741"
+  ],
+  [
+   "IC1",
+   "LM741",
+   "IC",
+   "LM741, LM308 or CA3130EZ"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "100K",
+   "TRIM",
+   "on board"
+  ],
+  [
+   "Tone",
+   "10K",
+   "TRIM",
+   "on board"
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "A100K",
+   "POT",
+   "optional, in place of the Gain trimmer"
+  ]
+ ],
+ "source": "layout"
+}

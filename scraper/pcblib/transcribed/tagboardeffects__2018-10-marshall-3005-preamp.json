@@ -1,0 +1,137 @@
+{
+ "id": "tagboardeffects:2018-10-marshall-3005-preamp",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single small 19x9 vero, large clear print. Bipolar +/-16V supply. Mids, Bass, Treble and Volume pots are wired mostly off-board (legend lines give the pot-to-pot wiring).",
+ "uncertain": [
+  "60k (far left, column 2): clearly printed '60k', a non-standard value; possibly meant 68k in the source"
+ ],
+ "rows": [
+  [
+   "×3",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "60k",
+   "R",
+   "as printed"
+  ],
+  [
+   "×1",
+   "33k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "56k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220r",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "1458",
+   "IC",
+   ""
+  ],
+  [
+   "Gain",
+   "B22K",
+   "POT",
+   "printed '22k Linear'"
+  ],
+  [
+   "Treble",
+   "B22K",
+   "POT",
+   "printed '22k Linear'"
+  ],
+  [
+   "Bass",
+   "B22K",
+   "POT",
+   "printed '22k Linear'"
+  ],
+  [
+   "Mids",
+   "B4.7K",
+   "POT",
+   "printed '4.7k Linear'"
+  ],
+  [
+   "Volume",
+   "A1M",
+   "POT",
+   "printed '1M Log'"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,192 @@
+{
+ "id": "dirtbox:2022-03-polytone-multivoicer",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 29x27 stripboard, octave/filter circuit with three NE5532, an LTC1144 charge pump, a 78L15 regulator (drawn as a TO-92 marked I/G/O), two vactrols and a 50K octave trimmer. Legend: all 1uF caps are bipolar electrolytics rated min 50v; RC3749 in the original for IC1-IC3.",
+ "uncertain": [
+  "5nF (columns 5, rows M-O) and 50nF (column 21, rows N-P): printed clearly, unusual values",
+  "Several standing resistors are drawn faded over other parts (100K at column 17 rows H-J, 10K at column 18 rows M-O, 47Ω at column 19 rows P-Q); read as printed"
+ ],
+ "rows": [
+  [
+   "×4",
+   "5.1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "47Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "680K",
+   "R",
+   ""
+  ],
+  [
+   "×7",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "33pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "5nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "50nF",
+   "C",
+   ""
+  ],
+  [
+   "×10",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×8",
+   "1uF",
+   "C",
+   "electrolytic, bipolar, rated min 50v"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "NE5532",
+   "IC",
+   "RC3749 in original"
+  ],
+  [
+   "IC2",
+   "NE5532",
+   "IC",
+   "RC3749 in original"
+  ],
+  [
+   "IC3",
+   "NE5532",
+   "IC",
+   "RC3749 in original"
+  ],
+  [
+   "IC4",
+   "LTC1144",
+   "IC",
+   ""
+  ],
+  [
+   "REG",
+   "78L15",
+   "IC",
+   "regulator"
+  ],
+  [
+   "D1",
+   "FD100",
+   "D",
+   "FD100 or 1N4001"
+  ],
+  [
+   "D2",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "×2",
+   "NSL-32SR3",
+   "OPTO",
+   "Vactrol 1&2: NSL-32SR3 or similar"
+  ],
+  [
+   "Octave",
+   "50K",
+   "TRIM",
+   "octave trim"
+  ],
+  [
+   "Filter",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Vol / Blend",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Blend Sw",
+   "DPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

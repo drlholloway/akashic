@@ -1,0 +1,87 @@
+{
+ "id": "dirtbox:2023-12-electro-faustus-ef103-guitar-disruptor",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 20x20 stripboard with three CMOS ICs, many links, an LED resistor printed only as CLR, two pots and an SPDT toggle.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×5",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×3",
+   "33pF",
+   "C",
+   ""
+  ],
+  [
+   "×5",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "CD4049UBE",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "CD4093BE",
+   "IC",
+   ""
+  ],
+  [
+   "IC3",
+   "CD4040BE",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Flux",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

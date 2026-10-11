@@ -1,0 +1,81 @@
+{
+ "id": "tagboardeffects:2012-02-sola-sound-tone-bender-professional",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "15 x 9 stripboard Tonebender MkII, populated view with the two pots drawn and wired above a bare cuts-and-links view; positive ground, three PNP germanium transistors with no type or designators given.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "8K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   "small ceramic at the input"
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   "box film"
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   "box film"
+  ],
+  [
+   "×2",
+   "4u7",
+   "C",
+   "electrolytic; one axial, one radial"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "PNP Germanium",
+   "Q",
+   "type not given; legend: consider a matched Tonebender set"
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Attack",
+   "B1K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

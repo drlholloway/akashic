@@ -1,0 +1,93 @@
+{
+ "id": "dirtbox:2019-07-rosac-nu-fuzz-alike",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 13x9 stripboard, resistors drawn with colour bands and printed values. Legend gives the transistors only as 'Unmarked NPN Silicons'; the pot is Level in the legend but the wiring note says Volume.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "750K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "620K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "43K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "NPN Silicon",
+   "Q",
+   "legend: Unmarked NPN Silicons"
+  ],
+  [
+   "Q2",
+   "NPN Silicon",
+   "Q",
+   "legend: Unmarked NPN Silicons"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Tone",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "B500K",
+   "POT",
+   "called Volume in the wiring note"
+  ]
+ ],
+ "source": "layout"
+}

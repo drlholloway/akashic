@@ -1,0 +1,123 @@
+{
+ "id": "tagboardeffects:2016-02-pro-analog-mkiii-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 16x9 stripboard, three germanium PNP transistors (negative ground supply, -9V); the legend offers several alternatives per transistor.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "100r",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.8k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "8.2k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "OC44",
+   "Q",
+   "legend: OC44, OC76, CV7003; try any PNP that would work in a tonebender style circuit"
+  ],
+  [
+   "Q2",
+   "OC71",
+   "Q",
+   "legend: OC71, OC75, CV7005"
+  ],
+  [
+   "Q3",
+   "OC71",
+   "Q",
+   "legend: OC71, OC75, OC76, CV7005"
+  ],
+  [
+   "Volume",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Fuzz",
+   "C1K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

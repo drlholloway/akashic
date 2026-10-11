@@ -1,0 +1,105 @@
+{
+ "id": "effectslayouts-blog:2016-03-deadastronaut-x-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small perfboard fuzz with underside, wiring diagram and etched PCB. Two 5mm yellow LEDs sit on the board as clippers (D1, D2). Off-board notes: In to Gain 3, Volume 2 to Out.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "5mm yellow",
+   "LED",
+   ""
+  ],
+  [
+   "D2",
+   "5mm yellow",
+   "LED",
+   ""
+  ],
+  [
+   "Gain",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,195 @@
+{
+ "id": "dirtbox:2024-02-4ms-pedals-noise-swash-mini",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 20x19 stripboard, values printed on every part; legend gives ICs, diodes, eight pots, two clipping toggles and a momentary self-oscillation footswitch.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×6",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   "two film, one ceramic"
+  ],
+  [
+   "×3",
+   "1uF",
+   "C",
+   "film"
+  ],
+  [
+   "×3",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL062",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D4",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D5",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Pre Gain",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Post Gain",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Self Osc",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Swash",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Low Power",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Noise Gate",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Pre Clip",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Post Clip",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Self Osc Sw",
+   "momentary footswitch",
+   "SW",
+   "effect control, not the bypass"
+  ]
+ ],
+ "source": "layout"
+}

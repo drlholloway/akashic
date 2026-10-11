@@ -1,0 +1,143 @@
+{
+ "id": "dirtbox:2024-04-capitalist-death-cult-just-give-up-v2",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Drawing shows the 19x15 board twice (bare with cuts and links on the left, populated on the right) plus a 3PDT wiring sketch; parts read from the populated board only. Values are printed lower case (10k, 2k2, 6k8). The EXP TRS jack and bypass stomp are not listed; legend part numbers are printed lower case (1n5817, 2n7000) and are given here upper case.",
+ "uncertain": [
+  "CLR (bottom row O): resistor printed 'CLR' with no value"
+ ],
+ "rows": [
+  [
+   "×6",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2k2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "56k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "6k8",
+   "R",
+   ""
+  ],
+  [
+   "CLR",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×2",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×8",
+   "100nF",
+   "C",
+   "six film, two ceramic"
+  ],
+  [
+   "×3",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "LM567",
+   "IC",
+   ""
+  ],
+  [
+   "Q1",
+   "2N7000",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "Pre-gain",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Post-gain",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Frequency",
+   "B10K",
+   "POT",
+   "wired through the EXP jack switch contacts"
+  ],
+  [
+   "Range Sw",
+   "SPDT",
+   "SW",
+   "on/on toggle"
+  ]
+ ],
+ "source": "layout"
+}

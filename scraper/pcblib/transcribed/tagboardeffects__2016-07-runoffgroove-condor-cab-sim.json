@@ -1,0 +1,105 @@
+{
+ "id": "tagboardeffects:2016-07-runoffgroove-condor-cab-sim",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "19x13 vero drawn twice (populated left, cuts/links right); read the populated board. J201 input stage with a 100K bias trimmer feeding a TL074.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×6",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1n",
+   "C",
+   "one film, two ceramic"
+  ],
+  [
+   "×2",
+   "3n9",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "15n",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "47n",
+   "C",
+   "two film, one ceramic"
+  ],
+  [
+   "×3",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "×1",
+   "TL074",
+   "IC",
+   ""
+  ],
+  [
+   "Bias",
+   "100K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Volume",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "B1K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

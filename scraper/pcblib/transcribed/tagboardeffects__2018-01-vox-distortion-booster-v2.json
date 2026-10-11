@@ -1,0 +1,69 @@
+{
+ "id": "tagboardeffects:2018-01-vox-distortion-booster-v2",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small vero layout 9 x 10, a single populated board with large clear values; two transistors.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "270r",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.7k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "18k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "BC108A",
+   "Q",
+   "Q1-Q2"
+  ],
+  [
+   "Volume",
+   "A50K",
+   "POT",
+   "50k Log"
+  ],
+  [
+   "Distortion",
+   "B5K",
+   "POT",
+   "5k Linear"
+  ]
+ ],
+ "source": "layout"
+}

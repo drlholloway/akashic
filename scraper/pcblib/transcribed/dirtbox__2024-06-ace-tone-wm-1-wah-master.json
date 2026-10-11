@@ -1,0 +1,105 @@
+{
+ "id": "dirtbox:2024-06-ace-tone-wm-1-wah-master",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 14x12 stripboard, two transistors and one off-board Wah pot.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "39K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N2222",
+   "Q",
+   "legend: 2N2222, 2N3904 etc. (CDC1300 in original)"
+  ],
+  [
+   "Q2",
+   "2N2222",
+   "Q",
+   "legend: 2N2222, 2N3904 etc. (CDC1300 in original)"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Wah",
+   "B10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

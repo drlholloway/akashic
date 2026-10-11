@@ -1,0 +1,105 @@
+{
+ "id": "effectslayouts-blog:2016-06-one-knobber-project",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Picture 3 (1049x1229) is the layout sheet: populated perfboard, wiring diagram, underside and etched PCB of a generic two-transistor one-knob fuzz. The parts carry designators only (R1-R6, C1-C6, D1, Q1, Q2) and the legend says 'See B.O.M.', which is in the post text, not in any picture; picture 1 is the schematic, also without values. So every value is '?'.",
+ "uncertain": [],
+ "rows": [
+  [
+   "R1",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R2",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R3",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R4",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R5",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R6",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "C1",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C2",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C3",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C4",
+   "?",
+   "C",
+   "electrolytic, value not given"
+  ],
+  [
+   "C5",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C6",
+   "?",
+   "C",
+   "electrolytic, value not given"
+  ],
+  [
+   "D1",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "Q1",
+   "?",
+   "Q",
+   "value not given"
+  ],
+  [
+   "Q2",
+   "?",
+   "Q",
+   "value not given"
+  ],
+  [
+   "Volume",
+   "?",
+   "POT",
+   "value not given"
+  ]
+ ],
+ "source": "layout"
+}

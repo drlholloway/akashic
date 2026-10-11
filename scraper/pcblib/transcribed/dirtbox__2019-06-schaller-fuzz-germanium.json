@@ -1,0 +1,81 @@
+{
+ "id": "dirtbox:2019-06-schaller-fuzz-germanium",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 10x8 stripboard, germanium version, positive ground (-9v supply). All values printed on the parts.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "AC151",
+   "Q",
+   "AC151 or AC192"
+  ],
+  [
+   "Q2",
+   "AC151",
+   "Q",
+   "AC151 or AC192"
+  ],
+  [
+   "Intensity",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

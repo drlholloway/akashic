@@ -1,0 +1,159 @@
+{
+ "id": "dirtbox:2026-05-dod-phasor-401b",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 21x27 stripboard with an on-board 100K trimmer, with Vibrato switch and Depth mod; legend names four matched J113, three TL022, a zener, two pots and the switch.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×8",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×9",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.9M",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×5",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100K",
+   "TRIM",
+   ""
+  ],
+  [
+   "IC1",
+   "TL022",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "TL022",
+   "IC",
+   ""
+  ],
+  [
+   "IC3",
+   "TL022",
+   "IC",
+   ""
+  ],
+  [
+   "Q1",
+   "J113",
+   "Q",
+   "JFET, matched"
+  ],
+  [
+   "Q2",
+   "J113",
+   "Q",
+   "JFET, matched"
+  ],
+  [
+   "Q3",
+   "J113",
+   "Q",
+   "JFET, matched"
+  ],
+  [
+   "Q4",
+   "J113",
+   "Q",
+   "JFET, matched"
+  ],
+  [
+   "D1",
+   "1N751",
+   "D",
+   "5.1V Zener"
+  ],
+  [
+   "D2",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Speed",
+   "C500K",
+   "POT",
+   ""
+  ],
+  [
+   "Depth",
+   "C500K",
+   "POT",
+   ""
+  ],
+  [
+   "Vibrato",
+   "SPDT on/on",
+   "SW",
+   "toggle, labelled Switch"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,93 @@
+{
+ "id": "effectslayouts-blog:2018-03-lovepedal-jubilee",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small perfboard layout with a colour wiring diagram, a reversed underside and an etched PCB of the same circuit; counted from the populated board and confirmed against the wiring diagram. One 8-pin IC printed 386D (a 386 power amp chip, JRC386D).",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.8K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "390pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "386D",
+   "IC",
+   "as printed; JRC386D / LM386"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Drive",
+   "A250K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

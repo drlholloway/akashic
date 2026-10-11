@@ -1,0 +1,175 @@
+{
+ "id": "effectslayouts-blog:2019-03-keeley-1962",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard layout shown with its underside, a colour wiring diagram and an etched PCB; counted from the populated stripboard and confirmed against the diagram. Two capacitors are printed '10nF?' and one ceramic only '?'; the LED D1 sits on the board and a DPDT switch is wired off-board (Sw1-Sw6).",
+ "uncertain": [
+  "Round electrolytic can top left (rows B-D, columns 2-3) is printed '100nF' on both the board and the diagram: printed clearly, unusual value for an electrolytic, probably meant 100uF",
+  "Two film capacitors printed '10nF?' (row D columns 8-10, row F columns 11-13): the drawing itself questions the value",
+  "3.74K (two, top right and beside Q1), 11K (row H) and 110K (beside the IC): printed clearly, unusual values"
+ ],
+ "rows": [
+  [
+   "×4",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "3.74K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "5.6K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "11K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "110K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   "printed '10nF?'"
+  ],
+  [
+   "×4",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "C",
+   "ceramic, value not given (printed '?')"
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   "electrolytic, printed '100nF'"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "D1",
+   "3mm diffused red LED",
+   "LED",
+   "on the board"
+  ],
+  [
+   "Q1",
+   "2N5458",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q2",
+   "2N7000",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "Q3",
+   "2N5458",
+   "Q",
+   "JFET"
+  ],
+  [
+   "×1",
+   "NE5532",
+   "IC",
+   ""
+  ],
+  [
+   "Drive",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "W20K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "DPDT on/on",
+   "SW",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

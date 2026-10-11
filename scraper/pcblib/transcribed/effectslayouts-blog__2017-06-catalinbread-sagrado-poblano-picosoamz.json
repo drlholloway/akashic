@@ -1,0 +1,99 @@
+{
+ "id": "effectslayouts-blog:2017-06-catalinbread-sagrado-poblano-picosoamz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small perfboard MOSFET booster with colour wiring diagram, underside and etched PCB; counted from the populated board, confirmed on the diagram.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "2.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "62K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "470uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "9.1V",
+   "D",
+   "zener, printed 9.1v"
+  ],
+  [
+   "Q1",
+   "BS170",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "Boost",
+   "B5K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

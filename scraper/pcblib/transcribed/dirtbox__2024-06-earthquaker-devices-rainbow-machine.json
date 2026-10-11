@@ -1,0 +1,224 @@
+{
+ "id": "dirtbox:2024-06-earthquaker-devices-rainbow-machine",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "32x29 stripboard shown twice (bare cuts/jumpers view on top, populated view below); only the populated view was counted. FV-1 DSP on a through-hole adapter plus two TL072, a CD4069 and a 3.3V regulator. The Status and Magic LEDs are off-board and have no type given, so they are not listed; an optional EXP jack mod is described in the notes.",
+ "uncertain": [
+  "CLR1 (col 13, rows I-L) and CLR2 (col 4, rows M-P): LED current-limiting resistors, no value printed anywhere",
+  "R8 (col 28, rows C-H): printed only as 'R8'; the note says stock is 10k and the author suggests higher, minimum 20k",
+  "REG (TO-92 at col 7, rows Q-S): legend prints 'L78l33', taken as L78L33 (3.3V regulator)",
+  "Several parts are drawn semi-transparent (10k col 8 rows C-F, 10k col 19 rows H-K, 1k lying on row M cols 20-22, 1nF col 10 rows O-R, 1uF col 27 rows T-W, 1uF col 29 rows S-T, 1uF lying on row AB cols 25-27): counted as real parts, values legible"
+ ],
+ "rows": [
+  [
+   "×8",
+   "1k",
+   "R",
+   ""
+  ],
+  [
+   "×14",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1m",
+   "R",
+   "1M"
+  ],
+  [
+   "×2",
+   "4k7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "R8",
+   "10k",
+   "R",
+   "stock value; layout suggests minimum 20k"
+  ],
+  [
+   "CLR1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "CLR2",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2n2",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×13",
+   "1uF",
+   "C",
+   "film box"
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "IC3",
+   "CD4069",
+   "IC",
+   ""
+  ],
+  [
+   "×1",
+   "FV-1",
+   "IC",
+   "on a 7x14 through-hole adapter board, 2x14 pin headers"
+  ],
+  [
+   "REG",
+   "L78L33",
+   "IC",
+   "3.3V regulator, TO-92"
+  ],
+  [
+   "D1",
+   "1n5817",
+   "D",
+   ""
+  ],
+  [
+   "×2",
+   "1n914",
+   "D",
+   "D2, D3"
+  ],
+  [
+   "Tone",
+   "B10k",
+   "POT",
+   ""
+  ],
+  [
+   "Primary",
+   "B10k",
+   "POT",
+   ""
+  ],
+  [
+   "Secondary",
+   "B10k",
+   "POT",
+   ""
+  ],
+  [
+   "Magic",
+   "B25k",
+   "POT",
+   ""
+  ],
+  [
+   "Tracking",
+   "B25k",
+   "POT",
+   ""
+  ],
+  [
+   "Pitch",
+   "B50k",
+   "POT",
+   ""
+  ],
+  [
+   "Dry Kill",
+   "SPST",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Magic",
+   "DPDT",
+   "SW",
+   "stomp, DPDT or 3PDT"
+  ]
+ ],
+ "source": "layout"
+}

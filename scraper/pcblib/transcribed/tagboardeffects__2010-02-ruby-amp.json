@@ -1,0 +1,75 @@
+{
+ "id": "tagboardeffects:2010-02-ruby-amp",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Turret/tagboard layout of the Ruby amp: one board, every value printed on its part, LM386 and an MPF102 JFET buffer, two pots.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "3K9",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M5",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10R",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "220uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "LM386",
+   "IC",
+   ""
+  ],
+  [
+   "×1",
+   "MPF102",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Volume",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "B1K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

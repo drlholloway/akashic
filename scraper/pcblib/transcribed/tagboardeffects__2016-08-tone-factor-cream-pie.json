@@ -1,0 +1,81 @@
+{
+ "id": "tagboardeffects:2016-08-tone-factor-cream-pie",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small 9x8 stripboard, single populated view, large clear labels. One germanium NPN transistor and a 50k bias trimmer (VR1).",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "3.3M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "68nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "OC140",
+   "Q",
+   "NPN Germanium (Try OC140, AC187, MP38A, etc.)"
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "VR1",
+   "50k",
+   "TRIM",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "A500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

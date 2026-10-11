@@ -1,0 +1,78 @@
+{
+ "id": "tagboardeffects:2010-02-keeley-katana-boost",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Tagboard layout, one populated board with two 2N5458 JFETs, run from 18V (the MAX1044 charge pump of the original is left out). An off-board blue switch carries a 10uF and a 15nF capacitor; the single pot is not named.",
+ "uncertain": [
+  "Blue off-board switch carrying the 10uF and 15nF caps, right of the board: type not printed, four lugs drawn, entered as SPDT",
+  "Pot is printed only '250K LIN' with no knob name; entered as Volume"
+ ],
+ "rows": [
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "680R",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "15nF",
+   "C",
+   "on the switch"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic, on the switch"
+  ],
+  [
+   "×2",
+   "2N5458",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Volume",
+   "B250K",
+   "POT",
+   "knob not named in the drawing"
+  ],
+  [
+   "×1",
+   "SPDT",
+   "SW",
+   "type not given; selects 10uF / 15nF"
+  ]
+ ],
+ "source": "layout"
+}

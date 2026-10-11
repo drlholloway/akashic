@@ -1,0 +1,147 @@
+{
+ "id": "dirtbox:2019-10-zvex-machine",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 17x15 stripboard with all values printed on the parts; six transistors and five diodes named in the legend. Legend suggests trying 5kC for the In pot.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "5.1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BS170",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "Q2",
+   "2N3906",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "Q4",
+   "BS170",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "Q5",
+   "2N3906",
+   "Q",
+   ""
+  ],
+  [
+   "Q6",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "9.1V Zener",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "9.1V Zener",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "Germanium",
+   "D",
+   "type not given"
+  ],
+  [
+   "D4",
+   "Germanium",
+   "D",
+   "type not given"
+  ],
+  [
+   "D5",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "In",
+   "B5K",
+   "POT",
+   "legend: Try 5kC"
+  ],
+  [
+   "Limit",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Out",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

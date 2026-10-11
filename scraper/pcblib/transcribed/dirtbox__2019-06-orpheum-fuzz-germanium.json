@@ -1,0 +1,84 @@
+{
+ "id": "dirtbox:2019-06-orpheum-fuzz-germanium",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "One populated 13x9 stripboard, germanium version, positive ground. The transistors are specified only as PNP germanium with a gain range.",
+ "uncertain": [
+  "15uF electrolytic at the top of the board (column 10, rows A-B): printed clearly, unusual value",
+  "5nF film caps (two, left and right edges): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "5nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "15uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "PNP Germanium",
+   "Q",
+   "Hfe~100"
+  ],
+  [
+   "Q2",
+   "PNP Germanium",
+   "Q",
+   "Hfe 20-50"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Tone",
+   "B200K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B250K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

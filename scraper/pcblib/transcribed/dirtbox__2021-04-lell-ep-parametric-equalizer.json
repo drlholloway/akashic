@@ -1,0 +1,204 @@
+{
+ "id": "dirtbox:2021-04-lell-ep-parametric-equalizer",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated vero board (26x22) of a three-band parametric EQ with four dual op-amps and two transistors; three Cut/Boost pots and three dual-gang Freq pots plus Volume. R28 is printed as a designator only, the legend gives 100ohm or 100k.",
+ "uncertain": [
+  "R28 (horizontal resistor right of IC1, row R): no value on the part, legend says '100ohm or 100k'; entered as 100Ω",
+  "3K x2 at the right edge (columns 21 and 24): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×11",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "R28",
+   "100Ω",
+   "R",
+   "legend: 100ohm or 100k"
+  ],
+  [
+   "×1",
+   "560pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "330nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "KT3102EM",
+   "Q",
+   "Try BC549C, 2N5088 etc."
+  ],
+  [
+   "Q2",
+   "KT3102EM",
+   "Q",
+   "Try BC549C, 2N5088 etc."
+  ],
+  [
+   "IC1",
+   "1458",
+   "IC",
+   "1458, 4558, TL072 etc.; KR140UD20 in original"
+  ],
+  [
+   "IC2",
+   "1458",
+   "IC",
+   "1458, 4558, TL072 etc.; KR140UD20 in original"
+  ],
+  [
+   "IC3",
+   "1458",
+   "IC",
+   "1458, 4558, TL072 etc.; KR140UD20 in original"
+  ],
+  [
+   "IC4",
+   "1458",
+   "IC",
+   "1458, 4558, TL072 etc.; KR140UD20 in original"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "50-500 Cut/Boost",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "200-5k Cut/Boost",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "5k-15k Cut/Boost",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "50-500 Freq",
+   "B100K",
+   "POT",
+   "dual"
+  ],
+  [
+   "200-5k Freq",
+   "B100K",
+   "POT",
+   "dual"
+  ],
+  [
+   "5k-15k Freq",
+   "B100K",
+   "POT",
+   "dual"
+  ],
+  [
+   "Volume",
+   "B50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

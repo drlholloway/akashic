@@ -1,0 +1,123 @@
+{
+ "id": "tagboardeffects:2013-02-colorsound-tremolo",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "17x12 vero, populated board on top and a bare cuts/links view below; four BJTs. One 4.7K is starred: the legend says to lower it to 3K3 if the volume drops.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "3.3M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4.7K",
+   "R",
+   "one marked 4.7K*: lower to 3K3 if the volume drops"
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   "2SC945 in the original unit, mind the pinout"
+  ],
+  [
+   "Q2",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Q4",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   "D1 is 1N4001 or 1N5817"
+  ],
+  [
+   "Depth",
+   "B100K",
+   "POT",
+   "try 100K rev log"
+  ],
+  [
+   "Speed",
+   "B250K",
+   "POT",
+   "try 100K lin"
+  ]
+ ],
+ "source": "layout"
+}

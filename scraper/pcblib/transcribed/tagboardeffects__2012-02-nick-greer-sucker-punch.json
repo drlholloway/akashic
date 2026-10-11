@@ -1,0 +1,93 @@
+{
+ "id": "tagboardeffects:2012-02-nick-greer-sucker-punch",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "14x9 stripboard with a populated view and a bare cuts/links view; one trimmer on the board, one JFET and an 8-pin LM386.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K5",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22p",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100K",
+   "TRIM",
+   ""
+  ],
+  [
+   "×1",
+   "LM386",
+   "IC",
+   "legend: LM386 or JRC386"
+  ],
+  [
+   "Q1",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Gain",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A250K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

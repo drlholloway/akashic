@@ -1,0 +1,96 @@
+{
+ "id": "tagboardeffects:2013-10-ehx-axis-guild-foxey-lady-2-knob",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "15 x 10 stripboard shown populated and again bare (cuts and links); read from the populated view. Two-transistor fuzz with an added polarity protection diode D1.",
+ "uncertain": [
+  "50uF electrolytic, bottom centre-left: printed clearly, unusual value",
+  "4uF electrolytic, bottom centre: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "680Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "3.3nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "50uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   "added polarity protection diode"
+  ],
+  [
+   "×2",
+   "2N5133",
+   "Q",
+   "NPN Si"
+  ],
+  [
+   "Fuzz",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

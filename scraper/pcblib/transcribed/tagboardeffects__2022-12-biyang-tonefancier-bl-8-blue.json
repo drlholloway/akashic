@@ -1,0 +1,99 @@
+{
+ "id": "tagboardeffects:2022-12-biyang-tonefancier-bl-8-blue",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "15x10 stripboard shown populated (top) and bare with cuts and links (bottom); parts counted from the populated view only. LM308A with two 3mm red LEDs as clipping diodes on the board.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "220Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "LM308A",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "×2",
+   "3mm Red LED",
+   "LED",
+   "D2, D3; clipping"
+  ],
+  [
+   "Distortion",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "B10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

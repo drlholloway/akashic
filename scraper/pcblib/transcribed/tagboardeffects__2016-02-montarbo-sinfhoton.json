@@ -1,0 +1,113 @@
+{
+ "id": "tagboardeffects:2016-02-montarbo-sinfhoton",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "12x13 stripboard, single populated view, titled Montarbo Synfhoton (Early Version). Two transistors, four silicon diodes in two pairs, three linear 10k pots.",
+ "uncertain": [
+  "2uF electrolytics (two, left edge and bottom): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×4",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC149",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "BC149",
+   "Q",
+   ""
+  ],
+  [
+   "×4",
+   "1N4148",
+   "D",
+   "D1-D4: Si (try 1N4148, 1N914)"
+  ],
+  [
+   "Volume",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Bass",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Treble",
+   "B10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

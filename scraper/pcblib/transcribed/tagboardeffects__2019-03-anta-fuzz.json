@@ -1,0 +1,84 @@
+{
+ "id": "tagboardeffects:2019-03-anta-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small single vero board, 9 x 10, two PNP silicon transistors, negative supply (-9V).",
+ "uncertain": [
+  "30k at column 5, bottom: printed clearly, unusual value",
+  "20uF electrolytic at column 2, left: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "470k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "6.8k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "30k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "20uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "KT349",
+   "Q",
+   "PNP Si"
+  ],
+  [
+   "Q2",
+   "KT349",
+   "Q",
+   "PNP Si"
+  ],
+  [
+   "Fuzz",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

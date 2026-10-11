@@ -1,0 +1,107 @@
+{
+ "id": "tagboardeffects:2017-02-frequency-central-promiscuous-girlfriend",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Two populated vero boards that make one pedal, summed: the 12x14 audio board and the 17x7 charge-pump board (IC1, D1-D4, five 10uF). Two 5840 subminiature tubes are wired off board.",
+ "uncertain": [
+  "1k at column I, rows B-D of the audio board: the label is mostly covered by a 10uF can; reads '1k'"
+ ],
+ "rows": [
+  [
+   "×5",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1k",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×8",
+   "10uF",
+   "C",
+   "electrolytic; 3 on the audio board, 5 on the supply board"
+  ],
+  [
+   "IC1",
+   "MAX1044",
+   "IC",
+   "legend: Max1044/TC1044"
+  ],
+  [
+   "×6",
+   "1N4148",
+   "D",
+   "D1-D6"
+  ],
+  [
+   "×2",
+   "5840",
+   "OTHER",
+   "subminiature tubes, Tube 1 and Tube 2, off board"
+  ],
+  [
+   "Volume",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Dirt",
+   "SPDT",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,117 @@
+{
+ "id": "effectslayouts-blog:2014-12-simple-transistor-compressor",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with populated board, colour wiring diagram, underside and etched PCB; counted from the populated board, diagram agrees. Transistors are given only as PNP/NPN silicon, no part numbers.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×4",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "PNP silicon",
+   "Q",
+   "no part number given"
+  ],
+  [
+   "Q2",
+   "NPN silicon",
+   "Q",
+   "no part number given"
+  ],
+  [
+   "Q3",
+   "NPN silicon",
+   "Q",
+   "no part number given"
+  ],
+  [
+   "Q4",
+   "NPN silicon",
+   "Q",
+   "no part number given"
+  ],
+  [
+   "Ratio",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

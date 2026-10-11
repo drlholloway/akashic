@@ -1,0 +1,117 @@
+{
+ "id": "tagboardeffects:2020-07-earthquaker-devices-black-ash",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 12x17 vero board with a 10k trimmer at top left; three unnumbered transistors that the legend calls Q1-Q3 'Low Gain Si' without naming a part.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "Low Gain Si",
+   "Q",
+   "Q1-Q3; legend gives no part number, only 'Low Gain Si'"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "10k",
+   "TRIM",
+   ""
+  ],
+  [
+   "Attack",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Top",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

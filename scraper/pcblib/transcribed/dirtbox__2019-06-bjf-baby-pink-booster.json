@@ -1,0 +1,101 @@
+{
+ "id": "dirtbox:2019-06-bjf-baby-pink-booster",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 13x18 vero board with one JFET, a boost pot and a boost/buffer SPST toggle. All values legible when zoomed.",
+ "uncertain": [
+  "14.7K ×2 (columns 7 and 10): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "14.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5952",
+   "Q",
+   "JFET"
+  ],
+  [
+   "D1",
+   "1N4002",
+   "D",
+   ""
+  ],
+  [
+   "Boost",
+   "C50K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "SPST",
+   "SW",
+   "boost/buffer toggle"
+  ]
+ ],
+ "source": "layout"
+}

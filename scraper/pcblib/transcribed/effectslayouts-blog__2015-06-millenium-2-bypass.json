@@ -1,0 +1,33 @@
+{
+ "id": "effectslayouts-blog:2015-06-millenium-2-bypass",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Millenium 2 bypass LED driver: a tiny perfboard, plus the same circuit as a wiring diagram, a footswitch-mounted PCB version and etch masks; read from the populated perfboard. D1 is the indicator LED drawn on the board (red, no type given); the DPDT is the bypass footswitch and is not listed.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "2N7000",
+   "Q",
+   "MOSFET; legend: 2N7000 or BS170 (rotate 180° if using BS170)"
+  ],
+  [
+   "D1",
+   "?",
+   "LED",
+   "indicator LED on the board, drawn red, value not given"
+  ]
+ ],
+ "source": "layout"
+}

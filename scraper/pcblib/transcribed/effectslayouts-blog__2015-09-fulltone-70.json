@@ -1,0 +1,123 @@
+{
+ "id": "effectslayouts-blog:2015-09-fulltone-70",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with a colour wiring diagram, the underside and an etched PCB; parts counted once from the populated board and confirmed on the diagram. A 5K trimmer sits on the board.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "5K",
+   "TRIM",
+   ""
+  ],
+  [
+   "D1",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N34A",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   "printed 4001"
+  ],
+  [
+   "Q1",
+   "BC108C",
+   "Q",
+   "legend: BC108c or 2SC1815"
+  ],
+  [
+   "Q2",
+   "BC108C",
+   "Q",
+   "legend: BC108c or 2SC1815"
+  ],
+  [
+   "Fuzz",
+   "C1K",
+   "POT",
+   ""
+  ],
+  [
+   "Mids",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A250K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,201 @@
+{
+ "id": "dirtbox:2026-09-poison-noises-crook",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 22x16 stripboard (Parkway Music Edition); passives carry no designators, the two 1N4148 and the 1N5817 are printed without prefix, and the clipping parts are switched off board by two DPDT toggles.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×5",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "39K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "39nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "68nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "drawn as a ceramic"
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL082",
+   "IC",
+   ""
+  ],
+  [
+   "Q1",
+   "2N7000",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "Q2",
+   "2N7000",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "×3",
+   "Red LED",
+   "LED",
+   "D1-D3, clipping"
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Entering",
+   "A500K",
+   "POT",
+   "Volume"
+  ],
+  [
+   "Breaking",
+   "A1M",
+   "POT",
+   "Drive"
+  ],
+  [
+   "Hi Tail",
+   "B10K",
+   "POT",
+   "Treble"
+  ],
+  [
+   "Lay Low",
+   "C50K",
+   "POT",
+   "Bass"
+  ],
+  [
+   "The Goods",
+   "DPDT on/on/on",
+   "SW",
+   "toggle, type 2, clipping"
+  ],
+  [
+   "Switcheroo",
+   "DPDT on/off/on",
+   "SW",
+   "toggle, clipping position"
+  ]
+ ],
+ "source": "layout"
+}

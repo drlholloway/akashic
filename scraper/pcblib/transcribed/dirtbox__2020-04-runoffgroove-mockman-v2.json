@@ -1,0 +1,107 @@
+{
+ "id": "dirtbox:2020-04-runoffgroove-mockman-v2",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 15x11 stripboard with one dual op amp; C9 is drawn with its designator only and the legend gives a range for it.",
+ "uncertain": [
+  "IC1: legend says only 'Dual op amp, try 1458, 4558, TL072, NE5532 etc.', first suggestion entered as printed"
+ ],
+ "rows": [
+  [
+   "×4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "6.8nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "C9",
+   "?",
+   "C",
+   "value not given; legend says 330pF-680pF"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "1458",
+   "IC",
+   "legend: Dual op amp. Try 1458, 4558, TL072, NE5532 etc."
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Volume",
+   "A50K",
+   "POT",
+   ""
+  ],
+  [
+   "Classic/Modern",
+   "SPST",
+   "SW",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

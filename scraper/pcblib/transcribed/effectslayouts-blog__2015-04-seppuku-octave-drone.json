@@ -1,0 +1,87 @@
+{
+ "id": "effectslayouts-blog:2015-04-seppuku-octave-drone",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout with a wiring diagram, the bare underside and an etched PCB of the same circuit; counted from the populated vero board and confirmed against the diagram. The SPDT input filter switch is wired off board (Sw1/Sw3 pads, In to Sw2).",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "LM386",
+   "IC",
+   ""
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   "legend: 2N5088 or similiar"
+  ],
+  [
+   "Input Gain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Input Filter",
+   "SPDT",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

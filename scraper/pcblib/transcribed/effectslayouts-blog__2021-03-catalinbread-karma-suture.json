@@ -1,0 +1,149 @@
+{
+ "id": "effectslayouts-blog:2021-03-catalinbread-karma-suture",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with wiring diagram, underside and etched PCB; counted from the populated board. Eight parts are drawn with designators only and take their values from a legend table giving a Germanium and a Silicon version; the Germanium version (listed first) is read here, with the Silicon value in each note. In the Germanium version R6 is a jumper, so it is not listed (Silicon: 5.6K).",
+ "uncertain": [
+  "D3 (column 15, rows D-H): legend says only 'germ.' for the Germanium version, no part number"
+ ],
+ "rows": [
+  [
+   "×1",
+   "91K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "220K",
+   "R",
+   "Germanium version; Silicon version 150K"
+  ],
+  [
+   "R4",
+   "750K",
+   "R",
+   "Germanium version; Silicon version 470K"
+  ],
+  [
+   "C1",
+   "220pF",
+   "C",
+   "Germanium version; Silicon version 47pF"
+  ],
+  [
+   "C3",
+   "220nF",
+   "C",
+   "Germanium version; Silicon version 1uF"
+  ],
+  [
+   "C8",
+   "330pF",
+   "C",
+   "Germanium version; Silicon version 100pF"
+  ],
+  [
+   "×1",
+   "47pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "germanium",
+   "D",
+   "legend: 'germ.', Germanium version; Silicon version 1N914"
+  ],
+  [
+   "Q1",
+   "1T308A",
+   "Q",
+   "Germanium version; Silicon version 2N5401"
+  ],
+  [
+   "Q2",
+   "2N2222A",
+   "Q",
+   "Germanium version; Silicon version BC550B"
+  ],
+  [
+   "Input",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Density",
+   "C500K",
+   "POT",
+   ""
+  ],
+  [
+   "Diodes",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Output",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

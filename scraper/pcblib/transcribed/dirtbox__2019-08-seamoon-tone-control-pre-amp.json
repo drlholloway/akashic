@@ -1,0 +1,119 @@
+{
+ "id": "dirtbox:2019-08-seamoon-tone-control-pre-amp",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 14x10 vero board (Controlled Tone Pre Amp, a.k.a. Randall Notch Generator); three pots off board, the legend offers alternative pot values on 'Try' lines.",
+ "uncertain": [
+  "Pot legend: the 'Try 1kB' and 'Try 50kA-100kA' lines sit under Tone Filter and Distortion respectively; read as alternatives for the pot above each, but the pairing is by position only"
+ ],
+ "rows": [
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "220Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "2N3565",
+   "Q",
+   "Q1-Q3; legend: Try 2N2222, 2N3904, BC108B etc."
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Tone Filter",
+   "B500K",
+   "POT",
+   "legend: Try 1kB"
+  ],
+  [
+   "Distortion",
+   "B10K",
+   "POT",
+   "legend: Try 50kA-100kA"
+  ],
+  [
+   "Level",
+   "B10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

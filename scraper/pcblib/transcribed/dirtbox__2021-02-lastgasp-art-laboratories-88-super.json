@@ -1,0 +1,159 @@
+{
+ "id": "dirtbox:2021-02-lastgasp-art-laboratories-88-super",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 14x18 stripboard (88 Super Oscillo Fuzz) with three transistors and three diodes; six SPDT on/on toggles and two pots are wired off board.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×4",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N3904",
+   "Q",
+   "2N3904, BC337-40 etc; 2SC1815-GR in original"
+  ],
+  [
+   "Q2",
+   "2N3906",
+   "Q",
+   "PNP; 2N3906, BC237-40 etc; 2SA1015-GR in original"
+  ],
+  [
+   "Q3",
+   "2N3904",
+   "Q",
+   "2N3904, BC337-40 etc; 2SC1815-GR in original"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Adjust",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch 1",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Switch 2",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Switch 3",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Switch 4",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Switch 5",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Switch 6",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

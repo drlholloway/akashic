@@ -1,0 +1,81 @@
+{
+ "id": "effectslayouts-blog:2016-05-soft-latch-relay-switching",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single-sided PCB for a soft-latch relay bypass (parts view left, copper right); all values printed and legible. The board-mounted SPST momentary footswitch is the bypass switch and is not listed; the indicator LED and its 4.7K resistor are on the board.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   "LED resistor"
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "Q1",
+   "BC550",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "BC550",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "BC560",
+   "Q",
+   "PNP"
+  ],
+  [
+   "×1",
+   "DPDT relay",
+   "OTHER",
+   "printed: 5v Relay G6S-2"
+  ],
+  [
+   "×1",
+   "LED",
+   "LED",
+   "indicator, on board; type not given"
+  ]
+ ],
+ "source": "layout"
+}

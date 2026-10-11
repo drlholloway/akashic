@@ -1,0 +1,162 @@
+{
+ "id": "dirtbox:2019-09-guyatone-hd-3-hot-drive-w-gain-ctrl",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 16x11 stripboard with one dual op-amp, LED and diode clipping selected by a toggle, with an added gain control; three pots off board.",
+ "uncertain": [
+  "Tone and Level pots: legend prints 100kB(?), the author's own question mark",
+  "Switch: legend prints 'SPST on/off/on' although three switch lugs are wired, so probably an SPDT on/off/on; kept as printed"
+ ],
+ "rows": [
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "680pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1.5nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "3.3nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "330nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "4558",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "3mm red LED",
+   "LED",
+   ""
+  ],
+  [
+   "D2",
+   "3mm red LED",
+   "LED",
+   ""
+  ],
+  [
+   "D3",
+   "1S1588",
+   "D",
+   "Try 1N4148/1N914"
+  ],
+  [
+   "D4",
+   "1S1588",
+   "D",
+   "Try 1N4148/1N914"
+  ],
+  [
+   "D5",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   "legend: 100kB(?)"
+  ],
+  [
+   "Level",
+   "B100K",
+   "POT",
+   "legend: 100kB(?)"
+  ],
+  [
+   "Switch",
+   "SPST on/off/on",
+   "SW",
+   "toggle, as printed"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,99 @@
+{
+ "id": "dirtbox:2019-06-jordan-bosstone-alhambra",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 13x9 vero board, 1967 Alhambra version: two transistors, two clipping diodes plus a polarity-protection diode, two off-board pots.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "560K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "2N3903",
+   "Q",
+   "2N3903, MPSA06, PN2222 etc (2N3397 in original)"
+  ],
+  [
+   "Q2",
+   "2N3903",
+   "Q",
+   "2N3903, MPSA06, PN2222 etc (2N3397 in original)"
+  ],
+  [
+   "Attack",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

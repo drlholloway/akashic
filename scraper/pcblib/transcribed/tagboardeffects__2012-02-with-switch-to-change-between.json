@@ -1,0 +1,162 @@
+{
+ "id": "tagboardeffects:2012-02-with-switch-to-change-between",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Boss SD1 without output buffer, with a symmetrical/asymmetrical clipping switch: populated 19x12 vero, a bare cuts/links view, and an off-board DPDT carrying five clipping diodes whose type is not stated. The lower pair on the switch are both labelled D4.",
+ "uncertain": [
+  "Clipping diodes on the switch (D1, D2, D3 and two labelled D4): no type printed anywhere on the drawing",
+  "Second diode labelled D4 is presumably D5 (duplicate label on the drawing)"
+ ],
+ "rows": [
+  [
+   "×5",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470R",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "18n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "27n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1u",
+   "C",
+   "drawn as a film cap"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC",
+   "JRC4558",
+   "IC",
+   ""
+  ],
+  [
+   "Q1",
+   "?",
+   "Q",
+   "value not given; legend says NPN silicon"
+  ],
+  [
+   "D1",
+   "?",
+   "D",
+   "value not given; on the clipping switch"
+  ],
+  [
+   "D2",
+   "?",
+   "D",
+   "value not given; on the clipping switch"
+  ],
+  [
+   "D3",
+   "?",
+   "D",
+   "value not given; on the clipping switch"
+  ],
+  [
+   "D4",
+   "?",
+   "D",
+   "value not given; on the clipping switch"
+  ],
+  [
+   "D4",
+   "?",
+   "D",
+   "value not given; on the clipping switch, second diode labelled D4 (probably D5)"
+  ],
+  [
+   "Drive",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B22K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Clipping",
+   "DPDT on/on",
+   "SW",
+   "Sw1, symmetrical / asymmetrical; legend: 2 position DPDT"
+  ]
+ ],
+ "source": "layout"
+}

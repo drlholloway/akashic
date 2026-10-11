@@ -1,0 +1,27 @@
+{
+ "id": "tagboardeffects:2012-07-jfet-matcher",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Very small image of a compact stripboard JFET test jig (not a pedal), single populated view. G/S/D circles are JFET socket positions; no switch or pot.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "TL071",
+   "IC",
+   "legend: IC is TL071 or similar"
+  ]
+ ],
+ "source": "layout"
+}

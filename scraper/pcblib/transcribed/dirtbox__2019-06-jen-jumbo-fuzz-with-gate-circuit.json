@@ -1,0 +1,205 @@
+{
+ "id": "dirtbox:2019-06-jen-jumbo-fuzz-with-gate-circuit",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 21x19 stripboard, values printed on every part. Transistors and diodes are given in the legend as types with suggestions rather than fixed part numbers; one capacitor is drawn as a round can but labelled in nF.",
+ "uncertain": [
+  "4.7nF at column O rows I-J, left of D6: drawn as a round electrolytic can (same pink style as the 47uF) but printed 4,7nF; may be meant as 4.7uF",
+  "82Ω at column G rows G-H: printed clearly, unusual value",
+  "Q1-Q3, Q5, Q6: legend lists 2N5172, 2N5225 or BC318C as the original parts and BC550C, 2N5088, MPSA18 as substitutes; entered the first"
+ ],
+ "rows": [
+  [
+   "×4",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "390K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "82K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "8.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "82Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "6.8K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "470pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   "drawn as a round can, printed 4,7nF"
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×8",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5172",
+   "Q",
+   "2N5172, 2N5225 or BC318C in original units. Try BC550C, 2N5088, MPSA18 etc."
+  ],
+  [
+   "Q2",
+   "2N5172",
+   "Q",
+   "2N5172, 2N5225 or BC318C in original units. Try BC550C, 2N5088, MPSA18 etc."
+  ],
+  [
+   "Q3",
+   "2N5172",
+   "Q",
+   "2N5172, 2N5225 or BC318C in original units. Try BC550C, 2N5088, MPSA18 etc."
+  ],
+  [
+   "Q4",
+   "AC127",
+   "Q",
+   "NPN Germanium. Try AC127, AC187 etc."
+  ],
+  [
+   "Q5",
+   "2N5172",
+   "Q",
+   "2N5172, 2N5225 or BC318C in original units. Try BC550C, 2N5088, MPSA18 etc."
+  ],
+  [
+   "Q6",
+   "2N5172",
+   "Q",
+   "2N5172, 2N5225 or BC318C in original units. Try BC550C, 2N5088, MPSA18 etc."
+  ],
+  [
+   "×4",
+   "1N4148",
+   "D",
+   "D1-D4; Silicon diodes, try 1N4148"
+  ],
+  [
+   "×2",
+   "Germanium diode",
+   "D",
+   "D5, D6; type not given"
+  ],
+  [
+   "D7",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Sustain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

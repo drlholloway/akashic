@@ -1,0 +1,69 @@
+{
+ "id": "tagboardeffects:2014-03-soulsonic-crackle-not-ok",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small 10x7 stripboard with a populated view and a bare cuts-and-links view; counted from the populated view. One MOSFET, one zener, one pot.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "5K1",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BS170",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "D1",
+   "1N5242B",
+   "D",
+   "12V zener"
+  ],
+  [
+   "Gain",
+   "C1M",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

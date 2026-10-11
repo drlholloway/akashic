@@ -1,0 +1,81 @@
+{
+ "id": "effectslayouts-blog:2018-04-active-baxandall-network",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Two alternative perfboard layouts of the same active Baxandall tone circuit (different pot orientation), each with underside, wiring diagram and PCB; read the first (left) one, the second carries the same parts.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "?",
+   "IC",
+   "value not given; legend says single op amp"
+  ],
+  [
+   "Bass",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Treble",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

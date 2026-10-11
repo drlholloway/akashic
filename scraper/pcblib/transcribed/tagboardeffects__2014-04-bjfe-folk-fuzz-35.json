@@ -1,0 +1,113 @@
+{
+ "id": "tagboardeffects:2014-04-bjfe-folk-fuzz-35",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout by johnk, 14 x 11, marked VERIFIED; populated board above a bare cuts-and-links view, read from the populated board. Transistors are labelled by type beside the board, without designators.",
+ "uncertain": [
+  "1K8 resistor bottom left, next to the 1M: sits over a cut and is faint, could be 1K6"
+ ],
+ "rows": [
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100R",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K8",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "2N2222A",
+   "Q",
+   ""
+  ],
+  [
+   "×1",
+   "2N2905",
+   "Q",
+   "PNP"
+  ],
+  [
+   "×1",
+   "1N4002",
+   "D",
+   "printed 4002"
+  ],
+  [
+   "Fuzz",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Treble",
+   "A50K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

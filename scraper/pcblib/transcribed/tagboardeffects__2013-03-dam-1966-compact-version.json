@@ -1,0 +1,111 @@
+{
+ "id": "tagboardeffects:2013-03-dam-1966-compact-version",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard 11x8 drawn twice (populated, then cuts and links only); read from the populated view. Positive-ground PNP germanium fuzz with a 20K bias trimmer and an off-board '66/Superbee toggle.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "820Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "20K",
+   "TRIM",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "PNP Ge",
+   "Q",
+   "germanium, type not given"
+  ],
+  [
+   "Q2",
+   "PNP Ge",
+   "Q",
+   "germanium, type not given"
+  ],
+  [
+   "Attack",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A47K",
+   "POT",
+   "try 50K"
+  ],
+  [
+   "'66-Superbee",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

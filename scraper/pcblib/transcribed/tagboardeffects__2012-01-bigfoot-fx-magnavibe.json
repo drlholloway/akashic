@@ -1,0 +1,113 @@
+{
+ "id": "tagboardeffects:2012-01-bigfoot-fx-magnavibe",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Populated vero board above a bare cuts-and-links view; counted from the populated board. LED (D1) and LDR sit on the board facing each other as a home-made optocoupler.",
+ "uncertain": [
+  "LDR: no part number, legend says 'For LDR try 5K/20M'"
+ ],
+ "rows": [
+  [
+   "×2",
+   "7K5",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4M7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K8",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M5",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "1u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "LED",
+   "LED",
+   "on board, faces the LDR"
+  ],
+  [
+   "×1",
+   "LDR",
+   "OPTO",
+   "legend: for LDR try 5K/20M"
+  ],
+  [
+   "Depth",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Speed",
+   "B25K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,183 @@
+{
+ "id": "tagboardeffects:2017-01-function-fx-clusterfuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout, 19 x 12, populated board on the left and the cuts/links view on the right. Four transistors labelled by type beside the board (5089, MPSA13, two 2n7000), two red LEDs and six diodes on the board, a 1P5T clipping rotary and an SPST filter switch off board.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "10R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100R",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "10p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "680p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2n2",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4n7",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   "one film, one ceramic"
+  ],
+  [
+   "×2",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "2N5089",
+   "Q",
+   "printed 5089"
+  ],
+  [
+   "×1",
+   "MPSA13",
+   "Q",
+   ""
+  ],
+  [
+   "×2",
+   "2N7000",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "×2",
+   "5mm Red Diff. LED",
+   "LED",
+   "D1, D2"
+  ],
+  [
+   "×2",
+   "1N4001",
+   "D",
+   "D3, D4"
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   "D5, D6"
+  ],
+  [
+   "×2",
+   "BAT41",
+   "D",
+   "D7, D8"
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "8Bit",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Fuzz",
+   "C1K",
+   "POT",
+   ""
+  ],
+  [
+   "Clipping",
+   "1P5T rotary",
+   "SW",
+   "Switch 1"
+  ],
+  [
+   "Filter",
+   "SPST",
+   "SW",
+   "Switch 2"
+  ]
+ ],
+ "source": "layout"
+}

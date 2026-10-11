@@ -1,0 +1,75 @@
+{
+ "id": "tagboardeffects:2013-01-4-channel-mixer",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard layout (14 x 14) of a four channel mixer around one TL072, shown populated and bare; read from the populated view. D1 is drawn with a designator but no type anywhere.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×9",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "Ch1 Level",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Ch2 Level",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Ch3 Level",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Ch4 Level",
+   "A10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

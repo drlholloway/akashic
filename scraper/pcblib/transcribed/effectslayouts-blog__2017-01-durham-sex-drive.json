@@ -1,0 +1,150 @@
+{
+ "id": "effectslayouts-blog:2017-01-durham-sex-drive",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout of the Durham Sex Drive with the underside, a wiring diagram and an etched PCB; counted from the populated perfboard. The Hard/Soft switch has three wires but its type is not stated.",
+ "uncertain": [
+  "20uF electrolytics (two, centre and lower right of the board): printed clearly, unusual value",
+  "Hard/Soft switch: three wire pads, type not given in the legend; entered as SPDT"
+ ],
+ "rows": [
+  [
+   "×1",
+   "39K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "330nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "drawn as a box capacitor"
+  ],
+  [
+   "×2",
+   "20uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D4",
+   "Red LED",
+   "LED",
+   ""
+  ],
+  [
+   "D5",
+   "Red LED",
+   "LED",
+   ""
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "4558",
+   "IC",
+   ""
+  ],
+  [
+   "Gain",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Hard/Soft",
+   "SPDT",
+   "SW",
+   "type not stated; three wires"
+  ]
+ ],
+ "source": "layout"
+}

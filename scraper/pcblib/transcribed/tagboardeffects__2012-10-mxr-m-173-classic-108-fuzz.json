@@ -1,0 +1,119 @@
+{
+ "id": "tagboardeffects:2012-10-mxr-m-173-classic-108-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero 13 x 10, populated board above a bare cuts-and-links view; two BC108C, three bias trimmers whose values are given only in the legend, two pots.",
+ "uncertain": [
+  "5R1 at the right edge of the board: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "680R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "5R1",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "6n8",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "2u2",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "TP1",
+   "20K",
+   "TRIM",
+   "biases Q1"
+  ],
+  [
+   "TP2",
+   "100K",
+   "TRIM",
+   "Q2 emitter to Q1 base feedback"
+  ],
+  [
+   "TP3",
+   "10K",
+   "TRIM",
+   "biases Q2"
+  ],
+  [
+   "Q1",
+   "BC108C",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "BC108C",
+   "Q",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A470K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

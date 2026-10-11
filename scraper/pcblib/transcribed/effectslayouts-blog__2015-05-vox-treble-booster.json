@@ -1,0 +1,65 @@
+{
+ "id": "effectslayouts-blog:2015-05-vox-treble-booster",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small perfboard layout with wiring diagram, underside and etched PCB; counted from the populated board. No pots or switches.",
+ "uncertain": [
+  "500pF under the transistor: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "500pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N2222",
+   "Q",
+   "legend: 2N2222, 2N3904, etc."
+  ]
+ ],
+ "source": "layout"
+}

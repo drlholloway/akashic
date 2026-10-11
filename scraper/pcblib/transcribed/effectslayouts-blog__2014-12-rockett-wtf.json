@@ -1,0 +1,143 @@
+{
+ "id": "effectslayouts-blog:2014-12-rockett-wtf",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout plus a PCB version, the underside and an etch mask of the same circuit; read from the populated vero board. Two more capacitors (4.7nF, 18nF) are drawn on the EQ toggle switch. The legend names Q1 twice (2N2222, then 2N3906); the second is taken as Q2.",
+ "uncertain": [
+  "Q2: the legend prints 'Q1: 2N3906' on a second Q1 line, taken to mean Q2"
+ ],
+ "rows": [
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "560K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   "on the EQ switch"
+  ],
+  [
+   "×1",
+   "18nF",
+   "C",
+   "on the EQ switch"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N2222",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N3906",
+   "Q",
+   "legend prints 'Q1: 2N3906'"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Boost",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "WTF",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "EQ",
+   "DPDT on/off/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Boost",
+   "3PDT",
+   "SW",
+   "stomp footswitch"
+  ]
+ ],
+ "source": "layout"
+}

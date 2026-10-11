@@ -1,0 +1,99 @@
+{
+ "id": "tagboardeffects:2013-01-briggs-e11even",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "11 x 9 stripboard shown populated and bare; one MOSFET (pins marked D G S), a zener and two Schottky diodes, four pots.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470pF",
+   "C",
+   ""
+  ],
+  [
+   "Q1",
+   "BS170",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "D1",
+   "12V zener",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "BAT41",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "BAT41",
+   "D",
+   ""
+  ],
+  [
+   "Body",
+   "B470K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Bias",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Master",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

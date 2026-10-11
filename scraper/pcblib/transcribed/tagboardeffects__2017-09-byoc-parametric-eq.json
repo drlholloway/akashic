@@ -1,0 +1,156 @@
+{
+ "id": "tagboardeffects:2017-09-byoc-parametric-eq",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Large 33x29 stripboard shown populated on the left and bare (cuts and links) on the right; read the populated view only. Seven TL072 and a 1044 charge pump, ten pots of which the three Freq pots are dual.",
+ "uncertain": [
+  "Counts of 5K1 (23) and 1K6 (15): the board is dense and these two values repeat many times, a count could be off by one",
+  "1044: printed without prefix (MAX1044 / ICL1044 / TC1044)"
+ ],
+ "rows": [
+  [
+   "×23",
+   "5K1",
+   "R",
+   ""
+  ],
+  [
+   "×15",
+   "1K6",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "330R",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×6",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "12n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "2n7",
+   "C",
+   ""
+  ],
+  [
+   "×8",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×7",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "×1",
+   "1044",
+   "IC",
+   "charge pump"
+  ],
+  [
+   "Low Boost/Cut",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Mid Boost/Cut",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "High Boost/Cut",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Low Q",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Mid Q",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "High Q",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Low Freq",
+   "B10K",
+   "POT",
+   "dual"
+  ],
+  [
+   "Mid Freq",
+   "B10K",
+   "POT",
+   "dual"
+  ],
+  [
+   "High Freq",
+   "B10K",
+   "POT",
+   "dual"
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,99 @@
+{
+ "id": "effectslayouts-blog:2018-04-lovepedal-tchula",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Third picture is the layout sheet: populated perfboard, colour wiring diagram, underside and etch mask of the same circuit; read from the populated perfboard, confirmed against the wiring diagram. First picture is the schematic, the others are small copies. The schematic shows no polarity diode; the layout adds a 1N5817.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "680Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "BAT46",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "1N5817",
+   "D",
+   "printed 5817"
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Bias",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "DPDT",
+   "SW",
+   "legend: DPDT footswitch (or SPST toggle); switches the emitter bypass cap, not the bypass"
+  ]
+ ],
+ "source": "layout"
+}

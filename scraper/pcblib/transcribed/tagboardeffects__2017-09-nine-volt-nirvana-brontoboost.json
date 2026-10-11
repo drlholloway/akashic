@@ -1,0 +1,138 @@
+{
+ "id": "tagboardeffects:2017-09-nine-volt-nirvana-brontoboost",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 20x12 vero board (negative supply, PNP) with a board-mounted trimmer, plus a separate drawing of a 9-lug switch wired to the Tone pot and Gain A; pots have no taper stated.",
+ "uncertain": [
+  "68k resistor at column 15 (rows G-I): partly covered by the 47uF can, read as 68k",
+  "Switch: drawn as an unnamed 9-lug (3PDT) switch with pins 4, 7, 8, 9 unused; whether toggle or footswitch and its function are not stated"
+ ],
+ "rows": [
+  [
+   "×2",
+   "470k",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1uF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "3.3uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N3906",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N3906",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "2SB54",
+   "Q",
+   "germanium PNP"
+  ],
+  [
+   "D1",
+   "1N4002",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4002",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "10k",
+   "TRIM",
+   ""
+  ],
+  [
+   "Tone",
+   "100K",
+   "POT",
+   "dual"
+  ],
+  [
+   "Gain A",
+   "250K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain B",
+   "25K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "100K",
+   "POT",
+   ""
+  ],
+  [
+   "Sw",
+   "3PDT",
+   "SW",
+   "9-lug switch, pins 4, 7, 8, 9 not used"
+  ]
+ ],
+ "source": "layout"
+}

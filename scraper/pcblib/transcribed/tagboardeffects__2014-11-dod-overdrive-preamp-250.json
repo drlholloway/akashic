@@ -1,0 +1,111 @@
+{
+ "id": "tagboardeffects:2014-11-dod-overdrive-preamp-250",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard 15x10, populated board on top and a bare cuts-and-links view below. Legend notes D1 is added polarity protection and the 1M from input to ground is an added pulldown.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "1M",
+   "R",
+   "one is an added input pulldown"
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "120pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "LM741",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   "added polarity protection"
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   "1N4148 or 1N914"
+  ],
+  [
+   "D3",
+   "1N4148",
+   "D",
+   "1N4148 or 1N914"
+  ],
+  [
+   "Gain",
+   "C500K",
+   "POT",
+   "rev. log"
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   "log (try lin)"
+  ]
+ ],
+ "source": "layout"
+}

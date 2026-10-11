@@ -1,0 +1,105 @@
+{
+ "id": "dirtbox:2022-09-beetronics-whoctahell",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 18x17 stripboard with two CMOS chips. Two LED resistors (CLR1 bypass, CLR2 octave) have no value. The Octave Sw is a second 3PDT footswitch (effect control, listed); the bypass footswitch is not drawn.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "3.3M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×4",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "CD4049UBE",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "CD4040BE",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Octave",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Octave Sw",
+   "3PDT",
+   "SW",
+   "footswitch"
+  ],
+  [
+   "Switch",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

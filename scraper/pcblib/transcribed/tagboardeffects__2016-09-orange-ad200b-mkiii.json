@@ -1,0 +1,132 @@
+{
+ "id": "tagboardeffects:2016-09-orange-ad200b-mkiii",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated stripboard 17x11, two J201 stages each with a 20k bias trimmer, plus a Passive/Active input toggle drawn beside the board.",
+ "uncertain": [
+  "82k at the right end of the board is partly covered by the 100uF can; reads 82k",
+  "1.5k left of Q1 is partly covered by the 22uF can; reads 1.5k"
+ ],
+ "rows": [
+  [
+   "×2",
+   "68k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1.5k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "82k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q2",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Trimmer 1",
+   "20k",
+   "TRIM",
+   ""
+  ],
+  [
+   "Trimmer 2",
+   "20k",
+   "TRIM",
+   ""
+  ],
+  [
+   "Gain",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Treble",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Bass",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Mids",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Passive/Active",
+   "SPDT on/on",
+   "SW",
+   "toggle, input"
+  ]
+ ],
+ "source": "layout"
+}

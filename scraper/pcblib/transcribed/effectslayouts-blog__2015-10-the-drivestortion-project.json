@@ -1,0 +1,147 @@
+{
+ "id": "effectslayouts-blog:2015-10-the-drivestortion-project",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Picture 1 is a generic schematic for MXR Distortion+ / DOD 250 / Ross Distortion without values; picture 3 is the layout sheet (populated perfboard, underside, wiring diagram, etched PCB; 2 and 4 are small copies). The layout prints designators only and says 'See B.O.M.': the values are in the post's text, not in any picture, so every value is '?'. Designators and part types read from the populated perfboard.",
+ "uncertain": [],
+ "rows": [
+  [
+   "R1",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R2",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R3",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R4",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R5",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R6",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R7",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R8",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "C1",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C2",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C3",
+   "?",
+   "C",
+   "electrolytic, value not given"
+  ],
+  [
+   "C4",
+   "?",
+   "C",
+   "electrolytic, value not given"
+  ],
+  [
+   "C5",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C6",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C7",
+   "?",
+   "C",
+   "electrolytic, value not given"
+  ],
+  [
+   "C8",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "D1",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "D2",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "D3",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "D4",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "IC1",
+   "?",
+   "IC",
+   "8-pin DIP, value not given"
+  ],
+  [
+   "Gain",
+   "?",
+   "POT",
+   "value not given"
+  ],
+  [
+   "Level",
+   "?",
+   "POT",
+   "value not given"
+  ]
+ ],
+ "source": "layout"
+}

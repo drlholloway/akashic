@@ -1,0 +1,96 @@
+{
+ "id": "dirtbox:2019-06-sam-ash-fuzzz-boxxx",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 14x9 stripboard, values printed on every part. The board labels the diodes D3, D4, D5 while the legend names D1-D2 (clippers) and D3 (polarity protection); the two red diodes drawn as D4/D5 are taken to be the legend's D1-D2.",
+ "uncertain": [
+  "Diode numbering: board prints D3, D4, D5 but legend gives D1-D2 = 1N914 and D3 = 1N5817; D4/D5 assumed to be the legend's D1-D2",
+  "Q2 printed as D566 (probably 2SD566), kept as printed"
+ ],
+ "rows": [
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1.8K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N3565",
+   "Q",
+   "Try any low-medium gain Silicon NPN transistors"
+  ],
+  [
+   "Q2",
+   "D566",
+   "Q",
+   "Try any low-medium gain Silicon NPN transistors"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   "1N5817 or 1N4001"
+  ],
+  [
+   "D4",
+   "1N914",
+   "D",
+   "legend D1-D2: 1N914 or 1N4148"
+  ],
+  [
+   "D5",
+   "1N914",
+   "D",
+   "legend D1-D2: 1N914 or 1N4148"
+  ],
+  [
+   "Attack",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

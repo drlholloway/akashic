@@ -1,0 +1,99 @@
+{
+ "id": "tagboardeffects:2010-11-jfet-parallel-looper",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "15 x 16 stripboard drawn populated and bare; three send/return loops mixed by four JFETs (Q1-Q4, pinout DGS) whose type is not printed anywhere. Three 100K linear pots.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "6K8",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "1u",
+   "C",
+   ""
+  ],
+  [
+   "Q1",
+   "?",
+   "Q",
+   "JFET, value not given"
+  ],
+  [
+   "Q2",
+   "?",
+   "Q",
+   "JFET, value not given"
+  ],
+  [
+   "Q3",
+   "?",
+   "Q",
+   "JFET, value not given"
+  ],
+  [
+   "Q4",
+   "?",
+   "Q",
+   "JFET, value not given"
+  ],
+  [
+   "Channel 1",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Channel 2",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Channel 3",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

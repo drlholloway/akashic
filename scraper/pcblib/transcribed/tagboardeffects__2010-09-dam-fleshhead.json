@@ -1,0 +1,101 @@
+{
+ "id": "tagboardeffects:2010-09-dam-fleshhead",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated vero board 20 x 9, positive ground (-9V supply). Q1-Q3 are labelled but no transistor type is printed.",
+ "uncertain": [
+  "8K2 resistor at the centre bottom: text overlaps a track cut, read as 8K2"
+ ],
+ "rows": [
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "8K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4u7",
+   "C",
+   "electrolytic; one axial printed 4U7, one radial printed 4u7"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "6n8",
+   "C",
+   ""
+  ],
+  [
+   "Q1",
+   "?",
+   "Q",
+   "value not given; positive-ground circuit"
+  ],
+  [
+   "Q2",
+   "?",
+   "Q",
+   "value not given; positive-ground circuit"
+  ],
+  [
+   "Q3",
+   "?",
+   "Q",
+   "value not given; positive-ground circuit"
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Flesh",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,93 @@
+{
+ "id": "tagboardeffects:2012-08-dam-fr70-fuzzrong",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 17x7 (compact version) with the populated board on top and the bare cuts/links board below; two transistors and two pots.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "KSP42",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N4401",
+   "Q",
+   ""
+  ],
+  [
+   "Depth",
+   "B470K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,99 @@
+{
+ "id": "effectslayouts-blog:2016-11-zvex-super-duper-2-in-1",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Two-channel booster on one vero board, shown populated, bare underside, colour wiring diagram and etched PCB. Pots are drawn on the board edge with their values (5K Rev log, 100K Log).",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "5.1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "9.1V",
+   "D",
+   "zener, printed 9.1v"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "×2",
+   "BS170",
+   "Q",
+   "Q1-2, MOSFET"
+  ],
+  [
+   "Level 1",
+   "C5K",
+   "POT",
+   "5K Rev log"
+  ],
+  [
+   "Level 2",
+   "C5K",
+   "POT",
+   "5K Rev log"
+  ],
+  [
+   "Master",
+   "A100K",
+   "POT",
+   "100K Log"
+  ]
+ ],
+ "source": "layout"
+}

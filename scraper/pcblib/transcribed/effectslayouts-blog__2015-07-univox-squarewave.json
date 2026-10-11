@@ -1,0 +1,147 @@
+{
+ "id": "effectslayouts-blog:2015-07-univox-squarewave",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout 'with LucifersTrip mods' beside a colour wiring diagram, underside and etched PCB. The populated board and the wiring diagram print DIFFERENT values for five resistors (board 2.8K / 270K / 1.9K / 3M / 100K; diagram 3.9K / 280K / 680Ω / 2M / 27K); rows follow the populated board.",
+ "uncertain": [
+  "2.8K top-left (column B): printed clearly, unusual value; the wiring diagram shows 3.9K in the same position",
+  "270K (column C, top row): the wiring diagram shows 280K in the same position",
+  "1.9K (column E, top row): printed clearly, unusual value; the wiring diagram shows 680Ω in the same position",
+  "3M (column D, middle): the wiring diagram shows 2M in the same position",
+  "100K horizontal at the bottom (row O): the wiring diagram shows 27K in the same position"
+ ],
+ "rows": [
+  [
+   "×3",
+   "100K",
+   "R",
+   "one of them is 27K on the wiring diagram"
+  ],
+  [
+   "×2",
+   "560K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.8K",
+   "R",
+   "3.9K on the wiring diagram"
+  ],
+  [
+   "×1",
+   "270K",
+   "R",
+   "280K on the wiring diagram"
+  ],
+  [
+   "×1",
+   "1.9K",
+   "R",
+   "680Ω on the wiring diagram"
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3M",
+   "R",
+   "2M on the wiring diagram"
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   "printed 4001"
+  ],
+  [
+   "D1",
+   "1N34A",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N34A",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "1N34A",
+   "D",
+   ""
+  ],
+  [
+   "D4",
+   "1N34A",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Distortion",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Balance",
+   "A1M",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,119 @@
+{
+ "id": "tagboardeffects:2013-01-runoffgroove-peppermill",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "13x10 stripboard, populated view on top and a bare cuts-and-links view below. MOSFET and JFET overdrive with a 50K trimmer; D2 is a 3mm red LED on the board (legend allows a 9V1 zener instead); the LED resistor is on the board with no value.",
+ "uncertain": [
+  "1uF can at lower right is drawn pink rather than the usual white electrolytic: entered as electrolytic, could be meant as tantalum or non-polar"
+ ],
+ "rows": [
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "8.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "6.8nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "3mm red LED",
+   "LED",
+   "3mm red LED (or 9V1 zener)"
+  ],
+  [
+   "Q1",
+   "BS170",
+   "Q",
+   "MOSFET; BS170 or 2N7000"
+  ],
+  [
+   "Q2",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "VR1",
+   "50K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Gain",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,195 @@
+{
+ "id": "dirtbox:2019-07-earthquaker-devices-grey-channel",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 16x16 vero board, two channels (Red and Green) with a channel footswitch; three resistors are printed only as CLR (two channel LEDs and the bypass LED).",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "20K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×2",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "1458",
+   "IC",
+   ""
+  ],
+  [
+   "Q1",
+   "2N7000",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "Q2",
+   "2N7000",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "Germanium",
+   "D",
+   "type not given"
+  ],
+  [
+   "D4",
+   "Germanium",
+   "D",
+   "type not given"
+  ],
+  [
+   "D5",
+   "3mm red LED",
+   "LED",
+   "on the board"
+  ],
+  [
+   "D6",
+   "3mm red LED",
+   "LED",
+   "on the board"
+  ],
+  [
+   "D7",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Gain Red",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Gain Green",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Volume Red",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume Green",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Si/Ge",
+   "SPDT on/off/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "LED/FET",
+   "SPDT on/off/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Channel",
+   "3PDT",
+   "SW",
+   "footswitch, selects the channel"
+  ],
+  [
+   "Channel LED Green",
+   "Green LED",
+   "LED",
+   "off-board"
+  ],
+  [
+   "Channel LED Red",
+   "Red LED",
+   "LED",
+   "off-board"
+  ]
+ ],
+ "source": "layout"
+}

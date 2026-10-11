@@ -1,0 +1,189 @@
+{
+ "id": "dirtbox:2020-06-carl-martin-plexi-tone-9v-9v",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 17x18 stripboard of the Carl Martin Plexi Tone with an ICL7660S charge pump; three red LEDs on the board as clippers and one resistor marked only CLR.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×2",
+   "330pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "68nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "LF347",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "ICL7660S",
+   "IC",
+   ""
+  ],
+  [
+   "×3",
+   "3mm red LED",
+   "LED",
+   "D1-D3"
+  ],
+  [
+   "D4",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Hi Gain",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Crunch",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Boost",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A5K",
+   "POT",
+   ""
+  ],
+  [
+   "Drive",
+   "SPDT on/on",
+   "SW",
+   "or DPDT footswitch"
+  ],
+  [
+   "Select",
+   "SPDT on/on",
+   "SW",
+   "or DPDT footswitch"
+  ],
+  [
+   "Boost Sw",
+   "SPDT on/on",
+   "SW",
+   "or DPDT footswitch"
+  ]
+ ],
+ "source": "layout"
+}

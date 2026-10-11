@@ -1,0 +1,150 @@
+{
+ "id": "tagboardeffects:2015-11-madbean-fatpants-jr",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "18x12 vero, populated board on top and cuts/links view below. JFET boost with an LT1054 charge pump; C1 and C2 are given in the legend as 10uF (min 35V). One 10K resistor is drawn semi-transparent over a track cut (probably mounted under/over another part); counted.",
+ "uncertain": [
+  "Fat switch: only two wires (Fat Sw1, Fat Sw2) are shown and no switch type is given; entered as SPST",
+  "10K right of the 220K near the trimmer is drawn faded/translucent over a cut; counted as a real part"
+ ],
+ "rows": [
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   "one drawn translucent"
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3K3",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22R",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C1",
+   "10uF",
+   "C",
+   "electrolytic, min 35V"
+  ],
+  [
+   "C2",
+   "10uF",
+   "C",
+   "electrolytic, min 35V"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "15V Zener",
+   "D",
+   ""
+  ],
+  [
+   "×5",
+   "1N5817",
+   "D",
+   "D2-D6"
+  ],
+  [
+   "×1",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "×1",
+   "LT1054",
+   "IC",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Boost",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Fat",
+   "SPST",
+   "SW",
+   "toggle, type not given; two wires Fat Sw1 / Fat Sw2"
+  ]
+ ],
+ "source": "layout"
+}

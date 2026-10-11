@@ -1,0 +1,312 @@
+{
+ "id": "dirtbox:2021-03-dunwich-modified-hm2-left-hand-path",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 26x25 stripboard, six-knob 'Left Hand Path' version, values printed on every part; legend names Q1-Q3, IC1-IC3, D1-D12, six pots and two SPDT on/off/on toggles. 'All Bands 1/3' are wire pads common to the EQ pots, not a pot. The legend says 'D7-D8: 3mm red LEDs' but the two LEDs drawn on the board are D10 and D11, and D7-D9 are also listed as 1N4148.",
+ "uncertain": [
+  "D10 and D11 (rows Q-R, columns 5-7) are drawn as round red LEDs; the legend's '3mm red LEDs' line names D7-D8, taken as a slip for D10-D11",
+  "D4-D6: legend says only 'Shottky' (Schottky), no part number"
+ ],
+ "rows": [
+  [
+   "×7",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×7",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "330Ω",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "120Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22Ω",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "1uF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "68nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1.5uF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "330nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "150nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "15nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5457",
+   "Q",
+   "JFET; legend: 2N5457, J201, J113 etc."
+  ],
+  [
+   "Q2",
+   "2N3904",
+   "Q",
+   "legend: 2N3904/2N5088"
+  ],
+  [
+   "Q3",
+   "2N3906",
+   "Q",
+   "PNP; legend: 2N3906/2N5087"
+  ],
+  [
+   "IC1",
+   "TLC2262",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "IC3",
+   "TL074",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D4",
+   "Schottky",
+   "D",
+   "part number not given"
+  ],
+  [
+   "D5",
+   "Schottky",
+   "D",
+   "part number not given"
+  ],
+  [
+   "D6",
+   "Schottky",
+   "D",
+   "part number not given"
+  ],
+  [
+   "D7",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D8",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D9",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D10",
+   "3mm red LED",
+   "LED",
+   "on the board; legend names these D7-D8"
+  ],
+  [
+   "D11",
+   "3mm red LED",
+   "LED",
+   "on the board; legend names these D7-D8"
+  ],
+  [
+   "D12",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "A250K",
+   "POT",
+   ""
+  ],
+  [
+   "Low",
+   "B10K",
+   "POT",
+   "100 Hz"
+  ],
+  [
+   "Low Mid",
+   "B10K",
+   "POT",
+   "400 Hz"
+  ],
+  [
+   "High Mid",
+   "B10K",
+   "POT",
+   "1 kHz"
+  ],
+  [
+   "High",
+   "B10K",
+   "POT",
+   "3.3 kHz"
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Hard Sw",
+   "SPDT on/off/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Soft Sw",
+   "SPDT on/off/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

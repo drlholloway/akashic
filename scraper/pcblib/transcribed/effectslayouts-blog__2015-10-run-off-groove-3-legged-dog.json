@@ -1,0 +1,117 @@
+{
+ "id": "effectslayouts-blog:2015-10-run-off-groove-3-legged-dog",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with board-mounted pots, shown four ways (populated board, colour wiring diagram, reversed underside, etched PCB); counted from the populated board and confirmed against the wiring diagram.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "8.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "CD4049UBE",
+   "IC",
+   ""
+  ],
+  [
+   "Q1",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   "printed 100K Log"
+  ],
+  [
+   "Gain",
+   "B1M",
+   "POT",
+   "printed 1M Lin"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,113 @@
+{
+ "id": "tagboardeffects:2016-08-carlsbro-fuzzbox",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "15x11 vero, single populated view with lettered columns. Three germanium PNP transistors, negative supply (-9V).",
+ "uncertain": [
+  "1k resistor in columns I, rows G-J: the value is partly hidden under the right-hand 25uF electrolytic; reads 1k"
+ ],
+ "rows": [
+  [
+   "×2",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4.7k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "25uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "OC71",
+   "Q",
+   "legend: try PNP with hfe 40-50"
+  ],
+  [
+   "Q2",
+   "OC71",
+   "Q",
+   "legend: try PNP with hfe 40-50"
+  ],
+  [
+   "Q3",
+   "OC71",
+   "Q",
+   "legend: try PNP with hfe 40-50"
+  ],
+  [
+   "Volume",
+   "A25K",
+   "POT",
+   ""
+  ],
+  [
+   "Attack",
+   "B50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

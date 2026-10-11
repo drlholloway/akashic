@@ -1,0 +1,87 @@
+{
+ "id": "tagboardeffects:2012-01-zvex-super-duper-2-in-1",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "17x9 vero with two mirrored boost channels, drawn populated and bare, plus a wiring sketch of the two footswitches. SW1 and SW2 are the per-channel bypass footswitches and are not listed. Transistors are labelled BS170 under the board without designators.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "100R",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2K2",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "5K1",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "9V1",
+   "D",
+   "zener"
+  ],
+  [
+   "×2",
+   "BS170",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "Gain One",
+   "C5K",
+   "POT",
+   "reverse log"
+  ],
+  [
+   "Gain Two",
+   "C5K",
+   "POT",
+   "reverse log"
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

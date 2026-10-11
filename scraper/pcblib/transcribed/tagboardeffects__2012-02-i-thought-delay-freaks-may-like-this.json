@@ -1,0 +1,87 @@
+{
+ "id": "tagboardeffects:2012-02-i-thought-delay-freaks-may-like-this",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Crap-Fi Delay by allesz, stripboard 15x11, populated view above a bare view; an off-board SPDT 2 position switch (Sw1/Sw2/Sw3) is drawn beside it.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "15k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1k",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC",
+   "PT2399",
+   "IC",
+   ""
+  ],
+  [
+   "REG",
+   "78L05",
+   "IC",
+   "regulator"
+  ],
+  [
+   "Time",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Repeat",
+   "B470K",
+   "POT",
+   ""
+  ],
+  [
+   "Mix",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "SPDT",
+   "SW",
+   "2 position toggle"
+  ]
+ ],
+ "source": "layout"
+}

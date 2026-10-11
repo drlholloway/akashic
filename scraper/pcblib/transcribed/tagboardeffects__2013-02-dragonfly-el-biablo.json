@@ -1,0 +1,87 @@
+{
+ "id": "tagboardeffects:2013-02-dragonfly-el-biablo",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard 12 x 10, populated view above a bare cuts-and-links view; two transistors and three diodes named in the legend.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "390Ω",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "MPSA13",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "Texture",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

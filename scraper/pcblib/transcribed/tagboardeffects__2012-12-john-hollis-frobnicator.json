@@ -1,0 +1,171 @@
+{
+ "id": "tagboardeffects:2012-12-john-hollis-frobnicator",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 18 x 19, populated board on the left and cuts/links view on the right. CA3080 and TL062 with a trimmer, three red LEDs on the board and a Ring/Trem toggle on wires SW1/SW2.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "CA3080",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "TL062",
+   "IC",
+   "use TL072 for lower noise level"
+  ],
+  [
+   "Q1",
+   "BC184L",
+   "Q",
+   "use MPSA18 or 2N5089"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "red LED",
+   "LED",
+   ""
+  ],
+  [
+   "D3",
+   "red LED",
+   "LED",
+   ""
+  ],
+  [
+   "D4",
+   "red LED",
+   "LED",
+   ""
+  ],
+  [
+   "VR1",
+   "100K",
+   "TRIM",
+   "flat fits too, install 10M first"
+  ],
+  [
+   "Depth",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Freq",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Ring/Trem",
+   "SPDT",
+   "SW",
+   "toggle, On-Off or On-On"
+  ]
+ ],
+ "source": "layout"
+}

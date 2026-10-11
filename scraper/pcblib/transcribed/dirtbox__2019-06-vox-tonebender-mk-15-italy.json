@@ -1,0 +1,95 @@
+{
+ "id": "dirtbox:2019-06-vox-tonebender-mk-15-italy",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 11x8 vero, positive-ground two-transistor germanium fuzz (Vox Tonebender by Jen).",
+ "uncertain": [
+  "15uF electrolytic at bottom left (rows F-H, column 2): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×1",
+   "820Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "8.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "150nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "15uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "SFT337",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "SFT363",
+   "Q",
+   "SFT363 or OC76"
+  ],
+  [
+   "Attack",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,269 @@
+{
+ "id": "dirtbox:2019-06-honey-special-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 28x28 vero board with 13 transistors and two transformers (TR1, TR2) mounted on the board; the Special/Fuzz DPDT footswitch is an effect control and is listed.",
+ "uncertain": [
+  "TR1/TR2: legend prints 'TDK 4 H' (the original inductor/transformer type) and suggests LT44; entered as printed"
+ ],
+ "rows": [
+  [
+   "×8",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "820K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "270K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×7",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.7K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×15",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×5",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2SC828",
+   "Q",
+   "2SC828 in original units; try NPN silicon w. Hfe between 100-200"
+  ],
+  [
+   "Q2",
+   "2SC828",
+   "Q",
+   "2SC828 in original units; try NPN silicon w. Hfe between 100-200"
+  ],
+  [
+   "Q3",
+   "2SC828",
+   "Q",
+   "2SC828 in original units; try NPN silicon w. Hfe between 100-200"
+  ],
+  [
+   "Q4",
+   "2SC828",
+   "Q",
+   "2SC828 in original units; try NPN silicon w. Hfe between 100-200"
+  ],
+  [
+   "Q5",
+   "2SC828",
+   "Q",
+   "2SC828 in original units; try NPN silicon w. Hfe between 100-200"
+  ],
+  [
+   "Q6",
+   "2SC828",
+   "Q",
+   "2SC828 in original units; try NPN silicon w. Hfe between 100-200"
+  ],
+  [
+   "Q7",
+   "2SC828",
+   "Q",
+   "2SC828 in original units; try NPN silicon w. Hfe between 100-200"
+  ],
+  [
+   "Q8",
+   "2SC828",
+   "Q",
+   "2SC828 in original units; try NPN silicon w. Hfe between 100-200"
+  ],
+  [
+   "Q9",
+   "2SC828",
+   "Q",
+   "2SC828 in original units; try NPN silicon w. Hfe between 100-200"
+  ],
+  [
+   "Q10",
+   "2SC828",
+   "Q",
+   "2SC828 in original units; try NPN silicon w. Hfe between 100-200"
+  ],
+  [
+   "Q11",
+   "2SC828",
+   "Q",
+   "2SC828 in original units; try NPN silicon w. Hfe between 100-200"
+  ],
+  [
+   "Q12",
+   "2SC828",
+   "Q",
+   "2SC828 in original units; try NPN silicon w. Hfe between 100-200"
+  ],
+  [
+   "Q13",
+   "2SC828",
+   "Q",
+   "2SC828 in original units; try NPN silicon w. Hfe between 100-200"
+  ],
+  [
+   "D1",
+   "OA90",
+   "D",
+   "OA90 or other germanium diodes"
+  ],
+  [
+   "D2",
+   "OA90",
+   "D",
+   "OA90 or other germanium diodes"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "TR1",
+   "TDK 4 H",
+   "XFM",
+   "try LT44"
+  ],
+  [
+   "TR2",
+   "TDK 4 H",
+   "XFM",
+   "try LT44"
+  ],
+  [
+   "Volume",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Special/Direct",
+   "DPDT",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Special/Fuzz",
+   "DPDT",
+   "SW",
+   "footswitch"
+  ]
+ ],
+ "source": "layout"
+}

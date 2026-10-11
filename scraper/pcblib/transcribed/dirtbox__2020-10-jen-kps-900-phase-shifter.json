@@ -1,0 +1,132 @@
+{
+ "id": "dirtbox:2020-10-jen-kps-900-phase-shifter",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated stripboard (21x22) with two 14-pin ICs and an on-board 220K trimmer. R3 is drawn with a designator only; the legend says to try 15k for more output and that 220k is the stock value.",
+ "uncertain": [
+  "R3 (column 6, rows B-E): no value on the part; entered as 220K from the legend line '220k is stock value', which follows the R3 note but could be read as referring to the 220K trimmer",
+  "Speed pot: legend prints '500k (C?)', the taper is the layout author's guess"
+ ],
+ "rows": [
+  [
+   "×9",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "220K",
+   "R",
+   "value not printed on the part; legend: Try 15k for more output, 220k is stock value"
+  ],
+  [
+   "×1",
+   "220K",
+   "TRIM",
+   ""
+  ],
+  [
+   "×3",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "MC3404",
+   "IC",
+   "Try LM324, LM348 etc."
+  ],
+  [
+   "IC2",
+   "CD4007",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "4.7V Zener",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Speed",
+   "C500K",
+   "POT",
+   "legend: 500k (C?)"
+  ],
+  [
+   "Intensity",
+   "B1M",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

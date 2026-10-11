@@ -1,0 +1,126 @@
+{
+ "id": "dirtbox:2021-04-tape-saturator-diode-compressor-op-amp",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated stripboard (19x21) with sixteen diodes, three ICs and a 50K trimmer; the legend notes caps must be rated min 35v, and its last line (D16) is cut off at the bottom edge of the image.",
+ "uncertain": [
+  "3nF x2 (near column 14 row B and column 9 row K): printed clearly, unusual value",
+  "D16 type: the legend line is cropped at the image edge, top half of the text reads 1N5817"
+ ],
+ "rows": [
+  [
+   "×1",
+   "150Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "3nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×4",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "50K",
+   "TRIM",
+   ""
+  ],
+  [
+   "IC1",
+   "NE5532",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "NE5532",
+   "IC",
+   ""
+  ],
+  [
+   "IC3",
+   "LT1054",
+   "IC",
+   ""
+  ],
+  [
+   "×2",
+   "1N914",
+   "D",
+   "D1, D2; legend: 1N914/1N4148"
+  ],
+  [
+   "×8",
+   "1N34A",
+   "D",
+   "D3-D10"
+  ],
+  [
+   "×5",
+   "1N4001",
+   "D",
+   "D11-D15"
+  ],
+  [
+   "D16",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Input",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

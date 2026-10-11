@@ -1,0 +1,93 @@
+{
+ "id": "effectslayouts-blog:2014-11-ehx-axis-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard EHX Axis Fuzz / Foxey Lady two-transistor fuzz, shown as populated vero, wiring diagram, underside and etched PCB; counted from the populated vero. Transistor type given only as NPN silicon.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.5M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "680Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "3.3nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "NPN Silicon",
+   "Q",
+   "legend: Q1-2: NPN Silicon, no type given"
+  ],
+  [
+   "Q2",
+   "NPN Silicon",
+   "Q",
+   "legend: Q1-2: NPN Silicon, no type given"
+  ],
+  [
+   "Fuzz",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

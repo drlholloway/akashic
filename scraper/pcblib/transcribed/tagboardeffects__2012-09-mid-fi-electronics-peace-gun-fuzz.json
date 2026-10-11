@@ -1,0 +1,126 @@
+{
+ "id": "tagboardeffects:2012-09-mid-fi-electronics-peace-gun-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Mid-Fi Electronics Peace Gun Fuzz on 14x10 vero; populated board above a bare cuts-and-links view. One electrolytic is marked Fil*, an optional power-supply filter cap (legend: try 100u).",
+ "uncertain": [
+  "50n at the left edge, lower: printed clearly, unusual value",
+  "4K7 left of D1: the machine legend reading says 1K7, the image reads 4K7"
+ ],
+ "rows": [
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "50n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic; Fil*, optional PS filter cap (try 100u)"
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "MPSA13",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N5089",
+   "Q",
+   ""
+  ],
+  [
+   "Resonance",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Frequency",
+   "B5K",
+   "POT",
+   "dual"
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

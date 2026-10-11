@@ -1,0 +1,179 @@
+{
+ "id": "dirtbox:2019-07-death-by-audio-space-ring",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 21x19 stripboard, marked Verified: ring modulator with TLC272, LM567, two 42TM018 transformers and six 3.6 V zeners. The bypass footswitch is wired through the board and is not listed; the XYZ toggle is.",
+ "uncertain": [
+  "681K (four of them, lower half of the board): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×1",
+   "43K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "681K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "330pF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TLC272",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "LM567",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N5227B",
+   "D",
+   "3.6 V Zener"
+  ],
+  [
+   "D2",
+   "1N5227B",
+   "D",
+   "3.6 V Zener; cut under it"
+  ],
+  [
+   "D3",
+   "1N5227B",
+   "D",
+   "3.6 V Zener"
+  ],
+  [
+   "D4",
+   "1N5227B",
+   "D",
+   "3.6 V Zener"
+  ],
+  [
+   "D5",
+   "1N5227B",
+   "D",
+   "3.6 V Zener"
+  ],
+  [
+   "D6",
+   "1N5227B",
+   "D",
+   "3.6 V Zener"
+  ],
+  [
+   "D7",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "TR1",
+   "42TM018",
+   "XFM",
+   ""
+  ],
+  [
+   "TR2",
+   "42TM018",
+   "XFM",
+   ""
+  ],
+  [
+   "Warp",
+   "C1M",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "XYZ",
+   "3PDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

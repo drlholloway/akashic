@@ -1,0 +1,101 @@
+{
+ "id": "tagboardeffects:2012-02-lovepedal-eternity",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "15 x 11 vero, populated board above a bare cuts-and-links view; one 8-pin dual op amp and three clipping diodes D1-D3.",
+ "uncertain": [
+  "55n at the left edge beside the input wire: printed clearly as 55n, unusual value (56n would be the standard part)"
+ ],
+ "rows": [
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "390R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "55n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "150n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC",
+   "JRC4558",
+   "IC",
+   "legend: JRC4558 or similar to taste"
+  ],
+  [
+   "×3",
+   "1N914",
+   "D",
+   "D1, D2, D3"
+  ],
+  [
+   "Drive",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

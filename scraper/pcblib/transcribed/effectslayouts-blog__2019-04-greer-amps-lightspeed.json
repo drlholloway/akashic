@@ -1,0 +1,131 @@
+{
+ "id": "effectslayouts-blog:2019-04-greer-amps-lightspeed",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout by storyboardist with a populated board, a colour wiring diagram, the bare underside and an etched PCB; counted from the populated board and confirmed against the diagram. The legend spells the third pot 'Loundness' (board label: Loudness).",
+ "uncertain": [
+  "430K next to the 47nF left of the IC: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×3",
+   "5.6K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.9K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "430K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "box film"
+  ],
+  [
+   "×2",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×5",
+   "1N4148",
+   "D",
+   "printed 4148"
+  ],
+  [
+   "×1",
+   "1N5817",
+   "D",
+   "printed 5817"
+  ],
+  [
+   "×1",
+   "OPA2134",
+   "IC",
+   ""
+  ],
+  [
+   "Drive",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Freq",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Loudness",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

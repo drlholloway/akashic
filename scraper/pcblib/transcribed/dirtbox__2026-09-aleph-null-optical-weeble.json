@@ -1,0 +1,155 @@
+{
+ "id": "dirtbox:2026-09-aleph-null-optical-weeble",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 18x16 stripboard. Has a 10K trimmer, two LDRs (9203) lit by an on-board 5mm green LED D1, and a resistor labelled only CLR (current limiting, no value printed).",
+ "uncertain": [
+  "CLR (row B, top centre): resistor printed 'CLR' with no value"
+ ],
+ "rows": [
+  [
+   "×5",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "9.1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "CLR",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×5",
+   "100nF",
+   "C",
+   "four film, one ceramic"
+  ],
+  [
+   "×3",
+   "1uF",
+   "C",
+   "film"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10K",
+   "TRIM",
+   ""
+  ],
+  [
+   "×3",
+   "2N5088",
+   "Q",
+   "Q1-Q3"
+  ],
+  [
+   "D1",
+   "5mm green diffused LED",
+   "LED",
+   "on the board, between the LDRs"
+  ],
+  [
+   "D2",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "LDR1",
+   "9203",
+   "OPTO",
+   "LDR"
+  ],
+  [
+   "LDR2",
+   "9203",
+   "OPTO",
+   "LDR"
+  ],
+  [
+   "Rate",
+   "C100K",
+   "POT",
+   ""
+  ],
+  [
+   "Depth",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Throb Sw",
+   "SPDT",
+   "SW",
+   "on/on"
+  ],
+  [
+   "Chop Sw",
+   "SPDT",
+   "SW",
+   "on/on"
+  ]
+ ],
+ "source": "layout"
+}

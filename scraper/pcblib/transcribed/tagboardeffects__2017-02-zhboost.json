@@ -1,0 +1,90 @@
+{
+ "id": "tagboardeffects:2017-02-zhboost",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "14x12 stripboard for a subminiature-tube boost: tube is off-board (wires to Pins 1, 2, 5, 6 and A), LM317T regulator drawn as Q1, six diodes and a trimmer VR1 on the board.",
+ "uncertain": [
+  "D3-D6: legend prints B250C1500, which is a bridge-rectifier part number, though four separate diode bodies are drawn; printed clearly, unusual",
+  "1uF at column M is drawn as a film/box cap (orange), not a round can, so not marked electrolytic"
+ ],
+ "rows": [
+  [
+   "×1",
+   "100r",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "330uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1N4002",
+   "D",
+   "D1, D2"
+  ],
+  [
+   "×4",
+   "B250C1500",
+   "D",
+   "D3-D6"
+  ],
+  [
+   "Q1",
+   "LM317T",
+   "IC",
+   "regulator"
+  ],
+  [
+   "VR1",
+   "220k",
+   "TRIM",
+   ""
+  ],
+  [
+   "Tube",
+   "1ZH18B",
+   "OTHER",
+   "subminiature tube, off board"
+  ],
+  [
+   "Volume",
+   "B50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

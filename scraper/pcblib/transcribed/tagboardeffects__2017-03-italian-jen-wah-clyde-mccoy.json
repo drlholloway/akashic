@@ -1,0 +1,101 @@
+{
+ "id": "tagboardeffects:2017-03-italian-jen-wah-clyde-mccoy",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 15x12 vero, clear print. Inductor is drawn on the board as a box; value 500mH from the legend. Transistors are unlabelled on the board (only C/B/E); legend names them Q1 & Q2.",
+ "uncertain": [
+  "Wah pot 100k: no taper printed"
+ ],
+ "rows": [
+  [
+   "×2",
+   "470k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.5k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470r",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC109",
+   "Q",
+   "or BC173"
+  ],
+  [
+   "Q2",
+   "BC109",
+   "Q",
+   "or BC173"
+  ],
+  [
+   "×1",
+   "500mH",
+   "L",
+   "inductor"
+  ],
+  [
+   "Wah",
+   "100K",
+   "POT",
+   "taper not given"
+  ]
+ ],
+ "source": "layout"
+}

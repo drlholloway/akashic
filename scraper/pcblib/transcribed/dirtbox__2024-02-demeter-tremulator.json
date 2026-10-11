@@ -1,0 +1,137 @@
+{
+ "id": "dirtbox:2024-02-demeter-tremulator",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Second picture is the 20x21 stripboard layout (the first is the schematic). Single populated board with three 8-pin ICs, a Vactrol and a 5K trimmer. The board labels the power diode D4 while the legend calls it D3.",
+ "uncertain": [
+  "Power diode is labelled D4 on the board, legend says D3: 1N5817; taken as the same part"
+ ],
+ "rows": [
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×7",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.8K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "8.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "film"
+  ],
+  [
+   "×3",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "5K",
+   "TRIM",
+   ""
+  ],
+  [
+   "IC1",
+   "TL061",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "LF442",
+   "IC",
+   ""
+  ],
+  [
+   "IC3",
+   "LF351",
+   "IC",
+   ""
+  ],
+  [
+   "×2",
+   "1N5229",
+   "D",
+   "D1, D2; 4.3V Zener"
+  ],
+  [
+   "D4",
+   "1N5817",
+   "D",
+   "legend calls it D3"
+  ],
+  [
+   "Vactrol",
+   "VTL5C1",
+   "OPTO",
+   "or LDR-LED combo"
+  ],
+  [
+   "Speed",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Depth",
+   "B50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

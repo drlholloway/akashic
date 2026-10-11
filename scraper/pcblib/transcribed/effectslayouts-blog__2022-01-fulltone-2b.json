@@ -1,0 +1,101 @@
+{
+ "id": "effectslayouts-blog:2022-01-fulltone-2b",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout shown four ways (populated board, colour wiring diagram, underside, etched PCB); read from the populated board. The legend calls D1-2 '1N750 or similar germanium' although 1N750 is a zener part number; kept as printed.",
+ "uncertain": [
+  "D1, D2: legend prints '1N750 or similar germanium' clearly, but 1N750 is normally a zener; possibly a typo for another germanium type"
+ ],
+ "rows": [
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "3.3M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N750",
+   "D",
+   "or similar germanium"
+  ],
+  [
+   "D2",
+   "1N750",
+   "D",
+   "or similar germanium"
+  ],
+  [
+   "×1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "IC1",
+   "AD711",
+   "IC",
+   "or similar single opamp"
+  ],
+  [
+   "Gain",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Dynamics",
+   "B250K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,87 @@
+{
+ "id": "tagboardeffects:2013-03-vox-tonebender-compact-version",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "11 x 8 stripboard, populated view on top and a bare cuts/links view below. Two PNP germanium transistors, no part number given.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "820Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "15uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "PNP Ge",
+   "Q",
+   "legend: Q1-Q2 are PNP Ge"
+  ],
+  [
+   "Q2",
+   "PNP Ge",
+   "Q",
+   "legend: Q1-Q2 are PNP Ge"
+  ],
+  [
+   "Attack",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

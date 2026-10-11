@@ -1,0 +1,95 @@
+{
+ "id": "tagboardeffects:2015-08-selmer-buzztone",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "19 x 11 stripboard, populated view above a bare cuts-and-links view. Positive ground, -3V supply; the four electrolytics are drawn as axial parts.",
+ "uncertain": [
+  "25uF (two) and 50uF (two) axial electrolytics: printed clearly, unusual values"
+ ],
+ "rows": [
+  [
+   "×1",
+   "39K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "25uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "50uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N2613",
+   "Q",
+   "PNP Ge"
+  ],
+  [
+   "Q2",
+   "2N2613",
+   "Q",
+   "PNP Ge"
+  ],
+  [
+   "Q3",
+   "2N2613",
+   "Q",
+   "PNP Ge"
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Depth",
+   "B25K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

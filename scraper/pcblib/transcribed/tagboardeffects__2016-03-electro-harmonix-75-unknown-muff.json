@@ -1,0 +1,205 @@
+{
+ "id": "tagboardeffects:2016-03-electro-harmonix-75-unknown-muff",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "19 x 17 vero titled EHX '75 Mystery Muff, a single populated board plus a drawing of the SW1 toggle carrying two caps (4.7nF Flat, 10nF Boost, centre Scoop). The switch caps are included in the counts.",
+ "uncertain": [
+  "4nF at column I rows F-H: printed clearly, unusual value",
+  "500pF x3: printed clearly, unusual value",
+  "Q1-Q4: legend says the original type is unknown; BC239C entered as the first part named"
+ ],
+ "rows": [
+  [
+   "×4",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "39k",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "470k",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100r",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "390k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "15k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "8.2k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "12k",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "1uF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "500pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   "one on the board, one on SW1 (Boost)"
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   "on SW1 (Flat)"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC239C",
+   "Q",
+   "Unknown, BC239C used in 75 Violet, can try 2N5088, 2N5089, etc."
+  ],
+  [
+   "Q2",
+   "BC239C",
+   "Q",
+   "Unknown, BC239C used in 75 Violet, can try 2N5088, 2N5089, etc."
+  ],
+  [
+   "Q3",
+   "BC239C",
+   "Q",
+   "Unknown, BC239C used in 75 Violet, can try 2N5088, 2N5089, etc."
+  ],
+  [
+   "Q4",
+   "BC239C",
+   "Q",
+   "Unknown, BC239C used in 75 Violet, can try 2N5088, 2N5089, etc."
+  ],
+  [
+   "D1",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "D4",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "D5",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Sustain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "SW1",
+   "SPDT on/off/on",
+   "SW",
+   "toggle: Flat / Scoop / Boost"
+  ]
+ ],
+ "source": "layout"
+}

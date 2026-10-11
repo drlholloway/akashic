@@ -1,0 +1,99 @@
+{
+ "id": "effectslayouts-blog:2015-06-greer-amps-sucker-punch",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with populated board, colour wiring diagram, underside and etch PCB; counted from the populated board. JFET into an LM386 with a 100K trimmer on the board; the transistor type (J201) is printed only on the wiring diagram.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100K",
+   "TRIM",
+   ""
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "J201",
+   "Q",
+   "JFET; type printed on the wiring diagram"
+  ],
+  [
+   "×1",
+   "LM386",
+   "IC",
+   ""
+  ],
+  [
+   "Gain",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A250K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

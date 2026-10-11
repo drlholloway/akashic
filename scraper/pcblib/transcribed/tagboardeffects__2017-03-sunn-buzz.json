@@ -1,0 +1,108 @@
+{
+ "id": "tagboardeffects:2017-03-sunn-buzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single small 14x11 vero of the Sunn Buzz SB-1G, powered from +1.5V. All values large and clear.",
+ "uncertain": [
+  "2uF electrolytic x2 (centre and right): printed clearly, unusual value",
+  "24k (column G): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "15k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "27k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "24k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "2N2923",
+   "Q",
+   "Q1-Q3; legend: Try: BC183, BC548"
+  ],
+  [
+   "Volume",
+   "A50K",
+   "POT",
+   ""
+  ],
+  [
+   "Buzz",
+   "A5K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

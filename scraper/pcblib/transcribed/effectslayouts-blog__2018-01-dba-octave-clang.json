@@ -1,0 +1,93 @@
+{
+ "id": "effectslayouts-blog:2018-01-dba-octave-clang",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with board-mounted pots, colour wiring diagram, underside and etched PCB; counted from the populated board. The legend gives D1-2 only as 'germanium', no part number.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "62K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "910K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "?",
+   "D",
+   "value not given, legend says germanium"
+  ],
+  [
+   "D2",
+   "?",
+   "D",
+   "value not given, legend says germanium"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "741",
+   "IC",
+   "op-amp, printed 741"
+  ],
+  [
+   "×1",
+   "42TM002",
+   "XFM",
+   "audio transformer"
+  ],
+  [
+   "Tone",
+   "B250K",
+   "POT",
+   "printed 250K Lin"
+  ],
+  [
+   "Gain",
+   "B1M",
+   "POT",
+   "printed 1M Lin"
+  ],
+  [
+   "Volume",
+   "B10K",
+   "POT",
+   "printed 10K Lin"
+  ]
+ ],
+ "source": "layout"
+}

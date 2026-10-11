@@ -1,0 +1,131 @@
+{
+ "id": "dirtbox:2019-08-inga-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 14x10 stripboard, the fuzz section of the Inga Fuzz Wah; positive-ground circuit with two PNP silicon transistors (no type given) and one 50K trimmer. R7 is printed as a designator only; the legend gives its stock value.",
+ "uncertain": [
+  "R7 at column 4, rows F-H: no value on the part; legend says stock value is 13K and suggests a jumper or a small value resistor"
+ ],
+ "rows": [
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "39K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R7",
+   "13K",
+   "R",
+   "stock value per legend; legend: try a jumper or a small value resistor"
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "3.3nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "50K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Q1",
+   "PNP Silicon",
+   "Q",
+   "type not given"
+  ],
+  [
+   "Q2",
+   "PNP Silicon",
+   "Q",
+   "type not given"
+  ],
+  [
+   "Fuzz",
+   "B2K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,111 @@
+{
+ "id": "tagboardeffects:2013-01-madbean-lavache",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard 11x10, populated view left and cuts-and-links view right. Boost and Shape switches off board.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "3K3",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "3M3",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N3565",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "Z1",
+   "BAT46",
+   "D",
+   ""
+  ],
+  [
+   "Z2",
+   "BAT46",
+   "D",
+   ""
+  ],
+  [
+   "Z3",
+   "BAT46",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Boost",
+   "SPST on/on",
+   "SW",
+   "as printed"
+  ],
+  [
+   "Shape",
+   "SPDT on/off/on",
+   "SW",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,105 @@
+{
+ "id": "dirtbox:2019-07-blog-post_8",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 14x9 stripboard for the Walco Fuzz Tone Generator: two transistors, one pot; the 470pF ceramic and the 100uF can overlap in the drawing but both read clearly.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "820K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "560K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N3904",
+   "Q",
+   "legend: 2N3904, PN2222, BC547A etc.; 2SC828 in original"
+  ],
+  [
+   "Q2",
+   "2N3904",
+   "Q",
+   "legend: 2N3904, PN2222, BC547A etc.; 2SC828 in original"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Fuzz Increase",
+   "B50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

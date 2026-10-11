@@ -1,0 +1,99 @@
+{
+ "id": "effectslayouts-blog:2014-11-mxr-distortion",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with board-mounted pots, shown as populated board, underside, etched PCB and wiring diagram; counted from the populated board, diagram agrees. Legend says the 1uF caps are tantalum, though two of the four are drawn as film boxes; the 10uF is also drawn as a box, not a can.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.5M",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "1uF",
+   "C",
+   "tantalum per legend; two drawn as tantalum beads, two as film boxes"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "drawn as a box capacitor"
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10pF",
+   "C",
+   ""
+  ],
+  [
+   "IC1",
+   "LM741",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N34A",
+   "D",
+   "legend: 1N34a, 1N914, etc"
+  ],
+  [
+   "D2",
+   "1N34A",
+   "D",
+   "legend: 1N34a, 1N914, etc"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   "printed 4001"
+  ],
+  [
+   "Distortion",
+   "C500K",
+   "POT",
+   "printed 500K Rev log"
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   "printed 100K Log"
+  ]
+ ],
+ "source": "layout"
+}

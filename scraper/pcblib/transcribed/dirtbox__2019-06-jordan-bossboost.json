@@ -1,0 +1,105 @@
+{
+ "id": "dirtbox:2019-06-jordan-bossboost",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 14x10 vero board, two NPN transistors described by gain rather than a fixed type, two off-board pots.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "680K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "2N3904",
+   "Q",
+   "Medium gain NPN Silicon, try 2N3904, 2N5088, BC547B etc.; 2N3397 in original"
+  ],
+  [
+   "Q2",
+   "2N2222",
+   "Q",
+   "Medium to low gain NPN silicon, Try 2N2222, 2B4401 (sic), BC546B etc.; 2N3712 in original"
+  ],
+  [
+   "Bass",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Treble",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

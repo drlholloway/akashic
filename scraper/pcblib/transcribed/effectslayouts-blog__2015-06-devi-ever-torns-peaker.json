@@ -1,0 +1,93 @@
+{
+ "id": "effectslayouts-blog:2015-06-devi-ever-torns-peaker",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Pictures 1 and 2 are the schematic (full size and thumbnail); read the third, the 'Torn's Peaker and Aenima, US, & Never Drive' perfboard layout (populated board, wiring diagram, underside, PCB); the fourth is its thumbnail. Values are for the Torn's Peaker as drawn; legend mods: * 10K becomes 100K for Aenima / 220k for US, ** 100nF becomes 10nF for US, parts marked o are removed for US, flip Q1,4 for Never Drive.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   "one marked *: 100K for Aenima, 220k for US"
+  ],
+  [
+   "×3",
+   "100K",
+   "R",
+   "two marked o: remove for US"
+  ],
+  [
+   "×2",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   "one marked **: 10nF for US"
+  ],
+  [
+   "×2",
+   "1nF",
+   "C",
+   "one marked o: remove for US"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N2222A",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q4",
+   "2N2222A",
+   "Q",
+   ""
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Texture",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "dirtbox:2019-06-conrad-buzz-box-volume-expander",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 12x12 stripboard, PNP germanium fuzz with positive ground. Legend gives no specific diode type for D1, only 'Germanium'.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "150nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "Germanium",
+   "D",
+   "legend: Germanium, no type given"
+  ],
+  [
+   "Q1",
+   "RCA2613",
+   "Q",
+   "or other PNP germanium"
+  ],
+  [
+   "Q2",
+   "RCA2613",
+   "Q",
+   "or other PNP germanium"
+  ],
+  [
+   "Buzz",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,149 @@
+{
+ "id": "dirtbox:2019-06-apocalypse-audio-h-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 14x11 vero board, positive ground. Only two transistors (Q1, Q2) are drawn although the legend says 'Q1-Q3: GT309'. The legend names the output pot Volume while the board wire label says Level; the legend gives 'Gate & Gain: 100kB' as two pots.",
+ "uncertain": [
+  "Transistor count: legend says Q1-Q3 GT309 but only Q1 and Q2 are drawn on the board; two listed"
+ ],
+ "rows": [
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "39K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "150pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "GT309",
+   "Q",
+   "legend: Q1-Q3: GT309"
+  ],
+  [
+   "Q2",
+   "GT309",
+   "Q",
+   "legend: Q1-Q3: GT309"
+  ],
+  [
+   "D1",
+   "Germanium",
+   "D",
+   "type not given"
+  ],
+  [
+   "Gate",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   "wire label on board: Level"
+  ],
+  [
+   "Switch",
+   "SPDT on/off/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

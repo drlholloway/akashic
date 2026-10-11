@@ -1,0 +1,75 @@
+{
+ "id": "dirtbox:2024-12-death-by-audio-evil-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 19x16 stripboard: six MPSA05, four zeners and only three resistor values. One off-board DPDT toggle.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×6",
+   "910K",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "180K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×7",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×6",
+   "MPSA05",
+   "Q",
+   "Q1-Q6"
+  ],
+  [
+   "×4",
+   "1N5227B",
+   "D",
+   "D1-D4, zener"
+  ],
+  [
+   "D5",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Output",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "DPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,161 @@
+{
+ "id": "effectslayouts-blog:2017-07-jon-pattons-clipper-ship",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout drawn four times (populated board, colour wiring diagram, underside, etched PCB); counted from the populated board and confirmed against the diagram. The legend gives Q1 only as 'NPN*' and D1-3 as 'Germanium*' (see the post description); D4 is drawn but not named in the legend.",
+ "uncertain": [
+  "D4 (row K, column 8, next to D3): drawn as a diode but the legend only covers D1-3, so its type is not given"
+ ],
+ "rows": [
+  [
+   "×5",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "270Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "560Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "1uF",
+   "C",
+   "film box"
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "Germanium",
+   "D",
+   "legend: D1-3 Germanium*, see description"
+  ],
+  [
+   "D2",
+   "Germanium",
+   "D",
+   "legend: D1-3 Germanium*, see description"
+  ],
+  [
+   "D3",
+   "Germanium",
+   "D",
+   "legend: D1-3 Germanium*, see description"
+  ],
+  [
+   "D4",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "Q1",
+   "NPN",
+   "Q",
+   "legend: NPN*, see description"
+  ],
+  [
+   "Q2",
+   "2N5457",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q3",
+   "2N5457",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Gain",
+   "C5K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

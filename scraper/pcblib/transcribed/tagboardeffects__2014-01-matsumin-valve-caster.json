@@ -1,0 +1,75 @@
+{
+ "id": "tagboardeffects:2014-01-matsumin-valve-caster",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Two alternative versions of the same circuit, MOJO (14x9, box caps) and COMPACT (10x6), each with a bare board below; the first (MOJO) is read, and the COMPACT board carries the same values. The 12AU7 tube is off board, wired by pin number.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Tube",
+   "12AU7",
+   "OTHER",
+   "vacuum tube, off board"
+  ],
+  [
+   "Gain",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

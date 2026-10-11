@@ -1,0 +1,301 @@
+{
+ "id": "tagboardeffects:2015-11-schumann-pll",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard 31 x 34 with the populated board on the left and cuts/links on the right. Bipolar supply on board (317T and 337T regulators with a 10K trimmer each, fed from 12V AC). Two 12-way rotaries for Multiplier and Divider; an external drone footswitch jack and an indicator lamp are wired off board and not listed.",
+ "uncertain": [
+  "20n ceramic at the top, right of the 4046: printed clearly, unusual value",
+  "470n drawn as an electrolytic can right of the 33u, lower right: printed clearly as 470n, unusual for a can (could be meant as 470u)",
+  "C3 is given only as a range in the legend (1uF up to 100uF)"
+ ],
+ "rows": [
+  [
+   "×6",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "200K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "240R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "120R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "20n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470n",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "2u2",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "33u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "470u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C1",
+   "10uF",
+   "C",
+   "bipolar (B.P.)"
+  ],
+  [
+   "C2",
+   "10uF",
+   "C",
+   "bipolar (B.P.)"
+  ],
+  [
+   "C3",
+   "1uF",
+   "C",
+   "electrolytic; legend: 1uF up to 100uF"
+  ],
+  [
+   "×6",
+   "1N4001",
+   "D",
+   "D1-D6"
+  ],
+  [
+   "IC1",
+   "CD40106BE",
+   "IC",
+   "or MM74C14N"
+  ],
+  [
+   "×1",
+   "4046BCN",
+   "IC",
+   "printed 4046 on the board"
+  ],
+  [
+   "×2",
+   "4017BE",
+   "IC",
+   ""
+  ],
+  [
+   "×1",
+   "TL074",
+   "IC",
+   ""
+  ],
+  [
+   "×1",
+   "LM660CN",
+   "IC",
+   "printed LM660 on the board"
+  ],
+  [
+   "×1",
+   "LM317T",
+   "IC",
+   "regulator, printed 317T"
+  ],
+  [
+   "×1",
+   "LM337T",
+   "IC",
+   "regulator, printed 337T"
+  ],
+  [
+   "×2",
+   "10K",
+   "TRIM",
+   "V+ and V- adjust"
+  ],
+  [
+   "Master",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "SquareWave",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Multiplier",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Divider",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "LagTime",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Trigger",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "WaveShape",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "LoopTrack",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Response",
+   "B2M",
+   "POT",
+   ""
+  ],
+  [
+   "PreAmp",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Multiplier Sw",
+   "1P12T rotary",
+   "SW",
+   ""
+  ],
+  [
+   "Divider Sw",
+   "1P12T rotary",
+   "SW",
+   ""
+  ],
+  [
+   "LoopSpeed",
+   "SPDT on/off/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Multiplier Phase",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Divider Phase",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Con",
+   "SPST",
+   "SW",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,99 @@
+{
+ "id": "tagboardeffects:2012-06-npn-silicon-fuzz-face-germanium",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard 17 x 9 with four NPN silicon transistors (Q1-Q4, no type given) and two on-board trimmers whose value is not printed; populated view on top, bare cuts/links view below.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "330R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2u2",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "20u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "?",
+   "TRIM",
+   "value not given; legend suggests 10 or 20K, selected to the gain of the transistors"
+  ],
+  [
+   "Q1",
+   "NPN Silicon",
+   "Q",
+   "type not given"
+  ],
+  [
+   "Q2",
+   "NPN Silicon",
+   "Q",
+   "type not given"
+  ],
+  [
+   "Q3",
+   "NPN Silicon",
+   "Q",
+   "type not given"
+  ],
+  [
+   "Q4",
+   "NPN Silicon",
+   "Q",
+   "type not given"
+  ],
+  [
+   "Fuzz",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Bias",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,57 @@
+{
+ "id": "tagboardeffects:2014-01-providence-stampede-od-sov-2",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "The cached image is the Bipolar Voltage Converter daughterboard (9x11, LT1054 charge pump giving about +/-17V) from the Stampede OD post, not the overdrive board itself. Populated board left, bare board right.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC",
+   "LT1054",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "D4",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "D5",
+   "1N5817",
+   "D",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

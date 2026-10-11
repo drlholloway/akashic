@@ -1,0 +1,105 @@
+{
+ "id": "dirtbox:2023-07-fdeck-broughton-hybrid-hpf",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 17x15 stripboard with two dual op-amps; values printed on every part, legend names the ICs, diode and pots. No bare board view.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "120k",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "20k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "13k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "5k1",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100R",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "82n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL072",
+   "IC",
+   "TL072 or equivalent"
+  ],
+  [
+   "IC2",
+   "TL072",
+   "IC",
+   "TL072 or equivalent"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "A50K",
+   "POT",
+   ""
+  ],
+  [
+   "HP",
+   "A100K",
+   "POT",
+   "dual"
+  ]
+ ],
+ "source": "layout"
+}

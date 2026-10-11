@@ -1,0 +1,123 @@
+{
+ "id": "tagboardeffects:2016-02-montarbo-sinfhoton-highly-modified",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 13x14 stripboard (Montarbo Synfhoton, later version) with two off-board switch drawings; a 100k resistor is drawn across the lugs of the Fuzz switch SW2 and is counted with the board's 100k.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100k",
+   "R",
+   "one on the board, one across the lugs of SW2"
+  ],
+  [
+   "×1",
+   "4.7k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×4",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "1N4148",
+   "D",
+   "D1-D4: Si (try 1N4148, 1N914)"
+  ],
+  [
+   "Q1",
+   "BC149",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "BC149",
+   "Q",
+   ""
+  ],
+  [
+   "Volume",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Bass",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Treble",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "SW1",
+   "SPST",
+   "SW",
+   "Focus switch"
+  ],
+  [
+   "SW2",
+   "DPDT on/off/on",
+   "SW",
+   "Fuzz switch, legend: DPDT On-None-On"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,69 @@
+{
+ "id": "tagboardeffects:2010-07-zvex-super-hard-on-updated-version",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single small populated vero board (12 x 9) with one Boost pot; one BS170 and one unnumbered zener diode.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "5K1",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "9V1 zener",
+   "D",
+   "legend: Diode is 9V1 zener"
+  ],
+  [
+   "×1",
+   "BS170",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "Boost",
+   "C5K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

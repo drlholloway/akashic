@@ -1,0 +1,129 @@
+{
+ "id": "tagboardeffects:2012-09-anderton-super-tone-control",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 17 x 16 with populated board and a bare cuts/links view; state-variable filter on a TL074 with an ICL7660 charge pump. Frequency is a dual-gang pot; the Resonance High/Low switch wires to Sw1/Sw2.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "33R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "68p",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL074",
+   "IC",
+   "TL074 or similar"
+  ],
+  [
+   "IC2",
+   "ICL7660SCPA",
+   "IC",
+   ""
+  ],
+  [
+   "High Pass",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Low Pass",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Band Pass",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Resonance",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Frequency",
+   "B10K",
+   "POT",
+   "dual"
+  ],
+  [
+   "Resonance High / Low",
+   "SPST",
+   "SW",
+   "2 position"
+  ]
+ ],
+ "source": "layout"
+}

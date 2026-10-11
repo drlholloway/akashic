@@ -1,0 +1,123 @@
+{
+ "id": "tagboardeffects:2017-05-j-d-barbato-buttercup-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "19x11 vero drawn twice (populated, then bare with cuts and links); read from the populated view. Three transistors drawn, no designators.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "33nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "3.3nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "×3",
+   "AC187",
+   "Q",
+   "AC187 or similar NPN Ge"
+  ],
+  [
+   "Gain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Butter",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "DPDT on/on",
+   "SW",
+   "printed as 2PDT On-On"
+  ]
+ ],
+ "source": "layout"
+}

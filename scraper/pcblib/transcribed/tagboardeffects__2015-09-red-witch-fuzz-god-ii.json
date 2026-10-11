@@ -1,0 +1,156 @@
+{
+ "id": "tagboardeffects:2015-09-red-witch-fuzz-god-ii",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 14 x 11, populated board above a bare cuts-and-links view; read from the populated board. Two transistors labelled BC109C (top) and BC109B (bottom), a Bias trimmer; the 470R and 100R are drawn semi-transparent. R1 is given in the legend as 100K (test lower values).",
+ "uncertain": [
+  "470R next to the Bias trimmer: drawn faded over a track cut, read as 470R",
+  "100R right of the 1n: drawn faded, read as 100R"
+ ],
+ "rows": [
+  [
+   "×3",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "180R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470R",
+   "R",
+   "drawn semi-transparent"
+  ],
+  [
+   "×1",
+   "100R",
+   "R",
+   "drawn semi-transparent"
+  ],
+  [
+   "×1",
+   "1M5",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "R1",
+   "100K",
+   "R",
+   "test lower values"
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.2n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "56p",
+   "C",
+   "ceramic"
+  ],
+  [
+   "×1",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "2u2",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "BC109C",
+   "Q",
+   ""
+  ],
+  [
+   "×1",
+   "BC109B",
+   "Q",
+   ""
+  ],
+  [
+   "Bias",
+   "10K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Fuzz",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Sputter",
+   "A25K",
+   "POT",
+   ""
+  ],
+  [
+   "Wrath",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Gain Boost",
+   "SPST",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Treble Boost",
+   "SPST",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Wrath",
+   "DPDT",
+   "SW",
+   "footswitch"
+  ]
+ ],
+ "source": "layout"
+}

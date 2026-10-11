@@ -1,0 +1,99 @@
+{
+ "id": "dirtbox:2019-08-top-gear-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 11x9 stripboard, two BC109 transistors, two pots (Boost printed as '250 OhmB').",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC109",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "BC109",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Boost",
+   "B250Ω",
+   "POT",
+   "printed '250 OhmB'"
+  ],
+  [
+   "Volume",
+   "A22K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

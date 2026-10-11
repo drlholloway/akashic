@@ -1,0 +1,99 @@
+{
+ "id": "dirtbox:2021-08-blackhawk-amplifiers-gandalf-octave-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 16x16 stripboard with an on-board transformer (TR1) and two on-board trimmers labelled Blend and Tone; Volume is an off-board dual-gang pot. C6 is only fitted with the LM308 (33pF compensation cap).",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C6",
+   "33pF",
+   "C",
+   "external compensation cap, only for LM308"
+  ],
+  [
+   "IC1",
+   "LM741",
+   "IC",
+   "LM741 or LM308N"
+  ],
+  [
+   "×2",
+   "Germanium",
+   "D",
+   "D1, D2; Germanium or Schottky"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "TR1",
+   "42TL022",
+   "XFM",
+   ""
+  ],
+  [
+   "Blend",
+   "100K",
+   "TRIM",
+   "on board"
+  ],
+  [
+   "Tone",
+   "10K",
+   "TRIM",
+   "on board"
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   "dual"
+  ]
+ ],
+ "source": "layout"
+}

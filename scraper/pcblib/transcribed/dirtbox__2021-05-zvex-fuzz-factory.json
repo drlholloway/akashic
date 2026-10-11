@@ -1,0 +1,111 @@
+{
+ "id": "dirtbox:2021-05-zvex-fuzz-factory",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 14x8 stripboard with one silicon and two germanium transistors and five pots.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "5.1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "AC128",
+   "Q",
+   "AC128, 2N404 or other PNP Ge"
+  ],
+  [
+   "Q3",
+   "AC128",
+   "Q",
+   "AC128, 2N404 or other PNP Ge"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   "1n5817/1N4001"
+  ],
+  [
+   "Comp",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Drive",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Gate",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Stab",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B5K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

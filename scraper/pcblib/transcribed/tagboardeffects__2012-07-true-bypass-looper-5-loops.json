@@ -1,0 +1,21 @@
+{
+ "id": "tagboardeffects:2012-07-true-bypass-looper-5-loops",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Off-board wiring diagram for a 5-loop true bypass looper with tuner mute and buffer switches; no values are printed anywhere. The small 4 x 3 buffer board is drawn bare (two cuts, no parts). Seven unlabelled LED resistors and seven 3PDT footswitches, which are the pedal's controls, are listed; the seven red indicator LEDs are drawn but not typed.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×7",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×7",
+   "3PDT",
+   "SW",
+   "footswitch: Tuner mute, Buffer, Loop 1-5"
+  ]
+ ],
+ "source": "layout"
+}

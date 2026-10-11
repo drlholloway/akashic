@@ -1,0 +1,35 @@
+{
+ "id": "tagboardeffects:2013-01-cable-tester",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "A switchable cable tester, not an effect: a 4x3 stripboard with two resistors, two off-board 5mm green LEDs and two six-lug toggle switches wired to four jacks. No bare board view.",
+ "uncertain": [
+  "The two switches are drawn with six lugs and the legend says only 'On-On type'; entered as DPDT on/on"
+ ],
+ "rows": [
+  [
+   "×2",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "D1",
+   "5mm green",
+   "LED",
+   "off-board"
+  ],
+  [
+   "D2",
+   "5mm green",
+   "LED",
+   "off-board"
+  ],
+  [
+   "×2",
+   "DPDT on/on",
+   "SW",
+   "toggle; legend: Switches are On-On type"
+  ]
+ ],
+ "source": "layout"
+}

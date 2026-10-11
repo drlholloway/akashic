@@ -1,0 +1,95 @@
+{
+ "id": "dirtbox:2019-07-dwarcraft-devices-robot-devil-w-mods",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 17x13 stripboard with a CD4049UBE and a CD4040, values printed on the parts; three pots and one SPDT toggle.",
+ "uncertain": [
+  "1uF at column 9 row L: drawn lying flat as a translucent round body over a track cut, taken as an electrolytic but the type is not certain"
+ ],
+ "rows": [
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "3.3M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "CD4049UBE",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "CD4040",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Fuzz",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Octave",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Starve",
+   "B2K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

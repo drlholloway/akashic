@@ -1,0 +1,131 @@
+{
+ "id": "tagboardeffects:2011-04-mi-audio-crunch-box",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "MI Audio Crunch Box V1, 19x11 vero with a populated board, three pots drawn above it and a bare cuts/links view. D1 and D2 are drawn as round red LEDs on the board; the legend does not name them.",
+ "uncertain": [
+  "D1 and D2: drawn as round red LED symbols, no type printed anywhere"
+ ],
+ "rows": [
+  [
+   "×3",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "39n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2u2",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "LM833",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "LED",
+   "LED",
+   "drawn as red LED, type not given"
+  ],
+  [
+   "D2",
+   "LED",
+   "LED",
+   "drawn as red LED, type not given"
+  ],
+  [
+   "Gain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "C10K",
+   "POT",
+   "printed 10K Rev Log"
+  ],
+  [
+   "Vol",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

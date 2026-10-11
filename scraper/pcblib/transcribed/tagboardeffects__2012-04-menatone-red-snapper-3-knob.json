@@ -1,0 +1,93 @@
+{
+ "id": "tagboardeffects:2012-04-menatone-red-snapper-3-knob",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 16 x 11 with the populated board above a bare cuts-and-links view; counted from the populated board only. One dual op amp, three clipping diodes, one axial and one radial 47u.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×5",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100p",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "RC4558P",
+   "IC",
+   ""
+  ],
+  [
+   "×3",
+   "1N914",
+   "D",
+   "D1, D2, D3"
+  ],
+  [
+   "Gain",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Bite",
+   "B20K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A250K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

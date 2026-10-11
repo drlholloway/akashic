@@ -1,0 +1,120 @@
+{
+ "id": "dirtbox:2019-12-tyco-brace-parapedal",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 16x16 stripboard wah with two dual op-amps; both chips are labelled IC1 on the board, the legend says IC1-IC2: MC1458. The wah pot is a dual-gang 10kB (lugs Wah 1-6).",
+ "uncertain": [
+  "650K at column 4, rows I-K: printed clearly, unusual value",
+  "33uF electrolytic at columns 2-3, rows L-M: the first digit is partly clipped by the can outline, reads 33uF"
+ ],
+ "rows": [
+  [
+   "×3",
+   "200Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "16K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "650K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "68nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "MC1458",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "MC1458",
+   "IC",
+   "labelled IC1 on the board"
+  ],
+  [
+   "D1",
+   "1N270",
+   "D",
+   ""
+  ],
+  [
+   "Wah",
+   "B10K",
+   "POT",
+   "dual; dual gang wah pot"
+  ]
+ ],
+ "source": "layout"
+}

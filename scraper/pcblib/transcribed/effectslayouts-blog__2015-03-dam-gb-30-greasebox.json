@@ -1,0 +1,105 @@
+{
+ "id": "effectslayouts-blog:2015-03-dam-gb-30-greasebox",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout titled D*A*M GB-80 GreaseBox (three germanium transistors, positive ground), with underside view, a colour wiring diagram and an etched PCB repeating the same parts; counted from the populated perfboard. Transistor and D1 types are given only as 'Germanium'.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "20K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "15nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "Germanium",
+   "Q",
+   "type not given; legend: Q1-3: Germanium"
+  ],
+  [
+   "Q2",
+   "Germanium",
+   "Q",
+   "type not given; legend: Q1-3: Germanium"
+  ],
+  [
+   "Q3",
+   "Germanium",
+   "Q",
+   "type not given; legend: Q1-3: Germanium"
+  ],
+  [
+   "D1",
+   "Germanium",
+   "D",
+   "type not given; legend: D1: Germanium"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   "printed 4001"
+  ],
+  [
+   "Sustain",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,117 @@
+{
+ "id": "tagboardeffects:2014-04-npn-fuzz-face-with-bmp-tone-stack",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero 12x9, populated board above the bare cuts/links view, with a tone-stack frequency response plot on the right. The legend gives no transistor type, only 'NPN silicon (check orientation)'.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "8K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "39K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "2u2",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "NPN silicon",
+   "Q",
+   "type not given; legend: Transistors are NPN silicon (check orientation)"
+  ],
+  [
+   "Q2",
+   "NPN silicon",
+   "Q",
+   "type not given; legend: Transistors are NPN silicon (check orientation)"
+  ],
+  [
+   "Fuzz",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

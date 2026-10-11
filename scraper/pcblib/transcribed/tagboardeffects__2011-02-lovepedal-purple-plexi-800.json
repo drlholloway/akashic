@@ -1,0 +1,102 @@
+{
+ "id": "tagboardeffects:2011-02-lovepedal-purple-plexi-800",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout, 17 x 10, populated board above a bare cuts view. One LM386, one Schottky diode, three pots named in the legend.",
+ "uncertain": [
+  "370p small ceramic at lower left next to 2M2: printed clearly, unusual value (may be meant as 470p)",
+  "1K74 at top centre: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "10R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K74",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330R",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "4n7",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "370p",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "BAT46",
+   "D",
+   "BAT46 or similar Schottky"
+  ],
+  [
+   "IC",
+   "JRC386",
+   "IC",
+   "JRC386 / LM386"
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Frequency",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "B1K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

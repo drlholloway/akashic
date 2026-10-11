@@ -1,0 +1,69 @@
+{
+ "id": "tagboardeffects:2013-02-blue-plate-special",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "11x8 vero, populated board on top and a bare cuts/links view below; one germanium NPN transistor and a 100K trimmer drawn as an outlined box on the board.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "180K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.9K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "150pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100K",
+   "TRIM",
+   ""
+  ],
+  [
+   "×1",
+   "OC140",
+   "Q",
+   "Ge NPN; try OC140, CV7112, AC187, AC127, etc."
+  ],
+  [
+   "Volume",
+   "A500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

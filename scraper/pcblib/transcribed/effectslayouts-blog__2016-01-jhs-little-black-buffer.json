@@ -1,0 +1,45 @@
+{
+ "id": "effectslayouts-blog:2016-01-jhs-little-black-buffer",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "First two pictures are the schematic (large and small); the third (and its small copy, the fourth) is the storyboardist perfboard layout with wiring diagram, underside and etched PCB. Read from the populated perfboard, confirmed against the wiring diagram. No pots or switches.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×5",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

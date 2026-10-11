@@ -1,0 +1,87 @@
+{
+ "id": "tagboardeffects:2017-07-standard-hemmo-fuzzbooster-w-mods",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small 12x10 vero, populated board on the left and bare cuts/links board on the right, with wiring for a 2PDT bypass switch and a 2PDT mode switch (boost / fuzz) below. All values large and legible.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   "D2, D3"
+  ],
+  [
+   "Boost",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Fuzz",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Mode",
+   "DPDT",
+   "SW",
+   "Mode switch 2PDT, selects boost or fuzz"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,181 @@
+{
+ "id": "dirtbox:2021-03-dunwich-amplification-hybrid-cthulhu-3",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 18x12 stripboard, 3-knob version. C1 and C2 are drawn without a value (legend gives ranges); both Q5 (Si transistor wired as a diode) and D3 (germanium diode) are drawn, the legend offering them as alternatives.",
+ "uncertain": [
+  "845Ω next to Q2 (column 7): printed clearly, unusual value",
+  "Q5 / D3: legend reads 'Q5: NPN Si, TO-18 case (wired as diode) or D3 germanium diode' - both are drawn on the board, probably only one is fitted",
+  "470nF at column 11 is drawn as a small ceramic disc; printed clearly as nF"
+ ],
+ "rows": [
+  [
+   "×1",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "845Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "10K",
+   "TRIM",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "820pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C1",
+   "?",
+   "C",
+   "value not given; legend: values between 33nF to 2,2uF"
+  ],
+  [
+   "C2",
+   "?",
+   "C",
+   "value not given; legend: values between 1nF-15nF"
+  ],
+  [
+   "Q1",
+   "2N2219A",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N1306",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "BS170",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "Q4",
+   "2N2219A",
+   "Q",
+   ""
+  ],
+  [
+   "Q5",
+   "NPN Si",
+   "Q",
+   "TO-18 case, wired as diode; or D3 germanium diode"
+  ],
+  [
+   "D1",
+   "3mm red LED",
+   "LED",
+   "on board"
+  ],
+  [
+   "D2",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "Germanium",
+   "D",
+   "alternative to Q5"
+  ],
+  [
+   "Fuzz",
+   "C1K",
+   "POT",
+   ""
+  ],
+  [
+   "Depth",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   "some units have B1M"
+  ]
+ ],
+ "source": "layout"
+}

@@ -60,7 +60,9 @@ so restart it after rebuilding.
   bundles) and dedupe regional or older-version listings of the same board.
 - New vendor: adapter, `vendors/__init__.py`, `db.py`, `app/src/lib/types.ts`, README table,
   CHANGELOG line. Vendor kinds: `shop` (buy the PCB), `projects` (order at a fab), `repo` (download the
-  gerbers from a code repository), `blog` (read the post), `archive` (open the schematic).
+  gerbers from a code repository), `blog` (read the post), `archive` (open the schematic), `layout` (build from a vero, perfboard,
+  tagboard or turret drawing; `vendors/blogger.py` is the shared base, `layouts.py` reads the legend).
+  A layout the same vendor publishes beside its PCB is attached to that circuit (`layout.also`), not a second entry.
 - OCR is best effort and marked `OCR` or `from schematic` in the row notes; never let it
   overwrite a row that came from a text table.
 - Commit only when asked. American spelling in the app.

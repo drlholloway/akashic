@@ -1,0 +1,87 @@
+{
+ "id": "tagboardeffects:2013-01-ea-parallel-universe-old-version",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "14x9 stripboard around one LM386, populated view on top and the cuts-and-links view below; five pots and two toggles off board.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "LM386",
+   "IC",
+   ""
+  ],
+  [
+   "Gain",
+   "B2K",
+   "POT",
+   ""
+  ],
+  [
+   "Starve",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Freq",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A5K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Gate",
+   "SPDT",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Osc",
+   "SPST",
+   "SW",
+   "toggle; or use lugs 1&2 of SPDT"
+  ]
+ ],
+ "source": "layout"
+}

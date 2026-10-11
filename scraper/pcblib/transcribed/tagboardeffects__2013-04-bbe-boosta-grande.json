@@ -1,0 +1,101 @@
+{
+ "id": "tagboardeffects:2013-04-bbe-boosta-grande",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "18 x 10 stripboard, populated view on top and a bare cuts/links view below. Single op-amp boost with one pot.",
+ "uncertain": [
+  "1000uF electrolytic at the lower right, below D1: the first digit sits on a link, read as 1000uF by the length of the text; could be 100uF"
+ ],
+ "rows": [
+  [
+   "×3",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.8K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "6.8nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "5.6nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "220uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1000uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL071",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N4004",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "C10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

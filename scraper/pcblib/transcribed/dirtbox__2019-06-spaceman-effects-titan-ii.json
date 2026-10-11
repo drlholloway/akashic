@@ -1,0 +1,131 @@
+{
+ "id": "dirtbox:2019-06-spaceman-effects-titan-ii",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 14x12 vero board, three NPN transistors, two ferrite beads on the board; the legend gives the transistors only as a type with suggestions.",
+ "uncertain": [
+  "4.65K at column 9 rows I-K: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.65K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "27nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "PN2222",
+   "Q",
+   "NPN Silicon Hfe 170-190; Try PN2222, 2N3903, MPSA06 etc."
+  ],
+  [
+   "Q2",
+   "PN2222",
+   "Q",
+   "NPN Silicon Hfe 170-190; Try PN2222, 2N3903, MPSA06 etc."
+  ],
+  [
+   "Q3",
+   "PN2222",
+   "Q",
+   "NPN Silicon Hfe 170-190; Try PN2222, 2N3903, MPSA06 etc."
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "×2",
+   "Ferrite Bead",
+   "L",
+   "FB"
+  ],
+  [
+   "Fuzz",
+   "B2K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

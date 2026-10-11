@@ -1,0 +1,156 @@
+{
+ "id": "tagboardeffects:2018-10-fender-bassman-5f6-preamp",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero 19 x 16, a single populated board with four J201 and three 20k bias trimmers, plus a drawing of the channel toggle. Values are scaled from the valve amp, hence the odd ones.",
+ "uncertain": [
+  "250k resistors x2 (columns 15 and 17, lower right): printed clearly, unusual value",
+  "20nF x4, 25nF x1, 250pF x1 and 250uF x2: printed clearly, unusual values"
+ ],
+ "rows": [
+  [
+   "×3",
+   "820r",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "56k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "68k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "250k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   "ceramic"
+  ],
+  [
+   "×3",
+   "220pF",
+   "C",
+   "ceramic"
+  ],
+  [
+   "×1",
+   "250pF",
+   "C",
+   "ceramic"
+  ],
+  [
+   "×4",
+   "20nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "25nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "250uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "20k",
+   "TRIM",
+   "bias Q1 & Q2 to 6.5V, Q3 to 5V"
+  ],
+  [
+   "Q1",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q2",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q3",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q4",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Treble",
+   "A250K",
+   "POT",
+   ""
+  ],
+  [
+   "Bass",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Mid",
+   "A25K",
+   "POT",
+   "wires labelled Mids"
+  ],
+  [
+   "Gain Normal",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Gain Bright",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Channel",
+   "DPDT on/on/on",
+   "SW",
+   "Bright / Normal input select"
+  ]
+ ],
+ "source": "layout"
+}

@@ -99,6 +99,8 @@ def find_flags(db: sqlite3.Connection, tdb: sqlite3.Connection) -> tuple[list[di
 
     def flag(r, severity, reason, suggestion="", kind="bad value"):
         cid, variant, ref, value, cat, norm, sk, notes, ptype = r
+        if value.strip() == "?" and "by eye" in (notes or ""):
+            return  # a reading by eye of a part the drawing gives no value for ('CLR', an unnamed D3): known, not a misread
         vendor, name, doc_url, url = circ.get(cid, ("?", "?", "", ""))
         flags.append({"vendor": vendor, "vendor_name": vendor_name.get(vendor, vendor), "circuit": cid, "name": name,
                       "page": f"https://akashic.cryptideffects.com/circuit/{cid.replace(':', '-')}", "doc": doc_url or url,

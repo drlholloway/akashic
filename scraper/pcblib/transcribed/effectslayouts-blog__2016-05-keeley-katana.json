@@ -1,0 +1,99 @@
+{
+ "id": "effectslayouts-blog:2016-05-keeley-katana",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "First picture is a JPEG schematic; the second (and its small copy, the third) is the storyboardist perfboard layout with wiring diagram, underside and etched PCB. Read from the populated perfboard, confirmed against the wiring diagram. The charge pump is printed only as '7660'.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "680Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "15nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "7660",
+   "IC",
+   "charge pump, printed as 7660"
+  ],
+  [
+   "Q1",
+   "2N5458",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q2",
+   "2N5458",
+   "Q",
+   "JFET"
+  ],
+  [
+   "×3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Volume",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "DPDT on/on",
+   "SW",
+   "wired to Sw 1, 2, 4, 5"
+  ]
+ ],
+ "source": "layout"
+}

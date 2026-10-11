@@ -1,0 +1,107 @@
+{
+ "id": "dirtbox:2020-12-fuzzlord-effects-void-master",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 14x8 stripboard, two transistors, with two trimmers (20K Bias, 1K Fuzz) drawn on the board at the right edge. C3 has no value on the drawing; the legend says 'Unknown value, probably 220pF'. Level pot is given only as a range, 500k-1m, no taper.",
+ "uncertain": [
+  "22uF electrolytic at col 9 rows G-H: first digit partly hidden by the can's stripe, read as 22uF"
+ ],
+ "rows": [
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "C3",
+   "?",
+   "C",
+   "value not given; legend: Unknown value, probably 220pF"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC108",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "BC109",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Bias",
+   "20K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Fuzz",
+   "1K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Level",
+   "500K",
+   "POT",
+   "legend: 500k-1m, no taper stated"
+  ]
+ ],
+ "source": "layout"
+}

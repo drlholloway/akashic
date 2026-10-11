@@ -1,0 +1,95 @@
+{
+ "id": "tagboardeffects:2013-03-bearfoot-baby-pink-booster",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "13x9 vero board drawn populated and bare, plus the bypass footswitch pin numbering; single JFET booster.",
+ "uncertain": [
+  "14K7 (two, left of centre): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "14K7",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1u",
+   "C",
+   "drawn as film cap"
+  ],
+  [
+   "×1",
+   "100p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5952",
+   "Q",
+   "JFET"
+  ],
+  [
+   "D1",
+   "1N4002",
+   "D",
+   ""
+  ],
+  [
+   "Boost",
+   "C50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,45 @@
+{
+ "id": "tagboardeffects:2012-01-mini-blend-jfet",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small 7x7 vero board, a single JFET buffer for a blend pot; populated view only, one link.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "2N5457",
+   "Q",
+   "JFET; legend: 2N5457 or similar (DSG pinout)"
+  ],
+  [
+   "Blend",
+   "B50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

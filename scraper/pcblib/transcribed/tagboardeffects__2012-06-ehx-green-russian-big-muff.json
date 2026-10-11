@@ -1,0 +1,174 @@
+{
+ "id": "tagboardeffects:2012-06-ehx-green-russian-big-muff",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Pictures 1-2 are a photo of the original pedal. The post has two vero layouts, alternative versions: 'EHX Green Russian Big Muff' (third picture) and 'EHX Green Russian Big Muff V7 1994' (fifth picture, different values); the first/main one was read. The Scooped / Flat / Boosted mids switch inset (3 pos DPDT carrying a 4n7 and a 10n between Tone 3 and Sw1) is drawn as part of the build and its switch and two caps are included.",
+ "uncertain": [
+  "4n in the centre of the board: printed clearly, unusual value",
+  "500p ×3: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×5",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100R",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "39K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "8K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "390K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10n",
+   "C",
+   "one on the board, one on the mids switch"
+  ],
+  [
+   "×1",
+   "4n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4n7",
+   "C",
+   "on the mids switch"
+  ],
+  [
+   "×3",
+   "500p",
+   "C",
+   ""
+  ],
+  [
+   "×5",
+   "1u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5089",
+   "Q",
+   "legend: Transistors were low noise Russian Military, try 2N5089, BC550C or similar"
+  ],
+  [
+   "Q2",
+   "2N5089",
+   "Q",
+   "legend: Transistors were low noise Russian Military, try 2N5089, BC550C or similar"
+  ],
+  [
+   "Q3",
+   "2N5089",
+   "Q",
+   "legend: Transistors were low noise Russian Military, try 2N5089, BC550C or similar"
+  ],
+  [
+   "Q4",
+   "2N5089",
+   "Q",
+   "legend: Transistors were low noise Russian Military, try 2N5089, BC550C or similar"
+  ],
+  [
+   "×4",
+   "1N914",
+   "D",
+   "D1 to D4"
+  ],
+  [
+   "Dx",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Sustain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Mids",
+   "DPDT on/off/on",
+   "SW",
+   "toggle, Scooped / Flat / Boosted mids, 3 pos DPDT"
+  ]
+ ],
+ "source": "layout"
+}

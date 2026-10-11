@@ -1,0 +1,101 @@
+{
+ "id": "effectslayouts-blog:2017-02-lovepedal-dragon-bbb-etc",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small perfboard layout by storyboardist: populated board, colour wiring diagram, bare underside and etched PCB; counted from the populated board. Two transistors (Q1, Q2 on the wiring diagram) with no type given anywhere, and a 10K trimmer on the board.",
+ "uncertain": [
+  "280Ω next to the 33K at columns 14-15: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×1",
+   "280Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   "printed 4001"
+  ],
+  [
+   "Q1",
+   "?",
+   "Q",
+   "value not given"
+  ],
+  [
+   "Q2",
+   "?",
+   "Q",
+   "value not given"
+  ],
+  [
+   "×1",
+   "10K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Blend",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B500Ω",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B1M",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

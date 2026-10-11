@@ -1,0 +1,117 @@
+{
+ "id": "tagboardeffects:2012-05-kay-f1-fuzz-tone",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard 21x11 drawn twice (populated, then cuts and links only). Four transistors and two germanium diodes; a single unnamed 250K linear pot wired as Pot 1/2/3.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×7",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K8",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2n2",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4n7",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "1u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2SC644S",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2SC945",
+   "Q",
+   "or 2SC644S"
+  ],
+  [
+   "Q3",
+   "2SC945",
+   "Q",
+   "or 2SC828R"
+  ],
+  [
+   "Q4",
+   "2SC945",
+   "Q",
+   "or 2SC828R"
+  ],
+  [
+   "D1",
+   "OA90",
+   "D",
+   "germanium"
+  ],
+  [
+   "D2",
+   "OA90",
+   "D",
+   "germanium"
+  ],
+  [
+   "Pot",
+   "B250K",
+   "POT",
+   "the drawing names it only Pot"
+  ]
+ ],
+ "source": "layout"
+}

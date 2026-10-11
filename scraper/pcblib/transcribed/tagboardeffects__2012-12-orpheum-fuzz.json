@@ -1,0 +1,78 @@
+{
+ "id": "tagboardeffects:2012-12-orpheum-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 12 x 10, populated board above a bare cuts-and-links view. PNP germanium fuzz on a -9V supply; the legend says the transistors are unknown Ge PNP and the pot values are a guess from the schematic (Tone 100K log and Volume 1M lin have also been reported).",
+ "uncertain": [
+  "5nF x2 (centre of board): printed clearly, unusual value",
+  "10M below Q1: the top of the resistor is hidden under the transistor, reads 10M"
+ ],
+ "rows": [
+  [
+   "×2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "5nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "15uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "AC128",
+   "Q",
+   "unknown Ge PNP (try AC128)"
+  ],
+  [
+   "Q2",
+   "AC128",
+   "Q",
+   "unknown Ge PNP (try AC128)"
+  ],
+  [
+   "Tone",
+   "B200K",
+   "POT",
+   "guess from the schematic; 100K log reported"
+  ],
+  [
+   "Volume",
+   "B250K",
+   "POT",
+   "guess from the schematic; 1M lin reported"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,144 @@
+{
+ "id": "dirtbox:2024-07-ace-tone-fm-2-fuzzmaster-v2",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 20x18 stripboard with five BJTs (not individually numbered on the board), three diodes and many standing resistors. The board marks the polarity diode D3 while the legend calls it D5.",
+ "uncertain": [
+  "D3 on the board (column 5, rows E-G): the legend lists 'D5: 1N5817' and no D3; taken as the same part",
+  "Which of the five transistors is Q5 is not marked on the board"
+ ],
+ "rows": [
+  [
+   "×3",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1.8K",
+   "R",
+   ""
+  ],
+  [
+   "×7",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×7",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×8",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×4",
+   "2N3904",
+   "Q",
+   "Q1-Q4: 2N3904, 2N4401 etc. (2SC733 in original)"
+  ],
+  [
+   "Q5",
+   "2N5088",
+   "Q",
+   "2N5088, 2N5089 etc. (2SC1000 in original)"
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   "D1, D2; 1N4148/1N914"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   "legend calls it D5"
+  ],
+  [
+   "Fuzz Adjust",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone Select Sw",
+   "SPDT on/on",
+   "SW",
+   "toggle, or DPDT footswitch"
+  ]
+ ],
+ "source": "layout"
+}

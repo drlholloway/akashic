@@ -1,0 +1,51 @@
+{
+ "id": "effectslayouts-blog:2015-12-split-n-blend",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small perfboard layout of a two-JFET splitter/blender, shown as populated board, colour wiring diagram, underside and etched PCB; counted from the populated board. The two transistors are pinned G/S/D but no type is given anywhere.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "×2",
+   "?",
+   "Q",
+   "JFET (G/S/D), value not given"
+  ],
+  [
+   "Blend",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

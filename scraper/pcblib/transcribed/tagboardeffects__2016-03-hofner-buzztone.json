@@ -1,0 +1,83 @@
+{
+ "id": "tagboardeffects:2016-03-hofner-buzztone",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout (20 x 8) with a populated board above a bare cuts/links view; three BC108B in metal cans, pots given without taper.",
+ "uncertain": [
+  "25uF x2 (strips A-C, columns H and N): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×3",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "8.2K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "56K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "25uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC108B",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "BC108B",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "BC108B",
+   "Q",
+   ""
+  ],
+  [
+   "Volume",
+   "100K",
+   "POT",
+   ""
+  ],
+  [
+   "Depth",
+   "25K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

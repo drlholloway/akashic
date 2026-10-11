@@ -1,0 +1,107 @@
+{
+ "id": "dirtbox:2023-10-death-by-audio-assault-system",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 17x15 stripboard, the transistor channel of the Assault System; four transistors, values printed on every part except the LED resistor (CLR).",
+ "uncertain": [
+  "100nF at column 8, rows A-C: drawn as a small yellow ceramic like the 680pF caps, printed clearly as 100nF"
+ ],
+ "rows": [
+  [
+   "×1",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "180K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "910K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×4",
+   "680pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×5",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×4",
+   "2N5088",
+   "Q",
+   "Q1-Q4"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Drive",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Filter",
+   "A250K",
+   "POT",
+   "dual"
+  ],
+  [
+   "Shape",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

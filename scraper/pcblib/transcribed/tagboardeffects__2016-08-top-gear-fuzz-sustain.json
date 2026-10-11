@@ -1,0 +1,93 @@
+{
+ "id": "tagboardeffects:2016-08-top-gear-fuzz-sustain",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 21x9 vero board, no bare view. LM741 fuzz with two clipping diodes.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "4.7k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "330k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "33k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.9M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "LM741",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "Volume",
+   "A10K",
+   "POT",
+   "printed '10k Log'"
+  ],
+  [
+   "Boost",
+   "B10K",
+   "POT",
+   "printed '10k Linear'"
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   "printed '100k Linear'"
+  ]
+ ],
+ "source": "layout"
+}

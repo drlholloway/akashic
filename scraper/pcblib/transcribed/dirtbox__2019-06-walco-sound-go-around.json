@@ -1,0 +1,123 @@
+{
+ "id": "dirtbox:2019-06-walco-sound-go-around",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 19x9 stripboard with a 10K trimmer on the board; four NPN transistors and a dual-gang Rate pot.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "5.6M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "560Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2.7K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "500nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Q1",
+   "2SC828R",
+   "Q",
+   "original had 2SC828R; try any medium gain NPN silicon"
+  ],
+  [
+   "Q2",
+   "2SC828R",
+   "Q",
+   "original had 2SC828R; try any medium gain NPN silicon"
+  ],
+  [
+   "Q3",
+   "2SC828R",
+   "Q",
+   "original had 2SC828R; try any medium gain NPN silicon"
+  ],
+  [
+   "Q4",
+   "2SC828R",
+   "Q",
+   "original had 2SC828R; try any medium gain NPN silicon"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Rate",
+   "B500K",
+   "POT",
+   "dual"
+  ]
+ ],
+ "source": "layout"
+}

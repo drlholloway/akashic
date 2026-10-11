@@ -1,0 +1,123 @@
+{
+ "id": "tagboardeffects:2012-02-hao-rust-driver-from-updated-schematic",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard 18x9, populated view above a bare view. One unnamed 500K Lin pot (lug 2 to output) and a DPDT on/off/on switch carrying two caps (1n, 47n) are drawn off board; the switch caps are counted.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "680p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1n",
+   "C",
+   "on the switch"
+  ],
+  [
+   "×1",
+   "47n",
+   "C",
+   "on the switch"
+  ],
+  [
+   "×1",
+   "56n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC",
+   "MC4558CN",
+   "IC",
+   "try JRC4558, TL072, NE5532 etc"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   "silicon 1N4148 or similar"
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   "silicon 1N4148 or similar"
+  ],
+  [
+   "Pot",
+   "B500K",
+   "POT",
+   "unnamed in the drawing; lug 2 to output"
+  ],
+  [
+   "Switch",
+   "DPDT on/off/on",
+   "SW",
+   "toggle, 3 position"
+  ]
+ ],
+ "source": "layout"
+}

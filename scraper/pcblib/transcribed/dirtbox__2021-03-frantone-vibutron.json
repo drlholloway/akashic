@@ -1,0 +1,173 @@
+{
+ "id": "dirtbox:2021-03-frantone-vibutron",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated stripboard (20x21) with the Rate switch mod; one on-board 100K trimmer with no name. The legend prints 'Depth' twice (100kB and 100kA) while the wire labels name Speed 1-2 and Depth 1-3, so the first is taken as the Speed pot.",
+ "uncertain": [
+  "Speed pot B100K: the legend calls both pots 'Depth' (100kB, then 100kA); assigned the first to Speed and the second to Depth by order, could be the other way round"
+ ],
+ "rows": [
+  [
+   "×9",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "20K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "390Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "7.5K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "91K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×4",
+   "150nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1000uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TLC2262",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "LM741",
+   "IC",
+   ""
+  ],
+  [
+   "IC3",
+   "ICL8038",
+   "IC",
+   ""
+  ],
+  [
+   "Q1",
+   "2N7000",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "TRIM",
+   "unnamed trimmer, lower right"
+  ],
+  [
+   "Speed",
+   "B100K",
+   "POT",
+   "legend prints 'Depth: 100kB'"
+  ],
+  [
+   "Depth",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Shape Sw",
+   "4P3T rotary",
+   "SW",
+   "rotary"
+  ],
+  [
+   "Rate Sw",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

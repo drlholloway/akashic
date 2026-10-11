@@ -1,0 +1,111 @@
+{
+ "id": "dirtbox:2020-12-escobedo-ugly-face",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 19x13 stripboard, one populated view. A large vactrol outline (Opto, VTL5C3) sits on the board; the 'D3' diode symbol printed inside it marks the opto's LED side, not a separate diode. A resistor printed 'CLR' feeds the LED+ wire.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "56K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "JRC386D",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "ICM7555",
+   "IC",
+   "CMOS 555"
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Opto",
+   "VTL5C3",
+   "OPTO",
+   "or home made LDR-LED vactrol"
+  ],
+  [
+   "Sensitivity",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Threshold",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Frequency",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

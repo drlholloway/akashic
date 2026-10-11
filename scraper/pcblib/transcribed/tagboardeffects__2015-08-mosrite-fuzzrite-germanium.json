@@ -1,0 +1,109 @@
+{
+ "id": "tagboardeffects:2015-08-mosrite-fuzzrite-germanium",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "16 x 11 stripboard, populated view above a bare cuts-and-links view. A 7660S charge pump makes the negative supply for two PNP germanium transistors; the 4.7K feeds the LED+ wire.",
+ "uncertain": [
+  "40nF (three of them, columns B, H and N): printed clearly, unusual value",
+  "2nF (two of them, columns H and M): printed clearly, unusual value",
+  "Depth pot 350K reverse audio: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×1",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   "to LED+"
+  ],
+  [
+   "×2",
+   "2nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "40nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "7660S",
+   "IC",
+   "charge pump"
+  ],
+  [
+   "Q1",
+   "2N2613",
+   "Q",
+   "PNP Ge"
+  ],
+  [
+   "Q2",
+   "2N408",
+   "Q",
+   "PNP Ge"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   "series polarity protection 1N5817 or similar"
+  ],
+  [
+   "Volume",
+   "B470K",
+   "POT",
+   ""
+  ],
+  [
+   "Depth",
+   "C350K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

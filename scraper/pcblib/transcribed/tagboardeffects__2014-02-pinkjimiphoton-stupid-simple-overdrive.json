@@ -1,0 +1,75 @@
+{
+ "id": "tagboardeffects:2014-02-pinkjimiphoton-stupid-simple-overdrive",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small 15x8 vero with one NE5534 and three clipping diodes; populated board above a bare cuts-and-links view. No pots or switches are drawn.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4M7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "NE5534",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "1N4148",
+   "D",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

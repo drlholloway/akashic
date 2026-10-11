@@ -1,0 +1,203 @@
+{
+ "id": "effectslayouts-blog:2017-08-jon-pattons-mossy-sloth",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with a colour wiring diagram, underside and etched PCB of the same circuit; counted from the populated board and confirmed against the diagram. An LED sits on the board with no type given; the 1uF is drawn as a box capacitor.",
+ "uncertain": [
+  "Q5-8: the legend prints BC170 but the four parts are drawn with D/G/S pins, so BS170 may be meant"
+ ],
+ "rows": [
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×7",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "drawn as a box capacitor"
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "LED",
+   "?",
+   "LED",
+   "on board, value not given"
+  ],
+  [
+   "Q1",
+   "BC549C",
+   "Q",
+   "BC549C or similar"
+  ],
+  [
+   "Q2",
+   "BC549C",
+   "Q",
+   "BC549C or similar"
+  ],
+  [
+   "Q3",
+   "BC549C",
+   "Q",
+   "BC549C or similar"
+  ],
+  [
+   "Q4",
+   "BC549C",
+   "Q",
+   "BC549C or similar"
+  ],
+  [
+   "Q5",
+   "BC170",
+   "Q",
+   "drawn with D/G/S pins"
+  ],
+  [
+   "Q6",
+   "BC170",
+   "Q",
+   "drawn with D/G/S pins"
+  ],
+  [
+   "Q7",
+   "BC170",
+   "Q",
+   "drawn with D/G/S pins"
+  ],
+  [
+   "Q8",
+   "BC170",
+   "Q",
+   "drawn with D/G/S pins"
+  ],
+  [
+   "Gain",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Bass",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,95 @@
+{
+ "id": "effectslayouts-blog:2016-10-bearfoot-fx-baby-pink-booster",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small populated perfboard with underside, colour wiring diagram and etched PCB of the same circuit; counted from the populated perfboard. Footswitch 1 / Footswitch 2 and LED+ wires go to the bypass switch and are not listed. The 1uF is drawn as a box film capacitor, not a can.",
+ "uncertain": [
+  "14.7K (two, bottom row of vertical resistors): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "2M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "14.7K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4002",
+   "D",
+   "printed 4002"
+  ],
+  [
+   "Q1",
+   "2N5952",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Boost",
+   "C50K",
+   "POT",
+   "printed 50K Rev log"
+  ]
+ ],
+ "source": "layout"
+}

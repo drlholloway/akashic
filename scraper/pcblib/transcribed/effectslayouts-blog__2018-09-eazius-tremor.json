@@ -1,0 +1,129 @@
+{
+ "id": "effectslayouts-blog:2018-09-eazius-tremor",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with a PCB wiring diagram, the underside and an etch mask repeating the same parts; counted from the populated perfboard and confirmed on the diagram. Optical tremolo: an LED on the board faces an LDR, neither given a type; one 50K trimmer on the board.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "1uF",
+   "C",
+   "drawn as box film"
+  ],
+  [
+   "×1",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "330pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   "printed 4001"
+  ],
+  [
+   "×1",
+   "?",
+   "LED",
+   "value not given; on-board LED that lights the LDR"
+  ],
+  [
+   "×1",
+   "?",
+   "OPTO",
+   "LDR, value not given"
+  ],
+  [
+   "×1",
+   "OPA2134",
+   "IC",
+   ""
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "×1",
+   "50K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Depth",
+   "A5K",
+   "POT",
+   ""
+  ],
+  [
+   "Rate",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

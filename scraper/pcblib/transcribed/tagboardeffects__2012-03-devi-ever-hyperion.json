@@ -1,0 +1,69 @@
+{
+ "id": "tagboardeffects:2012-03-devi-ever-hyperion",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "14x7 stripboard with three transistors; populated view above a bare cuts-and-links view.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "2N2907A",
+   "Q",
+   ""
+  ],
+  [
+   "Intense",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

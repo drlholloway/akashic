@@ -1,0 +1,162 @@
+{
+ "id": "dirtbox:2019-07-death-by-audio-fuzz-war-7-transistor",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 22x16 stripboard, seven transistors, 'w. mods' version with a 100K trimmer on the board. Legend says the 120nF, 27K and D3-D4 are optional and that 100nF becomes 680nF for the earliest spec; values entered as drawn.",
+ "uncertain": [
+  "20nF at column 10, strips G-I: printed clearly, unusual value",
+  "120nF at column 20, strips G-I: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×7",
+   "390Ω",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "820K",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "180K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "910K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "27K",
+   "R",
+   "optional per legend"
+  ],
+  [
+   "×9",
+   "100nF",
+   "C",
+   "legend: 680nF for earliest spec"
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "20nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "120nF",
+   "C",
+   "optional per legend"
+  ],
+  [
+   "×1",
+   "100K",
+   "TRIM",
+   ""
+  ],
+  [
+   "D1",
+   "1N34A",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N34A",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "1N34A",
+   "D",
+   "optional per legend"
+  ],
+  [
+   "D4",
+   "1N34A",
+   "D",
+   "optional per legend"
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Q4",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Q5",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Q6",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Q7",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Tone",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "B1M",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

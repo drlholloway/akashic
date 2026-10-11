@@ -1,0 +1,95 @@
+{
+ "id": "dirtbox:2019-06-electro-harmonix-axis-fuzz-foxey-lady-2",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 14x11 stripboard, two-transistor fuzz with two pots.",
+ "uncertain": [
+  "4.7uF small electrolytic at the right edge beside the 100nF: the leading 4 and the F run off the can outline, read as 4,7uF"
+ ],
+ "rows": [
+  [
+   "×3",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "680Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "3.3nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5133",
+   "Q",
+   "legend: Try 2N3904, 2N5088 etc."
+  ],
+  [
+   "Q2",
+   "2N5133",
+   "Q",
+   "legend: Try 2N3904, 2N5088 etc."
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,69 @@
+{
+ "id": "tagboardeffects:2012-05-ehx-screaming-hog",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single small vero layout (11x8) with one transistor; the only picture in the post (504x630). The 12-lug switch drawn below the board is the bypass footswitch wiring (Sw1-Sw12) and is not listed.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "430K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "43K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "390R",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "2n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "3u3",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   "legend: was 2N5133 which will be hard to source, so try 2N5088 as a replacement"
+  ],
+  [
+   "Boost",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,149 @@
+{
+ "id": "effectslayouts-blog:2019-01-friedman-golden-pearl",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with a wiring diagram, underside and etched PCB of the same circuit; counted from the populated perfboard and confirmed against the wiring diagram. D1-2 are 3mm yellow clipping LEDs on the board.",
+ "uncertain": [
+  "Voice and HiCut switches: legend prints 'SPST on/off/on' but each has three lugs (3 2 1), so they are probably SPDT on/off/on"
+ ],
+ "rows": [
+  [
+   "×2",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "39nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "LM833",
+   "IC",
+   ""
+  ],
+  [
+   "×3",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "D1",
+   "3mm yellow LED",
+   "LED",
+   ""
+  ],
+  [
+   "D2",
+   "3mm yellow LED",
+   "LED",
+   ""
+  ],
+  [
+   "Drive",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Voice",
+   "SPST on/off/on",
+   "SW",
+   "toggle, as printed; three lugs drawn"
+  ],
+  [
+   "HiCut",
+   "SPST on/off/on",
+   "SW",
+   "toggle, as printed; three lugs drawn"
+  ]
+ ],
+ "source": "layout"
+}

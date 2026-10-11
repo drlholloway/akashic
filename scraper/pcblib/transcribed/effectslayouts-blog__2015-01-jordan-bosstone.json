@@ -1,0 +1,95 @@
+{
+ "id": "effectslayouts-blog:2015-01-jordan-bosstone",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with the populated board, a colour wiring diagram, the underside and an etched PCB; counted from the populated board and confirmed against the wiring diagram.",
+ "uncertain": [
+  "50pF ceramic between the second 18K column and the right 22nF: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "560K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "50pF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N2222",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N3906",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Attack",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

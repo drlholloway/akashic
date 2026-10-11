@@ -1,0 +1,57 @@
+{
+ "id": "effectslayouts-blog:2019-02-inverting-phase-buffer",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout drawn four ways (populated board, colour wiring diagram, underside, etched PCB); counted from the populated board, confirmed on the diagram. No pots or switches.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "TL072",
+   "IC",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

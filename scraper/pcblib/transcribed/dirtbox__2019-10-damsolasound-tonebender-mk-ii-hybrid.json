@@ -1,0 +1,111 @@
+{
+ "id": "dirtbox:2019-10-damsolasound-tonebender-mk-ii-hybrid",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 14x10 stripboard with three transistors (one germanium AC127, two NPN silicon). Capacitor C7 is drawn with its designator only; the legend says its value is unknown.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "8.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "C7",
+   "?",
+   "C",
+   "value not given; legend: unknown value, try 220pF-680pF"
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "15nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "AC127",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "PN2222",
+   "Q",
+   "NPN Silicon; try PN2222, 2N3904, MPSA42 etc."
+  ],
+  [
+   "Q3",
+   "PN2222",
+   "Q",
+   "NPN Silicon; try PN2222, 2N3904, MPSA42 etc."
+  ],
+  [
+   "Attack",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

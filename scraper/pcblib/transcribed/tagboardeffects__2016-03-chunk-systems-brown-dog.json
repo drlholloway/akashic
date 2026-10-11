@@ -1,0 +1,114 @@
+{
+ "id": "tagboardeffects:2016-03-chunk-systems-brown-dog",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "18 x 14 vero, populated board on the left and bare cuts-and-links view on the right; one TL074 and two 3mm LEDs on the board. The DPDT switch on wires Sw 1-6 with IN and OUT is taken to be the bypass footswitch and not listed; the envelope jack is not listed.",
+ "uncertain": [
+  "Switch: DPDT on Sw 1-6: assumed to be the bypass footswitch and left out",
+  "D1-2 3mm LEDs: colour not given"
+ ],
+ "rows": [
+  [
+   "×4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "4u7",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "220u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "TL074",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "3mm LED",
+   "LED",
+   "on the board"
+  ],
+  [
+   "D2",
+   "3mm LED",
+   "LED",
+   "on the board"
+  ],
+  [
+   "Dirty Level",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Clean Level",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Drive",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Gate",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

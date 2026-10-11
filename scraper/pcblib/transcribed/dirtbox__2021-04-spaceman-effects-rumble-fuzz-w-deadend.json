@@ -1,0 +1,168 @@
+{
+ "id": "dirtbox:2021-04-spaceman-effects-rumble-fuzz-w-deadend",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated stripboard (15x14) with the Dead End Fx 'Gollum' volume mod; a 50K trimmer and a part labeled FB sit on the board, and the transistors are specified by gain rather than type.",
+ "uncertain": [
+  "2.2Ω at column 4, rows C-F next to Q2: printed clearly, unusual value",
+  "FB at the bottom left (row N): the legend does not explain it; taken as a ferrite bead"
+ ],
+ "rows": [
+  [
+   "×1",
+   "2.2Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "5.6K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "50K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Q1",
+   "NPN Silicon",
+   "Q",
+   "Hfe 650-675"
+  ],
+  [
+   "Q2",
+   "NPN Silicon",
+   "Q",
+   "Hfe 195-215"
+  ],
+  [
+   "Q3",
+   "J201",
+   "Q",
+   "JFET; J201 or other N-Ch JFET"
+  ],
+  [
+   "×2",
+   "1N4001",
+   "D",
+   "D1, D2"
+  ],
+  [
+   "D3",
+   "1N34A",
+   "D",
+   ""
+  ],
+  [
+   "D4",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "FB",
+   "L",
+   "ferrite bead, not explained in the legend"
+  ],
+  [
+   "Rumble",
+   "C50K",
+   "POT",
+   ""
+  ],
+  [
+   "Bite",
+   "B5K",
+   "POT",
+   "Bite (Gain)"
+  ],
+  [
+   "Fuzz",
+   "A50K",
+   "POT",
+   "Fuzz (Volume)"
+  ],
+  [
+   "Switch",
+   "DPDT on/on",
+   "SW",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

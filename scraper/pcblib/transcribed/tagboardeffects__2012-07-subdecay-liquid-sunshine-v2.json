@@ -1,0 +1,141 @@
+{
+ "id": "tagboardeffects:2012-07-subdecay-liquid-sunshine-v2",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "21 x 9 stripboard shown populated (top) and bare (below), plus two toggle switches drawn with their capacitors (47n on the bass boost switch, 2n2 and 4n7 on the treble cut switch), which are included; the legend says to experiment with those values.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100p",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47n",
+   "C",
+   "one on the board, one on the bass boost switch"
+  ],
+  [
+   "×1",
+   "2n2",
+   "C",
+   "on the treble cut switch"
+  ],
+  [
+   "×1",
+   "4n7",
+   "C",
+   "on the treble cut switch"
+  ],
+  [
+   "×1",
+   "4u7",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic, axial"
+  ],
+  [
+   "×2",
+   "50K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Q1",
+   "2N5458",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q2",
+   "2N5458",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q3",
+   "2N5458",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Drive A",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Drive B",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Bass Boost",
+   "DPDT on/on",
+   "SW",
+   "toggle, 2 position"
+  ],
+  [
+   "Treble Cut",
+   "DPDT on/off/on",
+   "SW",
+   "toggle, 3 position"
+  ]
+ ],
+ "source": "layout"
+}

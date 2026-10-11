@@ -1,0 +1,149 @@
+{
+ "id": "dirtbox:2020-05-anderton-super-tone-control",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 17x18 stripboard: state-variable filter on two TL072s with a charge pump; values printed on every part.",
+ "uncertain": [
+  "Switch (wires 'Switch 1' and 'Switch 2'): the legend gives no type; two wires, so presumably SPST"
+ ],
+ "rows": [
+  [
+   "×4",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "33Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "68pF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "IC3",
+   "MAX1044",
+   "IC",
+   "legend: MAX1044/ICL7660S"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "High Pass",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Band Pass",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Low Pass",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Resonance",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Freq",
+   "B10K",
+   "POT",
+   "dual"
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "?",
+   "SW",
+   "type not given; two wires (Switch 1, Switch 2)"
+  ]
+ ],
+ "source": "layout"
+}

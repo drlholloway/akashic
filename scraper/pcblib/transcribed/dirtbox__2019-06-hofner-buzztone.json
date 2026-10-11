@@ -1,0 +1,101 @@
+{
+ "id": "dirtbox:2019-06-hofner-buzztone",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 14x11 vero board. C2 is drawn as an electrolytic with no value on the part; the legend says it is optional for more gain, 10uF-22uF, and the low end of that range is entered.",
+ "uncertain": [
+  "C2 (column 2, rows H-K): no value printed on the part, legend gives a range 10uF-22uF; 10uF entered"
+ ],
+ "rows": [
+  [
+   "×1",
+   "56K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "8.2K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C2",
+   "10uF",
+   "C",
+   "electrolytic; optional for more gain, 10uf-22uf (legend)"
+  ],
+  [
+   "Q1",
+   "BC108B",
+   "Q",
+   "BC108B or BC172B"
+  ],
+  [
+   "Q2",
+   "BC108B",
+   "Q",
+   "BC108B or BC172B"
+  ],
+  [
+   "Q3",
+   "BC108B",
+   "Q",
+   "BC108B or BC172B"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Depth",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

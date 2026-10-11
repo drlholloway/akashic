@@ -1,0 +1,93 @@
+{
+ "id": "dirtbox:2021-08-analogman-sun-face",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 11x12 stripboard, germanium version, positive ground, with two on-board trimmers (10K Bias, 50K Pre Gain) and three pots.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Bias",
+   "10K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Pre Gain",
+   "50K",
+   "TRIM",
+   ""
+  ],
+  [
+   "×2",
+   "NKT275",
+   "Q",
+   "Q1-Q2; legend: NKT275 or other PNP Ge"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Fuzz",
+   "C1K",
+   "POT",
+   ""
+  ],
+  [
+   "Sundial",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A250K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

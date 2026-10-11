@@ -5,7 +5,7 @@
 	import { page } from '$app/state';
 	import CircuitTable from '$lib/CircuitTable.svelte';
 	import { applyFilters, buildSearch, EMPTY_FILTERS, filtersFromParams, paramsFromFilters, type Filters } from '$lib/search';
-	import { VENDOR_NAMES, type IndexEntry } from '$lib/types';
+	import { BUILD_NAMES, BUILD_ORDER, VENDOR_NAMES, buildsOf, type Build, type IndexEntry } from '$lib/types';
 	import { currency } from '$lib/currency.svelte';
 	import { untrack } from 'svelte';
 	import CurrencySelect from '$lib/CurrencySelect.svelte';
@@ -30,7 +30,7 @@
 		const next = { ...filters, ...patch };
 		goto(`${base}/?${paramsFromFilters(next).toString()}`, { keepFocus: true, noScroll: true, replaceState: false });
 	}
-	function toggle(key: 'vendor' | 'category' | 'enclosure', value: string) {
+	function toggle(key: 'vendor' | 'category' | 'enclosure' | 'build', value: string) {
 		const cur = filters[key];
 		update({ [key]: cur.includes(value) ? cur.filter((v) => v !== value) : [...cur, value] });
 	}
@@ -58,6 +58,14 @@
 		}
 		return [...m.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
 	}
+	// How it is built: a circuit counts under each way it can be built (a PCB with a vero layout beside it is both).
+	const buildFacet = $derived.by(() => {
+		const lifted = applyFilters(data.index, { ...filters, build: [] });
+		const m = new Map<Build, number>();
+		for (const e of lifted) for (const b of buildsOf(e)) m.set(b, (m.get(b) ?? 0) + 1);
+		return BUILD_ORDER.filter((b) => m.has(b)).map((b) => [b, m.get(b)!] as [Build, number]);
+	});
+	const verifiedCount = $derived(applyFilters(data.index, { ...filters, verified: true }).length);
 	const vendorFacet = $derived(facet('vendor'));
 	const categoryFacet = $derived(facet('category'));
 	const enclosureFacet = $derived(facet('enclosure').slice(0, 8));
@@ -86,14 +94,14 @@
 	const totalVendors = $derived(new Set(data.index.map((e) => e.vendor)).size);
 	const shownVendors = $derived(new Set(results.map((e) => e.vendor)).size);
 	const active = $derived(
-		filters.vendor.length + filters.category.length + filters.enclosure.length + (filters.basedOn ? 1 : 0) + (filters.part ? 1 : 0) + (filters.knobs != null ? 1 : 0) + filters.control.length + (filters.inStock ? 1 : 0)
+		filters.vendor.length + filters.category.length + filters.enclosure.length + filters.build.length + (filters.verified ? 1 : 0) + (filters.basedOn ? 1 : 0) + (filters.part ? 1 : 0) + (filters.knobs != null ? 1 : 0) + filters.control.length + (filters.inStock ? 1 : 0)
 	);
 	// Each filter folds at its header; a folded one still says how many of its choices are on.
-	const FACETS = ['vendor', 'category', 'enclosure', 'knobs', 'control'];
+	const FACETS = ['build', 'vendor', 'category', 'enclosure', 'knobs', 'control'];
 	const folded = folds('akashic-filters-folded');
 	const allFolded = $derived(FACETS.every((k) => folded.has(k)));
 	const chosen = $derived<Record<string, number>>({
-		vendor: filters.vendor.length, category: filters.category.length, enclosure: filters.enclosure.length,
+		build: filters.build.length + (filters.verified ? 1 : 0), vendor: filters.vendor.length, category: filters.category.length, enclosure: filters.enclosure.length,
 		knobs: filters.knobs != null ? 1 : 0, control: filters.control.length
 	});
 </script>
@@ -112,6 +120,17 @@
 			</h2>
 		{/snippet}
 		<button type="button" class="label all" onclick={() => folded.set(allFolded ? [] : FACETS)}>{allFolded ? 'Expand all' : 'Collapse all'}</button>
+		<div class="facet">
+			{@render head('build', 'Build')}
+			<div class="chips" id="facet-build" hidden={folded.has('build')}>
+				{#each buildFacet as [b, n]}
+					<button type="button" class="chip" aria-pressed={filters.build.includes(b)} onclick={() => toggle('build', b)}>{BUILD_NAMES[b]} <span class="count">{n}</span></button>
+				{/each}
+				{#if verifiedCount || filters.verified}
+					<button type="button" class="chip" aria-pressed={filters.verified} title="Layouts their source marks as verified by a build" onclick={() => update({ verified: !filters.verified })}>Verified layouts <span class="count">{verifiedCount}</span></button>
+				{/if}
+			</div>
+		</div>
 		<div class="facet">
 			{@render head('vendor', 'Vendor')}
 			<div class="chips" id="facet-vendor" hidden={folded.has('vendor')}>

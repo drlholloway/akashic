@@ -1,0 +1,132 @@
+{
+ "id": "dirtbox:2022-01-montarbo-pb-2-buzzer-fuzz-section",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 20x11 stripboard, the fuzz section only of the Montarbo PB-2 Buzzer: two BJTs and four clipping diodes whose type the legend does not know (it suggests 1N400x).",
+ "uncertain": [
+  "D1-D4: legend says 'Unknown rectifier diodes, try 1N400x'; no exact part number is given",
+  "56Ω lying on row K, columns 6-8: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×1",
+   "56Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC549B",
+   "Q",
+   "legend: BC549B, BC183B, BC184B etc. (BC149B in original)"
+  ],
+  [
+   "Q2",
+   "BC549B",
+   "Q",
+   "legend: BC549B, BC183B, BC184B etc. (BC149B in original)"
+  ],
+  [
+   "D1",
+   "1N400x",
+   "D",
+   "legend: Unknown rectifier diodes, try 1N400x"
+  ],
+  [
+   "D2",
+   "1N400x",
+   "D",
+   "legend: Unknown rectifier diodes, try 1N400x"
+  ],
+  [
+   "D3",
+   "1N400x",
+   "D",
+   "legend: Unknown rectifier diodes, try 1N400x"
+  ],
+  [
+   "D4",
+   "1N400x",
+   "D",
+   "legend: Unknown rectifier diodes, try 1N400x"
+  ],
+  [
+   "D5",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Tone",
+   "B22K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B22K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

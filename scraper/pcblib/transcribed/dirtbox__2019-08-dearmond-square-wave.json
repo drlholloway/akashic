@@ -1,0 +1,113 @@
+{
+ "id": "dirtbox:2019-08-dearmond-square-wave",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 15x10 stripboard (DeArmond Square Wave, vero by Anders) with a legend. The legend says D1-D2 germanium and D3 1N5817, but on the board D1 sits alone by the 9v/CLR corner and D2-D3 are the adjacent pair, so the legend numbering may not match the drawing.",
+ "uncertain": [
+  "Diode types follow the legend (D1-D2 germanium, D3 1N5817); the drawing suggests D1 (top right, dark body, by 9v) is the supply diode and D2-D3 (light bodies, bottom) the germanium pair"
+ ],
+ "rows": [
+  [
+   "×1",
+   "5.6K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "15pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1.5nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "LM741",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "Germanium",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "Germanium",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Intensity",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Output",
+   "B10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

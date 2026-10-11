@@ -1,0 +1,75 @@
+{
+ "id": "tagboardeffects:2013-03-harrymatic-stutter-distortion",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero 18x9 drawn twice (populated, then cuts and links only); read from the populated board. The LED resistor is printed RLED with no value (legend: adjust RLED to match your LED).",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×3",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "220uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "IC1",
+   "LM555",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "LM386",
+   "IC",
+   ""
+  ],
+  [
+   "Gain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Rate",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Stutter",
+   "DPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

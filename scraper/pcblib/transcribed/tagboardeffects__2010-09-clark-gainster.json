@@ -1,0 +1,95 @@
+{
+ "id": "tagboardeffects:2010-09-clark-gainster",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 23 x 15 with the populated board above and a bare cuts-and-links view below; read from the populated board. Three diodes are drawn with no type printed anywhere.",
+ "uncertain": [
+  "Three diodes at the top centre of the board (right of the 120p and 10K): drawn as black bodies with no type printed"
+ ],
+ "rows": [
+  [
+   "×5",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "120p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2N2",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "IC1",
+   "LF353",
+   "IC",
+   ""
+  ],
+  [
+   "Gain",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

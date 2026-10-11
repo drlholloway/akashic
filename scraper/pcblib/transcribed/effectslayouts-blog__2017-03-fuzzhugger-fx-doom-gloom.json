@@ -1,0 +1,147 @@
+{
+ "id": "effectslayouts-blog:2017-03-fuzzhugger-fx-doom-gloom",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout (Doom Bloom) with a bare underside view, a colour wiring diagram and an etched PCB of the same circuit; counted from the populated board. Six board-mounted pots, two transistors and a red LED D1 on the board; the four 1uF are drawn as box film capacitors.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "1uF",
+   "C",
+   "drawn as box film"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   "printed 4001"
+  ],
+  [
+   "×1",
+   "1N4148",
+   "D",
+   "printed 4148"
+  ],
+  [
+   "D1",
+   "5mm red diffused LED",
+   "LED",
+   "on the board"
+  ],
+  [
+   "×2",
+   "2N5089",
+   "Q",
+   "Q1-Q2"
+  ],
+  [
+   "Bloom",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Head",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "High",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Body",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Bias",
+   "B1K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

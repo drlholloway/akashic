@@ -1,0 +1,59 @@
+{
+ "id": "tagboardeffects:2020-07-dod-210-fet-preamp",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "DOD 210 FET Preamp, 8 x 6 stripboard, single populated view with large printed values. One JFET; legend notes FET Vgs about 1.5 volt.",
+ "uncertain": [
+  "10k between the FET and the 4.7uF can: the text is partly covered by the capacitor, reads 10k"
+ ],
+ "rows": [
+  [
+   "×1",
+   "3.9M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "J113",
+   "Q",
+   "JFET; legend: J113 (J201, 2N5457, MPF102 watch pinout)"
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   "legend: 100k Log"
+  ]
+ ],
+ "source": "layout"
+}

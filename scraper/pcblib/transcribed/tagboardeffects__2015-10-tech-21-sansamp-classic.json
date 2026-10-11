@@ -1,0 +1,240 @@
+{
+ "id": "tagboardeffects:2015-10-tech-21-sansamp-classic",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "30x21 vero, populated board on top and bare cuts/links view below. Character settings are an 8-pole DIP switch off board; the DPDT bypass footswitch is not listed.",
+ "uncertain": [
+  "Several resistors are drawn translucent over track cuts (100K x2, 10K, 1M, 220K, 1K, 22K) and are counted as parts",
+  "130R and 430K next to the CLR resistor at top left: printed clearly, unusual values"
+ ],
+ "rows": [
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "130R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "430K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×10",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×8",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "8n2",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "39p",
+   "C",
+   ""
+  ],
+  [
+   "×7",
+   "2n2",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4n7",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "68p",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "560p",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "1n",
+   "C",
+   "2 film, 1 ceramic"
+  ],
+  [
+   "×1",
+   "1n5",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "2u2",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TLC2264",
+   "IC",
+   "legend: TLC2264 (TL074..)"
+  ],
+  [
+   "IC2",
+   "TLC2262",
+   "IC",
+   "legend: TLC2262 (TL072..)"
+  ],
+  [
+   "×1",
+   "2SK117",
+   "Q",
+   "JFET"
+  ],
+  [
+   "×2",
+   "7.5V Zener",
+   "D",
+   "D1, D2; legend: 7.5V Zener (1N755)"
+  ],
+  [
+   "D3",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "Output",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Amplifier Drive",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "High",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Presence Drive",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Input Switch",
+   "DPDT on/on/on",
+   "SW",
+   "toggle: Lead / Normal / Bass"
+  ],
+  [
+   "Character",
+   "8-pole DIP switch",
+   "SW",
+   "Mid-Boost 1, Mid-Boost 2, Low Drive, Clean Amp, Bright Switch, Vintage Tubes, Speaker Edge, Close Miking"
+  ]
+ ],
+ "source": "layout"
+}

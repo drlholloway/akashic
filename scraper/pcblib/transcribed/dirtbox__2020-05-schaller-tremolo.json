@@ -1,0 +1,123 @@
+{
+ "id": "dirtbox:2020-05-schaller-tremolo",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 15x15 stripboard; values printed on every part. Four transistors, legend gives BC109 or BC173.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×6",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "6.8K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC109",
+   "Q",
+   "BC109 or BC173"
+  ],
+  [
+   "Q2",
+   "BC109",
+   "Q",
+   "BC109 or BC173"
+  ],
+  [
+   "Q3",
+   "BC109",
+   "Q",
+   "BC109 or BC173"
+  ],
+  [
+   "Q4",
+   "BC109",
+   "Q",
+   "BC109 or BC173"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Depth",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Frequency",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

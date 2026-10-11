@@ -1,0 +1,123 @@
+{
+ "id": "tagboardeffects:2013-12-ibanez-standard-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 20x17 with the populated board above a bare cuts-and-links view; read from the populated board. One JFET (pins S/G/D) and four BJTs, eleven 10uF electrolytics.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×8",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "510K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×11",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2SK30",
+   "Q",
+   "JFET"
+  ],
+  [
+   "×4",
+   "2N5088",
+   "Q",
+   "legend: other transistors 2N5088 (or similar)"
+  ],
+  [
+   "×2",
+   "1N34A",
+   "D",
+   "D1, D2; legend: 1N34A (or similar Ge)"
+  ],
+  [
+   "Fuzz Depth",
+   "B50K",
+   "POT",
+   "wires labelled Depth"
+  ],
+  [
+   "Balance",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone change",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

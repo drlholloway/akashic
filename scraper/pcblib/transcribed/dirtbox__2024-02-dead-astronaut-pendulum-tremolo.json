@@ -1,0 +1,210 @@
+{
+ "id": "dirtbox:2024-02-dead-astronaut-pendulum-tremolo",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 21x19 stripboard with values on every part; legend names ICs, LEDs, diode, LDRs, pots and three switches. The board labels both yellow LEDs D1 and the axial diode D2, while the legend says D1-D2 are the LEDs and D3 the 1N5817.",
+ "uncertain": [
+  "Designators: both on-board LEDs are printed D1 and the axial diode D2; taken as LEDs D1-D2 and diode D3 per the legend",
+  "LFO Speed pot printed '1mA' in the legend, read as 1M audio (A1M)"
+ ],
+ "rows": [
+  [
+   "×5",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "330pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "560pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "film box"
+  ],
+  [
+   "×1",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "×2",
+   "5mm diffused yellow LED",
+   "LED",
+   "D1, D2 per legend; both printed D1 on the board"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   "printed D2 on the board"
+  ],
+  [
+   "LDR1",
+   "LDR 22K dark, 1M light",
+   "OPTO",
+   ""
+  ],
+  [
+   "LDR2",
+   "LDR 22K dark, 1M light",
+   "OPTO",
+   ""
+  ],
+  [
+   "Filter Depth",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "LFO Speed",
+   "A1M",
+   "POT",
+   "legend prints 1mA"
+  ],
+  [
+   "Tremolo Depth",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B22K",
+   "POT",
+   ""
+  ],
+  [
+   "Filter Sw",
+   "SPDT on/off/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "LFO/Man Sw",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Sq/Tri Sw",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

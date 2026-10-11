@@ -1,0 +1,51 @@
+{
+ "id": "tagboardeffects:2010-07-mosrite-fuzzrite",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 14 x 7 stripboard, two transistors labelled Q1 and Q2 with no type given anywhere on the drawing. The centre 47n is drawn semi-transparent over two track cuts.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "2n2",
+   "C",
+   ""
+  ],
+  [
+   "Q1",
+   "?",
+   "Q",
+   "value not given"
+  ],
+  [
+   "Q2",
+   "?",
+   "Q",
+   "value not given"
+  ],
+  [
+   "Depth",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,107 @@
+{
+ "id": "effectslayouts-blog:2015-07-seymour-duncan-pickup-booster",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with a bare underside view, a colour wiring diagram and an etched PCB of the same circuit; counted from the populated board and confirmed against the wiring diagram. Three transistors and an off-board resonance toggle.",
+ "uncertain": [
+  "30K resistors (three: next to the 1M at column F, right of the 2.2uF at column L, and horizontal on row J): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "30K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1.8K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "3.3nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC107",
+   "Q",
+   "BC107 or similar"
+  ],
+  [
+   "Q2",
+   "BC107",
+   "Q",
+   "BC107 or similar"
+  ],
+  [
+   "Q3",
+   "BC177",
+   "Q",
+   "BC177 or similar"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Boost",
+   "C25K",
+   "POT",
+   ""
+  ],
+  [
+   "Resonance",
+   "SPDT on/off/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

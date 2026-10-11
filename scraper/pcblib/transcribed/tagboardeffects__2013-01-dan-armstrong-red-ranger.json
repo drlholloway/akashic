@@ -1,0 +1,111 @@
+{
+ "id": "tagboardeffects:2013-01-dan-armstrong-red-ranger",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 17x8, populated board above a bare cuts-and-links view; parts counted from the populated board. No pots; one 3-position DPDT switch wired to SW1, SW2, SW4, SW5, SW6 (pin 3 not connected).",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "8.2K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "2N5087",
+   "Q",
+   "PNP"
+  ],
+  [
+   "Switch",
+   "DPDT on/off/on",
+   "SW",
+   "3 position; pin 3 not connected"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,129 @@
+{
+ "id": "effectslayouts-blog:2020-04-death-by-audio-sound-saw",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "First picture is a hand-drawn schematic; the second is the layout sheet (populated perfboard, underside, etched PCB and transfer image), the third a small copy; the fourth and fifth are an offboard wiring diagram that repeats the PCB. Read from the populated perfboard, confirmed against the PCB and wiring views. The Channel 3PDT footswitch selects the channel (the bypass footswitch is separate and not listed).",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "6.8nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "33uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Volume A",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume B",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Filter A",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Filter B",
+   "B100K",
+   "POT",
+   "dual"
+  ],
+  [
+   "Channel",
+   "3PDT",
+   "SW",
+   "footswitch"
+  ]
+ ],
+ "source": "layout"
+}

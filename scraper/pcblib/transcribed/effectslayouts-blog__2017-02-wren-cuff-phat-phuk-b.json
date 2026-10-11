@@ -1,0 +1,117 @@
+{
+ "id": "effectslayouts-blog:2017-02-wren-cuff-phat-phuk-b",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small perfboard layout by storyboardist with board-mounted pots: populated board, colour wiring diagram, bare underside and etched PCB; counted from the populated board. The 2K trimmer is marked with an asterisk: omit it if the external Bias pot is used, so trimmer and Bias pot are alternatives.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "91K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "390K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "tantalum"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   "printed 4001"
+  ],
+  [
+   "Q1",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q2",
+   "PNP Germanium",
+   "Q",
+   "type only, no part number"
+  ],
+  [
+   "×1",
+   "2K",
+   "TRIM",
+   "omit if using external Bias pot"
+  ],
+  [
+   "Bias",
+   "B2K",
+   "POT",
+   "alternative to the 2K trimmer"
+  ],
+  [
+   "Volume",
+   "A250K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

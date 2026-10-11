@@ -1,0 +1,111 @@
+{
+ "id": "tagboardeffects:2015-11-quadcaster",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard 15 x 19 for a four-valve preamp; populated board on the left, cuts and links on the right. The valves are off board, wired to the V1-V4 pin pads; four 100K trimmers sit on the board. Volume and Gain pots both A100K.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "470n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1u",
+   "C",
+   "film box"
+  ],
+  [
+   "×1",
+   "1u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "330u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×4",
+   "100K",
+   "TRIM",
+   ""
+  ],
+  [
+   "V1",
+   "12AT7",
+   "OTHER",
+   "valve, off board"
+  ],
+  [
+   "V2",
+   "12AU7",
+   "OTHER",
+   "valve, off board"
+  ],
+  [
+   "V3",
+   "12AU7",
+   "OTHER",
+   "valve, off board"
+  ],
+  [
+   "V4",
+   "12AU7",
+   "OTHER",
+   "valve, off board"
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

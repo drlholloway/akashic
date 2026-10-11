@@ -1,0 +1,93 @@
+{
+ "id": "dirtbox:2019-07-death-by-audio-octave-clang",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 17x9 stripboard, marked Verified: LM741 with an audio transformer (TR1, primary/secondary marked) and two germanium diodes as the octave rectifier. The legend gives no specific germanium type.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "62K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "910K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "LM741",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "Germanium",
+   "D",
+   "type not given"
+  ],
+  [
+   "D2",
+   "Germanium",
+   "D",
+   "type not given"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "TR1",
+   "42TM002",
+   "XFM",
+   ""
+  ],
+  [
+   "Gain",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

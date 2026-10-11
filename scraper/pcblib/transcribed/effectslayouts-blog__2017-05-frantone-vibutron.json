@@ -1,0 +1,174 @@
+{
+ "id": "effectslayouts-blog:2017-05-frantone-vibutron",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard layout (17x22, 9 links, 29 cuts) by IvIark with the bare board beside it; small image. Three ICs, one MOSFET, one trimmer on the board; a 220n and a 2u2 capacitor are mounted on the Fast switch off the board and are included.",
+ "uncertain": [
+  "10K count (9): several 10K resistors are packed closely at the left edge and around IC1/IC2 in a small image; one could be miscounted",
+  "2K left of IC3 (next to a 150n): printed 2K, distinct from the 2K2 at the right edge"
+ ],
+ "rows": [
+  [
+   "×9",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "20K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "91K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "7K5",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "390R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10R",
+   "R",
+   "1W"
+  ],
+  [
+   "×1",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "150n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220n",
+   "C",
+   "on the Fast switch"
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1000u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "2u2",
+   "C",
+   "electrolytic, on the Fast switch"
+  ],
+  [
+   "IC1",
+   "TLC2262",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "LM741",
+   "IC",
+   ""
+  ],
+  [
+   "IC3",
+   "ICL8038",
+   "IC",
+   ""
+  ],
+  [
+   "×1",
+   "2N7000",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "×1",
+   "100K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Depth",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Speed",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Wave",
+   "DPDT on/on/on",
+   "SW",
+   "Waveform switch; Wave Sw2 to Wave Sw4"
+  ],
+  [
+   "Fast",
+   "DPDT on/on",
+   "SW",
+   "carries the 220n and 2u2"
+  ]
+ ],
+ "source": "layout"
+}

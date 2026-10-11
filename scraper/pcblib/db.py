@@ -138,6 +138,15 @@ VENDORS = {
     "effdub": ("Eff Dub Audio", "https://effdubaudio.com/category/effects-projects/",
                "DIY projects posted free by Eff Dub Audio, with file packs (schematic, layout, Eagle CAD) on the site; "
                "indexed and linked, not redistributed. Parts are read from the Eagle schematics where a pack has them."),
+    "tagboardeffects": ("Tagboard Effects", "https://tagboardeffects.blogspot.com",
+                        "Stripboard and tag strip layouts posted free by the Tagboard Effects authors; indexed and linked, not redistributed. "
+                        "Layout images are read locally for the board size and the parts they name."),
+    "dirtbox": ("Dirtbox Layouts", "https://dirtboxlayouts.blogspot.com",
+                "Stripboard layouts posted free by Dirtbox Layouts; indexed and linked, not redistributed. "
+                "Layout images are read locally for the board size and the parts they name."),
+    "effectslayouts-blog": ("Effects Layouts (blog)", "https://effectslayouts.blogspot.com",
+                            "Perfboard and home-etch layouts posted free by storyboardist; indexed and linked, not redistributed. "
+                            "Layout images are read locally for the parts they name."),
     "cryptid": ("Cryptid Effects", "https://github.com/drlholloway/guitar-effects-layouts",
                 "This site's own layouts, CC BY-NC-SA 4.0: gerbers and faceplates on GitHub, build notes and BOM on the wiki. "
                 "The schematic and the finished-pedal photo are shown here with the author's permission."),
@@ -147,8 +156,10 @@ VENDORS = {
 }
 
 
-# What the vendor sells: "shop" (a PCB), "projects" (order the board from a fab), "blog" (a schematic to read).
-VENDOR_KIND = {"pcbway-gtu": "projects", "cryptid": "repo", "rwlpedal": "repo", "scientificguitarist": "repo", "sheepygit": "repo", "bentfishbowl": "blog", "effdub": "blog", "expanon": "archive", "schalltechnik": "blog"}
+# What the vendor sells: "shop" (a PCB), "projects" (order the board from a fab), "blog" (a schematic to read),
+# "layout" (a stripboard, tag strip, turret or perfboard drawing to build from).
+VENDOR_KIND = {"pcbway-gtu": "projects", "cryptid": "repo", "rwlpedal": "repo", "scientificguitarist": "repo", "sheepygit": "repo", "bentfishbowl": "blog", "effdub": "blog", "expanon": "archive", "schalltechnik": "blog",
+               "tagboardeffects": "layout", "dirtbox": "layout", "effectslayouts-blog": "layout"}
 
 # The site owner's own designs: their schematic and photo are served, not only linked.
 OWNER_VENDORS = {"cryptid"}
@@ -186,6 +197,8 @@ def connect():
         conn.execute("UPDATE circuits SET last_listed = substr(scraped_at, 1, 10)")
     if 'delisted' not in cols:
         conn.execute("ALTER TABLE circuits ADD COLUMN delisted TEXT DEFAULT ''")
+    if 'layout' not in cols:  # JSON, see models.Circuit.layout; '' for a plain PCB
+        conn.execute("ALTER TABLE circuits ADD COLUMN layout TEXT DEFAULT ''")
     for vid, (name, url, note) in VENDORS.items():
         conn.execute("INSERT OR IGNORE INTO vendors(id,name,url,license_note) VALUES (?,?,?,?)",
                      (vid, name, url, note))
@@ -390,8 +403,8 @@ def upsert_circuit(conn: sqlite3.Connection, c: Circuit) -> None:
     conn.execute(
         """INSERT INTO circuits (id,vendor,slug,name,subtitle,based_on,description,category,
              effect_type,tags,enclosure,controls,difficulty,price,currency,sku,in_stock,url,
-             doc_url,doc_local,extra_docs,image_url,schematic_local,schematic_page,doc_version,scraped_at)
-           VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+             doc_url,doc_local,extra_docs,image_url,schematic_local,schematic_page,doc_version,scraped_at,layout)
+           VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
            ON CONFLICT(id) DO UPDATE SET
              name=excluded.name, subtitle=excluded.subtitle, based_on=excluded.based_on,
              description=excluded.description, category=excluded.category,
@@ -401,12 +414,12 @@ def upsert_circuit(conn: sqlite3.Connection, c: Circuit) -> None:
              url=excluded.url, doc_url=excluded.doc_url, doc_local=excluded.doc_local,
              extra_docs=excluded.extra_docs, image_url=excluded.image_url,
              schematic_local=excluded.schematic_local, schematic_page=excluded.schematic_page,
-             doc_version=excluded.doc_version, scraped_at=excluded.scraped_at""",
+             doc_version=excluded.doc_version, scraped_at=excluded.scraped_at, layout=excluded.layout""",
         (c.id, c.vendor, c.slug, c.name, c.subtitle, c.based_on, c.description, c.category,
          c.effect_type, json.dumps(c.tags), c.enclosure, json.dumps(c.controls), c.difficulty,
          c.price, c.currency, c.sku, None if c.in_stock is None else int(c.in_stock), c.url,
          c.doc_url, c.doc_local, json.dumps(c.extra_docs), c.image_url, c.schematic_local,
-         c.schematic_page, c.doc_version, now),
+         c.schematic_page, c.doc_version, now, json.dumps(c.layout, ensure_ascii=False) if c.layout else ""),
     )
     conn.execute("DELETE FROM bom WHERE circuit_id = ?", (c.id,))
     conn.executemany(

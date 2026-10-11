@@ -1,0 +1,117 @@
+{
+ "id": "tagboardeffects:2012-01-lovepedal-english-gent",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "15x8 vero board with one transistor, shown populated and bare (cuts); clipping diodes D1-D4 are mounted off board on a 3-position DPDT toggle.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "330R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3K3",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47u",
+   "C",
+   "electrolytic; one radial, one axial"
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   "on the switch"
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   "on the switch"
+  ],
+  [
+   "D3",
+   "BAT46",
+   "D",
+   "on the switch"
+  ],
+  [
+   "D4",
+   "BAT46",
+   "D",
+   "on the switch"
+  ],
+  [
+   "D5",
+   "1N5817",
+   "D",
+   "legend: 1N5817 or 1N4001"
+  ],
+  [
+   "Gain",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Clipping",
+   "DPDT on/off/on",
+   "SW",
+   "toggle; legend: Switch is 3 position DPDT"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,92 @@
+{
+ "id": "tagboardeffects:2013-03-mr-black-boost-tiger",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "The post's only picture is the vero layout (15 x 10) but only as a 286 x 320 thumbnail, so the turned values are a few pixels tall; the part count is reliable, the values are best readings. Legend (legible): Boost 50K Lin, IC is RC4558P.",
+ "uncertain": [
+  "every resistor value is read from a thumbnail and is a best guess; positions below are on the populated board",
+  "4K7, top-left, first of the pair of resistors beside the 100p: could be 4K7 or 47K",
+  "470K, top-left, second of that pair: four characters, could be 470K or 220K",
+  "1K x5 (three lower-left, one horizontal at top right of the IC, one right of centre): two-character values, 1K most likely but 1M or 2K possible",
+  "1M, bottom, just left of the long link under the IC: could be 1K",
+  "100K, bottom, right of the long link: four characters, could be 150K or 180K",
+  "51K x2 (one right of the IC under the horizontal resistor, one at lower right): could be 51K, 5K1 or 91K",
+  "4K7 at far right: could be 47K",
+  "100p ceramic at far left and 100n film at bottom left: digits blurred",
+  "electrolytics read 10u (top right), 47u (centre) and 10u (lower): the 47u could be 4.7u"
+ ],
+ "rows": [
+  [
+   "×5",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "51K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100p",
+   "C",
+   "ceramic"
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "RC4558P",
+   "IC",
+   ""
+  ],
+  [
+   "Boost",
+   "B50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

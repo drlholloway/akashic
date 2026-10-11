@@ -1,0 +1,75 @@
+{
+ "id": "tagboardeffects:2017-05-sola-sound-zonk-ii",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "11x9 stripboard, single populated view, Zonk II (V1) with two PNP germanium transistors and negative supply.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "8.2k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "680k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "5uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "25uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "OC75",
+   "Q",
+   "PNP Ge"
+  ],
+  [
+   "Q2",
+   "OC75",
+   "Q",
+   "PNP Ge"
+  ],
+  [
+   "Fuzz",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Swell",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

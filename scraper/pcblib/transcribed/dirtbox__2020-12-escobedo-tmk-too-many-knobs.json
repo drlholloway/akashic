@@ -1,0 +1,153 @@
+{
+ "id": "dirtbox:2020-12-escobedo-tmk-too-many-knobs",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 17x12 stripboard, one populated view. Six pots; two 3mm red clipping LEDs (D1-D2) on the board; one 100K resistor and one 100nF capacitor are drawn translucent over other parts/cuts.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "film (drawn as box)"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL062",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "3mm red LED",
+   "LED",
+   ""
+  ],
+  [
+   "D2",
+   "3mm red LED",
+   "LED",
+   ""
+  ],
+  [
+   "D3",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D4",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D5",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D6",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D7",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D8",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Input Z",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Xover Distortion",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain/Color",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Feedback",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Octave/Fund Blend",
+   "B10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

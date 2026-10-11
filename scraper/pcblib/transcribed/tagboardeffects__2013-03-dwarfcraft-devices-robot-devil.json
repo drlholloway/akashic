@@ -1,0 +1,81 @@
+{
+ "id": "tagboardeffects:2013-03-dwarfcraft-devices-robot-devil",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero 18x14 drawn twice (populated, then cuts and links only); read from the populated board. SW1-SW3 wires go to the Octave 1/2 toggle.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "3.3M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "CD4049UBE",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "CD4040",
+   "IC",
+   ""
+  ],
+  [
+   "Starve",
+   "B2K",
+   "POT",
+   ""
+  ],
+  [
+   "Dirt",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Octave",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Octave 1/2",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

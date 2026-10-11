@@ -1,0 +1,101 @@
+{
+ "id": "tagboardeffects:2017-01-wren-and-cuff-phat-phuk-b",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 12x13 vero board with a JFET and a PNP germanium transistor, an on-board 2k trimmer (VR1) and one Volume pot.",
+ "uncertain": [
+  "2.2M at column 5, rows J-L: the label is half hidden under Q2 and reads '2.2M' with the last letter cut off"
+ ],
+ "rows": [
+  [
+   "×3",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100r",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "91k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "390k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1000uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q2",
+   "PNP Germanium",
+   "Q",
+   "90hfe min"
+  ],
+  [
+   "VR1",
+   "2k",
+   "TRIM",
+   ""
+  ],
+  [
+   "Volume",
+   "A250K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

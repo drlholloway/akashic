@@ -1,0 +1,143 @@
+{
+ "id": "tagboardeffects:2014-07-dam-fz781-j-type-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero 13x8, populated board on top and a bare view below, plus a 3P4T rotary switch diagram with a table of four capacitors soldered between switch pins (5n6, 15n, 22n, 56n). The drawing says the switch cap values are not confirmed. The board itself also carries one 5n6.",
+ "uncertain": [
+  "Switch caps 5n6/15n/22n/56n: printed clearly but the drawing states they are not confirmed"
+ ],
+ "rows": [
+  [
+   "×1",
+   "470R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100R",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "8K2",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "5n6",
+   "C",
+   "one on the board, one on the rotary switch between pins 1 & 5 (switch value not confirmed)"
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "15n",
+   "C",
+   "on rotary switch between pins 2 & 6, value not confirmed"
+  ],
+  [
+   "×1",
+   "22n",
+   "C",
+   "on rotary switch between pins 3 & 7, value not confirmed"
+  ],
+  [
+   "×1",
+   "56n",
+   "C",
+   "on rotary switch between pins 4 & 8, value not confirmed"
+  ],
+  [
+   "×1",
+   "4u7",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "OC82DM",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "OC82DM",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "OC82DM",
+   "Q",
+   ""
+  ],
+  [
+   "Filter",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Rotary",
+   "3P4T rotary",
+   "SW",
+   "selects the switch capacitor"
+  ]
+ ],
+ "source": "layout"
+}

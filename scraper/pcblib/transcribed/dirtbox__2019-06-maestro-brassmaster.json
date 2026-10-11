@@ -1,0 +1,273 @@
+{
+ "id": "dirtbox:2019-06-maestro-brassmaster",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 27x19 vero board with seven transistors, five diodes and a transformer (TR1) in the middle; values printed on every part. The bottom line of the legend (TR1) is cut at the image edge but readable.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "1.5M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "82K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "6.8K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "820Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "390Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×5",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC337",
+   "Q",
+   "BC337, BC547B, 2N5088 etc.; 2N3392 in original"
+  ],
+  [
+   "Q2",
+   "BC337",
+   "Q",
+   "BC337, BC547B, 2N5088 etc.; 2N3392 in original"
+  ],
+  [
+   "Q3",
+   "BC337",
+   "Q",
+   "BC337, BC547B, 2N5088 etc.; 2N3392 in original"
+  ],
+  [
+   "Q4",
+   "BC337",
+   "Q",
+   "BC337, BC547B, 2N5088 etc.; 2N3392 in original"
+  ],
+  [
+   "Q5",
+   "BC517",
+   "Q",
+   "darlington; BC517, MPSA12, MPSA14 etc.; 2N5308 in original"
+  ],
+  [
+   "Q6",
+   "BC337",
+   "Q",
+   "BC337, BC547B, 2N5088 etc.; 2N3392 in original"
+  ],
+  [
+   "Q7",
+   "BC337",
+   "Q",
+   "BC337, BC547B, 2N5088 etc.; 2N3392 in original"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   "1N457A in original"
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   "1N457A in original"
+  ],
+  [
+   "D3",
+   "1N4148",
+   "D",
+   "1N457A in original"
+  ],
+  [
+   "D4",
+   "1N4148",
+   "D",
+   "1N457A in original"
+  ],
+  [
+   "D5",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "TR1",
+   "42TM018",
+   "XFM",
+   "10K:10K"
+  ],
+  [
+   "Bass Volume",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Brass Volume",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Sensitivity",
+   "B10K",
+   "POT",
+   "Try 10kA"
+  ],
+  [
+   "Harmonic Switch",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Brass Switch",
+   "3PDT on/on",
+   "SW",
+   "nine lugs wired to the board"
+  ]
+ ],
+ "source": "layout"
+}

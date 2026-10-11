@@ -1,0 +1,103 @@
+{
+ "id": "tagboardeffects:2014-07-dunlop-jbf-3-joe-bonamassa-fuzz-face",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero 11x8, populated board on top and a bare view below. Positive-ground germanium fuzz face with two on-board trimmers (25K and 10K) and 1% resistor values.",
+ "uncertain": [
+  "332R, top centre: printed clearly, unusual value",
+  "3K16, right of the 10K trimmer: printed clearly, unusual value",
+  "20K, centre: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×1",
+   "332R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "20K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3K16",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2u2",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "25K",
+   "TRIM",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Q1",
+   "MP39B",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "GT308B",
+   "Q",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A470K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

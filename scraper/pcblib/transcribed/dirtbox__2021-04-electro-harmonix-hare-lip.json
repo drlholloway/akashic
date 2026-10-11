@@ -1,0 +1,165 @@
+{
+ "id": "dirtbox:2021-04-electro-harmonix-hare-lip",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 17x14 stripboard (a tremolo sold as 'Microphone Echo'). R4 and R8 are printed as designators only; the legend gives two candidate values for each. Pot tapers are stated as unknown and the Volume/Echo values as 'probably 100k'.",
+ "uncertain": [
+  "R4 (column 2, rows K-N): no value on the part; legend says 10k in factory schematic, gutshots show 300ohm; 10K entered",
+  "R8 (column 3, rows I-M): no value on the part; legend says 124k in factory schematic, gutshots show 120k; 124K entered",
+  "Volume and Echo pots: legend says 'Probably 100k', unknown tapers",
+  "43K (column 6) and 430K (column 4): printed clearly, unusual value",
+  "120nF x3: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "200K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "43K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "430K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "10K",
+   "R",
+   "10k in factory schematic, gutshots shows 300ohm"
+  ],
+  [
+   "R8",
+   "124K",
+   "R",
+   "124k in factory schematic, gutshots shows 120k"
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "120nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5133",
+   "Q",
+   "Try NPN silicon, Hfe 100-800"
+  ],
+  [
+   "Q2",
+   "2N5133",
+   "Q",
+   "Try NPN silicon, Hfe 100-800"
+  ],
+  [
+   "Q3",
+   "2N5133",
+   "Q",
+   "Try NPN silicon, Hfe 100-800"
+  ],
+  [
+   "Q4",
+   "FS36999",
+   "Q",
+   "Try NPN silicon, Hfe 100-800"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Speed",
+   "100K",
+   "POT",
+   "unknown taper"
+  ],
+  [
+   "Volume",
+   "100K",
+   "POT",
+   "probably 100k, unknown taper"
+  ],
+  [
+   "Echo",
+   "100K",
+   "POT",
+   "probably 100k, unknown taper"
+  ]
+ ],
+ "source": "layout"
+}

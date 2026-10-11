@@ -1,0 +1,101 @@
+{
+ "id": "tagboardeffects:2010-10-mxr-microamp-compact-layout",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated vero board 12 x 11. The Level pot is off-board and only named on the wire labels, with no value given.",
+ "uncertain": [
+  "15u electrolytic at the top right: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×1",
+   "56K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1u",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "15u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4u7",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL061",
+   "IC",
+   "IC is TL061 or similar single channel opamp"
+  ],
+  [
+   "Level",
+   "?",
+   "POT",
+   "value not given"
+  ]
+ ],
+ "source": "layout"
+}

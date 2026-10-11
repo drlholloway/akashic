@@ -1,0 +1,99 @@
+{
+ "id": "tagboardeffects:2014-04-ehx-satisfaction-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "13x9 vero drawn large with a bare cuts-and-links view below; read from the populated board. C7 and D2-D3 carry designators only: the legend says they are not mounted on the original and suggests ~22n and 1N4148s.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "560K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1.5nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "C7",
+   "?",
+   "C",
+   "value not given; not mounted on original unit, legend suggests ~22n for more bass"
+  ],
+  [
+   "Q1",
+   "2222A",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N3906",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   "polarity protection"
+  ],
+  [
+   "D2",
+   "?",
+   "D",
+   "value not given; not mounted on original unit, legend suggests 1N4148 clippers"
+  ],
+  [
+   "D3",
+   "?",
+   "D",
+   "value not given; not mounted on original unit, legend suggests 1N4148 clippers"
+  ],
+  [
+   "Attack",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

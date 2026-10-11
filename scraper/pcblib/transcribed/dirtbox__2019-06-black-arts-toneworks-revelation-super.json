@@ -1,0 +1,123 @@
+{
+ "id": "dirtbox:2019-06-black-arts-toneworks-revelation-super",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 15x14 stripboard, Revelation Super Bass, three transistors. One 100K resistor is drawn greyed/translucent and is counted.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "6.2K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "470pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N5089",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "2N5089",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N914",
+   "D",
+   "legend: 1N914/1N4148"
+  ],
+  [
+   "D2",
+   "1N914",
+   "D",
+   "legend: 1N914/1N4148"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Pre Gain",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,69 @@
+{
+ "id": "tagboardeffects:2013-04-top-gear-fuzz-guild-grizzly",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small stripboard 10x8 drawn populated and bare; two transistors, legend gives BC109 (some units have BC184C).",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "BC109",
+   "Q",
+   "legend: Transistors are BC109 (some units have BC184C)"
+  ],
+  [
+   "Boost",
+   "B220R",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A22K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,102 @@
+{
+ "id": "effectslayouts-blog:2016-07-harmonic-percolator",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with a wiring diagram, bare underside and etched PCB of the same circuit; counted from the populated perfboard. The wiring diagram prints 50nF where the perfboard prints 47nF.",
+ "uncertain": [
+  "47nF at the left (row E): the wiring diagram of the same board prints 50nF for this part",
+  "750K and 91K in the middle: printed clearly, unusual values"
+ ],
+ "rows": [
+  [
+   "×1",
+   "750K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "91K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   "50nF in the wiring diagram"
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "1N60",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "2N404A",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N3565",
+   "Q",
+   ""
+  ],
+  [
+   "Harmonics",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Balance",
+   "A50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

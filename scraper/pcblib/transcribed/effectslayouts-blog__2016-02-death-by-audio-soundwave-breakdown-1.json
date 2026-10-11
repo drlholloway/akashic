@@ -1,0 +1,93 @@
+{
+ "id": "effectslayouts-blog:2016-02-death-by-audio-soundwave-breakdown-1",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout (Version 1) with a colour wiring diagram, a bare underside and an etched PCB of the same circuit; read from the populated board, confirmed on the diagram. Two 50K trimmers sit on the board; Filter and Bias are off-board pots.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "4.3M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "200nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "2N5306",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N5306",
+   "Q",
+   ""
+  ],
+  [
+   "×2",
+   "50K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Filter",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Bias",
+   "B50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

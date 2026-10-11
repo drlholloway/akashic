@@ -1,0 +1,126 @@
+{
+ "id": "dirtbox:2022-04-death-by-audio-interstellar-overdriver",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Two-channel overdrive on one 18x16 stripboard, six MPSA05 and three on-board clipping LEDs selected by a 2P6T rotary. The two 3PDT channel footswitches act as each channel's bypass and are left out; two CLRs, one per channel LED.",
+ "uncertain": [
+  "Black diode at column 2, rows H-K is labelled D4 on the board, while the legend reads 'D1-D3: 3mm red LED's' and 'D3: 1N5817': taken as D4 = 1N5817 (legend typo)",
+  "240pF at column 15, rows F-H: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×6",
+   "180K",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "910K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "240pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×6",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×6",
+   "MPSA05",
+   "Q",
+   "Q1-Q6"
+  ],
+  [
+   "×3",
+   "3mm red LED",
+   "LED",
+   "D1-D3, clipping LEDs on the board"
+  ],
+  [
+   "D4",
+   "1N5817",
+   "D",
+   "legend calls it D3"
+  ],
+  [
+   "Drive A",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Drive B",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Master A",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Master B",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "2P6T rotary",
+   "SW",
+   "positions 1 and 2 not connected"
+  ]
+ ],
+ "source": "layout"
+}

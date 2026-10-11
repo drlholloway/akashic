@@ -1,0 +1,111 @@
+{
+ "id": "dirtbox:2026-01-fuzzhugger-fx-arcflash",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single small populated 12x10 stripboard; D2-D3 are clipping LEDs on the board. The legend prints the switch as 'DPDT on//on'.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "33nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "Q1",
+   "2N5089",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N5089",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "Germanium",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "3mm red LED",
+   "LED",
+   ""
+  ],
+  [
+   "D3",
+   "3mm red LED",
+   "LED",
+   ""
+  ],
+  [
+   "D4",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Freq",
+   "A250K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "DPDT on/on",
+   "SW",
+   "toggle; printed 'DPDT on//on'"
+  ]
+ ],
+ "source": "layout"
+}

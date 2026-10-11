@@ -1,0 +1,123 @@
+{
+ "id": "tagboardeffects:2013-01-univox-sq-150-square-wave",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 16x9, populated board on top and a bare cuts/links view below. Legend gives the original transistors and diodes with modern substitutes, and notes that the filter cap used to be 4.7u.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "560K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "270K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.9K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "680Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "33uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC550C",
+   "Q",
+   "was 2SC1312G (try BC550C)"
+  ],
+  [
+   "Q2",
+   "2N5457",
+   "Q",
+   "JFET; was 2SK34C (try 2N5457)"
+  ],
+  [
+   "D1",
+   "1N34A",
+   "D",
+   "D1-D2 were Ge (try 1N34A)"
+  ],
+  [
+   "D2",
+   "1N34A",
+   "D",
+   "D1-D2 were Ge (try 1N34A)"
+  ],
+  [
+   "Distortion",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Balance",
+   "A50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

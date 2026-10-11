@@ -1,0 +1,77 @@
+{
+ "id": "effectslayouts-blog:2015-02-alembic-stratoblaster",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small vero layout with parts, colour wiring diagram, underside and etched PCB; counted from the populated vero and confirmed against the diagram. Single JFET booster.",
+ "uncertain": [
+  "1.5uF electrolytic in the middle of the board (rows C-D): printed clearly in both views, unusual value"
+ ],
+ "rows": [
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1.5uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "2N5457",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Gain",
+   "A50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

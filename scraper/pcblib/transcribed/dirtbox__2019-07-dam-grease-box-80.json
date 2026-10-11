@@ -1,0 +1,108 @@
+{
+ "id": "dirtbox:2019-07-dam-grease-box-80",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 15x9 stripboard with three PNP germanium transistors; one round can near Q3 is printed 10nF.",
+ "uncertain": [
+  "10nF at J-G/J-I (between Q2 and Q3): printed clearly as 10nF but drawn as an electrolytic can, so it may be meant as 10uF",
+  "20K at column M: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "20K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "15nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   "electrolytic; printed 10nF on a can symbol"
+  ],
+  [
+   "×3",
+   "PNP Germanium",
+   "Q",
+   "Q1-Q3"
+  ],
+  [
+   "D1",
+   "Germanium",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Drive",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

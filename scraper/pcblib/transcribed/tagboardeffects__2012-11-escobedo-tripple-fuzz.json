@@ -1,0 +1,90 @@
+{
+ "id": "tagboardeffects:2012-11-escobedo-tripple-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "14 x 8 stripboard, populated view above a bare cuts-and-links view. Two unlabelled diodes drawn as black bodies; the legend says silicon, try 1N4148 or 1N914. The resistor printed 'LED' is the LED current limiter.",
+ "uncertain": [
+  "5M resistor at the left edge: printed clearly, unusual value",
+  "500K resistor below Q2: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "5M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "500K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   "Diodes are Si, try 1N4148 or 1N914"
+  ],
+  [
+   "Q1",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N3906",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "Gain",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

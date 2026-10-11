@@ -1,0 +1,93 @@
+{
+ "id": "tagboardeffects:2014-01-lotus-pedals-snowjob",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard 10x9 shown populated on the left and bare on the right. Two wires Sw1/Sw2 go to an SPST switch.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "3K3",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "5K1",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "390R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "120n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "Drive",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "SPST",
+   "SW",
+   "wires Sw1 / Sw2"
+  ]
+ ],
+ "source": "layout"
+}

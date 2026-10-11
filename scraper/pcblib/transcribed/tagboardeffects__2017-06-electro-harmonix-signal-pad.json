@@ -1,0 +1,39 @@
+{
+ "id": "tagboardeffects:2017-06-electro-harmonix-signal-pad",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "6x6 stripboard with no cuts, single populated view: a passive volume pad with LED supply parts (polarity diode, filter cap, LED resistor) and a treble-bleed cap.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N4004",
+   "D",
+   ""
+  ],
+  [
+   "Volume",
+   "A1M",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,165 @@
+{
+ "id": "dirtbox:2020-10-ibanez-no-58-standard-wau-fuzz-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated stripboard (19x18), the fuzz section only of the Wau Fuzz; legend names the transistors, diodes, two pots and the tone change switch.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×6",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "510K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.5M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×11",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2SK30A",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q2",
+   "2N2222",
+   "Q",
+   "2N2222, 2N3904, MPSA06 etc.; 2SC828-Q in original"
+  ],
+  [
+   "Q3",
+   "2N2222",
+   "Q",
+   "2N2222, 2N3904, MPSA06 etc.; 2SC828-Q in original"
+  ],
+  [
+   "Q4",
+   "2N2222",
+   "Q",
+   "2N2222, 2N3904, MPSA06 etc.; 2SC828-Q in original"
+  ],
+  [
+   "Q5",
+   "2N2222",
+   "Q",
+   "2N2222, 2N3904, MPSA06 etc.; 2SC828-Q in original"
+  ],
+  [
+   "×2",
+   "Germanium",
+   "D",
+   "D1, D2"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Fuzz Depth",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Balance",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone Change",
+   "SPST",
+   "SW",
+   "SPST or footswitch"
+  ]
+ ],
+ "source": "layout"
+}

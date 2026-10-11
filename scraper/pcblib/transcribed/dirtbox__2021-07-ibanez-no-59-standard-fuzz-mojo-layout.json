@@ -1,0 +1,151 @@
+{
+ "id": "dirtbox:2021-07-ibanez-no-59-standard-fuzz-mojo-layout",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated stripboard (27x23) with axial 'mojo' parts; one 10uF lies flat across the top. The Switch is the tone footswitch (Switch 1-3), separate from bypass.",
+ "uncertain": [
+  "3K at column 9 (rows H-L): printed clearly, unusual value",
+  "510K at column 12 (rows B-F): printed clearly, unusual value",
+  "Diode numbering: the legend says D1-D2 germanium and D3 1N5817, but on the board D2 (by the 9v strip) is drawn as the black power diode and D1/D3 as the glass pair; rows follow the legend"
+ ],
+ "rows": [
+  [
+   "×3",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3K",
+   "R",
+   ""
+  ],
+  [
+   "×7",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "510K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×11",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2SK30",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q2",
+   "2N2222",
+   "Q",
+   "legend: 2N2222, 2N3904, MPSA06 (2SC828 or 2SC1815-BL in original)"
+  ],
+  [
+   "Q3",
+   "2N2222",
+   "Q",
+   "legend: 2N2222, 2N3904, MPSA06"
+  ],
+  [
+   "Q4",
+   "2N2222",
+   "Q",
+   "legend: 2N2222, 2N3904, MPSA06"
+  ],
+  [
+   "Q5",
+   "2N2222",
+   "Q",
+   "legend: 2N2222, 2N3904, MPSA06"
+  ],
+  [
+   "×2",
+   "Germanium",
+   "D",
+   "D1, D2; type not given"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Fuzz Depth",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Balance",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "SPDT",
+   "SW",
+   "footswitch (tone); legend: SPDT or DPDT footswitch"
+  ]
+ ],
+ "source": "layout"
+}

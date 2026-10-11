@@ -1,0 +1,141 @@
+{
+ "id": "tagboardeffects:2017-04-way-huge-purple-platypus",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 24x14 stripboard with a CD4049 and two transistors; legend gives only transistor polarity (Q1 PNP Si, Q2 NPN Si) and 'Ge Diodes' for D1-D2, no part numbers.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×5",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4.7k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "220k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "510k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.5k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "120pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "68nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "330uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "CD4049",
+   "IC",
+   ""
+  ],
+  [
+   "Q1",
+   "PNP Si",
+   "Q",
+   "legend: PNP Si, no part number"
+  ],
+  [
+   "Q2",
+   "NPN Si",
+   "Q",
+   "legend: NPN Si, no part number"
+  ],
+  [
+   "×2",
+   "Ge",
+   "D",
+   "D1, D2; legend: Ge Diodes, no part number"
+  ],
+  [
+   "Volume",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "B1M",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

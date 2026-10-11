@@ -1,0 +1,169 @@
+{
+ "id": "tagboardeffects:2016-09-earthquaker-devices-grey-channel",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 21 x 14, populated board on the left and cuts/links view on the right, plus wiring diagrams for the bypass and channel footswitches. Two-channel overdrive with a 1458, two 2N7000, on-board clipping LEDs and two clipping toggles.",
+ "uncertain": [
+  "Switch A & B: legend prints 'SPST (On-Off-On)' but three lugs are wired per switch (SwA 1-3, SwB 1-3); entered as SPDT on/off/on",
+  "IC printed only as '1458': kept as printed, prefix not given",
+  "Channel footswitch drawn with six lugs; entered as DPDT, type not stated"
+ ],
+ "rows": [
+  [
+   "×2",
+   "20K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2n2",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "5mm red LED",
+   "LED",
+   "D1, D2, on the board"
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   "D3, D4"
+  ],
+  [
+   "×2",
+   "1N34A",
+   "D",
+   "D5, D6"
+  ],
+  [
+   "D7",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "1458",
+   "IC",
+   ""
+  ],
+  [
+   "×2",
+   "2N7000",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "Level A",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Level B",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain A",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Gain B",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Switch A",
+   "SPDT on/off/on",
+   "SW",
+   "toggle; legend: SPST (On-Off-On)"
+  ],
+  [
+   "Switch B",
+   "SPDT on/off/on",
+   "SW",
+   "toggle; legend: SPST (On-Off-On)"
+  ],
+  [
+   "Channel",
+   "DPDT",
+   "SW",
+   "channel footswitch"
+  ],
+  [
+   "Channel LED",
+   "bi-colour LED",
+   "LED",
+   "off-board; legend: use Bi-Colour LED for Channel Footswitch"
+  ]
+ ],
+ "source": "layout"
+}

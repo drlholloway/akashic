@@ -1,0 +1,87 @@
+{
+ "id": "tagboardeffects:2012-06-way-huge-red-llama",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "First picture is a photo of a built board. The vero layout (15x9) shows the populated board with the two pots drawn above it and a bare cuts-and-links view below.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1M5",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "51p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "68n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "330u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "CD4049",
+   "IC",
+   ""
+  ],
+  [
+   "Drive",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,87 @@
+{
+ "id": "tagboardeffects:2012-03-ersatz-verben-psuedo-reverb-by",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "15x13 stripboard with a PT2399 and a 78L05 regulator; populated view above a bare cuts-and-links view.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×8",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "PT2399",
+   "IC",
+   "legend: IC is PT2399"
+  ],
+  [
+   "×1",
+   "78L05",
+   "IC",
+   "5V regulator"
+  ],
+  [
+   "Time",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "FB",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Mix",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

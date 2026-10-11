@@ -1,0 +1,90 @@
+{
+ "id": "dirtbox:2019-06-mosrite-fuzzrite-germanium",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 13x9 stripboard, two germanium PNP transistors, positive ground (-9v supply); values printed on every part.",
+ "uncertain": [
+  "50nF x3, 2nF x2 and 25uF: printed clearly, unusual values",
+  "Tone pot 350kC: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "50nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "25uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N2613",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N408",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Tone",
+   "C350K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

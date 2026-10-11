@@ -1,0 +1,120 @@
+{
+ "id": "effectslayouts-blog:2014-12-mxr-phase-45",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout plus a PCB version, the underside and an etch mask of the same circuit; read from the populated vero board. The PCB drawing disagrees with the vero on one pair of resistors (see uncertain).",
+ "uncertain": [
+  "two vertical resistors right of centre (columns N and O, rows K-N, above the lower TL072): the vero prints 10K and 10K, the PCB drawing of the same circuit prints 1.5K and 1.5K; vero reading kept, so 10K count is 13 (11 if those two are 1.5K)",
+  "20K next to the lower TL072: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×13",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "7.5K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "20K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.9M",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "250K",
+   "TRIM",
+   ""
+  ],
+  [
+   "×2",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "Q1",
+   "2N5457",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q2",
+   "2N5457",
+   "Q",
+   "JFET"
+  ],
+  [
+   "D1",
+   "4.7V Zener",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Speed",
+   "C500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

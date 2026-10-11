@@ -1,0 +1,87 @@
+{
+ "id": "tagboardeffects:2014-01-jc-maillet-super-full-wave-octaver",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard 15x10 shown populated on top and bare (cuts and links) below; values are large and clear.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "39pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "4558",
+   "IC",
+   "dual opamp, 4558 or similar"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Control",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "B10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

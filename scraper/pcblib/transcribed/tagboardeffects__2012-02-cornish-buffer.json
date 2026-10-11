@@ -1,0 +1,107 @@
+{
+ "id": "tagboardeffects:2012-02-cornish-buffer",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout, 14 x 9, populated board above a bare cuts-and-links view. One transistor buffer, no pots.",
+ "uncertain": [
+  "50K top right, 200K and 20K centre: printed clearly, unusual values"
+ ],
+ "rows": [
+  [
+   "×1",
+   "100R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "120K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "200K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "20K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "7K5",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "50K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4u7",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC549",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N5401",
+   "D",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

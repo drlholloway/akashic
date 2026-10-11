@@ -1,0 +1,33 @@
+{
+ "id": "tagboardeffects:2010-03-and-few-more",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small vero layout, 'Simple Voltage Doubler' (12 x 4): populated board above a bare cuts view. Charge-pump IC, two diodes, three electrolytics printed 47U / 10U / 47U.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "47uF",
+   "C",
+   "electrolytic; printed 47U"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic; printed 10U"
+  ],
+  [
+   "×2",
+   "1N5817",
+   "D",
+   "legend: 1N5817 or other Schottky"
+  ],
+  [
+   "×1",
+   "ICL7660S",
+   "IC",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

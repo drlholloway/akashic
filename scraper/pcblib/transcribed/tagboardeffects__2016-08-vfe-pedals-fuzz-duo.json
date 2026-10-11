@@ -1,0 +1,171 @@
+{
+ "id": "tagboardeffects:2016-08-vfe-pedals-fuzz-duo",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 16 x 14, populated board on the left and cuts/links view on the right. Four transistors (two silicon, two germanium NPN), three 1mH inductors and an on-board feedback trimmer; the legend gives hFE ranges rather than fixed types.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   "one ceramic disc, one film box"
+  ],
+  [
+   "×1",
+   "1u",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4n7",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "L1",
+   "1mH",
+   "L",
+   ""
+  ],
+  [
+   "L2",
+   "1mH",
+   "L",
+   ""
+  ],
+  [
+   "L3",
+   "1mH",
+   "L",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "BC108",
+   "Q",
+   "NPN Si, hFE 450-650 (combined total 1000-1200 with Q2); lower hFE in Q1"
+  ],
+  [
+   "Q2",
+   "BC108",
+   "Q",
+   "NPN Si, hFE 450-650 (combined total 1000-1200 with Q1)"
+  ],
+  [
+   "Q3",
+   "OC139",
+   "Q",
+   "NPN Ge, hFE 70-130 (combined total 180-220 with Q4); legend: OC139, OC140; lower hFE in Q3"
+  ],
+  [
+   "Q4",
+   "OC139",
+   "Q",
+   "NPN Ge, hFE 70-130 (combined total 180-220 with Q3); legend: OC139, OC140"
+  ],
+  [
+   "Fdbk",
+   "200K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Level",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Filter",
+   "W1M",
+   "POT",
+   ""
+  ],
+  [
+   "Bias",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Fuzz",
+   "C1K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch 1",
+   "DPDT on/on",
+   "SW",
+   ""
+  ],
+  [
+   "Switch 2",
+   "DPDT on/on",
+   "SW",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

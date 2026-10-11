@@ -1,0 +1,185 @@
+{
+ "id": "dirtbox:2021-04-dunwich-amplification-volt-thrower-big",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 21x21 stripboard (big box version) with three ICs, two on-board 1K trimmers, fifteen diodes and a 2P6T rotary switch. C7 has no known value; the LED resistor is printed only as CLR.",
+ "uncertain": [
+  "30pF, two of them (column 20 top right and column 11 centre): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×2",
+   "1K",
+   "TRIM",
+   "Other Freq Gain, Low Freq Gain"
+  ],
+  [
+   "×2",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "30pF",
+   "C",
+   ""
+  ],
+  [
+   "C7",
+   "?",
+   "C",
+   "value not given; legend: Unknown value, 330pF works fine"
+  ],
+  [
+   "×2",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "LM308",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "OP07",
+   "IC",
+   ""
+  ],
+  [
+   "IC3",
+   "LTC1144",
+   "IC",
+   ""
+  ],
+  [
+   "×3",
+   "3mm red LED",
+   "LED",
+   "D1-D3, on the board"
+  ],
+  [
+   "×6",
+   "1N4148",
+   "D",
+   "D4-D9; legend: 1N4148/1N914"
+  ],
+  [
+   "×5",
+   "Schottky",
+   "D",
+   "D10-D14; legend: Shottky or germanium"
+  ],
+  [
+   "D15",
+   "1N5819",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Bass",
+   "C1M",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Treble",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "2P6T rotary",
+   "SW",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

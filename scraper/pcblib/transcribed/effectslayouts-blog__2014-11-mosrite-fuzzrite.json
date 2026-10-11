@@ -1,0 +1,81 @@
+{
+ "id": "effectslayouts-blog:2014-11-mosrite-fuzzrite",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout shown as populated board, underside, etched PCB and wiring diagram; counted from the populated board, diagram agrees. Legend gives alternatives for transistors and both pots.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   "printed 4001"
+  ],
+  [
+   "Q1",
+   "2N2222",
+   "Q",
+   "legend: 2N2222, 2N3904, etc"
+  ],
+  [
+   "Q2",
+   "2N2222",
+   "Q",
+   "legend: 2N2222, 2N3904, etc"
+  ],
+  [
+   "Depth",
+   "B350K",
+   "POT",
+   "legend: B350k or B500k"
+  ],
+  [
+   "Volume",
+   "A33K",
+   "POT",
+   "legend: A33k or A50k"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,125 @@
+{
+ "id": "effectslayouts-blog:2016-10-demeter-compulator",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Storyboardist perfboard layout of the Demeter Compulator. The picture shows the circuit four times (populated perfboard, colour wiring diagram, bare underside, etched PCB); counted from the populated perfboard and confirmed against the colour diagram. The other pictures in the post are the schematic and a small copy of this drawing. Legend: 'Compress & Level: A20k', 'Stock trimmer set to 1.1k'.",
+ "uncertain": [
+  "619Ω (two, beside the upper LF353): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×5",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "619Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "TRIM",
+   "stock trimmer set to 1.1k"
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "box film"
+  ],
+  [
+   "×2",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "×2",
+   "LF353",
+   "IC",
+   ""
+  ],
+  [
+   "×1",
+   "VTL5C10",
+   "OPTO",
+   ""
+  ],
+  [
+   "Compress",
+   "A20K",
+   "POT",
+   "board pads labelled Comp"
+  ],
+  [
+   "Level",
+   "A20K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

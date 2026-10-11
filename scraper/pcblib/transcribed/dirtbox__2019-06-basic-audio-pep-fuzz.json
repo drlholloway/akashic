@@ -1,0 +1,113 @@
+{
+ "id": "dirtbox:2019-06-basic-audio-pep-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 14x8 stripboard, two-transistor fuzz; values printed on every part.",
+ "uncertain": [
+  "22uF electrolytic at column 2 rows G-H: the first digit is clipped by the can outline, reads 22uF (could be 2.2uF with the separator hidden)"
+ ],
+ "rows": [
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "820K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "5K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "56K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "film box"
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC107B",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "BC107B",
+   "Q",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Body",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "B500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

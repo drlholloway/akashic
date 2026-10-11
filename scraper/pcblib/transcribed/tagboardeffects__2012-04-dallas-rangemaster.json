@@ -1,0 +1,63 @@
+{
+ "id": "tagboardeffects:2012-04-dallas-rangemaster",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Dallas Rangemaster on a small tagboard (positive ground), single populated view with the Boost pot and the OC44 drawn off the board edge. A 5K trimmer on the board sets the bias.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4n7",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "5K",
+   "TRIM",
+   ""
+  ],
+  [
+   "×1",
+   "OC44",
+   "Q",
+   "germanium PNP"
+  ],
+  [
+   "Boost",
+   "A10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,57 @@
+{
+ "id": "dirtbox:2020-09-klon-buffer",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single small 12x7 stripboard: a dual op-amp buffer with no pots or switches.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "560Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,101 @@
+{
+ "id": "tagboardeffects:2012-12-seymour-duncan-pickup-booster",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard 15 x 11, populated view above a bare cuts-and-links view, with the Boost pot and a three-lug Resonance switch drawn off board. The legend calls the switch only 'Resonance sw 3 position'; the diode on the top strip has no designator or type.",
+ "uncertain": [
+  "Resonance switch: drawn with three lugs and described only as '3 position'; entered as SPDT on/off/on, the exact type is not stated"
+ ],
+ "rows": [
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "30K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1.8K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "3.3nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "?",
+   "D",
+   "value not given; supply polarity protection diode on the +9V strip"
+  ],
+  [
+   "Q1",
+   "BC107",
+   "Q",
+   "legend: or try any NPN"
+  ],
+  [
+   "Q2",
+   "BC107",
+   "Q",
+   "legend: or try any NPN"
+  ],
+  [
+   "Q3",
+   "BC177",
+   "Q",
+   "PNP; legend: or try any low noise PNP"
+  ],
+  [
+   "Boost",
+   "C25K",
+   "POT",
+   "printed 25K Rev log"
+  ],
+  [
+   "Resonance",
+   "SPDT on/off/on",
+   "SW",
+   "toggle; legend: Resonance sw 3 position"
+  ]
+ ],
+ "source": "layout"
+}

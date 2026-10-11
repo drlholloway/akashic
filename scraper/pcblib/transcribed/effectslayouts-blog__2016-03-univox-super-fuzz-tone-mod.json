@@ -1,0 +1,177 @@
+{
+ "id": "effectslayouts-blog:2016-03-univox-super-fuzz-tone-mod",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout of the Super Fuzz with the tone mod (tone pot instead of the switch), shown as populated board, colour wiring diagram, underside and etched PCB; counted from the populated board and confirmed against the diagram.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×6",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1.8K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×11",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   "printed 4001"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   "legend: 1N4148 or similar"
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   "legend: 1N4148 or similar"
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   "legend: 2N5088 or similar"
+  ],
+  [
+   "Q2",
+   "2N5088",
+   "Q",
+   "legend: 2N5088 or similar"
+  ],
+  [
+   "Q3",
+   "2N5088",
+   "Q",
+   "legend: 2N5088 or similar"
+  ],
+  [
+   "Q4",
+   "2N5088",
+   "Q",
+   "legend: 2N5088 or similar"
+  ],
+  [
+   "Q5",
+   "2N5088",
+   "Q",
+   "legend: 2N5088 or similar"
+  ],
+  [
+   "Q6",
+   "2N5088",
+   "Q",
+   "legend: 2N5088 or similar"
+  ],
+  [
+   "Expander",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Balance",
+   "B50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

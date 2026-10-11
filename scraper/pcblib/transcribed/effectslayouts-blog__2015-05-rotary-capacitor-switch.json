@@ -1,0 +1,51 @@
+{
+ "id": "effectslayouts-blog:2015-05-rotary-capacitor-switch",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Utility PCB that mounts six capacitors on a 12-position rotary switch (pads numbered 1 to 12 with common A; six positions wired); wiring view plus etched PCB. Capacitors carry designators C1 to C6 only, no values anywhere.",
+ "uncertain": [],
+ "rows": [
+  [
+   "C1",
+   "?",
+   "C",
+   "value not given; drawn as a small yellow bead (ceramic or tantalum)"
+  ],
+  [
+   "C2",
+   "?",
+   "C",
+   "value not given; drawn as film"
+  ],
+  [
+   "C3",
+   "?",
+   "C",
+   "value not given; drawn as film"
+  ],
+  [
+   "C4",
+   "?",
+   "C",
+   "value not given; drawn as film"
+  ],
+  [
+   "C5",
+   "?",
+   "C",
+   "value not given; drawn as film"
+  ],
+  [
+   "C6",
+   "?",
+   "C",
+   "electrolytic; value not given"
+  ],
+  [
+   "Rotary",
+   "1P12T rotary",
+   "SW",
+   "six of twelve positions wired"
+  ]
+ ],
+ "source": "layout"
+}

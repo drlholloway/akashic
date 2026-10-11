@@ -1,0 +1,147 @@
+{
+ "id": "dirtbox:2026-07-aleph-null-grawlix",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 18x17 stripboard with four transistors and six diodes; one 1M resistor is drawn standing/translucent over a cut next to another 1M.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "20K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "15nF",
+   "C",
+   ""
+  ],
+  [
+   "×7",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N3906",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "Q4",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N60P",
+   "D",
+   "Schottky or Germanium"
+  ],
+  [
+   "D2",
+   "1N60P",
+   "D",
+   "Schottky or Germanium"
+  ],
+  [
+   "D3",
+   "1N60P",
+   "D",
+   "Schottky or Germanium"
+  ],
+  [
+   "D4",
+   "1N60P",
+   "D",
+   "Schottky or Germanium"
+  ],
+  [
+   "D5",
+   "1N60P",
+   "D",
+   "Schottky or Germanium"
+  ],
+  [
+   "D6",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "C5K",
+   "POT",
+   ""
+  ],
+  [
+   "Texture",
+   "C500K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,159 @@
+{
+ "id": "tagboardeffects:2012-06-ehx-black-russian-big-muff-v8",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Pictures 1-2 are a photo of the original pedal; the vero layout is the third picture (19x17, populated board on top, cuts and links below). The Scooped / Flat / Boosted mids switch inset (3 pos DPDT carrying a 4n7 and a 10n between Tone 3 and Sw1) is drawn as part of the build and its switch and two caps are included.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "390R",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "39K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K7",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10n",
+   "C",
+   "one on the board, one on the mids switch"
+  ],
+  [
+   "×1",
+   "3n9",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4n7",
+   "C",
+   "on the mids switch"
+  ],
+  [
+   "×3",
+   "470p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC547C",
+   "Q",
+   "legend: Transistors were BC547C or BC549C"
+  ],
+  [
+   "Q2",
+   "BC547C",
+   "Q",
+   "legend: Transistors were BC547C or BC549C"
+  ],
+  [
+   "Q3",
+   "BC547C",
+   "Q",
+   "legend: Transistors were BC547C or BC549C"
+  ],
+  [
+   "Q4",
+   "BC547C",
+   "Q",
+   "legend: Transistors were BC547C or BC549C"
+  ],
+  [
+   "×4",
+   "1N914",
+   "D",
+   "D1 to D4"
+  ],
+  [
+   "Dx",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Sustain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Mids",
+   "DPDT on/off/on",
+   "SW",
+   "toggle, Scooped / Flat / Boosted mids, 3 pos DPDT"
+  ]
+ ],
+ "source": "layout"
+}

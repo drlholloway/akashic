@@ -1,0 +1,99 @@
+{
+ "id": "effectslayouts-blog:2016-09-gretsch-controfuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with the populated board top left, a colour wiring diagram, the underside and an etched PCB; parts counted from the populated board and confirmed on the diagram. All values are printed large and upright.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "1N4001",
+   "D",
+   "printed 4001"
+  ],
+  [
+   "×1",
+   "4558",
+   "IC",
+   ""
+  ],
+  [
+   "Distortion",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Boost",
+   "A10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

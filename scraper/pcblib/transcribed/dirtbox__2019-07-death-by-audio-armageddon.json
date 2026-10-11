@@ -1,0 +1,168 @@
+{
+ "id": "dirtbox:2019-07-death-by-audio-armageddon",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Picture 1 is the schematic; picture 3 is the single 25x17 stripboard layout, read here. Seven 2N5088 stages, germanium clipping diodes without a type, a trimmer of unknown value, a DPDT Sub toggle and a 3PDT Filter stomp switch with two indicator LEDs (no type given, left out).",
+ "uncertain": [
+  "Pot assignment: the legend says Filter A is the 500kA dual gang and Filter B 100kB, while the schematic in picture 1 has it the other way round (Filter B1/B2 dual 500k, Filter A 100k); entered as the layout legend prints it",
+  "430K (x5) and 910K (x2): printed clearly, unusual values"
+ ],
+ "rows": [
+  [
+   "×5",
+   "430K",
+   "R",
+   "legend recommends 750K-1M"
+  ],
+  [
+   "×3",
+   "100K",
+   "R",
+   "legend recommends 180K"
+  ],
+  [
+   "×4",
+   "180K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "910K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×7",
+   "390Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×9",
+   "470nF",
+   "C",
+   "legend: coupling caps can be reduced to 100nF"
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "39nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×7",
+   "2N5088",
+   "Q",
+   "Q1-Q7"
+  ],
+  [
+   "×4",
+   "Germanium",
+   "D",
+   "D1-D4, type not given"
+  ],
+  [
+   "D5",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Trim",
+   "?",
+   "TRIM",
+   "value not given; legend: unknown value on trimpot, try 5K-10K"
+  ],
+  [
+   "Filter A",
+   "A500K",
+   "POT",
+   "dual"
+  ],
+  [
+   "Filter B",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Drive",
+   "B1M",
+   "POT",
+   "legend: could be replaced with a reverse log taper"
+  ],
+  [
+   "Volume",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Sub",
+   "DPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Filter",
+   "3PDT",
+   "SW",
+   "stomp switch"
+  ]
+ ],
+ "source": "layout"
+}

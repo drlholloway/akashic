@@ -1,0 +1,81 @@
+{
+ "id": "effectslayouts-blog:2015-02-devi-ever-hyperion",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with two board-mounted pots, plus a wiring diagram, the underside and an etched PCB; counted from the populated board.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "2N2907",
+   "Q",
+   "PNP"
+  ],
+  [
+   "Intensity",
+   "B100K",
+   "POT",
+   "printed 100K Lin"
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   "printed 100K Lin"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { normalizeOriginal } from '$lib/search';
-	import { VENDOR_NAMES, type Vendor } from '$lib/types';
+	import { BUILD_NAMES, BUILD_ORDER, VENDOR_NAMES, buildsOf, type Build, type Vendor } from '$lib/types';
 
 	let { data } = $props();
 	let q = $state('');
@@ -9,13 +9,14 @@
 	// brand, then pedal; numbers compare as numbers (DS-1 before DS-2 before DS-10).
 	const byName = new Intl.Collator('en', { numeric: true, sensitivity: 'base' });
 	const groups = $derived.by(() => {
-		const m = new Map<string, { label: string; count: number; vendors: Set<Vendor>; categories: Set<string> }>();
+		const m = new Map<string, { label: string; count: number; builds: Map<Build, number>; vendors: Set<Vendor>; categories: Set<string> }>();
 		for (const e of data.index) {
 			if (!e.original) continue; // a description ('Lots of Big Muff variants') names no single original
 			const k = normalizeOriginal(e.original);
 			if (!k) continue;
-			const g = m.get(k) ?? { label: e.original, count: 0, vendors: new Set<Vendor>(), categories: new Set<string>() };
+			const g = m.get(k) ?? { label: e.original, count: 0, builds: new Map<Build, number>(), vendors: new Set<Vendor>(), categories: new Set<string>() };
 			g.count++;
+			for (const b of buildsOf(e)) g.builds.set(b, (g.builds.get(b) ?? 0) + 1); // a PCB with a layout beside it counts under both
 			g.vendors.add(e.vendor);
 			g.categories.add(e.category);
 			m.set(k, g);
@@ -30,20 +31,21 @@
 <div class="originals">
 	<header class="head">
 		<h1>Originals</h1>
-		<p class="lede">The commercial pedals these boards are based on, listed by name, brand then pedal, with how many boards clone each. Pick one to compare every vendor's take side by side.</p>
+		<p class="lede">The commercial pedals these boards are based on, listed by name, brand then pedal, with how many circuits clone each and how they are built: on a bought PCB, or from a vero, perfboard, tagboard or turret layout. Pick one to compare every take side by side.</p>
 		<label class="filter">
 			<span class="label">Filter</span>
 			<input type="search" bind:value={q} placeholder="Klon, Rat, Big Muff, Tube Screamer…" autocomplete="off" spellcheck="false" />
 		</label>
 	</header>
 	<table class="sheet-table">
-		<thead><tr><th>Original</th><th class="n">Boards</th><th>Vendors</th><th class="cat">Category</th></tr></thead>
+		<thead><tr><th>Original</th><th class="n">Circuits</th><th class="how">Built on</th><th class="src">Sources</th><th class="cat">Category</th></tr></thead>
 		<tbody>
 			{#each groups as g (g.label)}
 				<tr>
 					<td><a href="{base}/?based={encodeURIComponent(g.label)}" class="name">{g.label}</a></td>
 					<td class="n mono">{g.count}</td>
-					<td class="dim">{[...g.vendors].map((v) => VENDOR_NAMES[v]).join(', ')}</td>
+					<td class="how">{#each BUILD_ORDER.filter((b) => g.builds.has(b)) as b, i}{i ? ' · ' : ''}<a href="{base}/?based={encodeURIComponent(g.label)}&build={b}"><span class="mono">{g.builds.get(b)}</span> {BUILD_NAMES[b]}</a>{/each}</td>
+					<td class="src dim">{[...g.vendors].map((v) => VENDOR_NAMES[v]).join(', ')}</td>
 					<td class="cat dim">{[...g.categories].join(', ')}</td>
 				</tr>
 			{/each}
@@ -60,5 +62,7 @@
 	.filter input:focus { outline: none; border-color: var(--coat); box-shadow: 0 0 0 3px var(--coat-tint); background: var(--sheet); }
 	.name { font-weight: 600; }
 	.dim { color: var(--ink-3); }
-	@media (max-width: 700px) { .cat { display: none; } }
+	.how { white-space: nowrap; }
+	@media (max-width: 900px) { .how { white-space: normal; } }
+	@media (max-width: 700px) { .cat, .src { display: none; } }
 </style>

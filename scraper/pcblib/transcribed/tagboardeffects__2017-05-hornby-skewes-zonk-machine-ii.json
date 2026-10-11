@@ -1,0 +1,87 @@
+{
+ "id": "tagboardeffects:2017-05-hornby-skewes-zonk-machine-ii",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 11x9 vero board with two silicon PNP transistors. Electrolytic C1 has no value on the board; the legend says it ranged from 80uF to 125uF, and that the 3.9k resistor may not be needed.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "47k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "680k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.9k",
+   "R",
+   "legend: may not be needed"
+  ],
+  [
+   "C1",
+   "?",
+   "C",
+   "electrolytic, value not given; legend: C1 ranged from 80uF to 125uF"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "25uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "Q1",
+   "2N4061",
+   "Q",
+   "PNP Si"
+  ],
+  [
+   "Q2",
+   "2N4061",
+   "Q",
+   "PNP Si"
+  ],
+  [
+   "Fuzz",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Swell",
+   "A500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

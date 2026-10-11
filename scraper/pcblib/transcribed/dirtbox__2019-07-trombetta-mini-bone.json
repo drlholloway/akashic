@@ -1,0 +1,144 @@
+{
+ "id": "dirtbox:2019-07-trombetta-mini-bone",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 14x10 stripboard, one populated view. One of the two 560K resistors is drawn semi-transparent (standing or under other parts). Legend prints Q2 as '2N2097A or other PNP Ge, Hfe 150-200' and the Range switch as 'SPDT on7on' (typo for on/on).",
+ "uncertain": [
+  "Q2 printed '2N2097A' in the legend: printed clearly, unusual part number (possibly a typo for another PNP type); kept as printed",
+  "Range Switch printed 'SPDT on7on', read as SPDT on/on"
+ ],
+ "rows": [
+  [
+   "×2",
+   "560K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "39K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "330nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N2097A",
+   "Q",
+   "legend: 2N2097A or other PNP Ge, Hfe 150-200"
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   "D1, D2"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Mood",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Bore",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Range",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Tone",
+   "SPDT on/off/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

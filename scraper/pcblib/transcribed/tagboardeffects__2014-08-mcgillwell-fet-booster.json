@@ -1,0 +1,45 @@
+{
+ "id": "tagboardeffects:2014-08-mcgillwell-fet-booster",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small 8x8 vero layout by mirosol, single populated board with one cut; large clear labels.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.5M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "BF245B",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Sound",
+   "B220K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

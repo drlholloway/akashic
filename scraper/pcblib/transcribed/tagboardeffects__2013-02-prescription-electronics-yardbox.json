@@ -1,0 +1,132 @@
+{
+ "id": "tagboardeffects:2013-02-prescription-electronics-yardbox",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "14x9 stripboard, positive ground, shown populated and bare; small image. Four pots: the board wires name Fuzz, Tone and Vol, and the legend adds a Gain pot wired pot-to-pot.",
+ "uncertain": [
+  "22u electrolytic at top centre: small print, could be 2.2u",
+  "220p ceramic at far left edge is faint and partly cut off by the 100n next to it"
+ ],
+ "rows": [
+  [
+   "×5",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M5",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3K3",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2n2",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4u7",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N270",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "PNP germanium",
+   "Q",
+   "type not given"
+  ],
+  [
+   "Q2",
+   "PNP germanium",
+   "Q",
+   "type not given"
+  ],
+  [
+   "Q3",
+   "PNP germanium",
+   "Q",
+   "type not given"
+  ],
+  [
+   "Fuzz",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

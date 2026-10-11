@@ -1,0 +1,183 @@
+{
+ "id": "tagboardeffects:2020-08-earthquaker-devices-plumes",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 21x15 vero board with two ICs, plus a drawing of the clipping switch carrying D1-D5 off board (two red LEDs and three 1N4148). The three 1uF caps are drawn as film boxes, not cans.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7k",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "1k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100r",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330r",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "1uF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "56pF",
+   "C",
+   ""
+  ],
+  [
+   "IC1",
+   "TL074",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "MAX1044",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "3mm Red LED",
+   "LED",
+   "on the clipping switch"
+  ],
+  [
+   "D2",
+   "3mm Red LED",
+   "LED",
+   "on the clipping switch"
+  ],
+  [
+   "D3",
+   "1N4148",
+   "D",
+   "on the clipping switch"
+  ],
+  [
+   "D4",
+   "1N4148",
+   "D",
+   "on the clipping switch"
+  ],
+  [
+   "D5",
+   "1N4148",
+   "D",
+   "on the clipping switch"
+  ],
+  [
+   "D6",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "W20K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Sw",
+   "DPDT on/off/on",
+   "SW",
+   "toggle, clipping"
+  ]
+ ],
+ "source": "layout"
+}

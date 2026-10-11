@@ -1,0 +1,63 @@
+{
+ "id": "tagboardeffects:2013-01-devi-ever-ok",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "12x7 stripboard, a single populated view; Q1 and Q2 are MPSA18, Q3 a PNP 2N2907.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "3.3M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "Q1",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "2N2907",
+   "Q",
+   ""
+  ],
+  [
+   "Control",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

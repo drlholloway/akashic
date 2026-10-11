@@ -1,0 +1,131 @@
+{
+ "id": "tagboardeffects:2012-09-runoffgroove-odie",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "20 x 10 vero, populated board above a bare cuts-and-links view; three JFETs, two bias trimmers, three pots. The 4u7 and 2u2 are drawn as grey polarised boxes rather than round cans.",
+ "uncertain": [
+  "4u7 and 2u2 in the middle of the board: values clear, but drawn as grey boxes with a polarity bar, so the capacitor type (tantalum or axial electrolytic) is not stated"
+ ],
+ "rows": [
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M5",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "3n3",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "6n8",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4u7",
+   "C",
+   "polarised, drawn as a grey box"
+  ],
+  [
+   "×1",
+   "2u2",
+   "C",
+   "polarised, drawn as a grey box"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "100K",
+   "TRIM",
+   "set for 1/2 supply voltage"
+  ],
+  [
+   "Q1",
+   "J201",
+   "Q",
+   "JFET; legend: J201, MPF102 or 2N5457"
+  ],
+  [
+   "Q2",
+   "J201",
+   "Q",
+   "JFET; legend: J201, MPF102 or 2N5457"
+  ],
+  [
+   "Q3",
+   "J201",
+   "Q",
+   "JFET; legend: J201, MPF102 or 2N5457"
+  ],
+  [
+   "Drive",
+   "A250K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

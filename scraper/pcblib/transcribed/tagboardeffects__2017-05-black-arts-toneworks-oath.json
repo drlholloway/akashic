@@ -1,0 +1,108 @@
+{
+ "id": "tagboardeffects:2017-05-black-arts-toneworks-oath",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 17x13 stripboard, three transistors. The only off-board wires are Input, +9V, Output and a black wire labelled 'Gain' on the bottom strip (where the sibling layouts have Ground); no pot value is given anywhere.",
+ "uncertain": [
+  "6k (two: column 16 upper right, column 10 lower middle): printed clearly, unusual value",
+  "Gain pot: only a single wire labelled 'Gain' on the bottom strip, no value or taper given; the label may stand for the ground connection"
+ ],
+ "rows": [
+  [
+   "×5",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "470k",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "6k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100r",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1k",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "470pF",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N5089",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "2N5089",
+   "Q",
+   ""
+  ],
+  [
+   "×2",
+   "1N914",
+   "D",
+   "D1, D2"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "?",
+   "POT",
+   "value not given"
+  ]
+ ],
+ "source": "layout"
+}

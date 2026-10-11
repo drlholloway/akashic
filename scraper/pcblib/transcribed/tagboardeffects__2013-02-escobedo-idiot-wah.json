@@ -1,0 +1,85 @@
+{
+ "id": "tagboardeffects:2013-02-escobedo-idiot-wah",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small low-resolution 10x10 stripboard drawing, populated and bare. One MPSA13, a 50K Freq pot (no taper stated) and an SPST resonance switch wired to Sw1/Sw2.",
+ "uncertain": [
+  "680p ceramic right of Q1: tiny text, could be 660p",
+  "500K resistors (two, upper left): printed clearly, unusual value",
+  "5n capacitor at upper right: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "500K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220p",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "680p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "5n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "MPSA13",
+   "Q",
+   ""
+  ],
+  [
+   "Freq",
+   "50K",
+   "POT",
+   "no taper stated"
+  ],
+  [
+   "Resonance",
+   "SPST",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

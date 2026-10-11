@@ -1,0 +1,237 @@
+{
+ "id": "dirtbox:2023-03-colorsound-octivider",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 27x24 stripboard with eleven transistors, densely packed. The legend asks for Q9, Q10, D1 and D2 to be matched for the best octave effect.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×10",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×7",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "6.8K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "330Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "39K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "6.8nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×9",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC549C",
+   "Q",
+   "BC549C, 2N5088 etc. (BC184L in original)"
+  ],
+  [
+   "Q2",
+   "BC549C",
+   "Q",
+   "BC549C, 2N5088 etc. (BC184L in original)"
+  ],
+  [
+   "Q3",
+   "BC549C",
+   "Q",
+   "BC549C, 2N5088 etc. (BC184L in original)"
+  ],
+  [
+   "Q4",
+   "BC559C",
+   "Q",
+   "PNP; BC559C, 2N5087 etc. (BC212B in original)"
+  ],
+  [
+   "Q5",
+   "BC549C",
+   "Q",
+   "BC549C, 2N5088 etc. (BC184L in original)"
+  ],
+  [
+   "Q6",
+   "BC549C",
+   "Q",
+   "BC549C, 2N5088 etc. (BC184L in original)"
+  ],
+  [
+   "Q7",
+   "BC549C",
+   "Q",
+   "BC549C, 2N5088 etc. (BC184L in original)"
+  ],
+  [
+   "Q8",
+   "BC549C",
+   "Q",
+   "BC549C, 2N5088 etc. (BC184L in original)"
+  ],
+  [
+   "Q9",
+   "BC549C",
+   "Q",
+   "BC549C, 2N5088 etc. (BC184L in original); match with Q10"
+  ],
+  [
+   "Q10",
+   "BC549C",
+   "Q",
+   "BC549C, 2N5088 etc. (BC184L in original); match with Q9"
+  ],
+  [
+   "Q11",
+   "BC549C",
+   "Q",
+   "BC549C, 2N5088 etc. (BC184L in original)"
+  ],
+  [
+   "×3",
+   "1N4148",
+   "D",
+   "D1, D2, D3; D1 and D2 should be matched"
+  ],
+  [
+   "D4",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Sensitivity",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Bass Vol",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Bass Sw",
+   "DPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Normal Sw",
+   "DPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

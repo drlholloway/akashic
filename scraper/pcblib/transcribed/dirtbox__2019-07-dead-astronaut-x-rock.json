@@ -1,0 +1,99 @@
+{
+ "id": "dirtbox:2019-07-dead-astronaut-x-rock",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 12x9 stripboard with two 2N5088 and two clipping LEDs on the board. The board labels the power diode D1 and the LEDs D2 and D3, while the legend calls the LEDs D1-D2 and the 1N5817 D3; rows follow the board's labels.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   "legend calls it D3"
+  ],
+  [
+   "×2",
+   "3mm red LED",
+   "LED",
+   "D2, D3 on the board; legend calls them D1-D2"
+  ],
+  [
+   "Pre Gain",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

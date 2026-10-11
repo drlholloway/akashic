@@ -1,0 +1,107 @@
+{
+ "id": "dirtbox:2025-03-mr-black-white-widow-distortion",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 14x12 stripboard; two red clipping LEDs on the board, no LED resistor drawn. Volume 2 goes to Output.",
+ "uncertain": [
+  "50K resistors (two: left at column 2 rows H-K, right at column 12 rows G-J): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "50K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×6",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "RC4558",
+   "IC",
+   ""
+  ],
+  [
+   "×2",
+   "3mm red LED",
+   "LED",
+   "D1, D2"
+  ],
+  [
+   "D3",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

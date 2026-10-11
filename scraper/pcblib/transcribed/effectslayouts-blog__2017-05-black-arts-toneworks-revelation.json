@@ -1,0 +1,120 @@
+{
+ "id": "effectslayouts-blog:2017-05-black-arts-toneworks-revelation",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout of the Black Arts Toneworks Revelation Super Bass: populated board top left, colour wiring diagram, bare underside and etched PCB repeat the same circuit. Counted from the populated board, confirmed against the wiring diagram. Three transistors are drawn (Q1-Q3 in the wiring diagram) but the legend names only Q1 and Q2.",
+ "uncertain": [
+  "6K x2 (one vertical left of Q2, one horizontal above Q3): printed clearly, unusual value",
+  "Q3 (right side of the board): the legend gives Q1 MPSA18 and Q2 2N5089 only, no type for Q3"
+ ],
+ "rows": [
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "6K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "470pF",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   "printed 4001"
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   "printed 4148"
+  ],
+  [
+   "Q1",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N5089",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "?",
+   "Q",
+   "value not given"
+  ],
+  [
+   "Gain",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "PreGain",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

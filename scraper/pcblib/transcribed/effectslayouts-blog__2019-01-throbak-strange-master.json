@@ -1,0 +1,93 @@
+{
+ "id": "effectslayouts-blog:2019-01-throbak-strange-master",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small perfboard layout shown populated, as a colour wiring diagram, as the reversed underside and as an etched PCB; counted from the populated board, confirmed on the diagram. Q1 is the round metal-can transistor, Q2 the flat one above it (designators from the diagram).",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.9K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "2SD30",
+   "Q",
+   "legend: 2SD30 or similar"
+  ],
+  [
+   "Q2",
+   "2N2222A",
+   "Q",
+   ""
+  ],
+  [
+   "Bias",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Boost",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Hi/Lo",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Ge/Si",
+   "DPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

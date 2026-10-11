@@ -1,0 +1,89 @@
+{
+ "id": "effectslayouts-blog:2014-11-jordan-bosstone",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Jordan Boss Tone on perfboard, with wiring diagram, underside and etched PCB repeating the same parts. Transistors are marked only with pinouts on the populated board; Q1/Q2 designators and types come from the diagram and legend.",
+ "uncertain": [
+  "50pF ceramic at column H: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×1",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "560K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "50pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N2222",
+   "Q",
+   "NPN"
+  ],
+  [
+   "Q2",
+   "2N3906",
+   "Q",
+   "PNP"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   "printed 4001"
+  ],
+  [
+   "Attack",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

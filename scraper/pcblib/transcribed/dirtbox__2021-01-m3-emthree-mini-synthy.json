@@ -1,0 +1,141 @@
+{
+ "id": "dirtbox:2021-01-m3-emthree-mini-synthy",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 19x13 stripboard, four transistors and a 14-pin CD4024 divider (the CD4024 mod replacing the original SAJ110). Three 500kB mix pots and an SPST switch wired to two board pads; the LED resistor is printed only as CLR.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "330K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "680Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1.5nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×4",
+   "BC109",
+   "Q",
+   "Q1-Q4; legend: BC109 or BC239C"
+  ],
+  [
+   "IC1",
+   "CD4024BE",
+   "IC",
+   "SAJ110 in original"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Straight",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "1 Octave",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "2 Octave",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "SPST",
+   "SW",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

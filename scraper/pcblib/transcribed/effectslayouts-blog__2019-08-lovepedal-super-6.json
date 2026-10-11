@@ -1,0 +1,105 @@
+{
+ "id": "effectslayouts-blog:2019-08-lovepedal-super-6",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small perfboard layout with a colour wiring diagram, the underside and an etched PCB; counted from the populated board. One MOSFET, drawn with S G D pins on the board and named BS170 only in the wiring diagram. The 10uF and 47uF are drawn as boxes with polarity marks (electrolytics laid flat).",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "330Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "510Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.5M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "9.1V",
+   "D",
+   "zener, printed 9.1v"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "BS170",
+   "Q",
+   "MOSFET, named in the wiring diagram"
+  ],
+  [
+   "Intense",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "tagboardeffects:2013-01-amtron-uk854-fuzz-box",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Pictures 1-2 are a photo of the pedal; pictures 3 and 5 are two vero layouts of the same circuit (4 and 6 are their thumbnails). Read the first (picture 3, fixed 27K); the second version replaces the 27K with a 25K trimmer VR1.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "82K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "27K",
+   "R",
+   "alternative layout uses a 25K trimmer (VR1) here"
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   "polarity protection"
+  ],
+  [
+   "×2",
+   "BC209",
+   "Q",
+   "Transistors were BC209 or BC239; use any NPN 250-300 hFE (2N3904, 2N2222, BC108B..)"
+  ],
+  [
+   "Fuzz",
+   "B470R",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

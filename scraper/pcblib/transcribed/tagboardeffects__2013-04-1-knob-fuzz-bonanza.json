@@ -1,0 +1,81 @@
+{
+ "id": "tagboardeffects:2013-04-1-knob-fuzz-bonanza",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Five alternative one-knob fuzzes on the same 11 x 8 board (Colorsound 1-Knob Fuzz, Dr. Tony Balls 1966, D*A*M Meathead, Black Arts Toneworks Ritual Fuzz, D*A*M Meathead Dark) plus one bare cuts view. Only the first, the Colorsound 1-Knob Fuzz, is read here; the others differ in values.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "820Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "BC107",
+   "Q",
+   "legend: Transistors are BC107/BC108, except TP2222A for Black Arts"
+  ],
+  [
+   "Volume",
+   "A500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,87 @@
+{
+ "id": "tagboardeffects:2022-12-dylan-159s-blendy-buffoon",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "16x14 stripboard (columns numbered to 15) with one populated view and one bare cuts/links view; TL072 dry blender with a transistor phase splitter, send/return and an SPST phase switch.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "×1",
+   "2N5088",
+   "Q",
+   "Transistor is 2N5088 (or similar)"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Mix",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Phase",
+   "SPST",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

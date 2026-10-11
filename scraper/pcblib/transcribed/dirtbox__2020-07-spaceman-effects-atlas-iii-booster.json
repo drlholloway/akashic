@@ -1,0 +1,113 @@
+{
+ "id": "dirtbox:2020-07-spaceman-effects-atlas-iii-booster",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 15x11 stripboard with an external phase switch. Two ferrite beads (FB) on the board; Q3-Q4 are an unknown NPN silicon type with substitutes suggested.",
+ "uncertain": [
+  "30K standing resistor at column 11, rows H-J (next to the 1.2nF): the label sits on a short upright body and may be clipped (could be 330K); as read it is an unusual value"
+ ],
+ "rows": [
+  [
+   "×5",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "30K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "180nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "330pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "Ferrite bead",
+   "L",
+   "FB"
+  ],
+  [
+   "Q1",
+   "LND150N3",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "Q2",
+   "LND150N3",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "Q3",
+   "2N3904",
+   "Q",
+   "Unknown NPN silicon; try 2N3904, 2N2222A, 2N4401 etc."
+  ],
+  [
+   "Q4",
+   "2N3904",
+   "Q",
+   "Unknown NPN silicon; try 2N3904, 2N2222A, 2N4401 etc."
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Boost",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "SPDT on/on",
+   "SW",
+   "external phase switch"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,159 @@
+{
+ "id": "tagboardeffects:2013-01-clipper-ship-v2",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 19x11, populated board above a bare cuts-and-links view; parts counted from the populated board. Diodes and Q1 are given only as types in the legend (Si, Ge or schottky, NPN Ge or JFET).",
+ "uncertain": [],
+ "rows": [
+  [
+   "×5",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "270Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "560Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "1uF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "150pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "Si",
+   "D",
+   "legend: D1 is Si, no part number given"
+  ],
+  [
+   "D2",
+   "1N270",
+   "D",
+   "legend: Ge or schottky (try 1N270 or 1N4001)"
+  ],
+  [
+   "D3",
+   "1N270",
+   "D",
+   "legend: Ge or schottky (try 1N270 or 1N4001)"
+  ],
+  [
+   "D4",
+   "1N4001",
+   "D",
+   "legend: 1N4001 or 1N5817"
+  ],
+  [
+   "Q1",
+   "NPN Ge or JFET",
+   "Q",
+   "legend: Q1 is NPN Ge or JFET, no part number given; drawn with C B E pins"
+  ],
+  [
+   "Q2",
+   "2N5457",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q3",
+   "2N5457",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Gain",
+   "C5K",
+   "POT",
+   "rev. log"
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

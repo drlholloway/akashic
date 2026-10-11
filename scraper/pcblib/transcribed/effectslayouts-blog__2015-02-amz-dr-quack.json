@@ -1,0 +1,161 @@
+{
+ "id": "effectslayouts-blog:2015-02-amz-dr-quack",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout with parts, colour wiring diagram, underside and etched PCB, plus a DPDT Norm/Bass switch drawn between them; counted from the populated vero. The vero and the wiring diagram disagree on one capacitor (100nF vs 10nF).",
+ "uncertain": [
+  "100nF film cap at bottom left (column B, rows J-M): the populated vero prints 100nF, the wiring diagram prints 10nF for the same part; vero value entered"
+ ],
+ "rows": [
+  [
+   "×5",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47Ω",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   "wiring diagram prints 10nF"
+  ],
+  [
+   "×3",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC",
+   "TL072",
+   "IC",
+   "TL072 or similar"
+  ],
+  [
+   "Q1",
+   "2N5457",
+   "Q",
+   "JFET; 2N5457 or similar"
+  ],
+  [
+   "Q2",
+   "2N3904",
+   "Q",
+   "2N3904 or similar"
+  ],
+  [
+   "D1",
+   "Red LED",
+   "LED",
+   ""
+  ],
+  [
+   "D2",
+   "Red LED",
+   "LED",
+   ""
+  ],
+  [
+   "D3",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D4",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Sensitivity",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Range",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Norm/Bass",
+   "DPDT",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

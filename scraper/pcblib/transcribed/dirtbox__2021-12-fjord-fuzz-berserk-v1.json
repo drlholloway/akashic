@@ -1,0 +1,129 @@
+{
+ "id": "dirtbox:2021-12-fjord-fuzz-berserk-v1",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 15x12 stripboard with three transistors, a 10K bias trimmer and an off-board DPDT switch. Legend gives hFE targets for each transistor.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "470pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×4",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Bias",
+   "10K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Q1",
+   "BC549",
+   "Q",
+   "legend: BC549/BC550 - Hfe 360"
+  ],
+  [
+   "Q2",
+   "2N4123",
+   "Q",
+   "Hfe 120"
+  ],
+  [
+   "Q3",
+   "2N3704",
+   "Q",
+   "Hfe 140"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Thickness",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "DPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

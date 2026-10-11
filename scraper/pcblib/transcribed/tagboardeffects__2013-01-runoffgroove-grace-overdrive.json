@@ -1,0 +1,75 @@
+{
+ "id": "tagboardeffects:2013-01-runoffgroove-grace-overdrive",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "12x8 stripboard, populated view on top and a bare cuts-and-links view below. LM386 overdrive with a J201 input stage; the LED current-limiting resistor is on the board with no value. Drive 1 is not connected.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "4.7M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "6.8nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   "1N4001 or 1N5817"
+  ],
+  [
+   "Q1",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "IC1",
+   "LM386",
+   "IC",
+   ""
+  ],
+  [
+   "Drive",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,107 @@
+{
+ "id": "tagboardeffects:2012-12-carlsbro-suzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout, 15 x 9, populated board above a bare cuts-and-links view; counted from the populated board. D1 is drawn with no type anywhere; the legend suggests alternative pot values and op-amps.",
+ "uncertain": [
+  "470Ω resistor right of IC1: the last character is overprinted by the colour bands and reads as an ohm sign (bands yellow-violet-black-black agree with 470Ω)"
+ ],
+ "rows": [
+  [
+   "×2",
+   "120K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "IC1",
+   "CA741",
+   "IC",
+   "try LM741, TL071"
+  ],
+  [
+   "Sustain",
+   "C22K",
+   "POT",
+   "rev. log (try 20K lin)"
+  ],
+  [
+   "Gain",
+   "A470R",
+   "POT",
+   "log (try 1K, or 100K)"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,51 @@
+{
+ "id": "tagboardeffects:2013-01-devi-ever-electric-brown",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "10x7 stripboard, a single populated view; two MPSA18 transistors without designators.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "3.3M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Pregain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

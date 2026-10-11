@@ -1,0 +1,135 @@
+{
+ "id": "dirtbox:2021-07-monolith-oracle-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 12x12 stripboard with two PNP germanium transistors and a DPDT switch wired off-board; values printed on every part.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "8.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "820Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "6.8nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "56nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "film (box)"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "OC76",
+   "Q",
+   "or other PNP Ge transistors; Hfe ~ 100"
+  ],
+  [
+   "Q2",
+   "OC76",
+   "Q",
+   "or other PNP Ge transistors; Hfe ~ 300"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Density",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Color",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Output",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "DPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

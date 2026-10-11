@@ -1,0 +1,111 @@
+{
+ "id": "effectslayouts-blog:2019-05-bass-direct-box",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout shown four times (populated board, colour wiring diagram, underside, etched PCB); counted from the populated board and confirmed against the wiring diagram. A DI box with XLR output, 5532 and TL072; no pots or switches are drawn.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "270Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "6.8K",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1uF",
+   "C",
+   "box film"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "NE5532",
+   "IC",
+   "printed \"5532\""
+  ],
+  [
+   "×1",
+   "TL072",
+   "IC",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

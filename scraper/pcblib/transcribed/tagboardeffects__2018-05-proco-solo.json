@@ -1,0 +1,189 @@
+{
+ "id": "tagboardeffects:2018-05-proco-solo",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 23x14 vero board by Rocket88 with the values printed large; cuts are shown on the same view. Five LEDs and two silicon diodes sit on the board as clipping diodes chosen by a 1-pole 3-position rotary; the legend gives no type for either.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47r",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "560r",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "56k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "30pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "1uF",
+   "C",
+   "film (box)"
+  ],
+  [
+   "×1",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "LM308",
+   "IC",
+   ""
+  ],
+  [
+   "Q1",
+   "2N5458",
+   "Q",
+   "JFET"
+  ],
+  [
+   "D1",
+   "LED",
+   "LED",
+   "clipping, type not given"
+  ],
+  [
+   "D2",
+   "LED",
+   "LED",
+   "clipping, type not given"
+  ],
+  [
+   "D3",
+   "LED",
+   "LED",
+   "clipping, type not given"
+  ],
+  [
+   "D4",
+   "LED",
+   "LED",
+   "clipping, type not given"
+  ],
+  [
+   "D5",
+   "LED",
+   "LED",
+   "clipping, type not given"
+  ],
+  [
+   "D6",
+   "Si",
+   "D",
+   "silicon diode, type not given"
+  ],
+  [
+   "D7",
+   "Si",
+   "D",
+   "silicon diode, type not given"
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Distortion",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Scoop",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "1P3T rotary",
+   "SW",
+   "1 Pole 3 Position Rotary Switch"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,135 @@
+{
+ "id": "tagboardeffects:2017-01-durham-sex-drive",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout, 19 x 12, populated board on the left and the cuts/links view on the right. One 4558, two green clipping LEDs on the board, three 1N4148 and a 1N5817.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "330R",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "39K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "330n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "film box"
+  ],
+  [
+   "×2",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "4558",
+   "IC",
+   "no designator printed"
+  ],
+  [
+   "×2",
+   "5mm Green LED",
+   "LED",
+   "D1, D2"
+  ],
+  [
+   "×3",
+   "1N4148",
+   "D",
+   "D3, D4, D5"
+  ],
+  [
+   "D6",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Compression",
+   "SPDT on/off/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

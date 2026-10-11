@@ -1,0 +1,162 @@
+{
+ "id": "tagboardeffects:2017-01-hbe-germania",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout, 20 x 12, populated board on the left and the cuts/links view on the right. 7660S charge pump, a 2N4403 and a germanium Q2 (AC128 or OC44), two toggle switches off board.",
+ "uncertain": [
+  "511K at the left of the board: printed clearly, unusual value",
+  "The transistor labelled only '2n4403' under the board is entered as Q1 because the other is labelled Q2"
+ ],
+ "rows": [
+  [
+   "×1",
+   "10R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3K9",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "511K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "10p",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "2n7",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "6n8",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "7660S",
+   "IC",
+   "no designator printed"
+  ],
+  [
+   "Q1",
+   "2N4403",
+   "Q",
+   "designator not printed"
+  ],
+  [
+   "Q2",
+   "AC128",
+   "Q",
+   "AC128 or OC44"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "3Q",
+   "SPDT on/off/on",
+   "SW",
+   "Switch 1, toggle"
+  ],
+  [
+   "HiFi-LoFi",
+   "DPDT",
+   "SW",
+   "Switch 2, toggle"
+  ]
+ ],
+ "source": "layout"
+}

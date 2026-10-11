@@ -1,0 +1,99 @@
+{
+ "id": "tagboardeffects:2013-01-fulltone-69",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "14x9 stripboard shown populated and bare; two-transistor PNP germanium fuzz, positive ground, with a bias trimmer and four pots.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2u2",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Q1",
+   "PNP Germanium",
+   "Q",
+   "type not given"
+  ],
+  [
+   "Q2",
+   "PNP Germanium",
+   "Q",
+   "type not given"
+  ],
+  [
+   "Bias",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Contour",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

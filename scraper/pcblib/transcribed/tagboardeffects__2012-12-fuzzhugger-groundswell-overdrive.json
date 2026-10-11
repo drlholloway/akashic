@@ -1,0 +1,71 @@
+{
+ "id": "tagboardeffects:2012-12-fuzzhugger-groundswell-overdrive",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero 10x10, populated board above a bare cuts-and-links view; read from the populated board. Small image, read at 6x.",
+ "uncertain": [
+  "110R, two resistors at the lower left: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "110R",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "Q1",
+   "MPSA13",
+   "Q",
+   "Darlington"
+  ],
+  [
+   "Q2",
+   "MPSA13",
+   "Q",
+   "Darlington"
+  ],
+  [
+   "Gain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Bias",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,87 @@
+{
+ "id": "tagboardeffects:2013-03-kendrick-buffalo-pfuz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small 12x10 vero with one single op-amp, three diodes with designators and two electrolytics; populated board above, bare cuts-and-links view below. A Boost/Pfuz foot switch (SPST, wires SW1/SW2) selects the mode.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "NTE941",
+   "IC",
+   "legend: NTE941 (LM741 or similar)"
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B20K",
+   "POT",
+   ""
+  ],
+  [
+   "Boost/Pfuz",
+   "SPST",
+   "SW",
+   "foot switch"
+  ]
+ ],
+ "source": "layout"
+}

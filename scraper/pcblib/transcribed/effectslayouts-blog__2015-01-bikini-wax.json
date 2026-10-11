@@ -1,0 +1,141 @@
+{
+ "id": "effectslayouts-blog:2015-01-bikini-wax",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with its underside, plus a wiring diagram and etched PCB of the same circuit; read from the populated perfboard and confirmed against the wiring diagram. Q and D designators come from the diagram and legend.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "8.2K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "39K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×7",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "470pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   "legend: 1N4148, 1N914, etc"
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   "legend: 1N4148, 1N914, etc"
+  ],
+  [
+   "D3",
+   "1N4148",
+   "D",
+   "legend: 1N4148, 1N914, etc"
+  ],
+  [
+   "D4",
+   "1N4148",
+   "D",
+   "legend: 1N4148, 1N914, etc"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   "legend: 2N5088, 2N5089, MPSA18, etc"
+  ],
+  [
+   "Q2",
+   "2N5088",
+   "Q",
+   "legend: 2N5088, 2N5089, MPSA18, etc"
+  ],
+  [
+   "Q3",
+   "2N5088",
+   "Q",
+   "legend: 2N5088, 2N5089, MPSA18, etc"
+  ],
+  [
+   "Sustain",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

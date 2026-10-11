@@ -1,0 +1,77 @@
+{
+ "id": "tagboardeffects:2010-12-effector-13-devi-soda-meiser",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "19 x 7 stripboard drawn populated and bare; four transistors, two 100K log pots, and an unlabelled three-lug switch drawn left of the board with two lugs wired to it. Legend notes flipping Q4 makes a Vintage Fuzz Master.",
+ "uncertain": [
+  "Blue three-lug part left of the board is unlabelled: read as an SPDT toggle with two lugs wired (rows 2 and 5); type and function not printed"
+ ],
+ "rows": [
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3M3",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "Q1",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q4",
+   "2N2907A",
+   "Q",
+   ""
+  ],
+  [
+   "Intensity",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "SPDT",
+   "SW",
+   "unlabelled toggle, two of three lugs wired"
+  ]
+ ],
+ "source": "layout"
+}

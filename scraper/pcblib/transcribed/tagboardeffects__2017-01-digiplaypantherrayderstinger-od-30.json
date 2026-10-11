@@ -1,0 +1,147 @@
+{
+ "id": "tagboardeffects:2017-01-digiplaypantherrayderstinger-od-30",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Populated 18x15 stripboard on the left, bare cuts-and-links view on the right; only the populated view counted. One 12K is starred (sets overall volume, raise to taste). Transistors are unnamed NPN silicon, 2N3904 suggested; Drive pot is A10K with 'try linear' noted.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "12K",
+   "R",
+   "one marked 12K*: sets overall volume, increase to taste"
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47pF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "4558",
+   "IC",
+   ""
+  ],
+  [
+   "×2",
+   "2N3904",
+   "Q",
+   "NPN silicon; legend: try 2N3904 or similar"
+  ],
+  [
+   "×2",
+   "1N914",
+   "D",
+   "D1, D2; or 1N4148"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   "series polarity protection"
+  ],
+  [
+   "Drive",
+   "A10K",
+   "POT",
+   "legend: try linear"
+  ],
+  [
+   "Level",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

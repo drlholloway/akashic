@@ -1,0 +1,63 @@
+{
+ "id": "dirtbox:2025-04-dying-battery-simulator",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small 10x7 stripboard, one populated view: an LM317 (drawn as Q1, TO-92) with four resistors and three capacitors, driven from 12V and controlled by one dual-gang pot (Voltage/Sag).",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "560Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "LM317",
+   "IC",
+   "regulator, labelled Q1 on the drawing"
+  ],
+  [
+   "Voltage/Sag",
+   "B10K",
+   "POT",
+   "dual"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,93 @@
+{
+ "id": "tagboardeffects:2012-02-marshall-supa-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "15x9 vero with three PNP germanium transistors, populated board above a bare cuts view; positive ground.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "8K2",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   "one small ceramic printed 10n (top left), one box film printed 10nF (right)"
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10u",
+   "C",
+   "electrolytic; one axial printed 10U (left), one radial"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "PNP germanium",
+   "Q",
+   "legend: consider a matched Tonebender set"
+  ],
+  [
+   "Q2",
+   "PNP germanium",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "PNP germanium",
+   "Q",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Attack",
+   "B1K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

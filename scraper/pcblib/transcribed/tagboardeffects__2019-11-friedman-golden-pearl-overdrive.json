@@ -1,0 +1,141 @@
+{
+ "id": "tagboardeffects:2019-11-friedman-golden-pearl-overdrive",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero board (14 x 11) shown populated at the top and bare below; counted from the populated view. Clipping diodes D1-D5 and the two hi-cut capacitors are wired on the Voice and Hi Cut toggle switches, off the board.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "2K2",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2n2",
+   "C",
+   "on the Hi Cut switch"
+  ],
+  [
+   "×1",
+   "3n9",
+   "C",
+   "on the Hi Cut switch"
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC",
+   "LM833",
+   "IC",
+   ""
+  ],
+  [
+   "×3",
+   "1N4148",
+   "D",
+   "D1-D3, on the Voice switch"
+  ],
+  [
+   "×2",
+   "Yellow LED",
+   "LED",
+   "D4, D5, on the Voice switch"
+  ],
+  [
+   "Gain",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Voice",
+   "DPDT on/off/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Hi Cut",
+   "DPDT on/off/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,75 @@
+{
+ "id": "tagboardeffects:2010-02-fulltone-fatboost-v1",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Tagboard layout, one populated board with two 2N5457 JFETs and three pots printed without tapers. A note says the source and gate pins of Q2 need to be crossed.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "3U3",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4005",
+   "D",
+   ""
+  ],
+  [
+   "×2",
+   "2N5457",
+   "Q",
+   "JFET; source and gate pins of Q2 need to be crossed"
+  ],
+  [
+   "Gain",
+   "500K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

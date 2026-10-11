@@ -1,0 +1,63 @@
+{
+ "id": "tagboardeffects:2017-05-hornby-skewes-tb-2-selectatone",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 11x9 vero board with one germanium transistor; treble boost with a DPDT on-on switch wired off-board (SW 1-6). No pots.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2k",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "OC71",
+   "Q",
+   "PNP Ge"
+  ],
+  [
+   "SW",
+   "DPDT on/on",
+   "SW",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

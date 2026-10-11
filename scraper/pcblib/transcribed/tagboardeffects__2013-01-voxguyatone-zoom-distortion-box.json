@@ -1,0 +1,95 @@
+{
+ "id": "tagboardeffects:2013-01-voxguyatone-zoom-distortion-box",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 12x10, populated board on top and a bare cuts/links view below. Both clipping diodes are printed 'D1' on the board; the legend calls them D1-D2.",
+ "uncertain": [
+  "D1/D2: legend says 'Ge SG9150 (try 1N270, 1N34A)'; entered the first suggested substitute 1N270, the original part is SG9150"
+ ],
+ "rows": [
+  [
+   "×4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "56nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "500pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "LM741",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N270",
+   "D",
+   "Ge SG9150 (try 1N270, 1N34A)"
+  ],
+  [
+   "D2",
+   "1N270",
+   "D",
+   "Ge SG9150 (try 1N270, 1N34A); printed D1 on the board"
+  ],
+  [
+   "Distortion",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Output",
+   "A50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

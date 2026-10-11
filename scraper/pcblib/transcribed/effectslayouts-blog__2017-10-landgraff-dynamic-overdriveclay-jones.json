@@ -1,0 +1,159 @@
+{
+ "id": "effectslayouts-blog:2017-10-landgraff-dynamic-overdriveclay-jones",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with a colour PCB wiring view, the underside and an etch mask; counted from the populated board and confirmed against the wiring view. The two 1uF caps are drawn as box (film) caps, not cans. D1 and D2 are drawn as red LEDs on the board with no type given; the transistors carry no part number, only 'Q1-2: NPN Silicon'.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×8",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "510K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "51pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1uF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "4558",
+   "IC",
+   ""
+  ],
+  [
+   "Q1",
+   "NPN Silicon",
+   "Q",
+   "legend: Q1-2: NPN Silicon"
+  ],
+  [
+   "Q2",
+   "NPN Silicon",
+   "Q",
+   "legend: Q1-2: NPN Silicon"
+  ],
+  [
+   "×3",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "D1",
+   "?",
+   "LED",
+   "value not given; drawn as a red LED"
+  ],
+  [
+   "D2",
+   "?",
+   "LED",
+   "value not given; drawn as a red LED"
+  ],
+  [
+   "Gain",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Clip",
+   "SPDT on/off/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,120 @@
+{
+ "id": "tagboardeffects:2017-07-rotosound-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated vero board 23x8, PNP germanium fuzz on a -9V supply. Transistors are given only as 'Q1-Q3: PNP Ge'.",
+ "uncertain": [
+  "64uF electrolytic at top left: printed clearly, unusual value",
+  "200pF ceramic near the input: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×5",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "18k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "680k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "200pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "64uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "PNP Ge",
+   "Q",
+   "legend: Q1-Q3: PNP Ge, type not given"
+  ],
+  [
+   "Q2",
+   "PNP Ge",
+   "Q",
+   "legend: Q1-Q3: PNP Ge, type not given"
+  ],
+  [
+   "Q3",
+   "PNP Ge",
+   "Q",
+   "legend: Q1-Q3: PNP Ge, type not given"
+  ],
+  [
+   "D1",
+   "1N270",
+   "D",
+   "Ge diode"
+  ],
+  [
+   "Volume",
+   "A250K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Sustain",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

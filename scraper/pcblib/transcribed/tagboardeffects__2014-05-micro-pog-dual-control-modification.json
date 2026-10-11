@@ -1,0 +1,65 @@
+{
+ "id": "tagboardeffects:2014-05-micro-pog-dual-control-modification",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Not a board layout: an off-board wiring diagram for a modification to an EHX Micro POG, adding a second set of three pots selected by a 9-lug (3PDT) footswitch with a bi-colour LED. Only the off-board parts drawn are listed.",
+ "uncertain": [
+  "The switch is drawn as a 9-lug block with lugs 2, 5 and 8 numbered; 3PDT is inferred from the lug count, the drawing does not name the type"
+ ],
+ "rows": [
+  [
+   "Dry A",
+   "C10K",
+   "POT",
+   "printed 10K REV LOG"
+  ],
+  [
+   "Sub Octave A",
+   "C10K",
+   "POT",
+   "printed 10K REV LOG"
+  ],
+  [
+   "Octave Up A",
+   "C10K",
+   "POT",
+   "printed 10K REV LOG"
+  ],
+  [
+   "Dry B",
+   "C10K",
+   "POT",
+   "printed 10K REV LOG"
+  ],
+  [
+   "Sub Octave B",
+   "C10K",
+   "POT",
+   "printed 10K REV LOG"
+  ],
+  [
+   "Octave Up B",
+   "C10K",
+   "POT",
+   "printed 10K REV LOG"
+  ],
+  [
+   "Sw",
+   "3PDT",
+   "SW",
+   "footswitch selecting control set A or B"
+  ],
+  [
+   "D1",
+   "bi-colour LED, common anode",
+   "LED",
+   "off-board indicator"
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ]
+ ],
+ "source": "layout"
+}

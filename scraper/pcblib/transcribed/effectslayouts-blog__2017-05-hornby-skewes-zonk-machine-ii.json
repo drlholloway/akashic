@@ -1,0 +1,99 @@
+{
+ "id": "effectslayouts-blog:2017-05-hornby-skewes-zonk-machine-ii",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Two alternative perfboard arrangements of the same positive-ground circuit side by side (plus undersides, wiring diagrams and PCBs); read the first (left) one. The right one carries the same eleven parts.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "3.9K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "680K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "2N4061",
+   "Q",
+   "legend: Q1-2: 2N4061 or similar"
+  ],
+  [
+   "Q2",
+   "2N4061",
+   "Q",
+   "legend: Q1-2: 2N4061 or similar"
+  ],
+  [
+   "Swell",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B5K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

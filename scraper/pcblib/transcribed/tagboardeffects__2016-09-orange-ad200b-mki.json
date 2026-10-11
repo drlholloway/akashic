@@ -1,0 +1,123 @@
+{
+ "id": "tagboardeffects:2016-09-orange-ad200b-mki",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated stripboard 15x11, two J201 stages each with a 20k bias trimmer, plus a Hi/Lo input toggle drawn beside the board.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "68k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1.5k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "82k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "Q1",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q2",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Trimmer 1",
+   "20k",
+   "TRIM",
+   ""
+  ],
+  [
+   "Trimmer 2",
+   "20k",
+   "TRIM",
+   ""
+  ],
+  [
+   "Gain",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Treble",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Bass",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Mids",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A250K",
+   "POT",
+   ""
+  ],
+  [
+   "Hi/Lo",
+   "SPDT on/on",
+   "SW",
+   "toggle, input"
+  ]
+ ],
+ "source": "layout"
+}

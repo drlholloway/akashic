@@ -1,0 +1,75 @@
+{
+ "id": "tagboardeffects:2012-02-penny-pedals-finger-print",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small 10x9 vero with an NJM386, shown populated and bare. D3 is an LED on the board (anode to ground), D4 a 9V1 zener.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1M5",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "180n",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC",
+   "NJM386",
+   "IC",
+   ""
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   "D1, D2"
+  ],
+  [
+   "D3",
+   "LED",
+   "LED",
+   "on board, anode to ground"
+  ],
+  [
+   "D4",
+   "9V1 zener",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Texture",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

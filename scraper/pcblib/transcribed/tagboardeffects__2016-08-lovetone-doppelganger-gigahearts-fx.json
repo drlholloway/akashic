@@ -1,0 +1,261 @@
+{
+ "id": "tagboardeffects:2016-08-lovetone-doppelganger-gigahearts-fx",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "35x31 vero drawn twice (populated, and bare with cuts and links); read from the populated board. Dual-LFO optical phaser: four green LEDs facing four LDRs on the board, five op-amp ICs, six pots, four toggles and two effect footswitches.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×12",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×10",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×8",
+   "330R",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2K2",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "91K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "270K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "47p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4n7",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "6n8",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×7",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "220u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "TL074",
+   "IC",
+   ""
+  ],
+  [
+   "×2",
+   "TL071",
+   "IC",
+   ""
+  ],
+  [
+   "×1",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "×4",
+   "5mm Green Diffuse",
+   "LED",
+   "D1-D4, on the board facing the LDRs"
+  ],
+  [
+   "×4",
+   "LDR",
+   "OPTO",
+   "legend: LDRs 20K / 2M"
+  ],
+  [
+   "×2",
+   "1N4001",
+   "D",
+   "D5, D6"
+  ],
+  [
+   "×2",
+   "1N914",
+   "D",
+   "D7, D8"
+  ],
+  [
+   "D9",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "LFO 1 Rate",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "LFO 2 Rate",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Colour",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Blend",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "HF Span",
+   "B2K",
+   "POT",
+   ""
+  ],
+  [
+   "LF Span",
+   "B2K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch 1 (True/Spec)",
+   "SPDT",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Switch 2 (Antiphase)",
+   "SPDT",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Switch 3 (Square)",
+   "SPDT",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Switch 4 (Slow)",
+   "SPDT",
+   "SW",
+   "toggle"
+  ],
+  [
+   "FootSwitch 5 (Phase/Vib)",
+   "DPDT",
+   "SW",
+   "footswitch"
+  ],
+  [
+   "FootSwitch 6 (Dual LFO)",
+   "DPDT",
+   "SW",
+   "footswitch"
+  ],
+  [
+   "HF LED",
+   "5mm Green Diffuse",
+   "LED",
+   "off-board"
+  ],
+  [
+   "LF LED",
+   "5mm Green Diffuse",
+   "LED",
+   "off-board"
+  ],
+  [
+   "PHA LED",
+   "5mm Red Diffuse",
+   "LED",
+   "off-board"
+  ]
+ ],
+ "source": "layout"
+}

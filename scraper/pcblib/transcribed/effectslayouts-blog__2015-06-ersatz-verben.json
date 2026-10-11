@@ -1,0 +1,107 @@
+{
+ "id": "effectslayouts-blog:2015-06-ersatz-verben",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout shown four ways (populated board, colour wiring diagram, underside, etched PCB); counted from the populated board. The regulator is drawn as a TO-92 with pins O G I on the board and labelled 7805 only in the wiring diagram.",
+ "uncertain": [
+  "Regulator at D-F/D: labelled 7805 in the wiring diagram, drawn as a small TO-92 on the board, so probably a 78L05"
+ ],
+ "rows": [
+  [
+   "×3",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×8",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "PT2399",
+   "IC",
+   ""
+  ],
+  [
+   "×1",
+   "7805",
+   "IC",
+   "regulator, drawn as TO-92"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Time",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Mix",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Feedback",
+   "B250K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

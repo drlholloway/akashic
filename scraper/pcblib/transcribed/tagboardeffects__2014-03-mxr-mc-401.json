@@ -1,0 +1,87 @@
+{
+ "id": "tagboardeffects:2014-03-mxr-mc-401",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "14 x 9 vero, populated and bare views, plus a Booster/Buffer switch wiring box.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "100R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC",
+   "LF442",
+   "IC",
+   ""
+  ],
+  [
+   "Boost",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Booster/Buffer",
+   "SPST",
+   "SW",
+   "toggle; legend: Switch is SPST or SPDT"
+  ]
+ ],
+ "source": "layout"
+}

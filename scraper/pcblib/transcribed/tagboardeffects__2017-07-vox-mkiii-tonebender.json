@@ -1,0 +1,125 @@
+{
+ "id": "tagboardeffects:2017-07-vox-mkiii-tonebender",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 23x8 vero (no separate bare board). The drawing is titled Vox Tonebender MKIV although the post slug says MKIII. Positive-ground PNP germanium circuit, -9V supply.",
+ "uncertain": [
+  "25uF and 6.4uF electrolytics: printed clearly, unusual values"
+ ],
+ "rows": [
+  [
+   "×1",
+   "3.3k",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "18k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "680k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "6.4uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "25uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "PNP Ge",
+   "Q",
+   "Q1-Q3: PNP Ge, no type given"
+  ],
+  [
+   "Q2",
+   "PNP Ge",
+   "Q",
+   "Q1-Q3: PNP Ge, no type given"
+  ],
+  [
+   "Q3",
+   "PNP Ge",
+   "Q",
+   "Q1-Q3: PNP Ge, no type given"
+  ],
+  [
+   "D1",
+   "1N270",
+   "D",
+   "Ge diode"
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Sustain",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

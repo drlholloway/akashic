@@ -1,0 +1,75 @@
+{
+ "id": "effectslayouts-blog:2017-03-lovepedal-champ",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small perfboard layout with a bare underside view, a colour wiring diagram and an etched PCB of the same circuit; counted from the populated board. One transistor and two 1N60P clipping diodes.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "330Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   "printed 4001"
+  ],
+  [
+   "×2",
+   "1N60P",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

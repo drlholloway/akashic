@@ -1,0 +1,129 @@
+{
+ "id": "tagboardeffects:2012-02-john-hollis-flatline-compressor",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 16 x 11 of the John Hollis Flatline optical compressor, populated board above a bare view; LED D5 and an LDR sit on the board facing each other.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N34A",
+   "D",
+   "Ge or Si to taste, try 1N34A or 1N4148"
+  ],
+  [
+   "D2",
+   "1N34A",
+   "D",
+   "Ge or Si to taste, try 1N34A or 1N4148"
+  ],
+  [
+   "D3",
+   "1N34A",
+   "D",
+   "Ge or Si to taste, try 1N34A or 1N4148"
+  ],
+  [
+   "D4",
+   "1N34A",
+   "D",
+   "Ge or Si to taste, try 1N34A or 1N4148"
+  ],
+  [
+   "D5",
+   "?",
+   "LED",
+   "on board, facing the LDR; type not given"
+  ],
+  [
+   "LDR",
+   "?",
+   "OPTO",
+   "LDR, ideally <1kOhm light to >1MOhm dark"
+  ],
+  [
+   "Sustain",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

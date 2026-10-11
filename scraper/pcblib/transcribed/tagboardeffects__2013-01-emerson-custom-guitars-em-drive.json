@@ -1,0 +1,45 @@
+{
+ "id": "tagboardeffects:2013-01-emerson-custom-guitars-em-drive",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "17x7 stripboard with two large box film capacitors, two resistors and one transistor; populated board above, bare board (1 link, 2 cuts) below.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   "large box film"
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   "Q1 is 2N5088 or similar"
+  ],
+  [
+   "Volume",
+   "A250K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "B250K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

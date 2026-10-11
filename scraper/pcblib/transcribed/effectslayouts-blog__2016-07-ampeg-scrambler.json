@@ -1,0 +1,135 @@
+{
+ "id": "effectslayouts-blog:2016-07-ampeg-scrambler",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard drawn four times (populated board, underside, colour wiring diagram, etched PCB); counted from the populated board and confirmed against the wiring diagram, which also gives the Q numbers.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "8.2K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220Ω",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×5",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "MPSA14",
+   "Q",
+   "MPSA14 or similar"
+  ],
+  [
+   "Q2",
+   "2N5088",
+   "Q",
+   "2N5088 or similar"
+  ],
+  [
+   "Q3",
+   "MPSA14",
+   "Q",
+   "MPSA14 or similar"
+  ],
+  [
+   "Q4",
+   "MPSA14",
+   "Q",
+   "MPSA14 or similar"
+  ],
+  [
+   "Texture",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Blend",
+   "B50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

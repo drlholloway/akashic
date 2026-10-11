@@ -1,0 +1,75 @@
+{
+ "id": "dirtbox:2021-01-jmk-paralyzer",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 18x16 stripboard, a send/return blend loop with two op-amps. All values large and legible; two resistors are standing (47K at column 8, 1M at column 9).",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "1uF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL071",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Blend",
+   "B10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

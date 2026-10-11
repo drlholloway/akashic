@@ -1,0 +1,93 @@
+{
+ "id": "dirtbox:2023-01-fuzzlord-effects-riff-master",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 12x11 stripboard, positive-ground germanium booster (-9v supply) with a 100K trimmer on the board and a rotary Depth switch selecting input caps. All values legible.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.9K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "68nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "OC44",
+   "Q",
+   "germanium PNP"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Boost",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Depth Sw",
+   "2P6T rotary",
+   "SW",
+   "set to 4 throws"
+  ]
+ ],
+ "source": "layout"
+}

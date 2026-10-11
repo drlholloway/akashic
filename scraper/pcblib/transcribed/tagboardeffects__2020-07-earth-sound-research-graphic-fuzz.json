@@ -1,0 +1,81 @@
+{
+ "id": "tagboardeffects:2020-07-earth-sound-research-graphic-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Earth Sound Research Graphic Fuzz, 12 x 10 stripboard, single populated view with large printed values. One 741 op amp; legend names the output wire 'Level 2' although the pot is called Volume.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220r",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1uF",
+   "C",
+   "film"
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "741",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Filter",
+   "B1M",
+   "POT",
+   "legend: 1M Linear"
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   "legend: 100k Log"
+  ]
+ ],
+ "source": "layout"
+}

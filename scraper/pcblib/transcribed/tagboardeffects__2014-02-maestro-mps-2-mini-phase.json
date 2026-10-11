@@ -1,0 +1,185 @@
+{
+ "id": "tagboardeffects:2014-02-maestro-mps-2-mini-phase",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Pictures 1-3 are photos of the original pedal (front, back, gut shot); picture 4 is the vero layout (29 x 21, populated board above a bare cuts-and-links view), read from the populated view. Three dual op-amps, four JFETs, three BJTs, two trimmers. Post is titled ON HOLD.",
+ "uncertain": [
+  "43K (two, top centre and right of IC2): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×11",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2K2",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "43K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "390K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "150n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "330n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "220u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "100K",
+   "TRIM",
+   "top is depth, bottom is FET bias"
+  ],
+  [
+   "IC1",
+   "LM1458",
+   "IC",
+   "or similar (originals were 741 single ICs)"
+  ],
+  [
+   "IC2",
+   "LM1458",
+   "IC",
+   "or similar (originals were 741 single ICs)"
+  ],
+  [
+   "IC3",
+   "LM1458",
+   "IC",
+   "or similar (originals were 741 single ICs)"
+  ],
+  [
+   "Q1",
+   "2N5952",
+   "Q",
+   "JFET; or similar (originals were 2N4303)"
+  ],
+  [
+   "Q2",
+   "2N5952",
+   "Q",
+   "JFET; or similar (originals were 2N4303)"
+  ],
+  [
+   "Q3",
+   "2N5952",
+   "Q",
+   "JFET; or similar (originals were 2N4303)"
+  ],
+  [
+   "Q4",
+   "2N5952",
+   "Q",
+   "JFET; or similar (originals were 2N4303)"
+  ],
+  [
+   "Q5",
+   "2N3904",
+   "Q",
+   "or similar (originals were TIS97)"
+  ],
+  [
+   "Q6",
+   "2N3904",
+   "Q",
+   "or similar (originals were TIS97)"
+  ],
+  [
+   "Q7",
+   "2N3904",
+   "Q",
+   "or similar (originals were TIS97)"
+  ],
+  [
+   "D1",
+   "7.5V zener",
+   "D",
+   ""
+  ],
+  [
+   "Speed",
+   "A500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

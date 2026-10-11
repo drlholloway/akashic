@@ -1,0 +1,105 @@
+{
+ "id": "effectslayouts-blog:2017-02-damemanating-fist-black-dust",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "First two pictures are the schematic (full and small); the third is the layout sheet (populated perfboard, colour PCB diagram, underside, etch mask), the fourth a small copy. Read the populated perfboard view; the schematic agrees on every value.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "560Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "7.5K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   "printed 4001"
+  ],
+  [
+   "Q1",
+   "BC109",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "BC109",
+   "Q",
+   ""
+  ],
+  [
+   "Volume",
+   "A470K",
+   "POT",
+   "legend: A470k (or A500k)"
+  ]
+ ],
+ "source": "layout"
+}

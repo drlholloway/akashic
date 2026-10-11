@@ -1,0 +1,132 @@
+{
+ "id": "tagboardeffects:2017-03-univox-uni-comp",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 13x15 vero of the Univox Uni-Comp with an LED (D4) and LDR on the board as the gain cell; the legend says the LED and LDR types are unknown and D1-D3 are just 'Germanium'.",
+ "uncertain": [
+  "30nF (right, beside the IC): printed clearly, unusual value",
+  "1.3k (bottom right): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "6.8k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "5.6k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.3k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "30nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "330nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "33uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "LM741",
+   "IC",
+   ""
+  ],
+  [
+   "Q1",
+   "2SC1312",
+   "Q",
+   "legend: 2SC1312 (BC169, BC184, BC239, BC549)"
+  ],
+  [
+   "×3",
+   "Germanium",
+   "D",
+   "D1-D3; type not given"
+  ],
+  [
+   "D4",
+   "?",
+   "LED",
+   "value not given; legend: LED & LDR Unknown"
+  ],
+  [
+   "LDR",
+   "?",
+   "OPTO",
+   "value not given; legend: LED & LDR Unknown"
+  ],
+  [
+   "Volume",
+   "B2K",
+   "POT",
+   ""
+  ],
+  [
+   "Comp",
+   "B1M",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

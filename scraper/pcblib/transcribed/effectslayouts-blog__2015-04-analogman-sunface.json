@@ -1,0 +1,105 @@
+{
+ "id": "effectslayouts-blog:2015-04-analogman-sunface",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with a wiring diagram, underside and etched PCB of the same circuit; counted from the populated board. The 50k is a trimmer on the board. The populated view labels the supply '-9V / + Ground' while the wiring diagram says '+9V / -Ground'; legend offers BC108 or NKT275.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "50k",
+   "TRIM",
+   ""
+  ],
+  [
+   "Q1",
+   "BC108",
+   "Q",
+   "or NKT275"
+  ],
+  [
+   "Q2",
+   "BC108",
+   "Q",
+   "or NKT275"
+  ],
+  [
+   "Volume",
+   "A250K",
+   "POT",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Sundial",
+   "B5K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

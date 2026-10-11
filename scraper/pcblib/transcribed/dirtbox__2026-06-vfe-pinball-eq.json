@@ -1,0 +1,157 @@
+{
+ "id": "dirtbox:2026-06-vfe-pinball-eq",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 19x18 stripboard, the 'Live' V1 edition, with two dual op-amps. HPF and LPF are dual-gang pots with unequal sections (100kC / 10kC).",
+ "uncertain": [
+  "1.43K (two: column 7 top, column 13 bottom) and 1.4K (four: column 3 top left, columns 15-17 right) are both printed; the two values are distinct on the drawing, printed clearly, unusual values",
+  "143Ω (two: column 2 left, column 7 below centre): printed clearly, unusual value",
+  "HPF and LPF pots: legend gives one dual-gang pot each with a 100kC section and a 10kC section; entered as C100K/C10K"
+ ],
+ "rows": [
+  [
+   "×2",
+   "1.43K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "1.4K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "143Ω",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×2",
+   "15nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "150nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1uF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "JRC4580DD",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "JRC4580DD",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N5819",
+   "D",
+   ""
+  ],
+  [
+   "HPF",
+   "C100K/C10K",
+   "POT",
+   "dual: 100kC on lugs 1-3, 10kC on lugs 4-6"
+  ],
+  [
+   "LPF",
+   "C100K/C10K",
+   "POT",
+   "dual: 100kC on lugs 1-3, 10kC on lugs 4-6"
+  ],
+  [
+   "Tone",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "dB Sw",
+   "DPDT on/off/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

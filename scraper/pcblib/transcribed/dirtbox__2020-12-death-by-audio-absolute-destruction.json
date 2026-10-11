@@ -1,0 +1,144 @@
+{
+ "id": "dirtbox:2020-12-death-by-audio-absolute-destruction",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 17x12 stripboard with a 386 amp chip, two transistors and four 3.6 V zeners. One resistor is marked only CLR. Gain and Overload pots are given as '1mA' (1M audio).",
+ "uncertain": [
+  "4.64K lying flat on row H under IC1: printed clearly, unusual value",
+  "221Ω at column 15, rows B-E: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "180K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "910K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.64K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "221Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "6.8nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "MPSA05G",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "MPSA05G",
+   "Q",
+   ""
+  ],
+  [
+   "IC1",
+   "JRC386",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N5227B",
+   "D",
+   "3.6V Zener"
+  ],
+  [
+   "D2",
+   "1N5227B",
+   "D",
+   "3.6V Zener"
+  ],
+  [
+   "D3",
+   "1N5227B",
+   "D",
+   "3.6V Zener"
+  ],
+  [
+   "D4",
+   "1N5227B",
+   "D",
+   "3.6V Zener"
+  ],
+  [
+   "D5",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Overload",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

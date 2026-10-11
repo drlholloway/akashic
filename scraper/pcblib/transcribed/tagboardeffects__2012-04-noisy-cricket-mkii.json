@@ -1,0 +1,93 @@
+{
+ "id": "tagboardeffects:2012-04-noisy-cricket-mkii",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "16 x 9 vero, populated board above a bare view, plus drawings of the Grit (SPST) and Bass (DPDT) switches; the Bass switch carries a 47n and a 100n soldered across its lugs, counted here with the board parts.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3K3",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10R",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "100n",
+   "C",
+   "4 on the board, 1 on the Bass switch"
+  ],
+  [
+   "×2",
+   "47n",
+   "C",
+   "1 on the board, 1 on the Bass switch"
+  ],
+  [
+   "×2",
+   "220u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "LM386",
+   "IC",
+   "LM386 or JRC386"
+  ],
+  [
+   "Q1",
+   "MPF102",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Gain",
+   "A1K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Grit",
+   "SPST",
+   "SW",
+   "2 position"
+  ],
+  [
+   "Bass",
+   "DPDT",
+   "SW",
+   "2 position"
+  ]
+ ],
+ "source": "layout"
+}

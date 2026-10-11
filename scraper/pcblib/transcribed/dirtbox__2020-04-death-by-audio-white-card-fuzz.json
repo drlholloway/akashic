@@ -1,0 +1,89 @@
+{
+ "id": "dirtbox:2020-04-death-by-audio-white-card-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 17x9 stripboard with an LM386, a 42TL002 audio transformer mounted on the board and two germanium clipping diodes. The 3PDT footswitch is the bypass (wired from the board as Switch 1-8) and is not listed.",
+ "uncertain": [
+  "4.7K standing resistor at column 4, rows E-H: printed '4,7K' with the comma falling on a track cut, so it could be read as 47K"
+ ],
+ "rows": [
+  [
+   "×1",
+   "22Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "680pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "LM386",
+   "IC",
+   ""
+  ],
+  [
+   "×2",
+   "Germanium",
+   "D",
+   "D1, D2"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "TR1",
+   "42TL002",
+   "XFM",
+   ""
+  ],
+  [
+   "Gain",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

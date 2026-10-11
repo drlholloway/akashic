@@ -1,0 +1,111 @@
+{
+ "id": "tagboardeffects:2012-07-seamoon-funk-machine-v2",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero 17 x 10, populated board on top and the bare cuts/links view below. Legend suggests an alternative: instead of the 47K with the 5M Frequency Shift pot, try 390K and a 1M pot; the values as drawn are listed.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "47K",
+   "R",
+   "legend: instead of 47K + 5M Freq Shift, try 390K & 1M"
+  ],
+  [
+   "×2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100R",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "4n7",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC",
+   "LM1458",
+   "IC",
+   "or similar"
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Depth",
+   "B50K",
+   "POT",
+   "Filter Depth Range"
+  ],
+  [
+   "Freq",
+   "B5M",
+   "POT",
+   "Frequency Shift; legend suggests trying 1M with a 390K resistor"
+  ]
+ ],
+ "source": "layout"
+}

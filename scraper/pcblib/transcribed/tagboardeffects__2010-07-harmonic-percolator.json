@@ -1,0 +1,102 @@
+{
+ "id": "tagboardeffects:2010-07-harmonic-percolator",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 19 x 10 vero board with two pots and an unlabelled blue three-lug part off-board (drawn like a toggle switch, wired to two board points and Balance lug 3). The two diodes are printed only 'Ge'.",
+ "uncertain": [
+  "Blue three-lug off-board part at the right is unlabelled; entered as an SPDT toggle on its appearance",
+  "100p at the top left is drawn faint/translucent, value reads 100p"
+ ],
+ "rows": [
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "20K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "750K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "91K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "Ge",
+   "D",
+   "germanium, type not given"
+  ],
+  [
+   "Q1",
+   "2N404A",
+   "Q",
+   "PNP germanium"
+  ],
+  [
+   "Q2",
+   "2N3565",
+   "Q",
+   "NPN silicon"
+  ],
+  [
+   "Balance",
+   "A50K",
+   "POT",
+   ""
+  ],
+  [
+   "Harmonics",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "SPDT",
+   "SW",
+   "toggle, unlabelled in the drawing"
+  ]
+ ],
+ "source": "layout"
+}

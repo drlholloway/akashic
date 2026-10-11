@@ -1,0 +1,135 @@
+{
+ "id": "tagboardeffects:2012-12-runoffgroove-tonemender",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard 17 x 11, populated view above a bare cuts-and-links view. Single dual op-amp tone stack with a DPDT Mid Shift switch wired off board (SW 1, 2, 4, 5).",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "200K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "150pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TLC2272",
+   "IC",
+   "legend: TLC2272, NE5532 or TL072"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   "added for polarity protection"
+  ],
+  [
+   "Treble",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Mid",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Bass",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Mid Shift",
+   "DPDT on/on",
+   "SW",
+   "toggle; lugs 3 & 6 not connected"
+  ]
+ ],
+ "source": "layout"
+}

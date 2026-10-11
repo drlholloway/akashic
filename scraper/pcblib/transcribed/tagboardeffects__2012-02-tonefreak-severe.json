@@ -1,0 +1,187 @@
+{
+ "id": "tagboardeffects:2012-02-tonefreak-severe",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Rev 2 vero layout, populated board plus bare cuts view and an inset of two off-board DPDT on/off/on switches carrying the clipping diodes (D1-D3 germanium, D4-D5 yellow LEDs) and two caps (47n, 5n6).",
+ "uncertain": [
+  "1K1 right of the 100p cap: printed clearly, unusual value",
+  "51p at the left edge: printed clearly, unusual value",
+  "D1 to D3: legend says only 'germanium', no part number"
+ ],
+ "rows": [
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K1",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "560K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "51p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47n",
+   "C",
+   "one on the board, one on Sw2"
+  ],
+  [
+   "×1",
+   "5n6",
+   "C",
+   "on Sw2"
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2u2",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC",
+   "LM833",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "germanium",
+   "D",
+   "off board on clipping switch"
+  ],
+  [
+   "D2",
+   "germanium",
+   "D",
+   "off board on clipping switch"
+  ],
+  [
+   "D3",
+   "germanium",
+   "D",
+   "off board on clipping switch"
+  ],
+  [
+   "D4",
+   "yellow LED",
+   "LED",
+   "off board on clipping switch"
+  ],
+  [
+   "D5",
+   "yellow LED",
+   "LED",
+   "off board on clipping switch"
+  ],
+  [
+   "D6",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "C10K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Clipping",
+   "DPDT on/off/on",
+   "SW",
+   "toggle, between Gain 1 and Gain 2, carries D1-D5"
+  ],
+  [
+   "Sw2",
+   "DPDT on/off/on",
+   "SW",
+   "toggle, switches 47n / 5n6 to ground"
+  ]
+ ],
+ "source": "layout"
+}

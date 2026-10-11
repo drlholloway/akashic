@@ -1,0 +1,21 @@
+{
+ "id": "effectslayouts-blog:2015-11-lm13700-to-ca3080-conversion-board",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Adapter board, not a pedal: an LM13700 and two resistors on a small perfboard that plugs into a CA3080 DIP-8 socket through long header pins mounted from the solder side (the pins are not listed as a row). The CA3080 drawn beside the diagram is the part being replaced, not a part of the board.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "LM13700",
+   "IC",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,125 @@
+{
+ "id": "dirtbox:2019-10-colorsound-tremolo-v1",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 14x12 stripboard, three-transistor tremolo. A 2,2M trimmer is drawn on the board and the legend also lists a Depth pot of 2,2mB wired off board; both are entered.",
+ "uncertain": [
+  "2.2M trimmer on the board and Depth pot '2,2mB' are the same value; both are drawn/named, so both are listed"
+ ],
+ "rows": [
+  [
+   "×3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC549B",
+   "Q",
+   "legend: BC549B, 2N3904 etc.; BC169B and BC184L in original"
+  ],
+  [
+   "Q2",
+   "BC549B",
+   "Q",
+   "legend: BC549B, 2N3904 etc.; BC169B and BC184L in original"
+  ],
+  [
+   "Q3",
+   "BC549B",
+   "Q",
+   "legend: BC549B, 2N3904 etc.; BC169B and BC184L in original"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "TRIM",
+   ""
+  ],
+  [
+   "Speed",
+   "B220K",
+   "POT",
+   ""
+  ],
+  [
+   "Depth",
+   "B2.2M",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

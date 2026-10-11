@@ -1,0 +1,99 @@
+{
+ "id": "dirtbox:2020-05-catalinbread-sagrado-poblano-picoso",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single small 14x9 stripboard, one MOSFET boost; legend gives Q1, D1, D2 and the Boost pot.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "62K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "470uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BS170",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "D1",
+   "9.1V Zener",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Boost",
+   "B5K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,119 @@
+{
+ "id": "effectslayouts-blog:2017-11-spaceman-effects-saturn-v",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with parts, a colour wiring diagram, the bare underside and an etched PCB; counted from the populated perfboard. Two ferrite beads (FB) on the board; D1 is the supply diode, a second 1N4148 and a BAT46 are printed on the board.",
+ "uncertain": [
+  "6.19K at the top (row C): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "6.19K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "120pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "27nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "180nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "LND150N3-G",
+   "Q",
+   "depletion MOSFET"
+  ],
+  [
+   "Q2",
+   "LND150N3-G",
+   "Q",
+   "depletion MOSFET"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   "legend: 1N4148, 1N400X"
+  ],
+  [
+   "×1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "BAT46",
+   "D",
+   ""
+  ],
+  [
+   "×2",
+   "Ferrite bead",
+   "L",
+   "FB"
+  ],
+  [
+   "Drive",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Boost",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

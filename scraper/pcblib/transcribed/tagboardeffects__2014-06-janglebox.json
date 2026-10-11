@@ -1,0 +1,137 @@
+{
+ "id": "tagboardeffects:2014-06-janglebox",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 19 x 16 with an NTE996/CA3080 OTA, five transistors and a 1K trimmer; populated board on the left, cuts-and-links view on the right.",
+ "uncertain": [
+  "92K (right edge of the board, below the 2u2): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×8",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "8K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "92K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470p",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×5",
+   "2u2",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1K",
+   "TRIM",
+   ""
+  ],
+  [
+   "IC",
+   "NTE996",
+   "IC",
+   "IC is NTE996 (try CA3080)"
+  ],
+  [
+   "×5",
+   "2N5088",
+   "Q",
+   "Q1-Q5; Transistors are 2N5088 or similar"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "Attack",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "SPDT on/off/on",
+   "SW",
+   "wires labelled Switch 1-3"
+  ]
+ ],
+ "source": "layout"
+}

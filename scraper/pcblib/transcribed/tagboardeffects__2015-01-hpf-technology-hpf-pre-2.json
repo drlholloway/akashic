@@ -1,0 +1,117 @@
+{
+ "id": "tagboardeffects:2015-01-hpf-technology-hpf-pre-2",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 18 x 9, populated board above a bare cuts-and-links view. D1 is drawn on the +9V strip but the legend gives no type.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "680Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "33nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "Q1",
+   "2N4416",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q2",
+   "2N4416",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q3",
+   "2N4403",
+   "Q",
+   ""
+  ],
+  [
+   "Frequency",
+   "A100K",
+   "POT",
+   "dual"
+  ],
+  [
+   "Volume",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Phase",
+   "SPDT on/on",
+   "SW",
+   "toggle, phase 0/180"
+  ]
+ ],
+ "source": "layout"
+}

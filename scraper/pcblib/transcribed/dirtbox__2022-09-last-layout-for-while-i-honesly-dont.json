@@ -1,0 +1,99 @@
+{
+ "id": "dirtbox:2022-09-last-layout-for-while-i-honesly-dont",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "EHX Muff Fuzz, op amp version: one small populated vero board (14x9). R7 and C1 are drawn with designators only; the legend gives ranges of values used in the original units.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "1M",
+   "R",
+   "legend: both 1M resistors were sometimes 680k"
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R7",
+   "?",
+   "R",
+   "value not given; legend: both 100k and 470k were used"
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "C1",
+   "?",
+   "C",
+   "value not given; legend: values between 10-47nF were used"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "1458",
+   "IC",
+   "legend: 1458, 4558 or 2458"
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   "D1, D2; legend: 1N34A in earlier versions"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   "legend: 100kB or 50kB"
+  ]
+ ],
+ "source": "layout"
+}

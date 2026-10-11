@@ -1,0 +1,117 @@
+{
+ "id": "dirtbox:2021-01-lastgasp-art-laboratories-rattle-crow",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 16x12 stripboard, one dual op-amp and one transistor. Small board, all values legible; the 100K on the top strip and one 47nF on the bottom strip lie flat along the strips.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "56pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "6.8nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N3904",
+   "Q",
+   "legend: 2N3904, 2N2222 etc.; 2SC1815 in original"
+  ],
+  [
+   "IC1",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   "D1, D2; legend: 1N4148/1N914, unknown silicon signal diodes in original"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Sens",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Freq",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

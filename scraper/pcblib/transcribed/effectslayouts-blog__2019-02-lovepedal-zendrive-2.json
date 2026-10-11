@@ -1,0 +1,125 @@
+{
+ "id": "effectslayouts-blog:2019-02-lovepedal-zendrive-2",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout drawn four ways (populated board, colour wiring diagram, underside, etched PCB); counted from the populated board, confirmed on the diagram. The 12AX7 tube is off the board, wired from the Tube 1-9 pads; CX is a capacitor to be chosen in the range 51-220pF.",
+ "uncertain": [
+  "CX (ceramic cap left of the IC): no single value, legend gives the range 51-220pF"
+ ],
+ "rows": [
+  [
+   "×3",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2M",
+   "R",
+   ""
+  ],
+  [
+   "CX",
+   "51-220pF",
+   "C",
+   "legend: CX: 51-220pF"
+  ],
+  [
+   "×1",
+   "3.3nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "2N7000",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "Q2",
+   "2N7000",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "×1",
+   "AD712",
+   "IC",
+   ""
+  ],
+  [
+   "Tube",
+   "12AX7",
+   "OTHER",
+   "vacuum tube, off board"
+  ],
+  [
+   "Gain",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Voice",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

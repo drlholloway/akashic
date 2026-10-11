@@ -1,0 +1,93 @@
+{
+ "id": "effectslayouts-blog:2020-06-amz-mini-booster-smd",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "First two pictures are the schematic (large and small); the third is the layout (fourth a small copy): an etched SMD PCB drawn with designators only, the values given in the legend under the board, plus the transfer image. Values read from the legend and matched to the designators on the board.",
+ "uncertain": [],
+ "rows": [
+  [
+   "R1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "1k",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "R5",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "C1",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "C2",
+   "10p",
+   "C",
+   ""
+  ],
+  [
+   "C3",
+   "3.3u",
+   "C",
+   ""
+  ],
+  [
+   "C4",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "C5",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "MMBFJ201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q2",
+   "MMBFJ201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Vol",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

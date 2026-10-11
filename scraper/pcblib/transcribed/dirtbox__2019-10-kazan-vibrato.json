@@ -1,0 +1,159 @@
+{
+ "id": "dirtbox:2019-10-kazan-vibrato",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 18x18 stripboard with six transistors (two JFETs, three PNP germanium, one NPN silicon); positive-ground circuit. All values printed on the parts.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×5",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "3K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4.3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "5.1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "6.8K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.6M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "150nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "film"
+  ],
+  [
+   "×7",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "KP303",
+   "Q",
+   "JFET; legend: try J201, 2N5457 etc."
+  ],
+  [
+   "Q2",
+   "MP26B",
+   "Q",
+   "PNP Germanium, low leakage, Hfe 40-80"
+  ],
+  [
+   "Q3",
+   "KP303",
+   "Q",
+   "JFET; legend: try J201, 2N5457 etc."
+  ],
+  [
+   "Q4",
+   "MP26B",
+   "Q",
+   "PNP Germanium, low leakage, Hfe 40-80"
+  ],
+  [
+   "Q5",
+   "KT315B",
+   "Q",
+   "legend: try 2N2222A, 2N3904 etc."
+  ],
+  [
+   "Q6",
+   "P416B",
+   "Q",
+   "PNP Germanium, low leakage, Hfe 60-100"
+  ],
+  [
+   "Speed",
+   "A68K",
+   "POT",
+   "legend: try 50k-100k"
+  ],
+  [
+   "Depth",
+   "A1K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A22K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,117 @@
+{
+ "id": "tagboardeffects:2013-01-angry-beard-iii-with-mods",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "16x11 vero, populated board on top and the cuts/links view below. One resistor is printed only as LED (current-limiting resistor for the indicator LED); the legend offers 1M log as an alternative Gain pot for super high gain.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "82K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×2",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "5.6nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "NE5534",
+   "IC",
+   ""
+  ],
+  [
+   "×1",
+   "2N44",
+   "Q",
+   "PNP germanium; legend: try any PNP germ"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   "polarity protection"
+  ],
+  [
+   "Gain",
+   "A500K",
+   "POT",
+   "1M log for super high gain"
+  ],
+  [
+   "Volume",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Normal/High Gain",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

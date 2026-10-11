@@ -1,0 +1,107 @@
+{
+ "id": "tagboardeffects:2012-11-buzzaround-alike",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "20x12 stripboard by mirosol, populated view above a bare cuts-and-links view; large clear lettering. One resistor is labelled only LED (the LED resistor) and the single diode has no designator.",
+ "uncertain": [
+  "Balance pot 22K lin: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×6",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×2",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "IC1",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "Q1",
+   "2N1302",
+   "Q",
+   "try any NPN germanium"
+  ],
+  [
+   "×1",
+   "1N270",
+   "D",
+   "germanium (try 1N270, 1N34A)"
+  ],
+  [
+   "Sustain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Timbre",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Balance",
+   "B22K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

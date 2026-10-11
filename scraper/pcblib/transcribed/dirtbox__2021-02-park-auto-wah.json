@@ -1,0 +1,129 @@
+{
+ "id": "dirtbox:2021-02-park-auto-wah",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 19x15 stripboard (Park Auto Wah, made by Colorsound) with five NPN transistors and a protection diode; modified for normal power supply; the off-board Rate LED has no type given and is left out.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N3904",
+   "Q",
+   "NPN Si, Hfe 100-300; try 2N3904, PN2222, MPSA06 etc.; 2N3702 (PNP) in original"
+  ],
+  [
+   "Q2",
+   "2N3904",
+   "Q",
+   "NPN Si, Hfe 100-300; try 2N3904, PN2222, MPSA06 etc.; 2N3702 (PNP) in original"
+  ],
+  [
+   "Q3",
+   "2N3904",
+   "Q",
+   "NPN Si, Hfe 100-300; try 2N3904, PN2222, MPSA06 etc.; 2N3702 (PNP) in original"
+  ],
+  [
+   "Q4",
+   "2N3904",
+   "Q",
+   "NPN Si, Hfe 100-300; try 2N3904, PN2222, MPSA06 etc.; 2N3702 (PNP) in original"
+  ],
+  [
+   "Q5",
+   "2N3904",
+   "Q",
+   "NPN Si, Hfe 100-300; try 2N3904, PN2222, MPSA06 etc.; 2N3702 (PNP) in original"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Speed",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Depth",
+   "B5K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

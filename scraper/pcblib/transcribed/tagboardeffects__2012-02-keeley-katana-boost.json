@@ -1,0 +1,110 @@
+{
+ "id": "tagboardeffects:2012-02-keeley-katana-boost",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Populated 17x12 stripboard above a bare cuts-and-links view, with a 10uF and a 150nF cap wired on the off-board switch. The image is only 269 px wide, so the values printed on the parts are a few pixels tall: the part count is reliable, most values are best guesses.",
+ "uncertain": [
+  "all on-board values are read from text about 4 px tall",
+  "560R x2 (beside Q1 and at the bottom centre): could be 500R or 680R",
+  "4K7 x3 (left of Q1, beside Q2, top right): fairly legible",
+  "1M x4: fairly legible",
+  "220n x3 film caps (left by the input, two between Q1 and Q2): could be 22n or 100n",
+  "100p small ceramic at lower left: illegible, guess",
+  "small ceramic above the centre film caps: illegible",
+  "10uF electrolytics x2 at left: illegible, guess",
+  "100uF electrolytic at top right: illegible, guess",
+  "IC: legend appears to print 'IC76605', taken as ICL7660S"
+ ],
+ "rows": [
+  [
+   "×4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "560R",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100p",
+   "C",
+   "ceramic"
+  ],
+  [
+   "×1",
+   "?",
+   "C",
+   "ceramic, unreadable"
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic, on the switch"
+  ],
+  [
+   "×1",
+   "150nF",
+   "C",
+   "on the switch"
+  ],
+  [
+   "IC",
+   "ICL7660S",
+   "IC",
+   "legend: IC76605"
+  ],
+  [
+   "×2",
+   "2N5458",
+   "Q",
+   "JFET, Q1 Q2"
+  ],
+  [
+   "×2",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Volume",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "DPDT on/on",
+   "SW",
+   "legend: DPDT 2 position"
+  ]
+ ],
+ "source": "layout"
+}

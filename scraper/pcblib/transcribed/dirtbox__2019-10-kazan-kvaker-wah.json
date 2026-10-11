@@ -1,0 +1,111 @@
+{
+ "id": "dirtbox:2019-10-kazan-kvaker-wah",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 12x13 stripboard, inductorless wah with two PNP germanium transistors; positive-ground circuit. All values printed on the parts.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "47Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "620Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "120K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "P416B",
+   "Q",
+   "Q1-Q2; PNP Germanium, low leakage, Hfe 60-100"
+  ],
+  [
+   "Wah",
+   "B220K",
+   "POT",
+   "wah pot"
+  ],
+  [
+   "Timbre",
+   "B220K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B2.2K",
+   "POT",
+   "legend: try higher values for more output"
+  ]
+ ],
+ "source": "layout"
+}

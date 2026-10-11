@@ -1,0 +1,75 @@
+{
+ "id": "tagboardeffects:2013-01-70-funk-box",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard layout (15 x 10) of the 70 Funk Box, one transistor with a board-mounted trimmer VR1, shown populated and bare; read from the populated view. The transistor has no designator; the legend names the original HEP-722/723 and suggests any NPN.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "56K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "56nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2N3904",
+   "Q",
+   "legend: used to be HEP-722 or HEP-723, try any NPN, like 2N3904"
+  ],
+  [
+   "VR1",
+   "2K",
+   "TRIM",
+   "use trimpot to get near oscillation"
+  ],
+  [
+   "Range",
+   "B10K",
+   "POT",
+   "lug 3 unconnected"
+  ]
+ ],
+ "source": "layout"
+}

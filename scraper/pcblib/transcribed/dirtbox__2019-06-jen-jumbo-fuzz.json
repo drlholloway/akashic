@@ -1,0 +1,160 @@
+{
+ "id": "dirtbox:2019-06-jen-jumbo-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated vero (20x16), 4-transistor version of the Jen Jumbo Fuzz (Big Muff style); three resistors and two 100nF caps are drawn translucent (lying flat / over other parts) and are counted. Image is only 378x400 px.",
+ "uncertain": [
+  "62K resistor at column 6, rows L-P: could be 82K",
+  "82K resistors at column 10 (rows A-F) and column 18 (rows A-F): first digit blurred, could be 62K or 32K",
+  "Yellow ceramic at column 20, rows E-F: reads like 240pF/470pF, taken as 470pF like the other three",
+  "820Ω resistor at column 8, rows N-P: reads '820', unit symbol not legible",
+  "12K at column 18, rows H-K: could be 15K at this resolution",
+  "100uF electrolytic near column 8, row G-H: text small, read as 100uF"
+ ],
+ "rows": [
+  [
+   "×4",
+   "390K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "22K",
+   "R",
+   "one drawn translucent beside D5"
+  ],
+  [
+   "×3",
+   "33K",
+   "R",
+   "one drawn translucent on row P"
+  ],
+  [
+   "×2",
+   "8.2K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "82K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "62K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "820Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   "drawn translucent on row P, at Sustain 1"
+  ],
+  [
+   "×7",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "470pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×4",
+   "2N5172",
+   "Q",
+   "Q1-Q4; legend: 2N5172 or BC318C. Try 2N5089, BC549C etc."
+  ],
+  [
+   "×4",
+   "1N914",
+   "D",
+   "D1-D4; legend: 1N914/1N4148"
+  ],
+  [
+   "D5",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Sustain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

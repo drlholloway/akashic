@@ -1,0 +1,57 @@
+{
+ "id": "effectslayouts-blog:2016-09-taptation",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard daughter board (PT2399 delay tap tempo) shown populated, plus underside, colour wiring diagram and etched PCB of the same circuit; counted from the populated perfboard. The regulator is drawn only with I G O on the board and named 78L05 in the wiring diagram. An LED labelled only 'LED' hangs off the board edge (tempo indicator, no type given) and is left out.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "78L05",
+   "IC",
+   "regulator, named in the wiring diagram"
+  ],
+  [
+   "×1",
+   "Taptation",
+   "IC",
+   "pre-programmed tap tempo chip, 14-pin"
+  ],
+  [
+   "×1",
+   "MCP41100",
+   "IC",
+   "digital pot"
+  ],
+  [
+   "Time",
+   "B100K",
+   "POT",
+   "printed 100K Lin"
+  ]
+ ],
+ "source": "layout"
+}

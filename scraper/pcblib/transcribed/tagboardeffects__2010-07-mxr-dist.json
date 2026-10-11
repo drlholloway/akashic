@@ -1,0 +1,75 @@
+{
+ "id": "tagboardeffects:2010-07-mxr-dist",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Populated stripboard above a bare board showing cuts and links only; parts counted from the populated one. The two 1u capacitors are drawn as non-polarised (same style as the film/ceramic caps), not as cans.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1u",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "LM741",
+   "IC",
+   ""
+  ],
+  [
+   "×2",
+   "1N270",
+   "D",
+   ""
+  ],
+  [
+   "Drive",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

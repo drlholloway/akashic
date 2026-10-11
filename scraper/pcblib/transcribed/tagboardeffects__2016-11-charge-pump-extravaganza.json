@@ -1,0 +1,35 @@
+{
+ "id": "tagboardeffects:2016-11-charge-pump-extravaganza",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "The cached image is one drawing from the post: a 9x8 '17V Charge Pump' with a MAX1044, two diodes and two 10uF electrolytics. The legend says 'D1-D4: 1N5817' but only D1 and D2 are drawn on this board; other charge-pump variants in the post are not in this image.",
+ "uncertain": [
+  "Diode count: legend names D1-D4 but the board shows only D1 and D2; two entered"
+ ],
+ "rows": [
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "IC1",
+   "MAX1044",
+   "IC",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

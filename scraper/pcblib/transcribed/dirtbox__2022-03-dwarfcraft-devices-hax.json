@@ -1,0 +1,87 @@
+{
+ "id": "dirtbox:2022-03-dwarfcraft-devices-hax",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 13x12 stripboard around an LM567 tone decoder and one transistor; the Hi/Low control is a DPDT footswitch with its own LED. No expression jack included, traced by fuzzhead.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "IC1",
+   "LM567CN",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Blend",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tune",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Crash",
+   "B2K",
+   "POT",
+   ""
+  ],
+  [
+   "Hi/Low Sw",
+   "DPDT",
+   "SW",
+   "footswitch"
+  ]
+ ],
+ "source": "layout"
+}

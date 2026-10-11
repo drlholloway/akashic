@@ -1,0 +1,396 @@
+{
+ "id": "effectslayouts-blog:2018-11-run-off-groove-tri-vibe",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Etched PCB layout (component overlay plus the copper mask) that prints designators only; the drawing says 'See BOM' and gives no part values anywhere, so every value is '?'. Designators R1-R38, CLR, C1-C13, D1-D5, IC1-IC4 were all found on the overlay.",
+ "uncertain": [
+  "D5 near IC3: drawn with a rounded LED-like outline, may be an LED rather than a diode",
+  "IC2 pin count read as 16 and IC3 as 14 from the pad rows"
+ ],
+ "rows": [
+  [
+   "R1",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R2",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R3",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R4",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R5",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R6",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R7",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R8",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R9",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R10",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R11",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R12",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R13",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R14",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R15",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R16",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R17",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R18",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R19",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R20",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R21",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R22",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R23",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R24",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R25",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R26",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R27",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R28",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R29",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R30",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R31",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R32",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R33",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R34",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R35",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R36",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R37",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "R38",
+   "?",
+   "R",
+   "value not given"
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "C1",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C2",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C3",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C4",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C5",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C6",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C7",
+   "?",
+   "C",
+   "electrolytic, value not given"
+  ],
+  [
+   "C8",
+   "?",
+   "C",
+   "electrolytic, value not given"
+  ],
+  [
+   "C9",
+   "?",
+   "C",
+   "electrolytic, value not given"
+  ],
+  [
+   "C10",
+   "?",
+   "C",
+   "electrolytic, value not given"
+  ],
+  [
+   "C11",
+   "?",
+   "C",
+   "value not given"
+  ],
+  [
+   "C12",
+   "?",
+   "C",
+   "electrolytic, value not given"
+  ],
+  [
+   "C13",
+   "?",
+   "C",
+   "electrolytic, value not given"
+  ],
+  [
+   "D1",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "D2",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "D3",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "D4",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "D5",
+   "?",
+   "D",
+   "value not given; drawn with an LED-style rounded outline"
+  ],
+  [
+   "IC1",
+   "?",
+   "IC",
+   "8-pin DIP, value not given"
+  ],
+  [
+   "IC2",
+   "?",
+   "IC",
+   "16-pin DIP, value not given"
+  ],
+  [
+   "IC3",
+   "?",
+   "IC",
+   "14-pin DIP, value not given"
+  ],
+  [
+   "IC4",
+   "?",
+   "IC",
+   "8-pin DIP, value not given"
+  ],
+  [
+   "Rate",
+   "?",
+   "POT",
+   "value not given"
+  ],
+  [
+   "Depth",
+   "?",
+   "POT",
+   "value not given"
+  ],
+  [
+   "Mode",
+   "?",
+   "SW",
+   "three pads marked MODE 2/3/1; switch type not given"
+  ]
+ ],
+ "source": "layout"
+}

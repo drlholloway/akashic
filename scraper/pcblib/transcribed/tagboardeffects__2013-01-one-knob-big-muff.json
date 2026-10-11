@@ -1,0 +1,123 @@
+{
+ "id": "tagboardeffects:2013-01-one-knob-big-muff",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "19x17 stripboard drawn twice (populated, then cuts and links only); read from the populated view. Small image, values turned 90 degrees; four transistors Q1-Q4, clipping diodes D1-D4 and a polarity diode Dx.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×5",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "39K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330K",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "470p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "330n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   "legend: 2N5088 or similar"
+  ],
+  [
+   "Q2",
+   "2N5088",
+   "Q",
+   "legend: 2N5088 or similar"
+  ],
+  [
+   "Q3",
+   "2N5088",
+   "Q",
+   "legend: 2N5088 or similar"
+  ],
+  [
+   "Q4",
+   "2N5088",
+   "Q",
+   "legend: 2N5088 or similar"
+  ],
+  [
+   "×4",
+   "1N914",
+   "D",
+   "D1 to D4"
+  ],
+  [
+   "Dx",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

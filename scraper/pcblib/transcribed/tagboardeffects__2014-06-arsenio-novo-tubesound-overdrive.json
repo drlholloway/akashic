@@ -1,0 +1,75 @@
+{
+ "id": "tagboardeffects:2014-06-arsenio-novo-tubesound-overdrive",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small vero layout 11x8 by mirosol with a populated board and a bare cuts/links view; read from the populated board. One on-board 20K trimmer; PNP/NPN pair noted as hFE matched.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N3906",
+   "Q",
+   "hFE matched pair with Q2"
+  ],
+  [
+   "Q2",
+   "2N3904",
+   "Q",
+   "hFE matched pair with Q1"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "20K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

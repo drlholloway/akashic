@@ -1,0 +1,75 @@
+{
+ "id": "tagboardeffects:2017-11-simple-theremin",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 12x16 stripboard with two ICs, run from +5V; the antenna is an off-board telescopic radio aerial.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "5.1k",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "6.8k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "CD4093",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "MCP602",
+   "IC",
+   ""
+  ],
+  [
+   "Pitch",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Antenna",
+   "Antenna",
+   "OTHER",
+   "legend: Antenna Aerial for Radio TV LW SZUS"
+  ]
+ ],
+ "source": "layout"
+}

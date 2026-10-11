@@ -1,0 +1,75 @@
+{
+ "id": "effectslayouts-blog:2019-02-square-wave-oscillator",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout drawn four ways (populated board with the two pots mounted on it, colour wiring diagram, underside, etched PCB); counted from the populated board, confirmed on the diagram. An off-board LED with no type given is left out.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "20K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "741",
+   "IC",
+   ""
+  ],
+  [
+   "FREQ",
+   "A500K",
+   "POT",
+   "printed 500K Log"
+  ],
+  [
+   "LEVEL",
+   "A500K",
+   "POT",
+   "printed 500K Log"
+  ]
+ ],
+ "source": "layout"
+}

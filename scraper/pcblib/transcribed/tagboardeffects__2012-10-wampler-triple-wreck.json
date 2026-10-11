@@ -1,0 +1,27 @@
+{
+ "id": "tagboardeffects:2012-10-wampler-triple-wreck",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "The cached image is not the Triple Wreck itself but the 'Simple Voltage Doubler' daughterboard from that post: a small vero with one charge-pump IC, two diodes and two electrolytics. Only this board was read.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "10u",
+   "C",
+   "electrolytic; printed 10U"
+  ],
+  [
+   "IC",
+   "ICL7660S",
+   "IC",
+   "printed IC7660S"
+  ],
+  [
+   "×2",
+   "1N5817",
+   "D",
+   "legend: 1N5817 or other Schottky"
+  ]
+ ],
+ "source": "layout"
+}

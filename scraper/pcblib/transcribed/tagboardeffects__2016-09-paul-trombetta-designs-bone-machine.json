@@ -1,0 +1,156 @@
+{
+ "id": "tagboardeffects:2016-09-paul-trombetta-designs-bone-machine",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard 13x10 shown populated and bare; two transistors (a 5088 and a germanium PNP), C2 and C4 drawn without values (legend: test values).",
+ "uncertain": [
+  "Q2 part number printed clearly as 2n2097A (Ge PNP), unusual part number",
+  "Q1 is taken as the transistor under the '5088' label above the board; it carries no designator"
+ ],
+ "rows": [
+  [
+   "×1",
+   "39K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "560K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2n2",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C2",
+   "?",
+   "C",
+   "value not given; legend: test values"
+  ],
+  [
+   "C4",
+   "?",
+   "C",
+   "value not given; legend: test values"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   "printed 5088"
+  ],
+  [
+   "Q2",
+   "2N2097A",
+   "Q",
+   "Ge PNP"
+  ],
+  [
+   "Mood",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Bore",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Range",
+   "SPDT",
+   "SW",
+   "toggle, Switch 1"
+  ],
+  [
+   "Tone",
+   "SPDT on/off/on",
+   "SW",
+   "toggle, Switch 2"
+  ]
+ ],
+ "source": "layout"
+}

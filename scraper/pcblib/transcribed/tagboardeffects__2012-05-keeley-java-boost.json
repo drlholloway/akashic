@@ -1,0 +1,93 @@
+{
+ "id": "tagboardeffects:2012-05-keeley-java-boost",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard 17x8 drawn twice (populated, then cuts only) plus the wiring of a 3-position input-cap switch. Two trimmers on the board with their values printed above it; Q1 is drawn only as B/E/C lettering.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "5K6",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "6n8",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47u",
+   "C",
+   "electrolytic; one axial, one radial"
+  ],
+  [
+   "×1",
+   "100K",
+   "TRIM",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Q1",
+   "OC44",
+   "Q",
+   "OC44 or similar PNP Ge"
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Sw",
+   "SPDT on/off/on",
+   "SW",
+   "3 position toggle, selects the input capacitor"
+  ]
+ ],
+ "source": "layout"
+}

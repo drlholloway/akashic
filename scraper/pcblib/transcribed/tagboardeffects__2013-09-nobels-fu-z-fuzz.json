@@ -1,0 +1,137 @@
+{
+ "id": "tagboardeffects:2013-09-nobels-fu-z-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 19x10 with a populated board and a bare cuts-and-links view; counted from the populated board. Legend suggests trying 50K log for all three pots; D1 is an added polarity protection diode.",
+ "uncertain": [
+  "100pF red film cap between the first 220Ω and Q2 (centre of board): the unit letter is partly hidden behind the transistor, read as 100pF, could be 100nF"
+ ],
+ "rows": [
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "220Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "510K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "51K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "180K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "820K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100pF",
+   "C",
+   "one film, one ceramic"
+  ],
+  [
+   "×1",
+   "27nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "2N5088",
+   "Q",
+   "2SC2240BL in original"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   "added polarity protection"
+  ],
+  [
+   "Attack",
+   "A30K",
+   "POT",
+   "legend: try 50K log for all"
+  ],
+  [
+   "Tone",
+   "A30K",
+   "POT",
+   "legend: try 50K log for all"
+  ],
+  [
+   "Level",
+   "A50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

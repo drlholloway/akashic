@@ -1,0 +1,33 @@
+{
+ "id": "tagboardeffects:2014-01-bipolar-voltage-converter",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small stripboard 9x11 charge-pump supply board (+/-17V from 9V); populated view on the left, bare cuts-and-links view on the right. No pots or switches.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×5",
+   "1N5817",
+   "D",
+   "D1-D5"
+  ],
+  [
+   "IC",
+   "LT1054",
+   "IC",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

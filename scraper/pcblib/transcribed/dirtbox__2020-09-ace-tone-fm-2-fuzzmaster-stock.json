@@ -1,0 +1,165 @@
+{
+ "id": "dirtbox:2020-09-ace-tone-fm-2-fuzzmaster-stock",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "One populated 18x20 stripboard with five transistors (stock version); all values printed on the parts. The legend says the original transistors are C369 and the original diodes are unknown small signal silicon types.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "68Ω",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×7",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×7",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1.8K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×8",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC108B",
+   "Q",
+   "BC108B, 2N3904 etc.; C369 in original"
+  ],
+  [
+   "Q2",
+   "BC108B",
+   "Q",
+   "BC108B, 2N3904 etc.; C369 in original"
+  ],
+  [
+   "Q3",
+   "BC108B",
+   "Q",
+   "BC108B, 2N3904 etc.; C369 in original"
+  ],
+  [
+   "Q4",
+   "BC108B",
+   "Q",
+   "BC108B, 2N3904 etc.; C369 in original"
+  ],
+  [
+   "Q5",
+   "BC108B",
+   "Q",
+   "BC108B, 2N3904 etc.; C369 in original"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   "unknown small signal silicon diodes, try 1N4148/1N914"
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   "unknown small signal silicon diodes, try 1N4148/1N914"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Fuzz Adjust",
+   "C500K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

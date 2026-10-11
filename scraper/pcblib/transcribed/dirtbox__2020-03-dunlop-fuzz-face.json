@@ -1,0 +1,125 @@
+{
+ "id": "dirtbox:2020-03-dunlop-fuzz-face",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "One populated 15x10 stripboard, germanium PNP Fuzz Face with two 100K bias trimmers on the board and an LED resistor printed only as CLR. Legend: Trim 1 set to 0k-10k, Trim 2 set to 0k.",
+ "uncertain": [
+  "Volume pot: legend prints 375kB, printed clearly, unusual value (legend adds 'Try 250-500kB')"
+ ],
+ "rows": [
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "680Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "8.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "56K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "6.8nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "330uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Trim 1",
+   "100K",
+   "TRIM",
+   "set to 0k-10k"
+  ],
+  [
+   "Trim 2",
+   "100K",
+   "TRIM",
+   "set to 0k"
+  ],
+  [
+   "Q1",
+   "NTE158",
+   "Q",
+   "PNP Germanium, Hfe 135, 200uA leakage"
+  ],
+  [
+   "Q2",
+   "NTE158",
+   "Q",
+   "PNP Germanium, Hfe 135, 200uA leakage"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B375K",
+   "POT",
+   "Try 250-500kB"
+  ]
+ ],
+ "source": "layout"
+}

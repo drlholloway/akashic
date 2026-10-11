@@ -1,0 +1,111 @@
+{
+ "id": "tagboardeffects:2014-04-grind-customs-fx-tenebrion-reverb",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 20x12 shown populated and bare. Reverb built around an off-board Belton BTDR2 brick (short, medium or long), TL074 and 78L05 regulator.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×7",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4n7",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1u",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC",
+   "TL074",
+   "IC",
+   ""
+  ],
+  [
+   "Regulator",
+   "78L05",
+   "IC",
+   ""
+  ],
+  [
+   "Reverb brick",
+   "Belton BTDR2",
+   "OTHER",
+   "off board; short, medium or long"
+  ],
+  [
+   "Verb",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Feedback",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

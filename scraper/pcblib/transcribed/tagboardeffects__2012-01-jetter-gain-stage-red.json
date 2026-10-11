@@ -1,0 +1,137 @@
+{
+ "id": "tagboardeffects:2012-01-jetter-gain-stage-red",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "15x10 vero drawn twice (populated, then cuts and links only), plus a switch diagram: a Hard/Soft toggle with a 2K2 and a 6K2 resistor soldered across its lugs, wired to SW1/SW2. The legend calls the pot Gain, the wire labels call it Drive.",
+ "uncertain": [
+  "Hard/Soft toggle: drawn as a six-lug (DPDT) body with no type stated; whether it has a centre-off position is not given"
+ ],
+ "rows": [
+  [
+   "×3",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K2",
+   "R",
+   "on the Hard/Soft switch"
+  ],
+  [
+   "×1",
+   "6K2",
+   "R",
+   "on the Hard/Soft switch"
+  ],
+  [
+   "×2",
+   "470n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "3n3",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC",
+   "AD712",
+   "IC",
+   "IC is AD712 or OPA2604"
+  ],
+  [
+   "Q1",
+   "2N7000",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "Q2",
+   "2N7000",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "D1",
+   "BAT41",
+   "D",
+   "BAT41 or similar Schottky"
+  ],
+  [
+   "D2",
+   "1N60",
+   "D",
+   "1N60 or similar germanium"
+  ],
+  [
+   "D3",
+   "BAT41",
+   "D",
+   "BAT41 or similar Schottky"
+  ],
+  [
+   "Gain",
+   "A500K",
+   "POT",
+   "wires labelled Drive"
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Hard/Soft",
+   "DPDT",
+   "SW",
+   "toggle, type not stated; carries the 2K2 and 6K2"
+  ]
+ ],
+ "source": "layout"
+}

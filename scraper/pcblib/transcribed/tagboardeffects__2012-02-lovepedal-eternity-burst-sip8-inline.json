@@ -1,0 +1,99 @@
+{
+ "id": "tagboardeffects:2012-02-lovepedal-eternity-burst-sip8-inline",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "14 x 12 vero, populated board above a bare cuts-and-links view; the op amp is an 8-pin single-in-line (SIP8) package drawn as a black strip, with four clipping diodes D1-D4.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "390R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "150n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC",
+   "NJM4558",
+   "IC",
+   "SIP8 in-line package; legend: NJM4558 or similar to taste"
+  ],
+  [
+   "×4",
+   "1N914",
+   "D",
+   "D1, D2, D3, D4"
+  ],
+  [
+   "Drive",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

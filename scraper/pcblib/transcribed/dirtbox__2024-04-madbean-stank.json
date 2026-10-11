@@ -1,0 +1,126 @@
+{
+ "id": "dirtbox:2024-04-madbean-stank",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "One populated 14x12 stripboard (LM386 drive based on the Smash Drive) with five pots. The legend prints Q1 as '2N54557', an obvious typo for 2N5457.",
+ "uncertain": [
+  "100nF at columns 2-4, rows B-D: printed clearly as 100nF but drawn as a large electrolytic can, probably meant 100uF",
+  "Q1: legend prints '2N54557'; entered as 2N5457"
+ ],
+ "rows": [
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "680pF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   "electrolytic; printed 100nF on a large can, probably 100uF"
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5457",
+   "Q",
+   "JFET; legend prints 2N54557"
+  ],
+  [
+   "IC1",
+   "LM386",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "C5K",
+   "POT",
+   ""
+  ],
+  [
+   "Treble",
+   "A250K",
+   "POT",
+   ""
+  ],
+  [
+   "Bass",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Mid",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

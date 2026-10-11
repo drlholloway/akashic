@@ -1,0 +1,119 @@
+{
+ "id": "effectslayouts-blog:2016-05-fairfield-barbershop-1590a",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "PCB layout (wiring diagram plus etch mask) for a 1590A board with the footswitch on it. Two 20K trimmers on the board. The legend names the pots Drive, Sag and Volume while the board pads are labelled Gain, Sag and Vol. The 4.7K next to the LED is its series resistor, printed with a value. The 220uF is drawn as a large axial box.",
+ "uncertain": [
+  "47Ω at the top by +9v: printed clearly, low value but plausible as the supply series resistor"
+ ],
+ "rows": [
+  [
+   "×3",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4.7K",
+   "R",
+   "one is the LED series resistor"
+  ],
+  [
+   "×2",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "20K",
+   "TRIM",
+   ""
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "220uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "Q1",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q2",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q3",
+   "2N2222A",
+   "Q",
+   ""
+  ],
+  [
+   "Drive",
+   "A100K",
+   "POT",
+   "pads labelled Gain"
+  ],
+  [
+   "Sag",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

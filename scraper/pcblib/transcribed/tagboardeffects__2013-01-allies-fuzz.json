@@ -1,0 +1,75 @@
+{
+ "id": "tagboardeffects:2013-01-allies-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard layout (13 x 10) of the Allies Fuzz, two transistors (one NPN, one PNP) and a diode, shown populated and bare; read from the populated view. The three 100uF cans are partly hidden under neighbouring parts but all read 100uF.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N2222",
+   "Q",
+   "NPN (try 2N2222)"
+  ],
+  [
+   "Q2",
+   "2N2907",
+   "Q",
+   "PNP (try 2N2907)"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   "try 1N4001, 1N5817"
+  ],
+  [
+   "Fuzz",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

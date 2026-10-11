@@ -1,0 +1,251 @@
+{
+ "id": "dirtbox:2021-06-shin-ei-ob-28-octave-box",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 27x24 stripboard with eleven transistors and four diodes; three parts (150Ω, 100K, 10K) are drawn translucent because they sit over or under other parts. Legend asks for Q9, Q10, D1 and D2 to be matched.",
+ "uncertain": [
+  "250pF x3 (column 27 row I-J, columns 20 and 23 rows R-S): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×10",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×7",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "6.8K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "150Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×9",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "6.8nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "250pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC549C",
+   "Q",
+   "BC549C, 2N5088 etc. (2SC644 in original)"
+  ],
+  [
+   "Q2",
+   "BC549C",
+   "Q",
+   "BC549C, 2N5088 etc. (2SC644 in original)"
+  ],
+  [
+   "Q3",
+   "BC549C",
+   "Q",
+   "BC549C, 2N5088 etc. (2SC644 in original)"
+  ],
+  [
+   "Q4",
+   "BC559C",
+   "Q",
+   "BC559C, 2N5087 etc. (2SA666 in original)"
+  ],
+  [
+   "Q5",
+   "BC549C",
+   "Q",
+   "BC549C, 2N5088 etc. (2SC644 in original)"
+  ],
+  [
+   "Q6",
+   "BC549C",
+   "Q",
+   "BC549C, 2N5088 etc. (2SC644 in original)"
+  ],
+  [
+   "Q7",
+   "BC549C",
+   "Q",
+   "BC549C, 2N5088 etc. (2SC644 in original)"
+  ],
+  [
+   "Q8",
+   "BC549C",
+   "Q",
+   "BC549C, 2N5088 etc. (2SC644 in original)"
+  ],
+  [
+   "Q9",
+   "BC549C",
+   "Q",
+   "BC549C, 2N5088 etc. (2SC644 in original); match with Q10"
+  ],
+  [
+   "Q10",
+   "BC549C",
+   "Q",
+   "BC549C, 2N5088 etc. (2SC644 in original); match with Q9"
+  ],
+  [
+   "Q11",
+   "BC549C",
+   "Q",
+   "BC549C, 2N5088 etc. (2SC644 in original)"
+  ],
+  [
+   "D1",
+   "SH-1",
+   "D",
+   "silicon rectifier diode, Try 1N400X; match with D2"
+  ],
+  [
+   "D2",
+   "SH-1",
+   "D",
+   "silicon rectifier diode, Try 1N400X; match with D1"
+  ],
+  [
+   "D3",
+   "SH-1",
+   "D",
+   "silicon rectifier diode, Try 1N400X"
+  ],
+  [
+   "D4",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Sensitivity",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Octave Vol",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Octave Sw",
+   "DPDT on/on",
+   "SW",
+   ""
+  ],
+  [
+   "Normal Sw",
+   "DPDT on/on",
+   "SW",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

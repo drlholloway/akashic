@@ -1,0 +1,81 @@
+{
+ "id": "tagboardeffects:2013-08-bmp-tonestack-w-lpb1",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small vero layout 10 x 9, populated board beside a bare cuts-and-links view. A 100K trimmer sits on the board at the output; one transistor.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "39K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "390Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "TRIM",
+   ""
+  ],
+  [
+   "×1",
+   "2N3904",
+   "Q",
+   "legend: 2N3904, 2N5088 or similar"
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

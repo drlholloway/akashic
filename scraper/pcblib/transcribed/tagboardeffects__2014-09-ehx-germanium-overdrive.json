@@ -1,0 +1,95 @@
+{
+ "id": "tagboardeffects:2014-09-ehx-germanium-overdrive",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "13 x 10 vero drawn twice (populated, then cuts only); read from the populated board. Three transistors, legend names Q1 NKT275 and Q2/Q3 2N5087; three pots (Bias 3 wired to Gain 1).",
+ "uncertain": [
+  "470n at top centre and 470n at bottom centre are drawn as round cans (like the 47u) while the other three 470n are red film caps: the value is clear, the electrolytic type is inferred from the drawing"
+ ],
+ "rows": [
+  [
+   "×4",
+   "62K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "470n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "470n",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "NKT275",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N5087",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "2N5087",
+   "Q",
+   ""
+  ],
+  [
+   "Gain",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Bias",
+   "C100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volts",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

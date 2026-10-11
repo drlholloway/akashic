@@ -1,0 +1,105 @@
+{
+ "id": "dirtbox:2019-06-selmer-buzztone-w-mods",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 13x11 stripboard, Selmer Buzz Tone with mods by Luciferstrip. Legend names the transistors only as PNP germanium, no part number.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "39K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "510Ω",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "PNP Germanium",
+   "Q",
+   "type not given"
+  ],
+  [
+   "Q2",
+   "PNP Germanium",
+   "Q",
+   "type not given"
+  ],
+  [
+   "Q3",
+   "PNP Germanium",
+   "Q",
+   "type not given"
+  ],
+  [
+   "Depth",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

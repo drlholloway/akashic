@@ -1,0 +1,107 @@
+{
+ "id": "tagboardeffects:2017-10-nine-volt-nirvana-tone-dog",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 18x10 stripboard, positive-ground (-9V) two-transistor circuit with a 100k tone trimmer. Two optional positions are marked by coloured pads: yellow pads take a jumper for stock (or 10k, 33k, 100k to reduce highs), not listed; purple pads take a capacitor whose value is offered as 1uF, 100nF, 47nF etc. Volume 2 to Output.",
+ "uncertain": [
+  "Capacitor between the purple pads (column 14, rows F and H): no single value, legend offers 1uF, 100nF, 47nF, etc.; first suggestion entered"
+ ],
+ "rows": [
+  [
+   "×2",
+   "470k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "3.3uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "between the purple pads; legend: 1uF, 100nF, 47nF, etc."
+  ],
+  [
+   "×1",
+   "100k",
+   "TRIM",
+   "tone"
+  ],
+  [
+   "Q1",
+   "2N3906",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2SB54",
+   "Q",
+   "PNP Ge"
+  ],
+  [
+   "D1",
+   "1N4002",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4002",
+   "D",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "A25K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

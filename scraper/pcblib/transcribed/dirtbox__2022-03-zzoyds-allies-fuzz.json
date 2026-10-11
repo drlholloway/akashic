@@ -1,0 +1,95 @@
+{
+ "id": "dirtbox:2022-03-zzoyds-allies-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 14x12 stripboard, modified Vit Zzoyd Allies Fuzz with two germanium transistors (one NPN, one PNP) and a BC550; three pots.",
+ "uncertain": [
+  "3.9K at column 12 rows B-D: standing resistor drawn faded over a cut, the comma is partly hidden; read as 3.9K"
+ ],
+ "rows": [
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.9K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "820Ω",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "NPN Germanium",
+   "Q",
+   "Hfe 60-100"
+  ],
+  [
+   "Q2",
+   "PNP Germanium",
+   "Q",
+   "Hfe 60-100"
+  ],
+  [
+   "Q3",
+   "BC550",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Pre Gain",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

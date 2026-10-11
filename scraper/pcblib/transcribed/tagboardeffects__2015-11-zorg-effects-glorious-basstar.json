@@ -1,0 +1,187 @@
+{
+ "id": "tagboardeffects:2015-11-zorg-effects-glorious-basstar",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard 28 x 25, populated board on the left and cuts/links on the right. Three two-way DIP switches and six green clipping LEDs on the board; ICL7660S charge pump. One 1K at the bottom edge is drawn lying flat and semi-transparent and is counted.",
+ "uncertain": [
+  "78K (four of them, right half of the board): printed clearly, unusual value",
+  "110p ceramic at the left, next to D13: printed clearly, unusual value",
+  "1K lying horizontally on the bottom row, drawn semi-transparent: counted as a real part"
+ ],
+ "rows": [
+  [
+   "×10",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "78K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "20K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "110p",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "33u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "×6",
+   "1N4148",
+   "D",
+   "D2-D7"
+  ],
+  [
+   "×6",
+   "Green Diff. LED",
+   "LED",
+   "D8-D13, on board"
+  ],
+  [
+   "IC1",
+   "TLE2074",
+   "IC",
+   "or TL074"
+  ],
+  [
+   "IC2",
+   "TLE2074",
+   "IC",
+   "or TL074"
+  ],
+  [
+   "IC3",
+   "ICL7660S",
+   "IC",
+   ""
+  ],
+  [
+   "×3",
+   "2-way DIP switch",
+   "SW",
+   "on board"
+  ],
+  [
+   "Bass Gain",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Mids Gain",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Treble Gain",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Bass",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Mids",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Treble",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "Master Treble",
+   "A50K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Freq",
+   "DPDT on/off/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

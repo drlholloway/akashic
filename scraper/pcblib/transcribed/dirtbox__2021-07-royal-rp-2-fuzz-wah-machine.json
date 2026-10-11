@@ -1,0 +1,156 @@
+{
+ "id": "dirtbox:2021-07-royal-rp-2-fuzz-wah-machine",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 17x16 stripboard, the fuzz section only of the fuzz wah. A 50K trimmer sits on the board (not mentioned in the legend) and C11 is an optional 10uF gain-boost cap; the legend lists suggested mods.",
+ "uncertain": [
+  "3.6K (column 5, rows M-O): printed clearly as 3,6K, unusual value",
+  "50K trimmer (rows G-J, columns 6-9): drawn semi-transparent over links and cuts, label reads 50K; legend does not mention it"
+ ],
+ "rows": [
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1.8K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.6K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "33nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "3.9nF",
+   "C",
+   ""
+  ],
+  [
+   "×6",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C11",
+   "10uF",
+   "C",
+   "electrolytic; optional, for gain boost"
+  ],
+  [
+   "×1",
+   "50K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Q1",
+   "2SK30-A",
+   "Q",
+   "JFET; 2SK117 for more gain"
+  ],
+  [
+   "Q2",
+   "2N5088",
+   "Q",
+   "2N5088, 2N3904 etc. (2SC828-S in original)"
+  ],
+  [
+   "Q3",
+   "2N5088",
+   "Q",
+   "2N5088, 2N3904 etc. (2SC828-S in original)"
+  ],
+  [
+   "Q4",
+   "2N5088",
+   "Q",
+   "2N5088, 2N3904 etc. (2SC828-S in original)"
+  ],
+  [
+   "D1",
+   "LF144",
+   "D",
+   "LF144 (Germanium?)"
+  ],
+  [
+   "D2",
+   "LF144",
+   "D",
+   "LF144 (Germanium?)"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Howling Adjust",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Expand",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B50K",
+   "POT",
+   "250kB suggested as a mod"
+  ]
+ ],
+ "source": "layout"
+}

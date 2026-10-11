@@ -1,0 +1,63 @@
+{
+ "id": "tagboardeffects:2013-02-ne555-voltage-inverter",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "13x9 stripboard charge-pump inverter shown populated and bare; the legend gives D1-D2 only as a list of suitable Schottky/rectifier types.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "220uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "470uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "NE555",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "BAT85",
+   "D",
+   "legend: barrier Schottkys, like BAT85, 1N5817, 1N5819 or 1N4001-1N4007"
+  ],
+  [
+   "D2",
+   "BAT85",
+   "D",
+   "legend: barrier Schottkys, like BAT85, 1N5817, 1N5819 or 1N4001-1N4007"
+  ]
+ ],
+ "source": "layout"
+}

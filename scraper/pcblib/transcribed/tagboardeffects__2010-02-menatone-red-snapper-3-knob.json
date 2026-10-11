@@ -1,0 +1,107 @@
+{
+ "id": "tagboardeffects:2010-02-menatone-red-snapper-3-knob",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Tagboard layout marked 'V2 corrected', one populated board: an 8-pin IC whose type is not printed (a resistor covers its label), three 1N4148 diodes, three pots.",
+ "uncertain": [
+  "8-pin IC in the middle of the board: only 'IC' visible under a 10K resistor, no part number anywhere"
+ ],
+ "rows": [
+  [
+   "×5",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "IC1",
+   "?",
+   "IC",
+   "value not given; 8-pin"
+  ],
+  [
+   "Vol",
+   "A250K",
+   "POT",
+   ""
+  ],
+  [
+   "Bite",
+   "B20K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "A1M",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

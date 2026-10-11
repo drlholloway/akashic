@@ -1,0 +1,33 @@
+{
+ "id": "effectslayouts-blog:2018-06-optical-bypass",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Tiny perfboard utility board (populated view, wiring diagram, underside, etched PCB): one resistor, one cap and an H11F1 photo-FET optocoupler, with the indicator LED soldered to the board edge. The DPDT footswitch is the bypass switch and is not listed.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "IC1",
+   "H11F1",
+   "OPTO",
+   "photo-FET optocoupler"
+  ],
+  [
+   "×1",
+   "LED",
+   "LED",
+   "indicator soldered to the board, drawn red, type not given"
+  ]
+ ],
+ "source": "layout"
+}

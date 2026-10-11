@@ -1,0 +1,69 @@
+{
+ "id": "tagboardeffects:2013-04-fuzzhugger-phantom-octave",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "12x8 stripboard with a populated view and a bare cuts/links view. D3 is a 5mm blue LED mounted on the board.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "LM386",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D4",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "5mm blue LED",
+   "LED",
+   ""
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

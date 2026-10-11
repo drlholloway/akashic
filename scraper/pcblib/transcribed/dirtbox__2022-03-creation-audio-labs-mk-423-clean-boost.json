@@ -1,0 +1,126 @@
+{
+ "id": "dirtbox:2022-03-creation-audio-labs-mk-423-clean-boost",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 15x17 stripboard with an op-amp and a charge pump; legend names the ICs, diodes and the Boost pot. Legend says all caps rated min 25v.",
+ "uncertain": [
+  "IC1: legend prints 'OP2134', entered as OPA2134",
+  "IC2: legend prints 'TZ1044SCPA', entered as TC1044SCPA (the charge pump); the Z is printed clearly"
+ ],
+ "rows": [
+  [
+   "×2",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "680Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "120K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "51Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×6",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33pF",
+   "C",
+   ""
+  ],
+  [
+   "IC1",
+   "OPA2134",
+   "IC",
+   "printed OP2134"
+  ],
+  [
+   "IC2",
+   "TC1044SCPA",
+   "IC",
+   "printed TZ1044SCPA"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "D4",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "D5",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Boost",
+   "A50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

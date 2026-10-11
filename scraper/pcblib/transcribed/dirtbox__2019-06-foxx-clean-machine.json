@@ -1,0 +1,87 @@
+{
+ "id": "dirtbox:2019-06-foxx-clean-machine",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 14x10 vero board, values printed on every part; three transistors, a rotary sustain switch and one volume pot.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "2.7M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N3565",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N3565",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "2N3565",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Volume",
+   "B1M",
+   "POT",
+   "legend prints 1mB"
+  ],
+  [
+   "Switch",
+   "3P4T rotary",
+   "SW",
+   "Normal / Sustain / More Sustain / Dirty Sustain"
+  ]
+ ],
+ "source": "layout"
+}

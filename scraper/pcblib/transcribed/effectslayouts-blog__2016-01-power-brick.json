@@ -1,0 +1,39 @@
+{
+ "id": "effectslayouts-blog:2016-01-power-brick",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard charge-pump supply (+18v in, +9v and -9v out) by storyboardist, shown as populated board, wiring diagram, underside and PCB; counted from the populated board. No pots or switches.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "1N5817",
+   "D",
+   "printed 5817"
+  ],
+  [
+   "×1",
+   "1N4740",
+   "D",
+   "printed 4740; Zener"
+  ],
+  [
+   "×1",
+   "MAX1044",
+   "IC",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

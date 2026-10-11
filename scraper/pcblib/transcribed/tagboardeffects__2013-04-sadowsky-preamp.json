@@ -1,0 +1,144 @@
+{
+ "id": "tagboardeffects:2013-04-sadowsky-preamp",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard 18 x 12 by Geiri, populated view on top and a bare cuts view below. The legend names D1 as 1N4001 but only D2 and D3 are visibly labelled on the board; a white band end shows under the 750Ω resistor, which may be D1 drawn beneath it.",
+ "uncertain": [
+  "D1 1N4001: named in the legend, not labelled on the board; possibly the part hidden under the 750Ω resistor in the middle",
+  "5K x2, 2.5nF, 300pF, 5uF and 50uF x2: printed clearly, unusual values"
+ ],
+ "rows": [
+  [
+   "×4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "5K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "750Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.5nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "300pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "50uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "5uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5457",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q2",
+   "2N5457",
+   "Q",
+   "JFET"
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   "from the legend; not labelled on the board"
+  ],
+  [
+   "D2",
+   "12V Zener",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "12V Zener",
+   "D",
+   ""
+  ],
+  [
+   "Volume",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Bass",
+   "A25K",
+   "POT",
+   ""
+  ],
+  [
+   "Treble",
+   "A25K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

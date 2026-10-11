@@ -1,0 +1,89 @@
+{
+ "id": "tagboardeffects:2018-01-vox-distortion-booster-v8161_1",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small vero layout 12 x 10, a single populated board with large clear values; two transistors and one pot.",
+ "uncertain": [
+  "20nF at the bottom right by the Output wire: printed clearly, unusual value (could be a 220nF with a digit lost)"
+ ],
+ "rows": [
+  [
+   "×1",
+   "150r",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220r",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "330pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "20nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "2N2924",
+   "Q",
+   "Q1-Q2"
+  ],
+  [
+   "Volume",
+   "A50K",
+   "POT",
+   "50k Log"
+  ]
+ ],
+ "source": "layout"
+}

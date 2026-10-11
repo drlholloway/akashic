@@ -1,0 +1,99 @@
+{
+ "id": "effectslayouts-blog:2014-11-way-huge-red-llama",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small vero layout for a 1590A, plus a PCB wiring diagram, underside and etch mask repeating the same parts; counted from the populated vero. Pot values are printed without a taper. The 2.2K feeds the LED pad.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.5M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   "LED resistor"
+  ],
+  [
+   "×1",
+   "51pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "68nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "CD4049UBE",
+   "IC",
+   ""
+  ],
+  [
+   "GAIN",
+   "1M",
+   "POT",
+   ""
+  ],
+  [
+   "VOL",
+   "10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

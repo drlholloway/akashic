@@ -1,0 +1,150 @@
+{
+ "id": "dirtbox:2021-07-univox-co-105-uni-comp",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 15x14 stripboard with an LDR and an LED on the board forming the LDR-LED combo (MCD527 vactrol in the original). The board shows D1-D4 while the legend lists D1-D3 and 'D5: 1N5817'; the black D4 by the 9v pad is taken as that 1N5817. Legend says 'Volume 2 to Output' although the pot is labelled Level.",
+ "uncertain": [
+  "D4 at col 12 rows K-M: legend calls the 1N5817 'D5', no D5 is drawn; D4 assumed to be the 1N5817",
+  "3.3M at col 9 rows F-H: partly covered by a cut marker, reads 3,3M"
+ ],
+ "rows": [
+  [
+   "×1",
+   "1.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "5.6K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "6.8K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "330nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "33uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "PN2222",
+   "Q",
+   "PN2222, MPSA06 etc (2SC1312G in original)"
+  ],
+  [
+   "IC1",
+   "LM741",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   "1N4148 / 1N914 (MD234 in original)"
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   "1N4148 / 1N914 (MD234 in original)"
+  ],
+  [
+   "D3",
+   "1N4148",
+   "D",
+   "1N4148 / 1N914 (MD234 in original)"
+  ],
+  [
+   "D4",
+   "1N5817",
+   "D",
+   "legend lists it as D5"
+  ],
+  [
+   "×1",
+   "LDR",
+   "OPTO",
+   "LDR-LED combo: test (MCD527 vactrol in original)"
+  ],
+  [
+   "×1",
+   "LED",
+   "LED",
+   "on board, paired with the LDR"
+  ],
+  [
+   "Comp",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "B2K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

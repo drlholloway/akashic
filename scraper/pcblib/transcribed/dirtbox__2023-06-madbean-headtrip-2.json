@@ -1,0 +1,205 @@
+{
+ "id": "dirtbox:2023-06-madbean-headtrip-2",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "FV-1 digital board (28x25): bare cuts/jumpers view on the left, populated view on the right; counted from the populated view only. FV-1 sits on a 28-pin adapter with three 20k resistors drawn underneath it. The 'Tails SW' stomp is the (tails) bypass footswitch and is not listed. Q1 is a 3.3V regulator drawn as a TO-92.",
+ "uncertain": [
+  "EEPROM (8-pin DIP, bottom left): no part number given on the drawing",
+  "X1 printed in legend as '32768 crystal' (32.768 kHz watch crystal)",
+  "10k at column 9 rows F-H and the three 20k under the FV-1 are drawn greyed/translucent; read as fitted parts"
+ ],
+ "rows": [
+  [
+   "×3",
+   "1k",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1m",
+   "R",
+   "printed '1m', i.e. 1M"
+  ],
+  [
+   "×4",
+   "100k",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "10k",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "20k",
+   "R",
+   "three sit under the FV-1 adapter"
+  ],
+  [
+   "×1",
+   "33k",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100R",
+   "R",
+   "must be 1/4W"
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "15pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "film box"
+  ],
+  [
+   "×4",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "TL074",
+   "IC",
+   ""
+  ],
+  [
+   "×1",
+   "FV-1",
+   "IC",
+   "on a 7x14 adapter"
+  ],
+  [
+   "×1",
+   "EEPROM",
+   "IC",
+   "8-pin, part number not given"
+  ],
+  [
+   "Q1",
+   "L78L33",
+   "IC",
+   "3.3V regulator, legend 'L78l33'"
+  ],
+  [
+   "X1",
+   "32768 crystal",
+   "OTHER",
+   "32.768 kHz crystal"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "×9",
+   "1N914",
+   "D",
+   "D2-D10"
+  ],
+  [
+   "Dry",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Effect",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Control 1",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Control 2",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Control 3",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "SW",
+   "1P8T rotary",
+   "SW",
+   "program select, lug 8 unconnected"
+  ]
+ ],
+ "source": "layout"
+}

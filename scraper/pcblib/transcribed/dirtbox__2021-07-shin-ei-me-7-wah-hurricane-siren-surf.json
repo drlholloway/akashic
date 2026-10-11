@@ -1,0 +1,210 @@
+{
+ "id": "dirtbox:2021-07-shin-ei-me-7-wah-hurricane-siren-surf",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 22x22 stripboard with a transformer TR1 on the board; a 4P4T rotary selects volume/surf/hurricane/wah and a momentary footswitch triggers the siren.",
+ "uncertain": [
+  "50K resistor (column 4, rows I-K): printed clearly, unusual value",
+  "20K (column 3, rows B-D): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "20K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "50K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150Ω",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "33nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×8",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "220uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N2222",
+   "Q",
+   "2N2222, 2N3904 etc. (2SC828 in original)"
+  ],
+  [
+   "Q2",
+   "2N2222",
+   "Q",
+   "2N2222, 2N3904 etc. (2SC828 in original)"
+  ],
+  [
+   "Q3",
+   "2N2222",
+   "Q",
+   "2N2222, 2N3904 etc. (2SC828 in original)"
+  ],
+  [
+   "Q4",
+   "2N2222",
+   "Q",
+   "2N2222, 2N3904 etc. (2SC828 in original)"
+  ],
+  [
+   "Q5",
+   "2N2222",
+   "Q",
+   "2N2222, 2N3904 etc. (2SC828 in original)"
+  ],
+  [
+   "Q6",
+   "2N2222",
+   "Q",
+   "2N2222, 2N3904 etc. (2SC828 in original)"
+  ],
+  [
+   "Q7",
+   "2N2222",
+   "Q",
+   "2N2222, 2N3904 etc. (2SC828 in original)"
+  ],
+  [
+   "Q8",
+   "2N2222",
+   "Q",
+   "2N2222, 2N3904 etc. (2SC828 in original)"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "TR1",
+   "42TM013",
+   "XFM",
+   ""
+  ],
+  [
+   "Surf Hurricane Vol",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Siren Vol",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Wah",
+   "B50K",
+   "POT",
+   "wah pot"
+  ],
+  [
+   "Select Sw",
+   "4P4T rotary",
+   "SW",
+   ""
+  ],
+  [
+   "Siren Sw",
+   "SPST momentary",
+   "SW",
+   "footswitch"
+  ]
+ ],
+ "source": "layout"
+}

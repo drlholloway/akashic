@@ -1,0 +1,87 @@
+{
+ "id": "dirtbox:2024-08-1776-multiplex-delay-modulation-add-on",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small 13x9 LFO daughterboard for the 1776 Multiplex delay; bare cuts-and-jumpers board on top (not counted), populated board below. R7 is printed as a designator with its value (330k, 180k in original) in the legend; D2 on the board and the off-board Speed LED are both 5mm diffused yellow. Power filtering and polarity protection come from the main board.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   "printed 2m2"
+  ],
+  [
+   "R7",
+   "330K",
+   "R",
+   "180k in original"
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL072",
+   "IC",
+   "any dual op amp should do"
+  ],
+  [
+   "D2",
+   "5mm diffused yellow",
+   "LED",
+   "on board, faces the LDR"
+  ],
+  [
+   "Speed LED",
+   "5mm diffused yellow",
+   "LED",
+   "off-board rate indicator"
+  ],
+  [
+   "LDR",
+   "1M dark resistance",
+   "OPTO",
+   "original recommends 10m dark/VTL5C3 vactrol"
+  ],
+  [
+   "Speed",
+   "C100K",
+   "POT",
+   "originally B100k"
+  ],
+  [
+   "Depth",
+   "B1M",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

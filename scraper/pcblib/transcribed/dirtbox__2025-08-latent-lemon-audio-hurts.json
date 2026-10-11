@@ -1,0 +1,153 @@
+{
+ "id": "dirtbox:2025-08-latent-lemon-audio-hurts",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 16x14 stripboard with two on-board trimmers (5M Octave, 1M Osc.) and a legend. The board does not say which transistor is Q1 and which Q2; designators taken from the legend.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "47Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "91K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Octave",
+   "5M",
+   "TRIM",
+   ""
+  ],
+  [
+   "Osc.",
+   "1M",
+   "TRIM",
+   ""
+  ],
+  [
+   "Q1",
+   "PNP Germanium",
+   "Q",
+   "hFe 40-60"
+  ],
+  [
+   "Q2",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "×2",
+   "1N695",
+   "D",
+   "D1, D2; legend: 1N695, D310/11/12 or D18"
+  ],
+  [
+   "×2",
+   "1N914",
+   "D",
+   "D3, D4"
+  ],
+  [
+   "D5",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Harmonics",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Sputter",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Balance",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Deep",
+   "DPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Ge/Si",
+   "SPDT on/off/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

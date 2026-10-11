@@ -1,0 +1,117 @@
+{
+ "id": "effectslayouts-blog:2023-04-ehxjhs-lizard-queen",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout by storyboardist: populated board, colour wiring diagram, underside and etched PCB of the same circuit. The legend gives C1, D1 and Q1 as 'unknown'; Q1 is drawn as a round metal can.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "C1",
+   "?",
+   "C",
+   "value not given; legend says unknown"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "D1",
+   "?",
+   "D",
+   "value not given; legend says unknown"
+  ],
+  [
+   "Q1",
+   "?",
+   "Q",
+   "value not given; legend says unknown; drawn as a round can"
+  ],
+  [
+   "Q2",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "2N2222A",
+   "Q",
+   ""
+  ],
+  [
+   "Q4",
+   "2N5087",
+   "Q",
+   ""
+  ],
+  [
+   "Balance",
+   "C1K",
+   "POT",
+   ""
+  ],
+  [
+   "Octave",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

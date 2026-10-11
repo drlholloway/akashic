@@ -1,0 +1,111 @@
+{
+ "id": "tagboardeffects:2014-05-a-pair-o-preamps-echoplex-and-tillman",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Two separate, independent preamp circuits in one drawing, each with a populated and a bare vero board: EchoPlex Preamp (11 x 7, 2N5457) and Tillman Preamp (8 x 6, J201). Both are listed, each row noted with its board; they share no values. No pots.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "1M",
+   "R",
+   "EchoPlex Preamp board"
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   "EchoPlex Preamp board"
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   "EchoPlex Preamp board"
+  ],
+  [
+   "×1",
+   "3K3",
+   "R",
+   "EchoPlex Preamp board"
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   "EchoPlex Preamp board"
+  ],
+  [
+   "×2",
+   "22n",
+   "C",
+   "EchoPlex Preamp board"
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   "EchoPlex Preamp board"
+  ],
+  [
+   "×1",
+   "220p",
+   "C",
+   "EchoPlex Preamp board"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic; EchoPlex Preamp board"
+  ],
+  [
+   "×1",
+   "2N5457",
+   "Q",
+   "JFET; EchoPlex Preamp board"
+  ],
+  [
+   "×1",
+   "6K8",
+   "R",
+   "Tillman Preamp board"
+  ],
+  [
+   "×1",
+   "3M",
+   "R",
+   "Tillman Preamp board"
+  ],
+  [
+   "×1",
+   "2K2",
+   "R",
+   "Tillman Preamp board"
+  ],
+  [
+   "×1",
+   "51K",
+   "R",
+   "Tillman Preamp board"
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic; Tillman Preamp board"
+  ],
+  [
+   "×1",
+   "4u7",
+   "C",
+   "electrolytic; Tillman Preamp board"
+  ],
+  [
+   "×1",
+   "J201",
+   "Q",
+   "JFET; Tillman Preamp board"
+  ]
+ ],
+ "source": "layout"
+}

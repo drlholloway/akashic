@@ -1,0 +1,132 @@
+{
+ "id": "dirtbox:2019-07-death-by-audio-sound-saw",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 14x11 stripboard with two 2N5088 stages and two LED resistors printed CLR (channel LED and bypass LED). The one 3PDT footswitch is wired to the input, both volume pots and the two legs of the dual-colour channel LED, so it is listed as the channel switch rather than a plain bypass.",
+ "uncertain": [
+  "Electrolytic at the bottom right (column 12, rows I-J): the label prints as '10null' (DIYLC value with no unit), read as 10uF",
+  "The 3PDT footswitch: wiring notes suggest it selects the channel, but it may be the bypass switch; listed as an effect control"
+ ],
+ "rows": [
+  [
+   "×2",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "?",
+   "R",
+   "LED resistor, value not given"
+  ],
+  [
+   "×1",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "6.8nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "33uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic; unit not printed"
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Channel LED",
+   "Dual Colour LED with common anode",
+   "LED",
+   "off-board"
+  ],
+  [
+   "Volume 1",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume 2",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Filter 1",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Filter 2",
+   "B100K",
+   "POT",
+   "dual"
+  ],
+  [
+   "Switch",
+   "3PDT",
+   "SW",
+   "footswitch, switches channel"
+  ]
+ ],
+ "source": "layout"
+}

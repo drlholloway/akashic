@@ -1,0 +1,111 @@
+{
+ "id": "tagboardeffects:2013-02-fulltone-70",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "14 x 9 vero, populated board above a bare cuts-and-links view. Two silicon transistors without designators, an on-board 5K trimmer, D1 and D2 named in the legend.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "220R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2u2",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N34A",
+   "D",
+   ""
+  ],
+  [
+   "×2",
+   "BC108C",
+   "Q",
+   "legend: Transistors are BC108C"
+  ],
+  [
+   "×1",
+   "5K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Mid",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Fuzz",
+   "C1K",
+   "POT",
+   "Rev Log"
+  ],
+  [
+   "Volume",
+   "A250K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

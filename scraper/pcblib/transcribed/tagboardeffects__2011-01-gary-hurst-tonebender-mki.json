@@ -1,0 +1,113 @@
+{
+ "id": "tagboardeffects:2011-01-gary-hurst-tonebender-mki",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout, 20 x 9, populated board above a bare cuts view. Two 10K parts drawn as translucent three-pin boxes beside Q1 and Q3 with the callout 'Not soldered cut leg' are read as 10K trimmers. Three PNP germanium transistors, no type given; pots carry no taper.",
+ "uncertain": [
+  "The two 10K parts beside Q1 and Q3 (top of board): drawn as translucent boxes with one leg cut / not soldered, taken as trimmers; could be meant as another 10K part type"
+ ],
+ "rows": [
+  [
+   "×1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "56K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "TRIM",
+   "beside Q1 and Q3; one leg cut, not soldered"
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "25u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "PNP germanium",
+   "Q",
+   "type not given"
+  ],
+  [
+   "Q2",
+   "PNP germanium",
+   "Q",
+   "type not given"
+  ],
+  [
+   "Q3",
+   "PNP germanium",
+   "Q",
+   "type not given"
+  ],
+  [
+   "Attack",
+   "50K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

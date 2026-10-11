@@ -1,0 +1,45 @@
+{
+ "id": "effectslayouts-blog:2015-08-9v-to-18v-charge-pump",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small perfboard charge-pump (voltage doubler) board with a colour wiring diagram, underside and etched PCB; counted from the populated board, the diagram agrees.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "MAX1044",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   "1N4001, 4007, 5817, etc"
+  ],
+  [
+   "D2",
+   "1N4001",
+   "D",
+   "1N4001, 4007, 5817, etc"
+  ],
+  [
+   "D3",
+   "1N4001",
+   "D",
+   "1N4001, 4007, 5817, etc"
+  ]
+ ],
+ "source": "layout"
+}

@@ -28,8 +28,25 @@ def _row(r: sqlite3.Row) -> dict:
     for k in ("tags", "controls", "extra_docs"):
         d[k] = json.loads(d.get(k) or ("{}" if k == "extra_docs" else "[]"))
     d["in_stock"] = None if d["in_stock"] is None else bool(d["in_stock"])
+    d["layout"] = json.loads(d.get("layout") or "{}")
     d["file_id"] = re.sub(r"[^a-z0-9]+", "-", d["id"].lower()).strip("-")
     return d
+
+
+def _build_fields(layout: dict) -> dict:
+    """How a circuit is built, for the list and its filter: nothing for a plain PCB (the common case, so
+    the index stays small), else every way it can be built, first its own ('vero'; 'pcb' then 'vero' for
+    a board whose vendor also publishes a stripboard layout), with the board size and whether the
+    source marks the layout as verified by a build."""
+    if not layout:
+        return {}
+    builds = list(dict.fromkeys([layout.get("build") or "pcb"] + [a["build"] for a in layout.get("also", [])]))
+    out: dict = {"builds": builds}
+    if layout.get("board"):
+        out["board"] = layout["board"]
+    if "verified" in layout:
+        out["verified"] = layout["verified"]
+    return out
 
 
 def write_rates() -> None:
@@ -118,6 +135,7 @@ def run(images: bool = False) -> None:
                 "controls": c["controls"], "tags": c["tags"], "actives": actives,
                 "bom_count": len(bom), "has_schematic": has_schematic,
                 "has_kicad": bool(c.get("kicad_path")),
+                **_build_fields(c["layout"]),
             })
             for b in bom:
                 if b["category"] in ("R", "C", "LED", "HW", "CONN", "OTHER", ""):

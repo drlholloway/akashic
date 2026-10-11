@@ -1,0 +1,117 @@
+{
+ "id": "tagboardeffects:2012-07-danelectro-pastrami",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "First picture is a photo of the pedal. Two vero layouts follow: the stock Danelectro Pastrami (20x10) and a modified version, the FYA Electronics Moldy Meat Drive (21x10, adds a Tone pot, a 15n cap, a clipping switch and blue LEDs). Read the first, the stock Pastrami.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470R",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100p",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "1u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "2u2",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "red LED",
+   "LED",
+   ""
+  ],
+  [
+   "D2",
+   "red LED",
+   "LED",
+   ""
+  ],
+  [
+   "Overdrive",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

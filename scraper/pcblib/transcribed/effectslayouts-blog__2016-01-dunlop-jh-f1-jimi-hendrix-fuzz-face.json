@@ -1,0 +1,121 @@
+{
+ "id": "effectslayouts-blog:2016-01-dunlop-jh-f1-jimi-hendrix-fuzz-face",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Two-transistor silicon Fuzz Face on perfboard with two bias trimmers (50K, 10K) and 1% resistor values; populated board, underside, wiring diagram and etched PCB shown, read from the populated board.",
+ "uncertain": [
+  "3.16K next to the 20K at the top: printed clearly, unusual value",
+  "82.5K under Q2: printed clearly, unusual value",
+  "332Ω beside the 1N4001: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×1",
+   "20K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.16K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "82.5K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "332Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "50K",
+   "TRIM",
+   "bias Q1 to 1.35v"
+  ],
+  [
+   "×1",
+   "10K",
+   "TRIM",
+   "bias Q2 to 5.75v"
+  ],
+  [
+   "×1",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "BC108",
+   "Q",
+   "260 hFE for both"
+  ],
+  [
+   "Q2",
+   "BC108",
+   "Q",
+   "260 hFE for both"
+  ],
+  [
+   "Fuzz",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A470K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

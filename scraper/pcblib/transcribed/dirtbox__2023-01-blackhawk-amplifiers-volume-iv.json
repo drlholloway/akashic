@@ -1,0 +1,123 @@
+{
+ "id": "dirtbox:2023-01-blackhawk-amplifiers-volume-iv",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 17x14 vero board with an on-board audio transformer (TR1), two transistors, two pots and two toggle switches (Ge/Si and Voice).",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "OC141",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "BC108",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "TR1",
+   "42TL019",
+   "XFM",
+   "audio transformer"
+  ],
+  [
+   "Gain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Boost",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Ge/Si Sw",
+   "3PDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Voice Sw",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

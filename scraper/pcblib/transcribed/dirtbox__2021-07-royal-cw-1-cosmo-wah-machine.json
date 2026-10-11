@@ -1,0 +1,210 @@
+{
+ "id": "dirtbox:2021-07-royal-cw-1-cosmo-wah-machine",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 23x28 stripboard (Royal CW-1 / RP-3), with a transformer TR1 and a 10K trimmer on the board. The rotary is labelled 'Select Sw' on the wires and 'Mode Sw' in the legend. The trimmer replaces a stock 1,8K resistor.",
+ "uncertain": [
+  "20K x2 (columns 9 and 21, rows M-O): printed clearly, unusual value",
+  "3.6K (column 5, rows J-L): printed clearly as 3,6K, unusual value"
+ ],
+ "rows": [
+  [
+   "×6",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×11",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.6K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "20K",
+   "R",
+   ""
+  ],
+  [
+   "×7",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "1.8K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "33nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×11",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "220uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10K",
+   "TRIM",
+   "stock resistor value is 1,8k"
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   "2SC828-S in original; Q2 & Q3 matched gain"
+  ],
+  [
+   "Q2",
+   "2N5088",
+   "Q",
+   "2SC828-S in original; Q2 & Q3 matched gain"
+  ],
+  [
+   "Q3",
+   "2N5088",
+   "Q",
+   "2SC828-S in original; Q2 & Q3 matched gain"
+  ],
+  [
+   "Q4",
+   "2N5088",
+   "Q",
+   "2SC828-S in original; Q2 & Q3 matched gain"
+  ],
+  [
+   "Q5",
+   "2N5088",
+   "Q",
+   "2SC828-S in original; Q2 & Q3 matched gain"
+  ],
+  [
+   "Q6",
+   "2N5088",
+   "Q",
+   "2SC828-S in original; Q2 & Q3 matched gain"
+  ],
+  [
+   "Q7",
+   "2SK30-O",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q8",
+   "2SK30-O",
+   "Q",
+   "JFET"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "TR1",
+   "42TM018",
+   "XFM",
+   ""
+  ],
+  [
+   "Blend",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Vibrate",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Treadle",
+   "100K",
+   "POT",
+   "wah pot"
+  ],
+  [
+   "Vibe Sw",
+   "SPST",
+   "SW",
+   "2 throw rotary in original"
+  ],
+  [
+   "Mode Sw",
+   "6P2T rotary",
+   "SW",
+   "labelled Select Sw on the board wires"
+  ]
+ ],
+ "source": "layout"
+}

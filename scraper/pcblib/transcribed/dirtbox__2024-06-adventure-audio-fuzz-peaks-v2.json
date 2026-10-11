@@ -1,0 +1,234 @@
+{
+ "id": "dirtbox:2024-06-adventure-audio-fuzz-peaks-v2",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single dense 30x24 stripboard with two TL074s and four transistors; only R32 carries a designator, its value given in the legend (stock 10k, try 2.7-3.3k). Peak Sw is a momentary footswitch used as an effect control.",
+ "uncertain": [
+  "75K horizontal resistor at row B, columns 5-7: printed clearly, unusual value",
+  "resistor count is high (36) on a crowded board with several standing resistors overlapping cuts; 100K ×9 and 1M ×6 tallied in two passes"
+ ],
+ "rows": [
+  [
+   "×3",
+   "390Ω",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R32",
+   "10K",
+   "R",
+   "legend: stock value is 10k, try 2.7-3.3k"
+  ],
+  [
+   "×3",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "39K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "75K",
+   "R",
+   ""
+  ],
+  [
+   "×9",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "470pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×6",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×10",
+   "1uF",
+   "C",
+   "film"
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC547B",
+   "Q",
+   "BC857B SMD in original"
+  ],
+  [
+   "Q2",
+   "BC547B",
+   "Q",
+   "BC857B SMD in original"
+  ],
+  [
+   "Q3",
+   "BC547B",
+   "Q",
+   "BC857B SMD in original"
+  ],
+  [
+   "Q4",
+   "BC547B",
+   "Q",
+   "BC857B SMD in original"
+  ],
+  [
+   "IC1",
+   "TL074",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "TL074",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Spectrum",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Bias",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Fuzz",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Fuzz Vol",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Clean Vol",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Clip Sw",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Mids Sw",
+   "SPDT on/off/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Peak Sw",
+   "Momentary footswitch",
+   "SW",
+   "effect control"
+  ]
+ ],
+ "source": "layout"
+}

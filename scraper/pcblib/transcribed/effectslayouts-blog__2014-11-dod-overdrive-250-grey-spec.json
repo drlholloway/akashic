@@ -1,0 +1,107 @@
+{
+ "id": "effectslayouts-blog:2014-11-dod-overdrive-250-grey-spec",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard DOD 250 (grey spec) with board-mounted pots, shown as populated vero, wiring diagram, underside and etched PCB; counted from the populated vero.",
+ "uncertain": [
+  "25pF ceramic right of the LM741 (rows H-J): printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "20K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2.2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "25pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N914",
+   "D",
+   "legend: D1,2: 1N914, 1N4148"
+  ],
+  [
+   "D2",
+   "1N914",
+   "D",
+   "legend: D1,2: 1N914, 1N4148"
+  ],
+  [
+   "×1",
+   "LM741",
+   "IC",
+   ""
+  ],
+  [
+   "Gain",
+   "C500K",
+   "POT",
+   "printed 500K Rev log"
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   "printed 100K Log"
+  ]
+ ],
+ "source": "layout"
+}

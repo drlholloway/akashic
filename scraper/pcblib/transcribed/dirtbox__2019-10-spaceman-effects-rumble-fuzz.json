@@ -1,0 +1,131 @@
+{
+ "id": "dirtbox:2019-10-spaceman-effects-rumble-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 13x11 stripboard, two transistors, two ferrite beads in the supply and a DPDT switch; all values print clearly.",
+ "uncertain": [
+  "2.2Ω on row J: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×1",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "5.6K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "Ferrite Bead",
+   "L",
+   "FB"
+  ],
+  [
+   "Q1",
+   "NPN Silicon",
+   "Q",
+   "high gain, Hfe 650-700"
+  ],
+  [
+   "Q2",
+   "NPN Silicon",
+   "Q",
+   "low gain, Hfe 190-220"
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "Germanium",
+   "D",
+   "type not given"
+  ],
+  [
+   "D4",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Rumble",
+   "C50K",
+   "POT",
+   ""
+  ],
+  [
+   "Bite",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "DPDT on/on",
+   "SW",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

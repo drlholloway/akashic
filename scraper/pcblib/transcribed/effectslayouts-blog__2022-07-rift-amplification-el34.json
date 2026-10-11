@@ -1,0 +1,120 @@
+{
+ "id": "effectslayouts-blog:2022-07-rift-amplification-el34",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small one-transistor perfboard layout with a wiring diagram, reversed underside and etch mask; counted from the populated board. The legend lists a 'Gain: B1k' pot while the board's third pot is labelled Boost, and a DPDT Boost footswitch on the Boost 1/Boost 2 wires.",
+ "uncertain": [
+  "Diode by the +9v pad is printed '400X' (any 1N400x), entered as 1N400X",
+  "Pot labelled 'Boost 3-1' on the board: the legend has no Boost pot, only 'Gain: B1k', so it is entered as Gain B1K"
+ ],
+ "rows": [
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "680Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N400X",
+   "D",
+   "printed 400X"
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Tone",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "B1K",
+   "POT",
+   "wired as 'Boost 3-1' on the board"
+  ],
+  [
+   "Boost",
+   "DPDT",
+   "SW",
+   "footswitch, effect control (Boost 1 / Boost 2)"
+  ]
+ ],
+ "source": "layout"
+}

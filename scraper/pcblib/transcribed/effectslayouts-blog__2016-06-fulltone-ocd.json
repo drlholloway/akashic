@@ -1,0 +1,173 @@
+{
+ "id": "effectslayouts-blog:2016-06-fulltone-ocd",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout: populated board, colour wiring diagram, underside and etched PCB; read from the populated board and confirmed on the diagram. R1, R2, C1, D1 and the three pots carry no value: the legend says 'See BOM' (version-dependent parts).",
+ "uncertain": [
+  "The two transistors either side of D1 are unlabelled on the board; the wiring diagram prints '7000', entered as 2N7000"
+ ],
+ "rows": [
+  [
+   "R1",
+   "?",
+   "R",
+   "value not given, see BOM"
+  ],
+  [
+   "R2",
+   "?",
+   "R",
+   "value not given, see BOM"
+  ],
+  [
+   "×1",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "39K",
+   "R",
+   ""
+  ],
+  [
+   "C1",
+   "?",
+   "C",
+   "value not given, see BOM"
+  ],
+  [
+   "×2",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "D1",
+   "?",
+   "D",
+   "value not given, see BOM"
+  ],
+  [
+   "×2",
+   "2N7000",
+   "Q",
+   "MOSFET; printed 7000 on the wiring diagram"
+  ],
+  [
+   "×1",
+   "TL082",
+   "IC",
+   ""
+  ],
+  [
+   "Drive",
+   "?",
+   "POT",
+   "value not given, see BOM"
+  ],
+  [
+   "Tone",
+   "?",
+   "POT",
+   "value not given, see BOM"
+  ],
+  [
+   "Volume",
+   "?",
+   "POT",
+   "value not given, see BOM"
+  ],
+  [
+   "Tone Switch",
+   "SPST",
+   "SW",
+   "HP/LP toggle"
+  ]
+ ],
+ "source": "layout"
+}

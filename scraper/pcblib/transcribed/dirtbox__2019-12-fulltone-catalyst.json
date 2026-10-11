@@ -1,0 +1,193 @@
+{
+ "id": "dirtbox:2019-12-fulltone-catalyst",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 15x14 stripboard with a legend for the transistors, diodes, pots and switch. Values on the round cans are clipped by the can outline, so their leading characters are inferred. One resistor (1K, column 3) is drawn pale/semi-transparent, apparently standing or under another part; it is counted.",
+ "uncertain": [
+  "30nF film cap, columns 8, rows B-E: printed clearly, unusual value (could be a clipped 330nF)",
+  "20nF film cap, column 10, rows H-J: printed clearly, unusual value (could be a clipped 220nF)",
+  "22nF round can, column 10 rows B-C: text reads '22n' clipped by the can; drawn like an electrolytic, could be 22uF",
+  "4.7uF can at the left edge rows D-E: only '.7uF' visible",
+  "2.2uF can at column 13 rows J-K: only '.2uF' visible",
+  "2.2uF can at column 7 rows K-L: only '2uF' visible, could be 22uF",
+  "1uF can at column 13 rows E-F: leading characters may be clipped",
+  "100uF can at column 6 rows A-B: only '00uF' visible",
+  "1K pale resistor at column 3 rows F-I: drawn semi-transparent, text partly hidden"
+ ],
+ "rows": [
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "120K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "39K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   "drawn pale"
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "30nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "20nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   "drawn as a round can"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "4.7uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BS170",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "Q2",
+   "BS170",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "Q3",
+   "2N5457",
+   "Q",
+   "JFET"
+  ],
+  [
+   "D1",
+   "9.1V Zener",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Gain",
+   "C10K",
+   "POT",
+   ""
+  ],
+  [
+   "Treble",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Bass/Mids",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "SPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

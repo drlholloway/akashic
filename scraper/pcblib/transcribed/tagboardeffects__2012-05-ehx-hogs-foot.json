@@ -1,0 +1,65 @@
+{
+ "id": "tagboardeffects:2012-05-ehx-hogs-foot",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small low-resolution drawing of a single populated stripboard (no bare view); one transistor and one Boost pot.",
+ "uncertain": [
+  "430K, 43K and 390R at the right of the board: read from a small image at 8x zoom, digits legible but the image is low resolution"
+ ],
+ "rows": [
+  [
+   "×1",
+   "390R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "43K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "430K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "3u3",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5133",
+   "Q",
+   "legend: was 2N5133 which will be hard to source, so try 2N5088 as a replacement"
+  ],
+  [
+   "Boost",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

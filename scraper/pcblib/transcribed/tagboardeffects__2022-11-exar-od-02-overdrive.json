@@ -1,0 +1,135 @@
+{
+ "id": "tagboardeffects:2022-11-exar-od-02-overdrive",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Populated 21x15 stripboard above a bare cuts-and-links view; counted from the populated board only. Three JFETs (drawn D/S/G) plus three bipolars whose types are printed beside the board, none with designators.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×7",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×3",
+   "J113",
+   "Q",
+   "JFET"
+  ],
+  [
+   "×1",
+   "BC550",
+   "Q",
+   "try other NPN"
+  ],
+  [
+   "×1",
+   "BC547",
+   "Q",
+   "try other NPN"
+  ],
+  [
+   "×1",
+   "BC560",
+   "Q",
+   "PNP; try other PNP"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "×3",
+   "1N4148",
+   "D",
+   "D2, D3, D4"
+  ],
+  [
+   "Drive",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "A22K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A22K",
+   "POT",
+   "try linear"
+  ]
+ ],
+ "source": "layout"
+}

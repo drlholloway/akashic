@@ -1,0 +1,89 @@
+{
+ "id": "tagboardeffects:2010-07-lovepedal-cot50",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated stripboard with one transistor, a Bias pot and an unlabelled blue three-lug part off-board (drawn like a toggle switch, two lugs wired). D1 and D2 are drawn with designators only; no diode type is given anywhere.",
+ "uncertain": [
+  "Blue three-lug part at top left, wired between the Output strip and the 4n7 end: unlabelled, read as an SPDT toggle but the drawing does not say what it is"
+ ],
+ "rows": [
+  [
+   "×1",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "330R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3K3",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4n7",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "D2",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "×1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Bias",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "×1",
+   "SPDT",
+   "SW",
+   "unlabelled, drawn off-board; function not stated"
+  ]
+ ],
+ "source": "layout"
+}

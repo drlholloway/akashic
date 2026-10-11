@@ -1,0 +1,105 @@
+{
+ "id": "tagboardeffects:2012-03-tone-bender-mkii-pnp-with-negative",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "One populated 19x9 stripboard with the two pots drawn above it, plus a bare cuts/links view. ICL7660S charge pump gives the negative rail; the transistors are named only as PNP germanium (a matched Tonebender set is suggested). Capacitor values kept as printed, so 10n (small ceramic by the IC) and 10nF (box film at the right) are separate rows.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "8K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   "ceramic, next to the IC"
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   "box film"
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   "box film"
+  ],
+  [
+   "×2",
+   "4u7",
+   "C",
+   "electrolytic; one axial beside the IC, one radial"
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC",
+   "ICL7660S",
+   "IC",
+   ""
+  ],
+  [
+   "Q1",
+   "PNP Germanium",
+   "Q",
+   "type not given; legend: consider a matched Tonebender set"
+  ],
+  [
+   "Q2",
+   "PNP Germanium",
+   "Q",
+   "type not given; legend: consider a matched Tonebender set"
+  ],
+  [
+   "Q3",
+   "PNP Germanium",
+   "Q",
+   "type not given; legend: consider a matched Tonebender set"
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Attack",
+   "B1K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

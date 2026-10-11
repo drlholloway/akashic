@@ -1,0 +1,179 @@
+{
+ "id": "tagboardeffects:2017-03-shin-ei-6tr-fuzz-wah",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Two separate populated vero boards in one drawing, both part of the pedal: Fuzz Section (18x19, 4 transistors, D1-D2) and Wah Section (15x11, 2 transistors, inductor). Passives are summed over both boards (fuzz + wah counts in the notes); neither board is drawn a second time.",
+ "uncertain": [
+  "Wah pot: printed only 'Wah Pot 50k', no taper given"
+ ],
+ "rows": [
+  [
+   "×9",
+   "10k",
+   "R",
+   "fuzz 8, wah 1"
+  ],
+  [
+   "×5",
+   "100k",
+   "R",
+   "fuzz 4, wah 1"
+  ],
+  [
+   "×3",
+   "1k",
+   "R",
+   "fuzz 2, wah 1"
+  ],
+  [
+   "×3",
+   "22k",
+   "R",
+   "fuzz 2, wah 1"
+  ],
+  [
+   "×2",
+   "47k",
+   "R",
+   "fuzz 1, wah 1"
+  ],
+  [
+   "×2",
+   "470r",
+   "R",
+   "fuzz 1, wah 1"
+  ],
+  [
+   "×2",
+   "470k",
+   "R",
+   "wah"
+  ],
+  [
+   "×1",
+   "220k",
+   "R",
+   "fuzz"
+  ],
+  [
+   "×1",
+   "150k",
+   "R",
+   "fuzz"
+  ],
+  [
+   "×1",
+   "4.7k",
+   "R",
+   "fuzz"
+  ],
+  [
+   "×1",
+   "2k",
+   "R",
+   "fuzz"
+  ],
+  [
+   "×1",
+   "1.5k",
+   "R",
+   "wah"
+  ],
+  [
+   "×8",
+   "10uF",
+   "C",
+   "electrolytic; fuzz 7, wah 1"
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic; fuzz"
+  ],
+  [
+   "×1",
+   "50nF",
+   "C",
+   "fuzz"
+  ],
+  [
+   "×2",
+   "1nF",
+   "C",
+   "fuzz"
+  ],
+  [
+   "×2",
+   "200nF",
+   "C",
+   "wah"
+  ],
+  [
+   "×1",
+   "30nF",
+   "C",
+   "wah"
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   "wah"
+  ],
+  [
+   "×4",
+   "2SC828",
+   "Q",
+   "fuzz board Q1-Q4 (try 2N5088)"
+  ],
+  [
+   "×2",
+   "2SC828",
+   "Q",
+   "wah board Q1-Q2 (try 2N5088)"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   "fuzz"
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   "fuzz"
+  ],
+  [
+   "Inductor",
+   "500mH",
+   "L",
+   "wah"
+  ],
+  [
+   "Volume",
+   "B50K",
+   "POT",
+   "printed '50k Linear'"
+  ],
+  [
+   "Tone",
+   "B50K",
+   "POT",
+   "printed '50k Linear'"
+  ],
+  [
+   "Wah",
+   "50K",
+   "POT",
+   "taper not given"
+  ],
+  [
+   "Hard/Soft",
+   "SPDT",
+   "SW",
+   "on-on toggle"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,155 @@
+{
+ "id": "effectslayouts-blog:2019-10-vfe-fuzz-duo",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout with a colour wiring diagram, the bare underside and an etched PCB; read from the populated board. Two DPDT toggles (TR1, TR2) wire to the board edge pads; three 1mH inductors on the board. The legend calls the output pot Level, the board pads Volume.",
+ "uncertain": [
+  "22nF under the Fuzz pot pads (rows C-D): printed 22nF on both the board and the wiring diagram but drawn as a round electrolytic can, so it may be meant as 22uF"
+ ],
+ "rows": [
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1mH",
+   "L",
+   ""
+  ],
+  [
+   "×2",
+   "22nF",
+   "C",
+   "one drawn as a round can under the Fuzz pads"
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "4.7nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "OC139",
+   "Q",
+   "or similar Ge"
+  ],
+  [
+   "Q2",
+   "BC108",
+   "Q",
+   "or similar Si"
+  ],
+  [
+   "Q3",
+   "OC139",
+   "Q",
+   "or similar Ge"
+  ],
+  [
+   "Q4",
+   "BC108",
+   "Q",
+   "or similar Si"
+  ],
+  [
+   "Filter",
+   "W1M",
+   "POT",
+   ""
+  ],
+  [
+   "Feedback",
+   "B200K",
+   "POT",
+   ""
+  ],
+  [
+   "Bias",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Fuzz",
+   "C1K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A500K",
+   "POT",
+   "pads labelled Volume on the board"
+  ],
+  [
+   "TR1",
+   "DPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "TR2",
+   "DPDT on/on",
+   "SW",
+   "toggle"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,87 @@
+{
+ "id": "tagboardeffects:2014-10-madbean-bacon-bits",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Stripboard 13x11, populated board on the left and a bare cuts-and-links view on the right. Dual op-amp boost with an ICL7660S charge pump; legend recommends silver mica for the 82pF.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "82pF",
+   "C",
+   "silver mica recommended"
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL072",
+   "IC",
+   "TL072, TLC272, OPA2604, TLC2262 or similar dual opamp"
+  ],
+  [
+   "IC2",
+   "ICL7660S",
+   "IC",
+   ""
+  ],
+  [
+   "D1",
+   "12V Zener",
+   "D",
+   ""
+  ],
+  [
+   "Boost",
+   "A500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

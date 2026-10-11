@@ -1,0 +1,173 @@
+{
+ "id": "dirtbox:2023-11-jurgen-haible-wasp-cv-filter",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated 24x24 stripboard titled Wasp VC Filter, with a 78L05 regulator on the board. D3 is drawn on the board but the legend names only D1-D2 and D4. Legend suggests trying 2kB for the Cutoff pot.",
+ "uncertain": [
+  "IC2-IC3 printed only as '3080' (an OTA, CA3080/LM3080); kept as printed"
+ ],
+ "rows": [
+  [
+   "×6",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×9",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "51K",
+   "R",
+   ""
+  ],
+  [
+   "×6",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1.5M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68pF",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "CD4069",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "3080",
+   "IC",
+   ""
+  ],
+  [
+   "IC3",
+   "3080",
+   "IC",
+   ""
+  ],
+  [
+   "REG",
+   "78L05",
+   "IC",
+   "regulator"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "D4",
+   "1N5817",
+   "D",
+   ""
+  ],
+  [
+   "Resonance",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Cutoff",
+   "A10K",
+   "POT",
+   "Try 2kB for better range"
+  ],
+  [
+   "Distortion Sw",
+   "DPDT on/on",
+   "SW",
+   "toggle"
+  ],
+  [
+   "Filter Sw",
+   "2P6T rotary",
+   "SW",
+   "set to 4 throws"
+  ]
+ ],
+ "source": "layout"
+}

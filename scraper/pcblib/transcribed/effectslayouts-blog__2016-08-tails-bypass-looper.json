@@ -1,0 +1,117 @@
+{
+ "id": "effectslayouts-blog:2016-08-tails-bypass-looper",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Perfboard layout drawn in two alternative versions: a relay-switched board (left, with OMRON G6SU-2 relay and three transistors) and a smaller board without the relay section (right). The left/main relay version is read here; the colour wiring diagram below confirms every value. The right version has only the TL072 section: 100K x3, 1M x2, 560R x2, 100nF x2, 1uF x2, 10uF, 47uF, 1N4001.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×4",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "560Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "Q1",
+   "BC550",
+   "Q",
+   "or similar NPN"
+  ],
+  [
+   "Q2",
+   "BC550",
+   "Q",
+   "or similar NPN"
+  ],
+  [
+   "Q3",
+   "BC560",
+   "Q",
+   "or similar PNP"
+  ],
+  [
+   "×1",
+   "DPDT relay",
+   "OTHER",
+   "OMRON G6SU-2"
+  ]
+ ],
+ "source": "layout"
+}

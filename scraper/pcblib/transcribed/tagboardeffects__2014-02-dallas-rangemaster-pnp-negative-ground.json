@@ -1,0 +1,83 @@
+{
+ "id": "tagboardeffects:2014-02-dallas-rangemaster-pnp-negative-ground",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "14 x 8 stripboard, populated view above a bare view; Rangemaster with an ICL7660S charge pump (mounted upside down) and a 10K bias trimmer. Transistor type given only as PNP germanium.",
+ "uncertain": [
+  "5n at the left edge of the board: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "5n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "PNP germanium",
+   "Q",
+   "legend: Transistor is PNP germanium"
+  ],
+  [
+   "IC",
+   "ICL7660S",
+   "IC",
+   "mounted upside down"
+  ],
+  [
+   "×1",
+   "10K",
+   "TRIM",
+   ""
+  ],
+  [
+   "Boost",
+   "A10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

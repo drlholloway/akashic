@@ -1,0 +1,126 @@
+{
+ "id": "dirtbox:2019-06-sekova-fa-ii-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single 15x12 stripboard, positive-ground PNP germanium fuzz. The legend gives no part number for D1-D2 (only 'Germanium', silicon in later versions; may be removed for more sustain) and names the transistors only as PNP germanium, 2SB173 in the original.",
+ "uncertain": [
+  "D1, D2: legend says only 'Germanium' (silicon in later versions), no part number",
+  "Q1, Q2: legend says 'PNP Germanium, 2SB173 in original'; 2SB173 entered"
+ ],
+ "rows": [
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100Ω",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "5.6K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "33uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "Q1",
+   "2SB173",
+   "Q",
+   "PNP Germanium, 2SB173 in original"
+  ],
+  [
+   "Q2",
+   "2SB173",
+   "Q",
+   "PNP Germanium, 2SB173 in original"
+  ],
+  [
+   "D1",
+   "?",
+   "D",
+   "value not given; legend: Germanium, silicon in later versions"
+  ],
+  [
+   "D2",
+   "?",
+   "D",
+   "value not given; legend: Germanium, silicon in later versions"
+  ],
+  [
+   "Attack",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

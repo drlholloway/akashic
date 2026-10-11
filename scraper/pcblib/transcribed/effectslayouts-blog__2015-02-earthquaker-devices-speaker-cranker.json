@@ -1,0 +1,75 @@
+{
+ "id": "effectslayouts-blog:2015-02-earthquaker-devices-speaker-cranker",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small perfboard with one transistor, shown populated, as a colour wiring diagram, underside and etched PCB; counted from the populated board, diagram agrees. One pot ('More 5K Lin') mounted on the board.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "330Ω",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "68nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "×3",
+   "1N60",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   "printed 4001"
+  ],
+  [
+   "More",
+   "B5K",
+   "POT",
+   "printed 5K Lin, board mounted"
+  ]
+ ],
+ "source": "layout"
+}

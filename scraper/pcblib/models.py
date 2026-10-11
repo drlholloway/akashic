@@ -41,6 +41,10 @@ class Circuit:
     schematic_local: str = ""  # rendered schematic page PNG (relative to data/)
     schematic_page: int | None = None
     doc_version: str = ""
+    # How it is built when not on a bought PCB: {'build': 'vero'|'tagboard'|'turret'|'perfboard', 'board': '18x18',
+    # 'cuts': 22, 'links': 9, 'verified': True, 'images': [...]}; on a PCB circuit, {'also': [{'build', 'url'}]}
+    # for a layout its vendor publishes beside the board. Empty for a plain PCB.
+    layout: dict = field(default_factory=dict)
     bom: list[BomRow] = field(default_factory=list)
 
     @property

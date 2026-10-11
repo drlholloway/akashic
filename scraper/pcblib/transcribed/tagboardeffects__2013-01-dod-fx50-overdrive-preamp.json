@@ -1,0 +1,93 @@
+{
+ "id": "tagboardeffects:2013-01-dod-fx50-overdrive-preamp",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Vero layout 14 x 11, populated board above a bare cuts-and-links view; counted from the populated board. Single op-amp with four clipping diodes and a polarity protection diode.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "TL061",
+   "IC",
+   ""
+  ],
+  [
+   "×4",
+   "1N4148",
+   "D",
+   "D1-D4"
+  ],
+  [
+   "D5",
+   "1N5817",
+   "D",
+   "polarity protection"
+  ],
+  [
+   "Distortion",
+   "C500K",
+   "POT",
+   "rev. log"
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

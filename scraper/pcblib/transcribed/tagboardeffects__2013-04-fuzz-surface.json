@@ -1,0 +1,85 @@
+{
+ "id": "tagboardeffects:2013-04-fuzz-surface",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "10x6 stripboard populated on both sides: the front carries the two transistors and two electrolytics, the first 'Back' view carries six surface-mounted parts on the copper side (text mirrored), and the second 'Back' view is cuts and links only. No transistor type is given anywhere on the drawing.",
+ "uncertain": [
+  "100K on the back view (centre, between the cuts): small mirrored text, could be misread",
+  "8K2 on the back view (upper left of centre): small mirrored text",
+  "22u electrolytic on the front (bottom centre): read as 22u, a faint mark between the digits could make it 2.2u"
+ ],
+ "rows": [
+  [
+   "×1",
+   "330R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "8K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2u2",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "?",
+   "Q",
+   "value not given"
+  ],
+  [
+   "Q2",
+   "?",
+   "Q",
+   "value not given"
+  ],
+  [
+   "Fuzz",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

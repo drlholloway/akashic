@@ -1,0 +1,81 @@
+{
+ "id": "tagboardeffects:2014-03-roger-mayer-stone-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "12 x 9 vero by mirosol, populated board left and bare cuts/links board right; large print, PNP circuit with -9V supply and a 50K trimmer on the board.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2.2uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "50K",
+   "TRIM",
+   ""
+  ],
+  [
+   "×2",
+   "BC559",
+   "Q",
+   "PNP Si"
+  ],
+  [
+   "Drive",
+   "B2K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}
