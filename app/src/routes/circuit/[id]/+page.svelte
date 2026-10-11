@@ -83,7 +83,7 @@
 			<p class="label"><a href="{base}/?vendor={c.vendor}">{VENDOR_NAMES[c.vendor]}</a>{#if c.sku} · <span class="mono">{c.sku}</span>{/if}</p>
 			<h1>{c.name}{#if c.subtitle}<span class="sub">{c.subtitle}</span>{/if}{#if lay.verified === true}<span class="vtag" title="{VENDOR_NAMES[c.vendor]} marks this layout as verified: someone has built it and it works">Verified</span>{/if}</h1>
 			{#if c.original}
-				<p class="based">Based on the {#each originalsOf(c) as o, n}{#if n} and the {/if}<a href="{base}/?based={encodeURIComponent(o)}">{o}</a>{/each}{#if siblings.length}<span class="dim"> · {siblings.length} other {siblings.length === 1 ? 'board clones' : 'boards clone'} {originalsOf(c).length > 1 ? 'one of them' : 'it'}</span>{/if}</p>
+				<p class="based">Based on the {#each originalsOf(c) as o, n}{#if n}{' and the '}{/if}<a href="{base}/?based={encodeURIComponent(o)}">{o}</a>{/each}{#if siblings.length}<span class="dim"> · {siblings.length} other {siblings.length === 1 ? 'board clones' : 'boards clone'} {originalsOf(c).length > 1 ? 'one of them' : 'it'}</span>{/if}</p>
 			{:else if c.based_on}
 				<p class="based dim">Based on {c.based_on}</p>
 			{/if}

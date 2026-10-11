@@ -53,7 +53,7 @@
 					<td class="based">
 						{#if e.original}
 							{#each originalsOf(e) as o, n}
-								{#if n}<span class="dim"> · </span>{/if}
+								{#if n}<span class="dim">{' · '}</span>{/if}
 								{#if onOriginal}
 									<button type="button" class="linkish" onclick={() => onOriginal(o)} title="Show every circuit based on the {o}">{o}</button>
 								{:else}
