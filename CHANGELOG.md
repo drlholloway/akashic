@@ -197,6 +197,7 @@ GitHub Release notes.
   Designator / Qty / Name export; spreadsheet readers accept a Name column as the value.
 
 ### Changed
+- Originals are listed by name, brand then pedal ('Boss DS-1' before 'Boss DS-2' before 'Electro-Harmonix Big Muff Pi'), instead of by how many boards clone them; the Boards column still gives the count.
 - Parts cross-reference: each category is listed alphabetically (numbers compared as numbers),
   and pots are grouped by taper (A, B, C, W, none) and ordered by resistance.
 

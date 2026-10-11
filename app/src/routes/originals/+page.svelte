@@ -5,6 +5,9 @@
 
 	let { data } = $props();
 	let q = $state('');
+	// By name. An original is written maker first ('Boss DS-1', 'Electro-Harmonix Big Muff Pi'), so this is
+	// brand, then pedal; numbers compare as numbers (DS-1 before DS-2 before DS-10).
+	const byName = new Intl.Collator('en', { numeric: true, sensitivity: 'base' });
 	const groups = $derived.by(() => {
 		const m = new Map<string, { label: string; count: number; vendors: Set<Vendor>; categories: Set<string> }>();
 		for (const e of data.index) {
@@ -18,7 +21,7 @@
 			m.set(k, g);
 		}
 		const t = q.trim().toLowerCase();
-		return [...m.values()].filter((g) => !t || g.label.toLowerCase().includes(t)).sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
+		return [...m.values()].filter((g) => !t || g.label.toLowerCase().includes(t)).sort((a, b) => byName.compare(a.label, b.label));
 	});
 </script>
 
@@ -27,7 +30,7 @@
 <div class="originals">
 	<header class="head">
 		<h1>Originals</h1>
-		<p class="lede">The commercial pedals these boards are based on, ranked by how many boards clone them. Pick one to compare every vendor's take side by side.</p>
+		<p class="lede">The commercial pedals these boards are based on, listed by name, brand then pedal, with how many boards clone each. Pick one to compare every vendor's take side by side.</p>
 		<label class="filter">
 			<span class="label">Filter</span>
 			<input type="search" bind:value={q} placeholder="Klon, Rat, Big Muff, Tube Screamer…" autocomplete="off" spellcheck="false" />
