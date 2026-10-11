@@ -1,0 +1,75 @@
+{
+ "id": "tagboardeffects:2010-02-soulsonic-jfet-boost",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Turret/eyelet board (single posts); 2SK117, a 5K trimmer TR1 on the board (set for +5V at the test point) and a 5K Gain pot.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "330K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "drawn as a film cap"
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "TR1",
+   "5K",
+   "TRIM",
+   "3 to source, 2 & 1 linked to ground; adjust to +5V at the test point"
+  ],
+  [
+   "×1",
+   "2SK117",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Gain",
+   "5K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

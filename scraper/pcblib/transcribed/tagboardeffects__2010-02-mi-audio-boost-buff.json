@@ -1,0 +1,63 @@
+{
+ "id": "tagboardeffects:2010-02-mi-audio-boost-buff",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Tag-strip layout, 'Original' version (the second image, with the buffer toggle, was not available). Shows the bypass footswitch with an indicator LED and its 4K7 resistor off the board.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "8M2",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K7",
+   "R",
+   "LED resistor, off board"
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "220p",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "BC549",
+   "Q",
+   ""
+  ],
+  [
+   "Gain",
+   "10K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

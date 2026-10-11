@@ -1,0 +1,59 @@
+{
+ "id": "tagboardeffects:2010-02-mosrite-fuzzrite",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Tag/eyelet board, two drawings of the same board: the first (read here) is the stock circuit; the second adds an off-board DPDT 2-position toggle or footswitch with a 22K resistor on it. Those two extra parts are not in the rows.",
+ "uncertain": [
+  "2nF x2 and 50nF x2: printed clearly, unusual values"
+ ],
+ "rows": [
+  [
+   "×4",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "50nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "2nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "1N4001",
+   "D",
+   "printed '4001'"
+  ],
+  [
+   "×2",
+   "2N2222",
+   "Q",
+   "'2N2222 / 2N3904 etc'"
+  ],
+  [
+   "Depth",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,69 @@
+{
+ "id": "tagboardeffects:2010-02-jordan-bosstone",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Turret board with an NPN above and a PNP below, two clipping diodes on the board.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "560K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "50pF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1N4148",
+   "D",
+   "printed 4148"
+  ],
+  [
+   "×1",
+   "MPS6513",
+   "Q",
+   "NPN; note suggests BC547"
+  ],
+  [
+   "×1",
+   "2N4249",
+   "Q",
+   "PNP; note suggests BC557"
+  ],
+  [
+   "Attack",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,78 @@
+{
+ "id": "tagboardeffects:2010-02-roger-mayer-classic-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Tag/eyelet board, positive ground (-9V): two AC128, three pots, and a round electrolytic marked '22' soldered across lugs 2 and 1 of the Drive pot.",
+ "uncertain": [
+  "Electrolytic on the board (second column, slanted): read as 22uF, the small turned text could be 2.2uF",
+  "Electrolytic on the Drive pot is printed only '22' (no unit): entered as 22uF"
+ ],
+ "rows": [
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic, on the board"
+  ],
+  [
+   "×1",
+   "22uF",
+   "C",
+   "electrolytic, on the Drive pot; printed '22'"
+  ],
+  [
+   "×2",
+   "AC128",
+   "Q",
+   "PNP germanium"
+  ],
+  [
+   "Bias",
+   "47K",
+   "POT",
+   ""
+  ],
+  [
+   "Drive",
+   "2K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A470K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

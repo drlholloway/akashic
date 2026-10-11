@@ -1,0 +1,83 @@
+{
+ "id": "tagboardeffects:2010-02-trotsky-drive",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Plain eyelet board with designators only; values come from the legend box. R1 hangs off VR1, and a C3 is drawn across a four-lug switch off the board; neither C3 nor the switch is in the legend.",
+ "uncertain": [
+  "switch below the board: drawn as a blue body with four lugs, type and function not stated"
+ ],
+ "rows": [
+  [
+   "R1",
+   "3.3k",
+   "R",
+   "on the VR1 lug"
+  ],
+  [
+   "R2",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "680R",
+   "R",
+   ""
+  ],
+  [
+   "C1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "C2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "C3",
+   "?",
+   "C",
+   "value not given; on the switch"
+  ],
+  [
+   "D1",
+   "1N34A",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N34A",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "KT312",
+   "Q",
+   "legend: sub 2N3094, 2N2222"
+  ],
+  [
+   "VR1",
+   "B50k",
+   "POT",
+   ""
+  ],
+  [
+   "VR2",
+   "A100k",
+   "POT",
+   ""
+  ],
+  [
+   "Switch",
+   "?",
+   "SW",
+   "four lugs drawn, type not given; switches C3"
+  ]
+ ],
+ "source": "layout"
+}

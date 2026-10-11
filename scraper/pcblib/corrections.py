@@ -230,6 +230,7 @@ CORRECTIONS: dict[str, dict[Key, str | None]] = {
     "guitarpcb:nostalgitone-ampeq-active-eq-preamp-amplifier-style-control": {"X1": "1k8-4k7"},  # '*CLR x1  1k8- 4k7': the footswitch board's LED resistor, read cut short
     "guitarpcb:nostalgitone-sonic-architect-pcb-set-dual-combo": {"X1": "1k8-4k7"},  # '*CLR x1  1k8- 4k7': the footswitch board's LED resistor, read cut short
     "guitarpcb:nostalgitone-the-burner-saturation-generator": {"X1": "1k8-4k7"},  # '*CLR x1  1k8- 4k7': the footswitch board's LED resistor, read cut short
+    "fuzzdog:slatedrive": {"IC1": "TL051"},  # prints 'TL051*'; the note says a TL061 or TL071 does the same
     "fuzzdog:repeater": {"R10": "220-500R trimmer", "VOL": "47-50K Trim"},  # the bias and output trimmers; the column reading drops VOL
     "guitarpcb:nostalgitone-dual-combo-creator-pcb": {"D1": None},  # '0C5' is OCR noise; the doc has no parts table
     "deadendfx:string-ringer": {"D11": "Yellow 5mm LED"},
@@ -400,6 +401,11 @@ TRANSCRIBED: dict[str, list[tuple]] = {
 CONTROLS: dict[str, list[str]] = {
     "guitarpcb:dvf-dual-voice-filter-tonal-shifter-cocked-wah-w-switchable-overdrive":
         ["Gain", "Freq 1", "Freq 1 Level", "Freq 2", "Freq 2 Level", "Clean Level"],
+}
+
+# circuit_id -> the original, where the source names the wrong one.
+BASED_ON: dict[str, str] = {
+    "fuzzdog:bhug": "Jon Patton Bearhug Compressor",  # the shop page's 'inspired by' is the Torn's Peaker's, copied from another board
 }
 
 _NOTE = "corrected by hand"

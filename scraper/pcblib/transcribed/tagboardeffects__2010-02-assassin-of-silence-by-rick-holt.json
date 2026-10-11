@@ -1,0 +1,73 @@
+{
+ "id": "tagboardeffects:2010-02-assassin-of-silence-by-rick-holt",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Turret board titled 'LPB Cascading Fuzz by Rick Holt': two identical LPB stages, two 100K LOG pots with no names, and an off-board 'Sludge Switch' with a round electrolytic marked only '10' across its lugs.",
+ "uncertain": [
+  "Electrolytic on the Sludge Switch is printed only '10' (no unit): entered as 10uF",
+  "Both pots are unnamed on the drawing (only '100K LOG')",
+  "Sludge Switch type is not stated; drawn as a 6-lug (DPDT) toggle with two lugs used"
+ ],
+ "rows": [
+  [
+   "×2",
+   "390R",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×4",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic, on the Sludge Switch; printed '10'"
+  ],
+  [
+   "×2",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Pot 1",
+   "A100K",
+   "POT",
+   "unnamed on the drawing"
+  ],
+  [
+   "Pot 2",
+   "A100K",
+   "POT",
+   "unnamed on the drawing, output side"
+  ],
+  [
+   "Sludge",
+   "DPDT",
+   "SW",
+   "toggle, drawn with 6 lugs, type not stated"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,125 @@
+{
+ "id": "tagboardeffects:2010-02-roger-mayer-axis-fuzz",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Turret board (the note calls it a tagboard), two transistors above the board. Only the first image was available; a modded version exists but its file is missing.",
+ "uncertain": [
+  "radial can between the 820K and 1nF near the bottom is printed just '22' (taken as 22uF)"
+ ],
+ "rows": [
+  [
+   "×2",
+   "220R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "680K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "820K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "39K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "180K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×4",
+   "22uF",
+   "C",
+   "electrolytic; three axial printed 22uF, one radial printed only '22'"
+  ],
+  [
+   "×1",
+   "2u2",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "2N3906",
+   "Q",
+   "PNP"
+  ],
+  [
+   "×1",
+   "2N3904",
+   "Q",
+   "NPN; base and emitter legs crossed to fit"
+  ],
+  [
+   "Drive",
+   "B2K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,61 @@
+{
+ "id": "tagboardeffects:2010-02-ehx-lpb1",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Turret/eyelet board (single posts), six parts and a 2N5088; the pot is unnamed and marked 100K LOG. Second (updated) image was not available.",
+ "uncertain": [
+  "360R at the left (emitter to ground): printed clearly, unusual value (the LPB-1 normally has 390R)",
+  "830K between base and 9V: printed clearly as 830K, unusual value (the LPB-1 normally has 430K; the first digit could be a 4 misdrawn but reads as 8)",
+  "150nF x2 (green caps): read as 150nF at scale 10; the stock LPB-1 uses 100nF, so unusual"
+ ],
+ "rows": [
+  [
+   "×1",
+   "360R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "830K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "150nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   "knob not named on the drawing; marked 100K LOG, wired as the output level"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,95 @@
+{
+ "id": "tagboardeffects:2010-02-cot50-with-briggs-mods",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Turret board, 'COT50 + Fred Briggs Mods': one 2N5088, two 1N270 diodes, two 1K LIN pots. One turret is unused.",
+ "uncertain": [
+  "120nF and 470nF (slanted green caps either side of the diodes): unit letter is small and turned, read as n by comparison with the upright 47nF and 56nF"
+ ],
+ "rows": [
+  [
+   "×1",
+   "330R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "47R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3K3",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "56nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "120nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N270",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N270",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Structure",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Nature",
+   "B1K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

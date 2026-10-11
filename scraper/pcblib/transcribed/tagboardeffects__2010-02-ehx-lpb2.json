@@ -1,0 +1,57 @@
+{
+ "id": "tagboardeffects:2010-02-ehx-lpb2",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Turret board, one transistor, five resistors and two film caps. The pot is drawn with a value only, no name or taper.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "390R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "43K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "430K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4M7",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Pot",
+   "100K",
+   "POT",
+   "unnamed on the drawing (volume), no taper given"
+  ]
+ ],
+ "source": "layout"
+}

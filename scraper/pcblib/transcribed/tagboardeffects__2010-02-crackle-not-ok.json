@@ -1,0 +1,69 @@
+{
+ "id": "tagboardeffects:2010-02-crackle-not-ok",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Tag-strip layout of the Crackle Not OK (Neve > ZVex > Soulsonic); one BS170, one pot labelled 'Crackle Not OK 1M Linear', diodes named in the legend.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "5K1",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N5819",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "12V Zener",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "BS170",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "Crackle",
+   "B1M",
+   "POT",
+   "labelled 'Crackle Not OK 1M Linear'"
+  ]
+ ],
+ "source": "layout"
+}

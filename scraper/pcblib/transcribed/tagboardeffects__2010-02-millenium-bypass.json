@@ -1,0 +1,27 @@
+{
+ "id": "tagboardeffects:2010-02-millenium-bypass",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Small turret strip for the Millenium bypass LED driver: one diode, one resistor, a BS170 and the indicator LED drawn as a symbol. D1 has no type anywhere on the drawing.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "2K2",
+   "R",
+   ""
+  ],
+  [
+   "D1",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "×1",
+   "BS170",
+   "Q",
+   "MOSFET"
+  ]
+ ],
+ "source": "layout"
+}

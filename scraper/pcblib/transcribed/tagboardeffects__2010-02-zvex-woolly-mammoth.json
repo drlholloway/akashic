@@ -1,0 +1,96 @@
+{
+ "id": "tagboardeffects:2010-02-zvex-woolly-mammoth",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Titled 'Woolly Mammoth Turret' but drawn on paired eyelets (tag board): two 2N3904, four pots named with no values anywhere.",
+ "uncertain": [
+  "20K (slanted, between the 51K and the 10nF): printed clearly, unusual value",
+  "4K99: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "51K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "20K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K99",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×2",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "Wool",
+   "?",
+   "POT",
+   "value not given"
+  ],
+  [
+   "Pinch",
+   "?",
+   "POT",
+   "value not given"
+  ],
+  [
+   "EQ",
+   "?",
+   "POT",
+   "value not given"
+  ],
+  [
+   "Output",
+   "?",
+   "POT",
+   "value not given"
+  ]
+ ],
+ "source": "layout"
+}

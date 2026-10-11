@@ -1,0 +1,51 @@
+{
+ "id": "tagboardeffects:2010-02-pnp-germanium-buffer",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Tag-strip layout of the AMZ PNP germanium buffer; one 'Leaky AC128', no pots. The second (modified) image was not available.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×2",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1uF",
+   "C",
+   "drawn as a film box cap"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "AC128",
+   "Q",
+   "legend: Leaky AC128 (PNP germanium)"
+  ]
+ ],
+ "source": "layout"
+}

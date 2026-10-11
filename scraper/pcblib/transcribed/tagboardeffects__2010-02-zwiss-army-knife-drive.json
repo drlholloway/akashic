@@ -1,0 +1,83 @@
+{
+ "id": "tagboardeffects:2010-02-zwiss-army-knife-drive",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Tag-strip layout, first version (the V2 image was not available). Three unnamed three-lug switches to the left each bring in one of the input caps (100nF / 47nF / 15nF); the transistor is labelled only Q1.",
+ "uncertain": [
+  "The three switches: type not stated, drawn with three lugs (two used), entered as SPDT"
+ ],
+ "rows": [
+  [
+   "×1",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "15nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "?",
+   "Q",
+   "value not given"
+  ],
+  [
+   "Gain",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Vol",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "×3",
+   "SPDT",
+   "SW",
+   "toggles, unnamed on the drawing; each switches in one input cap (100nF, 47nF, 15nF)"
+  ]
+ ],
+ "source": "layout"
+}

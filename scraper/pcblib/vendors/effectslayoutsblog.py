@@ -12,3 +12,4 @@ class EffectsLayoutsBlog(BloggerLayouts):
     vendor = "effectslayouts-blog"
     blog = "effectslayouts.blogspot.com"
     build = "perfboard"
+    not_layouts = frozenset({"smd-to-through-hole-conversion"})  # two adapter boards, not a circuit

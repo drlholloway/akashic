@@ -1,0 +1,125 @@
+{
+ "id": "tagboardeffects:2010-02-zvex-mastotron",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Tag-strip layout with five pots and a six-lug toggle carrying a 33nF and a 100uF cap (the subs switch, unnamed on the drawing); one 100R sits on the Relax/Push pot lug.",
+ "uncertain": [
+  "Toggle switch: type not stated; six lugs drawn (DPDT), probably on/off/on as on the original's Subs switch"
+ ],
+ "rows": [
+  [
+   "×2",
+   "100R",
+   "R",
+   "one on the board, one on lug 3 of the Relax/Push pot"
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "56K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "5K1",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2K2",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "220nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "68nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "33nF",
+   "C",
+   "on the toggle switch"
+  ],
+  [
+   "×4",
+   "100uF",
+   "C",
+   "electrolytic; three on the board, one on the toggle switch"
+  ],
+  [
+   "×2",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "Fuzz",
+   "C5K",
+   "POT",
+   "printed 5K REV LOG"
+  ],
+  [
+   "Pulse Width",
+   "500K",
+   "POT",
+   ""
+  ],
+  [
+   "Relax / Push",
+   "100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "10K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "10K",
+   "POT",
+   ""
+  ],
+  [
+   "Subs",
+   "DPDT",
+   "SW",
+   "toggle, unnamed on the drawing; switches in the 33nF or the 100uF"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,87 @@
+{
+ "id": "tagboardeffects:2010-02-dam-meathead",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Single populated board with plain eyelets/tags (title box gives no board type), two transistors off the top edge.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "120K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "4K7",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "820R",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "470pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "47pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "22nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "2N3904",
+   "Q",
+   "first transistor"
+  ],
+  [
+   "×1",
+   "BC182L",
+   "Q",
+   "second transistor"
+  ],
+  [
+   "Dirt",
+   "B500K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

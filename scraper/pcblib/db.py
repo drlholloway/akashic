@@ -379,7 +379,8 @@ def upsert_circuit(conn: sqlite3.Connection, c: Circuit) -> None:
     _fix_stray_digits(c.bom)
     _fix_micro_read_as_pico(c.bom)
     c.bom = apply_corrections(c.id, c.bom)  # last: hand fixes are keyed by the designators as stored
-    from .corrections import CONTROLS, TRANSCRIBED
+    from .corrections import BASED_ON, CONTROLS, TRANSCRIBED
+    c.based_on = BASED_ON.get(c.id, c.based_on)
     if c.id in CONTROLS:
         c.controls = list(CONTROLS[c.id])
     elif c.id in TRANSCRIBED or not c.controls or (len(c.controls) == 1 and re.fullmatch(r"\d+ knobs?", c.controls[0])):

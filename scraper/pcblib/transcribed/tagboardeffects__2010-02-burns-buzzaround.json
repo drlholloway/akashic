@@ -1,0 +1,111 @@
+{
+ "id": "tagboardeffects:2010-02-burns-buzzaround",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Turret board drawn twice (bare-wired top view and the same board with off-board wiring); counted once. Positive ground, three germanium transistors, one diode printed only as 'Ge'.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3K3",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "1nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "4U7",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "100uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "Ge",
+   "D",
+   "germanium diode, type not given"
+  ],
+  [
+   "Q1",
+   "NKT213",
+   "Q",
+   "germanium PNP"
+  ],
+  [
+   "Q2",
+   "NKT213",
+   "Q",
+   "germanium PNP"
+  ],
+  [
+   "Q3",
+   "NKT213",
+   "Q",
+   "germanium PNP"
+  ],
+  [
+   "Sustain",
+   "100K",
+   "POT",
+   ""
+  ],
+  [
+   "Balance",
+   "5K",
+   "POT",
+   ""
+  ],
+  [
+   "Timbre",
+   "100K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

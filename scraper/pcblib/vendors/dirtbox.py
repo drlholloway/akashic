@@ -11,3 +11,4 @@ class Dirtbox(BloggerLayouts):
     vendor = "dirtbox"
     blog = "dirtboxlayouts.blogspot.com"
     build = "vero"
+    not_layouts = frozenset({"back-from-wilderness"})  # news, with photographs

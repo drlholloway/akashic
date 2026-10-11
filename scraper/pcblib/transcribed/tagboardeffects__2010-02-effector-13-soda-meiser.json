@@ -1,0 +1,71 @@
+{
+ "id": "tagboardeffects:2010-02-effector-13-soda-meiser",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Tag/eyelet board (paired eyelets): three MPSA18 and one 2N2907 (two transistors share the top-right lugs), Chaos switch, two 100K LOG pots.",
+ "uncertain": [
+  "Chaos switch type is not stated; drawn as a small 2-lug toggle (SPST)"
+ ],
+ "rows": [
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "2M2",
+   "R",
+   ""
+  ],
+  [
+   "×3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "3M3",
+   "R",
+   ""
+  ],
+  [
+   "×5",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×3",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "×1",
+   "2N2907",
+   "Q",
+   "PNP, drawn above the MPSA18 on the same lugs"
+  ],
+  [
+   "Intensity",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Chaos",
+   "SPST",
+   "SW",
+   "toggle, type not stated"
+  ]
+ ],
+ "source": "layout"
+}

@@ -1,0 +1,78 @@
+{
+ "id": "tagboardeffects:2010-02-landgraff-boost",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Turret board, 'Landgraff Boost Turret': one NTE490 MOSFET, D1/D2 1N914, one unnamed 5K reverse-log pot.",
+ "uncertain": [
+  "Round electrolytic at the bottom is printed only '47' (no unit): entered as 47uF",
+  "The pot has no name on the drawing"
+ ],
+ "rows": [
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "5K1",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic, printed '47'"
+  ],
+  [
+   "D1",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "NTE490",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "Pot",
+   "C5K",
+   "POT",
+   "unnamed on the drawing; '5K Rev LOG'"
+  ]
+ ],
+ "source": "layout"
+}

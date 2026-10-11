@@ -45,6 +45,7 @@ class BloggerLayouts(Adapter):
     build = "vero"      # what the blog draws unless a label says otherwise
     skip_labels: frozenset[str] = frozenset()  # posts that are not a layout: news, tools, off-board wiring
     not_makers: frozenset[str] = frozenset()   # labels that are neither a maker nor an effect type
+    not_layouts: frozenset[str] = frozenset()  # posts with labels and pictures that are still no circuit, by post slug
 
     def __init__(self, fetcher):
         super().__init__(fetcher)
@@ -75,10 +76,13 @@ class BloggerLayouts(Adapter):
         title = clean_text(_html.unescape(e["title"]["$t"]))
         labels = self.labels(e)
         low = {l.lower() for l in labels}
-        if not title or not labels or low & self.skip_labels:
+        if not title or not labels or low & self.skip_labels or url.rstrip("/").rsplit("/", 1)[-1].removesuffix(".html") in self.not_layouts:
             return None  # every layout carries labels; a post without any is an announcement
         content = e.get("content", {}).get("$t", "")
-        found = list(dict.fromkeys(_html.unescape(u) for u in _IMAGE.findall(content)))
+        # The oldest posts link '/s1600-h/', a viewer page; the picture itself is at '/s1600/'.
+        found = list(dict.fromkeys(_html.unescape(u).replace("/s1600-h/", "/s1600/") for u in _IMAGE.findall(content)))
+        full = {u.replace("/s1600/", "//") for u in found if "/s1600/" in u}
+        found = [u for u in found if "/s1600/" in u or re.sub(r"/s\d{2,4}/(?=[^/]+$)", "//", u) not in full]  # '/s200/', '/s640/' of a drawing kept at full size
         # A linked drawing appears twice, full size and as its thumbnail ('=w400-h244', '/w578-h640/'): keep the full size.
         images = [u for u in found if not re.search(r"(?:=|/)w\d+-h\d+", u)]
         if not images:  # an unlinked drawing is embedded as a thumbnail; the same address serves it at full size
@@ -98,6 +102,9 @@ class BloggerLayouts(Adapter):
             layout["verified"] = status
         self.read_image(images[0], layout)
         text = layout.pop("text", "")
+        # Tagboard Effects files its turret boards under 'Tagboard'; the drawing's own title says which it is.
+        if build == "tagboard" and re.search(r"turret", text + " " + images[0], re.I):
+            layout["build"] = "turret"
         # What the post links: the schematic or build document the layout was drawn from, a forum thread.
         docs: dict[str, str] = {}
         for href, inner in re.findall(r'<a[^>]+href="(https?://[^"]+)"[^>]*>(.*?)</a>', content, re.S | re.I):

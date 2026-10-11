@@ -1,0 +1,91 @@
+{
+ "id": "tagboardeffects:2010-02-harmonic-percolator",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Tag/eyelet board: 2N3565 and 2N404A, three unlabelled diodes (one at the left by the 100pF, two at the right), Harmonics and Volume pots with no taper given.",
+ "uncertain": [
+  "737K (top, between the 4th and 5th columns): printed clearly, unusual value (the original uses 750K)",
+  "90K x2: printed clearly, unusual value (original uses 91K)",
+  "50nF: printed clearly, unusual value"
+ ],
+ "rows": [
+  [
+   "×2",
+   "90K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "737K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100pF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "50nF",
+   "C",
+   ""
+  ],
+  [
+   "×2",
+   "1uF",
+   "C",
+   "film box"
+  ],
+  [
+   "×1",
+   "47uF",
+   "C",
+   "electrolytic, printed '47u'"
+  ],
+  [
+   "×3",
+   "?",
+   "D",
+   "value not given"
+  ],
+  [
+   "×1",
+   "2N3565",
+   "Q",
+   ""
+  ],
+  [
+   "×1",
+   "2N404A",
+   "Q",
+   "PNP germanium"
+  ],
+  [
+   "Harmonics",
+   "100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "50K",
+   "POT",
+   ""
+  ]
+ ],
+ "source": "layout"
+}

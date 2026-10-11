@@ -1,0 +1,63 @@
+{
+ "id": "tagboardeffects:2010-02-zvex-super-hard-on",
+ "read": "2026-10-11, by eye from the cached layout image",
+ "comment": "Plain eyelet board (title says 'Turret'). Two alternative drawings: the first with two 1N4148 protection diodes (read here), the second with one 9.1V zener as D1 and a 47K in place of the 100K. A third image is missing.",
+ "uncertain": [],
+ "rows": [
+  [
+   "×1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "5K1",
+   "R",
+   ""
+  ],
+  [
+   "×2",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "×1",
+   "100nF",
+   "C",
+   ""
+  ],
+  [
+   "×1",
+   "10uF",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "×1",
+   "BS170",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "Pot",
+   "C5K",
+   "POT",
+   "unnamed on the drawing; printed '5K Rev LOG'"
+  ]
+ ],
+ "source": "layout"
+}

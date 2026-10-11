@@ -6,8 +6,9 @@ GitHub Release notes.
 ## Unreleased
 
 ### Added
+- Turret board builds: 12 early Tagboard Effects layouts whose drawing is titled a turret board are filed as Turret, and 27 early layouts that had no parts list have one (their picture links used an old Blogger address).
 - Board layouts beside PCBs: circuits built from a stripboard (vero), perfboard, tag strip or turret drawing are indexed with the boards you buy. Three layout sites join as sources of a new kind, `layout` (Tagboard Effects, Dirtbox Layouts and the Effects Layouts blog), read through the Blogger feed (`vendors/blogger.py`). Each layout carries its build type, the board size and the cut and link counts printed on the drawing, whether its source marks it Verified, the difficulty and enclosure where labeled, and the schematic or build document the post links. The parts the drawing names in its legend (ICs, transistors, diodes, pots) are read by OCR and join the parts index (`layouts.py`); Layout images are cached locally and linked, never exported.
-- Full parts lists for the layouts, read from each drawing by eye: 3,849 of the 3,899 layouts have every resistor, capacitor, diode, transistor, IC, pot and switch the drawing shows, with counts ('×3 10K'), marked 'read from the layout by eye'. A part the drawing gives no value for (the LED resistor printed 'CLR') is listed as '?' with a note and is not an audit flag. A second, independent reading of 388 layouts agreed on 99.5% of parts.
+- Full parts lists for the layouts, read from each drawing by eye: 3,877 of the 3,885 layouts have every resistor, capacitor, diode, transistor, IC, pot and switch the drawing shows, with counts ('×3 10K'), marked 'read from the layout by eye'. A part the drawing gives no value for (the LED resistor printed 'CLR') is listed as '?' with a note and is not an audit flag. A second, independent reading of 388 layouts agreed on 99.5% of parts.
 - Verified tag: a layout its source marks as built and working carries a Verified tag in the circuit list and beside its title; unverified ones say so in the list.
 - Build filter on the circuits page (PCB, Vero, Perfboard, Tagboard, Turret board, and Verified layouts), a build badge with the board size in the circuit list, and on the Originals page how each original can be built ('14 PCB · 9 Vero'), each count a link to those circuits.
 - Parasit Studio's stripboard layouts are attached to their PCB circuits as a second way to build the same board ('Also as: Vero layout') instead of sitting among the extra documents; such a circuit counts under both PCB and Vero.
@@ -505,6 +506,9 @@ GitHub Release notes.
   `Version 1.1` in a title block becomes the doc version.
 - Docs that give only a shopping list (value, suggested type, quantity) now yield a parts
   list with rows named by quantity, as a last resort when no designator table exists.
+
+### Fixed
+- FuzzDog Bearhug Compressor is listed under the Jon Patton Bearhug with its two layouts, not under the Torn's Peaker; FuzzDog Slate Drive IC1 reads TL051. 14 posts on the layout blogs that are news or tool guides, not circuits, are gone.
 
 ## 0.1.0 — 2026-09-17
 
