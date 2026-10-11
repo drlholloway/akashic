@@ -170,6 +170,9 @@ def original(based_on: str) -> str:
     t = re.sub(r"\s+", " ", t)
     if not t:
         return ""
+    if (m := re.fullmatch(r"(.+?) by ([A-Z][^,()]{2,40})", t)) and not re.search(r"\b(?:inspired|designed|drawn|layout|schematic|traced|modded|built)$", m.group(1), re.I):
+        if _brand(m.group(2) + " x")[0]:  # 'Supersonic Fuzz Gun by Death By Audio': the maker written last
+            t = f"{m.group(2)} {m.group(1)}"
     if _DESCRIPTION.search(t):
         return ""
     if _NOT_ONE.search(t) or re.search(r"\S\s*/\s*\S", t) and not _BRAND_PAIR.match(t):
@@ -186,6 +189,19 @@ def key(name: str) -> str:
     """Grouping key: case, punctuation and articles do not split an original."""
     s = re.sub(r"\b(the|a|an)\b", "", name.lower())
     return re.sub(r"[^a-z0-9+]+", " ", s).strip()
+
+
+# Near-duplicates no rule can settle, read one by one: {key(spelling): the original's name}. See original_aliases.json.
+ALIASES: dict[str, str] = {}
+_ALIASES_FILE = __import__("pathlib").Path(__file__).with_name("original_aliases.json")
+
+
+def _load_aliases() -> None:
+    import json
+    if _ALIASES_FILE.exists():
+        for canon, spellings in json.loads(_ALIASES_FILE.read_text()).items():
+            for sp in spellings:
+                ALIASES[key(sp)] = canon
 
 
 # What an effect is, not what it is called: 'Honey Bee Overdrive' and 'Honey Bee OD' are one pedal.
@@ -210,6 +226,9 @@ def model_key(rest: str, loose: bool = True) -> str:
     if len(cut) >= 2 or (loose and len(cut[0]) >= 4 and cut[0] not in _WEAK_WORDS and cut[0] not in _TYPE_WORDS):
         return " ".join(cut)
     return " ".join(words)
+
+
+_load_aliases()
 
 
 def harmonize(names: list[str]) -> dict[str, str]:
@@ -238,13 +257,32 @@ def harmonize(names: list[str]) -> dict[str, str]:
                 b = next(iter(brands_of[k]))
                 out[n] = branded[(b, k)].most_common(1)[0][0]
                 break
-    # Every spelling of an original takes the group's most common one; within a maker, the effect-type
-    # word a name ends in does not split it ('One Control Honey Bee Overdrive', 'One Control Honey Bee OD').
-    def group(name: str) -> str:
+    # Every spelling of an original takes the group's most common one. Within a maker, the effect-type
+    # word a name ends in does not split it ('One Control Honey Bee Overdrive', 'One Control Honey Bee OD'),
+    # nor does spacing ('FX86', 'FX-86') or word order ('DOD 440 Reissue Envelope Filter', 'DOD Envelope
+    # Filter 440 Reissue'): names sharing any of these keys are one group.
+    def own_keys(name: str) -> list[str]:
         brand, rest = _brand(name)
-        # spacing never splits a model: 'FX86' and 'FX-86', 'Thundertone' and 'Thunder Tone'
-        return f"{key(brand)}|{model_key(rest).replace(' ', '')}" if brand else model_key(name, loose=False).replace(" ", "")
+        words = (model_key(rest) if brand else model_key(name, loose=False)).split()
+        pre = key(brand) + "|" if brand else "|"
+        return [pre + "".join(words), pre + "~" + " ".join(sorted(words))]
+
+    def keys(name: str) -> list[str]:
+        alias = ALIASES.get(key(name))
+        return own_keys(name) + (own_keys(alias) if alias else [])
+    parent: dict[str, str] = {}
+
+    def find(x: str) -> str:
+        while parent.setdefault(x, x) != x:
+            parent[x] = parent[parent[x]]
+            x = parent[x]
+        return x
+    for f in set(out.values()):
+        ks = keys(f)
+        for k in ks[1:]:
+            parent[find(k)] = find(ks[0])
     spelled: dict[str, Counter] = defaultdict(Counter)
     for n, c in counts.items():
-        spelled[group(out[n])][out[n]] += c
-    return {n: spelled[group(f)].most_common(1)[0][0] for n, f in out.items()}
+        shown = ALIASES.get(key(out[n]), out[n])
+        spelled[find(keys(out[n])[0])][shown] += c + (10_000 if shown != out[n] else 0)  # a hand-settled name wins
+    return {n: spelled[find(keys(f)[0])].most_common(1)[0][0] for n, f in out.items()}
