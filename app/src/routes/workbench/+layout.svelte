@@ -29,6 +29,7 @@
 	.workbench { padding: 24px var(--gutter) 48px; max-width: 1180px; }
 	.sub { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 20px; padding-bottom: 10px; margin-bottom: 20px; border-bottom: 1px solid var(--rule-strong); }
 	.sub a[aria-current='page'] { color: var(--ink); box-shadow: 0 2px 0 var(--coat); }
+	@media (max-width: 480px) { .sub .strong { display: none; } } /* the header already marks the section */
 	.voice { margin: 36px 0 0; padding-top: 12px; border-top: 1px solid var(--rule); max-width: 78ch; }
 	.dim { color: var(--ink-3); }
 	.workbench :global(h1) { font-size: clamp(28px, 4vw, 40px); margin-bottom: 8px; }

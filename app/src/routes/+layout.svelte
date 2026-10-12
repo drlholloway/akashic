@@ -176,16 +176,18 @@
 	.report p { margin: 0; flex: 1 1 40ch; }
 	.colophon { margin: 24px 0 0; padding-top: 16px; border-top: 1px solid var(--rule); max-width: 1180px; color: var(--ink-2); font-family: var(--label); font-weight: 600; font-size: 13px; letter-spacing: 0.06em; text-transform: uppercase; }
 	.colophon a { color: var(--ink); text-decoration: underline; text-underline-offset: 2px; }
+	/* Narrow: the mark and the search field share the first row, the sections run under them. */
 	@media (max-width: 860px) {
 		.titleblock {
-			grid-template-columns: 1fr auto;
-			grid-template-areas: 'brand nav' 'search search';
-			gap: 10px 12px;
-			padding: 10px 16px;
+			grid-template-columns: auto 1fr;
+			grid-template-areas: 'brand search' 'nav nav';
+			gap: 6px 12px;
+			padding: 10px 16px 4px;
 		}
 		.brand-name { font-size: 17px; }
 		.brand-sub { display: none; }
 		.search .btn { display: none; }
-		nav a { padding: 6px 8px; font-size: 13px; }
+		nav { flex-wrap: wrap; gap: 0 2px; margin: 0 -7px; min-width: 0; }
+		nav a { padding: 6px 7px; font-size: 13px; }
 	}
 </style>
