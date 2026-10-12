@@ -29,11 +29,12 @@
 			]
 		},
 		{
-			title: 'Sightings',
+			title: 'My tools',
 			links: [
-				{ name: 'Sightings', href: 'https://github.com/drlholloway/sightings/wiki', note: 'My free companion app for the Peak Atlas DCA75 semiconductor analyzer: identify parts, sweep curves, measure leakage, sort parts into bins and match them to pedal circuits. macOS, Linux and Android. The link opens its wiki: installation, first steps, curves, parts and bins, troubleshooting.' },
-				{ name: 'Download', href: 'https://github.com/drlholloway/sightings/releases', note: 'Ready-made builds for each platform.' },
-				{ name: 'Source', href: 'https://github.com/drlholloway/sightings', note: 'The code, on GitHub.' }
+				{ name: 'Sightings', href: 'https://github.com/drlholloway/sightings/wiki', note: 'A free companion app for the Peak Atlas DCA75 semiconductor analyzer: identify parts, sweep curves, measure leakage, sort parts into bins and match them to pedal circuits. macOS, Linux and Android. The link opens its wiki: installation, first steps, curves, parts and bins, troubleshooting.' },
+				{ name: 'Sightings downloads', href: 'https://github.com/drlholloway/sightings/releases', note: 'Ready-made builds for each platform.' },
+				{ name: 'Tayda UV Artwork Processor', href: 'https://github.com/drlholloway/tayda-uv-artwork-processor/wiki', note: "Turns your enclosure artwork into the PDF that Tayda's UV printing service needs: pick the enclosure and the image for each side, and it checks the sizes and writes the file. Runs in a terminal or from the command line. The link opens its wiki: installation, preparing artwork, artboard sizes for every enclosure, white and gloss, troubleshooting." },
+				{ name: 'Tayda UV Artwork Processor downloads', href: 'https://github.com/drlholloway/tayda-uv-artwork-processor/releases', note: 'Builds for macOS, Linux and Windows.' }
 			]
 		},
 		{
@@ -46,8 +47,7 @@
 		{
 			title: 'More lists',
 			links: [
-				{ name: 'Awesome Pedal', href: 'https://github.com/szukalski/awesome-pedal', note: 'A long curated list of pedal-building resources.' },
-				{ name: 'My guitar effects layouts', href: 'https://github.com/drlholloway/guitar-effects-layouts', note: 'Layouts I have drawn.' }
+				{ name: 'Awesome Pedal', href: 'https://github.com/szukalski/awesome-pedal', note: 'A long curated list of pedal-building resources.' }
 			]
 		}
 	];

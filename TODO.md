@@ -214,6 +214,12 @@ own site only); the counts below are since then.
   lists them all. Lane's hand-kept table (10 templates: 4 PedalPCB, 4 AionFX, 2 Dead End FX) is in
   the README of github.com/drlholloway/diy-guitar-effects and is not shown on the site yet.
 
+## Workbench
+
+- Add the pedal-image-design-starter wiki (github.com/drlholloway/pedal-image-design-starter/wiki:
+  layered, correctly sized templates for enclosure artwork, for Tayda UV printing) to the Links
+  page under 'My tools', beside the Tayda UV Artwork Processor. Held back for a later date.
+
 ## Parser wishes
 
 - Schematic pairing now runs for every board whose parts list is thin, quantity-only or

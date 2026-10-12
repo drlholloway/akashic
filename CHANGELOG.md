@@ -6,6 +6,7 @@ GitHub Release notes.
 ## Unreleased
 
 ### Added
+- Workbench links: the Tayda UV Artwork Processor (wiki and downloads), listed with Sightings under 'My tools'.
 - Workbench links: Stompbox Layout, for making drill templates and seeing an enclosure layout before drilling, and Sightings, the companion app for the Peak Atlas DCA75 analyzer, with its downloads and help pages.
 - On a phone the section links (Circuits, Originals, Parts, Workbench, About) sit on their own row under the logo and search field; with five of them the header had grown wider than the screen.
 - Workbench: a new section of one builder's notes, in the header beside Parts. Sourcing (which shop for which part and the brands to stick to, linked to the parts lists), Building (soldering iron, solder, setup and the build order) and Links (books, courses, forums, calculators and guides for having boards made), worked in from the diy-guitar-effects notes with every link checked.
