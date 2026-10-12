@@ -3,7 +3,8 @@
  "read": "2026-10-11, by eye from the cached layout image",
  "comment": "Perfboard layout with a colour wiring diagram, bare underside and etched PCB of the same circuit; counted from the populated board and confirmed against the diagram. The 10uF is starred: legend says increase to 22-47uF for a slower filter sweep.",
  "uncertain": [
-  "Volume pot B22k: printed clearly, unusual value"
+  "Volume pot B22k: printed clearly, unusual value",
+  "LDR1, LDR2: the source gives no part number, only '2k-24k'; GL5516 and GL5528 are suggestions whose lit resistance falls in that range, not parts the designer named"
  ],
  "rows": [
   [
@@ -164,15 +165,15 @@
   ],
   [
    "LDR1",
-   "LDR 2k-24k",
+   "GL5516 or GL5528",
    "OPTO",
-   ""
+   "suggested part: the parts list names none, only an on (lit) resistance between 2k and 24k (printed '2k-24k'); the GL5516 is 5-10k and the GL5528 10-20k at 10 lux; printed 'LDR 2k-24k' on the drawing"
   ],
   [
    "LDR2",
-   "LDR 2k-24k",
+   "GL5516 or GL5528",
    "OPTO",
-   ""
+   "suggested part: the parts list names none, only an on (lit) resistance between 2k and 24k (printed '2k-24k'); the GL5516 is 5-10k and the GL5528 10-20k at 10 lux; printed 'LDR 2k-24k' on the drawing"
   ],
   [
    "×2",

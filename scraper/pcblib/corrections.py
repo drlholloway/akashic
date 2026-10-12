@@ -235,7 +235,6 @@ CORRECTIONS: dict[str, dict[Key, str | None]] = {
     "guitarpcb:nostalgitone-dual-combo-creator-pcb": {"D1": None},  # '0C5' is OCR noise; the doc has no parts table
     "deadendfx:string-ringer": {"D11": "Yellow 5mm LED"},
     "pcbguitarmania:master-phaser": {"L074": None},  # the schematic pairing read TL074 as a designator
-    "deadastronaut:tremshifter": {"L458": None, "IC1": "1458"},  # OCR split 'IC1 1458'
     "deadendfx:kruger": {"L1": "4.7mH"},  # the schematic prints 4.7mH; the pairing took the neighbouring 1n
     "moody:tremolito-kit": {"=2N5809": "2N5089"},  # a typo for the 2N5089 (confirmed by Lane, 2026-10-09)
     "tayda:fuzz-face-with-inverter": {"Q1": "2N3906 / BC108 / BC109", "Q2": "2N3906 / BC108 / BC109"},

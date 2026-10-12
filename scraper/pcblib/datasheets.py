@@ -58,6 +58,8 @@ DISCONTINUED: dict[str, list[str]] = {
     # Xicon (Mouser's house brand) audio transformers: one sheet per series, every part a row. Mouser's
     # own copies sit behind its bot check; these came from a distributor's document store.
     "42TM": ["42TM"], "42TL": ["42TL"], "42TU": ["42TU"],
+    # Senba GL55 series CdS photoresistors (GL5516 to GL5549): one manual for the series, found on a shop's file store and not on Senba's own site.
+    "GL55": ["GL55"],
     # transistors
 
     "2SC1815": ["2SC1815", "2SC1815-GR", "2SC1815L-GR", "2SC1815BL", "2SC1815GR", "2SC1815-BL", "2SC1815-Y", "2SC1815Y", "C1815"],
@@ -111,7 +113,7 @@ DISCONTINUED: dict[str, list[str]] = {
     "NSL-19M51": ["NSL-19M51"],
 }
 # Hosted sheets of parts that may still be made: the sheet was not found on the maker's own site.
-SHEET_ONLY = {"DT-38", "42TM", "42TL", "42TU"}
+SHEET_ONLY = {"DT-38", "42TM", "42TL", "42TU", "GL55"}
 
 # Hosted files that are a row in a maker's selector table or catalog, not a full datasheet: the part
 # page says so, and the worklist keeps asking for the real sheet. Set by eye when a file is hosted.

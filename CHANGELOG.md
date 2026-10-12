@@ -6,6 +6,7 @@ GitHub Release notes.
 ## Unreleased
 
 ### Added
+- Datasheet for the GL55 series photoresistors (GL5516, GL5528, GL5537-1, GL5549): Senba's series manual, hosted here.
 - Datasheets for the audio transformers: Triad's own sheet for the TY-141P, and Xicon's 42TM, 42TL and 42TU series sheets hosted here, linked from 24 transformer part pages.
 - Datasheets for the five crystals: Abracon's AB38T sheet for the 32.768 kHz watch crystals, its HC-49 series sheet for the 16 and 20 MHz ones (the build documents give only a frequency), and the KDS DT-38 specification, hosted here as KDS no longer publishes it.
 - Offline use and install: the site now registers its service worker and links its web app manifest, which it built but never switched on. The circuits, originals and parts pages work without a connection, and so does any circuit opened before; one that was not says so.
@@ -218,6 +219,7 @@ GitHub Release notes.
   and pots are grouped by taper (A, B, C, W, none) and ordered by resistance.
 
 ### Fixed
+- Dead Astronaut Tremshifter: the full parts list, read by eye from the build document (59 rows; OCR had 34 and missed the two 2k-24k LDRs, their LEDs, three pots and eleven resistors and capacitors). Its parts list names no LDR, only an on resistance between 2k and 24k, so both it and the Effects Layouts perfboard layout of the pedal now suggest the GL5516 (5-10k lit) or GL5528 (10-20k), linked to their part pages, with the note saying so.
 - The 75 high audit flags on the layouts are reviewed against the drawings. Eleven are slips on the drawing itself and now carry the real part, with the printed form kept in the row note (LF422 is LF442, TC1004SCPA is TC1044SCPA, TL2262 is TLC2262, TL2426 is TLE2426, BAT185 is BAT85, 1N1308 is 2N1308, MPSA6513 is MPS6513 and four more); six capacitors printed with no unit have one. The rest were correct readings the audit did not know: real parts (L7812, CA3240, NJM5534, OPA2132, RC1458, LM347, AD711, the KP303 JFETs, OC141, 2N4302), an LM4040 reference standing where a zener would, pots in ohms ('A470R') and D-taper pots, which the library now reads (17 pots across four sources). 18 remain, each as its drawing prints it (a 100M resistor, value ranges, a transistor wired as a diode).
 - Originals: 22 more near-duplicates settled by comparing the parts lists behind each pair (the SD-9 under one name with 10 circuits, the Sunn Beta preamp, Soldano SLO-100, Pearl Vorg Warp Sound, MXR Analog Delay and Ross Stereo Delay as one original each instead of one per schematic page), and seven boards that build two originals are listed under both (Tentacle and Green Ringer, Big Daddy and Grace, Landgraff Dynamic Overdrive and Clay Jones). 3,534 originals are now 3,503.
 - Part links on a circuit page always reach a part page: 1,369 led nowhere (a row naming two parts, '1N100 or 1N34A', now links each; a part filed under the wrong category links where it is indexed; LEDs and other values with no part page are plain text).
