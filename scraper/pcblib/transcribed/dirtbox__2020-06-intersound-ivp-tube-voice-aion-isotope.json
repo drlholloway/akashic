@@ -4,7 +4,7 @@
  "comment": "Single populated 20x24 stripboard with three transistors, two dual op-amps, a charge pump and a 42TM018 transformer (TR1) mounted on the board.",
  "uncertain": [
   "2M next to the 2.2M (col 10, rows J-M): printed clearly, unusual value",
-  "IC3 is printed 'TC1004SCPA/ICL7660SCPA' in the legend, almost certainly a typo for TC1044SCPA; kept as printed"
+  "IC3 is printed 'TC1004SCPA/ICL7660SCPA' in the legend, a typo; entered as TC1044SCPA"
  ],
  "rows": [
   [
@@ -159,9 +159,9 @@
   ],
   [
    "IC3",
-   "TC1004SCPA",
+   "TC1044SCPA",
    "IC",
-   "TC1004SCPA/ICL7660SCPA as printed; charge pump"
+   "TC1004SCPA/ICL7660SCPA as printed; charge pump; printed 'TC1004SCPA' on the drawing"
   ],
   [
    "D1",

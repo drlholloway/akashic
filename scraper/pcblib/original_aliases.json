@@ -854,7 +854,11 @@
  ],
  "Electro-Harmonix Electric Mistress": [
   "Electro-Harmonix Electric Mistress",
-  "Electro-Harmonix ’s Electric Mistress"
+  "Electro-Harmonix ’s Electric Mistress",
+  "Electro-Harmonix Electric Mistress 2",
+  "Electro-Harmonix Electric Mistress 3",
+  "Electro Harmonix Electric Mistress 2",
+  "Electro Harmonix Electric Mistress 3"
  ],
  "Electro-Harmonix Freedom Amp preamp": [
   "Electro-Harmonix Freedom Amp preamp",
@@ -1197,7 +1201,8 @@
  ],
  "J. D. Barbato Buttercup Fuzz": [
   "Buttercup Fuzz",
-  "J. D. Barbato Buttercup Fuzz"
+  "J. D. Barbato Buttercup Fuzz",
+  "Buttercup"
  ],
  "J. Rockett Animal": [
   "J. Rockett Animal",
@@ -1334,7 +1339,8 @@
  ],
  "Lovepedal Englishman": [
   "Lovepedal Englishman",
-  "Lovepedal Englishman / Briggs 64 Vintage"
+  "Lovepedal Englishman / Briggs 64 Vintage",
+  "Englishman"
  ],
  "Lovepedal Eternity Burst": [
   "Lovepedal Eternity Burst",
@@ -1409,7 +1415,8 @@
  "MXR Micro Amp Plus": [
   "MXR Micro Amp Plus",
   "MXR Micro Amp Plus ( M233 )",
-  "MXR Micro Amp+"
+  "MXR Micro Amp+",
+  "Micro Amp +"
  ],
  "MXR Noise Gate": [
   "M-106 Noise Gate",
@@ -1421,7 +1428,8 @@
  ],
  "Mad Professor Blueberry Bass Overdrive": [
   "Mad Professor Blueberry",
-  "Mad Professor Blueberry Bass Overdrive"
+  "Mad Professor Blueberry Bass Overdrive",
+  "Blueberry Bass Overdrive"
  ],
  "Mad Professor Evolution Orange Underdrive": [
   "Mad Professor Evolution Orange",
@@ -1591,7 +1599,9 @@
  "Pearl Vorg Warp Sound": [
   "Pearl Vorg Warp Sound",
   "Pearl Vorg Warp Sound Filter",
-  "Pearl Warp Sound"
+  "Pearl Warp Sound",
+  "Vorg F-502 Warp Sound",
+  "Warp Sound Fuzz and Filter"
  ],
  "Pigtronix PolySaturator": [
   "Pigtronix Poly Saturators",
@@ -1722,7 +1732,8 @@
  ],
  "Schumann PLL": [
   "Schumann PLL",
-  "long lusted after Schumann PLL"
+  "long lusted after Schumann PLL",
+  "Schumann PLL One"
  ],
  "Seamoon Fresh Fuzz": [
   "Seamoon Fresh Fuzz",
@@ -2147,5 +2158,80 @@
   "ElectroniX / Zeibek Submarine Bass Guitar Preamp",
   "Zeibek ElectroniX Submarine Bass Guitar Preamp",
   "Zeibek Submarine Bass Preamp"
+ ],
+ "Ibanez SD-9 Sonic Distortion": [
+  "Ibanez SD-9 Sonic Distortion",
+  "Ibanez SD-9",
+  "Ibanez SD9",
+  "SD-9",
+  "Ibanez SD9 Sonic Distortion",
+  "Ibanez Maxon SD9 Sonic Distortion",
+  "Ibanez / Maxon SD9 Sonic Distortion",
+  "Ibanez/Maxon SD9 Sonic Distortion",
+  "Maxon / Ibanez SD9 Sonic Distortion",
+  "Ibanez Sonic Distortion SD9",
+  "Maxon SD-9 Sonic Distortion",
+  "Aion Fx Meteor - Ibanez/Maxon SD9",
+  "Aion Meteor - Ibanez/Maxon SD9"
+ ],
+ "Colorsound Distorter": [
+  "Colorsound Distorter",
+  "Dharma Sound / Colorsound Distorter",
+  "Dharma Sound Colorsound Distorter"
+ ],
+ "MXR Analog Delay": [
+  "MXR Analog Delay 1",
+  "MXR Analog Delay 2",
+  "MXR Analog Delay 3"
+ ],
+ "Ross Stereo Delay": [
+  "Ross Stereo Delay",
+  "Ross Stereo Delay 2"
+ ],
+ "Electro-Harmonix Deluxe Electric Mistress": [
+  "Deluxe Electric Mistress",
+  "Electro-Harmonix Deluxe Electric Mistress 18v",
+  "Electro Harmonix Deluxe Electric Mistress 18v"
+ ],
+ "Jerry Garcia Tiger Preamp": [
+  "Jerry Garcia Tiger Preamp",
+  "Jerry Garcia's Tiger Buffer",
+  "Tiger Pre-Amp"
+ ],
+ "Sunn Beta Lead": [
+  "Sunn Beta Lead",
+  "Sunn Beta Lead / Sunn Beta Bass",
+  "Sunn Beta Lead & Bass",
+  "Sunn Beta Preamp",
+  "Sunn Beta Pre Amp"
+ ],
+ "Soldano SLO-100": [
+  "Soldano SLO-100",
+  "Soldano SLO 100",
+  "Soldano SLO"
+ ],
+ "Lovepedal JTM": [
+  "JTM"
+ ],
+ "Smart People Factory Red Threat": [
+  "Smart People Facory Red Threat"
+ ],
+ "Boot-Leg JBK-1 Jawbreaker": [
+  "Boot-Leg Jaw"
+ ],
+ "Audio Surplus Effects OK Doomer": [
+  "Audio Surplus Effects OK Doomer 3 knob"
+ ],
+ "Maestro OB-1 Octave Box": [
+  "Maestro OB-1 Octave Box",
+  "Maestro Octave"
+ ],
+ "May I? Vox in a Box": [
+  "May I?",
+  "May I? Vox in a Box"
+ ],
+ "EarthQuaker Devices Disaster Transport SR": [
+  "Earthquaker Devices Disaster",
+  "EarthQuaker Devices Disaster"
  ]
 }

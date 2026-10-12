@@ -3,7 +3,7 @@
  "read": "2026-10-11, by eye from the cached layout image",
  "comment": "Single populated 19x23 stripboard with one dual op-amp, three transistors, two clipping LEDs on the board and a two-wire switch whose type the legend does not give. Legend notes Tone 2 to Volume 3.",
  "uncertain": [
-  "IC1 is printed 'TL2262' in the legend (probably TLC2262); kept as printed",
+  "IC1 is printed 'TL2262' in the legend, which is not a part; entered as TLC2262",
   "22Ω at column 12, rows R-T: printed clearly, unusual value",
   "12nF at column 7, rows U-V and 39nF at column 15, rows U-W: printed clearly, unusual values"
  ],
@@ -178,9 +178,9 @@
   ],
   [
    "IC1",
-   "TL2262",
+   "TLC2262",
    "IC",
-   "as printed"
+   "as printed; printed 'TL2262' on the drawing"
   ],
   [
    "D1",

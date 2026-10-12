@@ -3,7 +3,7 @@
  "read": "2026-10-11, by eye from the cached layout image",
  "comment": "Perfboard layout with populated board, wiring diagram, underside and PCB; counted from the populated board, transistor numbers taken from the wiring diagram. Four 5mm red LEDs on the board as clippers. The legend names the pot Volume, the wire pads call it Level.",
  "uncertain": [
-  "Q2, Q3: legend prints 1N1308, almost certainly meaning the 2N1308 germanium transistor; kept as printed"
+  "Q2, Q3: the legend prints 1N1308; entered as 2N1308, the germanium transistor"
  ],
  "rows": [
   [
@@ -128,15 +128,15 @@
   ],
   [
    "Q2",
-   "1N1308",
+   "2N1308",
    "Q",
-   "as printed in the legend; likely 2N1308"
+   "as printed in the legend; likely 2N1308; printed '1N1308' on the drawing"
   ],
   [
    "Q3",
-   "1N1308",
+   "2N1308",
    "Q",
-   "as printed in the legend; likely 2N1308"
+   "as printed in the legend; likely 2N1308; printed '1N1308' on the drawing"
   ],
   [
    "Q4",

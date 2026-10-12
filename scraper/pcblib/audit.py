@@ -69,8 +69,11 @@ def find_flags(db: sqlite3.Connection, tdb: sqlite3.Connection) -> tuple[list[di
                 # real parts that sit one character from a commoner one
                 "LF351", "LF356", "NE5534A", "4066", "CD4066", "4066N", "4046A", "MN3001", "MN3004", "MN3008", "MN3204", "MN3205", "MN3206", "MN3214",
                 "TLC272", "5534", "NE5534", "CA741", "LM307", "LM301", "4559", "RC4559", "MC33174", "MC33178", "TLP222", "TLP222A",
+                "L7812", "CA3240", "NE555N", "NJM5534", "OPA2132", "RC1458", "LM347", "AD711",
                 "LM741DIP", "LT1054/", "MAX1044S", "78L05Z", "TL061", "TL062", "TL064", "TL031", "OPA2134", "LM386N", "CD4024", "CD4029"}
-    KNOWN_Q = {"BC264D", "BC264C", "BC264B", "2N6027", "2N2646", "CV7353", "CV7351", "FS36999", "2N2222A_CEB", "NP4124", "TI592", "A02650", "LM394", "LM194"}
+    KNOWN_Q = {"BC264D", "BC264C", "BC264B", "2N6027", "2N2646", "CV7353", "CV7351", "FS36999", "2N2222A_CEB", "NP4124", "TI592", "A02650", "LM394", "LM194",
+               # Soviet JFETs, and a family written with a wildcard ("any BC547 to BC549")
+               "KP303", "KP303A", "KP303B", "KP303E", "OC141", "2N4302", "BC54X", "BC54XB", "BC54XC", "BC10XB"}
     Q_WORDS = {"NPN", "PNP", "JFET", "FET", "MOSFET", "GE", "SI", "GE PNP", "GE NPN", "PNP GE", "NPN GE", "NPN SI", "PNP SI"}
 
     flags = []
@@ -240,10 +243,10 @@ def find_flags(db: sqlite3.Connection, tdb: sqlite3.Connection) -> tuple[list[di
             def diode_ok(a):
                 A = a.upper()
                 return bool(describe_diode(a) or D_OK.match(A) or LED_WORDS.match(a) or re.fullmatch(r"\d{3,4}[A-Z]?|34A|60P?", A)
-                            or re.fullmatch(r"\d{1,2}(?:[.V]\d)?V?\s*(?:ZENER)?|ZENER.*|.*SCHOTTKY.*|GERM.*|1S\d+|2D\d+.*|MA\d+.*|BAS\d+.*|.*\bDIODES?\b.*|.*\bZENER\b.*|1N47\d\d[AB]?\b.*", A))
+                            or re.fullmatch(r"\d{1,2}(?:[.V]\d)?V?\s*(?:ZENER)?|ZENER.*|.*SCHOTTKY.*|GERM.*|LM4040.*|LM385.*|LM336.*|TL431.*|1S\d+|2D\d+.*|MA\d+.*|BAS\d+.*|.*\bDIODES?\b.*|.*\bZENER\b.*|1N47\d\d[AB]?\b.*", A))
             if re.fullmatch(r"\d+(?:\.\d+)?\s*[pnuµ]F?", v, re.I) or re.fullmatch(r"\d+(?:\.\d+)?\s*[kKM]", v):
                 flag(r, "high", "Diode carries a capacitor or resistor value", kind="wrong category")
-            elif re.match(r"^(?:TL|LM|NE|JRC|RC|CD|OP)\d|^\d{4}$|DIP|SOCKET", V) and not re.fullmatch(r"\d{3,4}", V):
+            elif re.match(r"^(?:TL|LM|NE|JRC|RC|CD|OP)\d|^\d{4}$|DIP|SOCKET", V) and not re.match(r"^(?:LM4040|LM385|LM336|TL431)", V) and not re.fullmatch(r"\d{3,4}", V):  # a shunt reference stands where a zener would
                 flag(r, "high", "Diode carries an IC or socket", kind="wrong category")
             elif re.match(r"^(?:2N|BC|2SC|2SK|J\d{3})\d*", V) and not re.match(r"^2N\d{0}$", V) and known_transistor(v):
                 flag(r, "high", "Diode carries a transistor part number", kind="wrong category")

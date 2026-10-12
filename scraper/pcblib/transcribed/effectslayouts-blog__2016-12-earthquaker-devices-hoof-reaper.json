@@ -3,7 +3,8 @@
  "read": "2026-10-11, by eye from the cached layout image",
  "comment": "One large perfboard holding the Tone Reaper, the octave and the Hoof fuzz, with an underside view, wiring diagram and etched PCB of the same board; counted from the populated board, confirmed value by value against the wiring diagram. Transistor designators Q1-Q9 come from the wiring diagram and legend. Two sets of pots (Reaper and Hoof).",
  "uncertain": [
-  "Small image (748 px wide): values read at 6x; 160K and 6.2K in the bottom row left of the vertical 47nF agree in both the board and the wiring diagram but are the least crisp readings"
+  "Small image (748 px wide): values read at 6x; 160K and 6.2K in the bottom row left of the vertical 47nF agree in both the board and the wiring diagram but are the least crisp readings",
+  "Q1: the legend prints MPSA19, which is not a part; entered as MPSA18"
  ],
  "rows": [
   [
@@ -230,9 +231,9 @@
   ],
   [
    "Q1",
-   "MPSA19",
+   "MPSA18",
    "Q",
-   ""
+   "printed 'MPSA19' on the drawing"
   ],
   [
    "Q2",

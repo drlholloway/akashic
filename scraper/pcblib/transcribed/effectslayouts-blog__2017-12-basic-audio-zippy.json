@@ -3,7 +3,7 @@
  "read": "2026-10-11, by eye from the cached layout image",
  "comment": "Perfboard layout of a two-transistor fuzz: populated board, underside, colour wiring diagram and etched PCB; counted from the populated board and confirmed against the diagram. Switch wires to the pads Sw1/Sw2.",
  "uncertain": [
-  "Q1-2: MPSA6513 as the legend prints it; printed clearly, unusual part number (the common part is MPS6513)"
+  "Q1-2: the legend prints MPSA6513, which is not a part; entered as MPS6513"
  ],
  "rows": [
   [
@@ -80,15 +80,15 @@
   ],
   [
    "Q1",
-   "MPSA6513",
+   "MPS6513",
    "Q",
-   ""
+   "printed 'MPSA6513' on the drawing"
   ],
   [
    "Q2",
-   "MPSA6513",
+   "MPS6513",
    "Q",
-   ""
+   "printed 'MPSA6513' on the drawing"
   ],
   [
    "Body",

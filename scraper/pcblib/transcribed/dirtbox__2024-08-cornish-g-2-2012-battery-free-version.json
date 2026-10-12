@@ -5,7 +5,7 @@
  "uncertain": [
   "390K standing resistor at column 16 rows E-G: partly covered by the 22uF cap, reads 390K",
   "7.5K standing resistor at column 7 rows S-U: the 7 sits on a track cut, reads 7,5K",
-  "D3-D4 printed clearly as BAT185 in the legend, unusual part number (possibly BAT85)",
+  "D3-D4 are printed BAT185 in the legend, which is not a part; entered as BAT85",
   "200K at column 2 rows T-V and 51Ω at column 10: printed clearly, unusual values"
  ],
  "rows": [
@@ -221,15 +221,15 @@
   ],
   [
    "D3",
-   "BAT185",
+   "BAT85",
    "D",
-   "as printed"
+   "as printed; printed 'BAT185' on the drawing"
   ],
   [
    "D4",
-   "BAT185",
+   "BAT85",
    "D",
-   "as printed"
+   "as printed; printed 'BAT185' on the drawing"
   ],
   [
    "D5",

@@ -4,7 +4,7 @@
  "comment": "Single populated 17x16 stripboard with a legend; two op-amps, an on-board 5K trimmer, two red clipping LEDs and six clipping diodes. Volume 2 goes to the output.",
  "uncertain": [
   "20nF film cap at columns 3, rows M-O: printed clearly, unusual value",
-  "IC1 is printed LF422 in the legend: printed clearly, unusual part number (LF442 may be meant)"
+  "IC1 is printed LF422 in the legend, which is not a part; entered as LF442, the op-amp Demeter uses"
  ],
  "rows": [
   [
@@ -93,9 +93,9 @@
   ],
   [
    "IC1",
-   "LF422",
+   "LF442",
    "IC",
-   ""
+   "printed 'LF422' on the drawing"
   ],
   [
    "IC2",

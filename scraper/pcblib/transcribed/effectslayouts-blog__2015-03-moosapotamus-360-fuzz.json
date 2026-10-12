@@ -3,7 +3,7 @@
  "read": "2026-10-11, by eye from the cached layout image",
  "comment": "Moosapotamus 360 Bass Fuzz: populated perfboard, colour wiring diagram, underside and etched PCB of the same circuit; counted from the perfboard and confirmed against the wiring diagram.",
  "uncertain": [
-  "Q3 (top centre, metal can): legend prints '12N1306' clearly; probably a typo for 2N1306 (germanium NPN)",
+  "Q3 (top centre, metal can): the legend prints '12N1306'; entered as 2N1306 (germanium NPN)",
   "2.5nF (top left, under the 22K): printed clearly, unusual value",
   "430K (bottom centre): printed clearly, unusual value"
  ],
@@ -166,9 +166,9 @@
   ],
   [
    "Q3",
-   "12N1306",
+   "2N1306",
    "Q",
-   "as printed in the legend; likely 2N1306"
+   "as printed in the legend; likely 2N1306; printed '12N1306' on the drawing"
   ],
   [
    "Q4",

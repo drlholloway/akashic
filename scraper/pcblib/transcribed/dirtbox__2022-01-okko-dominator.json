@@ -5,7 +5,8 @@
  "uncertain": [
   "5K resistor at column 5 rows V-X beside Q1: reads '5K' but the 2,2uF electrolytic overlaps its left edge; unusual value, could be hiding a leading digit (15K)",
   "51Ω at column 9 rows M-N next to REG: printed clearly, unusual value",
-  "7.5K (two, column 24 rows D-G and column 14 rows X-Z): printed clearly, unusual value"
+  "7.5K (two, column 24 rows D-G and column 14 rows X-Z): printed clearly, unusual value",
+  "IC3 is printed 'S7660' in the legend; entered as ICL7660S"
  ],
  "rows": [
   [
@@ -214,9 +215,9 @@
   ],
   [
    "IC3",
-   "S7660",
+   "ICL7660S",
    "IC",
-   "as printed"
+   "as printed; printed 'S7660' on the drawing"
   ],
   [
    "REG",

@@ -2,7 +2,9 @@
  "id": "dirtbox:2019-06-subdecay-super-nova-drive",
  "read": "2026-10-11, by eye from the cached layout image",
  "comment": "Single 19x16 stripboard: dual op-amp, three transistors, a TL2426 rail splitter drawn as a TO-92 labelled REG, five pots. Several resistors are drawn semi-transparent over cuts.",
- "uncertain": [],
+ "uncertain": [
+  "REG is printed 'TL2426' in the legend; entered as TLE2426, the rail splitter"
+ ],
  "rows": [
   [
    "×7",
@@ -126,9 +128,9 @@
   ],
   [
    "REG",
-   "TL2426",
+   "TLE2426",
    "IC",
-   "rail splitter"
+   "rail splitter; printed 'TL2426' on the drawing"
   ],
   [
    "Q1",

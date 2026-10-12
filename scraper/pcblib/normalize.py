@@ -20,7 +20,8 @@ _VAL_RE = re.compile(
     r"^\s*(\d+(?:[.,]\d+)?)\s*([pnuµμmkKMRr]?)\s*(\d*)\s*(?:[FfΩΩ]|ohm[s]?|H)?\s*$"
 )
 
-_POT_RE = re.compile(r"^\s*([ABCW])?\s*(\d+(?:[.,]\d+)?)\s*([kKM]?)\s*(?:ohms?|Ω)?\s*-?\s*([ABCW])?\s*(?:\(.*\))?\s*$")
+# Tapers A, B, C, W and D (VFE, DOD and MI Audio print one); '470R' is a pot in ohms.
+_POT_RE = re.compile(r"^\s*([ABCDW])?\s*(\d+(?:[.,]\d+)?)\s*([kKM]?)\s*(?:ohms?|Ω|R)?\s*-?\s*([ABCDW])?\s*(?:\(.*\))?\s*$")
 _POT_WORDS = re.compile(r"^(\d+(?:[.,]\d+)?\s*[kKM]?)\s*(?:Ω|ohms?)?\s*[- ]\s*(linear|lin|log|audio|logarithmic|rev\.?-?\s?log|reverse(?:[- ](?:log|audio))?|anti-?log)\.?\s*(?:pot(?:entiometer)?s?)?$", re.I)
 _POT_DUAL = re.compile(r"\(?\b(?:dual(?:[- ]?gang(?:ed)?)?|stereo|ganged)\b\)?", re.I)
 _POT_TWO = re.compile(r"^2\s*[x×]\s*", re.I)
