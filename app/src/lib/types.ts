@@ -11,6 +11,8 @@ export interface IndexEntry {
 	original: string;
 	/** Every original, for a board its vendor says builds more than one ('Ibanez BN5 / SP5'); absent otherwise. */
 	originals?: string[];
+	/** The maker's own board of an original that layouts and clones name ('Dead Astronaut Tremshifter'): `original` is itself. */
+	own_design?: boolean;
 	category: string;
 	effect_type: string;
 	enclosure: string;

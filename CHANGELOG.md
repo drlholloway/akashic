@@ -6,6 +6,7 @@ GitHub Release notes.
 ## Unreleased
 
 ### Added
+- A maker's own board is the original that layouts and clones of it name: 29 boards (Dead Astronaut, Parasit Studio, PedalPCB, God City and others) now say 'The original' and list the layouts and clones built from them, and each of those links back to the maker's board. The Effects Layouts Tremshifter layout points to Dead Astronaut's Tremshifter this way.
 - Datasheet for the GL55 series photoresistors (GL5516, GL5528, GL5537-1, GL5549): Senba's series manual, hosted here.
 - Datasheets for the audio transformers: Triad's own sheet for the TY-141P, and Xicon's 42TM, 42TL and 42TU series sheets hosted here, linked from 24 transformer part pages.
 - Datasheets for the five crystals: Abracon's AB38T sheet for the 32.768 kHz watch crystals, its HC-49 series sheet for the 16 and 20 MHz ones (the build documents give only a frequency), and the KDS DT-38 specification, hosted here as KDS no longer publishes it.

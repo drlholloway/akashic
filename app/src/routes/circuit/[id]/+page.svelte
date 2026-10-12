@@ -14,9 +14,12 @@
 	const mine = $derived(new Set(originalsOf(c).map(normalizeOriginal)));
 	const siblings = $derived(
 		c.original
-			? data.index.filter((e) => e.id !== c.id && originalsOf(e).some((o) => mine.has(normalizeOriginal(o))))
+			? data.index
+					.filter((e) => e.id !== c.id && originalsOf(e).some((o) => mine.has(normalizeOriginal(o))))
+					.sort((a, b) => Number(!!b.own_design) - Number(!!a.own_design)) // the maker's own board first
 			: []
 	);
+	const makerBoard = $derived(siblings.find((s) => s.own_design));
 	const variants = $derived(c.variants ?? []);
 	let variant = $state('');
 	$effect(() => {
@@ -67,8 +70,8 @@
 </script>
 
 <svelte:head>
-	<title>{c.name}{c.original ? ` (${c.original})` : ''} · {VENDOR_NAMES[c.vendor]} · Akashic</title>
-	<meta name="description" content="{c.name} by {VENDOR_NAMES[c.vendor]}{c.original ? `, based on the ${c.original}` : ''}. Parts list, controls, enclosure and {VENDOR_KIND[c.vendor] === 'layout' ? 'the board layout to build it from' : 'where to buy the PCB'}." />
+	<title>{c.name}{c.original && !c.own_design ? ` (${c.original})` : ''} · {VENDOR_NAMES[c.vendor]} · Akashic</title>
+	<meta name="description" content="{c.name} by {VENDOR_NAMES[c.vendor]}{c.original && !c.own_design ? `, based on the ${c.original}` : ''}. Parts list, controls, enclosure and {VENDOR_KIND[c.vendor] === 'layout' ? 'the board layout to build it from' : 'where to buy the PCB'}." />
 </svelte:head>
 
 <article class="circuit">
@@ -81,7 +84,7 @@
 			<p class="label"><a href="{base}/?vendor={c.vendor}">{VENDOR_NAMES[c.vendor]}</a>{#if c.sku} · <span class="mono">{c.sku}</span>{/if}</p>
 			<h1>{c.name}{#if c.subtitle}<span class="sub">{c.subtitle}</span>{/if}{#if lay.verified === true}<span class="vtag" title="{VENDOR_NAMES[c.vendor]} marks this layout as verified: someone has built it and it works">Verified</span>{/if}</h1>
 			{#if c.original}
-				<p class="based">Based on the {#each originalsOf(c) as o, n}{#if n}{' and the '}{/if}<a href="{base}/?based={encodeURIComponent(o)}">{o}</a>{/each}{#if siblings.length}<span class="dim"> · {siblings.length} other {siblings.length === 1 ? 'board clones' : 'boards clone'} {originalsOf(c).length > 1 ? 'one of them' : 'it'}</span>{/if}</p>
+				<p class="based">{c.own_design ? 'The original ' : 'Based on the '}{#each originalsOf(c) as o, n}{#if n}{' and the '}{/if}<a href="{base}/?based={encodeURIComponent(o)}">{o}</a>{/each}{#if siblings.length}<span class="dim"> · {siblings.length} other {siblings.length === 1 ? (c.own_design ? 'board or layout builds' : 'board clones') : (c.own_design ? 'boards and layouts build' : 'boards clone')} {originalsOf(c).length > 1 ? 'one of them' : 'it'}</span>{/if}{#if makerBoard}<span class="dim"> · the maker's own board is</span>{' '}<a href="{base}/circuit/{makerBoard.file_id}">{makerBoard.name} by {VENDOR_NAMES[makerBoard.vendor]}</a>{/if}</p>
 			{:else if c.based_on}
 				<p class="based dim">Based on {c.based_on}</p>
 			{/if}
@@ -220,7 +223,7 @@
 			<h2 class="label strong">Other boards based on the {originalsOf(c).join(' or the ')}</h2>
 			<ul>
 				{#each siblings as s}
-					<li><Faceplate enclosure={s.enclosure} controls={s.controls} size={26} /> <a href="{base}/circuit/{s.file_id}">{s.name}</a> <span class="dim">{VENDOR_NAMES[s.vendor]}{s.enclosure ? ` · ${s.enclosure}` : ''}{s.price != null ? ` · ${currency.format(s.price, s.currency)}` : ''}</span></li>
+					<li><Faceplate enclosure={s.enclosure} controls={s.controls} size={26} /> <a href="{base}/circuit/{s.file_id}">{s.name}</a> <span class="dim">{s.own_design ? 'the original · ' : ''}{VENDOR_NAMES[s.vendor]}{s.enclosure ? ` · ${s.enclosure}` : ''}{s.price != null ? ` · ${currency.format(s.price, s.currency)}` : ''}</span></li>
 				{/each}
 			</ul>
 		</section>

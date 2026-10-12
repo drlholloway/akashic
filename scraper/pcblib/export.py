@@ -96,6 +96,15 @@ def write_changes() -> None:
     (EXPORT_DIR / "changes.json").write_text(json.dumps(changes, ensure_ascii=False))
 
 
+_MAKER_WORDS = re.compile(r"\b(?:fx|effects?|electronics|studios?|instruments|pedals|audio|devices|the|diy|layouts?|pcbs?)\b")
+
+
+def _maker_key(name: str) -> str:
+    """'Dead Astronaut FX Tremshifter' and 'DeadAstronaut Tremshifter' alike: a maker and model with the
+    words a maker's name may or may not carry left out."""
+    return re.sub(r"[^a-z0-9]+", "", _MAKER_WORDS.sub("", name.lower()))
+
+
 def run(images: bool = False) -> None:
     """images=True also copies cached schematic PNGs into the bundle (local use only)."""
     import shutil
@@ -115,6 +124,9 @@ def run(images: bool = False) -> None:
         # The layout sites label each post with its maker: makers no fixed brand list knows ('One Control', 'VFE').
         learn_brands([(c["name"], c["tags"]) for c in circuits if vendors[c["vendor"]]["kind"] == "layout"])
         settled = harmonize([original(c["based_on"]) for c in circuits] + [n for names in COVERS.values() for n in names])
+        # A maker's own board that other sources name as their original ('DeadAstronaut Tremshifter' on a layout
+        # site, the Tremshifter here): it is that original, and the layouts and clones list beside it.
+        own_names = {_maker_key(n): n for n in set(settled.values()) if n}
         for c in circuits:
             bom = [dict(b) for b in conn.execute(
                 "SELECT ref,value,part_type,notes,category,norm_value,sort_key,variant FROM bom "
@@ -130,6 +142,8 @@ def run(images: bool = False) -> None:
                              | {ic_name(b["norm_value"]) for b in bom if b["category"] == "IC" and b["norm_value"]})  # '072' also finds TL072
             o = original(c["based_on"])  # one name per original: 'EHX Big Muff' and 'Big Muff Pi' alike
             c["original"] = settled.get(o, o)
+            if not c["original"] and (mine := own_names.get(_maker_key(f'{vendors[c["vendor"]]["name"]} {c["name"]}'))):
+                c["original"], c["own_design"] = mine, True
             # a board its vendor says builds two originals is listed under each
             covers = COVERS.get(original_key(c["based_on"])) or COVERS.get(original_key(o))
             if covers:
@@ -147,6 +161,7 @@ def run(images: bool = False) -> None:
                 "has_kicad": bool(c.get("kicad_path")),
                 **_build_fields(c["layout"]),
                 **({"originals": c["originals"]} if c.get("originals") else {}),
+                **({"own_design": True} if c.get("own_design") else {}),
             })
             counted = {id(b) for b in bom}
             for b in c["bom"]:
