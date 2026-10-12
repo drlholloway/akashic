@@ -2,7 +2,7 @@
 	import { controlGroup } from '$lib/controls';
 	import { base } from '$app/paths';
 	import { page } from '$app/state';
-	import { wrongParseUrl } from '$lib/site';
+	import { makerContact, wrongParseUrl } from '$lib/site';
 	import Faceplate from '$lib/Faceplate.svelte';
 	import { currency } from '$lib/currency.svelte';
 	import { normalizeOriginal } from '$lib/search';
@@ -19,6 +19,7 @@
 					.sort((a, b) => Number(!!b.own_design) - Number(!!a.own_design)) // the maker's own board first
 			: []
 	);
+	const contact = $derived(makerContact(originalsOf(c)));
 	const makerBoard = $derived(siblings.find((s) => s.own_design));
 	const clones = $derived(siblings.filter((s) => !s.own_design).length); // the maker's own board is no clone of itself
 	const variants = $derived(c.variants ?? []);
@@ -88,6 +89,9 @@
 				<p class="based">{c.own_design ? 'The original ' : 'Based on the '}{#each originalsOf(c) as o, n}{#if n}{' and the '}{/if}<a href="{base}/?based={encodeURIComponent(o)}">{o}</a>{/each}{#if clones}<span class="dim"> · {clones} other {clones === 1 ? (c.own_design ? 'board or layout builds' : 'board clones') : (c.own_design ? 'boards and layouts build' : 'boards clone')} {originalsOf(c).length > 1 ? 'one of them' : 'it'}</span>{/if}{#if makerBoard}<span class="dim"> · the maker's own board is</span>{' '}<a href="{base}/circuit/{makerBoard.file_id}">{makerBoard.name} by {VENDOR_NAMES[makerBoard.vendor]}</a>{/if}</p>
 			{:else if c.based_on}
 				<p class="based dim">Based on {c.based_on}</p>
+			{/if}
+			{#if contact}
+				<p class="contact">Want a PCB? {contact.maker} designed this circuit and sells boards: <a href={contact.url} target="_blank" rel="noopener">message {contact.maker} on {contact.where}</a>.</p>
 			{/if}
 			<dl class="specs">
 				<div><dt class="label">Category</dt><dd><a href="{base}/?cat={encodeURIComponent(c.category)}">{c.category}</a>{#if c.effect_type && c.effect_type !== c.category} <span class="dim">· {c.effect_type}</span>{/if}</dd></div>
@@ -241,6 +245,8 @@
 	.title h1 .sub { font-weight: 500; color: var(--ink-2); margin-left: 0.3em; }
 	.based { font-size: 17px; margin-bottom: 16px; }
 	.based a { font-weight: 600; }
+	.contact { margin: -8px 0 16px; color: var(--ink-2); }
+	.contact a { text-decoration: underline; text-decoration-color: var(--rule-strong); text-underline-offset: 3px; }
 	.dim { color: var(--ink-3); }
 	.stock { margin-left: 8px; }
 	.delisted { margin: 12px 0 0; padding: 8px 12px; border: 1px solid var(--rule-strong); border-radius: var(--radius); color: var(--ink-2); max-width: 70ch; }
