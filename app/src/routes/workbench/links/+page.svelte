@@ -24,7 +24,16 @@
 			links: [
 				{ name: 'Resistor color code decoder', href: 'https://circuitdigest.com/calculators/5-band-resistor-color-code-calculator', note: 'For 5-band resistors.' },
 				{ name: 'Semiconductor company logos', href: 'https://reference.huntingtonaudio.com/semiconductor-logos', note: 'Who made the chip, from the logo printed on it.' },
-				{ name: 'What Can I Build?', href: 'https://dvhx.github.io/what-can-i-build/', note: 'Enter the parts you have and see which circuits they cover.' }
+				{ name: 'What Can I Build?', href: 'https://dvhx.github.io/what-can-i-build/', note: 'Enter the parts you have and see which circuits they cover.' },
+				{ name: 'Stompbox Layout', href: 'https://stompboxlayout.com/', note: 'Create drill templates and see an enclosure layout before you drill. It also sells an STL file of any template you make.' }
+			]
+		},
+		{
+			title: 'Sightings',
+			links: [
+				{ name: 'Sightings', href: 'https://github.com/drlholloway/sightings/wiki', note: 'My free companion app for the Peak Atlas DCA75 semiconductor analyzer: identify parts, sweep curves, measure leakage, sort parts into bins and match them to pedal circuits. macOS, Linux and Android. The link opens its wiki: installation, first steps, curves, parts and bins, troubleshooting.' },
+				{ name: 'Download', href: 'https://github.com/drlholloway/sightings/releases', note: 'Ready-made builds for each platform.' },
+				{ name: 'Source', href: 'https://github.com/drlholloway/sightings', note: 'The code, on GitHub.' }
 			]
 		},
 		{

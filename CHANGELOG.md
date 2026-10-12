@@ -6,6 +6,7 @@ GitHub Release notes.
 ## Unreleased
 
 ### Added
+- Workbench links: Stompbox Layout, for making drill templates and seeing an enclosure layout before drilling, and Sightings, the companion app for the Peak Atlas DCA75 analyzer, with its downloads and help pages.
 - On a phone the section links (Circuits, Originals, Parts, Workbench, About) sit on their own row under the logo and search field; with five of them the header had grown wider than the screen.
 - Workbench: a new section of one builder's notes, in the header beside Parts. Sourcing (which shop for which part and the brands to stick to, linked to the parts lists), Building (soldering iron, solder, setup and the build order) and Links (books, courses, forums, calculators and guides for having boards made), worked in from the diy-guitar-effects notes with every link checked.
 - A maker's own board is the original that layouts and clones of it name: 29 boards (Dead Astronaut, Parasit Studio, PedalPCB, God City and others) now say 'The original' and list the layouts and clones built from them, and each of those links back to the maker's board. The Effects Layouts Tremshifter layout points to Dead Astronaut's Tremshifter this way.
