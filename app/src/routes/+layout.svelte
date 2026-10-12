@@ -52,6 +52,7 @@
 		{ href: `${base}/`, label: 'Circuits', match: (p: string) => p === `${base}/` || p.startsWith(`${base}/circuit/`) },
 		{ href: `${base}/originals`, label: 'Originals', match: (p: string) => p.startsWith(`${base}/originals`) },
 		{ href: `${base}/parts`, label: 'Parts', match: (p: string) => p.startsWith(`${base}/parts`) },
+		{ href: `${base}/workbench`, label: 'Workbench', match: (p: string) => p.startsWith(`${base}/workbench`) },
 		{ href: `${base}/about`, label: 'About', match: (p: string) => p.startsWith(`${base}/about`) }
 	];
 </script>

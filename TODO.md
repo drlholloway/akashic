@@ -204,6 +204,16 @@ own site only); the counts below are since then.
   -> Coolaudio V3207, MN3101 -> Cabintech CT3101, BL3208 -> Coolaudio V3208).
 - Generic entries (GE, NPN, a bare zener voltage, LED colours) cannot have one.
 
+## Drill templates
+
+- Link the Tayda drill template from every circuit whose source provides one. PedalPCB lists the
+  drill template on the product page and usually links the Tayda box-design tool
+  (`drill.taydakits.com/box-designs/new?public_key=...`); AionFX and Dead End FX publish them for
+  some boards. Scrape the link per vendor into the circuit (a `drill_template` URL), show it on the
+  circuit page beside the enclosure, and then add a Drill templates page to the Workbench that
+  lists them all. Lane's hand-kept table (10 templates: 4 PedalPCB, 4 AionFX, 2 Dead End FX) is in
+  the README of github.com/drlholloway/diy-guitar-effects and is not shown on the site yet.
+
 ## Parser wishes
 
 - Schematic pairing now runs for every board whose parts list is thin, quantity-only or

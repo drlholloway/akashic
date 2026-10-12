@@ -20,6 +20,7 @@
 			: []
 	);
 	const makerBoard = $derived(siblings.find((s) => s.own_design));
+	const clones = $derived(siblings.filter((s) => !s.own_design).length); // the maker's own board is no clone of itself
 	const variants = $derived(c.variants ?? []);
 	let variant = $state('');
 	$effect(() => {
@@ -84,7 +85,7 @@
 			<p class="label"><a href="{base}/?vendor={c.vendor}">{VENDOR_NAMES[c.vendor]}</a>{#if c.sku} · <span class="mono">{c.sku}</span>{/if}</p>
 			<h1>{c.name}{#if c.subtitle}<span class="sub">{c.subtitle}</span>{/if}{#if lay.verified === true}<span class="vtag" title="{VENDOR_NAMES[c.vendor]} marks this layout as verified: someone has built it and it works">Verified</span>{/if}</h1>
 			{#if c.original}
-				<p class="based">{c.own_design ? 'The original ' : 'Based on the '}{#each originalsOf(c) as o, n}{#if n}{' and the '}{/if}<a href="{base}/?based={encodeURIComponent(o)}">{o}</a>{/each}{#if siblings.length}<span class="dim"> · {siblings.length} other {siblings.length === 1 ? (c.own_design ? 'board or layout builds' : 'board clones') : (c.own_design ? 'boards and layouts build' : 'boards clone')} {originalsOf(c).length > 1 ? 'one of them' : 'it'}</span>{/if}{#if makerBoard}<span class="dim"> · the maker's own board is</span>{' '}<a href="{base}/circuit/{makerBoard.file_id}">{makerBoard.name} by {VENDOR_NAMES[makerBoard.vendor]}</a>{/if}</p>
+				<p class="based">{c.own_design ? 'The original ' : 'Based on the '}{#each originalsOf(c) as o, n}{#if n}{' and the '}{/if}<a href="{base}/?based={encodeURIComponent(o)}">{o}</a>{/each}{#if clones}<span class="dim"> · {clones} other {clones === 1 ? (c.own_design ? 'board or layout builds' : 'board clones') : (c.own_design ? 'boards and layouts build' : 'boards clone')} {originalsOf(c).length > 1 ? 'one of them' : 'it'}</span>{/if}{#if makerBoard}<span class="dim"> · the maker's own board is</span>{' '}<a href="{base}/circuit/{makerBoard.file_id}">{makerBoard.name} by {VENDOR_NAMES[makerBoard.vendor]}</a>{/if}</p>
 			{:else if c.based_on}
 				<p class="based dim">Based on {c.based_on}</p>
 			{/if}

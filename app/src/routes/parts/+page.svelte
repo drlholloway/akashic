@@ -62,7 +62,7 @@
 	<header class="head">
 		<h1>Parts cross-reference</h1>
 		<p class="lede">Every active part value across all vendors' parts lists, with the number of circuits that use it. Pick a part to see what you could build with it. Resistors and capacitors are omitted: they are in everything.</p>
-		<p class="lede">A part's page links its datasheet when one is available: the maker's own copy, or an archived copy for a discontinued part the maker no longer publishes. Transistors also list possible substitutes, matched on material, polarity and ratings.</p>
+		<p class="lede">A part's page links its datasheet when one is available: the maker's own copy, or an archived copy for a discontinued part the maker no longer publishes. Transistors also list possible substitutes, matched on material, polarity and ratings. Where to buy them is under <a class="inline" href="{base}/workbench/sourcing">Workbench</a>.</p>
 		<label class="filter">
 			<span class="label">Filter</span>
 			<input type="search" bind:value={q} placeholder="LM308, 2N5088, PT2399, A100k…" autocomplete="off" spellcheck="false" />
@@ -72,7 +72,7 @@
 		{/if}
 	</header>
 	{#each groups as g}
-		<section>
+		<section id="sec-{g.key}">
 			<h2 class="label strong">
 				<button type="button" aria-expanded={open(g.key)} aria-controls="parts-{g.key}" disabled={filtering} onclick={() => folded.toggle(g.key)}>
 					<span class="chev" aria-hidden="true"></span>{g.name} <span class="mono dim">{g.items.length}</span>
@@ -110,6 +110,8 @@
 	.parts-index { padding: 24px var(--gutter) 48px; max-width: 1180px; }
 	.head h1 { font-size: clamp(28px, 4vw, 40px); margin-bottom: 8px; }
 	.lede { max-width: 70ch; color: var(--ink-2); margin-bottom: 16px; }
+	.inline { text-decoration: underline; text-decoration-color: var(--rule-strong); text-underline-offset: 3px; }
+	section { scroll-margin-top: calc(var(--titleblock-h, 64px) + 8px); }
 	.filter { display: flex; align-items: center; gap: 10px; max-width: 460px; }
 	.filter input { flex: 1; height: 38px; padding: 0 12px; border: 1px solid var(--rule-strong); border-radius: var(--radius); background: var(--sheet-2); }
 	.filter input:focus { outline: none; border-color: var(--coat); box-shadow: 0 0 0 3px var(--coat-tint); background: var(--sheet); }

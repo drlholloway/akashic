@@ -6,6 +6,7 @@ GitHub Release notes.
 ## Unreleased
 
 ### Added
+- Workbench: a new section of one builder's notes, in the header beside Parts. Sourcing (which shop for which part and the brands to stick to, linked to the parts lists), Building (soldering iron, solder, setup and the build order) and Links (books, courses, forums, calculators and guides for having boards made), worked in from the diy-guitar-effects notes with every link checked.
 - A maker's own board is the original that layouts and clones of it name: 29 boards (Dead Astronaut, Parasit Studio, PedalPCB, God City and others) now say 'The original' and list the layouts and clones built from them, and each of those links back to the maker's board. The Effects Layouts Tremshifter layout points to Dead Astronaut's Tremshifter this way.
 - Datasheet for the GL55 series photoresistors (GL5516, GL5528, GL5537-1, GL5549): Senba's series manual, hosted here.
 - Datasheets for the audio transformers: Triad's own sheet for the TY-141P, and Xicon's 42TM, 42TL and 42TU series sheets hosted here, linked from 24 transformer part pages.
