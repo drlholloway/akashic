@@ -42,6 +42,7 @@ It ships as a static, offline-capable web app (PWA) that installs on macOS, Linu
 | God City Instruments | 24 | build guide (text table; older guides put each cell on its own line) | Shopify; Kurt Ballou's boards, guides on kurtballou.com; prices in USD |
 | 1776 Effects | 17 | build document (text table, named pots) | Shopify; prices in USD |
 | Rullywow Industries | 26 | build document (text table) | WooCommerce; originals named in the product titles; prices in USD |
+| Mod Electronics | 27 | Kit instructions (PDF): 'Part Value Type' tables on the PCB kits, captioned parts-list drawings on the terminal-strip kits; one resistor table by OCR | Complete kits (MOD Kits DIY) sold through Amplified Parts, which turns scripted requests away, so no prices; discontinued kits kept while their documents are up |
 | MAS Effects | 6 | PDFs and a CSV on mas-effects.com and GitHub; schematic images paired by OCR | Shopify DIY collection, mostly kits; only the circuit PCBs are listed; prices in USD |
 | Tonepad | 55 | parts list on the layout page ('R1, R2 – 1M' or 'qty - value' per section) | Classic ASP catalog; layouts served only with the project page as referer; prices in USD |
 | WRAA Labs | 4 | inline list in the build guide's page text ('R1 = 1k') | Big Cartel; lo-fi digital kits; prices in GBP |

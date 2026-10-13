@@ -73,7 +73,7 @@
 
 <svelte:head>
 	<title>{c.name}{c.original && !c.own_design ? ` (${c.original})` : ''} · {VENDOR_NAMES[c.vendor]} · Akashic</title>
-	<meta name="description" content="{c.name} by {VENDOR_NAMES[c.vendor]}{c.original && !c.own_design ? `, based on the ${c.original}` : ''}. Parts list, controls, enclosure and {VENDOR_KIND[c.vendor] === 'layout' ? 'the board layout to build it from' : 'where to buy the PCB'}." />
+	<meta name="description" content="{c.name} by {VENDOR_NAMES[c.vendor]}{c.original && !c.own_design ? `, based on the ${c.original}` : ''}. Parts list, controls, enclosure and {VENDOR_KIND[c.vendor] === 'layout' ? 'the board layout to build it from' : VENDOR_KIND[c.vendor] === 'kit' ? 'where to buy the kit' : 'where to buy the PCB'}." />
 </svelte:head>
 
 <article class="circuit">
@@ -101,6 +101,7 @@
 					<div><dt class="label">Build</dt><dd><a href="{base}/?build={lay.build}">{BUILD_NAMES[lay.build ?? 'vero']}</a>{#if lay.board} <span class="mono">· {lay.board.replace('x', '×')}</span>{/if}{#if lay.cuts != null} <span class="dim">· {lay.cuts} cuts{#if lay.links != null}, {lay.links} links{/if}</span>{/if}</dd></div>
 					{#if lay.verified != null}<div><dt class="label">Layout</dt><dd>{#if lay.verified}Verified <span class="dim">· {VENDOR_NAMES[c.vendor]} marks it as built and working</span>{:else}<span class="warn">Unverified</span> <span class="dim">· no build reported at {VENDOR_NAMES[c.vendor]} yet</span>{/if}</dd></div>{/if}
 				{:else}
+				{#if lay.build}<div><dt class="label">Build</dt><dd><a href="{base}/?build={lay.build}">{BUILD_NAMES[lay.build]}</a>{#if VENDOR_KIND[c.vendor] === 'kit'} <span class="dim">· point to point on terminal strips</span>{/if}</dd></div>{/if}
 				<div><dt class="label">Price</dt><dd class="mono">{currency.format(c.price, c.currency) || 'see vendor'}{#if c.price != null && currency.convert(c.price, c.currency).converted}<span class="dim native">{currency.native(c.price, c.currency)} listed</span>{/if}{#if c.delisted}<span class="warn stock">no longer listed</span>{:else if c.in_stock === false}<span class="warn stock">out of stock</span>{:else if c.in_stock}<span class="dim stock">in stock</span>{/if}</dd></div>
 					{#if lay.also?.length}<div><dt class="label">Also as</dt><dd>{#each lay.also as a, i}{i ? ' · ' : ''}<a href={a.url} target="_blank" rel="noopener">{BUILD_NAMES[a.build]} layout</a>{/each} <span class="dim">· from {VENDOR_NAMES[c.vendor]}</span></dd></div>{/if}
 				{/if}

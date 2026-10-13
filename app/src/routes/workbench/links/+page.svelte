@@ -12,6 +12,12 @@
 			]
 		},
 		{
+			title: 'Kits',
+			links: [
+				{ name: 'Mod Electronics (MOD Kits DIY)', href: 'https://www.modelectronics.com/pedal-kits', note: 'Complete pedal kits rated by build difficulty, most wired point to point on terminal strips, with full instructions and schematics. Sold through Amplified Parts; the kits are also in the library here.' }
+			]
+		},
+		{
 			title: 'Ask',
 			links: [
 				{ name: 'DIY Stompboxes', href: 'https://www.diystompboxes.com/', note: 'The long-running forum.' },

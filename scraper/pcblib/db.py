@@ -99,6 +99,8 @@ VENDORS = {
                  "Build documents are indexed and linked, not redistributed."),
     "mas": ("MAS Effects", "https://shop.mas-effects.com/collections/diy",
             "Documents on mas-effects.com and GitHub are indexed and linked, not redistributed."),
+    "modelectronics": ("Mod Electronics", "https://www.modelectronics.com/pedal-kits",
+                       "Kit instructions and schematics are indexed and linked, not redistributed."),
     "tonepad": ("Tonepad", "https://www.tonepad.com/catalog2.asp",
                 "Layouts are © their authors and served by tonepad.com only from the project page; indexed and linked, not redistributed."),
     "wraa": ("WRAA Labs", "https://wraa.bigcartel.com/category/pedal-kit",
@@ -157,9 +159,10 @@ VENDORS = {
 
 
 # What the vendor sells: "shop" (a PCB), "projects" (order the board from a fab), "blog" (a schematic to read),
-# "layout" (a stripboard, tag strip, turret or perfboard drawing to build from).
+# "layout" (a stripboard, tag strip, turret or perfboard drawing to build from), "kit" (a complete kit: parts,
+# enclosure and instructions).
 VENDOR_KIND = {"pcbway-gtu": "projects", "cryptid": "repo", "rwlpedal": "repo", "scientificguitarist": "repo", "sheepygit": "repo", "bentfishbowl": "blog", "effdub": "blog", "expanon": "archive", "schalltechnik": "blog",
-               "tagboardeffects": "layout", "dirtbox": "layout", "effectslayouts-blog": "layout"}
+               "tagboardeffects": "layout", "dirtbox": "layout", "effectslayouts-blog": "layout", "modelectronics": "kit"}
 
 # The site owner's own designs: their schematic and photo are served, not only linked.
 OWNER_VENDORS = {"cryptid"}
