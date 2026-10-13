@@ -1,6 +1,6 @@
 import { browser } from '$app/environment';
 import { base } from '$app/paths';
-import type { ChangeWeek, Circuit, IndexEntry, PartEntry, SubsEntry, VendorInfo } from './types';
+import type { ChangeWeek, Circuit, IndexEntry, Needs, PartEntry, SubsEntry, VendorInfo } from './types';
 
 let indexPromise: Promise<IndexEntry[]> | null = null;
 let partsPromise: Promise<PartEntry[]> | null = null;
@@ -33,6 +33,12 @@ export function loadIndex(fetchFn: Fetch = fetch): Promise<IndexEntry[]> {
 export function loadParts(fetchFn: Fetch = fetch): Promise<PartEntry[]> {
 	partsPromise ??= getLibraryJson<PartEntry[]>(fetchFn, 'parts.json');
 	return partsPromise;
+}
+
+let needsPromise: Promise<Needs> | null = null;
+export function loadNeeds(fetchFn: Fetch = fetch): Promise<Needs> {
+	needsPromise ??= getLibraryJson<Needs>(fetchFn, 'needs.json');
+	return needsPromise;
 }
 
 export interface LibraryMeta {

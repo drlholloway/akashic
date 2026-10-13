@@ -4,6 +4,7 @@ Outputs (in app/static/data/):
   index.json     – one compact record per circuit for the list + search index
   circuits/<id>.json – full record including BOM and description
   parts.json     – part value -> circuit ids (the cross-reference index)
+  needs.json     – what each board takes (alternatives and how many), for 'What can I build'
   vendors.json
   images/<vendor>/<slug>.png – schematic previews (only when --include-images)
 """
@@ -21,7 +22,7 @@ from . import db as dbm
 from .corrections import UNCERTAIN
 from .datasheets import SHEET_ONLY, all_sheets, is_selector, table as datasheet_table
 from .originals import COVERS, harmonize, key as original_key, learn_brands, original
-from .normalize import catalog_category, catalog_keys, ic_name, zener_choices
+from .normalize import catalog_category, catalog_keys, ic_name, zener_choices, zener_of_part
 from .paths import EXPORT_DIR, owner_schematic
 
 
@@ -105,6 +106,43 @@ def _maker_key(name: str) -> str:
     return re.sub(r"[^a-z0-9]+", "", _MAKER_WORDS.sub("", name.lower()))
 
 
+# What may follow a part number and still name the same part: a package, grade or temperature code
+# ('TL072' + 'CP', 'BC549' + 'C', '2SC1815' + '-GR', 'ATTINY85' + '-20PU'). A digit straight after is
+# another part (2N508 + 8), and the few codes below change what the part is or how it is fitted.
+_SUFFIX = re.compile(r"-?[A-Z][A-Z0-9.-]{0,7}|-\d[A-Z0-9.-]{0,6}")
+_NOT_SUFFIX = {"UB", "RETROFIT", "SMD", "-2-PART"}
+_NO_SUFFIX = {"7660"}  # the 7660S takes a higher supply (normalize.ic_name keeps them apart)
+
+
+def _same_part(parts: list[dict]) -> list[tuple[str, str]]:
+    """Pairs of catalog keys, (plain, fuller), that are one part written two ways: 'BC549' and 'BC549C',
+    '78L05' and '78L05ACZ', and an op amp filed under its bare number with a maker's spelling of it
+    ('4558' and 'NE4558N'). Two fuller spellings are not paired with each other: a BC549B is no BC549C."""
+    pairs: list[tuple[str, str]] = []
+    for cat in ("IC", "Q", "D", "OPTO"):
+        values = {p["value"] for p in parts if p["category"] == cat}
+        for v in values:
+            for n in range(4, len(v)):
+                if v[:n] in values and v[:n] not in _NO_SUFFIX and v[n:] not in _NOT_SUFFIX and _SUFFIX.fullmatch(v[n:]):
+                    pairs.append((f"{cat}:{v[:n]}", f"{cat}:{v}"))
+            if "-" in v and (plain := v.replace("-", "")) in values:
+                pairs.append((f"{cat}:{plain}", f"{cat}:{v}"))  # '2SK30A-GR' and '2SK30AGR'
+            if cat == "IC" and (m := re.fullmatch(r"[A-Z]{1,4}(\d{3,5})[A-Z]{0,4}", v)) and m.group(1) in values:
+                pairs.append((f"IC:{m.group(1)}", f"IC:{v}"))
+    return sorted(set(pairs))
+
+
+def _row_qty(ref: str) -> int:
+    """How many parts a row stands for: '×3' on a layout's legend, 'Q1, Q2' or 'D1-D4' on a table, else one."""
+    if m := re.fullmatch(r"[×x]\s?(\d{1,2})", ref.strip()):
+        return int(m.group(1))
+    n = 0
+    for piece in re.split(r"[,;&]|\band\b", ref):
+        m = re.fullmatch(r"\s*([A-Za-z]{1,4})(\d{1,3})\s*[-–]\s*(?:\1)?(\d{1,3})\s*", piece)
+        n += max(1, int(m.group(3)) - int(m.group(2)) + 1) if m and int(m.group(3)) - int(m.group(2)) < 16 else 1 if piece.strip() else 0
+    return max(1, n)
+
+
 def run(images: bool = False) -> None:
     """images=True also copies cached schematic PNGs into the bundle (local use only)."""
     import shutil
@@ -117,6 +155,7 @@ def run(images: bool = False) -> None:
     index = []
     pending: list[dict] = []
     parts: dict[str, dict] = {}
+    needs: dict[str, tuple[dict, int]] = {}
     with dbm.connect() as conn:
         vendors = {r["id"]: {**dict(r), "kind": dbm.VENDOR_KIND.get(r["id"], "shop"), "warning": dbm.VENDOR_WARNING.get(r["id"], "")}
                    for r in conn.execute("SELECT * FROM vendors")}
@@ -164,12 +203,19 @@ def run(images: bool = False) -> None:
                 **({"own_design": True} if c.get("own_design") else {}),
             })
             counted = {id(b) for b in bom}
+            need: dict[tuple[str, ...], int] = {}  # what the board takes: each row's alternatives, and how many of them
+            unread = 0
             for b in c["bom"]:
                 if b["category"] in ("R", "C", "LED", "HW", "CONN", "OTHER", ""):
                     continue  # passives and indicator LEDs are too common to be a useful cross-reference
-                for val in catalog_keys(b["category"], b["norm_value"] or b["value"]):
-                    cat = catalog_category(b["category"], val)
-                    key = f"{cat}:{val}"
+                row_keys = [f"{catalog_category(b['category'], val)}:{val}" for val in catalog_keys(b["category"], b["norm_value"] or b["value"])]
+                if id(b) in counted:
+                    if row_keys:
+                        need[tuple(row_keys)] = need.get(tuple(row_keys), 0) + _row_qty(b["ref"])
+                    else:
+                        unread += 1  # a row that names no part the catalog knows ('see notes', 'your choice')
+                for key in row_keys:
+                    cat, val = key.split(":", 1)
                     b.setdefault("xref", []).append(key)  # becomes [value, part page] once the pages are named
                     if id(b) not in counted:
                         continue  # a later variant's row links to the part but is not another board using it
@@ -179,6 +225,8 @@ def run(images: bool = False) -> None:
                     p["circuits"].add(c["id"])
                     if b["part_type"] and not re.search(r"\b(?:qty|quantity|value|description|designator)\b", b["part_type"], re.I):
                         p["types"][b["part_type"]] = p["types"].get(b["part_type"], 0) + 1
+            if need:
+                needs[c["id"]] = (need, unread)
             if images and c.get("schematic_local"):
                 src = DATA_DIR / c["schematic_local"]
                 if src.exists():
@@ -228,6 +276,22 @@ def run(images: bool = False) -> None:
             if "xref" in b:
                 b["xref"] = [page[k] for k in b["xref"] if k in page]
         (EXPORT_DIR / "circuits" / f"{c['file_id']}.json").write_text(json.dumps(c, ensure_ascii=False))
+    # What each board takes, for 'What can I build': parts by their place in parts.json, one entry per
+    # distinct requirement as [how many, part, alternative, ...]. 'also' is what owning a part covers
+    # besides itself: a 1N4739 is a 9V1 zener, a TL072CP is a TL072 and a TL072 will do for a TL072CP.
+    at = {p["key"]: i for i, p in enumerate(parts_out)}
+    also: dict[int, set[int]] = defaultdict(set)
+    for p in parts_out:
+        if p["category"] == "D" and (z := "D:" + zener_of_part(p["value"])) != "D:" and z in at and z != p["key"]:
+            also[at[p["key"]]].add(at[z])
+    for a, b in _same_part(parts_out):  # the plain part number and its fuller spelling stand in for each other
+        also[at[a]].add(at[b])
+        also[at[b]].add(at[a])
+    (EXPORT_DIR / "needs.json").write_text(json.dumps({
+        "also": {i: sorted(v) for i, v in sorted(also.items())},
+        "circuits": {cid: {"n": [[n, *(at[k] for k in keys)] for keys, n in need.items()], **({"u": unread} if unread else {})}
+                     for cid, (need, unread) in needs.items()},
+    }, separators=(",", ":")))
     (EXPORT_DIR / "subs.json").write_text(json.dumps(_transistor_subs(conn), ensure_ascii=False))
     (EXPORT_DIR / "index.json").write_text(json.dumps(index, ensure_ascii=False))
     (EXPORT_DIR / "parts.json").write_text(json.dumps(parts_out, ensure_ascii=False))

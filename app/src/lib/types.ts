@@ -110,6 +110,14 @@ export interface PartEntry {
 	slug: string;
 }
 
+/** needs.json: what each board takes, for 'What can I build'. Parts are named by their place in parts.json. */
+export interface Needs {
+	/** What owning a part covers besides itself: a 1N4739 is a 9V1 zener. */
+	also: Record<string, number[]>;
+	/** n: one entry per requirement, [how many, part, alternative, ...]. u: rows that name no part the catalog knows. */
+	circuits: Record<string, { n: number[][]; u?: number }>;
+}
+
 export interface VendorInfo {
 	id: Vendor;
 	name: string;

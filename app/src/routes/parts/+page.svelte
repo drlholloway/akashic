@@ -61,7 +61,7 @@
 <div class="parts-index">
 	<header class="head">
 		<h1>Parts cross-reference</h1>
-		<p class="lede">Every active part value across all vendors' parts lists, with the number of circuits that use it. Pick a part to see what you could build with it. Resistors and capacitors are omitted: they are in everything.</p>
+		<p class="lede">Every active part value across all vendors' parts lists, with the number of circuits that use it. Pick a part to see what you could build with it, or list everything you have under <a class="inline" href="{base}/workbench/build">What can I build</a>. Resistors and capacitors are omitted: they are in everything.</p>
 		<p class="lede">A part's page links its datasheet when one is available: the maker's own copy, or an archived copy for a discontinued part the maker no longer publishes. Transistors also list possible substitutes, matched on material, polarity and ratings. Where to buy them is under <a class="inline" href="{base}/workbench/sourcing">Workbench</a>.</p>
 		<label class="filter">
 			<span class="label">Filter</span>
