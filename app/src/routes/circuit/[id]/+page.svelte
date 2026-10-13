@@ -173,6 +173,7 @@
 			{#if c.bom.length}<button type="button" class="btn ghost" onclick={copyBom}>{copied ? 'Copied' : 'Copy as TSV'}</button>{/if}
 			<a class="btn ghost report-link" href={wrongParseUrl(c.name, page.url.href)} target="_blank" rel="noopener" title="Open a GitHub issue with this circuit filled in">Report a wrong parse</a>
 		</div>
+		{#if c.bom.length}<p class="hint">Got parts in a drawer? <a href="{base}/workbench/build">See what you can build with them</a>.</p>{/if}
 		{#if variants.length > 1}
 			<div class="variants" role="group" aria-label="Build variant">
 				<span class="label">Variant</span>
@@ -271,6 +272,9 @@
 	.small { font-size: 12.5px; margin-top: 6px; }
 	.bom-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 8px; }
 	.bom-head h2 { margin: 0; }
+	.hint { margin: 0 0 10px; font-size: 14px; color: var(--ink-3); }
+	.hint a { color: var(--ink-2); text-decoration: underline; text-decoration-color: var(--rule-strong); text-underline-offset: 3px; }
+	.hint a:hover { color: var(--ink); text-decoration-color: var(--coat); }
 	.parts .group th { font-family: var(--label); font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; padding: 14px 10px 6px; border-bottom: 1px solid var(--rule-strong); position: static; }
 	.parts td.ref { width: 7ch; color: var(--ink-2); }
 	.parts td.val { font-weight: 600; }

@@ -6,6 +6,7 @@ GitHub Release notes.
 ## Unreleased
 
 ### Added
+- A line above the circuits table and above each circuit's parts list points to What can I build.
 - What can I build, under Workbench: list the parts you have, picked from the parts catalog, and see the circuits they cover and the ones one, two or three parts away, with the parts that would finish the most boards. A row's alternatives count as one need ('2N5088 or 2N5089', a 1N4739 for a 9V1 zener), a plain part number and its fuller spelling stand in for each other (BC549 and BC549C, 4558 and NE4558N, 78L05 and 78L05ACZ), quantities are optional, and a whole kind of part (switches, at first) can be taken as on hand. The list stays in the browser.
 - Workbench links: Huntington Audio Labs, for breadboarding tools and learning kits.
 - Datasheets checked against the ones Aion FX links on its component pages: Xvive's VTL5C6 sheet hosted here, Xvive's own VTL5C4 and VTL5C9 sheets linked, Aion's LT44 / P631M transformer sheet linked, and eight spellings (OP07CP, 2SK208, 2SK208-R, C4558, NE4558N, TL4558P, UPC1458, TL1458) linked to the sheet their part already had.

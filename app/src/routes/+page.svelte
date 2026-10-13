@@ -202,6 +202,7 @@
 				</select>
 			</label>
 		</div>
+		<p class="hint">Got parts in a drawer? <a href="{base}/workbench/build">See what you can build with them</a>.</p>
 		<CircuitTable rows={results} onOriginal={(b) => update({ basedOn: b })} />
 	</section>
 </div>
@@ -235,6 +236,9 @@
 	.bar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; padding: 4px 10px 12px; }
 	.bar .count { margin: 0; }
 	.applied { display: flex; flex-wrap: wrap; gap: 6px; flex: 1; }
+	.hint { margin: -4px 10px 10px; font-size: 14px; color: var(--ink-3); }
+	.hint a { color: var(--ink-2); text-decoration: underline; text-decoration-color: var(--rule-strong); text-underline-offset: 3px; }
+	.hint a:hover { color: var(--ink); text-decoration-color: var(--coat); }
 	.sort { display: inline-flex; align-items: center; gap: 8px; }
 	.sort select { border: 1px solid var(--rule-strong); border-radius: var(--radius); background: var(--sheet); padding: 4px 8px; }
 	@media (max-width: 1000px) {
