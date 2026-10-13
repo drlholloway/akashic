@@ -23,6 +23,7 @@
 			title: 'Tools and lookups',
 			links: [
 				{ name: 'Resistor color code decoder', href: 'https://circuitdigest.com/calculators/5-band-resistor-color-code-calculator', note: 'For 5-band resistors.' },
+				{ name: 'Huntington Audio Labs', href: 'https://huntingtonaudio.com/', note: 'A one-person workshop and shop for breadboarding: pot, trimmer and switch breakouts, test jigs, and explorer board kits for learning how a fuzz or a common-emitter stage works. It also runs the reference site the next link is on.' },
 				{ name: 'Semiconductor company logos', href: 'https://reference.huntingtonaudio.com/semiconductor-logos', note: 'Who made the chip, from the logo printed on it.' },
 				{ name: 'What Can I Build?', href: 'https://dvhx.github.io/what-can-i-build/', note: 'Enter the parts you have and see which circuits they cover.' },
 				{ name: 'Stompbox Layout', href: 'https://stompboxlayout.com/', note: 'Create drill templates and see an enclosure layout before you drill. It also sells an STL file of any template you make.' }
