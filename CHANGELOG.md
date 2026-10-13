@@ -6,6 +6,7 @@ GitHub Release notes.
 ## Unreleased
 
 ### Added
+- Datasheets checked against the ones Aion FX links on its component pages: Xvive's VTL5C6 sheet hosted here, Xvive's own VTL5C4 and VTL5C9 sheets linked, Aion's LT44 / P631M transformer sheet linked, and eight spellings (OP07CP, 2SK208, 2SK208-R, C4558, NE4558N, TL4558P, UPC1458, TL1458) linked to the sheet their part already had.
 - Aleph Null's circuits (13 layouts) say where to get a PCB: Aleph Null sells boards directly, and each page links their PedalPCB forum profile.
 - Workbench links: the Tayda UV Artwork Processor (wiki and downloads), listed with Sightings under 'My tools'.
 - Workbench links: Stompbox Layout, for making drill templates and seeing an enclosure layout before drilling, and Sightings, the companion app for the Peak Atlas DCA75 analyzer, with its downloads and help pages.

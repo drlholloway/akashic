@@ -109,11 +109,11 @@ DISCONTINUED: dict[str, list[str]] = {
     "2N2924": ["2N2924"], "2N6110": ["2N6110"], "2G381": ["2G381"], "2SK222": ["2SK222", "K222E"],
     "2SA1335": ["2SA1335", "2SA1335GR"], "TX-429D": ["TX-429D"],
     # optos
-    "VTL5C2": ["VTL5C2"], "VTL5C3": ["VTL5C3"], "NSL-32": ["NSL-32", "NSL32-R3"], "CLM6000": ["CLM6000", "CLM600"],
+    "VTL5C2": ["VTL5C2"], "VTL5C3": ["VTL5C3"], "VTL5C6": ["VTL5C6"], "NSL-32": ["NSL-32", "NSL32-R3"], "CLM6000": ["CLM6000", "CLM600"],
     "NSL-19M51": ["NSL-19M51"],
 }
 # Hosted sheets of parts that may still be made: the sheet was not found on the maker's own site.
-SHEET_ONLY = {"DT-38", "42TM", "42TL", "42TU", "GL55"}
+SHEET_ONLY = {"DT-38", "42TM", "42TL", "42TU", "GL55", "VTL5C6"}
 
 # Hosted files that are a row in a maker's selector table or catalog, not a full datasheet: the part
 # page says so, and the worklist keeps asking for the real sheet. Set by eye when a file is hosted.
