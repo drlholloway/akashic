@@ -11,7 +11,7 @@ import re
 from .models import BomRow
 from .normalize import normalize_row
 
-BUILDS = ("pcb", "vero", "tagboard", "turret", "perfboard")
+BUILDS = ("pcb", "vero", "tagboard", "turret", "perfboard", "p2p")
 
 _NOTE = "OCR; from the layout legend"
 _REFS = r"(?:IC|Q|D|T|U|LED|TR|VR)\d{1,2}(?:\s?[-–/&,]\s?(?:(?:IC|Q|D|T|U|LED|TR|VR)?\d{1,2}))*"

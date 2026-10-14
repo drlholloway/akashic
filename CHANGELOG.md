@@ -6,6 +6,8 @@ GitHub Release notes.
 ## Unreleased
 
 ### Added
+- New source: Vero P2P (vero-p2p.blogspot.com), stripboard, point-to-point, tag board and turret layouts of vintage and boutique fuzzes and drives. Point to point is a new build kind, with its own chip in the Build filter. No parts lists yet: the drawings print values without designators.
+- Workbench links: the Vero P2P table of Tone Bender MkIII component values, under Learn.
 - New source: Mod Electronics (MOD Kits DIY), 27 pedal kits. Most are wired point to point on terminal strips and are listed as tagboard builds; their parts come from the captioned parts-list drawings in the instructions, the PCB kits' from their bill of materials. Each links its instructions, schematic and mod sheets. No prices: the kits are sold through Amplified Parts, which does not answer scripted requests. Also linked from the Workbench, under a new 'Kits' group.
 - A line above the circuits table and above each circuit's parts list points to What can I build.
 - What can I build, under Workbench: list the parts you have, picked from the parts catalog, and see the circuits they cover and the ones one, two or three parts away, with the parts that would finish the most boards. A row's alternatives count as one need ('2N5088 or 2N5089', a 1N4739 for a 9V1 zener), a plain part number and its fuller spelling stand in for each other (BC549 and BC549C, 4558 and NE4558N, 78L05 and 78L05ACZ), quantities are optional, and a whole kind of part (switches, at first) can be taken as on hand. The list stays in the browser.

@@ -25,10 +25,12 @@ _CATEGORY = {"fuzz": "Fuzz", "overdrive": "Overdrive", "distortion": "Distortion
              "pre-amp": "Preamp / Amp-in-a-box", "pre amp": "Preamp / Amp-in-a-box", "amp emulation": "Preamp / Amp-in-a-box",
              "amp emulator": "Preamp / Amp-in-a-box", "amp sim": "Preamp / Amp-in-a-box", "utility": "Utility", "buffer": "Utility",
              "synth": "Ring Mod / Synth", "ringmod": "Ring Mod / Synth", "ring modulator": "Ring Mod / Synth", "noise gate": "Noise Gate",
-             "modulation": "Vibrato / Chorus", "modulator": "Vibrato / Chorus", "envelope filter": "Wah / Envelope", "bass": "Bass"}
+             "modulation": "Vibrato / Chorus", "modulator": "Vibrato / Chorus", "envelope filter": "Wah / Envelope", "bass": "Bass",
+             "treble boost": "Boost", "bass boost": "Boost", "equaliser": "EQ / Filter", "equalizer": "EQ / Filter",
+             "limiter": "Compressor"}
 _BUILD_LABEL = {"vero": "vero", "stripboard": "vero", "tagboard": "tagboard", "tag board": "tagboard", "tag strip": "tagboard",
                 "turret": "turret", "turret board": "turret", "eyelet": "turret", "perf": "perfboard", "perfboard": "perfboard",
-                "pcb": "pcb", "pcb layout": "pcb"}
+                "point to point": "p2p", "p2p": "p2p", "pcb": "pcb", "pcb layout": "pcb"}
 _STATUS = {"verified": True, "unverified": False, "unverifed": False}
 _DIFFICULTY = {"easy": "Easy", "medium": "Medium", "difficult": "Difficult", "hard": "Difficult"}
 _BOX = re.compile(r"^(?:1590[a-z]{1,2}\d?|125b|1790ns)$", re.I)

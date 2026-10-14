@@ -40,7 +40,7 @@
 <div class="originals">
 	<header class="head">
 		<h1>Originals</h1>
-		<p class="lede">The commercial pedals these boards are based on, {groups.length.toLocaleString()} listed by name, brand then pedal, with how many circuits clone each and how they are built: on a bought PCB, or from a vero, perfboard, tagboard or turret layout. Pick one to compare every take side by side.</p>
+		<p class="lede">The commercial pedals these boards are based on, {groups.length.toLocaleString()} listed by name, brand then pedal, with how many circuits clone each and how they are built: on a bought PCB, or from a vero, perfboard, tagboard, turret or point-to-point layout. Pick one to compare every take side by side.</p>
 		<label class="filter">
 			<span class="label">Filter</span>
 			<input type="search" bind:value={q} placeholder="Klon, Rat, Big Muff, Tube Screamer…" autocomplete="off" spellcheck="false" />
