@@ -1,0 +1,3 @@
+# Read while prerendering each circuit page and embedded in it; the app fetches data/sets/ instead.
+# One file per circuit would pass the 20,000-file limit of a Workers deploy.
+data/circuits

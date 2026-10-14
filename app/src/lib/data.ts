@@ -63,10 +63,37 @@ export function loadVendors(fetchFn: Fetch = fetch): Promise<Record<string, Vend
 	return vendorsPromise;
 }
 
+/** The bundle of data/sets/ a circuit is in: FNV-1a of its id, as set_of in scraper/pcblib/export.py. */
+function setOf(fileId: string): string {
+	let h = 0x811c9dc5;
+	for (const b of new TextEncoder().encode(fileId)) h = Math.imul(h ^ b, 0x01000193) >>> 0;
+	return (h % 512).toString(16).padStart(3, '0');
+}
+
+const setCache = new Map<string, Promise<Record<string, Circuit>>>();
+const embedded = new Set<string>(); // circuits whose record the opened page carries, used once
+
+/** A circuit's full record. Prerendering fetches circuits/<id>.json, which SvelteKit embeds in the page, so a
+ *  page opened directly hydrates from it. Moving to another circuit inside the app fetches the bundle it is in:
+ *  the per-circuit files are not deployed (one per circuit passes the host's 20,000-file limit). */
 export function loadCircuit(fileId: string, fetchFn: Fetch = fetch): Promise<Circuit> {
 	let p = circuitCache.get(fileId);
 	if (!p) {
-		p = getJson<Circuit>(fetchFn, `circuits/${fileId}.json`);
+		const path = `circuits/${fileId}.json`;
+		const inPage = browser && !embedded.has(fileId) && document.querySelector(`script[data-sveltekit-fetched][data-url="${base}/data/${path}"]`);
+		if (!browser || inPage) {
+			embedded.add(fileId);
+			p = getJson<Circuit>(fetchFn, path);
+		} else {
+			const name = setOf(fileId);
+			let set = setCache.get(name);
+			if (!set) {
+				set = getJson<Record<string, Circuit>>(fetchFn, `sets/${name}.json`);
+				setCache.set(name, set);
+				set.catch(() => setCache.delete(name));
+			}
+			p = set.then((s) => s[fileId] ?? Promise.reject(new Error(`${fileId}: not in set ${name}`)));
+		}
 		circuitCache.set(fileId, p);
 		p.catch(() => circuitCache.delete(fileId)); // a failed fetch (offline) is tried again on the next visit
 	}

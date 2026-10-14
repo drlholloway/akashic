@@ -2,7 +2,10 @@
 
 Outputs (in app/static/data/):
   index.json     – one compact record per circuit for the list + search index
-  circuits/<id>.json – full record including BOM and description
+  circuits/<id>.json – full record including BOM and description; read while prerendering each circuit
+                       page, never deployed (static/.assetsignore)
+  sets/<nnn>.json – the same records in 512 bundles (set_of), which the app fetches when it moves to a
+                    circuit page: one file per circuit would pass the host's 20,000-file limit
   parts.json     – part value -> circuit ids (the cross-reference index)
   needs.json     – what each board takes (alternatives and how many), for 'What can I build'
   vendors.json
@@ -13,6 +16,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 import re
+import shutil
 import sqlite3
 import subprocess
 from collections import defaultdict
@@ -24,6 +28,16 @@ from .datasheets import SHEET_ONLY, all_sheets, is_selector, table as datasheet_
 from .originals import COVERS, harmonize, key as original_key, learn_brands, original
 from .normalize import catalog_category, catalog_keys, ic_name, zener_choices, zener_of_part
 from .paths import EXPORT_DIR, owner_schematic
+
+SETS = 512
+
+
+def set_of(file_id: str) -> str:
+    """The bundle a circuit's record is in: FNV-1a of its id, as setOf in app/src/lib/data.ts computes it."""
+    h = 0x811C9DC5
+    for b in file_id.encode():
+        h = ((h ^ b) * 0x01000193) & 0xFFFFFFFF
+    return f"{h % SETS:03x}"
 
 
 def _row(r: sqlite3.Row) -> dict:
@@ -271,11 +285,17 @@ def run(images: bool = False) -> None:
         else:
             seen[p["slug"]] = 1
     page = {p["key"]: [p["value"], p["slug"]] for p in parts_out}
+    sets: dict[str, dict] = defaultdict(dict)
     for c in pending:
         for b in c["bom"]:
             if "xref" in b:
                 b["xref"] = [page[k] for k in b["xref"] if k in page]
         (EXPORT_DIR / "circuits" / f"{c['file_id']}.json").write_text(json.dumps(c, ensure_ascii=False))
+        sets[set_of(c["file_id"])][c["file_id"]] = c
+    shutil.rmtree(EXPORT_DIR / "sets", ignore_errors=True)
+    (EXPORT_DIR / "sets").mkdir()
+    for name, members in sets.items():
+        (EXPORT_DIR / "sets" / f"{name}.json").write_text(json.dumps(members, ensure_ascii=False, separators=(",", ":")))
     # What each board takes, for 'What can I build': parts by their place in parts.json, one entry per
     # distinct requirement as [how many, part, alternative, ...]. 'also' is what owning a part covers
     # besides itself: a 1N4739 is a 9V1 zener, a TL072CP is a TL072 and a TL072 will do for a TL072CP.
