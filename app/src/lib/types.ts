@@ -1,4 +1,4 @@
-export type Vendor = 'pedalpcb' | 'aionfx' | 'madbean' | 'guitarpcb' | 'fuzzdog' | 'sheepylove' | 'deadendfx' | 'moonn' | 'fivecats' | 'parasit' | 'pcbway-gtu' | 'pcbguitarmania' | 'deadastronaut' | 'bentfishbowl' | 'ggg' | 'lectricfx' | 'expanon' | 'zerogiod' | 'otrfx' | 'dirtmonger' | 'maskaudio' | 'effectslayouts' | 'jmk' | 'eae' | 'c2c' | 'deadair' | 'rwlpedal' | 'sheepygit' | 'otherpedals' | 'godcity' | 'effects1776' | 'rullywow' | 'mas' | 'tonepad' | 'wraa' | 'frog' | 'thcustom' | 'guitarelectronics' | 'opelectronics' | 'griffin' | 'coda' | 'delyk' | 'tayda' | 'schalltechnik' | 'electricdruid' | 'zeppelin' | 'moody' | 'gigahearts' | 'scientificguitarist' | 'holyisland' | 'cryptid' | 'effdub' | 'tagboardeffects' | 'dirtbox' | 'effectslayouts-blog' | 'modelectronics' | 'verop2p' | 'pedalbuilder' | 'efektpol';
+export type Vendor = 'pedalpcb' | 'aionfx' | 'madbean' | 'guitarpcb' | 'fuzzdog' | 'sheepylove' | 'deadendfx' | 'moonn' | 'fivecats' | 'parasit' | 'pcbway-gtu' | 'pcbguitarmania' | 'deadastronaut' | 'bentfishbowl' | 'ggg' | 'lectricfx' | 'expanon' | 'zerogiod' | 'otrfx' | 'dirtmonger' | 'maskaudio' | 'effectslayouts' | 'jmk' | 'eae' | 'c2c' | 'deadair' | 'rwlpedal' | 'sheepygit' | 'otherpedals' | 'godcity' | 'effects1776' | 'rullywow' | 'mas' | 'tonepad' | 'wraa' | 'frog' | 'thcustom' | 'guitarelectronics' | 'opelectronics' | 'griffin' | 'coda' | 'delyk' | 'tayda' | 'schalltechnik' | 'electricdruid' | 'zeppelin' | 'moody' | 'gigahearts' | 'scientificguitarist' | 'holyisland' | 'cryptid' | 'effdub' | 'tagboardeffects' | 'dirtbox' | 'effectslayouts-blog' | 'modelectronics' | 'verop2p' | 'pedalbuilder' | 'efektpol' | 'midwayfair';
 
 export interface IndexEntry {
 	id: string;
@@ -164,6 +164,7 @@ export const VENDOR_NAMES: Record<Vendor, string> = {
 	modelectronics: 'Mod Electronics',
 	verop2p: 'Vero P2P',
 	pedalbuilder: 'Naegele Audio',
+	midwayfair: 'Jon Patton',
 	efektpol: 'EfektPol',
 	tonepad: 'Tonepad',
 	wraa: 'WRAA Labs',
@@ -190,10 +191,13 @@ export const VENDOR_NAMES: Record<Vendor, string> = {
 };
 
 export type VendorKind = 'shop' | 'projects' | 'repo' | 'blog' | 'archive' | 'layout' | 'kit';
-export const VENDOR_KIND: Partial<Record<Vendor, VendorKind>> = { 'pcbway-gtu': 'projects', rwlpedal: 'repo', sheepygit: 'repo', scientificguitarist: 'repo', cryptid: 'repo', bentfishbowl: 'blog', effdub: 'blog', expanon: 'archive', schalltechnik: 'blog', tagboardeffects: 'layout', dirtbox: 'layout', 'effectslayouts-blog': 'layout', modelectronics: 'kit', verop2p: 'layout', pedalbuilder: 'blog', efektpol: 'layout' };
+export const VENDOR_KIND: Partial<Record<Vendor, VendorKind>> = { 'pcbway-gtu': 'projects', rwlpedal: 'repo', sheepygit: 'repo', scientificguitarist: 'repo', cryptid: 'repo', bentfishbowl: 'blog', effdub: 'blog', expanon: 'archive', schalltechnik: 'blog', tagboardeffects: 'layout', dirtbox: 'layout', 'effectslayouts-blog': 'layout', modelectronics: 'kit', verop2p: 'layout', pedalbuilder: 'blog', efektpol: 'layout', midwayfair: 'projects' };
+/** The fab a 'projects' source's boards are ordered from, when it is not the source's own name. */
+export const VENDOR_FAB: Partial<Record<Vendor, string>> = { 'pcbway-gtu': 'PCBWay', midwayfair: 'OSH Park' };
+
 export function primaryAction(v: Vendor): string {
 	const k = VENDOR_KIND[v] ?? 'shop';
-	return k === 'kit' ? `See the kit at ${VENDOR_NAMES[v]}` : k === 'layout' ? `Open the layout at ${VENDOR_NAMES[v]}` : k === 'blog' ? `Read the post at ${VENDOR_NAMES[v]}` : k === 'archive' ? `Open the schematic at ${VENDOR_NAMES[v]}` : k === 'projects' ? `Order the board at ${VENDOR_NAMES[v]}` : k === 'repo' ? `Get the gerbers at ${VENDOR_NAMES[v]}` : `Buy the PCB at ${VENDOR_NAMES[v]}`;
+	return k === 'kit' ? `See the kit at ${VENDOR_NAMES[v]}` : k === 'layout' ? `Open the layout at ${VENDOR_NAMES[v]}` : k === 'blog' ? `Read the post at ${VENDOR_NAMES[v]}` : k === 'archive' ? `Open the schematic at ${VENDOR_NAMES[v]}` : k === 'projects' ? `Order the board at ${VENDOR_FAB[v] ?? VENDOR_NAMES[v]}` : k === 'repo' ? `Get the gerbers at ${VENDOR_NAMES[v]}` : `Buy the PCB at ${VENDOR_NAMES[v]}`;
 }
 
 export const PART_CATEGORY_NAMES: Record<string, string> = {

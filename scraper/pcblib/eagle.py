@@ -1,6 +1,7 @@
 """Parts lists from Eagle schematics. Eagle 6 and later save .sch files as XML, with one <part> per
 placed component (name, value, library, deviceset), so the list is exact, with no OCR. Older Eagle
-files are binary and return []. Named pots ('GAIN' valued 'A100K') become knobs; jacks, pads, frames
+files are binary and return []. A board file (.brd) works too: its <element>s carry the same name and
+value, with the package standing in for the device. Named pots ('GAIN' valued 'A100K') become knobs; jacks, pads, frames
 and power symbols are dropped."""
 from __future__ import annotations
 
@@ -10,7 +11,7 @@ import xml.etree.ElementTree as ET
 from .models import BomRow
 from .normalize import is_plausible, normalize_row
 
-_REF = re.compile(r"^(?:R|C|D|Q|IC|U|LED|L|SW|S|VR|RV|P|T|X|Y|OK|LDR|TR)\d{1,3}[A-Z]?$", re.I)
+_REF = re.compile(r"^(?:R|C|D|Q|IC|U|LED|L|SW|S|VR|RV|P|T|X|Y|OK|LDR|TR|REG|Z)\d{1,3}[A-Z]?$", re.I)
 _SKIP_LIB = re.compile(r"supply|frame", re.I)
 _SKIP_NAME = re.compile(r"^(?:IN|OUT|INPUT|OUTPUT|GND|VCC|VREF|9V|18V|DC|PWR|POWER|BATT?|JACK|J\d+|PAD\d*|TP\d*|M\d+|X\d+|LED[-_ ]?PAD|LUG\d*|FRAME\d*)$", re.I)
 _POT_VALUE = re.compile(r"^(?:[ABCW]\s?\d+(?:\.\d+)?\s?[KkMR]?|\d+(?:\.\d+)?\s?[KkMR]?\s?[ABCW]?)$")
@@ -30,10 +31,16 @@ def eagle_bom(data: bytes) -> list[BomRow]:
         return []
     rows: list[BomRow] = []
     seen: set[str] = set()
-    for p in root.iter("part"):
+    parts = list(root.iter("part")) or list(root.iter("element"))
+    for p in parts:
         name = (p.get("name") or "").strip()
         value = (p.get("value") or "").strip()
-        lib, dev = p.get("library") or "", (p.get("deviceset") or "").upper()
+        lib, dev = p.get("library") or "", (p.get("deviceset") or p.get("package") or "").upper()
+        if p.tag == "element" and re.fullmatch(r"(?i)(.+?)\s*trim(?:mer|pot)?", value):
+            value, dev = re.sub(r"(?i)\s*trim(?:mer|pot)?$", "", value), dev + " TRIM"   # '5K Trim'
+        elif p.tag == "element" and re.search(r"(?i)pot", lib) and "TRIM" not in dev:
+            dev += " POT"                                      # a panel pot drawn without a taper
+
         if not name or _SKIP_LIB.search(lib) or _SKIP_NAME.match(name) or re.match(r"^(?:GND|VCC|V\+|FRAME)", dev):
             continue
         if _REF.match(name) and not value:
@@ -43,14 +50,14 @@ def eagle_bom(data: bytes) -> list[BomRow]:
                 value = base
             elif re.search(r"[A-Z]", base) and re.search(r"\d", base):
                 value = base + re.sub(r"[^A-Z0-9]", "", (p.get("device") or "").upper())
-        if re.fullmatch(r"\d{3,4}", value) and dev.startswith("1N"):
+        if re.fullmatch(r"\d{3,4}", value) and (dev.startswith("1N") or (p.tag == "element" and name.upper().startswith("D"))):
             value = "1N" + value                               # '4001' drawn with a 1N400X symbol
         if re.search(r"3PDT|4PDT", dev + " " + value.upper()):
             continue                                           # the bypass footswitch
         cat = ptype = ""
         if not _REF.match(name):
             # A part named for its job: a knob ('GAIN' = 'A100K'), a trimmer, or a switch.
-            if _POT_VALUE.match(value) and (re.search(r"TRIM", dev) or not re.search(r"[ABCW]", value.upper())):
+            if _POT_VALUE.match(value) and (re.search(r"TRIM", dev) or not re.search(r"[ABCW]|\bPOT\b", value.upper() + " " + dev)):
                 cat, ptype = "TRIM", "Trimmer"                 # a trimmer, or a pot drawn without a taper
             elif _POT_VALUE.match(value) and (re.search(r"POT|ALPHA|R-?TRIM|VR", dev) or re.search(r"[ABCW]", value)):
                 cat, ptype = "POT", "Potentiometer"

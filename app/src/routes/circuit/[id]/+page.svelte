@@ -6,7 +6,7 @@
 	import Faceplate from '$lib/Faceplate.svelte';
 	import { currency } from '$lib/currency.svelte';
 	import { normalizeOriginal } from '$lib/search';
-	import { BUILD_NAMES, PART_CATEGORY_NAMES, PART_ORDER, VENDOR_NAMES, VENDOR_KIND, originalsOf, primaryAction, type BomRow } from '$lib/types';
+	import { BUILD_NAMES, PART_CATEGORY_NAMES, PART_ORDER, VENDOR_FAB, VENDOR_NAMES, VENDOR_KIND, originalsOf, primaryAction, type BomRow } from '$lib/types';
 
 	let { data } = $props();
 	const c = $derived(data.circuit);
@@ -166,8 +166,12 @@
 				<p>The schematic is the archived file. <a href={c.url} target="_blank" rel="noopener">Open it at {VENDOR_NAMES[c.vendor]}</a>, or <a href={c.doc_url} target="_blank" rel="noopener">browse its folder</a>.</p>
 			{:else if VENDOR_KIND[c.vendor] === 'blog'}
 				<p>The schematic is in the post. <a href={c.url} target="_blank" rel="noopener">Open it at {VENDOR_NAMES[c.vendor]}</a>. No KiCad fragment has been drawn for this circuit yet.</p>
+			{:else if VENDOR_KIND[c.vendor] === 'projects' && c.extra_docs['Eagle board file']}
+				<p>No schematic is shared with this board: the parts list was read from its <a href={c.extra_docs['Eagle board file']} target="_blank" rel="noopener">Eagle board file</a>. <a href={c.url} target="_blank" rel="noopener">Open the project at {VENDOR_FAB[c.vendor] ?? VENDOR_NAMES[c.vendor]}</a>.</p>
+			{:else if VENDOR_KIND[c.vendor] === 'projects' && c.vendor !== 'pcbway-gtu'}
+				<p>No schematic or board file is shared with this board. <a href={c.url} target="_blank" rel="noopener">Open the project at {VENDOR_FAB[c.vendor] ?? VENDOR_NAMES[c.vendor]}</a>.</p>
 			{:else if VENDOR_KIND[c.vendor] === 'projects'}
-				<p>The schematic image is on the project page. <a href={c.url} target="_blank" rel="noopener">Open it at {VENDOR_NAMES[c.vendor]}</a>.</p>
+				<p>The schematic image is on the project page. <a href={c.url} target="_blank" rel="noopener">Open it at {VENDOR_FAB[c.vendor] ?? VENDOR_NAMES[c.vendor]}</a>.</p>
 			{:else}
 				<p>The schematic is in the vendor's build document{#if c.schematic_page}, page {c.schematic_page}{/if}. <a href={c.doc_url} target="_blank" rel="noopener">Open the build document</a>. No KiCad fragment has been drawn for this circuit yet.</p>
 			{/if}
@@ -193,7 +197,7 @@
 			<p class="dim legend-note">Only the parts the layout names in its legend are listed: the active parts and the pots. The resistor and capacitor values are printed on the parts in the drawing.</p>
 		{/if}
 		{#if c.bom.length === 0}
-			<p class="dim">{#if isLayout}No parts could be read from this layout; the values are printed on the parts in the drawing.{:else if VENDOR_KIND[c.vendor] === 'projects'}No parts list: the BOM download on this project needs an account at the fab.{:else if VENDOR_KIND[c.vendor] === 'blog' || VENDOR_KIND[c.vendor] === 'archive'}No parts list could be read from the schematic image; the values are in the picture.{:else}No parts list could be extracted for this board{#if c.vendor === 'guitarpcb'} (GuitarPCB publishes its parts list as an image){/if}. The build document has it.{/if}</p>
+			<p class="dim">{#if isLayout}No parts could be read from this layout; the values are printed on the parts in the drawing.{:else if VENDOR_KIND[c.vendor] === 'projects' && c.vendor !== 'pcbway-gtu'}No parts list: the designer shared only the board, with no schematic, BOM or board file.{:else if VENDOR_KIND[c.vendor] === 'projects'}No parts list: the BOM download on this project needs an account at the fab.{:else if VENDOR_KIND[c.vendor] === 'blog' || VENDOR_KIND[c.vendor] === 'archive'}No parts list could be read from the schematic image; the values are in the picture.{:else}No parts list could be extracted for this board{#if c.vendor === 'guitarpcb'} (GuitarPCB publishes its parts list as an image){/if}. The build document has it.{/if}</p>
 		{:else}
 			{#if marked}
 				<p class="src-legend dim"><span class="src">ocr</span> read from an image · <span class="src">sch</span> paired from the schematic · <span class="src fixed">fixed</span> corrected by hand. Check marked values against the build document.</p>

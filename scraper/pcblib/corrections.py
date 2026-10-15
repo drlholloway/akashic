@@ -31,6 +31,8 @@ from .normalize import normalize_row
 Key = str | tuple[str, str]
 
 CORRECTIONS: dict[str, dict[Key, str | None]] = {
+    # Jon Patton Rust Bunny: the board file values Q4 '2N088', a typo; Q1 to Q3 are 2N5088s (checked 2026-10-15).
+    "midwayfair:rust-bunny": {"Q4": "2N5088"},
     # Dead End FX Zuul: OCR reads IC3 as 'LhI3Z24' (reported 2026-09-29).
     "deadendfx:zuul": {"IC3": "LM324", "D5": "1N4148", "D6": "1N4148"},  # D5/D6 read '1n414' (2026-10-09)
     # Dead End FX 2952: the schematic prints CLEAN A15K, the parts table A20K; A20K is right (reported 2026-09-29).

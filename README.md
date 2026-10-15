@@ -70,6 +70,7 @@ It ships as a static, offline-capable web app (PWA) that installs on macOS, Linu
 | EfektPol | 7 | The layout's page on the Cryptid Effects layouts wiki: Controls and 'Component Name \| Value \| Note' BOM tables generated from the DIY Layout Creator file, read like the Cryptid source (`vendors/efektpol.py`, a fixed list) | Turret board layouts of classic drives, fuzzes and a wah, shared on the layouts wiki under CC BY-NC-SA 4.0 with credit to EfektPol; the .diy file and a render of each drawing are linked; each page links EfektPol's Instagram (@efektpol) to get in touch |
 | Effects Layouts (blog) | 867 | As above | Free perfboard layouts by storyboardist, each with a single-sided PCB to etch at home; not the Effects Layouts shop |
 | PCBWay: Glory to Ukraine | ~337 | the CC BY-SA schematic PNG, read by eye into `pcblib/transcribed/` and counted ('×4 470k'; the drawings carry no designators and the member uploads no BOM), with named knobs; OCR of the value labels where no reading exists; fetched with 10 s between requests | one member's shared projects via the member JSONP list; schematic PNGs are CC BY-SA; no prices |
+| Jon Patton (OSH Park) | 5 | The Eagle board file each shared project uploads: every part's designator and value, read exactly (`eagle.py`); OSH Park's price for three boards | The pedal boards midwayfair shares on the OSH Park profile, five to a page; the microphone and mic preamp boards are skipped. The Hamlet Delay and Clipper Ship list as the originals their clones elsewhere name |
 
 ### Transistor substitutes
 
