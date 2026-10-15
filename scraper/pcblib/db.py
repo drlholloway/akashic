@@ -157,6 +157,9 @@ VENDORS = {
                      "and I/O boards by direct message; "
                      "indexed and linked. Parts read by eye from the schematics in the posts, which are not served. Two free boards "
                      "(circuits by Chuck D. Bones) are hosted with permission on the Cryptid Effects layouts wiki."),
+    "efektpol": ("EfektPol", "https://github.com/drlholloway/guitar-effects-layouts/wiki",
+                 "Turret board layouts drawn in DIY Layout Creator, hosted with permission on the Cryptid Effects layouts wiki "
+                 "(not under its Creative Commons license). Parts lists are read from the layout files; the rendered layout is shown here."),
     "cryptid": ("Cryptid Effects", "https://github.com/drlholloway/guitar-effects-layouts",
                 "This site's own layouts, CC BY-NC-SA 4.0: gerbers and faceplates on GitHub, build notes and BOM on the wiki. "
                 "The schematic and the finished-pedal photo are shown here with the author's permission."),
@@ -170,7 +173,7 @@ VENDORS = {
 # "layout" (a stripboard, tag strip, turret or perfboard drawing to build from), "kit" (a complete kit: parts,
 # enclosure and instructions).
 VENDOR_KIND = {"pcbway-gtu": "projects", "cryptid": "repo", "rwlpedal": "repo", "scientificguitarist": "repo", "sheepygit": "repo", "bentfishbowl": "blog", "effdub": "blog", "expanon": "archive", "schalltechnik": "blog",
-               "tagboardeffects": "layout", "dirtbox": "layout", "effectslayouts-blog": "layout", "modelectronics": "kit", "verop2p": "layout", "pedalbuilder": "blog"}
+               "tagboardeffects": "layout", "dirtbox": "layout", "effectslayouts-blog": "layout", "modelectronics": "kit", "verop2p": "layout", "pedalbuilder": "blog", "efektpol": "layout"}
 
 # The site owner's own designs: their schematic and photo are served, not only linked.
 OWNER_VENDORS = {"cryptid"}

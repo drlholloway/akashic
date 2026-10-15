@@ -22,9 +22,10 @@ RAW = f"https://raw.githubusercontent.com/{REPO}/main"
 WIKI_RAW = f"https://raw.githubusercontent.com/wiki/{REPO}"
 API_TREE = f"https://api.github.com/repos/{REPO}/git/trees/main?recursive=1"
 _BASED_ON = {"Biggus-Dickus": "Chuck D. Bones Biggus Dickus", "Ground-Fault": "Fuzzhugger FX Arc Flash",
+             "MOSFET-Driver-Redux": "Chuck D. Bones MOSFET Driver Redux",
              "The-Everlasting-Tantrum": "DOD / Devi Ever Grindhaus"}
-_CATEGORY = {"Biggus-Dickus": "Distortion", "Ground-Fault": "Fuzz", "The-Everlasting-Tantrum": "Fuzz"}
-_HARDWARE = re.compile(r"jack|footswitch|header|battery|enclosure|knob|^J\d", re.I)
+_CATEGORY = {"Biggus-Dickus": "Distortion", "Ground-Fault": "Fuzz", "The-Everlasting-Tantrum": "Fuzz", "MOSFET-Driver-Redux": "Overdrive"}
+_HARDWARE = re.compile(r"jack|footswitch|header|battery|enclosure|knob|terminal strip|^J\d", re.I)
 
 
 def _tables(md: str) -> list[tuple[str, list[list[str]]]]:
