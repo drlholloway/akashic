@@ -1,7 +1,7 @@
 {
  "id": "pedalbuilder:hurts-percolators",
- "read": "2026-10-14, by eye from the schematic in PedalBuilder's forum post",
- "comment": "PedalBuilder's two Harmonic Percolator builds (1590BB2 and 125B) after the Latent Lemon Hurts, both from this one schematic: a germanium Q1 and 2N3904 Q2 percolator with a Deep switch (adds 100n at the input and the 1M OSC trim across R2), a 2.7M plus 2M Octave trim in the Q2 feedback, Sputter and Harmonics pots, and a Ge/Si clipping switch. Per the post the builds differ only in Q1's gain and the silicon diodes.",
+ "read": "2026-10-14, by eye from the schematic in Naegele Audio's forum post",
+ "comment": "Naegele Audio's two Harmonic Percolator builds (1590BB2 and 125B) after the Latent Lemon Hurts, both from this one schematic: a germanium Q1 and 2N3904 Q2 percolator with a Deep switch (adds 100n at the input and the 1M OSC trim across R2), a 2.7M plus 2M Octave trim in the Q2 feedback, Sputter and Harmonics pots, and a Ge/Si clipping switch. Per the post the builds differ only in Q1's gain and the silicon diodes.",
  "uncertain": [
   "R102: LED resistor drawn as 'CLR' with no value",
   "Deep and Ge/Si: switch types are not printed; read from the poles drawn"

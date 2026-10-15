@@ -13,10 +13,11 @@ export function wrongParseUrl(boardName: string, pageUrl: string): string {
 
 /** Designers with no shop to scrape, who sell their own PCBs when asked: where to reach them, by the
  *  maker's name at the start of an original ('Aleph Null Special Sauce'), or by the source for a builder
- *  whose circuits are clones of other makers' pedals. `lead` replaces 'designed this circuit and sells boards'. */
-export const MAKER_CONTACTS: { maker: string; url: string; where: string; vendor?: string; lead?: string }[] = [
+ *  whose circuits are clones of other makers' pedals. `lead` replaces 'designed this circuit and sells boards',
+ *  `handle` is the forum name to message when it is not the maker's, and `also` the other boards they sell. */
+export const MAKER_CONTACTS: { maker: string; url: string; where: string; vendor?: string; lead?: string; handle?: string; also?: string }[] = [
 	{ maker: 'Aleph Null', url: 'https://forum.pedalpcb.com/members/aleph-null.30287/', where: 'the PedalPCB forum' },
-	{ maker: 'PedalBuilder', url: 'https://forum.pedalpcb.com/members/pedalbuilder.487/', where: 'the PedalPCB forum', vendor: 'pedalbuilder', lead: 'laid out a PCB for this circuit and sells boards' }
+	{ maker: 'Naegele Audio', handle: 'PedalBuilder', url: 'https://forum.pedalpcb.com/members/pedalbuilder.487/', where: 'the PedalPCB forum', vendor: 'pedalbuilder', lead: 'laid out a PCB for this circuit and sells boards', also: 'relay bypass and I/O boards' }
 ];
 
 export function makerContact(originals: string[], vendor = '') {

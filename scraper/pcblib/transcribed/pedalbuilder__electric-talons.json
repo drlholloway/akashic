@@ -1,7 +1,7 @@
 {
  "id": "pedalbuilder:electric-talons",
- "read": "2026-10-14, by eye from the schematic in PedalBuilder's forum post",
- "comment": "Electric Talons, PedalBuilder's Vox/Tone Bender Buzzaround (drawing titled 'Electric Talons', rev 1.0, Naegele Audio): a germanium Darlington input pair into a diode-biased leaky germanium Q3 and a simple tone stack, with an added Volume pot and David Main's retuned tone stack (C4 220n, R10 33k), negative supply from an LT1054.",
+ "read": "2026-10-14, by eye from the schematic in Naegele Audio's forum post",
+ "comment": "Electric Talons, Naegele Audio's Vox/Tone Bender Buzzaround (drawing titled 'Electric Talons', rev 1.0, Naegele Audio): a germanium Darlington input pair into a diode-biased leaky germanium Q3 and a simple tone stack, with an added Volume pot and David Main's retuned tone stack (C4 220n, R10 33k), negative supply from an LT1054.",
  "uncertain": [
   "R101: LED resistor drawn as 'LEDR' with no value"
  ],

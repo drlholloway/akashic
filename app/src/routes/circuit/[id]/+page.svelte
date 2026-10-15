@@ -19,8 +19,9 @@
 					.sort((a, b) => Number(!!b.own_design) - Number(!!a.own_design)) // the maker's own board first
 			: []
 	);
-	// Not on a board whose gerbers are free to download.
-	const contact = $derived(c.extra_docs['PCB gerbers'] ? undefined : makerContact(originalsOf(c), c.vendor));
+	// On a board whose gerbers are free to download, only the other boards the maker sells.
+	const free = $derived(!!c.extra_docs['PCB gerbers']);
+	const contact = $derived(makerContact(originalsOf(c), c.vendor));
 	const makerBoard = $derived(siblings.find((s) => s.own_design));
 	const clones = $derived(siblings.filter((s) => !s.own_design).length); // the maker's own board is no clone of itself
 	const variants = $derived(c.variants ?? []);
@@ -91,8 +92,10 @@
 			{:else if c.based_on}
 				<p class="based dim">Based on {c.based_on}</p>
 			{/if}
-			{#if contact}
-				<p class="contact">Want a PCB? {contact.maker} {contact.lead ?? 'designed this circuit and sells boards'}: <a href={contact.url} target="_blank" rel="noopener">message {contact.maker} on {contact.where}</a>.</p>
+			{#if contact && !free}
+				<p class="contact">Want a PCB? {contact.maker} {contact.lead ?? 'designed this circuit and sells boards'}{#if contact.also}, as well as {contact.also}{/if}: <a href={contact.url} target="_blank" rel="noopener">message {contact.handle ?? contact.maker} on {contact.where}</a>.</p>
+			{:else if contact?.also}
+				<p class="contact">{contact.maker} also sells {contact.also}: <a href={contact.url} target="_blank" rel="noopener">message {contact.handle ?? contact.maker} on {contact.where}</a>.</p>
 			{/if}
 			<dl class="specs">
 				<div><dt class="label">Category</dt><dd><a href="{base}/?cat={encodeURIComponent(c.category)}">{c.category}</a>{#if c.effect_type && c.effect_type !== c.category} <span class="dim">· {c.effect_type}</span>{/if}</dd></div>

@@ -152,8 +152,9 @@ VENDORS = {
     "verop2p": ("Vero P2P", "https://vero-p2p.blogspot.com",
                 "Stripboard, point-to-point, tag board and turret layouts posted free on the Guitar Related Ramblings blog; "
                 "indexed and linked, not redistributed. Layout images are read locally for the board size and the parts they name."),
-    "pedalbuilder": ("PedalBuilder", "https://forum.pedalpcb.com/members/pedalbuilder.487/",
-                     "Build reports by PedalBuilder (Naegele Audio) on the PedalPCB forum, who sells PCBs of these circuits by direct message; "
+    "pedalbuilder": ("Naegele Audio", "https://forum.pedalpcb.com/members/pedalbuilder.487/",
+                     "Build reports by Naegele Audio (PedalBuilder on the PedalPCB forum), who sells PCBs of these circuits, relay bypass "
+                     "and I/O boards by direct message; "
                      "indexed and linked. Parts read by eye from the schematics in the posts, which are not served. Two free boards "
                      "(circuits by Chuck D. Bones) are hosted with permission on the Cryptid Effects layouts wiki."),
     "cryptid": ("Cryptid Effects", "https://github.com/drlholloway/guitar-effects-layouts",

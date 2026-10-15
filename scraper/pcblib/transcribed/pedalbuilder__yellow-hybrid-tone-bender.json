@@ -1,7 +1,7 @@
 {
  "id": "pedalbuilder:yellow-hybrid-tone-bender",
- "read": "2026-10-14, by eye from the schematic in PedalBuilder's forum post",
- "comment": "PedalBuilder's take on the Sola Sound Yellow Hybrid Tone Bender: two Supa Tone Bender (Big Muff style) gain stages, a third stage with a Zener-referenced, diode-biased germanium Q3 as in a Tone Bender Mk. III, and a Big Muff style tone stack. The drawing gives the stock values in blue and his mods in red; the rows carry the red (built) values with the stock value in the note.",
+ "read": "2026-10-14, by eye from the schematic in Naegele Audio's forum post",
+ "comment": "Naegele Audio's take on the Sola Sound Yellow Hybrid Tone Bender: two Supa Tone Bender (Big Muff style) gain stages, a third stage with a Zener-referenced, diode-biased germanium Q3 as in a Tone Bender Mk. III, and a Big Muff style tone stack. The drawing gives the stock values in blue and his mods in red; the rows carry the red (built) values with the stock value in the note.",
  "uncertain": [
   "R101: LED resistor drawn as 'CLR' with no value"
  ],

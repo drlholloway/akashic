@@ -1,7 +1,7 @@
 {
  "id": "pedalbuilder:ocelot",
- "read": "2026-10-14, by eye from the schematic in PedalBuilder's forum post",
- "comment": "The Ocelot, PedalBuilder's modified Univox Super-Fuzz (schematic titled 'Super Fuzz', rev 1.0): six 2N5551s, an Expander pot after the input stage, an Octave pot across the phase splitter's collectors, the tone switch replaced by a Tone pot with a Balance pot after it, and an output stage biased above unity.",
+ "read": "2026-10-14, by eye from the schematic in Naegele Audio's forum post",
+ "comment": "The Ocelot, Naegele Audio's modified Univox Super-Fuzz (schematic titled 'Super Fuzz', rev 1.0): six 2N5551s, an Expander pot after the input stage, an Octave pot across the phase splitter's collectors, the tone switch replaced by a Tone pot with a Balance pot after it, and an output stage biased above unity.",
  "uncertain": [],
  "rows": [
   ["R1", "22k", "R", ""],

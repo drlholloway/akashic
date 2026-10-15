@@ -1,7 +1,7 @@
 {
  "id": "pedalbuilder:fuzz-standard",
- "read": "2026-10-14, by eye from the schematic in PedalBuilder's forum post",
- "comment": "PedalBuilder's Ibanez Standard Fuzz with mods (a Univox Super Fuzz with a 2SK30A JFET input stage and a collector-base biased phase splitter): a C5k Octave pot in the octave generator and an A100k Filter Depth pot (the post's Tone Change) from the mid-scoop filter to ground. The drawing also shows ferrite beads FB1 (input) and FB101 (supply), not listed here.",
+ "read": "2026-10-14, by eye from the schematic in Naegele Audio's forum post",
+ "comment": "Naegele Audio's Ibanez Standard Fuzz with mods (a Univox Super Fuzz with a 2SK30A JFET input stage and a collector-base biased phase splitter): a C5k Octave pot in the octave generator and an A100k Filter Depth pot (the post's Tone Change) from the mid-scoop filter to ground. The drawing also shows ferrite beads FB1 (input) and FB101 (supply), not listed here.",
  "uncertain": [
   "R102: LED resistor drawn as 'CLR' with no value"
  ],

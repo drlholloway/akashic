@@ -1,7 +1,7 @@
 {
  "id": "pedalbuilder:harmonic-percolator",
- "read": "2026-10-14, by eye from the schematic in PedalBuilder's forum post",
- "comment": "PedalBuilder's Harmonic Percolator (rev 3.2), an Interfax-style percolator tuned for a strong lower octave: a Voltage pot on the Q2 collector, a Transistor switch between a BC109 and an MP35 for Q2, a Clipping switch (germanium, none, silicon) with a dual Symmetry pot, and an AMZ-style 2N7000 MOSFET boost on the output.",
+ "read": "2026-10-14, by eye from the schematic in Naegele Audio's forum post",
+ "comment": "Naegele Audio's Harmonic Percolator (rev 3.2), an Interfax-style percolator tuned for a strong lower octave: a Voltage pot on the Q2 collector, a Transistor switch between a BC109 and an MP35 for Q2, a Clipping switch (germanium, none, silicon) with a dual Symmetry pot, and an AMZ-style 2N7000 MOSFET boost on the output.",
  "uncertain": [
   "R101: LED resistor drawn as 'CLR' with no value"
  ],

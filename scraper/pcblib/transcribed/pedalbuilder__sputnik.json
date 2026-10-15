@@ -1,7 +1,7 @@
 {
  "id": "pedalbuilder:sputnik",
- "read": "2026-10-14, by eye from the schematic in PedalBuilder's forum post",
- "comment": "PedalBuilder's Spaceman Sputnik II/III clone (drawing titled 'Sputnik Fuzz Clone', rev 1.0): three GT310B germanium stages with Low Filter and High Filter switches, Color and Feedback pots, and a J201 feedback loop that the expanded Millennium bypass grounds, plus a MOSFET reverse polarity and over-voltage input stage and LED switching transistors. The drawing also shows an input transformer XFM1 (42TL019-RC) and ferrite beads FB1 and FB2, not listed here.",
+ "read": "2026-10-14, by eye from the schematic in Naegele Audio's forum post",
+ "comment": "Naegele Audio's Spaceman Sputnik II/III clone (drawing titled 'Sputnik Fuzz Clone', rev 1.0): three GT310B germanium stages with Low Filter and High Filter switches, Color and Feedback pots, and a J201 feedback loop that the expanded Millennium bypass grounds, plus a MOSFET reverse polarity and over-voltage input stage and LED switching transistors. The drawing also shows an input transformer XFM1 (42TL019-RC) and ferrite beads FB1 and FB2, not listed here.",
  "uncertain": [
   "Low Filter and High Filter switch types are not printed; read from the poles drawn"
  ],

@@ -1,7 +1,7 @@
 {
  "id": "pedalbuilder:tone-bender-mk-iii",
- "read": "2026-10-14, by eye from the schematic in PedalBuilder's forum post",
- "comment": "PedalBuilder's Tone Bender Mk. III (drawing titled 'Tone Bender Mk. III', rev 1.0) in his final build values: D*A*M Fuzz Sound style tone caps (220n/4n7), a 4u7 Q2 emitter bypass, and the 18k Q3 collector resistor split into 10k + 8k2 to raise the output; LT1054 negative supply.",
+ "read": "2026-10-14, by eye from the schematic in Naegele Audio's forum post",
+ "comment": "Naegele Audio's Tone Bender Mk. III (drawing titled 'Tone Bender Mk. III', rev 1.0) in his final build values: D*A*M Fuzz Sound style tone caps (220n/4n7), a 4u7 Q2 emitter bypass, and the 18k Q3 collector resistor split into 10k + 8k2 to raise the output; LT1054 negative supply.",
  "uncertain": [
   "R101: LED resistor drawn as 'CLR' with no value"
  ],

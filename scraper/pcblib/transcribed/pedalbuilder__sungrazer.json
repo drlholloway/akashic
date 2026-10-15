@@ -1,7 +1,7 @@
 {
  "id": "pedalbuilder:sungrazer",
- "read": "2026-10-14, by eye from the schematic in PedalBuilder's forum post",
- "comment": "PedalBuilder's take on the Monolith Oracle (drawing titled 'Monolith Oracle', rev 1.0): a germanium PNP Fuzz Face style feedback pair into a Big Muff style tone stack, with a Voice pot and 10k replacing the original's 12k/100k switch, a 3k9 under the Density pot so it never mutes, and an LT1054 inverter for the negative supply.",
+ "read": "2026-10-14, by eye from the schematic in Naegele Audio's forum post",
+ "comment": "Naegele Audio's take on the Monolith Oracle (drawing titled 'Monolith Oracle', rev 1.0): a germanium PNP Fuzz Face style feedback pair into a Big Muff style tone stack, with a Voice pot and 10k replacing the original's 12k/100k switch, a 3k9 under the Density pot so it never mutes, and an LT1054 inverter for the negative supply.",
  "uncertain": [
   "R101: LED resistor drawn as 'CLR' with no value"
  ],

@@ -1,7 +1,7 @@
 {
  "id": "pedalbuilder:event-horizon",
- "read": "2026-10-14, by eye from the schematic in PedalBuilder's forum post",
- "comment": "Event Horizon II, PedalBuilder's Rotobone-inspired Jordan Boss Tone derivative: a 2N5088 input stage with a Structure switch adding a 4.7k emitter resistor, an Element switch choosing a silicon (2N2907A) or germanium (OC42) output transistor, an Energy voltage-starve pot with a 1k/39k switch, 1P8T Gravity (input) and Density (output) capacitor rotaries, and internal DIP switches for extra clipping diodes and Bright caps.",
+ "read": "2026-10-14, by eye from the schematic in Naegele Audio's forum post",
+ "comment": "Event Horizon II, Naegele Audio's Rotobone-inspired Jordan Boss Tone derivative: a 2N5088 input stage with a Structure switch adding a 4.7k emitter resistor, an Element switch choosing a silicon (2N2907A) or germanium (OC42) output transistor, an Energy voltage-starve pot with a 1k/39k switch, 1P8T Gravity (input) and Density (output) capacitor rotaries, and internal DIP switches for extra clipping diodes and Bright caps.",
  "uncertain": [
   "R101: LED resistor drawn as 'CLR' with no value",
   "Energy, Structure and Element switch types are not printed; read from the poles drawn"

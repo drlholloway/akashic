@@ -163,7 +163,7 @@ export const VENDOR_NAMES: Record<Vendor, string> = {
 	mas: 'MAS Effects',
 	modelectronics: 'Mod Electronics',
 	verop2p: 'Vero P2P',
-	pedalbuilder: 'PedalBuilder',
+	pedalbuilder: 'Naegele Audio',
 	tonepad: 'Tonepad',
 	wraa: 'WRAA Labs',
 	frog: 'Frog Pedals',

@@ -1,7 +1,7 @@
 {
  "id": "pedalbuilder:trumpet-fuzz",
- "read": "2026-10-14, by eye from the schematic in PedalBuilder's forum post",
- "comment": "PedalBuilder's PTD Rotobone build (drawing titled 'The Elements of Fuzz', rev 1.0): a Jordan Boss Tone derivative with the output PNP installed emitter to ground, silicon/germanium switches for both transistor positions, a Low/High Power switch adding a Q1 emitter resistor, an Octave (voltage) pot, and 1P8T rotaries choosing the input (Y) and output (X) capacitors.",
+ "read": "2026-10-14, by eye from the schematic in Naegele Audio's forum post",
+ "comment": "Naegele Audio's PTD Rotobone build (drawing titled 'The Elements of Fuzz', rev 1.0): a Jordan Boss Tone derivative with the output PNP installed emitter to ground, silicon/germanium switches for both transistor positions, a Low/High Power switch adding a Q1 emitter resistor, an Octave (voltage) pot, and 1P8T rotaries choosing the input (Y) and output (X) capacitors.",
  "uncertain": [
   "R101: LED resistor drawn as 'LEDR' with no value",
   "Q1 Element, Q2 Element, Low/High Power: switch types are not printed; read from the poles drawn"

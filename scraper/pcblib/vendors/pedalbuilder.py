@@ -1,8 +1,8 @@
-"""PedalBuilder (Naegele Audio) adapter: a builder on the PedalPCB forum who lays out PCBs for clones
+"""Naegele Audio adapter (PedalBuilder on the PedalPCB forum): a builder who lays out PCBs for clones
 and modded circuits and sells them by direct message, with no shop to scrape. Each circuit is a build
 report thread; the parts come from the schematic in the post, read by eye (transcribed/pedalbuilder__*).
 
-Two boards are free: PCBs PedalBuilder laid out for Chuck D. Bones' Boneyard Hoof and Hybrid Fuzz
+Two boards are free: PCBs Naegele Audio laid out for Chuck D. Bones' Boneyard Hoof and Hybrid Fuzz
 Driver Deluxe, hosted with permission on the site owner's layouts wiki (not under its Creative Commons
 license). Those are read from the wiki page: BOM tables, controls, the gerber and drill-template links."""
 from __future__ import annotations
@@ -21,7 +21,7 @@ from .cryptid import GITHUB, RAW, WIKI_RAW, _bom, _tables
 FORUM = "https://forum.pedalpcb.com/threads/"
 PROFILE = "https://forum.pedalpcb.com/members/pedalbuilder.487/"
 
-# Build report threads: slug, thread path, name, original, category. PedalBuilder's own names where he
+# Build report threads: slug, thread path, name, original, category. Naegele Audio's own names where he
 # gives one ('The Ocelot'); the original is the pedal the circuit clones or starts from.
 THREADS = [
     ("harmonic-percolator", "harmonic-percolator-with-some-mods.22248", "Harmonic Percolator (with mods)", "Interfax Harmonic Percolator", "Fuzz"),

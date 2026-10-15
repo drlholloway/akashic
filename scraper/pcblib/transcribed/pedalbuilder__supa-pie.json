@@ -1,7 +1,7 @@
 {
  "id": "pedalbuilder:supa-pie",
- "read": "2026-10-14, by eye from the schematic in PedalBuilder's forum post",
- "comment": "Colorsound/Sola Sound Supa Tone Bender (1973), a violet-era Big Muff with no clipping diodes in the first clipping stage and an extra 0.1µF (C14) between the Q2 collector and the tone stack. The drawing is Kit Rae's Big Muff Page trace of a 1973 board, which PedalBuilder posted; the transistor and diode types he used differ (see notes).",
+ "read": "2026-10-14, by eye from the schematic in Naegele Audio's forum post",
+ "comment": "Colorsound/Sola Sound Supa Tone Bender (1973), a violet-era Big Muff with no clipping diodes in the first clipping stage and an extra 0.1µF (C14) between the Q2 collector and the tone stack. The drawing is Kit Rae's Big Muff Page trace of a 1973 board, which Naegele Audio posted; the transistor and diode types he used differ (see notes).",
  "uncertain": [],
  "rows": [
   ["R2", "33k", "R", ""],
@@ -40,15 +40,15 @@
   ["C13", ".1µF", "C", ""],
   ["C14", ".1µF", "C", "the extra cap between Q2 collector and the tone stack"],
   ["×1", "33µF", "C", "supply filter, no designator drawn; 22µF and 47µF also used"],
-  ["D1", "1N4148", "D", "PedalBuilder used 1N4150 (from the post)"],
-  ["D2", "1N4148", "D", "PedalBuilder used 1N4150 (from the post)"],
+  ["D1", "1N4148", "D", "Naegele Audio used 1N4150 (from the post)"],
+  ["D2", "1N4148", "D", "Naegele Audio used 1N4150 (from the post)"],
   ["×1", "1N5817", "D", "offboard reverse polarity protection (from the post; not drawn)"],
-  ["Q1", "BC184", "Q", "PedalBuilder used BC549B and 2N3904 (from the post, positions not stated)"],
+  ["Q1", "BC184", "Q", "Naegele Audio used BC549B and 2N3904 (from the post, positions not stated)"],
   ["Q2", "BC184", "Q", ""],
   ["Q3", "BC184", "Q", ""],
   ["Q4", "BC184", "Q", ""],
   ["Sustain", "100k Log", "POT", "R24"],
-  ["Tone", "100k Log", "POT", "R25, wired backwards in the original; PedalBuilder used an A100k with lugs 1 and 3 swapped (from the post)"],
+  ["Tone", "100k Log", "POT", "R25, wired backwards in the original; Naegele Audio used an A100k with lugs 1 and 3 swapped (from the post)"],
   ["Volume", "100k Log", "POT", "R26"]
  ]
 }
