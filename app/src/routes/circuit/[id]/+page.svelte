@@ -92,7 +92,9 @@
 			{:else if c.based_on}
 				<p class="based dim">Based on {c.based_on}</p>
 			{/if}
-			{#if contact && !free}
+			{#if contact?.reach}
+				<p class="contact">{contact.reach}: <a href={contact.url} target="_blank" rel="noopener">message {contact.handle ?? contact.maker} on {contact.where}</a>.</p>
+			{:else if contact && !free}
 				<p class="contact">Want a PCB? {contact.maker} {contact.lead ?? 'designed this circuit and sells boards'}{#if contact.also}, as well as {contact.also}{/if}: <a href={contact.url} target="_blank" rel="noopener">message {contact.handle ?? contact.maker} on {contact.where}</a>.</p>
 			{:else if contact?.also}
 				<p class="contact">{contact.maker} also sells {contact.also}: <a href={contact.url} target="_blank" rel="noopener">message {contact.handle ?? contact.maker} on {contact.where}</a>.</p>

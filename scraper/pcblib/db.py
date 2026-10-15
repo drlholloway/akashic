@@ -157,9 +157,9 @@ VENDORS = {
                      "and I/O boards by direct message; "
                      "indexed and linked. Parts read by eye from the schematics in the posts, which are not served. Two free boards "
                      "(circuits by Chuck D. Bones) are hosted with permission on the Cryptid Effects layouts wiki."),
-    "efektpol": ("EfektPol", "https://github.com/drlholloway/guitar-effects-layouts/wiki",
+    "efektpol": ("EfektPol", "https://www.instagram.com/efektpol/",
                  "Turret board layouts drawn in DIY Layout Creator, hosted with permission on the Cryptid Effects layouts wiki "
-                 "(not under its Creative Commons license). Parts lists are read from the layout files; the rendered layout is shown here."),
+                 "(not under its Creative Commons license). Parts lists are read from the layout files. EfektPol is @efektpol on Instagram."),
     "cryptid": ("Cryptid Effects", "https://github.com/drlholloway/guitar-effects-layouts",
                 "This site's own layouts, CC BY-NC-SA 4.0: gerbers and faceplates on GitHub, build notes and BOM on the wiki. "
                 "The schematic and the finished-pedal photo are shown here with the author's permission."),
@@ -213,9 +213,9 @@ def connect():
         conn.execute("ALTER TABLE circuits ADD COLUMN delisted TEXT DEFAULT ''")
     if 'layout' not in cols:  # JSON, see models.Circuit.layout; '' for a plain PCB
         conn.execute("ALTER TABLE circuits ADD COLUMN layout TEXT DEFAULT ''")
-    for vid, (name, url, note) in VENDORS.items():
-        conn.execute("INSERT OR IGNORE INTO vendors(id,name,url,license_note) VALUES (?,?,?,?)",
-                     (vid, name, url, note))
+    for vid, (name, url, note) in VENDORS.items():  # upsert, so a renamed source or a new note reaches the database
+        conn.execute("INSERT INTO vendors(id,name,url,license_note) VALUES (?,?,?,?) ON CONFLICT(id) DO UPDATE SET "
+                     "name=excluded.name, url=excluded.url, license_note=excluded.license_note", (vid, name, url, note))
     try:
         yield conn
         conn.commit()
