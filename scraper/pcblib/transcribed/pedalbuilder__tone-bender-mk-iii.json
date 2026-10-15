@@ -1,0 +1,42 @@
+{
+ "id": "pedalbuilder:tone-bender-mk-iii",
+ "read": "2026-10-14, by eye from the schematic in PedalBuilder's forum post",
+ "comment": "PedalBuilder's Tone Bender Mk. III (drawing titled 'Tone Bender Mk. III', rev 1.0) in his final build values: D*A*M Fuzz Sound style tone caps (220n/4n7), a 4u7 Q2 emitter bypass, and the 18k Q3 collector resistor split into 10k + 8k2 to raise the output; LT1054 negative supply.",
+ "uncertain": [
+  "R101: LED resistor drawn as 'CLR' with no value"
+ ],
+ "rows": [
+  ["RPD", "1M", "R", "input pulldown"],
+  ["R1", "220k", "R", ""],
+  ["R2", "47k", "R", ""],
+  ["R3", "10k", "R", ""],
+  ["R4", "10k", "R", ""],
+  ["R5", "3k3", "R", ""],
+  ["R6", "10k", "R", ""],
+  ["R7", "10k", "R", ""],
+  ["R8", "10k", "R", "with R9, the split 18k Q3 collector resistor"],
+  ["R9", "8k2", "R", "with R8, the split 18k Q3 collector resistor"],
+  ["R10", "10k", "R", ""],
+  ["R11", "10k", "R", ""],
+  ["R101", "?", "R", "LED current limiting resistor, drawn as CLR"],
+  ["C1", "100n", "C", ""],
+  ["C2", "220p", "C", ""],
+  ["C3", "220n", "C", ""],
+  ["C4", "4u7", "C", ""],
+  ["C5", "220n", "C", ""],
+  ["C6", "4n7", "C", ""],
+  ["C101", "100u", "C", "supply filter"],
+  ["C102", "10u", "C", "LT1054 charge pump"],
+  ["C103", "100u", "C", "LT1054 output filter"],
+  ["C104", "100n", "C", "supply filter"],
+  ["D1", "D18", "D", "germanium, sets Q3 bias with Q3's leakage"],
+  ["D101", "LED", "LED", "status LED"],
+  ["Q1", "EFT83", "Q", "germanium, hFE 59, leakage 67µA (from the post)"],
+  ["Q2", "EFT83", "Q", "germanium, hFE 52, leakage 70µA (from the post)"],
+  ["Q3", "ASY33", "Q", "as drawn; the post says an ACY33, hFE 204, leakage 279µA"],
+  ["IC1", "LT1054CP", "IC", "voltage inverter"],
+  ["Fuzz", "B100k", "POT", ""],
+  ["Tone", "B100k", "POT", ""],
+  ["Volume", "A100k", "POT", ""]
+ ]
+}

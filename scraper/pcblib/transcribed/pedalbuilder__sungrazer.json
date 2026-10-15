@@ -1,0 +1,37 @@
+{
+ "id": "pedalbuilder:sungrazer",
+ "read": "2026-10-14, by eye from the schematic in PedalBuilder's forum post",
+ "comment": "PedalBuilder's take on the Monolith Oracle (drawing titled 'Monolith Oracle', rev 1.0): a germanium PNP Fuzz Face style feedback pair into a Big Muff style tone stack, with a Voice pot and 10k replacing the original's 12k/100k switch, a 3k9 under the Density pot so it never mutes, and an LT1054 inverter for the negative supply.",
+ "uncertain": [
+  "R101: LED resistor drawn as 'CLR' with no value"
+ ],
+ "rows": [
+  ["R1", "470k", "R", ""],
+  ["R2", "33k", "R", ""],
+  ["R3", "100k", "R", ""],
+  ["R4", "7k5", "R", ""],
+  ["R5", "3k", "R", ""],
+  ["R6", "820R", "R", ""],
+  ["R7", "10k", "R", "in series with Voice"],
+  ["R8", "68k", "R", ""],
+  ["R9", "3k9", "R", "between Density lug 1 and ground"],
+  ["R101", "?", "R", "LED current limiting resistor, drawn as CLR"],
+  ["C1", "53p", "C", ""],
+  ["C2", "56n", "C", ""],
+  ["C3", "100µ", "C", ""],
+  ["C4", "1µ", "C", ""],
+  ["C5", "6n8", "C", ""],
+  ["C6", "1µ", "C", ""],
+  ["C101", "100µ", "C", "supply filter"],
+  ["C102", "10µ", "C", "LT1054 charge pump"],
+  ["C103", "22µ", "C", "LT1054 output"],
+  ["LED", "LED", "LED", "status LED"],
+  ["Q1", "GT115G", "Q", "germanium PNP, hFE 116, leakage 115µA"],
+  ["Q2", "GT115D", "Q", "germanium PNP, hFE 292, leakage 109µA"],
+  ["IC1", "LT1054CP", "IC", "voltage inverter"],
+  ["Density", "C1M", "POT", ""],
+  ["Voice", "B100k", "POT", ""],
+  ["Color", "B250k", "POT", ""],
+  ["Volume", "A500k", "POT", ""]
+ ]
+}

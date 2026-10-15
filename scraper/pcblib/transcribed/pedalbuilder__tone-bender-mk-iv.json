@@ -1,0 +1,38 @@
+{
+ "id": "pedalbuilder:tone-bender-mk-iv",
+ "read": "2026-10-14, by eye from the schematic in PedalBuilder's forum post",
+ "comment": "PedalBuilder's Tone Bender Mk. IV in the Sola Sound/D*A*M 'Son of the Green Bastard' values (15k Q3 collector resistor, 3n3 treble cap), drawn as a PNP positive-ground circuit without a voltage inverter: VCC is used as the DC ground and ground as the negative rail. The drawing is titled 'Tone Bender Mk. IV' (rev 1.0) and carries the parts he built with.",
+ "uncertain": [
+  "R102: LED resistor drawn as 'CLR' with no value"
+ ],
+ "rows": [
+  ["R1", "680k", "R", ""],
+  ["R2", "100k", "R", ""],
+  ["R3", "10k", "R", ""],
+  ["R4", "10k", "R", ""],
+  ["R5", "3k3", "R", ""],
+  ["R6", "10k", "R", ""],
+  ["R7", "10k", "R", ""],
+  ["R8", "15k", "R", "Q3 collector resistor"],
+  ["R9", "10k", "R", ""],
+  ["R10", "0R", "R", "drawn as JUMPER: a wire link between Tone and Volume"],
+  ["R101", "100R", "R", "supply filter"],
+  ["R102", "?", "R", "LED current limiting resistor, drawn as CLR"],
+  ["C1", "100n", "C", ""],
+  ["C2", "220p", "C", ""],
+  ["C3", "220n", "C", ""],
+  ["C4", "10µ", "C", ""],
+  ["C5", "100n", "C", ""],
+  ["C6", "3n3", "C", "treble cap"],
+  ["C101", "100µ", "C", "supply filter"],
+  ["C102", "100n", "C", "supply filter"],
+  ["D1", "OA1154", "D", "germanium, sets Q3 bias with Q3's leakage"],
+  ["LED", "LED", "LED", "status LED"],
+  ["Q1", "MA287", "Q", "Motorola germanium PNP"],
+  ["Q2", "MA287", "Q", "Motorola germanium PNP"],
+  ["Q3", "2N526", "Q", "Motorola germanium PNP"],
+  ["Fuzz", "B100k", "POT", ""],
+  ["Tone", "B100k", "POT", ""],
+  ["Volume", "A500k", "POT", ""]
+ ]
+}

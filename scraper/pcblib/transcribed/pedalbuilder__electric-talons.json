@@ -1,0 +1,39 @@
+{
+ "id": "pedalbuilder:electric-talons",
+ "read": "2026-10-14, by eye from the schematic in PedalBuilder's forum post",
+ "comment": "Electric Talons, PedalBuilder's Vox/Tone Bender Buzzaround (drawing titled 'Electric Talons', rev 1.0, Naegele Audio): a germanium Darlington input pair into a diode-biased leaky germanium Q3 and a simple tone stack, with an added Volume pot and David Main's retuned tone stack (C4 220n, R10 33k), negative supply from an LT1054.",
+ "uncertain": [
+  "R101: LED resistor drawn as 'LEDR' with no value"
+ ],
+ "rows": [
+  ["R1", "1M", "R", ""],
+  ["R2", "470k", "R", ""],
+  ["R3", "100k", "R", ""],
+  ["R4", "10k", "R", ""],
+  ["R5", "10k", "R", ""],
+  ["R6", "3k3", "R", ""],
+  ["R7", "3k3", "R", ""],
+  ["R8", "24k", "R", ""],
+  ["R9", "15k", "R", ""],
+  ["R10", "33k", "R", "raised from 10k (David Main mod)"],
+  ["R101", "?", "R", "LED current limiting resistor, drawn as LEDR"],
+  ["C1", "100n", "C", ""],
+  ["C2", "4u7", "C", ""],
+  ["C3", "4u7", "C", ""],
+  ["C4", "220n", "C", "raised from 100n (David Main mod)"],
+  ["C5", "1n", "C", ""],
+  ["C101", "10u", "C", "LT1054 charge pump"],
+  ["C102", "100u", "C", "LT1054 output filter"],
+  ["C103", "100n", "C", "ceramic"],
+  ["D1", "D9E", "D", "germanium, biases Q3"],
+  ["LED", "RED LED", "LED", "status LED"],
+  ["Q1", "GT309B", "Q", "germanium, hFE 81, leakage 13µA (from the post)"],
+  ["Q2", "GT309B", "Q", "germanium, hFE 86, leakage 14µA (from the post)"],
+  ["Q3", "GT115D", "Q", "germanium, hFE 167, leakage 311µA (from the post)"],
+  ["IC1", "LT1054CP", "IC", "voltage inverter"],
+  ["Sustain", "B100k", "POT", ""],
+  ["Balance", "B10k", "POT", ""],
+  ["Timbre", "B100k", "POT", ""],
+  ["Volume", "A100k", "POT", "added output volume"]
+ ]
+}

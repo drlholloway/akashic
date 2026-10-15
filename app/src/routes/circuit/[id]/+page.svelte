@@ -19,7 +19,8 @@
 					.sort((a, b) => Number(!!b.own_design) - Number(!!a.own_design)) // the maker's own board first
 			: []
 	);
-	const contact = $derived(makerContact(originalsOf(c)));
+	// Not on a board whose gerbers are free to download.
+	const contact = $derived(c.extra_docs['PCB gerbers'] ? undefined : makerContact(originalsOf(c), c.vendor));
 	const makerBoard = $derived(siblings.find((s) => s.own_design));
 	const clones = $derived(siblings.filter((s) => !s.own_design).length); // the maker's own board is no clone of itself
 	const variants = $derived(c.variants ?? []);
@@ -91,7 +92,7 @@
 				<p class="based dim">Based on {c.based_on}</p>
 			{/if}
 			{#if contact}
-				<p class="contact">Want a PCB? {contact.maker} designed this circuit and sells boards: <a href={contact.url} target="_blank" rel="noopener">message {contact.maker} on {contact.where}</a>.</p>
+				<p class="contact">Want a PCB? {contact.maker} {contact.lead ?? 'designed this circuit and sells boards'}: <a href={contact.url} target="_blank" rel="noopener">message {contact.maker} on {contact.where}</a>.</p>
 			{/if}
 			<dl class="specs">
 				<div><dt class="label">Category</dt><dd><a href="{base}/?cat={encodeURIComponent(c.category)}">{c.category}</a>{#if c.effect_type && c.effect_type !== c.category} <span class="dim">· {c.effect_type}</span>{/if}</dd></div>
@@ -111,7 +112,7 @@
 				<p class="delisted"><span class="warn">No longer listed</span> {VENDOR_NAMES[c.vendor] ?? c.vendor} stopped listing this board{#if c.last_listed} after {c.last_listed}{/if}. It stays here for reference; the vendor page and build document links may no longer work.</p>
 			{/if}
 			<div class="actions">
-				<a class="btn" href={c.url} target="_blank" rel="noopener">{primaryAction(c.vendor)}</a>
+				<a class="btn" href={c.url} target="_blank" rel="noopener">{c.vendor !== 'cryptid' && c.extra_docs['PCB gerbers'] ? 'Get the gerbers' : primaryAction(c.vendor)}</a>
 				{#if c.doc_url && c.doc_url !== c.url && VENDOR_KIND[c.vendor] !== 'archive'}<a class="btn ghost" href={c.doc_url} target="_blank" rel="noopener">Build document{#if c.doc_version} <span class="mono ver">{c.doc_version}</span>{/if}</a>{/if}
 				{#each Object.entries(c.extra_docs) as [label, href]}
 					<a class="btn ghost" {href} target="_blank" rel="noopener">{label}</a>

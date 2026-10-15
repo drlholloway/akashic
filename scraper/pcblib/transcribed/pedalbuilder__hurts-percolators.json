@@ -1,0 +1,41 @@
+{
+ "id": "pedalbuilder:hurts-percolators",
+ "read": "2026-10-14, by eye from the schematic in PedalBuilder's forum post",
+ "comment": "PedalBuilder's two Harmonic Percolator builds (1590BB2 and 125B) after the Latent Lemon Hurts, both from this one schematic: a germanium Q1 and 2N3904 Q2 percolator with a Deep switch (adds 100n at the input and the 1M OSC trim across R2), a 2.7M plus 2M Octave trim in the Q2 feedback, Sputter and Harmonics pots, and a Ge/Si clipping switch. Per the post the builds differ only in Q1's gain and the silicon diodes.",
+ "uncertain": [
+  "R102: LED resistor drawn as 'CLR' with no value",
+  "Deep and Ge/Si: switch types are not printed; read from the poles drawn"
+ ],
+ "rows": [
+  ["R1", "1k", "R", "under the Harmonics pot so it never mutes"],
+  ["R2", "220k", "R", ""],
+  ["R3", "1k", "R", ""],
+  ["R4", "2M7", "R", "Q2 feedback, in series with the Octave trim"],
+  ["R5", "91k", "R", ""],
+  ["R6", "4k7", "R", "in series with D1 (asymmetric germanium clipping)"],
+  ["R101", "4k7", "R", "supply filter (the post says raised from the Hurts' 47Ω)"],
+  ["R102", "?", "R", "LED current limiting resistor, drawn as CLR"],
+  ["C1", "150p", "C", ""],
+  ["C2", "47n", "C", ""],
+  ["C3", "100n", "C", "switched in parallel with C2 by Deep"],
+  ["C4", "47µ", "C", ""],
+  ["C5", "100n", "C", ""],
+  ["C6", "1n", "C", ""],
+  ["C7", "100n", "C", ""],
+  ["C101", "47µ", "C", "supply filter"],
+  ["D1", "D18", "D", "germanium"],
+  ["D2", "D18", "D", "germanium"],
+  ["D3", "1N914", "D", "silicon; the post says the 1590BB2 build used 1N914 and the 125B build 1N456"],
+  ["D4", "1N914", "D", "silicon; the post says the 1590BB2 build used 1N914 and the 125B build 1N456"],
+  ["D101", "LED", "LED", "status LED"],
+  ["Q1", "2N404", "Q", "germanium PNP; the post says both builds used a TI 182505 (1590BB2: hFE 44, leakage 7µA; 125B: hFE 57, leakage 13µA)"],
+  ["Q2", "2N3904", "Q", ""],
+  ["Harmonics", "A100k", "POT", ""],
+  ["Sputter", "A100k", "POT", ""],
+  ["Balance", "A100k", "POT", ""],
+  ["Octave", "2M", "TRIM", "Q2 collector-base feedback, in series with R4"],
+  ["OSC", "1M", "TRIM", "switched across R2 by Deep to stop low-frequency oscillation"],
+  ["Deep", "DPDT", "SW", "adds C3 and the OSC trim"],
+  ["Ge/Si", "SPDT", "SW", "germanium or silicon clipping diodes"]
+ ]
+}
