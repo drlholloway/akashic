@@ -158,8 +158,8 @@ VENDORS = {
                      "indexed and linked. Parts read by eye from the schematics in the posts, which are not served. Two free boards "
                      "(circuits by Chuck D. Bones) are hosted with permission on the Cryptid Effects layouts wiki."),
     "efektpol": ("EfektPol", "https://www.instagram.com/efektpol/",
-                 "Turret board layouts drawn in DIY Layout Creator, hosted with permission on the Cryptid Effects layouts wiki "
-                 "(not under its Creative Commons license). Parts lists are read from the layout files. EfektPol is @efektpol on Instagram."),
+                 "Turret board layouts drawn in DIY Layout Creator, shared on the Cryptid Effects layouts wiki under CC BY-NC-SA 4.0 "
+                 "with credit to EfektPol. Parts lists are read from the layout files. EfektPol is @efektpol on Instagram."),
     "cryptid": ("Cryptid Effects", "https://github.com/drlholloway/guitar-effects-layouts",
                 "This site's own layouts, CC BY-NC-SA 4.0: gerbers and faceplates on GitHub, build notes and BOM on the wiki. "
                 "The schematic and the finished-pedal photo are shown here with the author's permission."),

@@ -1,5 +1,5 @@
-"""EfektPol: turret board layouts drawn in DIY Layout Creator, hosted with permission on the site owner's
-layouts wiki (drlholloway/guitar-effects-layouts, not under its Creative Commons license). Each layout has a
+"""EfektPol: turret board layouts drawn in DIY Layout Creator, shared on the site owner's layouts wiki
+(drlholloway/guitar-effects-layouts) under CC BY-NC-SA 4.0 like the owner's own layouts, with credit to EfektPol. Each layout has a
 wiki page with the Controls table and the BOM as Markdown tables, read like the Cryptid source; the main
 repository holds the .diy file and a render of the drawing, which may be shown here."""
 from __future__ import annotations
@@ -45,7 +45,7 @@ class EfektPol(Adapter):
         image = f"{RAW}/{quote(FOLDER)}/{stem}-layout.png"
         c = Circuit(vendor=self.vendor, slug=slug, name=name, url=wiki, based_on=based_on, category=category,
                     description=description[:3000], doc_url=wiki, price=None, currency="USD", in_stock=None,
-                    tags=["turret board", "DIY Layout Creator"], image_url=image)
+                    tags=["turret board", "DIY Layout Creator", "CC BY-NC-SA 4.0"], image_url=image)
         c.layout = {"build": "turret", "images": [image]}
         c.extra_docs["DIY Layout Creator file"] = f"{GITHUB}/raw/main/{quote(FOLDER)}/{stem}.diy"
         c.bom = _bom(md)
