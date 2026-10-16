@@ -163,6 +163,9 @@ VENDORS = {
     "midwayfair": ("Jon Patton", "https://oshpark.com/profiles/midwayfair",
                    "Boards Jon Patton (midwayfair) shares on OSH Park, ordered from the fab; indexed and linked. Parts read "
                    "from the Eagle board files he uploads, which are cached locally and not served."),
+    "amplifiedparts": ("Amplified Parts", "https://www.amplifiedparts.com/pedal-guides",
+                       "Turret, eyelet, stripboard and terminal strip build guides posted free by Amplified Parts; indexed and "
+                       "linked, not redistributed. Parts read from the guides' parts tables."),
     "cryptid": ("Cryptid Effects", "https://github.com/drlholloway/guitar-effects-layouts",
                 "This site's own layouts, CC BY-NC-SA 4.0: gerbers and faceplates on GitHub, build notes and BOM on the wiki. "
                 "The schematic and the finished-pedal photo are shown here with the author's permission."),
@@ -176,7 +179,7 @@ VENDORS = {
 # "layout" (a stripboard, tag strip, turret or perfboard drawing to build from), "kit" (a complete kit: parts,
 # enclosure and instructions).
 VENDOR_KIND = {"pcbway-gtu": "projects", "cryptid": "repo", "rwlpedal": "repo", "scientificguitarist": "repo", "sheepygit": "repo", "bentfishbowl": "blog", "effdub": "blog", "expanon": "archive", "schalltechnik": "blog",
-               "tagboardeffects": "layout", "dirtbox": "layout", "effectslayouts-blog": "layout", "modelectronics": "kit", "verop2p": "layout", "pedalbuilder": "blog", "efektpol": "layout", "midwayfair": "projects"}
+               "tagboardeffects": "layout", "dirtbox": "layout", "effectslayouts-blog": "layout", "modelectronics": "kit", "verop2p": "layout", "pedalbuilder": "blog", "efektpol": "layout", "midwayfair": "projects", "amplifiedparts": "layout"}
 
 # The site owner's own designs: their schematic and photo are served, not only linked.
 OWNER_VENDORS = {"cryptid"}

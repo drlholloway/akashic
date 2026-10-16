@@ -2,10 +2,13 @@
 point to point on terminal strips, the Nexus series on a PCB. Each kit page links its instructions
 and schematic as PDFs. A PCB kit's instructions hold a bill of materials the shared parsers read;
 a terminal-strip kit's hold 'parts list' pages, drawings of every part captioned with its name,
-stock number and quantity, read here. Amplified Parts turns scripted requests away, so no prices."""
+stock number and quantity, read here. Mod Electronics PCBs sold without parts come from their build guides
+on Amplified Parts, whose parts tables name every designator (amplifiedparts.py). The price and stock come from the kit's Amplified Parts page
+(its schema.org Product data); while that store is down the kit is listed without a price."""
 from __future__ import annotations
 
 import html as _html
+import json
 import re
 from typing import Iterable
 
@@ -20,13 +23,55 @@ from .base import Adapter, clean_text, html_to_text
 BASE = "https://www.modelectronics.com"
 LISTINGS = ("/pedal-kits", "/pedal-amp-kits/discontinued")
 _NOT_PEDALS = {"mod-101"}  # a tube amp kit on the discontinued page
-_CATEGORY = {"tone-attack": "EQ / Filter", "step-ladder": "Utility"}  # an active tone stack; a passive attenuator
+_CATEGORY = {"tone-attack": "EQ / Filter", "step-ladder": "Utility",  # an active tone stack; a passive attenuator
+             "pcb-odyssey": "Phaser", "pcb-axion": "Delay"}  # an optical phaser; a PT2399 delay with chorus
 _DIFFICULTY = {"1": "Beginner", "2": "Easy", "3": "Medium", "4": "Advanced", "5": "Difficult"}
 _FILE = re.compile(r'href="(https://www\.modelectronics\.com/sites/[^"]+\.pdf)"[^>]*>([^<]*)')
 _STOCK = re.compile(r"(?<![\w-])[A-Z]{1,2}-[A-Z0-9][A-Za-z0-9./]*(?:-[A-Za-z0-9./]+)*(?![\w-])")  # 'R-A4D7K', 'P-Q2N5088', 'R-VAM100KL-SS'
 _QTY = re.compile(r"\((\d{1,2})\)")
 _SEG = re.compile(r"\S(?:.*?\S)?(?=\s{2,}|$)")
 _NOTE = "from the kit's parts list"
+# The PCB build guides: guide slug -> (name, original).
+GUIDES = "https://www.amplifiedparts.com/pedal-guides/build-project-mod-electronics-"
+PCB_GUIDES = {
+    "amber": ("Amber", "Orange Squeezer"),
+    "axion": ("Axion", ""),
+    "deluge": ("Deluge", "Noah's Ark Distortion M"),
+    "germanium_fuzz": ("Germanium Fuzz", "Dallas Arbiter Fuzz Face"),
+    "memoria": ("Memoria", "Electro-Harmonix Small Clone"),
+    "odyssey": ("Odyssey", ""),
+    "quasar": ("Quasar", ""),
+    "refraction": ("Refraction", ""),
+    "tone-splendor": ("Tone Splendor MK2S", "Sola Sound Tone Bender MKII"),
+}
+_STORE = re.compile(r'href="(https?://www\.amplifiedparts\.com/products/K-[\w-]+)"')
+
+
+def store_offer(page: str) -> tuple[float | None, bool | None]:
+    """(price, in stock) from an Amplified Parts product page's schema.org Product data, or its price box."""
+    for block in re.findall(r'<script type="application/ld\+json"[^>]*>(.*?)</script>', page, re.S):
+        try:
+            data = json.loads(block)
+        except ValueError:
+            continue
+        if not isinstance(data, dict) or data.get("@type") != "Product":
+            continue
+        offers = data.get("offers") or []
+        offer = (offers[0] if isinstance(offers, list) and offers else offers) or {}
+        try:
+            price = float(offer.get("price"))
+        except (TypeError, ValueError):
+            price = None
+        avail = str(offer.get("availability") or "")
+        if price:
+            return price, (True if avail.endswith("InStock") else False if avail.endswith(("OutOfStock", "Discontinued", "SoldOut")) else None)
+    # Some pages carry no Product data: the price and availability as shown ('$61<sup>.95</sup>', 'In Stock').
+    m = re.search(r'class="sell-price[^"]*">\s*\$([\d,]+)(?:<sup>\.(\d+)</sup>)?', page)
+    a = re.search(r'class="availability ([a-z_]+)"', page)
+    if not m:
+        return None, None
+    stock = {"in_stock": True, "out_of_stock": False}.get(a.group(1)) if a else None
+    return float(m.group(1).replace(",", "") + "." + (m.group(2) or "0")), stock
 
 
 def _segments(line: str) -> list[tuple[int, str]]:
@@ -163,8 +208,12 @@ class ModElectronics(Adapter):
                 if "discontinued" in path:
                     self.discontinued.add(slug)
                 yield slug
+        for guide in PCB_GUIDES:
+            yield "pcb-" + guide.replace("_", "-")
 
     def parse(self, slug: str) -> Circuit | None:
+        if slug.startswith("pcb-"):
+            return self._pcb(slug)
         url = f"{BASE}/product/{slug}"
         page = self.f.get_text(url)
         if not page:
@@ -186,6 +235,13 @@ class ModElectronics(Adapter):
                     category=_CATEGORY.get(slug) or classify(kind, title, body[:600]), difficulty=_DIFFICULTY.get(rating.group(1), "") if rating else "",
                     price=None, currency="USD", in_stock=False if slug in self.discontinued else None, doc_url=manual[0],
                     image_url=BASE + photo.group(1) if photo else "")
+        if store := _STORE.search(page):
+            url_store = store.group(1).replace("http://", "https://")
+            c.extra_docs["Buy at Amplified Parts"] = url_store
+            price, stock = store_offer(self.f.get_text(url_store) or "")
+            if price:
+                c.price = price
+                c.in_stock = False if slug in self.discontinued else stock
         for u, label in files:
             if u != manual[0] and not re.search(r"soldering tips", label, re.I):
                 label = re.sub(rf"^(?:The )?{re.escape(re.sub(r'^The ', '', title))}\s*(?:Tremolo\s*)?-?\s*", "", label, flags=re.I).strip() or label
@@ -227,4 +283,35 @@ class ModElectronics(Adapter):
                 named = []
         pots = sum(int(r.ref[1:]) if r.ref.startswith("×") else 1 for r in c.bom if r.category == "POT")
         c.controls = named if named and len(named) == pots else [r.ref.title() for r in c.bom if r.category == "POT" and re.fullmatch(r"[A-Za-z][A-Za-z /\-]{1,15}", r.ref)] or ([f"{pots} knobs"] if pots > 1 else ["1 knob"] if pots else [])
+        return c
+
+    def _pcb(self, slug: str) -> Circuit | None:
+        """A Mod Electronics PCB sold on its own, from its Amplified Parts build guide."""
+        from .amplifiedparts import SITE, guide_rows, main_body, paragraphs, table_items
+        guide = next(g for g in PCB_GUIDES if "pcb-" + g.replace("_", "-") == slug)
+        name, based_on = PCB_GUIDES[guide]
+        page = self.f.get_text(GUIDES + guide)
+        if not page:
+            return None
+        body = main_body(page)
+        text = " ".join(paragraphs(body))
+        product = re.search(r'href="(/products/pcb-mod-electronics-[^"]+)"', body)
+        pdf = re.search(r'href="([^"]+\.pdf)"', body)
+        photo = next((u for u in re.findall(r'<img[^>]+src="([^"]+/tech_corner/img/[^"]+)"', body) if not u.endswith(".svg")), "")
+        store = SITE + product.group(1) if product else GUIDES + guide
+        box = re.search(r"1590n1|1590bb?|125b", product.group(1) if product else "", re.I)
+        c = Circuit(vendor=self.vendor, slug=slug, name=name, url=store, based_on=based_on, subtitle="PCB",
+                    description=text[:3000], category=_CATEGORY.get(slug) or classify(name, text[:400]), price=None, currency="USD",
+                    doc_url=GUIDES + guide, image_url=photo, enclosure=box.group(0).upper() if box else find_enclosure(text),
+                    tags=["PCB only"])
+        c.extra_docs["Build guide (Amplified Parts)"] = GUIDES + guide
+        if pdf:
+            c.extra_docs["PDF build guide"] = (SITE if pdf.group(1).startswith("/") else "") + pdf.group(1)
+        if product:
+            price, stock = store_offer(self.f.get_text(store) or "")
+            c.price, c.in_stock = price, stock
+        c.bom = guide_rows(table_items(body))
+        pots = [r for r in c.bom if r.category == "POT"]
+        named = [m.group(1) for r in pots if (m := re.match(r"(.+?) control\b", r.notes))]
+        c.controls = named if pots and len(named) == len(pots) else [f"{len(pots)} knobs"] if len(pots) > 1 else ["1 knob"] if pots else []
         return c

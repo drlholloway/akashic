@@ -6,7 +6,7 @@
 	import Faceplate from '$lib/Faceplate.svelte';
 	import { currency } from '$lib/currency.svelte';
 	import { normalizeOriginal } from '$lib/search';
-	import { BUILD_NAMES, PART_CATEGORY_NAMES, PART_ORDER, VENDOR_FAB, VENDOR_NAMES, VENDOR_KIND, originalsOf, primaryAction, type BomRow } from '$lib/types';
+	import { BUILD_NAMES, PART_CATEGORY_NAMES, PART_ORDER, VENDOR_FAB, VENDOR_NAMES, VENDOR_STORE, VENDOR_KIND, originalsOf, primaryAction, type BomRow } from '$lib/types';
 
 	let { data } = $props();
 	const c = $derived(data.circuit);
@@ -82,7 +82,7 @@
 	<header class="plate">
 		<div class="face">
 			<Faceplate enclosure={c.enclosure} controls={c.controls} size={250} labels title="{c.name} faceplate" />
-			<p class="label face-cap">{c.enclosure || 'Enclosure not stated'}{knobs.length ? ` · ${knobs.length} knobs` : ''}</p>
+			<p class="label face-cap">{c.enclosure || 'Enclosure not stated'}{knobs.length ? ` · ${knobs.length} ${knobs.length === 1 ? 'knob' : 'knobs'}` : ''}</p>
 		</div>
 		<div class="title">
 			<p class="label"><a href="{base}/?vendor={c.vendor}">{VENDOR_NAMES[c.vendor]}</a>{#if c.sku} · <span class="mono">{c.sku}</span>{/if}</p>
@@ -117,7 +117,7 @@
 				<p class="delisted"><span class="warn">No longer listed</span> {VENDOR_NAMES[c.vendor] ?? c.vendor} stopped listing this board{#if c.last_listed} after {c.last_listed}{/if}. It stays here for reference; the vendor page and build document links may no longer work.</p>
 			{/if}
 			<div class="actions">
-				<a class="btn" href={c.url} target="_blank" rel="noopener">{c.vendor !== 'cryptid' && c.extra_docs['PCB gerbers'] ? 'Get the gerbers' : primaryAction(c.vendor)}</a>
+				<a class="btn" href={c.url} target="_blank" rel="noopener">{c.vendor !== 'cryptid' && c.extra_docs['PCB gerbers'] ? 'Get the gerbers' : c.tags?.includes('PCB only') ? `Buy the PCB at ${VENDOR_STORE[c.vendor] ?? VENDOR_NAMES[c.vendor]}` : primaryAction(c.vendor)}</a>
 				{#if c.doc_url && c.doc_url !== c.url && VENDOR_KIND[c.vendor] !== 'archive'}<a class="btn ghost" href={c.doc_url} target="_blank" rel="noopener">Build document{#if c.doc_version} <span class="mono ver">{c.doc_version}</span>{/if}</a>{/if}
 				{#each Object.entries(c.extra_docs) as [label, href]}
 					<a class="btn ghost" {href} target="_blank" rel="noopener">{label}</a>
