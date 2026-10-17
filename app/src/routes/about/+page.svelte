@@ -91,7 +91,8 @@
 		<p>
 			Akashic is made by <a href={MAKER_URL} target="_blank" rel="noopener">{MAKER_NAME}</a> on evenings and weekends. The code
 			is on <a href={REPO_URL} target="_blank" rel="noopener">GitHub</a>, and the <a href="{base}/changes">changelog</a> lists what
-			changed each week. It works offline once loaded and can be installed as an app from your browser's menu. If it saved
+			changed each week. It works offline once loaded and can be installed as an app from your browser's menu. My bench and your parts list in What can I build stay in
+			your browser: Akashic has no accounts and keeps nothing about you. If it saved
 			you a build, <a href={COFFEE_URL} target="_blank" rel="noopener">buy me a coffee</a>.
 		</p>
 	</section>

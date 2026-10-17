@@ -5,6 +5,7 @@
 	import { makerContact, wrongParseUrl } from '$lib/site';
 	import Faceplate from '$lib/Faceplate.svelte';
 	import { currency } from '$lib/currency.svelte';
+	import { bench } from '$lib/bench.svelte';
 	import { normalizeOriginal } from '$lib/search';
 	import { BUILD_NAMES, PART_CATEGORY_NAMES, PART_ORDER, VENDOR_FAB, VENDOR_NAMES, VENDOR_STORE, VENDOR_KIND, originalsOf, primaryAction, type BomRow } from '$lib/types';
 
@@ -125,7 +126,15 @@
 				{#each lay.also ?? [] as a}
 					<a class="btn ghost" href={a.url} target="_blank" rel="noopener">{BUILD_NAMES[a.build]} layout</a>
 				{/each}
+				<button type="button" class="btn ghost keep" aria-pressed={bench.has(c.id)} onclick={() => bench.toggle(c.id)} title={bench.has(c.id) ? 'Take it off your bench' : 'Keep this circuit on your bench, in this browser'}>{bench.has(c.id) ? 'On my bench ✓' : '+ My bench'}</button>
 			</div>
+			{#if bench.has(c.id)}
+				<label class="bench-note">
+					<span class="label">Bench note</span>
+					<input type="text" value={bench.items[c.id]?.note ?? ''} oninput={(e) => bench.setNote(c.id, e.currentTarget.value)} placeholder="Try 2N5088s, order the board in May…" maxlength="300" />
+					<a class="label" href="{base}/workbench/bench">My bench</a>
+				</label>
+			{/if}
 			{#if vendorWarning}
 				<p class="vendor-warning"><span class="warn">Heads up</span> {vendorWarning}</p>
 			{/if}
@@ -152,7 +161,7 @@
 		<h2 class="label strong">Schematic</h2>
 		{#if c.owner_schematic}
 			<img src="{base}/data/{c.owner_schematic}" alt="Schematic of {c.name}" loading="lazy" />
-			<p class="small">Drawn by {VENDOR_NAMES[c.vendor]}, <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>. <a href={c.url} target="_blank" rel="noopener">Gerbers and faceplate on GitHub</a>.</p>
+			<p class="small">Drawn by {VENDOR_NAMES[c.vendor]}, <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>. <a href={c.url} target="_blank" rel="noopener">Gerbers{c.tags?.includes('faceplate') ? ' and faceplate' : ''} on GitHub</a>.</p>
 		{:else if c.has_kicad}
 			<img src="{base}/kicad/{c.file_id}.svg" alt="KiCad schematic of {c.name}" loading="lazy" />
 			<p class="small">Redrawn in KiCad. <a href="{base}/kicad/{c.file_id}.kicad_sch" download>Download the .kicad_sch fragment</a> to drop into your own project.</p>
@@ -269,6 +278,11 @@
 	.specs div { display: flex; flex-direction: column; gap: 2px; }
 	.specs dd { margin: 0; }
 	.actions { display: flex; flex-wrap: wrap; gap: 8px; }
+	.keep[aria-pressed='true'] { border-color: var(--coat); color: var(--coat); }
+	.bench-note { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin-top: 10px; max-width: 640px; }
+	.bench-note input { flex: 1; min-width: 200px; height: 34px; padding: 0 10px; border: 1px solid var(--rule-strong); border-radius: var(--radius); background: var(--sheet-2); color: var(--ink); font: inherit; font-size: 14px; }
+	.bench-note input:focus { outline: none; border-color: var(--coat); box-shadow: 0 0 0 3px var(--coat-tint); background: var(--sheet); }
+	.bench-note a { color: var(--ink-2); text-decoration: underline; text-underline-offset: 3px; }
 	.variants { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0 0 12px; }
 	.variants .label { margin-right: 4px; }
 	.variants .btn.on { background: var(--coat); color: var(--coat-ink); border-color: var(--coat); }

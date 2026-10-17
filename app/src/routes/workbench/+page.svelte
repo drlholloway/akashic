@@ -17,6 +17,7 @@
 	<ul>
 		<li><a href="{base}/workbench/sourcing">Sourcing</a>: which shop I use for which part, and the brands I stick to, from resistors to wire.</li>
 		<li><a href="{base}/workbench/building">Building</a>: the soldering iron and solder, setting up, and the order the parts go on the board.</li>
+		<li><a href="{base}/workbench/bench">My bench</a>: the circuits you keep, with a note on each, saved in your browser. Export it or share it as a link.</li>
 		<li><a href="{base}/workbench/build">What can I build</a>: list the parts in your drawers and see which circuits they cover, and which are a part or two away.</li>
 		<li><a href="{base}/workbench/links">Links</a>: books, courses, forums, calculators and guides for having your own boards made.</li>
 	</ul>

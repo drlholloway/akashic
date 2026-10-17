@@ -30,6 +30,9 @@ export default defineConfig({
 				maximumFileSizeToCacheInBytes: 16 * 1024 * 1024, // data/index.json is 7 MB
 				// A page that is not precached comes from the network, never the home page in its place.
 				navigateFallbackDenylist: [/^\/circuit\//, /^\/parts\//, /^\/data\//, /^\/datasheets\//, /^\/kicad\//],
+				// Pages read their query in the browser (?share=, ?bench=1), so a precached page answers with any query:
+				// otherwise /workbench/bench?share=… misses the cache and gets the home page as the fallback.
+				ignoreURLParametersMatching: [/.*/],
 				runtimeCaching: [
 					{
 						urlPattern: ({ url }) => url.pathname.startsWith('/data/sets/') || url.pathname.startsWith('/data/owner/'),

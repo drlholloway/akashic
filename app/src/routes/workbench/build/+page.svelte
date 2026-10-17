@@ -1,5 +1,8 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+	import { goto } from '$app/navigation';
+	import { page } from '$app/state';
+	import { bench } from '$lib/bench.svelte';
 	import { PART_CATEGORY_NAMES, PART_ORDER, VENDOR_NAMES, type IndexEntry, type PartEntry } from '$lib/types';
 
 	let { data } = $props();
@@ -88,13 +91,18 @@
 	type Gap = { n: number; have: number; alts: PartEntry[] };
 	type Row = { e: IndexEntry; total: number; gaps: Gap[]; unread: number };
 	const MAX_AWAY = 3;
+	// Only the circuits on my bench: set by its chip, or by a link from My bench (?bench=1).
+	let onlyBench = $state(false);
+	$effect(() => {
+		if (page.url.searchParams.get('bench') === '1') onlyBench = true;
+	});
 	const rows = $derived.by(() => {
 		const out: Row[] = [];
 		if (!owned.length) return out;
 		const skip = new Set(assume);
 		for (const [id, need] of Object.entries(data.needs.circuits)) {
 			const e = byId.get(id);
-			if (!e) continue;
+			if (!e || (onlyBench && !bench.has(id))) continue;
 			let total = 0;
 			const gaps: Gap[] = [];
 			for (const [n, ...alts] of need.n) {
@@ -140,6 +148,10 @@
 		const t = f.trim().toLowerCase();
 		return rows.filter((r) => r.gaps.length === away && (!t || `${r.e.name} ${r.e.original} ${r.e.category} ${VENDOR_NAMES[r.e.vendor]}`.toLowerCase().includes(t)));
 	});
+	// Surprise me: one circuit from the list on screen (this tab, narrowed by the filter), opened.
+	const pickRandom = () => {
+		if (view.length) goto(`${base}/circuit/${view[Math.floor(Math.random() * view.length)].e.file_id}`);
+	};
 	const TABS = ['Ready to build', '1 part away', '2 parts away', '3 parts away'];
 	const gapText = (g: Gap) => g.alts.slice(0, 2).map((p) => p.value).join(' or ') + (g.alts.length > 2 ? ' or …' : '') + (g.n > 1 ? ` ×${g.n}` : '');
 </script>
@@ -213,6 +225,7 @@
 				{#each TABS as name, n}
 					<button type="button" class="chip" aria-pressed={away === n} onclick={() => (away = n)}>{name} <span class="count">{counts[n].toLocaleString()}</span></button>
 				{/each}
+				{#if bench.count || onlyBench}<button type="button" class="chip mine-only" aria-pressed={onlyBench} onclick={() => (onlyBench = !onlyBench)} title="Only the circuits on my bench">On my bench</button>{/if}
 			</div>
 			{#if nextBuys.length}
 				<div class="next">
@@ -222,10 +235,13 @@
 					{/each}
 				</div>
 			{/if}
-			<label class="filter">
-				<span class="label">Filter</span>
-				<input type="search" bind:value={f} placeholder="fuzz, Big Muff, PedalPCB…" autocomplete="off" spellcheck="false" />
-			</label>
+			<div class="find">
+				<label class="filter">
+					<span class="label">Filter</span>
+					<input type="search" bind:value={f} placeholder="fuzz, Big Muff, PedalPCB…" autocomplete="off" spellcheck="false" />
+				</label>
+				<button type="button" class="btn ghost" onclick={pickRandom} disabled={!view.length} title="Open one of the {view.length.toLocaleString()} circuits listed here, picked at random">Surprise me</button>
+			</div>
 			{#if view.length}
 				<table class="sheet-table">
 					<thead><tr><th>Circuit</th><th class="src">Source</th><th class="cat">Type</th><th class="n" title="Counted parts you have, of those the board takes">Parts</th>{#if away}<th>Missing</th>{/if}</tr></thead>
@@ -300,9 +316,12 @@
 	.empty p { margin: 0 0 6px; color: var(--ink-2); }
 	.tabs, .next { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
 	.next { margin-top: 14px; }
+	.mine-only { margin-left: 8px; }
 	.next .label { margin-right: 4px; }
 	.buy { text-transform: none; letter-spacing: 0; font-family: var(--mono); font-weight: 400; font-size: 12px; border-style: dashed; }
-	.filter { display: flex; align-items: center; gap: 10px; max-width: 420px; margin: 16px 0 6px; }
+	.find { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 16px 0 6px; }
+	.find .btn { height: 38px; }
+	.filter { display: flex; flex: 1; align-items: center; gap: 10px; max-width: 420px; }
 	.filter input { flex: 1; min-width: 0; }
 	.name { font-weight: 600; }
 	.orig { display: block; font-size: 13px; }

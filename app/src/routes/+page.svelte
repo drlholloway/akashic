@@ -11,6 +11,7 @@
 	import CurrencySelect from '$lib/CurrencySelect.svelte';
 	import { controlLabels } from '$lib/controls';
 	import { folds } from '$lib/fold.svelte';
+	import { bench } from '$lib/bench.svelte';
 
 	let { data } = $props();
 	$effect.pre(() => buildSearch(data.index));
@@ -94,8 +95,9 @@
 	const totalVendors = $derived(new Set(data.index.map((e) => e.vendor)).size);
 	const shownVendors = $derived(new Set(results.map((e) => e.vendor)).size);
 	const active = $derived(
-		filters.vendor.length + filters.category.length + filters.enclosure.length + filters.build.length + (filters.verified ? 1 : 0) + (filters.basedOn ? 1 : 0) + (filters.part ? 1 : 0) + (filters.knobs != null ? 1 : 0) + filters.control.length + (filters.inStock ? 1 : 0)
+		filters.vendor.length + filters.category.length + filters.enclosure.length + filters.build.length + (filters.verified ? 1 : 0) + (filters.basedOn ? 1 : 0) + (filters.part ? 1 : 0) + (filters.knobs != null ? 1 : 0) + filters.control.length + (filters.inStock ? 1 : 0) + (filters.bench ? 1 : 0)
 	);
+	const benchCount = $derived(applyFilters(data.index, { ...filters, bench: true }).length);
 	// Each filter folds at its header; a folded one still says how many of its choices are on.
 	const FACETS = ['build', 'vendor', 'category', 'enclosure', 'knobs', 'control'];
 	const folded = folds('akashic-filters-folded');
@@ -178,6 +180,11 @@
 				In stock only
 			</label>
 		</div>
+		{#if bench.count || filters.bench}
+			<div class="facet">
+				<button type="button" class="chip" aria-pressed={filters.bench} title="Only the circuits you keep on your bench, in this browser" onclick={() => update({ bench: !filters.bench })}>On my bench <span class="count">{benchCount}</span></button>
+			</div>
+		{/if}
 	</aside>
 
 	<section class="results">

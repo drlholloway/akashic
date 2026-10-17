@@ -5,6 +5,7 @@
 	import { base } from '$app/paths';
 	import type { Snippet } from 'svelte';
 	import { currency } from '$lib/currency.svelte';
+	import { bench } from '$lib/bench.svelte';
 
 	import type { VendorInfo } from '$lib/types';
 	import { COFFEE_URL, ISSUES_URL, MAKER_NAME, MAKER_URL } from '$lib/site';
@@ -14,6 +15,7 @@
 
 	// The service worker (offline use, install): the kit plugin builds it but leaves registering it to the app.
 	onMount(async () => {
+		bench.init();
 		if (!pwaInfo) return;
 		const { registerSW } = await import('virtual:pwa-register');
 		registerSW({ immediate: true });

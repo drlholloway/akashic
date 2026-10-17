@@ -2,7 +2,9 @@
 under CC BY-NC-SA 4.0. The repository README lists the pedals (name, status, wiki page, folder); each
 folder holds the PCB and faceplate gerbers, renders and a schematic SVG, and each wiki page carries
 the Controls table and the BOM as Markdown tables ('Component Name | Value | Note' per part type).
-Being the owner's work, the schematic SVG and the finished-pedal photo may be shown on the site."""
+Being the owner's work, the schematic SVG and the finished-pedal photo may be shown on the site.
+The utility boards (footswitch and toggle boards, in Utility-Boards/) are listed the same way, as Utility,
+with the PCB render for a picture: they have no faceplate."""
 from __future__ import annotations
 
 import re
@@ -112,13 +114,16 @@ class Cryptid(Adapter):
         verified = not re.search(r"not verified", p["status"], re.I)
         intro = re.search(r"## Introduction\s*\n(.+?)(?:\n##|\n###)", md, re.S)
         description = clean_text(re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", re.sub(r"\*\*", "", intro.group(1) if intro else p["blurb"])))
-        c = Circuit(vendor=self.vendor, slug=re.sub(r"[^a-z0-9]+", "-", folder.lower()).strip("-"), name=p["name"],
+        utility = folder.startswith("Utility-Boards/")
+        faceplate = any("faceplate" in f.lower() and f.lower().endswith(".zip") for f in files)
+        c = Circuit(vendor=self.vendor, slug=re.sub(r"[^a-z0-9]+", "-", folder.rsplit("/", 1)[-1].lower()).strip("-"), name=p["name"],
                     url=f"{GITHUB}/tree/main/{quote(folder)}", doc_url=p["wiki"], description=description[:900],
                     based_on=_BASED_ON.get(folder, ""), price=None, currency="USD", in_stock=None,
                     enclosure=find_enclosure(readme) or find_enclosure(md),
-                    tags=["verified" if verified else "not verified", "gerbers", "faceplate", "CC BY-NC-SA 4.0"])
-        c.category = _CATEGORY.get(folder) or classify(p["name"], c.based_on, description[:300])
-        photo = next((f for f in files if f.endswith("-complete.jpg")), "") or next((f for f in files if f.endswith("-faceplate.png")), "")
+                    tags=["verified" if verified else "not verified", "gerbers"] + (["faceplate"] if faceplate else []) + ["CC BY-NC-SA 4.0"])
+        c.category = "Utility" if utility else _CATEGORY.get(folder) or classify(p["name"], c.based_on, description[:300])
+        photo = next((f for f in files if f.endswith("-complete.jpg")), "") or next((f for f in files if f.endswith("-faceplate.png")), "") \
+            or next((f for f in files if f.endswith("-pcb-front.png")), "")
         c.image_url = f"{RAW}/{quote(photo)}" if photo else ""
         for f in files:
             base = f.rsplit("/", 1)[-1]

@@ -2,6 +2,7 @@ import MiniSearch from 'minisearch';
 import type { IndexEntry } from './types';
 import { VENDOR_NAMES, buildsOf, originalsOf } from './types';
 import { controlLabels, controlSearchText } from './controls';
+import { bench } from './bench.svelte';
 
 export interface Filters {
 	q: string;
@@ -15,6 +16,7 @@ export interface Filters {
 	knobs: number | null;
 	control: string[]; // control groups ('Blend', 'Bias'); a circuit must have every one
 	inStock: boolean;
+	bench: boolean; // only the circuits on my bench (kept in this browser)
 }
 
 export const EMPTY_FILTERS: Filters = {
@@ -28,7 +30,8 @@ export const EMPTY_FILTERS: Filters = {
 	part: '',
 	knobs: null,
 	control: [],
-	inStock: false
+	inStock: false,
+	bench: false
 };
 
 let mini: MiniSearch<IndexEntry> | null = null;
@@ -116,6 +119,7 @@ export function applyFilters(entries: IndexEntry[], f: Filters): IndexEntry[] {
 			if (!f.control.every((c) => has.has(c))) return false;
 		}
 		if (f.inStock && (e.in_stock !== true || e.delisted)) return false;
+		if (f.bench && !bench.has(e.id)) return false;
 		return true;
 	});
 	if (rank) out.sort((a, b) => rank!.get(a.id)! - rank!.get(b.id)!);
@@ -136,7 +140,8 @@ export function filtersFromParams(p: URLSearchParams): Filters {
 		part: p.get('part') ?? '',
 		knobs: knobs ? Number(knobs) : null,
 		control: list('ctl'),
-		inStock: p.get('stock') === '1'
+		inStock: p.get('stock') === '1',
+		bench: p.get('bench') === '1'
 	};
 }
 
@@ -153,6 +158,7 @@ export function paramsFromFilters(f: Filters): URLSearchParams {
 	if (f.knobs != null) p.set('knobs', String(f.knobs));
 	if (f.control.length) p.set('ctl', f.control.join(','));
 	if (f.inStock) p.set('stock', '1');
+	if (f.bench) p.set('bench', '1');
 	return p;
 }
 

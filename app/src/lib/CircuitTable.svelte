@@ -2,6 +2,7 @@
 	import { base } from '$app/paths';
 	import Faceplate from './Faceplate.svelte';
 	import { currency } from './currency.svelte';
+	import { bench } from './bench.svelte';
 	import type { IndexEntry } from './types';
 	import { BUILD_NAMES, VENDOR_NAMES, buildsOf, originalsOf } from './types';
 
@@ -46,6 +47,7 @@
 						<a href="{base}/circuit/{e.file_id}">{e.name}</a>
 						{#if e.subtitle}<span class="sub">{e.subtitle}</span>{/if}
 						{#each buildsOf(e).filter((b) => b !== 'pcb') as b}<span class="build" title={e.verified === true ? 'Layout marked verified by its source' : e.verified === false ? 'Layout not yet verified by a build' : undefined}>{BUILD_NAMES[b]}{#if e.board && b === buildsOf(e)[0]} {e.board.replace('x', '×')}{/if}</span>{/each}
+						{#if bench.has(e.id)}<span class="build on-bench" title="On my bench">Bench</span>{/if}
 						{#if e.verified === true}<span class="build ok" title="The layout's source marks it as verified: someone has built it and it works">Verified</span>{:else if e.verified === false}<span class="build no" title="No working build of this layout has been reported at its source yet">Unverified</span>{/if}
 						{#if e.actives.length}<span class="actives mono">{e.actives.slice(0, 4).join(' · ')}</span>{/if}
 						{#if e.based_on || e.enclosure}<span class="folded">{[originalsOf(e).join(' / ') || e.based_on, e.enclosure].filter(Boolean).join(' · ')}</span>{/if}
@@ -105,6 +107,7 @@
 	.build { margin-left: 6px; font-family: var(--label); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); border: 1px solid var(--rule-strong); border-radius: 3px; padding: 0 4px; white-space: nowrap; }
 	.build.ok { color: var(--coat); border-color: var(--coat); }
 	.build.no { color: var(--warn); border-color: currentColor; }
+	.build.on-bench { color: var(--ink); background: var(--coat-tint); border-color: var(--coat); }
 	.oos { margin-left: 6px; font-family: var(--label); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--warn); }
 	.empty { padding: 32px 10px; color: var(--ink-2); max-width: 60ch; }
 	.more { padding: 16px 10px; }

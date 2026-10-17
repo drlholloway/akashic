@@ -9,7 +9,8 @@
 				{ name: 'Electrosmash', href: 'https://web.archive.org/web/2026/https://www.electrosmash.com/', note: 'Stage-by-stage analyses of classic pedal circuits. The site was not answering when this was written, so the link goes to an archived copy.' },
 				{ name: 'GEOFEX', href: 'http://www.geofex.com/', note: "R.G. Keen's articles: the technology of the Fuzz Face, the Tube Screamer and much more." },
 				{ name: 'AMZ (muzique.com)', href: 'https://www.muzique.com/', note: "Jack Orman's lab notebook and articles." },
-				{ name: 'Tone Bender MkIII component values', href: 'https://vero-p2p.blogspot.com/2022/12/tone-bender-mkiii-component-values-table.html', note: 'A deep dive from the Vero P2P blog: a table of the values used in MkIII and MkIV Tone Benders across makers and production runs, compiled from gut shots, with frequency plots of what the emitter cap and the bias resistors change.' }
+				{ name: 'Tone Bender MkIII component values', href: 'https://vero-p2p.blogspot.com/2022/12/tone-bender-mkiii-component-values-table.html', note: 'A deep dive from the Vero P2P blog: a table of the values used in MkIII and MkIV Tone Benders across makers and production runs, compiled from gut shots, with frequency plots of what the emitter cap and the bias resistors change.' },
+				{ name: 'The Big Muff π Page', href: 'https://www.kitrae.net/music/music_big_muff.html', note: "Kit Rae's history of every Big Muff version, USA and Russian, with photos and specs, plus a guide to the circuit, wiring diagrams, mods and the clones: the reference for any Big Muff based build." }
 			]
 		},
 		{
