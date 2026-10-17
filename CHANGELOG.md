@@ -232,6 +232,7 @@ GitHub Release notes.
   Designator / Qty / Name export; spreadsheet readers accept a Name column as the value.
 
 ### Changed
+- Circuits: My bench sits at the top of the filters. With circuits saved it is the 'On my bench' filter and a link to the bench page; with none, a note says how to add one and where the bench is.
 - Circuit pages open without loading the whole library index (7 MB), which they used to wait for before any button worked: slow on a phone. Each circuit's record now carries the other boards based on its original, the same list in the same order, so a page opened directly is ready in a fraction of a second.
 - Circuit records load in 512 bundles when you move between circuits in the app (a page opened directly still carries its own), which keeps the site under the host's 20,000-file limit.
 - A board that builds more than one original is listed under each: `scraper/pcblib/original_covers.json` names them (the PCBWay 'Ibanez BN5 / SP5' board is under the BN5 Black Noise and the SP-5 Slam Punk; two Devi Ever boards under the Ruiner and the pedal they pair it with). Devi Ever pedals sold under several names for one circuit are one original: 'Torn's Peaker / Aenima / US Fuzz / Never Drive', 'Soda Meiser / Vintage Fuzz Master' (with the Effector 13 Soda Meiser), the Shoegazer, the Legend of Fuzz.

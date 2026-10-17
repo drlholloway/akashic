@@ -121,6 +121,17 @@
 				</button>
 			</h2>
 		{/snippet}
+		{#if bench.ready}
+			<div class="facet bench">
+				<h2 class="label strong">My bench</h2>
+				{#if bench.count || filters.bench}
+					<button type="button" class="chip" aria-pressed={filters.bench} title="Only the circuits you keep on your bench, in this browser" onclick={() => update({ bench: !filters.bench })}>On my bench <span class="count">{benchCount}</span></button>
+					<a class="bench-link" href="{base}/workbench/bench">Notes, export and sharing</a>
+				{:else}
+					<p class="bench-empty">Nothing on your bench yet. Search for a circuit, open it and press <span class="mono">+ My bench</span> to keep it. Your saved circuits show up here as a filter, and under <a href="{base}/workbench/bench">Workbench → My bench</a> with your notes.</p>
+				{/if}
+			</div>
+		{/if}
 		<button type="button" class="label all" onclick={() => folded.set(allFolded ? [] : FACETS)}>{allFolded ? 'Expand all' : 'Collapse all'}</button>
 		<div class="facet">
 			{@render head('build', 'Build')}
@@ -180,11 +191,7 @@
 				In stock only
 			</label>
 		</div>
-		{#if bench.count || filters.bench}
-			<div class="facet">
-				<button type="button" class="chip" aria-pressed={filters.bench} title="Only the circuits you keep on your bench, in this browser" onclick={() => update({ bench: !filters.bench })}>On my bench <span class="count">{benchCount}</span></button>
-			</div>
-		{/if}
+
 	</aside>
 
 	<section class="results">
@@ -239,6 +246,11 @@
 	.chips { display: flex; flex-wrap: wrap; gap: 6px; }
 	.chips[hidden] { display: none; }
 	.chip.more { color: var(--ink-3); }
+	.bench { padding-bottom: 16px; border-bottom: 1px solid var(--rule); }
+	.bench h2 { margin-bottom: 6px; }
+	.bench-link { display: block; margin-top: 6px; font-size: 13px; color: var(--ink-3); text-decoration: underline; text-decoration-color: var(--rule-strong); text-underline-offset: 3px; }
+	.bench-empty { margin: 0; font-size: 13px; color: var(--ink-3); line-height: 1.45; }
+	.bench-empty a, .bench-link:hover { color: var(--ink-2); text-decoration: underline; text-underline-offset: 3px; }
 	.results { min-width: 0; padding: 12px var(--gutter) 24px 0; }
 	.bar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; padding: 4px 10px 12px; }
 	.bar .count { margin: 0; }
@@ -253,6 +265,7 @@
 		.facets { position: static; max-height: none; border-right: 0; border-bottom: 1px solid var(--rule); padding: 12px 16px; display: flex; flex-wrap: wrap; gap: 8px 24px; }
 		.facet { margin: 0; }
 		.all { flex-basis: 100%; margin: 0; text-align: left; }
+		.bench { flex-basis: 100%; padding-bottom: 10px; }
 		.results { padding: 8px 16px 24px; }
 	}
 </style>
