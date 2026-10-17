@@ -26,6 +26,8 @@ function read(): Record<string, BenchItem> {
 
 class Bench {
 	items = $state<Record<string, BenchItem>>({});
+	/** False until the bench has been read: a page shows no bench state before then rather than a wrong one. */
+	ready = $state(false);
 	private started = false;
 
 	/** Read the bench once, and follow changes made in other tabs. */
@@ -33,6 +35,7 @@ class Bench {
 		if (!browser || this.started) return;
 		this.started = true;
 		this.items = read();
+		this.ready = true;
 		window.addEventListener('storage', (e) => {
 			if (e.key === KEY) this.items = read();
 		});

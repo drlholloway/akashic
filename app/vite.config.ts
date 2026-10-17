@@ -40,9 +40,11 @@ export default defineConfig({
 						options: { cacheName: 'circuits', expiration: { maxEntries: 2000 } }
 					},
 					{
+						// Network first: a cached page from an earlier deploy names scripts that are gone, so it would never
+						// come to life. The cached copy is for offline, or a network slower than three seconds.
 						urlPattern: ({ url, request }) => request.mode === 'navigate' && (url.pathname.startsWith('/circuit/') || url.pathname.startsWith('/parts/')),
-						handler: 'StaleWhileRevalidate',
-						options: { cacheName: 'pages', expiration: { maxEntries: 1000 } }
+						handler: 'NetworkFirst',
+						options: { cacheName: 'pages', networkTimeoutSeconds: 3, expiration: { maxEntries: 1000 } }
 					}
 				]
 			}

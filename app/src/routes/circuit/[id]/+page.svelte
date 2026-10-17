@@ -126,7 +126,7 @@
 				{#each lay.also ?? [] as a}
 					<a class="btn ghost" href={a.url} target="_blank" rel="noopener">{BUILD_NAMES[a.build]} layout</a>
 				{/each}
-				<button type="button" class="btn ghost keep" aria-pressed={bench.has(c.id)} onclick={() => bench.toggle(c.id)} title={bench.has(c.id) ? 'Take it off your bench' : 'Keep this circuit on your bench, in this browser'}>{bench.has(c.id) ? 'On my bench ✓' : '+ My bench'}</button>
+				{#if bench.ready}<button type="button" class="btn ghost keep" aria-pressed={bench.has(c.id)} onclick={() => bench.toggle(c.id)} title={bench.has(c.id) ? 'Take it off your bench' : 'Keep this circuit on your bench, in this browser'}>{bench.has(c.id) ? 'On my bench ✓' : '+ My bench'}</button>{/if}
 			</div>
 			{#if bench.has(c.id)}
 				<label class="bench-note">
