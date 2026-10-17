@@ -285,6 +285,27 @@ def run(images: bool = False) -> None:
         else:
             seen[p["slug"]] = 1
     page = {p["key"]: [p["value"], p["slug"]] for p in parts_out}
+    # The other boards based on each circuit's original, carried in its record so its page need not load the whole
+    # index to list them. Grouped as the app's normalizeOriginal (search.ts) does; the maker's own board first.
+    def _group(name: str) -> str:
+        s = re.sub(r"\b(the|a|an)\b", "", re.sub(r"[®™]", "", name), flags=re.I | re.A)
+        return re.sub(r"[^a-z0-9]+", " ", s, flags=re.I | re.A).strip().lower()
+    def _originals(e: dict) -> list[str]:
+        return e.get("originals") or ([e["original"]] if e["original"] else [])
+    groups: dict[str, list[int]] = defaultdict(list)
+    for i, e in enumerate(index):
+        for g in dict.fromkeys(_group(o) for o in _originals(e)):
+            groups[g].append(i)
+    entry = {e["id"]: (i, e) for i, e in enumerate(index)}
+    for c in pending:
+        me, e = entry[c["id"]]
+        if not e["original"]:
+            continue
+        sib = sorted({i for g in {_group(o) for o in _originals(e)} for i in groups[g]} - {me})
+        c["siblings"] = sorted(
+            ({k: index[i][k] for k in ("file_id", "name", "vendor", "enclosure", "controls", "price", "currency")}
+             | ({"own_design": True} if index[i].get("own_design") else {}) for i in sib),
+            key=lambda x: not x.get("own_design"))
     sets: dict[str, dict] = defaultdict(dict)
     for c in pending:
         for b in c["bom"]:

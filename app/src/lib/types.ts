@@ -74,6 +74,8 @@ export interface BomRow {
 }
 
 export interface Circuit extends IndexEntry {
+	/** The other boards based on the same original, the maker's own first: from the export, so the page needs no index. */
+	siblings?: Pick<IndexEntry, 'file_id' | 'name' | 'vendor' | 'enclosure' | 'controls' | 'price' | 'currency' | 'own_design'>[];
 	/** What the person who read the parts list off the drawing could not be sure of. */
 	uncertain?: string[];
 	description: string;

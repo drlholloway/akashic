@@ -6,20 +6,12 @@
 	import Faceplate from '$lib/Faceplate.svelte';
 	import { currency } from '$lib/currency.svelte';
 	import { bench } from '$lib/bench.svelte';
-	import { normalizeOriginal } from '$lib/search';
 	import { BUILD_NAMES, PART_CATEGORY_NAMES, PART_ORDER, VENDOR_FAB, VENDOR_NAMES, VENDOR_STORE, VENDOR_KIND, originalsOf, primaryAction, type BomRow } from '$lib/types';
 
 	let { data } = $props();
 	const c = $derived(data.circuit);
 	const vendorWarning = $derived((data.vendors as Record<string, { warning?: string }> | undefined)?.[c.vendor]?.warning ?? '');
-	const mine = $derived(new Set(originalsOf(c).map(normalizeOriginal)));
-	const siblings = $derived(
-		c.original
-			? data.index
-					.filter((e) => e.id !== c.id && originalsOf(e).some((o) => mine.has(normalizeOriginal(o))))
-					.sort((a, b) => Number(!!b.own_design) - Number(!!a.own_design)) // the maker's own board first
-			: []
-	);
+	const siblings = $derived(c.siblings ?? []); // the maker's own board first
 	// On a board whose gerbers are free to download, only the other boards the maker sells.
 	const free = $derived(!!c.extra_docs['PCB gerbers']);
 	const contact = $derived(makerContact(originalsOf(c), c.vendor));
