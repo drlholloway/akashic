@@ -40,7 +40,7 @@ _POST_ROW = re.compile(r"\b([A-Z]{1,3}\d{1,2}|GAIN|VOL(?:UME)?|TONE|LEVEL|DRIVE|
 
 
 def _text(html: str) -> str:
-    t = re.sub(r"<(?:script|style)[^>]*>.*?</(?:script|style)>", " ", html, flags=re.S)
+    t = re.sub(r"<(script|style)\b[^>]*>.*?</\1\b[^>]*>", " ", html, flags=re.S | re.I)
     t = re.sub(r"</(?:p|h\d|li|div)>", "\n", t)
     return re.sub(r"[ \t]+", " ", _html.unescape(re.sub(r"<[^>]+>", " ", t))).strip()
 
