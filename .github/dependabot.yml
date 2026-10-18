@@ -13,6 +13,14 @@ updates:
       # SvelteKit pins the TypeScript major it supports; bump it by hand with the kit.
       - dependency-name: typescript
         update-types: ["version-update:semver-major"]
+      # SvelteKit 3 needs @vite-pwa/sveltekit to support it (1.1.0 accepts kit 1 or 2) and moves the
+      # config out of svelte.config.js; adapter-static 4 and vite-plugin-pwa 2 go with it. Migrate by hand.
+      - dependency-name: "@sveltejs/kit"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@sveltejs/adapter-static"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: vite-plugin-pwa
+        update-types: ["version-update:semver-major"]
   - package-ecosystem: pip
     directory: /scraper
     schedule:
