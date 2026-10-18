@@ -24,7 +24,7 @@ RAW = f"https://raw.githubusercontent.com/{REPO}/main"
 WIKI_RAW = f"https://raw.githubusercontent.com/wiki/{REPO}"
 API_TREE = f"https://api.github.com/repos/{REPO}/git/trees/main?recursive=1"
 _BASED_ON = {"Biggus-Dickus": "Chuck D. Bones Biggus Dickus", "Ground-Fault": "Fuzzhugger FX Arc Flash",
-             "MOSFET-Driver-Redux": "Chuck D. Bones MOSFET Driver Redux",
+             "MOSFET-Driver-Redux": "Chuck D. Bones MOSFET Driver Redux", "Proteus": "MicTester Silicon Tonebender",
              "The-Everlasting-Tantrum": "DOD / Devi Ever Grindhaus"}
 _CATEGORY = {"Biggus-Dickus": "Distortion", "Ground-Fault": "Fuzz", "The-Everlasting-Tantrum": "Fuzz", "MOSFET-Driver-Redux": "Overdrive"}
 _HARDWARE = re.compile(r"jack|footswitch|header|battery|enclosure|knob|terminal strip|^J\d", re.I)
@@ -113,7 +113,9 @@ class Cryptid(Adapter):
         readme = self.f.get_text(f"{RAW}/{quote(folder)}/README.md", ".md") or ""
         verified = not re.search(r"not verified", p["status"], re.I)
         intro = re.search(r"## Introduction\s*\n(.+?)(?:\n##|\n###)", md, re.S)
-        description = clean_text(re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", re.sub(r"\*\*", "", intro.group(1) if intro else p["blurb"])))
+        intro_md = intro.group(1) if intro else p["blurb"]
+        intro_md = re.sub(r"^.*build report:?\s*(?:to ?do|tbd)\.?\s*$", "", intro_md, flags=re.I | re.M)  # a placeholder until the report is up
+        description = clean_text(re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", re.sub(r"\*\*|(?<!\w)\*(?=\S)|(?<=\S)\*(?!\w)", "", intro_md)))
         utility = folder.startswith("Utility-Boards/")
         faceplate = any("faceplate" in f.lower() and f.lower().endswith(".zip") for f in files)
         c = Circuit(vendor=self.vendor, slug=re.sub(r"[^a-z0-9]+", "-", folder.rsplit("/", 1)[-1].lower()).strip("-"), name=p["name"],
@@ -122,8 +124,10 @@ class Cryptid(Adapter):
                     enclosure=find_enclosure(readme) or find_enclosure(md),
                     tags=["verified" if verified else "not verified", "gerbers"] + (["faceplate"] if faceplate else []) + ["CC BY-NC-SA 4.0"])
         c.category = "Utility" if utility else _CATEGORY.get(folder) or classify(p["name"], c.based_on, description[:300])
-        photo = next((f for f in files if f.endswith("-complete.jpg")), "") or next((f for f in files if f.endswith("-faceplate.png")), "") \
-            or next((f for f in files if f.endswith("-pcb-front.png")), "")
+        dated = r"(?:-\d{4}-\d{2}-\d{2})?"  # 'proteus-faceplate-2026-10-15.png'
+        photo = next((f for f in files if re.search(rf"-complete{dated}\.jpg$", f)), "") \
+            or next((f for f in files if re.search(rf"-faceplate{dated}\.png$", f)), "") \
+            or next((f for f in files if re.search(rf"-pcb-front{dated}\.png$", f)), "")
         c.image_url = f"{RAW}/{quote(photo)}" if photo else ""
         for f in files:
             base = f.rsplit("/", 1)[-1]

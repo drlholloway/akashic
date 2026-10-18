@@ -408,6 +408,7 @@ CONTROLS: dict[str, list[str]] = {
 # circuit_id -> the original, where the source names the wrong one.
 BASED_ON: dict[str, str] = {
     "fuzzdog:bhug": "Jon Patton Bearhug Compressor",  # the shop page's 'inspired by' is the Torn's Peaker's, copied from another board
+    "fuzzdog:pitbull": "MicTester Silicon Tonebender",  # 'Silicon Tone Bender' in the title; the page credits Mic Tester's SiTB
 }
 
 _NOTE = "corrected by hand"
