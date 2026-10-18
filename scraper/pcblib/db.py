@@ -157,6 +157,9 @@ VENDORS = {
                      "and I/O boards by direct message; "
                      "indexed and linked. Parts read by eye from the schematics in the posts, which are not served. Two free boards "
                      "(circuits by Chuck D. Bones) are hosted with permission on the Cryptid Effects layouts wiki."),
+    "mattg": ("Matt Garman", "https://github.com/matt-garman",
+              "MattG on the PedalPCB forum. Microcontroller bypass modules shared on GitHub: KiCad hardware under CERN-OHL-P-2.0 "
+              "(mcu-bypass-hardware) and MIT firmware (mcu-bypass-firmware); indexed and linked, not redistributed. Parts read from the KiCad schematics."),
     "revolutiondeux": ("Revolution Deux", "https://revolutiondeux.blogspot.com",
                        "Schematics of boutique and vintage pedals posted 2008-2017, most traced by the freestompboxes.org community; "
                        "indexed and linked, not redistributed. Parts read by eye from the schematics in the posts, with the "
@@ -183,7 +186,7 @@ VENDORS = {
 # "layout" (a stripboard, tag strip, turret or perfboard drawing to build from), "kit" (a complete kit: parts,
 # enclosure and instructions).
 VENDOR_KIND = {"pcbway-gtu": "projects", "cryptid": "repo", "rwlpedal": "repo", "scientificguitarist": "repo", "sheepygit": "repo", "bentfishbowl": "blog", "effdub": "blog", "expanon": "archive", "schalltechnik": "blog",
-               "tagboardeffects": "layout", "dirtbox": "layout", "effectslayouts-blog": "layout", "modelectronics": "kit", "verop2p": "layout", "pedalbuilder": "blog", "efektpol": "layout", "midwayfair": "projects", "amplifiedparts": "layout", "revolutiondeux": "blog"}
+               "tagboardeffects": "layout", "dirtbox": "layout", "effectslayouts-blog": "layout", "modelectronics": "kit", "verop2p": "layout", "pedalbuilder": "blog", "efektpol": "layout", "midwayfair": "projects", "amplifiedparts": "layout", "revolutiondeux": "blog", "mattg": "repo"}
 
 # The site owner's own designs: their schematic and photo are served, not only linked.
 OWNER_VENDORS = {"cryptid"}
