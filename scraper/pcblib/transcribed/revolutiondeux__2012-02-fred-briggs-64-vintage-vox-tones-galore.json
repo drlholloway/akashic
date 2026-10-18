@@ -1,0 +1,111 @@
+{
+ "id": "revolutiondeux:2012-02-fred-briggs-64-vintage-vox-tones-galore",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Hand-drawn by Fred Briggs, 2012. No designators on the drawing; parts numbered here left to right. The control marked Volume is a 1KB rheostat in the emitter leg (it sets the gain).",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "R1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "Q1",
+   "2N3565",
+   "Q",
+   "or 2N5088, BC108"
+  ],
+  [
+   "R3",
+   "4.7K",
+   "R",
+   "collector"
+  ],
+  [
+   "R4",
+   "390",
+   "R",
+   "emitter"
+  ],
+  [
+   "C2",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C3",
+   "82n",
+   "C",
+   ""
+  ],
+  [
+   "Volume",
+   "B1K",
+   "POT",
+   "emitter rheostat"
+  ],
+  [
+   "C4",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "C5",
+   "4.7n",
+   "C",
+   ""
+  ],
+  [
+   "R5",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "C6",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "Headroom",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "D1",
+   "SB340",
+   "D",
+   "Schottky"
+  ],
+  [
+   "D2",
+   "BAT46",
+   "D",
+   ""
+  ],
+  [
+   "Master",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ]
+}

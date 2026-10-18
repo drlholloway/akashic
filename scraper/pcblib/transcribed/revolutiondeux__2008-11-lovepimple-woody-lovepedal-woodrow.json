@@ -1,0 +1,77 @@
+{
+ "id": "revolutiondeux:2008-11-lovepimple-woody-lovepedal-woodrow",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Schematic from LovePedalDetective on the freestompboxes.org forum, a small 200-pixel image but legible. Only the diodes have designators (D1, D2); the other parts are numbered here.",
+ "uncertain": [
+  "The Volume pot's taper is not marked."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "1M",
+   "R",
+   "input pulldown"
+  ],
+  [
+   "R2",
+   "2.2M",
+   "R",
+   "collector to base"
+  ],
+  [
+   "R3",
+   "3.3K",
+   "R",
+   "collector"
+  ],
+  [
+   "R4",
+   "330",
+   "R",
+   "emitter"
+  ],
+  [
+   "C1",
+   "47n",
+   "C",
+   "input"
+  ],
+  [
+   "C2",
+   "100n",
+   "C",
+   "output"
+  ],
+  [
+   "C3",
+   "47u",
+   "C",
+   "electrolytic, emitter bypass"
+  ],
+  [
+   "D1",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Volume",
+   "500K",
+   "POT",
+   ""
+  ]
+ ]
+}

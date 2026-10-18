@@ -1,0 +1,251 @@
+{
+ "id": "revolutiondeux:2009-05-bjf-dyna-red-distortion-bjf",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Hand-drawn trace from freestompboxes.org of a Dyna Red modded by Bjorn himself. No designators; parts numbered left to right. The perfboard layout by JL uses its own numbering and already has the 100n cap.",
+ "uncertain": [],
+ "fixes": [
+  "The 0.47u cap in the op-amp's feedback/gain leg (in series with the 1K to ground) is drawn as 0.47u because the traced unit was modded by Bjorn for more lower-mid character; Soulsonic found that 0.1u restores the original sound."
+ ],
+ "rows": [
+  [
+   "C1",
+   "22n",
+   "C",
+   "marked 223"
+  ],
+  [
+   "R1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "360K",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "IC1",
+   "CA3130EZ",
+   "IC",
+   ""
+  ],
+  [
+   "C2",
+   "100p",
+   "C",
+   "compensation, marked 101"
+  ],
+  [
+   "C3",
+   "100p",
+   "C",
+   "feedback, marked 101"
+  ],
+  [
+   "LED1",
+   "red",
+   "LED",
+   "1.8V, feedback clipping"
+  ],
+  [
+   "LED2",
+   "red",
+   "LED",
+   "1.8V, feedback clipping"
+  ],
+  [
+   "R4",
+   "3K",
+   "R",
+   ""
+  ],
+  [
+   "Dist",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "R5",
+   "6.8K",
+   "R",
+   ""
+  ],
+  [
+   "C4",
+   "10u",
+   "C",
+   "electrolytic, 16V"
+  ],
+  [
+   "R6",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "C5",
+   "100n",
+   "C",
+   "drawn 0.47u/50V; the post says 0.1u restores the original sound"
+  ],
+  [
+   "C6",
+   "470p",
+   "C",
+   "marked 471"
+  ],
+  [
+   "R7",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "C7",
+   "1u",
+   "C",
+   "electrolytic, 50V"
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "R8",
+   "3K",
+   "R",
+   ""
+  ],
+  [
+   "C8",
+   "47n",
+   "C",
+   "marked 473"
+  ],
+  [
+   "Treble",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "C9",
+   "22n",
+   "C",
+   "marked 223"
+  ],
+  [
+   "C10",
+   "22n",
+   "C",
+   "marked 223"
+  ],
+  [
+   "R9",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "Q1",
+   "2N5458",
+   "Q",
+   ""
+  ],
+  [
+   "R10",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "C11",
+   "1u",
+   "C",
+   "electrolytic, 50V"
+  ],
+  [
+   "R11",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "Volume",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "D3",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "R12",
+   "47",
+   "R",
+   ""
+  ],
+  [
+   "C12",
+   "100u",
+   "C",
+   "electrolytic, 25V"
+  ],
+  [
+   "R13",
+   "47K",
+   "R",
+   "bias divider"
+  ],
+  [
+   "R14",
+   "47K",
+   "R",
+   "bias divider"
+  ],
+  [
+   "C13",
+   "22u",
+   "C",
+   "electrolytic, 25V"
+  ],
+  [
+   "LED3",
+   "LED",
+   "LED",
+   "on/off indicator"
+  ],
+  [
+   "R15",
+   "3K",
+   "R",
+   "LED"
+  ],
+  [
+   "D4",
+   "3.6V zener",
+   "D",
+   "in series with the LED"
+  ]
+ ]
+}

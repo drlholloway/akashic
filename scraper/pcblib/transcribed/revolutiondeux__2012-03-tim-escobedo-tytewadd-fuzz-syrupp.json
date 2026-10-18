@@ -1,0 +1,63 @@
+{
+ "id": "revolutiondeux:2012-03-tim-escobedo-tytewadd-fuzz-syrupp",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Tim Escobedo's own drawing, v2.4 10/02, shown in the post for comparison with the Tytewadd.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "22K",
+   "R",
+   "Q2 source"
+  ],
+  [
+   "C1",
+   "22u",
+   "C",
+   "electrolytic, supply"
+  ],
+  [
+   "C2",
+   "100n",
+   "C",
+   "output"
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Q1",
+   "J201",
+   "Q",
+   "current source"
+  ],
+  [
+   "Q2",
+   "J201",
+   "Q",
+   ""
+  ],
+  [
+   "Trim",
+   "100K",
+   "POT",
+   "trimmer"
+  ],
+  [
+   "Gain",
+   "2M",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "100K",
+   "POT",
+   ""
+  ]
+ ]
+}

@@ -1,0 +1,90 @@
+{
+ "id": "revolutiondeux:2012-01-zvex-super-hard-on-sho-landgraff-clean-boost",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Hand drawing by Clay Jones of pedal #11 (7-6-2002). No designators except Q1; parts numbered here.",
+ "uncertain": [
+  "The input cap value is not drawn.",
+  "The supply filter diode is marked 'IN TFK' (Telefunken?), part number not given."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "?",
+   "C",
+   "input, yellow AVX box; value not drawn"
+  ],
+  [
+   "R1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "D1",
+   "1N914",
+   "D",
+   "protection"
+  ],
+  [
+   "D2",
+   "1N914",
+   "D",
+   "protection"
+  ],
+  [
+   "Q1",
+   "NTE490",
+   "Q",
+   "N-channel MOSFET"
+  ],
+  [
+   "R4",
+   "5.1K",
+   "R",
+   ""
+  ],
+  [
+   "Boost",
+   "B5K",
+   "POT",
+   "10 detents"
+  ],
+  [
+   "C2",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R5",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "C3",
+   "47u",
+   "C",
+   "filter"
+  ],
+  [
+   "D3",
+   "?",
+   "D",
+   "filter diode marked TFK"
+  ]
+ ]
+}

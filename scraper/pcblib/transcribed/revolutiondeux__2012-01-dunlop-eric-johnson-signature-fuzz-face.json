@@ -1,0 +1,67 @@
+{
+ "id": "revolutiondeux:2012-01-dunlop-eric-johnson-signature-fuzz-face",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Values only, from an annotated photo of the EJ Fuzz Face board (top to bottom: 1uF, 15uF, 332R, 42.2K, 6.04K, 10nF, 121K). No schematic is drawn; build on a standard Fuzz Face schematic with these values.",
+ "uncertain": [
+  "Image 2 is not a schematic but a photo of the circuit board with each part's value written beside it; the parts are numbered here in the photo's order and which Fuzz Face position each one takes is not shown.",
+  "The transistor markings are unreadable in the photo (two silicon TO-92 parts; the board is marked 'x2').",
+  "The Fuzz and Volume pot values are not shown."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "1u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C2",
+   "15u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R1",
+   "332",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "42.2K",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "6.04K",
+   "R",
+   ""
+  ],
+  [
+   "C3",
+   "10n",
+   "C",
+   "film"
+  ],
+  [
+   "R4",
+   "121K",
+   "R",
+   ""
+  ],
+  [
+   "Q1",
+   "?",
+   "Q",
+   "silicon, marking unreadable"
+  ],
+  [
+   "Q2",
+   "?",
+   "Q",
+   "silicon, marking unreadable"
+  ]
+ ]
+}

@@ -1,0 +1,83 @@
+{
+ "id": "revolutiondeux:2012-03-hemmotim-escobedo-bazz-fuss-rev-1-5",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Tim Escobedo's drawing, rev 1.5, 11/19/01, of Hemmo's Bazz Fuss with his additions. The drawing has no designators, so the parts are numbered here.",
+ "uncertain": [
+  "The three series diodes are not given a part number; only the single reverse diode is labeled 1N4148."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "22K",
+   "R",
+   "collector"
+  ],
+  [
+   "C1",
+   "22n",
+   "C",
+   "input"
+  ],
+  [
+   "C2",
+   "100n",
+   "C",
+   "output"
+  ],
+  [
+   "C3",
+   "22u",
+   "C",
+   "electrolytic, supply"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   "collector to base"
+  ],
+  [
+   "D2",
+   "?",
+   "D",
+   "series string, type not drawn"
+  ],
+  [
+   "D3",
+   "?",
+   "D",
+   "series string, type not drawn"
+  ],
+  [
+   "D4",
+   "?",
+   "D",
+   "series string, type not drawn"
+  ],
+  [
+   "Q1",
+   "MPSA13",
+   "Q",
+   "Darlington; or two 2N3904"
+  ],
+  [
+   "T1",
+   "42TM018",
+   "OTHER",
+   "Mouser input transformer, primary only; optional"
+  ],
+  [
+   "Gain",
+   "10K",
+   "POT",
+   "rheostat on the emitter"
+  ],
+  [
+   "Volume",
+   "100K",
+   "POT",
+   ""
+  ]
+ ]
+}

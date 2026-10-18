@@ -1,0 +1,117 @@
+{
+ "id": "revolutiondeux:2012-01-penny-pedals-fingerprint-parallel-universe-old",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Circuit by Colin Raffel, drawn by Ansil Gregory. No designators, so parts are numbered here left to right.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "100n",
+   "C",
+   "input, .1uF"
+  ],
+  [
+   "R1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "IC1",
+   "LM386",
+   "IC",
+   ""
+  ],
+  [
+   "Gain",
+   "1K",
+   "POT",
+   "pins 1-8 with C2; 1k-5k"
+  ],
+  [
+   "C2",
+   "10u",
+   "C",
+   "electrolytic, in series with Gain"
+  ],
+  [
+   "Starve",
+   "1K",
+   "POT",
+   "supply starve, selected by the Gate switch"
+  ],
+  [
+   "R2",
+   "2.2K",
+   "R",
+   "supply starve, selected by the Gate switch"
+  ],
+  [
+   "Gate",
+   "SPDT",
+   "SW",
+   ""
+  ],
+  [
+   "C3",
+   "10u",
+   "C",
+   "electrolytic, pins 5-7"
+  ],
+  [
+   "Freq",
+   "5K",
+   "POT",
+   ""
+  ],
+  [
+   "C4",
+   "100n",
+   "C",
+   ".1uF, pins 5-7"
+  ],
+  [
+   "Oscillate",
+   "SPST",
+   "SW",
+   ""
+  ],
+  [
+   "C5",
+   "100n",
+   "C",
+   "output, .1uF"
+  ],
+  [
+   "R3",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "Level",
+   "5K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "10K",
+   "POT",
+   ""
+  ],
+  [
+   "C6",
+   "47n",
+   "C",
+   ".047 or .1uF"
+  ]
+ ]
+}

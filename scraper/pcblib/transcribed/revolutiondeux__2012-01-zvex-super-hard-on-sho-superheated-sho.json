@@ -1,0 +1,93 @@
+{
+ "id": "revolutiondeux:2012-01-zvex-super-hard-on-sho-superheated-sho",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Rick Holt's drawing, April 2010. No designators; parts numbered here.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "100n",
+   "C",
+   "input"
+  ],
+  [
+   "R1",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "Q1",
+   "BS170",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "9.1V zener",
+   "D",
+   ""
+  ],
+  [
+   "Boost",
+   "C5K",
+   "POT",
+   "source"
+  ],
+  [
+   "R3",
+   "5.1K",
+   "R",
+   "drain, Hot position"
+  ],
+  [
+   "R4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "R5",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "Q2",
+   "2N5457",
+   "Q",
+   "current source"
+  ],
+  [
+   "C2",
+   "100n",
+   "C",
+   "bootstrap"
+  ],
+  [
+   "Hot/Superheated",
+   "SPDT",
+   "SW",
+   ""
+  ],
+  [
+   "C3",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R6",
+   "100K",
+   "R",
+   ""
+  ]
+ ]
+}

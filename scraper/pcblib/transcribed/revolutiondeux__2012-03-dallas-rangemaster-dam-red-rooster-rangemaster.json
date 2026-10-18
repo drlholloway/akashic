@@ -1,0 +1,63 @@
+{
+ "id": "revolutiondeux:2012-03-dallas-rangemaster-dam-red-rooster-rangemaster",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Fuzz Central schematic of the original Rangemaster. Only the transistor has a designator; the other parts are numbered here left to right.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "470K",
+   "R",
+   "bias, to supply"
+  ],
+  [
+   "R2",
+   "68K",
+   "R",
+   "bias, to ground (Rb1)"
+  ],
+  [
+   "R3",
+   "3.9K",
+   "R",
+   "emitter (Re)"
+  ],
+  [
+   "C1",
+   "5n",
+   "C",
+   "input"
+  ],
+  [
+   "C2",
+   "47u",
+   "C",
+   "electrolytic, emitter bypass"
+  ],
+  [
+   "C3",
+   "10n",
+   "C",
+   "output"
+  ],
+  [
+   "C4",
+   "47u",
+   "C",
+   "electrolytic, supply"
+  ],
+  [
+   "Q1",
+   "OC44",
+   "Q",
+   "PNP germanium; or OC71"
+  ],
+  [
+   "Boost",
+   "10K",
+   "POT",
+   "drawn 10KA"
+  ]
+ ]
+}

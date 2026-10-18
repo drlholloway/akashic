@@ -1,0 +1,331 @@
+{
+ "id": "revolutiondeux:2012-03-wem-watkins-project-v-fuzz",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Hand-drawn schematic by MBgv (GrizzlyTone posted it) traced from internet photos, 2011-12-26, revised 2012-01-09 with digi2t's corrections, with calculated DC voltages. The drawing has no designators except circled transistor numbers 1-8 (used as Q1-Q8); the other parts are numbered here roughly in signal order. Image 5 is digi2t's (Dino T.) verified vero layout, with its own designators and parts list.",
+ "uncertain": [
+  "The schematic marks circled components as unknown values: the 2K2 trimmer at Q4's collector and the 6n8 capacitor on the Edge switch (drawn '6n8?').",
+  "The resistor across the Drive switch reads 150K; the verified layout's parts list has a 47K in what may be that position.",
+  "The layout's parts list substitutes MPSA18 for the BC108B transistors and 2N5087 for the BC186, has a 1.5M resistor (R24) not obvious on the schematic, and deletes a capacitor (its C2)."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "390",
+   "R",
+   "supply"
+  ],
+  [
+   "R2",
+   "100",
+   "R",
+   "Q2 emitter"
+  ],
+  [
+   "R3",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "10K",
+   "R",
+   "Q1 collector"
+  ],
+  [
+   "R5",
+   "1.5M",
+   "R",
+   "feedback"
+  ],
+  [
+   "R6",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "R7",
+   "10K",
+   "R",
+   "Q3 base bias"
+  ],
+  [
+   "R8",
+   "1.5K",
+   "R",
+   "Q3 emitter"
+  ],
+  [
+   "R9",
+   "330",
+   "R",
+   "Q4 emitter"
+  ],
+  [
+   "R10",
+   "27K",
+   "R",
+   ""
+  ],
+  [
+   "R11",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "R12",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "R13",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "R14",
+   "1.5K",
+   "R",
+   "Q7 emitter"
+  ],
+  [
+   "R15",
+   "4.7",
+   "R",
+   "alt. 5.1"
+  ],
+  [
+   "R16",
+   "4.7",
+   "R",
+   "alt. 5.1"
+  ],
+  [
+   "R17",
+   "1.5K",
+   "R",
+   "Q6 base"
+  ],
+  [
+   "R18",
+   "10K",
+   "R",
+   "Edge switch"
+  ],
+  [
+   "R19",
+   "4.7K",
+   "R",
+   "Drive switch"
+  ],
+  [
+   "R20",
+   "4.7K",
+   "R",
+   "Drive switch"
+  ],
+  [
+   "R21",
+   "150K",
+   "R",
+   "Drive switch"
+  ],
+  [
+   "R22",
+   "5.6K",
+   "R",
+   ""
+  ],
+  [
+   "R23",
+   "10K",
+   "R",
+   "output to ground"
+  ],
+  [
+   "C1",
+   "1000u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C2",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "C3",
+   "2.5u",
+   "C",
+   "electrolytic, 64V, input"
+  ],
+  [
+   "C4",
+   "50u",
+   "C",
+   "electrolytic, 25V"
+  ],
+  [
+   "C5",
+   "2.5u",
+   "C",
+   "electrolytic, 64V"
+  ],
+  [
+   "C6",
+   "2.5u",
+   "C",
+   "electrolytic, 64V"
+  ],
+  [
+   "C7",
+   "2.5u",
+   "C",
+   "electrolytic, 25V"
+  ],
+  [
+   "C8",
+   "50u",
+   "C",
+   "electrolytic, 6.4V"
+  ],
+  [
+   "C9",
+   "25u",
+   "C",
+   "electrolytic, 25V"
+  ],
+  [
+   "C10",
+   "22p",
+   "C",
+   ""
+  ],
+  [
+   "C11",
+   "470p",
+   "C",
+   "alt. 390p"
+  ],
+  [
+   "C12",
+   "320u",
+   "C",
+   "electrolytic, 6.4V"
+  ],
+  [
+   "C13",
+   "6.8n",
+   "C",
+   "input jack"
+  ],
+  [
+   "C14",
+   "10n",
+   "C",
+   "Edge switch"
+  ],
+  [
+   "C15",
+   "6.8n",
+   "C",
+   "Edge switch, value unknown (drawn 6n8?)"
+  ],
+  [
+   "L1",
+   "?",
+   "L",
+   "RS Components HF inductor, value unknown"
+  ],
+  [
+   "Q1",
+   "BC108B",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "BC108B",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "BC108B",
+   "Q",
+   ""
+  ],
+  [
+   "Q4",
+   "BC108B",
+   "Q",
+   ""
+  ],
+  [
+   "Q5",
+   "BC186",
+   "Q",
+   "PNP"
+  ],
+  [
+   "Q6",
+   "BC108B",
+   "Q",
+   "alt. BC109B"
+  ],
+  [
+   "Q7",
+   "BC108B",
+   "Q",
+   "alt. BC109B"
+  ],
+  [
+   "Q8",
+   "BC108B",
+   "Q",
+   "alt. BC109B"
+  ],
+  [
+   "Trim A",
+   "50K",
+   "POT",
+   "trimmer, set at about 22K"
+  ],
+  [
+   "Trim 13",
+   "2.2K",
+   "POT",
+   "trimmer at Q4 collector, value unknown"
+  ],
+  [
+   "Attack",
+   "A10K",
+   "POT",
+   "10K log"
+  ],
+  [
+   "Volume",
+   "A1K",
+   "POT",
+   "1K log"
+  ],
+  [
+   "Drive",
+   "DPDT",
+   "SW",
+   "slide switch"
+  ],
+  [
+   "Edge",
+   "DPDT",
+   "SW",
+   "slide switch"
+  ]
+ ]
+}

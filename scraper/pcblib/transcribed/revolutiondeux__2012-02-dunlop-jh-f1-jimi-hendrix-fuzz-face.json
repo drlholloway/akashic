@@ -1,0 +1,102 @@
+{
+ "id": "revolutiondeux:2012-02-dunlop-jh-f1-jimi-hendrix-fuzz-face",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Traced by Gottfried Divos (AnalogGuru) and modified by Monkeyxx with information from Sinner and loylo on freestompboxes.org; the image is the corrected version. Component numbering follows the original PCB. The vero layout is by Monkeyxx.",
+ "uncertain": [
+  "C5 could not be measured; the drawing says it should be 47pF and is known to be below 100pF.",
+  "VR1 and VR2 are unmarked SMD trimmers on the original, probably 50K and 10K."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "82.5K",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "20K",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "332",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "3.16K",
+   "R",
+   "5.11K on early units"
+  ],
+  [
+   "R5",
+   "10",
+   "R",
+   ""
+  ],
+  [
+   "C1",
+   "2.2u",
+   "C",
+   "electrolytic, input"
+  ],
+  [
+   "C2",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C3",
+   "100n",
+   "C",
+   "output"
+  ],
+  [
+   "C5",
+   "47p",
+   "C",
+   "not measured; below 100p"
+  ],
+  [
+   "Q1",
+   "BC108",
+   "Q",
+   "BC107 also seen; about 260 hFE"
+  ],
+  [
+   "Q2",
+   "BC108",
+   "Q",
+   "BC107 also seen; about 260 hFE"
+  ],
+  [
+   "Q1 bias trim",
+   "50K",
+   "POT",
+   "VR1, set Q1 collector to 1.35V; unmarked SMD, probably 50K"
+  ],
+  [
+   "Q2 bias trim",
+   "10K",
+   "POT",
+   "VR2, set Q2 collector to 5.75V; unmarked SMD, probably 10K"
+  ],
+  [
+   "Fuzz",
+   "B1K",
+   "POT",
+   "P1, linear"
+  ],
+  [
+   "Volume",
+   "A470K",
+   "POT",
+   "P2, log"
+  ]
+ ]
+}

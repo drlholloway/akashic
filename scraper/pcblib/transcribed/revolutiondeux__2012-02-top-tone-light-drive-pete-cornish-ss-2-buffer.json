@@ -1,0 +1,87 @@
+{
+ "id": "revolutiondeux:2012-02-top-tone-light-drive-pete-cornish-ss-2-buffer",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Fragment of a larger schematic, labeled 'Input Buffer'; VB is the supply and S1.A the switch.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "120K",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "200K",
+   "R",
+   ""
+  ],
+  [
+   "R5",
+   "120K",
+   "R",
+   ""
+  ],
+  [
+   "R6",
+   "7.5K",
+   "R",
+   ""
+  ],
+  [
+   "R7",
+   "20K",
+   "R",
+   ""
+  ],
+  [
+   "R8",
+   "51",
+   "R",
+   ""
+  ],
+  [
+   "C1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "C2",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "C3",
+   "4.7u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C4",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC549",
+   "Q",
+   ""
+  ]
+ ]
+}

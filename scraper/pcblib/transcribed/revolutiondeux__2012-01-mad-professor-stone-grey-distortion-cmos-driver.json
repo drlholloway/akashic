@@ -1,0 +1,183 @@
+{
+ "id": "revolutiondeux:2012-01-mad-professor-stone-grey-distortion-cmos-driver",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Scan from a 1970s Japanese textbook, with no designators beyond R1/R2 labels on the inverter stages; parts numbered here left to right.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "1M",
+   "R",
+   "input pull-down"
+  ],
+  [
+   "R2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "470K",
+   "R",
+   "bias divider"
+  ],
+  [
+   "R5",
+   "470K",
+   "R",
+   "bias divider"
+  ],
+  [
+   "R6",
+   "1M",
+   "R",
+   "op-amp feedback"
+  ],
+  [
+   "R7",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "R8",
+   "330K",
+   "R",
+   "first inverter feedback (R1 on the drawing)"
+  ],
+  [
+   "R9",
+   "560K",
+   "R",
+   "in series with the Bias pot (R2 on the drawing)"
+  ],
+  [
+   "R10",
+   "1M",
+   "R",
+   "second inverter feedback (R1 on the drawing)"
+  ],
+  [
+   "R11",
+   "2.2M",
+   "R",
+   "R2 on the drawing"
+  ],
+  [
+   "R12",
+   "10K",
+   "R",
+   "output"
+  ],
+  [
+   "C1",
+   "22n",
+   "C",
+   "input"
+  ],
+  [
+   "C2",
+   "3.9u",
+   "C",
+   "tantalum"
+  ],
+  [
+   "C3",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "C4",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "C5",
+   "68n",
+   "C",
+   ""
+  ],
+  [
+   "C6",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "C7",
+   "68n",
+   "C",
+   ""
+  ],
+  [
+   "C8",
+   "1u",
+   "C",
+   "tantalum"
+  ],
+  [
+   "C9",
+   "100u",
+   "C",
+   "electrolytic, 10V, power filter"
+  ],
+  [
+   "C10",
+   "68n",
+   "C",
+   "power filter"
+  ],
+  [
+   "D1",
+   "1S1588",
+   "D",
+   ""
+  ],
+  [
+   "IC1",
+   "LF356H",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "MC14049B",
+   "IC",
+   "CMOS hex inverter"
+  ],
+  [
+   "Amplitude",
+   "500K",
+   "POT",
+   ""
+  ],
+  [
+   "Over Drive",
+   "500K",
+   "POT",
+   "B or C taper"
+  ],
+  [
+   "Bias",
+   "1M",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A10K",
+   "POT",
+   ""
+  ]
+ ]
+}

@@ -1,0 +1,135 @@
+{
+ "id": "revolutiondeux:2012-03-fred-briggs-unknown-fuzz",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "The author's hand-drawn schematic (2012). It has no designators, so parts are numbered here left to right; the two piggy-backed 2N5088s are Q1a and Q1b.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "47u",
+   "C",
+   "electrolytic, supply filter"
+  ],
+  [
+   "D1",
+   "1N4007",
+   "D",
+   "polarity protection"
+  ],
+  [
+   "R1",
+   "1M",
+   "R",
+   "input pulldown"
+  ],
+  [
+   "R2",
+   "15K",
+   "R",
+   "input"
+  ],
+  [
+   "C2",
+   "4.7n",
+   "C",
+   "input"
+  ],
+  [
+   "Bass Cut",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "C3",
+   "1u",
+   "C",
+   "electrolytic, in series with Bass Cut"
+  ],
+  [
+   "Q1a",
+   "2N5088",
+   "Q",
+   "piggy-backed pair"
+  ],
+  [
+   "Q1b",
+   "2N5088",
+   "Q",
+   "piggy-backed pair"
+  ],
+  [
+   "hFE trim",
+   "100K",
+   "POT",
+   "trimmer, adjust Q1's hFE to 25"
+  ],
+  [
+   "R3",
+   "15K",
+   "R",
+   "Q1 collector"
+  ],
+  [
+   "R4",
+   "22K",
+   "R",
+   "feedback"
+  ],
+  [
+   "Width",
+   "B100K",
+   "POT",
+   "feedback"
+  ],
+  [
+   "C4",
+   "470p",
+   "C",
+   "Q2 collector to base"
+  ],
+  [
+   "Q2",
+   "BC108",
+   "Q",
+   "hFE about 150"
+  ],
+  [
+   "R5",
+   "1.8K",
+   "R",
+   "Q2 collector"
+  ],
+  [
+   "Bias trim",
+   "10K",
+   "POT",
+   "trimmer, bias Q2's collector to about 4.5V"
+  ],
+  [
+   "R6",
+   "1K",
+   "R",
+   "Q2 emitter"
+  ],
+  [
+   "C5",
+   "10u",
+   "C",
+   "electrolytic, emitter bypass"
+  ],
+  [
+   "C6",
+   "100n",
+   "C",
+   "output"
+  ],
+  [
+   "Volume",
+   "A500K",
+   "POT",
+   ""
+  ]
+ ]
+}

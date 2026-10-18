@@ -1,0 +1,77 @@
+{
+ "id": "revolutiondeux:2012-06-tube-sound-od-briggs-paf-overdrive-tube-sound-od",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Redrawn from the ASCII art in Novo's 4 July 1995 rec.music.makers.guitar post. VR1 is the bias balance trimmer.",
+ "uncertain": [
+  "The emitter bypass cap C2 is drawn as 22u, while Novo's text gives 0.1u to 1u as its range and the author's mod refers to a 10u bypass cap."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "1M",
+   "R",
+   "input pulldown"
+  ],
+  [
+   "C1",
+   "4.7n",
+   "C",
+   "input"
+  ],
+  [
+   "R3",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "Bias trim",
+   "20K",
+   "POT",
+   "VR1, bias balance"
+  ],
+  [
+   "Q1",
+   "2N3906",
+   "Q",
+   "PNP"
+  ],
+  [
+   "Q2",
+   "2N3904",
+   "Q",
+   "NPN"
+  ],
+  [
+   "R2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "C2",
+   "22u",
+   "C",
+   "electrolytic, emitter bypass"
+  ],
+  [
+   "C3",
+   "100n",
+   "C",
+   "output"
+  ],
+  [
+   "Vol",
+   "A100K",
+   "POT",
+   ""
+  ]
+ ]
+}

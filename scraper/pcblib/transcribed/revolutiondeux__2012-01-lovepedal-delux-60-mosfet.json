@@ -1,0 +1,69 @@
+{
+ "id": "revolutiondeux:2012-01-lovepedal-delux-60-mosfet",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Drawn by Greg_G for freestompboxes.org (2011), reposted with his permission.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "C3",
+   "47u",
+   "C",
+   "electrolytic, power filter"
+  ],
+  [
+   "C1",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "R1",
+   "3.3M",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "3.3M",
+   "R",
+   "drain-to-gate feedback"
+  ],
+  [
+   "Q1",
+   "BS170",
+   "Q",
+   ""
+  ],
+  [
+   "R2",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "330",
+   "R",
+   ""
+  ],
+  [
+   "C2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "R5",
+   "47K",
+   "R",
+   "in parallel with the volume pot"
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   "VOL"
+  ]
+ ]
+}

@@ -1,0 +1,69 @@
+{
+ "id": "revolutiondeux:2009-01-nick-greer-green-giant",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Original trace by samhambone, cleaned up by purplepeopleeater on freestompboxes.org. Small image but all values are readable.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "R1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "Q1",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "R3",
+   "680",
+   "R",
+   ""
+  ],
+  [
+   "C2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "Clean Mix",
+   "25K",
+   "POT",
+   "in series with the clipping diodes"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "Volume",
+   "100K",
+   "POT",
+   ""
+  ]
+ ]
+}

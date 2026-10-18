@@ -1,0 +1,151 @@
+{
+ "id": "revolutiondeux:2012-01-lovepedal-englishman_25-englishman",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Traced by a freestompboxes.org member from a Lovepimple 'English Gent' clone board (the photos show that PCB, with some surgery); the schematic is titled LovePimple EnglishGent.",
+ "uncertain": [
+  "D5, the series power diode, is drawn with its part number as '(?)'."
+ ],
+ "fixes": [
+  "Clipping diodes D1 and D2 are labeled 1N9148; they should read 1N4148 (a 1N914 also works)."
+ ],
+ "rows": [
+  [
+   "R1",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "330",
+   "R",
+   ""
+  ],
+  [
+   "R6",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "R7",
+   "330",
+   "R",
+   ""
+  ],
+  [
+   "R11",
+   "100",
+   "R",
+   ""
+  ],
+  [
+   "R12",
+   "10K",
+   "R",
+   "LED resistor"
+  ],
+  [
+   "C1",
+   "470n",
+   "C",
+   ""
+  ],
+  [
+   "C2",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "C3",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C4",
+   "47u",
+   "C",
+   "electrolytic, power filter"
+  ],
+  [
+   "C5",
+   "100n",
+   "C",
+   "power filter"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   "drawn 1N9148; the post corrects it to 1N4148"
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   "drawn 1N9148; the post corrects it to 1N4148"
+  ],
+  [
+   "D3",
+   "BAT46",
+   "D",
+   "Schottky"
+  ],
+  [
+   "D4",
+   "BAT46",
+   "D",
+   "Schottky"
+  ],
+  [
+   "D5",
+   "?",
+   "D",
+   "series power protection; drawn '(?)'"
+  ],
+  [
+   "D6",
+   "LED",
+   "LED",
+   ""
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Vol",
+   "B100K",
+   "POT",
+   "R9"
+  ],
+  [
+   "Gain",
+   "B1K",
+   "POT",
+   "R10"
+  ],
+  [
+   "Fail",
+   "DPDT on/off/on",
+   "SW",
+   "clipping select"
+  ]
+ ]
+}

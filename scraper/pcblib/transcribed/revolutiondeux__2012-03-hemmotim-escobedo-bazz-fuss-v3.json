@@ -1,0 +1,47 @@
+{
+ "id": "revolutiondeux:2012-03-hemmotim-escobedo-bazz-fuss-v3",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "RunOffGroove's 'bazz fuss v3' drawing (2002), posted from Home-wrecker. The drawing has no designators, so the parts are numbered here; the diode is starred to mark it as the part to experiment with, 1N914 in the stock version per the chart.",
+ "uncertain": [
+  "The input and output capacitor values are not given on the drawing."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "10K",
+   "R",
+   "collector"
+  ],
+  [
+   "C1",
+   "?",
+   "C",
+   "input, value not drawn"
+  ],
+  [
+   "C2",
+   "?",
+   "C",
+   "output, value not drawn"
+  ],
+  [
+   "D1",
+   "1N914",
+   "D",
+   "collector to base; stock per the chart, experiment"
+  ],
+  [
+   "Q1",
+   "MPSA13",
+   "Q",
+   "Darlington"
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   "100k audio"
+  ]
+ ]
+}

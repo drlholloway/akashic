@@ -1,0 +1,455 @@
+{
+ "id": "revolutiondeux:2012-02-jonny-greenwood-radiohead-gear-magnus-modulus",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Designer's own schematic (page 2a of 5, version 1.0, November 2008). The drawing has no designators, so the parts are numbered here roughly left to right, top to bottom. The input op amp's feedback capacitor is marked N/A (not fitted). Images 15 and 16 are the board diagram and the layout.",
+ "uncertain": [
+  "Values around PT2399 pins 11-14 are small on the drawing; the 0.1u (pins 11-12) and 0.022u assignments are best reads."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "1M",
+   "R",
+   "input pulldown"
+  ],
+  [
+   "R2",
+   "1M",
+   "R",
+   "input resistor"
+  ],
+  [
+   "R3",
+   "1M",
+   "R",
+   "input op amp feedback"
+  ],
+  [
+   "R4",
+   "10K",
+   "R",
+   "dry signal to mixer"
+  ],
+  [
+   "R5",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R6",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "R7",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "R8",
+   "1K",
+   "R",
+   "feedback path"
+  ],
+  [
+   "R9",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "R10",
+   "47K",
+   "R",
+   "bias divider"
+  ],
+  [
+   "R11",
+   "47K",
+   "R",
+   "bias divider"
+  ],
+  [
+   "R12",
+   "10K",
+   "R",
+   "PT2399 pin 16"
+  ],
+  [
+   "R13",
+   "10K",
+   "R",
+   "PT2399 pin 15"
+  ],
+  [
+   "R14",
+   "1K",
+   "R",
+   "PT2399 pin 14"
+  ],
+  [
+   "R15",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "R16",
+   "10K",
+   "R",
+   "PT2399 pin 13"
+  ],
+  [
+   "R17",
+   "10K",
+   "R",
+   "PT2399 pin 12/11"
+  ],
+  [
+   "R18",
+   "1K",
+   "R",
+   "Time pot to ground"
+  ],
+  [
+   "R19",
+   "4.7K",
+   "R",
+   "LFO to Time"
+  ],
+  [
+   "R20",
+   "10K",
+   "R",
+   "mixer input"
+  ],
+  [
+   "R21",
+   "10K",
+   "R",
+   "mixer"
+  ],
+  [
+   "R22",
+   "100K",
+   "R",
+   "output pulldown"
+  ],
+  [
+   "R23",
+   "100K",
+   "R",
+   "JFET gate bias"
+  ],
+  [
+   "R24",
+   "240K",
+   "R",
+   "or 220K"
+  ],
+  [
+   "R25",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "R26",
+   "240K",
+   "R",
+   "or 220K, LFO feedback"
+  ],
+  [
+   "R27",
+   "240K",
+   "R",
+   "or 220K"
+  ],
+  [
+   "R28",
+   "100",
+   "R",
+   ""
+  ],
+  [
+   "R29",
+   "4.7K",
+   "R",
+   "LED resistor"
+  ],
+  [
+   "C1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "C3",
+   "1u",
+   "C",
+   ""
+  ],
+  [
+   "C4",
+   "15n",
+   "C",
+   ""
+  ],
+  [
+   "C5",
+   "1u",
+   "C",
+   ""
+  ],
+  [
+   "C6",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C7",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C8",
+   "47u",
+   "C",
+   "PT2399 pin 2"
+  ],
+  [
+   "C9",
+   "47u",
+   "C",
+   "PT2399 pin 3/4"
+  ],
+  [
+   "C10",
+   "2.2n",
+   "C",
+   ""
+  ],
+  [
+   "C11",
+   "2.2n",
+   "C",
+   ""
+  ],
+  [
+   "C12",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "C13",
+   "1u",
+   "C",
+   "delay output coupling"
+  ],
+  [
+   "C14",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "C15",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "C16",
+   "100n",
+   "C",
+   "pins 9-10"
+  ],
+  [
+   "C17",
+   "100n",
+   "C",
+   "pin 7"
+  ],
+  [
+   "C18",
+   "100n",
+   "C",
+   "pin 8"
+  ],
+  [
+   "C19",
+   "1u",
+   "C",
+   ""
+  ],
+  [
+   "C20",
+   "470p",
+   "C",
+   ""
+  ],
+  [
+   "C21",
+   "220n",
+   "C",
+   "output"
+  ],
+  [
+   "C22",
+   "100u",
+   "C",
+   "JFET drain"
+  ],
+  [
+   "C23",
+   "100u",
+   "C",
+   "LFO to JFET gate"
+  ],
+  [
+   "C24",
+   "10n",
+   "C",
+   "LFO"
+  ],
+  [
+   "C25",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C26",
+   "4.7u",
+   "C",
+   "LFO to Time"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   "or 1N914"
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   "or 1N914"
+  ],
+  [
+   "D3",
+   "1N400x",
+   "D",
+   "reverse polarity"
+  ],
+  [
+   "LED1",
+   "LED",
+   "LED",
+   "rate indicator"
+  ],
+  [
+   "Q1",
+   "J201",
+   "Q",
+   "tremolo"
+  ],
+  [
+   "IC1",
+   "NE5532",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "PT2399",
+   "IC",
+   ""
+  ],
+  [
+   "IC3",
+   "NE5532",
+   "IC",
+   "LFO"
+  ],
+  [
+   "IC4",
+   "LM7805",
+   "IC",
+   "regulator"
+  ],
+  [
+   "Feedback",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Delay Level",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Time",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Space",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Rate",
+   "B10K",
+   "POT",
+   "or C taper"
+  ],
+  [
+   "Smooth",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Depth",
+   "B100K",
+   "POT",
+   "or C taper"
+  ],
+  [
+   "Delay toggle",
+   "SPST",
+   "SW",
+   ""
+  ],
+  [
+   "Modulation toggle",
+   "SPST",
+   "SW",
+   ""
+  ],
+  [
+   "Tremolo toggle",
+   "SPST",
+   "SW",
+   ""
+  ]
+ ]
+}

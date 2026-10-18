@@ -1,0 +1,141 @@
+{
+ "id": "revolutiondeux:2012-03-sola-sound-ltd-tonebender-mki-hornby-zonk-machine",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Eagle redraw by Brad Davis (gaussmarkov.net) of Phillip Bryant's schematic from fuzzcentral. Q1 TI A02650, Q2 OC75, Q3 OC44. R6 reads 3k3 here where the other Zonk drawings in the post show 33K.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "1M",
+   "R",
+   "input pulldown"
+  ],
+  [
+   "C1",
+   "1n",
+   "C",
+   "input"
+  ],
+  [
+   "R2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "Q1",
+   "A02650",
+   "Q",
+   "germanium PNP, TI"
+  ],
+  [
+   "R3",
+   "4.7K",
+   "R",
+   "Q1 emitter"
+  ],
+  [
+   "C2",
+   "25u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R4",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "R5",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "R6",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Q2",
+   "OC75",
+   "Q",
+   "germanium PNP"
+  ],
+  [
+   "R7",
+   "3.3K",
+   "R",
+   "Q2 collector"
+  ],
+  [
+   "C3",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "R8",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "Q3",
+   "OC44",
+   "Q",
+   "germanium PNP"
+  ],
+  [
+   "R9",
+   "10K",
+   "R",
+   "Q3 collector"
+  ],
+  [
+   "C4",
+   "470n",
+   "C",
+   "output"
+  ],
+  [
+   "R10",
+   "56K",
+   "R",
+   ""
+  ],
+  [
+   "R11",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "Swell",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "R12",
+   "8.2K",
+   "R",
+   "LED resistor"
+  ],
+  [
+   "LED",
+   "LED",
+   "LED",
+   ""
+  ]
+ ]
+}

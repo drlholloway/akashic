@@ -1,0 +1,135 @@
+{
+ "id": "revolutiondeux:2008-10-burns-buzzaround-uber-fuzz-buzzaround",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Drawn by Andrew Carrell (Dragonfly), 06-05-2008. Only the transistors have designators; the other parts are numbered here left to right. All pots linear. Image 3 is Torchy's vero; image 4 is a tagboard layout by Sinner of turretboard.org.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "R2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "Q1",
+   "NKT213",
+   "Q",
+   "PNP germanium, or similar"
+  ],
+  [
+   "R4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R5",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "Q2",
+   "NKT213",
+   "Q",
+   "PNP germanium, or similar"
+  ],
+  [
+   "R6",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "C2",
+   "4.7u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C3",
+   "4.7u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C4",
+   "100u",
+   "C",
+   "electrolytic, supply"
+  ],
+  [
+   "Sustain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "D1",
+   "Ge",
+   "D",
+   "germanium"
+  ],
+  [
+   "Q3",
+   "NKT213",
+   "Q",
+   "PNP germanium, or similar"
+  ],
+  [
+   "R1",
+   "27K",
+   "R",
+   "David Main reports 24K"
+  ],
+  [
+   "Balance",
+   "B5K",
+   "POT",
+   "David Main reports 10K"
+  ],
+  [
+   "R7",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "C5",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "R8",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "C6",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "Timbre",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ]
+}

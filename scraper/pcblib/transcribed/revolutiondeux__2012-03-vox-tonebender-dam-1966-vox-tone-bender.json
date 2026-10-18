@@ -1,0 +1,93 @@
+{
+ "id": "revolutiondeux:2012-03-vox-tonebender-dam-1966-vox-tone-bender",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Main drawing is the Fuzz Central schematic (image 3). The post also shows the Geofex drawing 'Vox Tone Bender 5/67' (image 2), which differs: 0.22uF input cap, a 2.2K + 8.2K collector divider with the 3.3nF output cap taken from their junction, a 47K and 500K output network, and 25uF on the Attack pot. No designators on either drawing except Q1/Q2; resistors and caps numbered here left to right.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "150n",
+   "C",
+   "input"
+  ],
+  [
+   "R1",
+   "1M",
+   "R",
+   "optional input pull-down (blue)"
+  ],
+  [
+   "C2",
+   "47u",
+   "C",
+   "optional supply filter (blue), electrolytic"
+  ],
+  [
+   "R2",
+   "10K",
+   "R",
+   "Q1 collector"
+  ],
+  [
+   "R3",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "8.2K",
+   "R",
+   "Q2 collector"
+  ],
+  [
+   "R5",
+   "47K",
+   "R",
+   "feedback to Q1 base"
+  ],
+  [
+   "R6",
+   "820",
+   "R",
+   ""
+  ],
+  [
+   "C3",
+   "15u",
+   "C",
+   "electrolytic, on the Attack pot"
+  ],
+  [
+   "C4",
+   "4.7n",
+   "C",
+   "output"
+  ],
+  [
+   "Q1",
+   "SFT337",
+   "Q",
+   "germanium PNP"
+  ],
+  [
+   "Q2",
+   "SFT363E",
+   "Q",
+   "germanium PNP; or OC76"
+  ],
+  [
+   "Attack",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A50K",
+   "POT",
+   ""
+  ]
+ ]
+}

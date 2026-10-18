@@ -1,0 +1,119 @@
+{
+ "id": "revolutiondeux:2012-03-vox-tonebender-dam-1966-super-bee",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Stripboard layout only; the post's Super Bee schematic image (dirtbox.net) is dead. No designators on the board, so parts are numbered here left to right. Includes a 1N4001 polarity diode and an LED with a 1.5K resistor.",
+ "uncertain": [
+  "The layout gives no transistor types (germanium PNP)."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "470p",
+   "C",
+   ""
+  ],
+  [
+   "R1",
+   "820",
+   "R",
+   ""
+  ],
+  [
+   "C2",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C3",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "R2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "Bias trim",
+   "22K",
+   "POT",
+   "trimmer"
+  ],
+  [
+   "R3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "C4",
+   "47p",
+   "C",
+   ""
+  ],
+  [
+   "C5",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "C6",
+   "47u",
+   "C",
+   "electrolytic, supply filter"
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   "polarity protection"
+  ],
+  [
+   "R5",
+   "1.5K",
+   "R",
+   "LED resistor"
+  ],
+  [
+   "LED1",
+   "LED",
+   "LED",
+   "green"
+  ],
+  [
+   "Q1",
+   "?",
+   "Q",
+   "germanium PNP"
+  ],
+  [
+   "Q2",
+   "?",
+   "Q",
+   "germanium PNP"
+  ],
+  [
+   "Attack",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "B470K",
+   "POT",
+   ""
+  ]
+ ]
+}

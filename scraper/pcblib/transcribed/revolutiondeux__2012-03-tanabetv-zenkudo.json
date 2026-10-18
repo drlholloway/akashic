@@ -1,0 +1,207 @@
+{
+ "id": "revolutiondeux:2012-03-tanabetv-zenkudo",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Traced by M.C. (Soulsonic) for freestompboxes.org, 2009.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "10n",
+   "C",
+   "ceramic"
+  ],
+  [
+   "R1",
+   "2M",
+   "R",
+   ""
+  ],
+  [
+   "C2",
+   "470n",
+   "C",
+   "film"
+  ],
+  [
+   "R2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "U1",
+   "JRC4558D",
+   "IC",
+   ""
+  ],
+  [
+   "R3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "Gain",
+   "B500K",
+   "POT",
+   "P1"
+  ],
+  [
+   "C3",
+   "100p",
+   "C",
+   ""
+  ],
+  [
+   "R5",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "Voice",
+   "B10K",
+   "POT",
+   "P3"
+  ],
+  [
+   "C4",
+   "100n",
+   "C",
+   "ceramic"
+  ],
+  [
+   "Diode select",
+   "3-way",
+   "SW",
+   "SW2, 3PDT on-on-on"
+  ],
+  [
+   "Q1",
+   "2N7000",
+   "Q",
+   "as diode"
+  ],
+  [
+   "Q2",
+   "2N7000",
+   "Q",
+   "as diode"
+  ],
+  [
+   "D1",
+   "1N34A",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N34A",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "Red LED",
+   "LED",
+   "3mm high brightness, clipper"
+  ],
+  [
+   "D4",
+   "Red LED",
+   "LED",
+   "3mm high brightness, clipper"
+  ],
+  [
+   "D5",
+   "Red LED",
+   "LED",
+   "3mm high brightness, clipper"
+  ],
+  [
+   "R4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "Tone",
+   "B50K",
+   "POT",
+   "P2"
+  ],
+  [
+   "C5",
+   "3.3n",
+   "C",
+   "film"
+  ],
+  [
+   "C6",
+   "470n",
+   "C",
+   "film"
+  ],
+  [
+   "R8",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   "P4"
+  ],
+  [
+   "R9",
+   "2M",
+   "R",
+   ""
+  ],
+  [
+   "R6",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R7",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "C7",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C8",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D6",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "D7",
+   "RGB LED",
+   "LED",
+   "multicolor, follows diode select"
+  ],
+  [
+   "R10",
+   "4.7K",
+   "R",
+   "LED resistor"
+  ]
+ ]
+}

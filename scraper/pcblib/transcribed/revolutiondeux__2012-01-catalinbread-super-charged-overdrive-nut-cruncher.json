@@ -1,0 +1,123 @@
+{
+ "id": "revolutiondeux:2012-01-catalinbread-super-charged-overdrive-nut-cruncher",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Schematic shown to illustrate the inside of the SCOD's 4007 chip. It has no designators, so the parts are numbered here left to right.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "1M",
+   "R",
+   "feedback"
+  ],
+  [
+   "R3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R5",
+   "1M",
+   "R",
+   "feedback"
+  ],
+  [
+   "R6",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "R7",
+   "1M",
+   "R",
+   "feedback"
+  ],
+  [
+   "C1",
+   "470n",
+   "C",
+   "input"
+  ],
+  [
+   "C2",
+   "2.2n",
+   "C",
+   ""
+  ],
+  [
+   "C3",
+   "2.2n",
+   "C",
+   "coupling"
+  ],
+  [
+   "C4",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "C5",
+   "470n",
+   "C",
+   "coupling"
+  ],
+  [
+   "C6",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "C7",
+   "4.7u",
+   "C",
+   "electrolytic, output"
+  ],
+  [
+   "C8",
+   "100u",
+   "C",
+   "electrolytic, supply"
+  ],
+  [
+   "D1",
+   "Si",
+   "D",
+   "silicon, polarity protection"
+  ],
+  [
+   "IC1",
+   "CD4007",
+   "IC",
+   ""
+  ],
+  [
+   "Drive",
+   "B470K",
+   "POT",
+   "drawn 470k lin"
+  ],
+  [
+   "Volume",
+   "A50K",
+   "POT",
+   "drawn 50k log"
+  ]
+ ]
+}

@@ -1,0 +1,147 @@
+{
+ "id": "revolutiondeux:2012-01-bigfoot-fx-magnavibe-magnavibe",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Schematic originally drawn by KindaFuzzy from a degooped unit, redrawn by Fred Briggs ('12). The vero layout is Nocentelli's verified one. No designators on the drawing; parts numbered here.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "2.2M",
+   "R",
+   "input pull-down"
+  ],
+  [
+   "R2",
+   "2.2K",
+   "R",
+   "input"
+  ],
+  [
+   "C1",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "R3",
+   "4.7M",
+   "R",
+   "collector to base"
+  ],
+  [
+   "R4",
+   "7.5K",
+   "R",
+   "collector"
+  ],
+  [
+   "R5",
+   "7.5K",
+   "R",
+   "emitter"
+  ],
+  [
+   "C2",
+   "100n",
+   "C",
+   "phase-shift"
+  ],
+  [
+   "LDR1",
+   "LDR",
+   "OTHER",
+   "phase-shift, lit by the LED"
+  ],
+  [
+   "C3",
+   "220n",
+   "C",
+   "output"
+  ],
+  [
+   "R6",
+   "1.5M",
+   "R",
+   "output"
+  ],
+  [
+   "Q1",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "R7",
+   "1.8K",
+   "R",
+   "LED resistor"
+  ],
+  [
+   "LED1",
+   "LED",
+   "LED",
+   "drives the LDR"
+  ],
+  [
+   "R8",
+   "1.5M",
+   "R",
+   "LFO"
+  ],
+  [
+   "C4",
+   "1u",
+   "C",
+   "LFO, electrolytic"
+  ],
+  [
+   "C5",
+   "1u",
+   "C",
+   "LFO, electrolytic"
+  ],
+  [
+   "C6",
+   "1u",
+   "C",
+   "LFO, electrolytic"
+  ],
+  [
+   "R9",
+   "2.2K",
+   "R",
+   "LFO"
+  ],
+  [
+   "R10",
+   "10K",
+   "R",
+   "LFO"
+  ],
+  [
+   "R11",
+   "27K",
+   "R",
+   "LFO"
+  ],
+  [
+   "Q2",
+   "MPSA18",
+   "Q",
+   "LFO"
+  ],
+  [
+   "Speed",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Depth",
+   "B25K",
+   "POT",
+   ""
+  ]
+ ]
+}

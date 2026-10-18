@@ -1,0 +1,117 @@
+{
+ "id": "revolutiondeux:2012-03-sola-sound-ltd-tonebender-mki-hornby-sola-sound-mki",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Hand-drawn by David Main (D*A*M) from an original unit, 23/03/2007. The drawing has no designators, so parts are numbered in signal order. Q1 Mullard OC75, Q2 and Q3 Texas Instruments 2G381. The turret layout (image 8) is Sinner's, turretboard.org.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "10n",
+   "C",
+   "input"
+  ],
+  [
+   "R1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "Q1",
+   "OC75",
+   "Q",
+   "germanium PNP, Mullard"
+  ],
+  [
+   "R2",
+   "8.2K",
+   "R",
+   "Q1 emitter"
+  ],
+  [
+   "C2",
+   "25u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R3",
+   "470K",
+   "R",
+   "Q2 base bias"
+  ],
+  [
+   "R4",
+   "1.8K",
+   "R",
+   ""
+  ],
+  [
+   "Attack",
+   "50K",
+   "POT",
+   ""
+  ],
+  [
+   "Q2",
+   "2G381",
+   "Q",
+   "germanium PNP, Texas Instruments"
+  ],
+  [
+   "R5",
+   "2.2K",
+   "R",
+   "Q2 collector"
+  ],
+  [
+   "C3",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "R6",
+   "8.2K",
+   "R",
+   ""
+  ],
+  [
+   "Q3",
+   "2G381",
+   "Q",
+   "germanium PNP, Texas Instruments"
+  ],
+  [
+   "R7",
+   "15K",
+   "R",
+   "Q3 collector"
+  ],
+  [
+   "C4",
+   "100n",
+   "C",
+   "output"
+  ],
+  [
+   "R8",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "R9",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "Level",
+   "500K",
+   "POT",
+   ""
+  ]
+ ]
+}

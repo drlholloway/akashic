@@ -1,0 +1,156 @@
+{
+ "id": "revolutiondeux:2012-03-sola-sound-ltd-tonebender-mki-hornby-fz-673",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Only drawing is Sinner's vero layout 'D*A*M Fuzz FZ-673 Custom Project Rev.2' (turretboard.org). Parts numbered by me in board order. Q1 OC75, Q2 CV7004, Q3 OC75 (metal can germanium).",
+ "uncertain": [
+  "Read from a vero layout, not a schematic; part roles are not certain and the numbering follows the board left to right.",
+  "Two parts drawn as small circles (1M and 15k) are read as vertically mounted resistors."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C2",
+   "1n",
+   "C",
+   "drawn 1000pF; input cap blend"
+  ],
+  [
+   "R1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "R5",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "C3",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "C4",
+   "100n",
+   "C",
+   "input cap blend"
+  ],
+  [
+   "R6",
+   "8.2K",
+   "R",
+   "Bias, 8K2 to 10K"
+  ],
+  [
+   "R7",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "R8",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "R9",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "R10",
+   "56K",
+   "R",
+   ""
+  ],
+  [
+   "C5",
+   "82n",
+   "C",
+   ""
+  ],
+  [
+   "C6",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "OC75",
+   "Q",
+   "germanium PNP"
+  ],
+  [
+   "Q2",
+   "CV7004",
+   "Q",
+   "germanium PNP"
+  ],
+  [
+   "Q3",
+   "OC75",
+   "Q",
+   "germanium PNP"
+  ],
+  [
+   "Fuzz",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "Filter",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Swell",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "R11",
+   "3.3K",
+   "R",
+   "LED resistor"
+  ],
+  [
+   "LED",
+   "LED",
+   "LED",
+   ""
+  ]
+ ]
+}

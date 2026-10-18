@@ -1,0 +1,131 @@
+{
+ "id": "revolutiondeux:2013-03-bearfoot-bjf-baby-pink-booster",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Traced by mmolteratx from unit #49 on 3-19-2013. The second footswitch pole (Bypass_B) grounds the Boost pot's wiper when the effect is on.",
+ "uncertain": [
+  "D2, in series with the LED, has no part number on the drawing."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "R7",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "D1",
+   "1N4002",
+   "D",
+   ""
+  ],
+  [
+   "C5",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R8",
+   "1K",
+   "R",
+   "LED resistor"
+  ],
+  [
+   "D2",
+   "?",
+   "D",
+   "part number not drawn"
+  ],
+  [
+   "D3",
+   "LED",
+   "LED",
+   "5mm"
+  ],
+  [
+   "C1",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "R1",
+   "2M",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "14.7K",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "2M",
+   "R",
+   ""
+  ],
+  [
+   "Q1",
+   "2N5952",
+   "Q",
+   "select for about 4.5V on the drain"
+  ],
+  [
+   "R5",
+   "14.7K",
+   "R",
+   ""
+  ],
+  [
+   "C2",
+   "100p",
+   "C",
+   ""
+  ],
+  [
+   "R3",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "C4",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R6",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "Boost",
+   "C50K",
+   "POT",
+   ""
+  ],
+  [
+   "R10",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "C3",
+   "1u",
+   "C",
+   ""
+  ],
+  [
+   "R9",
+   "150K",
+   "R",
+   ""
+  ]
+ ]
+}

@@ -1,0 +1,246 @@
+{
+ "id": "revolutiondeux:2012-02-fred-briggs-super-ocd",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Hand-drawn schematic by the author (F. Briggs, 2012). No designators; parts numbered left to right, then the supply.",
+ "uncertain": [
+  "The vero layout (unverified, by beedotman) uses a 50K trimmer for Bass and a 100K trimmer for Saturation, where the schematic has a 50KB Bass pot and a 10KB Saturation pot.",
+  "The MAX1044's second (pump) capacitor is not clearly drawn; only the 10u reservoir caps are."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "22n",
+   "C",
+   "input"
+  ],
+  [
+   "R1",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "510K",
+   "R",
+   "to Vr"
+  ],
+  [
+   "IC1",
+   "OPA2134",
+   "IC",
+   ""
+  ],
+  [
+   "Bass",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "C2",
+   "1u",
+   "C",
+   "electrolytic, in series with Bass"
+  ],
+  [
+   "C3",
+   "39n",
+   "C",
+   ""
+  ],
+  [
+   "R3",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "Gain",
+   "B1M",
+   "POT",
+   ""
+  ],
+  [
+   "R4",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "C4",
+   "100p",
+   "C",
+   ""
+  ],
+  [
+   "R5",
+   "10K",
+   "R",
+   "10K to 15K, to suit your gear"
+  ],
+  [
+   "C5",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "Q1",
+   "BS170",
+   "Q",
+   "or 2N7000"
+  ],
+  [
+   "Q2",
+   "BS170",
+   "Q",
+   "or 2N7000"
+  ],
+  [
+   "Saturation",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "R6",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "C6",
+   "1u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R7",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "Boost",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "R8",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "C7",
+   "100p",
+   "C",
+   ""
+  ],
+  [
+   "C8",
+   "1u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R9",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "Tone",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "C9",
+   "22n",
+   "C",
+   "22n to 68n, larger is darker"
+  ],
+  [
+   "Volume",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "R10",
+   "100",
+   "R",
+   ""
+  ],
+  [
+   "C10",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R11",
+   "15K",
+   "R",
+   "Vr divider"
+  ],
+  [
+   "R12",
+   "15K",
+   "R",
+   "Vr divider"
+  ],
+  [
+   "C11",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Voltage",
+   "SPDT",
+   "SW",
+   "9V or 18V"
+  ],
+  [
+   "C12",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   "or a low-drop diode"
+  ],
+  [
+   "D2",
+   "1N4001",
+   "D",
+   "or a low-drop diode"
+  ],
+  [
+   "D3",
+   "1N4001",
+   "D",
+   "polarity protection"
+  ],
+  [
+   "C13",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC2",
+   "MAX1044",
+   "IC",
+   "voltage doubler"
+  ]
+ ]
+}

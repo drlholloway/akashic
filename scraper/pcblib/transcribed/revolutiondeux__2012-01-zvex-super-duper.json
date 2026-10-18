@@ -1,0 +1,129 @@
+{
+ "id": "revolutiondeux:2012-01-zvex-super-duper",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Schematic of the Super Duper 2-in-1 showing the two DPDT bypass switches' connection points (A-F). The drawing has no designators, so the parts are numbered here left to right; the factory unit also has extra transistors for Millennium bypass and polarity protection that the drawing omits.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "10M",
+   "R",
+   "channel 1 gate to ground"
+  ],
+  [
+   "R2",
+   "10M",
+   "R",
+   "channel 1 drain-gate"
+  ],
+  [
+   "R3",
+   "5.1K",
+   "R",
+   "channel 1 drain"
+  ],
+  [
+   "R4",
+   "100K",
+   "R",
+   "channel 1 output bleeder"
+  ],
+  [
+   "R5",
+   "10M",
+   "R",
+   "channel 2 gate to ground"
+  ],
+  [
+   "R6",
+   "10M",
+   "R",
+   "channel 2 drain-gate"
+  ],
+  [
+   "R7",
+   "5.1K",
+   "R",
+   "channel 2 drain"
+  ],
+  [
+   "R8",
+   "100",
+   "R",
+   "power filter"
+  ],
+  [
+   "C1",
+   "100n",
+   "C",
+   "channel 1 input"
+  ],
+  [
+   "C2",
+   "10u",
+   "C",
+   "electrolytic, channel 1 output"
+  ],
+  [
+   "C3",
+   "100n",
+   "C",
+   "channel 2 input"
+  ],
+  [
+   "C4",
+   "10u",
+   "C",
+   "electrolytic, channel 2 output"
+  ],
+  [
+   "C5",
+   "100u",
+   "C",
+   "electrolytic, power filter"
+  ],
+  [
+   "D1",
+   "9.1V zener",
+   "D",
+   "channel 1 gate"
+  ],
+  [
+   "D2",
+   "9.1V zener",
+   "D",
+   "channel 2 gate"
+  ],
+  [
+   "Q1",
+   "BS170",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "BS170",
+   "Q",
+   ""
+  ],
+  [
+   "Level 1",
+   "5K",
+   "POT",
+   "channel 1 gain"
+  ],
+  [
+   "Level 2",
+   "5K",
+   "POT",
+   "channel 2 gain"
+  ],
+  [
+   "Master Level",
+   "100K",
+   "POT",
+   ""
+  ]
+ ]
+}

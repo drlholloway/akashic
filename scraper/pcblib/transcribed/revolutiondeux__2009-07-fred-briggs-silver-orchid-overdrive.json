@@ -1,0 +1,187 @@
+{
+ "id": "revolutiondeux:2009-07-fred-briggs-silver-orchid-overdrive",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Hand-drawn schematic, f.briggs '09, posted only as a small thumbnail. Only the clearly legible values are given; no designators, parts numbered here.",
+ "uncertain": [
+  "The only image is a 248x320 thumbnail of a hand drawing; most values are too small to read with confidence and are marked '?'.",
+  "The source network has a third pot whose name is illegible (it may read 'Bloom'); the 'Volume' pot also sits in the source leg.",
+  "The clipping diodes look like BAT41 or BAT46."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "2.2M",
+   "R",
+   "input pull-down"
+  ],
+  [
+   "R2",
+   "10K",
+   "R",
+   "input"
+  ],
+  [
+   "C1",
+   "?",
+   "C",
+   "input"
+  ],
+  [
+   "R3",
+   "1M",
+   "R",
+   "drain to gate"
+  ],
+  [
+   "R4",
+   "1M",
+   "R",
+   "gate to ground"
+  ],
+  [
+   "D1",
+   "?",
+   "D",
+   "zener, gate protection"
+  ],
+  [
+   "Q1",
+   "BS170",
+   "Q",
+   ""
+  ],
+  [
+   "R5",
+   "?",
+   "R",
+   "drain"
+  ],
+  [
+   "R6",
+   "?",
+   "R",
+   "source"
+  ],
+  [
+   "R7",
+   "?",
+   "R",
+   "source"
+  ],
+  [
+   "C2",
+   "?",
+   "C",
+   "electrolytic, source"
+  ],
+  [
+   "R8",
+   "?",
+   "R",
+   "source"
+  ],
+  [
+   "C3",
+   "?",
+   "C",
+   "source"
+  ],
+  [
+   "C4",
+   "100n",
+   "C",
+   "output"
+  ],
+  [
+   "C5",
+   "?",
+   "C",
+   "to the clipping diodes"
+  ],
+  [
+   "D2",
+   "?",
+   "D",
+   "clipping, Schottky (BAT type)"
+  ],
+  [
+   "D3",
+   "?",
+   "D",
+   "clipping, Schottky (BAT type)"
+  ],
+  [
+   "C6",
+   "?",
+   "C",
+   "to ground"
+  ],
+  [
+   "R9",
+   "100",
+   "R",
+   "supply"
+  ],
+  [
+   "C7",
+   "?",
+   "C",
+   "electrolytic, supply filter"
+  ],
+  [
+   "D4",
+   "1N5817",
+   "D",
+   "charge pump, low voltage drop"
+  ],
+  [
+   "D5",
+   "1N5817",
+   "D",
+   "charge pump, low voltage drop"
+  ],
+  [
+   "C8",
+   "?",
+   "C",
+   "electrolytic, charge pump"
+  ],
+  [
+   "C9",
+   "?",
+   "C",
+   "electrolytic, charge pump"
+  ],
+  [
+   "IC1",
+   "MAX1044",
+   "IC",
+   "charge pump"
+  ],
+  [
+   "D6",
+   "9.1V zener",
+   "D",
+   ""
+  ],
+  [
+   "Master",
+   "?",
+   "POT",
+   "output"
+  ],
+  [
+   "Volume",
+   "?",
+   "POT",
+   "in the source leg"
+  ],
+  [
+   "Pot 3",
+   "?",
+   "POT",
+   "source network; name illegible"
+  ]
+ ]
+}

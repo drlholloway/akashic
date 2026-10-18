@@ -1,0 +1,102 @@
+{
+ "id": "revolutiondeux:2012-04-fred-briggs-rangemaster-mkii-build",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Hand-drawn schematic by the author (Fred Briggs, 2012), positive ground (-9V). No designators; parts numbered left to right. Q1 is a low-gain germanium (about 50 hFE), Q2 a medium-gain silicon (about 250 hFE); no part numbers given.",
+ "uncertain": [
+  "The taper letters on the 100K Filter and Aggression pots are not clear on the handwritten drawing.",
+  "Which pot is Filter and which Aggression is inferred from the circuit: pot 1 with the 2.2u cap across the 4.7n input cap (Filter), pot 2 between Q1's emitter and Q2's base (Aggression)."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "D1",
+   "?",
+   "D",
+   "polarity protection; type not marked"
+  ],
+  [
+   "C1",
+   "47u",
+   "C",
+   "electrolytic, power filter"
+  ],
+  [
+   "R1",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "C2",
+   "4.7n",
+   "C",
+   "input"
+  ],
+  [
+   "Filter",
+   "100K",
+   "POT",
+   "pot 1"
+  ],
+  [
+   "C3",
+   "2.2u",
+   "C",
+   "electrolytic, in series with Filter"
+  ],
+  [
+   "R2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "Q1",
+   "germanium",
+   "Q",
+   "low gain, about 50 hFE"
+  ],
+  [
+   "Aggression",
+   "100K",
+   "POT",
+   "pot 2"
+  ],
+  [
+   "Q2",
+   "silicon",
+   "Q",
+   "medium gain, about 250 hFE"
+  ],
+  [
+   "Bias trim",
+   "10K",
+   "POT",
+   "trimmer, set for -6.6V on the collector"
+  ],
+  [
+   "C4",
+   "47u",
+   "C",
+   "electrolytic, emitter bypass"
+  ],
+  [
+   "Volume",
+   "A10K",
+   "POT",
+   "pot 3, collector load"
+  ],
+  [
+   "C5",
+   "10n",
+   "C",
+   "output"
+  ]
+ ]
+}

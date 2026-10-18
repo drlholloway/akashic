@@ -1,0 +1,270 @@
+{
+ "id": "revolutiondeux:2012-01-himmelstrutz-fetto-overdrive-distortion",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Traced by MC (Soulsonic) for freestompboxes.org, November 25, 2009, version 11.1_6047. JFETs drawn with DGS pinout, type unknown. Measured voltages shown on the drawing (e.g. 6.5V drain on Q1). Vero layout by Harald Sabro.",
+ "uncertain": [
+  "The post suggests starting with '2N5257'; this is read as a typo for the 2N5457 JFET.",
+  "The tracer notes C16 is jumpered on the original and does not know why."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "Q1",
+   "JFET",
+   "Q",
+   "unknown type, DGS pinout"
+  ],
+  [
+   "R3",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "C2",
+   "4.7n",
+   "C",
+   ""
+  ],
+  [
+   "R4",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "C1",
+   "200n",
+   "C",
+   ""
+  ],
+  [
+   "C4",
+   "6.8n",
+   "C",
+   "Bass1 jumper"
+  ],
+  [
+   "C3",
+   "2.2n",
+   "C",
+   ""
+  ],
+  [
+   "R5",
+   "470K",
+   "R",
+   "Voice jumper across"
+  ],
+  [
+   "C5",
+   "470p",
+   "C",
+   ""
+  ],
+  [
+   "C6",
+   "220p",
+   "C",
+   "Bright1 DIP"
+  ],
+  [
+   "Gain",
+   "A500K",
+   "POT",
+   "P1"
+  ],
+  [
+   "Q2",
+   "JFET",
+   "Q",
+   "unknown type, DGS pinout"
+  ],
+  [
+   "R6",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "C7",
+   "4.7n",
+   "C",
+   "Treble Cut 1 DIP"
+  ],
+  [
+   "R7",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "R8",
+   "470",
+   "R",
+   "Gain2 jumper"
+  ],
+  [
+   "C8",
+   "2.2u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C10",
+   "6.8n",
+   "C",
+   "Bass2 jumper"
+  ],
+  [
+   "C9",
+   "2.2n",
+   "C",
+   ""
+  ],
+  [
+   "C11",
+   "470p",
+   "C",
+   "Bright2 DIP"
+  ],
+  [
+   "Gain Trim",
+   "500K",
+   "POT",
+   "Tr1, trimmer"
+  ],
+  [
+   "Q3",
+   "JFET",
+   "Q",
+   "unknown type, DGS pinout"
+  ],
+  [
+   "R9",
+   "12K",
+   "R",
+   ""
+  ],
+  [
+   "R10",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "R11",
+   "470",
+   "R",
+   "Gain1 jumper"
+  ],
+  [
+   "C12",
+   "4.7u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C13",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "R12",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "Presence",
+   "A50K",
+   "POT",
+   "P2"
+  ],
+  [
+   "C14",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "C15",
+   "15n",
+   "C",
+   "Mid Cut jumper"
+  ],
+  [
+   "Volume",
+   "A100K",
+   "POT",
+   "P3"
+  ],
+  [
+   "C16",
+   "100n",
+   "C",
+   "jumpered on the original"
+  ],
+  [
+   "C17",
+   "1n",
+   "C",
+   "Treble Cut 2 DIP"
+  ],
+  [
+   "Treble Cut 3",
+   "100K",
+   "POT",
+   "Tr2, trimmer"
+  ],
+  [
+   "D1",
+   "1N4004",
+   "D",
+   ""
+  ],
+  [
+   "C18",
+   "220u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "Q4",
+   "JFET",
+   "Q",
+   "LED driver"
+  ],
+  [
+   "R13",
+   "15K",
+   "R",
+   "LED resistor"
+  ],
+  [
+   "D3",
+   "blue LED",
+   "LED",
+   ""
+  ]
+ ]
+}

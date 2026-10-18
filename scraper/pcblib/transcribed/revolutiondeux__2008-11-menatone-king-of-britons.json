@@ -1,0 +1,359 @@
+{
+ "id": "revolutiondeux:2008-11-menatone-king-of-britons",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Schematic by UK-electronic (rev 1.2, 12.08.2007), from freestompboxes.org, with measured JFET voltages at 9.07V. It has no designators; parts numbered here left to right, stage by stage.",
+ "uncertain": [
+  "The reverse polarity protection diode at the power input has no type on the drawing."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "33K",
+   "R",
+   "input"
+  ],
+  [
+   "R2",
+   "1M",
+   "R",
+   "input pull-down"
+  ],
+  [
+   "R3",
+   "22K",
+   "R",
+   "Q1 drain"
+  ],
+  [
+   "R4",
+   "1.8K",
+   "R",
+   "Q1 source"
+  ],
+  [
+   "R5",
+   "470K",
+   "R",
+   "paralleled by C3"
+  ],
+  [
+   "R6",
+   "470K",
+   "R",
+   "Q2 gate to ground"
+  ],
+  [
+   "R7",
+   "22K",
+   "R",
+   "Q2 drain"
+  ],
+  [
+   "R8",
+   "1.8K",
+   "R",
+   "Q2 source"
+  ],
+  [
+   "R9",
+   "470K",
+   "R",
+   "to ground"
+  ],
+  [
+   "R10",
+   "470K",
+   "R",
+   "into Q3 gate"
+  ],
+  [
+   "R11",
+   "15K",
+   "R",
+   "Q3 drain"
+  ],
+  [
+   "R12",
+   "1K",
+   "R",
+   "Q3 source"
+  ],
+  [
+   "R13",
+   "100K",
+   "R",
+   "Q4 source"
+  ],
+  [
+   "R14",
+   "33K",
+   "R",
+   "tone stack"
+  ],
+  [
+   "R15",
+   "100K",
+   "R",
+   "Master to ground"
+  ],
+  [
+   "R16",
+   "1M",
+   "R",
+   "Q5 gate"
+  ],
+  [
+   "R17",
+   "15K",
+   "R",
+   "Q5 drain"
+  ],
+  [
+   "R18",
+   "1K",
+   "R",
+   "Q5 source"
+  ],
+  [
+   "R19",
+   "1K",
+   "R",
+   "Q5 source"
+  ],
+  [
+   "R20",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "R21",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "R22",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "R23",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "R24",
+   "3.9K",
+   "R",
+   "Q6 drain"
+  ],
+  [
+   "R25",
+   "470",
+   "R",
+   "Q6 source"
+  ],
+  [
+   "R26",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "R27",
+   "6.8K",
+   "R",
+   ""
+  ],
+  [
+   "C1",
+   "100u",
+   "C",
+   "electrolytic, power filter"
+  ],
+  [
+   "C2",
+   "2.2n",
+   "C",
+   ""
+  ],
+  [
+   "C3",
+   "560p",
+   "C",
+   "across R5"
+  ],
+  [
+   "C4",
+   "10n",
+   "C",
+   "across Q2 drain resistor"
+  ],
+  [
+   "C5",
+   "1u",
+   "C",
+   "electrolytic, Q2 source bypass"
+  ],
+  [
+   "C6",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "C7",
+   "2.2u",
+   "C",
+   "electrolytic, Q3 source bypass"
+  ],
+  [
+   "C8",
+   "560p",
+   "C",
+   "tone stack"
+  ],
+  [
+   "C9",
+   "22n",
+   "C",
+   "tone stack"
+  ],
+  [
+   "C10",
+   "22n",
+   "C",
+   "tone stack"
+  ],
+  [
+   "C11",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "C12",
+   "1n",
+   "C",
+   "across Q5 drain resistor"
+  ],
+  [
+   "C13",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "C14",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "C15",
+   "10u",
+   "C",
+   "electrolytic, Q6 source bypass"
+  ],
+  [
+   "C16",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C17",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "C18",
+   "10n",
+   "C",
+   "output"
+  ],
+  [
+   "D1",
+   "?",
+   "D",
+   "reverse polarity protection"
+  ],
+  [
+   "Q1",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q2",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q3",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q4",
+   "J201",
+   "Q",
+   "JFET, source follower"
+  ],
+  [
+   "Q5",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q6",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Gain",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "High",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Low",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Mid",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Master",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "A250K",
+   "POT",
+   ""
+  ]
+ ]
+}

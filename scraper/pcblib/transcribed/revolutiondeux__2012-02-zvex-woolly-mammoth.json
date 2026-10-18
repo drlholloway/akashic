@@ -1,0 +1,117 @@
+{
+ "id": "revolutiondeux:2012-02-zvex-woolly-mammoth",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Gottfried Divos's schematic (19.06.2007, version 1.0) traced from photos posted by theblackman, with component numbering following the original PCB; the post credits the trace to AnalogGuru. Q1 and Q2 are unmarked; 2N3904 or BC547A should work. Capacitors are film unless noted. Image 4 is an uncredited verified vero layout ('Fuzzy Elephant') that uses its own numbering.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "51K",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "20K",
+   "R",
+   ""
+  ],
+  [
+   "R5",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R6",
+   "4.99K",
+   "R",
+   ""
+  ],
+  [
+   "C1",
+   "220n",
+   "C",
+   "film"
+  ],
+  [
+   "C2",
+   "10n",
+   "C",
+   "film"
+  ],
+  [
+   "C3",
+   "10n",
+   "C",
+   "film"
+  ],
+  [
+   "C4",
+   "220n",
+   "C",
+   "film"
+  ],
+  [
+   "C5",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C6",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N3904",
+   "Q",
+   "unmarked in the original; 2N3904 or BC547A"
+  ],
+  [
+   "Q2",
+   "2N3904",
+   "Q",
+   "unmarked in the original; 2N3904 or BC547A"
+  ],
+  [
+   "Wool",
+   "B2K",
+   "POT",
+   "P1, 2k lin"
+  ],
+  [
+   "Pinch",
+   "B500K",
+   "POT",
+   "P2, 500k lin"
+  ],
+  [
+   "EQ",
+   "B10K",
+   "POT",
+   "P3, 10k lin"
+  ],
+  [
+   "Output",
+   "B10K",
+   "POT",
+   "P4, 10k lin"
+  ]
+ ]
+}

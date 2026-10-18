@@ -1,0 +1,119 @@
+{
+ "id": "revolutiondeux:2012-01-dam-meathead-meathead-deluxe-m25",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Read from beedotman's vero layout (21x9, five trace cuts); designators are the layout's.",
+ "uncertain": [
+  "The post's M-25 schematic image is a dead link; parts are read from beedotman's vero layout."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "820",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "120K",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "C1",
+   "470p",
+   "C",
+   ""
+  ],
+  [
+   "C2",
+   "47p",
+   "C",
+   ""
+  ],
+  [
+   "C3",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "C4",
+   "4.7n",
+   "C",
+   "or 5n6"
+  ],
+  [
+   "C5",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C6",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C7",
+   "1u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BC337-16",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "BC107B",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "Bias trim",
+   "22K",
+   "POT",
+   "VR1, set Q2 collector to 4.5V"
+  ],
+  [
+   "Attack",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Filter",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "B470K",
+   "POT",
+   ""
+  ]
+ ]
+}

@@ -1,0 +1,95 @@
+{
+ "id": "revolutiondeux:2012-01-penny-pedals-fingerprint-fingerprint",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Schematic drawn by CultureJam; the vero layout (verified, v1.0) lists Texture as 500K reverse audio, Gain and Volume as linear, and D3 as a blue clear superbright LED.",
+ "uncertain": [
+  "The zener (D4) has no voltage on the schematic; the vero layout's parts list gives 9.1V."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "D4",
+   "9.1V zener",
+   "D",
+   "voltage from the vero parts list"
+  ],
+  [
+   "C4",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R1",
+   "1.5M",
+   "R",
+   ""
+  ],
+  [
+   "C1",
+   "180n",
+   "C",
+   "0.18uF"
+  ],
+  [
+   "IC1",
+   "NJM386",
+   "IC",
+   ""
+  ],
+  [
+   "Gain",
+   "B1K",
+   "POT",
+   "pins 1-8"
+  ],
+  [
+   "C2",
+   "100u",
+   "C",
+   "electrolytic, pin 7"
+  ],
+  [
+   "C3",
+   "100u",
+   "C",
+   "electrolytic, output"
+  ],
+  [
+   "Texture",
+   "B500K",
+   "POT",
+   "the vero layout says 500K reverse audio"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   "feedback"
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   "clipping"
+  ],
+  [
+   "D3",
+   "LED",
+   "LED",
+   "clipping"
+  ],
+  [
+   "R2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "Volume",
+   "B10K",
+   "POT",
+   ""
+  ]
+ ]
+}

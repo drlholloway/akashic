@@ -1,0 +1,95 @@
+{
+ "id": "revolutiondeux:2012-03-vintage-treblebass-boosters-i-cant-find-selectatone",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "No designators except the transistor; parts numbered here left to right.",
+ "uncertain": [
+  "The input and output coupling capacitor values are drawn as '?' (unknown)."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "?",
+   "C",
+   "input; value not given on the drawing"
+  ],
+  [
+   "R1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "10K",
+   "R",
+   "collector"
+  ],
+  [
+   "R4",
+   "2.2K",
+   "R",
+   "emitter"
+  ],
+  [
+   "C2",
+   "100u",
+   "C",
+   "emitter bypass, electrolytic"
+  ],
+  [
+   "C3",
+   "?",
+   "C",
+   "output; value not given on the drawing"
+  ],
+  [
+   "C4",
+   "1n",
+   "C",
+   "treble path"
+  ],
+  [
+   "R5",
+   "10K",
+   "R",
+   "bass path"
+  ],
+  [
+   "R6",
+   "1K",
+   "R",
+   "bass path"
+  ],
+  [
+   "C5",
+   "100n",
+   "C",
+   "bass path"
+  ],
+  [
+   "R7",
+   "100K",
+   "R",
+   "output"
+  ],
+  [
+   "Q1",
+   "OC71",
+   "Q",
+   "germanium PNP"
+  ],
+  [
+   "Treble/Bass",
+   "SPDT",
+   "SW",
+   "selects the treble or bass path"
+  ]
+ ]
+}

@@ -23,7 +23,7 @@ from collections import defaultdict
 from datetime import date, timedelta
 
 from . import db as dbm
-from .corrections import UNCERTAIN
+from .corrections import FIXES, UNCERTAIN
 from .datasheets import SHEET_ONLY, all_sheets, is_selector, table as datasheet_table
 from .originals import COVERS, harmonize, key as original_key, learn_brands, original
 from .normalize import catalog_category, catalog_keys, ic_name, zener_choices, zener_of_part
@@ -260,6 +260,8 @@ def run(images: bool = False) -> None:
             c["has_schematic"] = has_schematic
             if c["id"] in UNCERTAIN and any("by eye" in (r.get("notes") or "") for r in c.get("bom", [])):  # a by-eye reading's doubts, shown above the parts list
                 c["uncertain"] = UNCERTAIN[c["id"]]
+            if c["id"] in FIXES:  # the source's own corrections to its drawing, applied to the parts list
+                c["fixes"] = FIXES[c["id"]]
             pending.append(c)  # written once the part pages have their names: each row links to its own
     sheets = datasheet_table()  # manufacturer links only; datasheets themselves are never exported
     descs = _transistor_descs([p["value"] for p in parts.values() if p["category"] == "Q"])

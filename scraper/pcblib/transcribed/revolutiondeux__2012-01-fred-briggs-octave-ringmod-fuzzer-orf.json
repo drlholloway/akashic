@@ -1,0 +1,171 @@
+{
+ "id": "revolutiondeux:2012-01-fred-briggs-octave-ringmod-fuzzer-orf",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Hand-drawn schematic, f.briggs '12, with an optional extra gain stage. No designators; parts numbered here. Controls are circled 1 Bass, 2 Gain, 3 Intensity, 4 Volume.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "47n",
+   "C",
+   "input"
+  ],
+  [
+   "R1",
+   "220K",
+   "R",
+   "to Vr"
+  ],
+  [
+   "C2",
+   "1u",
+   "C",
+   "electrolytic, bass network"
+  ],
+  [
+   "C3",
+   "33n",
+   "C",
+   ""
+  ],
+  [
+   "R2",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "IC1",
+   "LF351",
+   "IC",
+   "any single op amp"
+  ],
+  [
+   "C4",
+   "1u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R3",
+   "10K",
+   "R",
+   "PNP collector"
+  ],
+  [
+   "R4",
+   "10K",
+   "R",
+   "NPN emitter"
+  ],
+  [
+   "Q1",
+   "BC557",
+   "Q",
+   "silicon PNP"
+  ],
+  [
+   "Q2",
+   "BC548",
+   "Q",
+   "silicon NPN"
+  ],
+  [
+   "C5",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "C6",
+   "1u",
+   "C",
+   "electrolytic, output"
+  ],
+  [
+   "R5",
+   "10K",
+   "R",
+   "Vr divider"
+  ],
+  [
+   "R6",
+   "10K",
+   "R",
+   "Vr divider"
+  ],
+  [
+   "C7",
+   "10u",
+   "C",
+   "electrolytic, Vr filter"
+  ],
+  [
+   "R7",
+   "10K",
+   "R",
+   "optional stage input"
+  ],
+  [
+   "R8",
+   "100K",
+   "R",
+   "optional stage"
+  ],
+  [
+   "Q3",
+   "J201",
+   "Q",
+   "optional stage"
+  ],
+  [
+   "Bias trim",
+   "47K",
+   "POT",
+   "optional stage, set drain to 5V"
+  ],
+  [
+   "R9",
+   "1K",
+   "R",
+   "optional stage source"
+  ],
+  [
+   "C8",
+   "470n",
+   "C",
+   "optional stage source bypass"
+  ],
+  [
+   "C9",
+   "1u",
+   "C",
+   "electrolytic, optional stage output"
+  ],
+  [
+   "Bass",
+   "B47K",
+   "POT",
+   ""
+  ],
+  [
+   "Gain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Intensity",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ]
+}

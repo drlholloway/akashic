@@ -1,0 +1,123 @@
+{
+ "id": "revolutiondeux:2012-03-vintage-treblebass-boosters-i-cant-find-rangepig-firstbrook",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Will Firstbrook drawing, 31 Jan 2004, designators as drawn. R6 (1M) is the bias control, set for 7V on Q2's collector.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "6.8n",
+   "C",
+   ".0068uF"
+  ],
+  [
+   "C2",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C3",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "C4",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C5",
+   "47u",
+   "C",
+   "electrolytic, supply filter"
+  ],
+  [
+   "C6",
+   "120p",
+   "C",
+   ""
+  ],
+  [
+   "C7",
+   "22n",
+   "C",
+   "switched by S2"
+  ],
+  [
+   "C9",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "R1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "5K",
+   "R",
+   ""
+  ],
+  [
+   "R5",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "R7",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "R8",
+   "5K",
+   "R",
+   ""
+  ],
+  [
+   "Bias trim",
+   "1M",
+   "POT",
+   "R6; set for 7V on Q2's collector"
+  ],
+  [
+   "Q1",
+   "2N5210",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N5210",
+   "Q",
+   ""
+  ],
+  [
+   "Drive",
+   "5K",
+   "POT",
+   "R4"
+  ],
+  [
+   "S2",
+   "SPST",
+   "SW",
+   "switches C7 in"
+  ]
+ ]
+}

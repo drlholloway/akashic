@@ -1,0 +1,173 @@
+{
+ "id": "revolutiondeux:2008-02-loverdrive-de-la-rvolution-trois",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Hand-drawn schematic by Fred Briggs, 2008 (typos already updated per the post's edit), with no designators; rows use the numbering from Torchy's vero layout (image 2), which also shows a switchable clipping section.",
+ "uncertain": [],
+ "fixes": [
+  "The MOSFET gate protection diode (D3) is drawn as a 1N4148; the post corrects it to a red LED."
+ ],
+ "rows": [
+  [
+   "R1",
+   "1M",
+   "R",
+   "input pull-down"
+  ],
+  [
+   "R2",
+   "24K",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "39K",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "100K",
+   "R",
+   "J201 drain"
+  ],
+  [
+   "R5",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "R6",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "R7",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "R8",
+   "4.7K",
+   "R",
+   "BS170 drain"
+  ],
+  [
+   "R9",
+   "820",
+   "R",
+   "BS170 source"
+  ],
+  [
+   "R10",
+   "1M",
+   "R",
+   "output pull-down"
+  ],
+  [
+   "C1",
+   "3.3n",
+   "C",
+   "input"
+  ],
+  [
+   "C2",
+   "470p",
+   "C",
+   ""
+  ],
+  [
+   "C3",
+   "470n",
+   "C",
+   ""
+  ],
+  [
+   "C4",
+   "4.7u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C5a",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "C5b",
+   "22n",
+   "C",
+   "alternate clipping section only"
+  ],
+  [
+   "C6a",
+   "82n",
+   "C",
+   ""
+  ],
+  [
+   "C6b",
+   "100n",
+   "C",
+   "alternate clipping section only"
+  ],
+  [
+   "C7",
+   "1u",
+   "C",
+   "output"
+  ],
+  [
+   "Q1",
+   "J201",
+   "Q",
+   "JFET"
+  ],
+  [
+   "Q2",
+   "BS170",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "D1",
+   "1N34A",
+   "D",
+   "germanium"
+  ],
+  [
+   "D2",
+   "1N34A",
+   "D",
+   "germanium"
+  ],
+  [
+   "D3",
+   "red LED",
+   "LED",
+   "drawn 1N4148; the post corrects it to a red LED"
+  ],
+  [
+   "Body",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "Drive",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Bias trim",
+   "100K",
+   "POT",
+   "set 4.5-7V across the J201 drain resistor"
+  ]
+ ]
+}

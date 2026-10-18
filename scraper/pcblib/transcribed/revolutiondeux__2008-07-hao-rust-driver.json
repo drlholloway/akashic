@@ -1,0 +1,107 @@
+{
+ "id": "revolutiondeux:2008-07-hao-rust-driver",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Schematic by matsumin, dated 2005-12-14.",
+ "uncertain": [
+  "The schematic shows a single output pot (VR 500KB); it is listed here as Volume."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "100K",
+   "R",
+   "bias divider"
+  ],
+  [
+   "R2",
+   "100K",
+   "R",
+   "bias divider"
+  ],
+  [
+   "R3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "330K",
+   "R",
+   ""
+  ],
+  [
+   "R5",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "R6",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "R7",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "R8",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "C1",
+   "56n",
+   "C",
+   ""
+  ],
+  [
+   "C2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "C3",
+   "1.2n",
+   "C",
+   ""
+  ],
+  [
+   "C4",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "D1",
+   "1SS119",
+   "D",
+   "silicon"
+  ],
+  [
+   "D2",
+   "1SS119",
+   "D",
+   "silicon"
+  ],
+  [
+   "IC1",
+   "LF353",
+   "IC",
+   "dual op-amp, LF412 etc."
+  ],
+  [
+   "Volume",
+   "B500K",
+   "POT",
+   "drawn VR"
+  ]
+ ]
+}

@@ -1,0 +1,167 @@
+{
+ "id": "revolutiondeux:2012-06-fred-briggs-pharmacy-fuzz",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "A hand-drawn notebook sketch with no designators; parts are numbered here left to right. Q1/Q2 form the first Darlington pair and Q3/Q4 the second; the drawing gives transistor types only as germanium and silicon with target gains.",
+ "uncertain": [
+  "The feedback capacitor across the second pair is drawn as a range, 100-470p."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "15K",
+   "R",
+   "input"
+  ],
+  [
+   "R2",
+   "1M",
+   "R",
+   "input pulldown"
+  ],
+  [
+   "R3",
+   "15K",
+   "R",
+   "first pair collector"
+  ],
+  [
+   "R4",
+   "22K",
+   "R",
+   "feedback"
+  ],
+  [
+   "R5",
+   "1.8K",
+   "R",
+   "second pair collector"
+  ],
+  [
+   "R6",
+   "1K",
+   "R",
+   "second pair emitter"
+  ],
+  [
+   "C1",
+   "4.7n",
+   "C",
+   "input"
+  ],
+  [
+   "C2",
+   "1u",
+   "C",
+   "electrolytic, Bass Cut leg"
+  ],
+  [
+   "C3",
+   "2.2n",
+   "C",
+   "across Aggression"
+  ],
+  [
+   "C4",
+   "470p",
+   "C",
+   "feedback, drawn 100-470p"
+  ],
+  [
+   "C5",
+   "47u",
+   "C",
+   "electrolytic, second pair emitter bypass"
+  ],
+  [
+   "C6",
+   "100n",
+   "C",
+   "output"
+  ],
+  [
+   "C7",
+   "220u",
+   "C",
+   "electrolytic, supply filter"
+  ],
+  [
+   "Q1",
+   "germanium",
+   "Q",
+   "first pair, about 50 hFE, low leakage"
+  ],
+  [
+   "Q2",
+   "silicon",
+   "Q",
+   "first pair, about 250 hFE"
+  ],
+  [
+   "Q3",
+   "germanium",
+   "Q",
+   "second pair, about 50 hFE, low leakage"
+  ],
+  [
+   "Q4",
+   "silicon",
+   "Q",
+   "second pair, about 250 hFE"
+  ],
+  [
+   "L1",
+   "suppression choke",
+   "L",
+   "supply, 50-100 ohm; or a 100 ohm resistor"
+  ],
+  [
+   "FB1",
+   "ferrite bead",
+   "L",
+   "input"
+  ],
+  [
+   "FB2",
+   "ferrite bead",
+   "L",
+   "input"
+  ],
+  [
+   "T1",
+   "100K",
+   "POT",
+   "trimmer, first pair gain"
+  ],
+  [
+   "Bias trim",
+   "10K",
+   "POT",
+   "trimmer, drawn 10KB, set 4.5-6V"
+  ],
+  [
+   "Bass Cut",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Aggression",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "T2",
+   "B100K",
+   "POT",
+   "second pair gain"
+  ],
+  [
+   "Level",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ]
+}

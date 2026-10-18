@@ -1,0 +1,107 @@
+{
+ "id": "revolutiondeux:2008-06-vsex-tool-zvex-machine-tripple-fuzz",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Tim Escobedo's v1.3 drawing (3/11/04, thanks to Ken Stone). No designators drawn, so parts are numbered here left to right.",
+ "uncertain": [
+  "The clipping diodes are marked only 'Si'."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "100n",
+   "C",
+   "input"
+  ],
+  [
+   "R1",
+   "5M",
+   "R",
+   "feedback"
+  ],
+  [
+   "Q1",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "R2",
+   "10K",
+   "R",
+   "Q1 collector"
+  ],
+  [
+   "C2",
+   "1u",
+   "C",
+   ""
+  ],
+  [
+   "R3",
+   "500K",
+   "R",
+   ""
+  ],
+  [
+   "C3",
+   "220p",
+   "C",
+   ""
+  ],
+  [
+   "Q2",
+   "2N3906",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "R4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R5",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "C4",
+   "100n",
+   "C",
+   "output"
+  ],
+  [
+   "D1",
+   "Si diode",
+   "D",
+   "silicon"
+  ],
+  [
+   "D2",
+   "Si diode",
+   "D",
+   "silicon"
+  ],
+  [
+   "Gain",
+   "10K",
+   "POT",
+   "Q1 emitter"
+  ],
+  [
+   "Vol",
+   "100K",
+   "POT",
+   ""
+  ]
+ ]
+}

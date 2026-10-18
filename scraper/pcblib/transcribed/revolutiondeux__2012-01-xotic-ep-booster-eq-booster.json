@@ -1,0 +1,151 @@
+{
+ "id": "revolutiondeux:2012-01-xotic-ep-booster-eq-booster",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Hand-drawn, Fred Briggs 2009. R1, R2, R3 and C1 are designators from the drawing (treble network); other parts are numbered here from R4/C2. Controls are circled 1 Bass, 2 Treble, 3 Level.",
+ "uncertain": [
+  "The 33K input resistor's label is scribbled over on the drawing.",
+  "A first-stage 500KA Level pot at point A is hatched out; the second stage and its 47KB Level pot replace it.",
+  "The second stage's output coupling cap has no value written."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "R4",
+   "2.2M",
+   "R",
+   "input pull-down"
+  ],
+  [
+   "C2",
+   "3.3n",
+   "C",
+   "input"
+  ],
+  [
+   "R5",
+   "24K",
+   "R",
+   ""
+  ],
+  [
+   "R6",
+   "33K",
+   "R",
+   "label scribbled over"
+  ],
+  [
+   "Q1",
+   "2N5457",
+   "Q",
+   ""
+  ],
+  [
+   "Trim 1",
+   "100K",
+   "POT",
+   "drain trimmer, set 5.5V"
+  ],
+  [
+   "R7",
+   "2.2K",
+   "R",
+   "source"
+  ],
+  [
+   "C3",
+   "10u",
+   "C",
+   "electrolytic, source bypass"
+  ],
+  [
+   "C4",
+   "1u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "C1",
+   "2.2n",
+   "C",
+   ""
+  ],
+  [
+   "Q2",
+   "2N5457",
+   "Q",
+   ""
+  ],
+  [
+   "Trim 2",
+   "10K",
+   "POT",
+   "drain trimmer, set 5.5V"
+  ],
+  [
+   "R8",
+   "2.2K",
+   "R",
+   "source"
+  ],
+  [
+   "C5",
+   "?",
+   "C",
+   "electrolytic, output; value not written"
+  ],
+  [
+   "C6",
+   "4.7n",
+   "C",
+   "across R9"
+  ],
+  [
+   "R9",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "D1",
+   "1N4007",
+   "D",
+   "polarity protection"
+  ],
+  [
+   "C7",
+   "47u",
+   "C",
+   "electrolytic, supply filter"
+  ],
+  [
+   "Bass",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Treble",
+   "B100K",
+   "POT",
+   "R3"
+  ],
+  [
+   "Level",
+   "B47K",
+   "POT",
+   ""
+  ]
+ ]
+}

@@ -1,0 +1,123 @@
+{
+ "id": "revolutiondeux:2012-03-sola-sound-ltd-tonebender-mki-hornby-zonk-machine-alternate",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Drawn in the same style as image 12, labeled 'Alternate Version'. No designators; parts are numbered in signal order. Q1 A02650, Q2 and Q3 OC71, all PNP germanium.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "1n",
+   "C",
+   "input"
+  ],
+  [
+   "R1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "Q1",
+   "A02650",
+   "Q",
+   "germanium PNP"
+  ],
+  [
+   "R2",
+   "4.7K",
+   "R",
+   "Q1 emitter"
+  ],
+  [
+   "C2",
+   "25u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R3",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "R5",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Q2",
+   "OC71",
+   "Q",
+   "germanium PNP"
+  ],
+  [
+   "R6",
+   "3.3K",
+   "R",
+   "Q2 collector"
+  ],
+  [
+   "C3",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "R7",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "Q3",
+   "OC71",
+   "Q",
+   "germanium PNP"
+  ],
+  [
+   "R8",
+   "10K",
+   "R",
+   "Q3 collector"
+  ],
+  [
+   "C4",
+   "47n",
+   "C",
+   "output"
+  ],
+  [
+   "R9",
+   "56K",
+   "R",
+   ""
+  ],
+  [
+   "R10",
+   "1.8M",
+   "R",
+   ""
+  ],
+  [
+   "Swell",
+   "A500K",
+   "POT",
+   ""
+  ]
+ ]
+}

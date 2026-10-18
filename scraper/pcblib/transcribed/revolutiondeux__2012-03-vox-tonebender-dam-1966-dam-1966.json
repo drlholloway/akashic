@@ -1,0 +1,125 @@
+{
+ "id": "revolutiondeux:2012-03-vox-tonebender-dam-1966-dam-1966",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Vero layout only (no schematic in the post). Parts read from the 25x9 stripboard drawing; no designators on the board, so resistors and caps are numbered here left to right. The rotary/SPDT switch selects '66 or Super Bee mode.",
+ "uncertain": [
+  "The layout gives no transistor types; the post says D*A*M used an AC125, OC75 or SFT353 for Q1 and an OC76 for Q2."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C2",
+   "220p",
+   "C",
+   ""
+  ],
+  [
+   "R1",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "Bias trim",
+   "22K",
+   "POT",
+   "trimmer"
+  ],
+  [
+   "C3",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "R2",
+   "8.2K",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "C4",
+   "4.7n",
+   "C",
+   ""
+  ],
+  [
+   "C5",
+   "2.2n",
+   "C",
+   "under the board; switched by the mode switch"
+  ],
+  [
+   "R4",
+   "820",
+   "R",
+   ""
+  ],
+  [
+   "C6",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R5",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "R6",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "C7",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "Q1",
+   "?",
+   "Q",
+   "germanium PNP"
+  ],
+  [
+   "Q2",
+   "?",
+   "Q",
+   "germanium PNP"
+  ],
+  [
+   "Attack",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "B470K",
+   "POT",
+   ""
+  ],
+  [
+   "'66 / Super Bee",
+   "SPDT",
+   "SW",
+   "rotary switch or SPDT"
+  ]
+ ]
+}

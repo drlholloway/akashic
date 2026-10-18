@@ -1,0 +1,97 @@
+{
+ "id": "revolutiondeux:2008-03-vsex-wah-probe-probe-controller-probe-controller",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Hand-drawn by the author (Vsex Pedals). No designators; parts numbered here. The original optocoupler is a VTL5C9.",
+ "uncertain": [
+  "The panel names of the two pots are not given; they are named here from the drawing's notes."
+ ],
+ "fixes": [
+  "The capacitor at the base of the second transistor (the 2N3904 LED driver) has no value on the drawing; it is 22nF."
+ ],
+ "rows": [
+  [
+   "C1",
+   "1n",
+   "C",
+   "antenna input"
+  ],
+  [
+   "Q1",
+   "2N3906",
+   "Q",
+   ""
+  ],
+  [
+   "R1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "3.9K",
+   "R",
+   ""
+  ],
+  [
+   "C2",
+   "47p",
+   "C",
+   ""
+  ],
+  [
+   "IC1",
+   "4093N",
+   "IC",
+   "quad NAND"
+  ],
+  [
+   "C3",
+   "22n",
+   "C",
+   "missing on the drawing; the post gives 22nF"
+  ],
+  [
+   "Q2",
+   "2N3904",
+   "Q",
+   "LED driver"
+  ],
+  [
+   "OPT1",
+   "VTL5C9",
+   "OTHER",
+   "vactrol; its LDR goes to the effect"
+  ],
+  [
+   "R3",
+   "1K",
+   "R",
+   "regulator"
+  ],
+  [
+   "D1",
+   "5.1V zener",
+   "D",
+   "regulator"
+  ],
+  [
+   "C4",
+   "1u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Sensitivity",
+   "A250K",
+   "POT",
+   ""
+  ],
+  [
+   "Intensity",
+   "A10K",
+   "POT",
+   "starting LED intensity"
+  ]
+ ]
+}

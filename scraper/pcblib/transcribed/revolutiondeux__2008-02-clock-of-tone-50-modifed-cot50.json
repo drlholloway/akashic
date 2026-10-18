@@ -1,0 +1,105 @@
+{
+ "id": "revolutiondeux:2008-02-clock-of-tone-50-modifed-cot50",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Schematic 'COT50 + Fred Briggs Mods' by the blog author; it has no designators, so rows use the numbering from Torchy's vero layout (image 3). Image 4 is IVIark's turret/tagboard layout of the same circuit.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "47",
+   "R",
+   ""
+  ],
+  [
+   "R5",
+   "330",
+   "R",
+   ""
+  ],
+  [
+   "C1",
+   "47u",
+   "C",
+   "electrolytic, power filter"
+  ],
+  [
+   "C2",
+   "56n",
+   "C",
+   "input"
+  ],
+  [
+   "C3",
+   "470n",
+   "C",
+   ""
+  ],
+  [
+   "C4",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C5",
+   "120n",
+   "C",
+   "output"
+  ],
+  [
+   "C6",
+   "47n",
+   "C",
+   "across the diodes"
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "1N270",
+   "D",
+   "germanium"
+  ],
+  [
+   "D2",
+   "1N270",
+   "D",
+   "germanium"
+  ],
+  [
+   "Structure",
+   "B1K",
+   "POT",
+   "gain"
+  ],
+  [
+   "Nature",
+   "B1K",
+   "POT",
+   "full boost to treble boost blend"
+  ]
+ ]
+}

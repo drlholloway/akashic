@@ -1,0 +1,143 @@
+{
+ "id": "revolutiondeux:2009-01-fred-briggs-fuzz",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Hand-drawn schematic, Fred Briggs 2008. Only Q1 and Q2 are labeled; other parts numbered here.",
+ "uncertain": [
+  "The piggybacked transistor beside Q1 has no type written; Q1 is given as 5088 (2N5088)."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "15K",
+   "R",
+   "input"
+  ],
+  [
+   "C1",
+   "47n",
+   "C",
+   "input"
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   "drawn 5088"
+  ],
+  [
+   "Q1b",
+   "?",
+   "Q",
+   "piggybacked on Q1"
+  ],
+  [
+   "Trim",
+   "100K",
+   "POT",
+   "trimmer, set Q1 gain to about 25"
+  ],
+  [
+   "R2",
+   "15K",
+   "R",
+   "Q1 collector"
+  ],
+  [
+   "R3",
+   "56K",
+   "R",
+   "feedback"
+  ],
+  [
+   "C2",
+   "2.2n",
+   "C",
+   "across R3"
+  ],
+  [
+   "Q2",
+   "BC108",
+   "Q",
+   "or 2N5088"
+  ],
+  [
+   "R4",
+   "4.7K",
+   "R",
+   "Q2 collector"
+  ],
+  [
+   "C3",
+   "10n",
+   "C",
+   "optional, across R4"
+  ],
+  [
+   "C4",
+   "470p",
+   "C",
+   "Q2 collector to base"
+  ],
+  [
+   "R5",
+   "1K",
+   "R",
+   "Q2 emitter"
+  ],
+  [
+   "C5",
+   "10u",
+   "C",
+   "electrolytic, across R5"
+  ],
+  [
+   "C6",
+   "100n",
+   "C",
+   "output"
+  ],
+  [
+   "C7",
+   "47n",
+   "C",
+   "to the clipping diodes"
+  ],
+  [
+   "D1",
+   "BAT46",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "BAT46",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "BAT46",
+   "D",
+   ""
+  ],
+  [
+   "Sag",
+   "B4.7K",
+   "POT",
+   ""
+  ],
+  [
+   "Compression",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ]
+}

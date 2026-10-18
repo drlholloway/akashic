@@ -1,0 +1,141 @@
+{
+ "id": "revolutiondeux:2012-07-vox-clyde-mccoy-wah-clyde-mccoy",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "The bottom half of a comparison schematic that shows the Dunlop JH-1s Rev. C above it, with the McCoy differences in red. The drawing has no designators, so the parts are numbered here roughly left to right. The vero layout is by Sinner of turretboard.org.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "68K",
+   "R",
+   "input"
+  ],
+  [
+   "R2",
+   "1.5K",
+   "R",
+   "power"
+  ],
+  [
+   "R3",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "R5",
+   "100K",
+   "R",
+   "across the inductor"
+  ],
+  [
+   "R6",
+   "470",
+   "R",
+   "Q1 emitter"
+  ],
+  [
+   "R7",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "R8",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "R9",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "R10",
+   "1K",
+   "R",
+   "Q2 collector"
+  ],
+  [
+   "R11",
+   "10K",
+   "R",
+   "Q2 emitter"
+  ],
+  [
+   "C1",
+   "10n",
+   "C",
+   "input"
+  ],
+  [
+   "C2",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C3",
+   "4u",
+   "C",
+   "non-polarized"
+  ],
+  [
+   "C4",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "C5",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "C6",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "D1",
+   "1N5239B",
+   "D",
+   "zener"
+  ],
+  [
+   "Q1",
+   "BC109B",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "BC109B",
+   "Q",
+   ""
+  ],
+  [
+   "L1",
+   "500mH",
+   "L",
+   "Halo inductor"
+  ],
+  [
+   "Wah",
+   "100K",
+   "POT",
+   "ICAR taper"
+  ]
+ ]
+}

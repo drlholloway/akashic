@@ -1,0 +1,63 @@
+{
+ "id": "revolutiondeux:2012-01-zvex-super-hard-on-sho-sho-mkii",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "The MKII schematic hand-drawn by Fred Briggs ('12). No designators; parts numbered here. The vero adds a 47u filter cap and a 2K2 LED resistor not on the schematic.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "100n",
+   "C",
+   "input"
+  ],
+  [
+   "R1",
+   "10M",
+   "R",
+   "drain to gate"
+  ],
+  [
+   "R2",
+   "10M",
+   "R",
+   "gate to ground"
+  ],
+  [
+   "Q1",
+   "BS170",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "9.1V zener",
+   "D",
+   "gate to source"
+  ],
+  [
+   "Boost",
+   "C5K",
+   "POT",
+   "reverse log, source"
+  ],
+  [
+   "R3",
+   "5.1K",
+   "R",
+   "drain"
+  ],
+  [
+   "C2",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R4",
+   "100K",
+   "R",
+   ""
+  ]
+ ]
+}

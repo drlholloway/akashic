@@ -1,0 +1,57 @@
+{
+ "id": "revolutiondeux:2012-01-lovepedal-englishman_25-lpb-1",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Jack Orman's 1995 drawing (muzique.com). No designators drawn, so parts are numbered here.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "150n",
+   "C",
+   "input"
+  ],
+  [
+   "R1",
+   "830K",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "R3",
+   "10K",
+   "R",
+   "collector"
+  ],
+  [
+   "R4",
+   "360",
+   "R",
+   "emitter"
+  ],
+  [
+   "C2",
+   "150n",
+   "C",
+   "output"
+  ],
+  [
+   "Volume",
+   "100K",
+   "POT",
+   ""
+  ]
+ ]
+}

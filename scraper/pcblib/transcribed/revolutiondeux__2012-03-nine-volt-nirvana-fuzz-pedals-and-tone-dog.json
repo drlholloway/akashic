@@ -1,0 +1,131 @@
+{
+ "id": "revolutiondeux:2012-03-nine-volt-nirvana-fuzz-pedals-and-tone-dog",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Joe Gagan's drawing, rev 1, July 17 03. Passives undesignated; numbered here left to right.",
+ "uncertain": [
+  "The cap below the tone pot reads '3 .3uf', taken as 3.3u."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "3.3u",
+   "C",
+   "electrolytic, input"
+  ],
+  [
+   "R1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "Q1",
+   "2N3906",
+   "Q",
+   ""
+  ],
+  [
+   "R3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "C2",
+   "3.3u",
+   "C",
+   ""
+  ],
+  [
+   "C3",
+   "4.7n",
+   "C",
+   "silver mica"
+  ],
+  [
+   "Tone",
+   "100K",
+   "POT",
+   ""
+  ],
+  [
+   "C4",
+   "3.3u",
+   "C",
+   ""
+  ],
+  [
+   "R4",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "R5",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "Q2",
+   "2SB54",
+   "Q",
+   "germanium"
+  ],
+  [
+   "R6",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "C5",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Gain",
+   "25K",
+   "POT",
+   ""
+  ],
+  [
+   "C6",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "D1",
+   "1N4002",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4002",
+   "D",
+   ""
+  ],
+  [
+   "Volume",
+   "100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone trim",
+   "100K",
+   "POT",
+   "trimmer, output tone"
+  ]
+ ]
+}

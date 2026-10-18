@@ -1,0 +1,129 @@
+{
+ "id": "revolutiondeux:2012-03-sola-sound-ltd-tonebender-mki-hornby-gary-hurst-mki",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Hand-drawn by David Main (D*A*M) from an original unit, 23/03/2007. No designators on the drawing; parts are numbered in signal order. Q1 Mullard OC75, Q2 2G381 (hFE 120), Q3 2G381 (hFE 92). The vero (image 7) is RnFR's from freestompboxes.org.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "10n",
+   "C",
+   "input"
+  ],
+  [
+   "R1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "Q1",
+   "OC75",
+   "Q",
+   "germanium PNP, Mullard"
+  ],
+  [
+   "R2",
+   "8.2K",
+   "R",
+   "Q1 emitter"
+  ],
+  [
+   "C2",
+   "25u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R3",
+   "470K",
+   "R",
+   "Q2 base bias"
+  ],
+  [
+   "R4",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "R5",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "Attack",
+   "50K",
+   "POT",
+   ""
+  ],
+  [
+   "Q2",
+   "2G381",
+   "Q",
+   "germanium PNP, Texas Instruments, hFE 120"
+  ],
+  [
+   "R6",
+   "2.2K",
+   "R",
+   "Q2 collector"
+  ],
+  [
+   "C3",
+   "25u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R7",
+   "8.2K",
+   "R",
+   ""
+  ],
+  [
+   "Q3",
+   "2G381",
+   "Q",
+   "germanium PNP, Texas Instruments, hFE 92"
+  ],
+  [
+   "R8",
+   "15K",
+   "R",
+   "Q3 collector"
+  ],
+  [
+   "C4",
+   "100n",
+   "C",
+   "output"
+  ],
+  [
+   "R9",
+   "56K",
+   "R",
+   ""
+  ],
+  [
+   "R10",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "R11",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "Volume",
+   "500K",
+   "POT",
+   ""
+  ]
+ ]
+}

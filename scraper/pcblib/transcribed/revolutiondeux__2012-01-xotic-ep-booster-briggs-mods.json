@@ -1,0 +1,183 @@
+{
+ "id": "revolutiondeux:2012-01-xotic-ep-booster-briggs-mods",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Hand-drawn by Fred Briggs ('12). A note on the drawing says the output cap must connect to Q2's source, not its drain. No designators; parts numbered here.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "1M",
+   "R",
+   "input pull-down"
+  ],
+  [
+   "C1",
+   "47n",
+   "C",
+   "input"
+  ],
+  [
+   "R2",
+   "33K",
+   "R",
+   "input"
+  ],
+  [
+   "R3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "8.2K",
+   "R",
+   "drain"
+  ],
+  [
+   "R5",
+   "4.7K",
+   "R",
+   "source"
+  ],
+  [
+   "C2",
+   "10u",
+   "C",
+   "electrolytic, in series with Boost"
+  ],
+  [
+   "C3",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R6",
+   "470",
+   "R",
+   ""
+  ],
+  [
+   "C4",
+   "10n",
+   "C",
+   "tone"
+  ],
+  [
+   "R7",
+   "1M",
+   "R",
+   "to VB"
+  ],
+  [
+   "R8",
+   "3.3K",
+   "R",
+   "Q2 source"
+  ],
+  [
+   "C5",
+   "10u",
+   "C",
+   "electrolytic, output from Q2 source"
+  ],
+  [
+   "R9",
+   "100",
+   "R",
+   "supply"
+  ],
+  [
+   "D1",
+   "1N4007",
+   "D",
+   "polarity protection"
+  ],
+  [
+   "C6",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R10",
+   "10K",
+   "R",
+   "bias divider"
+  ],
+  [
+   "R11",
+   "10K",
+   "R",
+   "bias divider"
+  ],
+  [
+   "C7",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D2",
+   "1N5817",
+   "D",
+   "doubler"
+  ],
+  [
+   "D3",
+   "1N5817",
+   "D",
+   "doubler"
+  ],
+  [
+   "C8",
+   "10u",
+   "C",
+   "doubler, electrolytic"
+  ],
+  [
+   "C9",
+   "100u",
+   "C",
+   "doubler, electrolytic"
+  ],
+  [
+   "IC1",
+   "ICL7660S",
+   "IC",
+   "optional 18V doubler"
+  ],
+  [
+   "Q1",
+   "2N5457",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N5457",
+   "Q",
+   "source follower"
+  ],
+  [
+   "Boost",
+   "C10K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ]
+}

@@ -1,0 +1,75 @@
+{
+ "id": "revolutiondeux:2012-03-vintage-treblebass-boosters-i-cant-find-apollo",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Drawn by Phillip Bryant (Fuzz Central). No designators; parts numbered here left to right.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "10K",
+   "R",
+   "collector"
+  ],
+  [
+   "C1",
+   "1.8n",
+   "C",
+   "1800pF"
+  ],
+  [
+   "C2",
+   "22n",
+   "C",
+   ".022uF"
+  ],
+  [
+   "R3",
+   "80K",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "2K",
+   "R",
+   "emitter"
+  ],
+  [
+   "C3",
+   "30u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C4",
+   "5u",
+   "C",
+   "output, electrolytic"
+  ],
+  [
+   "R5",
+   "390K",
+   "R",
+   ""
+  ],
+  [
+   "Q1",
+   "2SB175",
+   "Q",
+   "germanium PNP"
+  ],
+  [
+   "Treble/Bass",
+   "500K",
+   "POT",
+   ""
+  ]
+ ]
+}

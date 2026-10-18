@@ -1,0 +1,259 @@
+{
+ "id": "revolutiondeux:2009-03-landgraff-dynamic-overdrive",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Hand-drawn schematic by Clay Jones (1/20/04), titled 'Grand Laff Dynamic Overhype', with build notes (Blue Xicon filter caps, Sprague buffer cap, AVX polyester box NP caps, carbon comp resistors, '2% silver solder, the secret'). The drawing has no designators, so the parts are numbered here in signal order. Image 2 combines the same schematic with Andy Harrison's 'Dynamic Overhype' vero layout (adapted from Torchy's Tube Screamer layout) and a PCB layout.",
+ "uncertain": [
+  "Which clipping network each switch position selects is not fully clear on the drawing: the notes give up = TS808, center = diode lift, down = 'Marshall' (the LEDs).",
+  "The clipping diode network is drawn as one 1N914 one way and two 1N914 in series the other way; the vero layout's parts list has three 1N914s and two red LEDs, consistent with this.",
+  "The layouts in image 2 use different pot values and tapers (vero: Drive B1M, Tone B20K, Level A100K; PCB: A500K, B20K, B100K) and a 200p feedback capacitor where the schematic has 51p."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "1K",
+   "R",
+   "input"
+  ],
+  [
+   "R2",
+   "510K",
+   "R",
+   "Q1 base bias"
+  ],
+  [
+   "R3",
+   "10K",
+   "R",
+   "Q1 emitter"
+  ],
+  [
+   "R4",
+   "10K",
+   "R",
+   "A1 + input bias"
+  ],
+  [
+   "R5",
+   "1K",
+   "R",
+   "gain leg"
+  ],
+  [
+   "R6",
+   "10K",
+   "R",
+   "feedback, with Drive"
+  ],
+  [
+   "R7",
+   "1K",
+   "R",
+   "A1 output"
+  ],
+  [
+   "R8",
+   "10K",
+   "R",
+   "A2 + input bias"
+  ],
+  [
+   "R9",
+   "220",
+   "R",
+   "tone"
+  ],
+  [
+   "R10",
+   "1K",
+   "R",
+   "A2 feedback"
+  ],
+  [
+   "R11",
+   "1K",
+   "R",
+   "A2 output"
+  ],
+  [
+   "R12",
+   "510K",
+   "R",
+   "Q2 base bias"
+  ],
+  [
+   "R13",
+   "10K",
+   "R",
+   "Q2 emitter"
+  ],
+  [
+   "R14",
+   "100",
+   "R",
+   "output"
+  ],
+  [
+   "R15",
+   "10K",
+   "R",
+   "output pulldown"
+  ],
+  [
+   "R16",
+   "10K",
+   "R",
+   "bias divider"
+  ],
+  [
+   "R17",
+   "10K",
+   "R",
+   "bias divider"
+  ],
+  [
+   "C1",
+   "20n",
+   "C",
+   "input"
+  ],
+  [
+   "C2",
+   "1u",
+   "C",
+   "non-polar"
+  ],
+  [
+   "C3",
+   "220n",
+   "C",
+   "gain leg"
+  ],
+  [
+   "C4",
+   "51p",
+   "C",
+   "feedback"
+  ],
+  [
+   "C5",
+   "220n",
+   "C",
+   "non-polar"
+  ],
+  [
+   "C6",
+   "220n",
+   "C",
+   "non-polar, tone"
+  ],
+  [
+   "C7",
+   "1u",
+   "C",
+   "non-polar"
+  ],
+  [
+   "C8",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "C9",
+   "10u",
+   "C",
+   "electrolytic, output"
+  ],
+  [
+   "C10",
+   "100u",
+   "C",
+   "electrolytic, power filter"
+  ],
+  [
+   "C11",
+   "47u",
+   "C",
+   "electrolytic, bias filter"
+  ],
+  [
+   "D1",
+   "1N914",
+   "D",
+   "power"
+  ],
+  [
+   "D2",
+   "1N914",
+   "D",
+   "clipping"
+  ],
+  [
+   "D3",
+   "1N914",
+   "D",
+   "clipping"
+  ],
+  [
+   "D4",
+   "1N914",
+   "D",
+   "clipping"
+  ],
+  [
+   "LED1",
+   "LED",
+   "LED",
+   "clipping, red"
+  ],
+  [
+   "LED2",
+   "LED",
+   "LED",
+   "clipping, red"
+  ],
+  [
+   "Q1",
+   "2SC1815",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2SC1815",
+   "Q",
+   ""
+  ],
+  [
+   "IC1",
+   "JRC4558",
+   "IC",
+   ""
+  ],
+  [
+   "Drive",
+   "1M",
+   "POT",
+   "10 detent"
+  ],
+  [
+   "Tone",
+   "25K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "100K",
+   "POT",
+   ""
+  ],
+  [
+   "Clipping switch",
+   "SPDT on-off-on",
+   "SW",
+   "SW1: TS808 / diode lift / Marshall"
+  ]
+ ]
+}

@@ -1,0 +1,227 @@
+{
+ "id": "revolutiondeux:2012-06-rothwell-love-squeeze-compressor",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Schematic drawn by WhiteKeyHole (WKH).",
+ "uncertain": [
+  "C1, C2, C3 and C12 have no values on the drawing."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "D1",
+   "1N4001",
+   "D",
+   "polarity protection"
+  ],
+  [
+   "R5",
+   "22",
+   "R",
+   ""
+  ],
+  [
+   "C5",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R6",
+   "39K",
+   "R",
+   "bias divider"
+  ],
+  [
+   "R7",
+   "47K",
+   "R",
+   "bias divider"
+  ],
+  [
+   "C6",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R1",
+   "200",
+   "R",
+   ""
+  ],
+  [
+   "C2",
+   "?",
+   "C",
+   "value not drawn"
+  ],
+  [
+   "R2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "C1",
+   "?",
+   "C",
+   "value not drawn"
+  ],
+  [
+   "R3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "IC1",
+   "TL072",
+   "IC",
+   ""
+  ],
+  [
+   "C12",
+   "?",
+   "C",
+   "value not drawn"
+  ],
+  [
+   "D4",
+   "LED",
+   "LED",
+   "3mm, in IC1A feedback"
+  ],
+  [
+   "D5",
+   "LED",
+   "LED",
+   "3mm, in IC1A feedback"
+  ],
+  [
+   "R15",
+   "5.1K",
+   "R",
+   ""
+  ],
+  [
+   "Comp",
+   "10K",
+   "POT",
+   ""
+  ],
+  [
+   "R13",
+   "22",
+   "R",
+   ""
+  ],
+  [
+   "C11",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N5457",
+   "Q",
+   "voltage-controlled resistor"
+  ],
+  [
+   "R16",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "C4",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Vol",
+   "10K",
+   "POT",
+   ""
+  ],
+  [
+   "R14",
+   "200",
+   "R",
+   ""
+  ],
+  [
+   "C3",
+   "?",
+   "C",
+   "value not drawn"
+  ],
+  [
+   "R4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "R8",
+   "39K",
+   "R",
+   ""
+  ],
+  [
+   "R10",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "C7",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "R9",
+   "22",
+   "R",
+   ""
+  ],
+  [
+   "C9",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D2",
+   "BAR43S",
+   "D",
+   "Schottky pair (D2/D3)"
+  ],
+  [
+   "D3",
+   "BAR43S",
+   "D",
+   "Schottky pair (D2/D3)"
+  ],
+  [
+   "R11",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "C10",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R12",
+   "1M",
+   "R",
+   ""
+  ]
+ ]
+}

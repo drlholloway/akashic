@@ -1,0 +1,153 @@
+{
+ "id": "revolutiondeux:2012-03-sola-sound-vox-tone-bender-3-knob-mkiii-tone-bender-mkiii",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "The widely distributed Vox / Sola Sound Tone Bender MK3 schematic, negative ground (-9V) PNP. It has no designators, so the parts are numbered here roughly left to right. Vero layout by Electric Warrior.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "680K",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "10K",
+   "R",
+   "Q1 emitter"
+  ],
+  [
+   "R4",
+   "10K",
+   "R",
+   "Q1/Q2 collector"
+  ],
+  [
+   "R5",
+   "3.3K",
+   "R",
+   "Q2 emitter"
+  ],
+  [
+   "R6",
+   "10K",
+   "R",
+   "supply"
+  ],
+  [
+   "R7",
+   "18K",
+   "R",
+   "Q3 collector"
+  ],
+  [
+   "R8",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R9",
+   "10K",
+   "R",
+   "under the Treble/Bass pot"
+  ],
+  [
+   "R10",
+   "220K",
+   "R",
+   "to Volume"
+  ],
+  [
+   "C1",
+   "100n",
+   "C",
+   "input"
+  ],
+  [
+   "C2",
+   "220p",
+   "C",
+   ""
+  ],
+  [
+   "C3",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "C4",
+   "6.4u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C5",
+   "25u",
+   "C",
+   "electrolytic, supply"
+  ],
+  [
+   "C6",
+   "2n",
+   "C",
+   "drawn 2000pf"
+  ],
+  [
+   "C7",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "D1",
+   "1N270",
+   "D",
+   "germanium"
+  ],
+  [
+   "Q1",
+   "?",
+   "Q",
+   "germanium PNP, hFE 40-60"
+  ],
+  [
+   "Q2",
+   "?",
+   "Q",
+   "germanium PNP, hFE 40-60"
+  ],
+  [
+   "Q3",
+   "?",
+   "Q",
+   "germanium PNP, hFE 90-120"
+  ],
+  [
+   "Treble/Bass",
+   "100K",
+   "POT",
+   ""
+  ],
+  [
+   "Fuzz",
+   "100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "100K",
+   "POT",
+   ""
+  ]
+ ]
+}

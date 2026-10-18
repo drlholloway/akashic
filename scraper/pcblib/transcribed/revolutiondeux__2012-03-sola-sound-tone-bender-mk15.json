@@ -1,0 +1,75 @@
+{
+ "id": "revolutiondeux:2012-03-sola-sound-tone-bender-mk15",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Clean redrawn schematic, -9V (positive ground). Resistor and capacitor designators are not drawn, so they are numbered here; Q1 and Q2 as drawn. The vero layout is Sinner's from turretboard.org.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "5u",
+   "C",
+   "electrolytic, input"
+  ],
+  [
+   "R1",
+   "47K",
+   "R",
+   "Q1 collector"
+  ],
+  [
+   "R2",
+   "100K",
+   "R",
+   "feedback"
+  ],
+  [
+   "R3",
+   "470",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "8.2K",
+   "R",
+   "Q2 collector"
+  ],
+  [
+   "C2",
+   "10n",
+   "C",
+   "output"
+  ],
+  [
+   "C3",
+   "25u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "OC75",
+   "Q",
+   "germanium PNP"
+  ],
+  [
+   "Q2",
+   "OC75",
+   "Q",
+   "germanium PNP"
+  ],
+  [
+   "Attack",
+   "B1K",
+   "POT",
+   "linear"
+  ],
+  [
+   "Level",
+   "A100K",
+   "POT",
+   "log"
+  ]
+ ]
+}

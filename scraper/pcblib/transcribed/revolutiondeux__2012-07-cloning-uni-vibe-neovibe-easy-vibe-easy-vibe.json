@@ -1,0 +1,336 @@
+{
+ "id": "revolutiondeux:2012-07-cloning-uni-vibe-neovibe-easy-vibe-easy-vibe",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "John Hollis's hand-drawn schematic dated 15/7/2001. It has no designators, so the parts are numbered here roughly left to right, top to bottom. Op amps are TL064 (quad, two needed).",
+ "uncertain": [
+  "The hand-drawn schematic is small; the second input resistor reads 10M but is hard to read.",
+  "How the 100K and 10u near the output connect to the LFO is unclear from the drawing."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "470u",
+   "C",
+   "electrolytic, 10V, supply filter"
+  ],
+  [
+   "R1",
+   "10K",
+   "R",
+   "bias supply"
+  ],
+  [
+   "D1",
+   "1N914",
+   "D",
+   "bias reference"
+  ],
+  [
+   "LED1",
+   "LED",
+   "LED",
+   "bias reference"
+  ],
+  [
+   "LED2",
+   "LED",
+   "LED",
+   "bias reference"
+  ],
+  [
+   "C2",
+   "470u",
+   "C",
+   "electrolytic, bias filter"
+  ],
+  [
+   "C3",
+   "1n",
+   "C",
+   "input"
+  ],
+  [
+   "R2",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "10M",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "R5",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "R6",
+   "10K",
+   "R",
+   "stage 1"
+  ],
+  [
+   "R7",
+   "10K",
+   "R",
+   "stage 1"
+  ],
+  [
+   "C4",
+   "15n",
+   "C",
+   "stage 1, .015"
+  ],
+  [
+   "LDR1",
+   "LDR",
+   "OTHER",
+   ""
+  ],
+  [
+   "R8",
+   "10K",
+   "R",
+   "stage 2"
+  ],
+  [
+   "R9",
+   "10K",
+   "R",
+   "stage 2"
+  ],
+  [
+   "C5",
+   "220n",
+   "C",
+   "stage 2, .22"
+  ],
+  [
+   "LDR2",
+   "LDR",
+   "OTHER",
+   ""
+  ],
+  [
+   "R10",
+   "10K",
+   "R",
+   "stage 3"
+  ],
+  [
+   "R11",
+   "10K",
+   "R",
+   "stage 3"
+  ],
+  [
+   "C6",
+   "470p",
+   "C",
+   "stage 3"
+  ],
+  [
+   "LDR3",
+   "LDR",
+   "OTHER",
+   ""
+  ],
+  [
+   "R12",
+   "10K",
+   "R",
+   "stage 4"
+  ],
+  [
+   "R13",
+   "10K",
+   "R",
+   "stage 4"
+  ],
+  [
+   "C7",
+   "4.7n",
+   "C",
+   "stage 4"
+  ],
+  [
+   "LDR4",
+   "LDR",
+   "OTHER",
+   ""
+  ],
+  [
+   "R14",
+   "10K",
+   "R",
+   "mix"
+  ],
+  [
+   "R15",
+   "10K",
+   "R",
+   "mix"
+  ],
+  [
+   "R16",
+   "10K",
+   "R",
+   "mix"
+  ],
+  [
+   "Vib/Chorus",
+   "SPDT",
+   "SW",
+   ""
+  ],
+  [
+   "C8",
+   "1u",
+   "C",
+   "output, electrolytic"
+  ],
+  [
+   "R17",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "C9",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C10",
+   "100n",
+   "C",
+   "LFO, 0.1"
+  ],
+  [
+   "R18",
+   "470K",
+   "R",
+   "LFO"
+  ],
+  [
+   "R19",
+   "47K",
+   "R",
+   "LFO"
+  ],
+  [
+   "R20",
+   "100K",
+   "R",
+   "LFO"
+  ],
+  [
+   "Rate",
+   "A100K",
+   "POT",
+   "100K log"
+  ],
+  [
+   "R21",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "R22",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "D2",
+   "1N914",
+   "D",
+   "LFO limiter"
+  ],
+  [
+   "D3",
+   "1N914",
+   "D",
+   "LFO limiter"
+  ],
+  [
+   "D4",
+   "1N914",
+   "D",
+   "LFO limiter"
+  ],
+  [
+   "D5",
+   "1N914",
+   "D",
+   "LFO limiter"
+  ],
+  [
+   "Depth",
+   "A100K",
+   "POT",
+   "100K log"
+  ],
+  [
+   "Drive trim",
+   "1K",
+   "POT",
+   "trimmer, LED drive"
+  ],
+  [
+   "R23",
+   "220",
+   "R",
+   ""
+  ],
+  [
+   "LED3",
+   "LED",
+   "LED",
+   "3mm low current, opto-coupler"
+  ],
+  [
+   "LED4",
+   "LED",
+   "LED",
+   "3mm low current, opto-coupler"
+  ],
+  [
+   "LED5",
+   "LED",
+   "LED",
+   "3mm low current, opto-coupler"
+  ],
+  [
+   "LED6",
+   "LED",
+   "LED",
+   "3mm low current, opto-coupler"
+  ],
+  [
+   "IC1",
+   "TL064",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "TL064",
+   "IC",
+   ""
+  ]
+ ]
+}

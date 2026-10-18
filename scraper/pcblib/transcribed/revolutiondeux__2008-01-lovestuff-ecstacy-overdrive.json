@@ -1,0 +1,156 @@
+{
+ "id": "revolutiondeux:2008-01-lovestuff-ecstacy-overdrive",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Schematic titled 'Son of a (too expensive) boutique-screamer', a trace of the Eternity Burst; vero layout drawn by Lovepedal Detective. Image 15 is a photo of a de-gooped board. Build photos (images 1-12) are of the author's perfboard clone.",
+ "uncertain": [
+  "The schematic says the IC1 type is unknown; the vero layout gives an LM1458N.",
+  "The vero layout by Lovepedal Detective (image 14) uses different values and numbering from the schematic (e.g. C4 47n where the schematic has 150n for the filter cap, no 20k in series with the Drive pot); rows follow the schematic."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "20K",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "R5",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "R6",
+   "330",
+   "R",
+   ""
+  ],
+  [
+   "R7",
+   "330",
+   "R",
+   "power filter"
+  ],
+  [
+   "R8",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R9",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "C1",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "C2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "C4",
+   "150n",
+   "C",
+   ""
+  ],
+  [
+   "C5",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "C6",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C7",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C8",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "D4",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "IC1",
+   "?",
+   "IC",
+   "dual op-amp, type unknown on the schematic; LM1458N on the layout"
+  ],
+  [
+   "Drive",
+   "500K",
+   "POT",
+   "R10"
+  ],
+  [
+   "Tone",
+   "5K",
+   "POT",
+   "R11; labeled Glass on the pedal"
+  ],
+  [
+   "Volume",
+   "500K",
+   "POT",
+   "R12; labeled Level on the pedal"
+  ]
+ ]
+}

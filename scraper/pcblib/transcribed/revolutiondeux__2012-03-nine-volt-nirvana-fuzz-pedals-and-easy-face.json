@@ -1,0 +1,81 @@
+{
+ "id": "revolutiondeux:2012-03-nine-volt-nirvana-fuzz-pedals-and-easy-face",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Joe Gagan's drawing, revised 3-27-02. No designators on the passives; numbered here left to right.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "1u",
+   "C",
+   "input"
+  ],
+  [
+   "Pregain",
+   "250K",
+   "POT",
+   ""
+  ],
+  [
+   "Q1",
+   "2N3906",
+   "Q",
+   ""
+  ],
+  [
+   "R1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "Q2",
+   "2SB33",
+   "Q",
+   "germanium"
+  ],
+  [
+   "R3",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "C2",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Bias trim",
+   "10K",
+   "POT",
+   "trimmer, set for -4.5V on Q2 collector"
+  ],
+  [
+   "R4",
+   "470",
+   "R",
+   ""
+  ],
+  [
+   "C3",
+   "1u",
+   "C",
+   ""
+  ],
+  [
+   "Volume",
+   "500K",
+   "POT",
+   ""
+  ]
+ ]
+}

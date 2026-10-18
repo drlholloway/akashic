@@ -1,0 +1,195 @@
+{
+ "id": "revolutiondeux:2012-01-demeter-compulator-compulator",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Schematic and PCB layout provided by Bajaman on freestompboxes.org. No designators on the drawing; parts numbered here. The 10k gain trimmer is factory set to 1k1.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "10n",
+   "C",
+   "input"
+  ],
+  [
+   "R1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "10K",
+   "R",
+   "buffer feedback"
+  ],
+  [
+   "R3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "R5",
+   "1K",
+   "R",
+   "output"
+  ],
+  [
+   "C2",
+   "1u",
+   "C",
+   "output"
+  ],
+  [
+   "R6",
+   "10K",
+   "R",
+   "gain stage feedback"
+  ],
+  [
+   "R7",
+   "1K",
+   "R",
+   "to Compress pot"
+  ],
+  [
+   "R8",
+   "470",
+   "R",
+   ""
+  ],
+  [
+   "Gain trim",
+   "10K",
+   "POT",
+   "trimmer, factory set to 1k1"
+  ],
+  [
+   "R9",
+   "619",
+   "R",
+   "Compress wiper to rectifier"
+  ],
+  [
+   "R10",
+   "619",
+   "R",
+   "vactrol LED"
+  ],
+  [
+   "R11",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R12",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R13",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "R14",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "OPT1",
+   "VTL5C10",
+   "OTHER",
+   "vactrol"
+  ],
+  [
+   "R15",
+   "10K",
+   "R",
+   "LED resistor"
+  ],
+  [
+   "LED1",
+   "LED",
+   "LED",
+   "indicator"
+  ],
+  [
+   "D3",
+   "1N4148",
+   "D",
+   "polarity protection"
+  ],
+  [
+   "R16",
+   "47K",
+   "R",
+   "bias divider"
+  ],
+  [
+   "R17",
+   "47K",
+   "R",
+   "bias divider"
+  ],
+  [
+   "C3",
+   "4.7u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C4",
+   "4.7u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "LF353N",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "LF353N",
+   "IC",
+   ""
+  ],
+  [
+   "Compress",
+   "A20K",
+   "POT",
+   "20k log"
+  ],
+  [
+   "Level",
+   "A20K",
+   "POT",
+   "20k log"
+  ]
+ ]
+}

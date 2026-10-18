@@ -1,0 +1,57 @@
+{
+ "id": "revolutiondeux:2012-03-nine-volt-nirvana-fuzz-pedals-and-tape-measure-boost",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Joe Gagan's drawing. No designators; numbered here.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "1u",
+   "C",
+   "input"
+  ],
+  [
+   "R1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "Q1",
+   "2N2222",
+   "Q",
+   ""
+  ],
+  [
+   "R3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "150",
+   "R",
+   ""
+  ],
+  [
+   "C2",
+   "1u",
+   "C",
+   ""
+  ],
+  [
+   "Volume trim",
+   "100K",
+   "POT",
+   "trimmer"
+  ]
+ ]
+}

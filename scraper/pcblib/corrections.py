@@ -17,7 +17,8 @@ five-field row carries its build variant ('DOD \u201977 Grey 250').
 Schematic images read whole by eye (the OCR got most of a drawing wrong or missed it) live one per file
 in transcribed/<circuit id, ':' as '__'>.json, with the reading's date, a comment on the drawing, the
 values that stayed uncertain and the rows. An empty list drops wrong OCR rows when the drawing gives
-no values to read.
+no values to read. 'fixes' lists the corrections the source itself gives for its drawing (a blog post's
+'the 3k9 on the emitter is actually 390R'), already applied to the rows and shown above the parts list.
 """
 from __future__ import annotations
 
@@ -415,12 +416,15 @@ _LAYOUT_NOTE = "read from the layout by eye"
 _READ: set[str] = set()
 _LAYOUT_READ: set[str] = set()  # board layouts (vero, perfboard): values printed on the parts of the drawing
 UNCERTAIN: dict[str, list[str]] = {}  # circuit_id -> what the reader could not be sure of, in their words
+FIXES: dict[str, list[str]] = {}  # circuit_id -> the source's own corrections to its drawing
 for _f in sorted((Path(__file__).parent / "transcribed").glob("*.json")):
     _d = json.loads(_f.read_text())
     TRANSCRIBED[_d["id"]] = [tuple(r) for r in _d["rows"]]
     (_LAYOUT_READ if _d.get("source") == "layout" else _READ).add(_d["id"])
     if _d.get("uncertain") and _d["rows"]:
         UNCERTAIN[_d["id"]] = [str(u) for u in _d["uncertain"]]
+    if _d.get("fixes"):
+        FIXES[_d["id"]] = [str(f) for f in _d["fixes"]]
 
 
 def _split(ref: str) -> tuple[str, int]:

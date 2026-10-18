@@ -1,0 +1,89 @@
+{
+ "id": "revolutiondeux:2012-03-vintage-treblebass-boosters-i-cant-find-orange-vox-apollo",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Eagle-style drawing with designators. The 500k pot is R1 on the drawing.",
+ "uncertain": [
+  "Capacitors are written in 'mF' on the drawing (.22mF, 30mF, 5mf); read as microfarads."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "220n",
+   "C",
+   "drawn .22mF"
+  ],
+  [
+   "C2",
+   "220n",
+   "C",
+   "drawn .22mF"
+  ],
+  [
+   "C3",
+   "1.8n",
+   "C",
+   "1800pF"
+  ],
+  [
+   "R2",
+   "30K",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R5",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "R6",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R7",
+   "500K",
+   "R",
+   ""
+  ],
+  [
+   "C4",
+   "30u",
+   "C",
+   "drawn 30mF, electrolytic"
+  ],
+  [
+   "C5",
+   "5u",
+   "C",
+   "drawn 5mf, output"
+  ],
+  [
+   "Q1",
+   "2SB175",
+   "Q",
+   "germanium PNP"
+  ],
+  [
+   "Treble/Bass",
+   "500K",
+   "POT",
+   "R1"
+  ]
+ ]
+}

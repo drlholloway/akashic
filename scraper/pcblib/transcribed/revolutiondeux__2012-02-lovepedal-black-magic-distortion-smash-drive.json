@@ -1,0 +1,93 @@
+{
+ "id": "revolutiondeux:2012-02-lovepedal-black-magic-distortion-smash-drive",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Hand-drawn wiring diagram of the LM386 by Aron Nelson, without designators; parts numbered here. Rows include the Version B tone stack.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "100",
+   "R",
+   "in series with the Drive pot"
+  ],
+  [
+   "R2",
+   "33K",
+   "R",
+   "tone stack"
+  ],
+  [
+   "C1",
+   "5n",
+   "C",
+   "input, film"
+  ],
+  [
+   "C2",
+   "47u",
+   "C",
+   "electrolytic, pins 8-1 gain"
+  ],
+  [
+   "C3",
+   "10u",
+   "C",
+   "electrolytic, pin 7 bypass"
+  ],
+  [
+   "C4",
+   "470p",
+   "C",
+   "ceramic, tone stack"
+  ],
+  [
+   "C5",
+   "22n",
+   "C",
+   "film, tone stack"
+  ],
+  [
+   "C6",
+   "22n",
+   "C",
+   "film, tone stack"
+  ],
+  [
+   "IC1",
+   "LM386",
+   "IC",
+   ""
+  ],
+  [
+   "Drive",
+   "5K",
+   "POT",
+   "wired as a variable resistor"
+  ],
+  [
+   "Treble",
+   "250K",
+   "POT",
+   ""
+  ],
+  [
+   "Bass",
+   "1M",
+   "POT",
+   ""
+  ],
+  [
+   "Mid",
+   "25K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "500K",
+   "POT",
+   ""
+  ]
+ ]
+}

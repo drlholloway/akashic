@@ -1,0 +1,239 @@
+{
+ "id": "revolutiondeux:2008-07-bjf-lgw-little-green-wonder",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Hand-drawn schematic by Ed's Custom Shop (4/5/07), design by BJF, with the author's fix already drawn in. No designators on the schematic, so parts are numbered here left to right; the PCB layout (author unknown) has its own numbering and agrees with the values.",
+ "uncertain": [],
+ "fixes": [
+  "The input buffer JFET's 1M gate resistor (to the bias supply) was missing from the original schematic, as Bjorn pointed out; the author added it to the drawing shown."
+ ],
+ "rows": [
+  [
+   "R1",
+   "1M",
+   "R",
+   "input pulldown"
+  ],
+  [
+   "R2",
+   "5.6K",
+   "R",
+   ""
+  ],
+  [
+   "C1",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "R3",
+   "1M",
+   "R",
+   "gate to bias; added by the author, missing from the original drawing"
+  ],
+  [
+   "Q1",
+   "2SK170",
+   "Q",
+   ""
+  ],
+  [
+   "R4",
+   "10K",
+   "R",
+   "source"
+  ],
+  [
+   "C2",
+   "1u",
+   "C",
+   "electrolytic, 50V"
+  ],
+  [
+   "R5",
+   "5.6K",
+   "R",
+   ""
+  ],
+  [
+   "R6",
+   "27K",
+   "R",
+   "pin 3 to bias"
+  ],
+  [
+   "IC1",
+   "TLC272",
+   "IC",
+   "earlier versions used an LF353"
+  ],
+  [
+   "C3",
+   "100p",
+   "C",
+   "IC1A feedback"
+  ],
+  [
+   "D1",
+   "LED",
+   "LED",
+   "3mm green, clipping"
+  ],
+  [
+   "D2",
+   "LED",
+   "LED",
+   "3mm green, clipping"
+  ],
+  [
+   "R7",
+   "5.6K",
+   "R",
+   "in series with Drive"
+  ],
+  [
+   "Drive",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "R8",
+   "2K",
+   "R",
+   ""
+  ],
+  [
+   "C4",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "R9",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "C5",
+   "1u",
+   "C",
+   "electrolytic, 50V"
+  ],
+  [
+   "Body",
+   "B20K dual",
+   "POT",
+   "one gang in each stage"
+  ],
+  [
+   "R10",
+   "2K",
+   "R",
+   ""
+  ],
+  [
+   "C6",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "R11",
+   "27K",
+   "R",
+   "pin 5 to bias"
+  ],
+  [
+   "R12",
+   "2K",
+   "R",
+   "IC1B feedback"
+  ],
+  [
+   "R13",
+   "470",
+   "R",
+   ""
+  ],
+  [
+   "C7",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "C8",
+   "1u",
+   "C",
+   "electrolytic, 50V"
+  ],
+  [
+   "R14",
+   "5.6K",
+   "R",
+   ""
+  ],
+  [
+   "Volume",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "D3",
+   "1N4007",
+   "D",
+   ""
+  ],
+  [
+   "R15",
+   "47",
+   "R",
+   ""
+  ],
+  [
+   "C9",
+   "100u",
+   "C",
+   "electrolytic, 35V"
+  ],
+  [
+   "R16",
+   "27K",
+   "R",
+   "bias divider"
+  ],
+  [
+   "R17",
+   "27K",
+   "R",
+   "bias divider"
+  ],
+  [
+   "C10",
+   "100u",
+   "C",
+   "electrolytic, 35V"
+  ],
+  [
+   "D4",
+   "BZX55C 5V1",
+   "D",
+   "zener, in the LED string"
+  ],
+  [
+   "R18",
+   "1K",
+   "R",
+   "LED resistor"
+  ],
+  [
+   "LED1",
+   "LED",
+   "LED",
+   "5mm red"
+  ]
+ ]
+}

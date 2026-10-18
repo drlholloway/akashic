@@ -1,0 +1,71 @@
+{
+ "id": "revolutiondeux:2012-03-vintage-treblebass-boosters-i-cant-find-rangepig-moore",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Pete Moore's hand drawing, 2005. No designators; parts numbered here.",
+ "uncertain": [
+  "The input capacitor's value is not given (drawn only as 'C')."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "?",
+   "C",
+   "input; value not given"
+  ],
+  [
+   "R1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "Blend trim",
+   "100K",
+   "POT",
+   "trimmer between Q1 and Q2"
+  ],
+  [
+   "R3",
+   "10K",
+   "R",
+   "collector"
+  ],
+  [
+   "C2",
+   "10n",
+   "C",
+   "output (.01uF)"
+  ],
+  [
+   "R4",
+   "3.9K",
+   "R",
+   "emitter"
+  ],
+  [
+   "C3",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "OC44",
+   "Q",
+   "germanium PNP, low gain"
+  ],
+  [
+   "Q2",
+   "2N4402",
+   "Q",
+   "silicon PNP"
+  ]
+ ]
+}

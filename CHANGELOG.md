@@ -6,6 +6,7 @@ GitHub Release notes.
 ## Unreleased
 
 ### Added
+- New source: Revolution Deux, Fred Briggs' blog (2008-2017) of boutique and vintage pedal schematics, most traced by the freestompboxes.org community: 248 circuits from 161 posts, among them Blackout Effectors' Mantra, Fix'd Fuzz and Musket, with the vero, perfboard and tagboard layouts the posts give beside them. Parts read by eye from each schematic. Where a post corrects the schematic it shares ('the 3k9 on the boost transistor's emitter is actually 390R'), the parts list carries the corrected value and the circuit page lists the fixes above it, 23 in all.
 - My bench: keep the circuits you like, with a note on each. A '+ My bench' button on every circuit page adds one; Workbench → My bench lists them with their notes, and they are marked in the circuits table, with an 'On my bench' filter there and in What can I build. The bench stays in the browser: export it to a file (with the What can I build parts list) and import it on another device, or copy a share link that opens the same circuits for someone else.
 - What can I build: a Surprise me button beside the filter opens one circuit picked at random from the list on screen, so from the tab in view (ready to build, or one, two or three parts away) narrowed by the filter.
 - Workbench links: Kit Rae's Big Muff π Page, the history of every Big Muff version and a guide to the circuit and its mods, under Learn.

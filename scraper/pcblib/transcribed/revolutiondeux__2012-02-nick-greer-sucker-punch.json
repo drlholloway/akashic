@@ -1,0 +1,103 @@
+{
+ "id": "revolutiondeux:2012-02-nick-greer-sucker-punch",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Traced by Spaceace76 (freestompboxes.org). The drawing has no designators, so the parts are numbered here left to right.",
+ "uncertain": [
+  "The tone capacitor is marked '.01uF*'; the asterisk is not explained."
+ ],
+ "fixes": [
+  "The output capacitor after the LM386 is marked '???' on the drawing; it is 100n."
+ ],
+ "rows": [
+  [
+   "R1",
+   "2.2M",
+   "R",
+   "gate to ground"
+  ],
+  [
+   "R2",
+   "1.5K",
+   "R",
+   "source"
+  ],
+  [
+   "R3",
+   "10K",
+   "R",
+   "LM386 input"
+  ],
+  [
+   "C1",
+   "22u",
+   "C",
+   "electrolytic, source bypass"
+  ],
+  [
+   "C2",
+   "10n",
+   "C",
+   "JFET output"
+  ],
+  [
+   "C3",
+   "22p",
+   "C",
+   "LM386 input"
+  ],
+  [
+   "C4",
+   "22u",
+   "C",
+   "electrolytic, LM386 pins 1-8"
+  ],
+  [
+   "C5",
+   "100n",
+   "C",
+   "output; drawn '???', the post gives 100n"
+  ],
+  [
+   "C6",
+   "10n",
+   "C",
+   "tone; drawn .01uF*"
+  ],
+  [
+   "Q1",
+   "J201",
+   "Q",
+   ""
+  ],
+  [
+   "IC1",
+   "LM386",
+   "IC",
+   ""
+  ],
+  [
+   "Drain trim",
+   "100K",
+   "POT",
+   "trimmer on the J201 drain"
+  ],
+  [
+   "Gain",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "A250K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ]
+}

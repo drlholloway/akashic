@@ -1,0 +1,137 @@
+{
+ "id": "revolutiondeux:2012-01-lovepedal-karl-fuzz-karl",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Hand-drawn by Fred Briggs (the blog author) in 2012 from Greg's freestompboxes.org trace. The drawing has no designators; R1-R6, C1-C5, Q1-Q3 and D2-D3 follow roseblood11's 'Fuzzy Carla' vero layout (image 7), and the two filter capacitors are numbered C6 and C7 here.",
+ "uncertain": [
+  "The vero layout's parts list differs from the schematic: it has a 100n ceramic and 220u filter capacitor where the schematic has 47u and 100u, adds a 1N4001 (D1) and an LED resistor, and lists the clipping diodes as BAT46 and 1N914."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "3.3M",
+   "R",
+   "Q1 collector-base"
+  ],
+  [
+   "R2",
+   "1K",
+   "R",
+   "Q1 emitter"
+  ],
+  [
+   "R3",
+   "3.3K",
+   "R",
+   "Q1 collector"
+  ],
+  [
+   "R4",
+   "330",
+   "R",
+   "power filter"
+  ],
+  [
+   "R5",
+   "10K",
+   "R",
+   "Q2 emitter"
+  ],
+  [
+   "R6",
+   "10K",
+   "R",
+   "Q3 emitter"
+  ],
+  [
+   "R7",
+   "1M",
+   "R",
+   "input pulldown"
+  ],
+  [
+   "C1",
+   "22u",
+   "C",
+   "electrolytic, Q1 emitter bypass"
+  ],
+  [
+   "C2",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "C3",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "C4",
+   "390p",
+   "C",
+   ""
+  ],
+  [
+   "C5",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "C6",
+   "47u",
+   "C",
+   "electrolytic, power filter"
+  ],
+  [
+   "C7",
+   "100u",
+   "C",
+   "electrolytic, power filter"
+  ],
+  [
+   "Q1",
+   "2N5089",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "2N3906",
+   "Q",
+   ""
+  ],
+  [
+   "D2",
+   "BAT46",
+   "D",
+   "clipping"
+  ],
+  [
+   "D3",
+   "1N4148",
+   "D",
+   "clipping"
+  ],
+  [
+   "Intensity",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B500K",
+   "POT",
+   ""
+  ]
+ ]
+}

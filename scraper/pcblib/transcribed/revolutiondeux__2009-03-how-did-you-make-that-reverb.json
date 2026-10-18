@@ -1,0 +1,221 @@
+{
+ "id": "revolutiondeux:2009-03-how-did-you-make-that-reverb",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Hand-drawn on graph paper by Fred Briggs, 2009, with no designators; parts numbered here left to right, input stage first, then the wet path, the dry path, the output mixer and the power supply. The reverb itself is an external effect in the loop and is not part of the rows.",
+ "uncertain": [
+  "The Wet Level pot taper letter is unclear ('47KS'); the Dry Level pot reads 47KB."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "2.2M",
+   "R",
+   "input pull-down"
+  ],
+  [
+   "R2",
+   "1M",
+   "R",
+   "gate bias"
+  ],
+  [
+   "R3",
+   "1M",
+   "R",
+   "gate to ground"
+  ],
+  [
+   "R4",
+   "5.1K",
+   "R",
+   "drain"
+  ],
+  [
+   "R5",
+   "470",
+   "R",
+   "source"
+  ],
+  [
+   "R6",
+   "10K",
+   "R",
+   "return low-pass filter"
+  ],
+  [
+   "R7",
+   "10K",
+   "R",
+   "return low-pass filter"
+  ],
+  [
+   "R8",
+   "240K",
+   "R",
+   "bias to Vr"
+  ],
+  [
+   "R9",
+   "100K",
+   "R",
+   "wet mix"
+  ],
+  [
+   "R10",
+   "10K",
+   "R",
+   "dry path"
+  ],
+  [
+   "R11",
+   "240K",
+   "R",
+   "bias to Vr"
+  ],
+  [
+   "R12",
+   "100K",
+   "R",
+   "dry mix"
+  ],
+  [
+   "R13",
+   "100K",
+   "R",
+   "output pull-down"
+  ],
+  [
+   "R14",
+   "10K",
+   "R",
+   "Vr divider"
+  ],
+  [
+   "R15",
+   "10K",
+   "R",
+   "Vr divider"
+  ],
+  [
+   "C1",
+   "100n",
+   "C",
+   "input"
+  ],
+  [
+   "C2",
+   "4.7u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C3",
+   "4.7u",
+   "C",
+   "electrolytic, FX send"
+  ],
+  [
+   "C4",
+   "4.7u",
+   "C",
+   "electrolytic, FX return"
+  ],
+  [
+   "C5",
+   "3.3n",
+   "C",
+   ""
+  ],
+  [
+   "C6",
+   "3.3n",
+   "C",
+   ""
+  ],
+  [
+   "C7",
+   "4.7u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C8",
+   "2.2n",
+   "C",
+   ""
+  ],
+  [
+   "C9",
+   "4.7u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C10",
+   "4.7u",
+   "C",
+   "electrolytic, output"
+  ],
+  [
+   "C11",
+   "47u",
+   "C",
+   "electrolytic, power filter"
+  ],
+  [
+   "C12",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "BS170",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "D1",
+   "red LED",
+   "LED",
+   "gate protection"
+  ],
+  [
+   "D2",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "IC1",
+   "TL084",
+   "IC",
+   "quad op-amp"
+  ],
+  [
+   "Pregain",
+   "4.7K",
+   "POT",
+   "source leg"
+  ],
+  [
+   "Dry Level",
+   "B47K",
+   "POT",
+   ""
+  ],
+  [
+   "Wet Level",
+   "47K",
+   "POT",
+   ""
+  ],
+  [
+   "Verb on/off",
+   "SPDT",
+   "SW",
+   ""
+  ]
+ ]
+}

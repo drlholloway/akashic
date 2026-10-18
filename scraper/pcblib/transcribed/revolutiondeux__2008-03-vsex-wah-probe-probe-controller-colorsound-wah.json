@@ -1,0 +1,129 @@
+{
+ "id": "revolutiondeux:2008-03-vsex-wah-probe-probe-controller-colorsound-wah",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Hand-drawn by the author with Vsex FX mods. No designators; parts numbered here. The variable resistor at the bottom is the vactrol LDR from the Probe controller.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "1M",
+   "R",
+   "input pull-down"
+  ],
+  [
+   "C1",
+   "100n",
+   "C",
+   "input"
+  ],
+  [
+   "R2",
+   "330K",
+   "R",
+   "input"
+  ],
+  [
+   "Q1",
+   "TN326",
+   "Q",
+   "or 2N3904"
+  ],
+  [
+   "R3",
+   "2.7M",
+   "R",
+   "collector to base"
+  ],
+  [
+   "R4",
+   "10K",
+   "R",
+   "collector"
+  ],
+  [
+   "R5",
+   "470",
+   "R",
+   "supply"
+  ],
+  [
+   "C2",
+   "10u",
+   "C",
+   "electrolytic, supply filter"
+  ],
+  [
+   "C3",
+   "100n",
+   "C",
+   "output"
+  ],
+  [
+   "R6",
+   "100K",
+   "R",
+   "output"
+  ],
+  [
+   "C4",
+   "2.2n",
+   "C",
+   "across R6"
+  ],
+  [
+   "R7",
+   "470K",
+   "R",
+   "output"
+  ],
+  [
+   "C5",
+   "100n",
+   "C",
+   "feedback"
+  ],
+  [
+   "R8",
+   "180K",
+   "R",
+   ""
+  ],
+  [
+   "R9",
+   "180K",
+   "R",
+   ""
+  ],
+  [
+   "C6",
+   "15n",
+   "C",
+   ""
+  ],
+  [
+   "R10",
+   "33K",
+   "R",
+   "or a 50KB resonance pot"
+  ],
+  [
+   "C7",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "C8",
+   "15n",
+   "C",
+   ""
+  ],
+  [
+   "LDR1",
+   "LDR",
+   "OTHER",
+   "from the Probe controller's vactrol"
+  ]
+ ]
+}

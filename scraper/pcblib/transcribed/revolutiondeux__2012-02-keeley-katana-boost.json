@@ -1,0 +1,147 @@
+{
+ "id": "revolutiondeux:2012-02-keeley-katana-boost",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Hand-drawn redraw by Fred Briggs (the blog author), 2012. No designators drawn, so parts are numbered here left to right. The charge pump can be an ICL7660S or a MAX1044.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "1M",
+   "R",
+   "input"
+  ],
+  [
+   "C1",
+   "100p",
+   "C",
+   ""
+  ],
+  [
+   "C2",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "R2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "Q1",
+   "2N5458",
+   "Q",
+   "JFET"
+  ],
+  [
+   "R3",
+   "4.7K",
+   "R",
+   "drain; 10K trimmer suggested"
+  ],
+  [
+   "R4",
+   "680",
+   "R",
+   "source"
+  ],
+  [
+   "C3",
+   "10u",
+   "C",
+   "electrolytic, switched by S1A"
+  ],
+  [
+   "C4",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "R5",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "Q2",
+   "2N5458",
+   "Q",
+   "JFET"
+  ],
+  [
+   "R6",
+   "4.7K",
+   "R",
+   "drain; 10K trimmer suggested"
+  ],
+  [
+   "R7",
+   "680",
+   "R",
+   "source"
+  ],
+  [
+   "C5",
+   "220n",
+   "C",
+   "output"
+  ],
+  [
+   "C6",
+   "15n",
+   "C",
+   "switched by S1B"
+  ],
+  [
+   "C7",
+   "1n",
+   "C",
+   ""
+  ],
+  [
+   "IC1",
+   "ICL7660S",
+   "IC",
+   "charge pump; or MAX1044"
+  ],
+  [
+   "D1",
+   "1N5817",
+   "D",
+   "Schottky"
+  ],
+  [
+   "D2",
+   "1N5817",
+   "D",
+   "Schottky"
+  ],
+  [
+   "C8",
+   "10u",
+   "C",
+   "electrolytic, charge pump"
+  ],
+  [
+   "C9",
+   "10u",
+   "C",
+   "electrolytic, charge pump"
+  ],
+  [
+   "Volume",
+   "B250K",
+   "POT",
+   ""
+  ],
+  [
+   "Pull boost",
+   "DPDT",
+   "SW",
+   "S1, push-pull switch on the volume pot"
+  ]
+ ]
+}

@@ -1,0 +1,120 @@
+{
+ "id": "revolutiondeux:2012-01-lovepedal-super-6",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Hand-drawn by F. Briggs ('12) from reveriesof's freestompboxes.org schematic, without designators; parts numbered here. The post's note also confirms the input cap (C1) is 100n, as drawn. Sinner's PCB layout shows full off-board wiring, adds a 4.7K LED resistor and still marks the two corrected caps as 100n.",
+ "uncertain": [],
+ "fixes": [
+  "The output cap (C2, after the 3.3K drain resistor, before the tone control) is drawn as 100n; it should be 10n.",
+  "The cap across the Tone pot (C3) is drawn as 100n; it should be 10n."
+ ],
+ "rows": [
+  [
+   "R1",
+   "2.2M",
+   "R",
+   "input pulldown"
+  ],
+  [
+   "R2",
+   "1M",
+   "R",
+   "gate to ground"
+  ],
+  [
+   "R3",
+   "1.5M",
+   "R",
+   "drain to gate"
+  ],
+  [
+   "R4",
+   "3.3K",
+   "R",
+   "drain"
+  ],
+  [
+   "R5",
+   "510",
+   "R",
+   "source"
+  ],
+  [
+   "R6",
+   "330",
+   "R",
+   "supply"
+  ],
+  [
+   "R7",
+   "4.7K",
+   "R",
+   "LED resistor, from the PCB layout"
+  ],
+  [
+   "C1",
+   "100n",
+   "C",
+   "input"
+  ],
+  [
+   "C2",
+   "10n",
+   "C",
+   "drawn 100n; the post corrects it to 10n"
+  ],
+  [
+   "C3",
+   "10n",
+   "C",
+   "across the Tone pot; drawn 100n; the post corrects it to 10n"
+  ],
+  [
+   "C4",
+   "10u",
+   "C",
+   "electrolytic, in series with Intense"
+  ],
+  [
+   "C5",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C6",
+   "100n",
+   "C",
+   "supply"
+  ],
+  [
+   "D1",
+   "9.1V zener",
+   "D",
+   "gate to source"
+  ],
+  [
+   "Q1",
+   "BS170",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Intense",
+   "B1K",
+   "POT",
+   ""
+  ]
+ ]
+}

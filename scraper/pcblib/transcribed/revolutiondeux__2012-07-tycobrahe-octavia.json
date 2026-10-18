@@ -1,0 +1,159 @@
+{
+ "id": "revolutiondeux:2012-07-tycobrahe-octavia",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Rows are from Gottfried Divos's 2005 redraw (version 1.1, image 3), the 'easier to read' schematic; image 2 is the original hand-drawn Tycobrahe trace with transistor polarity notes. The redraw notes Q1 (MPS A18) is fitted backward in the original unit. Positive ground, PNP for Q2/Q3.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "180K",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "820K",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "680K",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "R5",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "R6",
+   "220",
+   "R",
+   ""
+  ],
+  [
+   "R7",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "R8",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "R9",
+   "1.2K",
+   "R",
+   ""
+  ],
+  [
+   "R10",
+   "470",
+   "R",
+   ""
+  ],
+  [
+   "C1",
+   "33u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C2",
+   "100n",
+   "C",
+   "film"
+  ],
+  [
+   "C3",
+   "150p",
+   "C",
+   "ceramic"
+  ],
+  [
+   "C4",
+   "1n",
+   "C",
+   "ceramic"
+  ],
+  [
+   "C5",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C6",
+   "33u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C7",
+   "220u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "D1",
+   "1N270",
+   "D",
+   "germanium (1N34A or any Ge diode)"
+  ],
+  [
+   "D2",
+   "1N270",
+   "D",
+   "germanium (1N34A or any Ge diode)"
+  ],
+  [
+   "Q1",
+   "MPSA18",
+   "Q",
+   "fitted backward in the original unit"
+  ],
+  [
+   "Q2",
+   "MPS6519",
+   "Q",
+   "PNP; BC327-16 or -25"
+  ],
+  [
+   "Q3",
+   "MPS6519",
+   "Q",
+   "PNP; BC327-16 or -25"
+  ],
+  [
+   "TR1",
+   "42TU011",
+   "L",
+   "180 ohm / 16 ohm center-tapped audio transformer (or 42TM022)"
+  ],
+  [
+   "Boost",
+   "A1K",
+   "POT",
+   "P1, 1k log"
+  ],
+  [
+   "Volume",
+   "A500K",
+   "POT",
+   "P2, 500k log"
+  ]
+ ]
+}

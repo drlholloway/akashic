@@ -1,0 +1,191 @@
+{
+ "id": "revolutiondeux:2012-01-crowther-audio-hotcake-overdrive-2003",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Drawn by Gottfried Divos (2007), traced from pictures posted by Bajaman. Rel1 is a bistable (impulse-triggered) relay, shown in the on state.",
+ "uncertain": [
+  "Q1, R12, R13 and C8 in the relay driver have no values on the drawing."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "220",
+   "R",
+   ""
+  ],
+  [
+   "D1",
+   "1N5238",
+   "D",
+   "8.2V zener (ZPY 8V2)"
+  ],
+  [
+   "R2",
+   "82K",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "C2",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "R5",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "IC1",
+   "TL071",
+   "IC",
+   "LM741 on older units"
+  ],
+  [
+   "R7",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "C3",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R6",
+   "220",
+   "R",
+   ""
+  ],
+  [
+   "Drive",
+   "C50K",
+   "POT",
+   "P1, 50K reverse log"
+  ],
+  [
+   "R8",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "C4",
+   "82n",
+   "C",
+   ""
+  ],
+  [
+   "R9",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "C5",
+   "470p",
+   "C",
+   ""
+  ],
+  [
+   "R10",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "C6",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "Presence",
+   "B22K",
+   "POT",
+   "P2; may be B50K on later units"
+  ],
+  [
+   "C7",
+   "56n",
+   "C",
+   ""
+  ],
+  [
+   "Level",
+   "A50K",
+   "POT",
+   "P3"
+  ],
+  [
+   "LED1",
+   "LED",
+   "LED",
+   ""
+  ],
+  [
+   "R11",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "Q1",
+   "?",
+   "Q",
+   "relay driver, type not given"
+  ],
+  [
+   "R12",
+   "?",
+   "R",
+   "no value drawn"
+  ],
+  [
+   "S1",
+   "momentary",
+   "SW",
+   "footswitch for the relay"
+  ],
+  [
+   "R13",
+   "?",
+   "R",
+   "no value drawn"
+  ],
+  [
+   "C8",
+   "?",
+   "C",
+   "electrolytic, no value drawn"
+  ],
+  [
+   "Rel1",
+   "bistable relay",
+   "OTHER",
+   "impulse triggered"
+  ]
+ ]
+}

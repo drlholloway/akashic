@@ -1,0 +1,253 @@
+{
+ "id": "revolutiondeux:2012-02-fred-briggs-dual-band-vibrato",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Hand-drawn schematic by the author (F. Briggs, 2012), unfinished design, thanks to earthtonesaudio. No designators; parts numbered left to right, the single drawn LFO last. Only one LFO is drawn; the full build needs two.",
+ "uncertain": [
+  "The high-pass and low-pass filter resistors and capacitors have no values on the drawing (only the target corner frequencies, 900Hz and 1000Hz).",
+  "The resistor above the Depth pot reads '1KB'; probably 1.8K.",
+  "No transistor or LDR part numbers are given (all transistors high-gain NPN; any dual op-amp)."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "100n",
+   "C",
+   "input"
+  ],
+  [
+   "R1",
+   "1M",
+   "R",
+   "to Vr"
+  ],
+  [
+   "IC1",
+   "dual op-amp",
+   "IC",
+   "any dual op-amp"
+  ],
+  [
+   "C2",
+   "22n",
+   "C",
+   "treble band"
+  ],
+  [
+   "R2",
+   "2.2M",
+   "R",
+   "treble band"
+  ],
+  [
+   "R3",
+   "10K",
+   "R",
+   "treble band collector"
+  ],
+  [
+   "R4",
+   "10K",
+   "R",
+   "treble band emitter"
+  ],
+  [
+   "Q1",
+   "NPN",
+   "Q",
+   "high gain"
+  ],
+  [
+   "C3",
+   "47n",
+   "C",
+   "treble band"
+  ],
+  [
+   "LDR1",
+   "LDR",
+   "OTHER",
+   "treble band"
+  ],
+  [
+   "C4",
+   "?",
+   "C",
+   "high-pass at 900Hz, no value"
+  ],
+  [
+   "R5",
+   "?",
+   "R",
+   "high-pass at 900Hz, no value"
+  ],
+  [
+   "C5",
+   "1u",
+   "C",
+   "electrolytic, bass band"
+  ],
+  [
+   "R6",
+   "2.2M",
+   "R",
+   "bass band"
+  ],
+  [
+   "R7",
+   "10K",
+   "R",
+   "bass band collector"
+  ],
+  [
+   "R8",
+   "10K",
+   "R",
+   "bass band emitter"
+  ],
+  [
+   "Q2",
+   "NPN",
+   "Q",
+   "high gain"
+  ],
+  [
+   "LDR2",
+   "LDR",
+   "OTHER",
+   "bass band"
+  ],
+  [
+   "C6",
+   "1u",
+   "C",
+   "electrolytic, bass band"
+  ],
+  [
+   "R9",
+   "?",
+   "R",
+   "low-pass at 1000Hz, no value"
+  ],
+  [
+   "C7",
+   "?",
+   "C",
+   "low-pass at 1000Hz, no value"
+  ],
+  [
+   "Mix",
+   "B47K",
+   "POT",
+   "or B100K"
+  ],
+  [
+   "C8",
+   "1u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R10",
+   "470K",
+   "R",
+   "to Vr"
+  ],
+  [
+   "R11",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "C9",
+   "1u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Gain trim",
+   "10K",
+   "POT",
+   "trimmer"
+  ],
+  [
+   "C10",
+   "1u",
+   "C",
+   "electrolytic, output"
+  ],
+  [
+   "R12",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "R13",
+   "1.8K",
+   "R",
+   "reads 1KB"
+  ],
+  [
+   "Depth",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "LED1",
+   "LED",
+   "LED",
+   "to one of the LDRs"
+  ],
+  [
+   "Q3",
+   "NPN",
+   "Q",
+   "LFO, high gain"
+  ],
+  [
+   "R14",
+   "1.5M",
+   "R",
+   "LFO"
+  ],
+  [
+   "C11",
+   "1u",
+   "C",
+   "electrolytic, LFO"
+  ],
+  [
+   "C12",
+   "1u",
+   "C",
+   "electrolytic, LFO"
+  ],
+  [
+   "C13",
+   "1u",
+   "C",
+   "electrolytic, LFO"
+  ],
+  [
+   "R15",
+   "2.2K",
+   "R",
+   "LFO"
+  ],
+  [
+   "Speed",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "R16",
+   "10K",
+   "R",
+   "LFO"
+  ]
+ ]
+}

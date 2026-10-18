@@ -1,0 +1,102 @@
+{
+ "id": "revolutiondeux:2012-03-vintage-treblebass-boosters-i-cant-find-briggs-rangemaster",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Hand-drawn schematic by Fred Briggs, 2012. No designators except Q1/Q2; parts numbered here.",
+ "uncertain": [
+  "The three panel pots are numbered 1-3 on the drawing but not named; pot 3 (10KA) is the output level, pot 2 (100KB) sits between Q1 and Q2 as in the Rangepig, and pot 1 (100K) with a 2.2u cap bypasses the 4.7n input cap.",
+  "The polarity diode's type is not given."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "D1",
+   "?",
+   "D",
+   "polarity protection"
+  ],
+  [
+   "C1",
+   "47u",
+   "C",
+   "supply filter, electrolytic"
+  ],
+  [
+   "R1",
+   "2.2M",
+   "R",
+   "input pull-down"
+  ],
+  [
+   "C2",
+   "4.7n",
+   "C",
+   "input"
+  ],
+  [
+   "C3",
+   "2.2u",
+   "C",
+   "electrolytic, in series with pot 1"
+  ],
+  [
+   "R2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "Bias trim",
+   "10K",
+   "POT",
+   "emitter trimmer; set Q2 collector to -6.6V"
+  ],
+  [
+   "C4",
+   "47u",
+   "C",
+   "emitter bypass, electrolytic"
+  ],
+  [
+   "C5",
+   "10n",
+   "C",
+   "output"
+  ],
+  [
+   "Q1",
+   "?",
+   "Q",
+   "low-gain germanium, ~50 hFE"
+  ],
+  [
+   "Q2",
+   "?",
+   "Q",
+   "medium-gain silicon, ~250 hFE"
+  ],
+  [
+   "Control 1",
+   "100K",
+   "POT",
+   "circled 1, with the 2.2u cap"
+  ],
+  [
+   "Control 2",
+   "B100K",
+   "POT",
+   "circled 2, between Q1 and Q2"
+  ],
+  [
+   "Control 3",
+   "A10K",
+   "POT",
+   "circled 3, collector load and output"
+  ]
+ ]
+}

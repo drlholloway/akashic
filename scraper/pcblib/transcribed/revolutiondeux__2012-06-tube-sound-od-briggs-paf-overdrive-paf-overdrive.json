@@ -1,0 +1,217 @@
+{
+ "id": "revolutiondeux:2012-06-tube-sound-od-briggs-paf-overdrive-paf-overdrive",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Hand-drawn by the author on lined paper; no designators, so parts are numbered by me (supply, input buffer, transistor pair, tone, second stage). Op-amp LF353, clipping diodes red LEDs, transistors an hFE-matched NPN/PNP pair. Runs on 9-18V.",
+ "uncertain": [
+  "The electrolytic in series with the Bass pot has no readable value (only 'µ').",
+  "The supply diode has no part number.",
+  "The input resistor to Vr reads 510K."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "100",
+   "R",
+   "supply"
+  ],
+  [
+   "D1",
+   "?",
+   "D",
+   "supply protection"
+  ],
+  [
+   "C1",
+   "220u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R2",
+   "8.2K",
+   "R",
+   "Vr divider"
+  ],
+  [
+   "R3",
+   "10K",
+   "R",
+   "Vr divider"
+  ],
+  [
+   "C2",
+   "100n",
+   "C",
+   "input"
+  ],
+  [
+   "R4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "R5",
+   "510K",
+   "R",
+   "to Vr"
+  ],
+  [
+   "IC1",
+   "LF353",
+   "IC",
+   ""
+  ],
+  [
+   "C3",
+   "2.2n",
+   "C",
+   ""
+  ],
+  [
+   "Bass",
+   "B100K",
+   "POT",
+   "rheostat"
+  ],
+  [
+   "C4",
+   "?",
+   "C",
+   "electrolytic, in series with Bass"
+  ],
+  [
+   "Bias trim",
+   "20K",
+   "POT",
+   "trimmer"
+  ],
+  [
+   "R6",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "Q1",
+   "?",
+   "Q",
+   "NPN, hFE matched with Q2"
+  ],
+  [
+   "Q2",
+   "?",
+   "Q",
+   "PNP, hFE matched with Q1"
+  ],
+  [
+   "R7",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R8",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "C5",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Gain",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "C6",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "R9",
+   "470",
+   "R",
+   ""
+  ],
+  [
+   "Treble",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "C7",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "R10",
+   "510K",
+   "R",
+   "to Vr"
+  ],
+  [
+   "R11",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "C8",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "Boost",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "D2",
+   "LED",
+   "LED",
+   "red, clipping"
+  ],
+  [
+   "D3",
+   "LED",
+   "LED",
+   "red, clipping"
+  ],
+  [
+   "R12",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "C9",
+   "510p",
+   "C",
+   ""
+  ],
+  [
+   "C10",
+   "1u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Vol",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ]
+}

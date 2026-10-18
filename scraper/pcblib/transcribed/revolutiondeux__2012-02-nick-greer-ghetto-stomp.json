@@ -1,0 +1,81 @@
+{
+ "id": "revolutiondeux:2012-02-nick-greer-ghetto-stomp",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Traced by soniciv on freestompboxes. The drawing has no designators, so parts are numbered here left to right. IvIark's vero layout adds a 10n cap, a 47u supply filter and a 2K2 LED resistor not on the schematic.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "2.2M",
+   "R",
+   "collector-base feedback"
+  ],
+  [
+   "R2",
+   "47K",
+   "R",
+   "collector"
+  ],
+  [
+   "R3",
+   "680",
+   "R",
+   "emitter"
+  ],
+  [
+   "C1",
+   "100n",
+   "C",
+   "input"
+  ],
+  [
+   "C2",
+   "47n",
+   "C",
+   "output"
+  ],
+  [
+   "C3",
+   "10n",
+   "C",
+   "tone"
+  ],
+  [
+   "D1",
+   "1N914",
+   "D",
+   "1N4148 also fine"
+  ],
+  [
+   "D2",
+   "1N914",
+   "D",
+   "1N4148 also fine"
+  ],
+  [
+   "Q1",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "Gain",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Level",
+   "B100K",
+   "POT",
+   "drawn Vol"
+  ]
+ ]
+}

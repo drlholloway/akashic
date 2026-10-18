@@ -1,0 +1,63 @@
+{
+ "id": "revolutiondeux:2012-03-tim-escobedo-tytewadd-fuzz-tytewadd",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Tim Escobedo's own drawing, v1.0 6/03. No designators except Q1, so the other parts are numbered here.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "220K",
+   "R",
+   "input, can be a gain pot"
+  ],
+  [
+   "C1",
+   "20n",
+   "C",
+   "input"
+  ],
+  [
+   "C2",
+   "1u",
+   "C",
+   "output"
+  ],
+  [
+   "D1",
+   "Si",
+   "D",
+   "silicon"
+  ],
+  [
+   "D2",
+   "Si",
+   "D",
+   "silicon"
+  ],
+  [
+   "Q1",
+   "?",
+   "Q",
+   "any medium to high gain NPN"
+  ],
+  [
+   "Q2",
+   "J201",
+   "Q",
+   "current source"
+  ],
+  [
+   "Trim",
+   "100K",
+   "POT",
+   "trimmer on the J201 source"
+  ],
+  [
+   "Volume",
+   "100K",
+   "POT",
+   ""
+  ]
+ ]
+}

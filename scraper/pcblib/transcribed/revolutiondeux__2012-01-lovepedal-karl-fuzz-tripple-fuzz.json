@@ -1,0 +1,105 @@
+{
+ "id": "revolutiondeux:2012-01-lovepedal-karl-fuzz-tripple-fuzz",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Tim Escobedo's own drawing, v1.3, 3/11/04. It has no designators, so the parts are numbered here left to right.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "5M",
+   "R",
+   "Q1 collector-base"
+  ],
+  [
+   "R2",
+   "10K",
+   "R",
+   "Q1 collector"
+  ],
+  [
+   "R3",
+   "500K",
+   "R",
+   "tripler feedback"
+  ],
+  [
+   "R4",
+   "10K",
+   "R",
+   "Q3 emitter"
+  ],
+  [
+   "R5",
+   "10K",
+   "R",
+   "Q2 emitter"
+  ],
+  [
+   "C1",
+   "100n",
+   "C",
+   "input"
+  ],
+  [
+   "C2",
+   "1u",
+   "C",
+   ""
+  ],
+  [
+   "C3",
+   "220p",
+   "C",
+   ""
+  ],
+  [
+   "C4",
+   "100n",
+   "C",
+   "output"
+  ],
+  [
+   "Q1",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "Q3",
+   "2N3906",
+   "Q",
+   ""
+  ],
+  [
+   "D1",
+   "Si",
+   "D",
+   "silicon clipping diode"
+  ],
+  [
+   "D2",
+   "Si",
+   "D",
+   "silicon clipping diode"
+  ],
+  [
+   "Gain",
+   "10K",
+   "POT",
+   "rheostat in Q1 emitter"
+  ],
+  [
+   "Volume",
+   "100K",
+   "POT",
+   ""
+  ]
+ ]
+}

@@ -1,0 +1,101 @@
+{
+ "id": "revolutiondeux:2012-02-lovepedal-black-magic-distortion-black-magic",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Traced and drawn by Greg_G for freestompboxes.org, 03/04/2011. The vero layout is by mcaviel, unverified, with the same designators and values except the Dist pot.",
+ "uncertain": [
+  "The Dist pot is drawn as 500R B on the schematic but listed as 500K linear on the vero layout's parts list; the schematic value is used here."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "1",
+   "R",
+   "1 ohm"
+  ],
+  [
+   "R4",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "R5",
+   "100",
+   "R",
+   ""
+  ],
+  [
+   "C1",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "C2",
+   "4.7n",
+   "C",
+   ""
+  ],
+  [
+   "C3",
+   "100u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C4",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "C5",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C6",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C7",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "IC1",
+   "LM386",
+   "IC",
+   ""
+  ],
+  [
+   "Dist",
+   "B500",
+   "POT",
+   "500 ohm on the schematic; 500K on the vero layout"
+  ],
+  [
+   "Vol",
+   "B500K",
+   "POT",
+   ""
+  ]
+ ]
+}

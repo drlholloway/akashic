@@ -1,0 +1,93 @@
+{
+ "id": "revolutiondeux:2012-01-dam-meathead-meathead",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Drawn by Gottfried Divos (Analogguru), version 1.0, 25.06.2008. Mike Livesley's vero renumbers the parts.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "47u",
+   "C",
+   "supply filter"
+  ],
+  [
+   "C2",
+   "10n",
+   "C",
+   "film"
+  ],
+  [
+   "C3",
+   "470p",
+   "C",
+   "ceramic"
+  ],
+  [
+   "Q1",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "R1",
+   "18K",
+   "R",
+   ""
+  ],
+  [
+   "C4",
+   "47p",
+   "C",
+   "ceramic"
+  ],
+  [
+   "Q2",
+   "BC182L",
+   "Q",
+   ""
+  ],
+  [
+   "R2",
+   "820",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "4.7K",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "C6",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R5",
+   "120K",
+   "R",
+   ""
+  ],
+  [
+   "C5",
+   "22n",
+   "C",
+   "film"
+  ],
+  [
+   "Dirt",
+   "B500K",
+   "POT",
+   "P1"
+  ]
+ ]
+}

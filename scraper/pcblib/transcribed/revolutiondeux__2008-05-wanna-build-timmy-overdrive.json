@@ -1,0 +1,192 @@
+{
+ "id": "revolutiondeux:2008-05-wanna-build-timmy-overdrive",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Schematic is Celadine's 'Goop-busters' Timbre Reamer version 2' (the Timmy), redrawn 11/07 with information from Paul Cochrane, without designators; the designators here are those of the numbered schematic on the vero layout image, which matches part for part. The DIP switch for the clipping options is listed as SW1.",
+ "uncertain": [
+  "The Volume pot is drawn as 10K on the schematic, while the vero layout's parts list gives Level as 100K.",
+  "The Timbre Reamer schematic does not mark pot tapers; the feedback-mod drawing marks Drive 1M A, Bass and Treble 50K A, and Volume 10K A."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "8.2K",
+   "R",
+   "Vref divider"
+  ],
+  [
+   "R2",
+   "10K",
+   "R",
+   "Vref divider"
+  ],
+  [
+   "R3",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "R5",
+   "510K",
+   "R",
+   ""
+  ],
+  [
+   "R6",
+   "3.3K",
+   "R",
+   "in series with Drive"
+  ],
+  [
+   "R7",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "R8",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "R9",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "C1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C2",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C3",
+   "1u",
+   "C",
+   ""
+  ],
+  [
+   "C4",
+   "39n",
+   "C",
+   ""
+  ],
+  [
+   "C5",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "C6",
+   "100p",
+   "C",
+   "silver mica"
+  ],
+  [
+   "C7",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "C8",
+   "1u",
+   "C",
+   ""
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   "polarity protection"
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D4",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D5",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D6",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "D7",
+   "1N4148",
+   "D",
+   ""
+  ],
+  [
+   "IC1",
+   "JRC4559",
+   "IC",
+   ""
+  ],
+  [
+   "SW1",
+   "2-way DIP switch",
+   "SW",
+   "clipping diode select"
+  ],
+  [
+   "Volume",
+   "10K",
+   "POT",
+   ""
+  ],
+  [
+   "Drive",
+   "1M",
+   "POT",
+   ""
+  ],
+  [
+   "Bass cut",
+   "50K",
+   "POT",
+   ""
+  ],
+  [
+   "Treble cut",
+   "50K",
+   "POT",
+   ""
+  ]
+ ]
+}

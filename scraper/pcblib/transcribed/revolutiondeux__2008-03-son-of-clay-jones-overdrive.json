@@ -1,0 +1,147 @@
+{
+ "id": "revolutiondeux:2008-03-son-of-clay-jones-overdrive",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Hand-drawn by Fred Briggs ([K]lonenight), 2008. No designators; parts numbered here left to right.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "22n",
+   "C",
+   ""
+  ],
+  [
+   "R1",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "510K",
+   "R",
+   ""
+  ],
+  [
+   "IC1",
+   "OPA2134",
+   "IC",
+   ""
+  ],
+  [
+   "R3",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "C2",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "R4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "Gain",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "C3",
+   "51p",
+   "C",
+   ""
+  ],
+  [
+   "D1",
+   "red LED",
+   "LED",
+   "5mm, clipping"
+  ],
+  [
+   "D2",
+   "red LED",
+   "LED",
+   "5mm, clipping"
+  ],
+  [
+   "R5",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "C4",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "Tone",
+   "B25K",
+   "POT",
+   ""
+  ],
+  [
+   "C5",
+   "220n",
+   "C",
+   ""
+  ],
+  [
+   "R6",
+   "220",
+   "R",
+   ""
+  ],
+  [
+   "R7",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "C6",
+   "1u",
+   "C",
+   "non-polarized"
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "C7",
+   "100u",
+   "C",
+   "electrolytic, supply"
+  ],
+  [
+   "R8",
+   "10K",
+   "R",
+   "Vr divider"
+  ],
+  [
+   "R9",
+   "10K",
+   "R",
+   "Vr divider"
+  ],
+  [
+   "C8",
+   "47u",
+   "C",
+   "electrolytic"
+  ]
+ ]
+}

@@ -1,0 +1,149 @@
+{
+ "id": "revolutiondeux:2012-02-fred-briggs-face-fenderish-face-mkii",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Hand-drawn schematic, f.briggs '12, MKII. No designators; parts numbered here.",
+ "uncertain": [
+  "The diode types in the charge pump are written only as 'low voltage drop silicon'."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "1M",
+   "R",
+   "input pull-down"
+  ],
+  [
+   "C1",
+   "22n",
+   "C",
+   "input"
+  ],
+  [
+   "C2",
+   "47p",
+   "C",
+   "bright cap across Vol"
+  ],
+  [
+   "Q1",
+   "MPF102",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "MPF102",
+   "Q",
+   ""
+  ],
+  [
+   "Trim",
+   "4.7K",
+   "POT",
+   "trimmer between the JFETs"
+  ],
+  [
+   "R2",
+   "2.2K",
+   "R",
+   "source"
+  ],
+  [
+   "C3",
+   "47u",
+   "C",
+   "source bypass, electrolytic"
+  ],
+  [
+   "C4",
+   "100n",
+   "C",
+   "output"
+  ],
+  [
+   "C5",
+   "33n",
+   "C",
+   "tone"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   "clipping"
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   "clipping"
+  ],
+  [
+   "D3",
+   "1N4148",
+   "D",
+   "clipping"
+  ],
+  [
+   "D4",
+   "?",
+   "D",
+   "low voltage drop silicon"
+  ],
+  [
+   "D5",
+   "?",
+   "D",
+   "low voltage drop silicon"
+  ],
+  [
+   "D6",
+   "12V zener",
+   "D",
+   ""
+  ],
+  [
+   "C6",
+   "10u",
+   "C",
+   "charge pump, electrolytic"
+  ],
+  [
+   "C7",
+   "10u",
+   "C",
+   "charge pump, electrolytic"
+  ],
+  [
+   "IC1",
+   "MAX1044",
+   "IC",
+   ""
+  ],
+  [
+   "Vol",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Master",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Bias",
+   "SPST",
+   "SW",
+   "switches the clipping diodes in"
+  ]
+ ]
+}

@@ -1,0 +1,186 @@
+{
+ "id": "revolutiondeux:2012-01-lovepedal-kalamazoo",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Retraced by WhiteKeyHole from board photos donated to freestompboxes.org.",
+ "uncertain": [
+  "Values in parentheses are marked uncertain on the drawing: C2 100n, R9 10K, R3 1.02K, C4 100n, C3 220n, C5 1u and the 4558 op-amp type.",
+  "R1 is unknown on the drawing (???)."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "D5",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "R11",
+   "100",
+   "R",
+   ""
+  ],
+  [
+   "C8",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "C7",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R9",
+   "10K",
+   "R",
+   "uncertain on the drawing"
+  ],
+  [
+   "R10",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "C6",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C2",
+   "100n",
+   "C",
+   "uncertain on the drawing"
+  ],
+  [
+   "R5",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "IC1",
+   "4558",
+   "IC",
+   "uncertain on the drawing"
+  ],
+  [
+   "D1",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "D3",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "D4",
+   "1N914",
+   "D",
+   ""
+  ],
+  [
+   "R1",
+   "?",
+   "R",
+   "unknown on the drawing"
+  ],
+  [
+   "Drive",
+   "B500K",
+   "POT",
+   ""
+  ],
+  [
+   "R3",
+   "1.02K",
+   "R",
+   "uncertain on the drawing"
+  ],
+  [
+   "C1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "R2",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "Tone",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "R6",
+   "2.74K",
+   "R",
+   ""
+  ],
+  [
+   "Glass",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "C4",
+   "100n",
+   "C",
+   "uncertain on the drawing"
+  ],
+  [
+   "C3",
+   "220n",
+   "C",
+   "uncertain on the drawing"
+  ],
+  [
+   "R8",
+   "332",
+   "R",
+   ""
+  ],
+  [
+   "R7",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "C5",
+   "1u",
+   "C",
+   "electrolytic; uncertain on the drawing"
+  ],
+  [
+   "Level",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ]
+}

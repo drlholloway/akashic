@@ -1,0 +1,228 @@
+{
+ "id": "revolutiondeux:2009-05-bjf-dyna-red-distortion-bearfoot",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "The BJF hand trace with the Bearfoot values typed over it. No designators; numbered as for the BJF version.",
+ "uncertain": [
+  "The gain-leg cap is still drawn 0.47u on this edited drawing; the post's 0.1u note was about the modded BJF unit, so it is left as drawn here.",
+  "The LED indicator's series resistor is erased on this edit."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "47n",
+   "C",
+   "marked 473"
+  ],
+  [
+   "R1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "360K",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "14.7K",
+   "R",
+   ""
+  ],
+  [
+   "IC1",
+   "CA3130EZ",
+   "IC",
+   ""
+  ],
+  [
+   "C2",
+   "100p",
+   "C",
+   "compensation, marked 101"
+  ],
+  [
+   "LED1",
+   "red",
+   "LED",
+   "1.8V, feedback clipping"
+  ],
+  [
+   "LED2",
+   "red",
+   "LED",
+   "1.8V, feedback clipping"
+  ],
+  [
+   "R4",
+   "3K",
+   "R",
+   ""
+  ],
+  [
+   "Dist",
+   "A500K",
+   "POT",
+   ""
+  ],
+  [
+   "R6",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "C5",
+   "470n",
+   "C",
+   "electrolytic, 50V"
+  ],
+  [
+   "C6",
+   "220p",
+   "C",
+   "marked 221"
+  ],
+  [
+   "R7",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "C7",
+   "1u",
+   "C",
+   "electrolytic, 50V"
+  ],
+  [
+   "D1",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "R8",
+   "3.6K",
+   "R",
+   ""
+  ],
+  [
+   "C8",
+   "47n",
+   "C",
+   "marked 473"
+  ],
+  [
+   "Treble",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "C9",
+   "22n",
+   "C",
+   "marked 223"
+  ],
+  [
+   "C10",
+   "22n",
+   "C",
+   "marked 223"
+  ],
+  [
+   "R9",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "Q1",
+   "2N5458",
+   "Q",
+   ""
+  ],
+  [
+   "R10",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "C11",
+   "1u",
+   "C",
+   "electrolytic, 50V"
+  ],
+  [
+   "R11",
+   "3K",
+   "R",
+   ""
+  ],
+  [
+   "Volume",
+   "B50K",
+   "POT",
+   ""
+  ],
+  [
+   "D3",
+   "1N4001",
+   "D",
+   ""
+  ],
+  [
+   "R12",
+   "47",
+   "R",
+   ""
+  ],
+  [
+   "C12",
+   "100u",
+   "C",
+   "electrolytic, 25V"
+  ],
+  [
+   "R13",
+   "47K",
+   "R",
+   "bias divider"
+  ],
+  [
+   "R14",
+   "47K",
+   "R",
+   "bias divider"
+  ],
+  [
+   "C13",
+   "22u",
+   "C",
+   "electrolytic, 25V"
+  ],
+  [
+   "LED3",
+   "LED",
+   "LED",
+   "on/off indicator"
+  ],
+  [
+   "D4",
+   "3.6V zener",
+   "D",
+   "in series with the LED"
+  ]
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "id": "revolutiondeux:2012-02-klon-buffer",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Schematic from Beavis Audio (the 'Plon Fentar' buffer); verified vero layout by Mcaviel.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "C1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "R3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "U1",
+   "TL072",
+   "IC",
+   "half used"
+  ],
+  [
+   "C3",
+   "1u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R4",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "R5",
+   "560",
+   "R",
+   ""
+  ]
+ ]
+}

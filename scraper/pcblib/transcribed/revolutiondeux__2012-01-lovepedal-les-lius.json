@@ -1,0 +1,162 @@
+{
+ "id": "revolutiondeux:2012-01-lovepedal-les-lius",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Schematic drawn by WhiteKeyHole of freestompboxes.org. Image 3 is Meester Drummond's vero layout for Magic Homeboy's Les Lius (YAED), which drops the regulator and the FET switching.",
+ "uncertain": [
+  "Two capacitors are labeled C6: C6 100n on the regulator output and C6 on the FET gate, whose value is drawn only as 'pF'.",
+  "The JFET type for Q2 is not given."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "3.3M",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "330",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "R5",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "R6",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "C1",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "C2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "C3",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C4",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "C5",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C6",
+   "100n",
+   "C",
+   "regulator output"
+  ],
+  [
+   "C6",
+   "?",
+   "C",
+   "FET gate; value drawn only as pF, duplicate designator"
+  ],
+  [
+   "D1",
+   "1N914",
+   "D",
+   "or BAV99"
+  ],
+  [
+   "D2",
+   "1N914",
+   "D",
+   "or BAV99"
+  ],
+  [
+   "D3",
+   "BAT46",
+   "D",
+   "Schottky"
+  ],
+  [
+   "D4",
+   "BAT46",
+   "D",
+   "Schottky"
+  ],
+  [
+   "D5",
+   "BAT46",
+   "D",
+   "Schottky"
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "?",
+   "Q",
+   "JFET boost switch, type not given"
+  ],
+  [
+   "REG1",
+   "7805",
+   "IC",
+   "5V regulator"
+  ],
+  [
+   "Gain",
+   "B1K",
+   "POT",
+   "drawn 1KB"
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Mode",
+   "DPDT on-off-on",
+   "SW",
+   "SW1, clipping diode select"
+  ],
+  [
+   "Boost",
+   "SPST",
+   "SW",
+   "SW2, switches the FET"
+  ]
+ ]
+}

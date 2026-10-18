@@ -1,0 +1,96 @@
+{
+ "id": "revolutiondeux:2012-03-wem-watkins-rush-pep-box-fuzz-silicon",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "No designators on the drawing; parts numbered here left to right.",
+ "uncertain": [
+  "The trimmer feeding the Effect pot is marked '?' (value unknown).",
+  "The Level pot is marked '500k?'."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "25u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "C2",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "Q1",
+   "BC107",
+   "Q",
+   ""
+  ],
+  [
+   "R2",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "C3",
+   "25u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Trim",
+   "?",
+   "POT",
+   "trimmer, value unknown"
+  ],
+  [
+   "Effect",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "R3",
+   "100",
+   "R",
+   ""
+  ],
+  [
+   "Q2",
+   "BC107",
+   "Q",
+   ""
+  ],
+  [
+   "R4",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "C4",
+   "3.3n",
+   "C",
+   ""
+  ],
+  [
+   "R5",
+   "56K",
+   "R",
+   ""
+  ],
+  [
+   "Level",
+   "500K",
+   "POT",
+   "marked 500k?"
+  ]
+ ]
+}

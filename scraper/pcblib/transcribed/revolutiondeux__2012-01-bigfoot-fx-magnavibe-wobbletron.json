@@ -1,0 +1,143 @@
+{
+ "id": "revolutiondeux:2012-01-bigfoot-fx-magnavibe-wobbletron",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Tim Escobedo's drawing with its own notes. Only C1 has a designator; the other parts are numbered here.",
+ "uncertain": [
+  "The input capacitor's value is not written on the drawing."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "C2",
+   "?",
+   "C",
+   "input; value not written"
+  ],
+  [
+   "R1",
+   "2.2M",
+   "R",
+   "collector to base"
+  ],
+  [
+   "R2",
+   "10K",
+   "R",
+   "collector"
+  ],
+  [
+   "R3",
+   "10K",
+   "R",
+   "emitter"
+  ],
+  [
+   "C1",
+   "100n",
+   "C",
+   "phase-shift"
+  ],
+  [
+   "Q1",
+   "MPSA18",
+   "Q",
+   ""
+  ],
+  [
+   "Q2",
+   "J201",
+   "Q",
+   "variable resistance"
+  ],
+  [
+   "C3",
+   "100n",
+   "C",
+   "output"
+  ],
+  [
+   "R4",
+   "100K",
+   "R",
+   "output"
+  ],
+  [
+   "R5",
+   "2.2K",
+   "R",
+   "LFO"
+  ],
+  [
+   "R6",
+   "22K",
+   "R",
+   "LFO"
+  ],
+  [
+   "C4",
+   "1u",
+   "C",
+   "LFO, electrolytic"
+  ],
+  [
+   "C5",
+   "1u",
+   "C",
+   "LFO, electrolytic"
+  ],
+  [
+   "C6",
+   "1u",
+   "C",
+   "LFO, electrolytic"
+  ],
+  [
+   "R7",
+   "2.2M",
+   "R",
+   "LFO"
+  ],
+  [
+   "R8",
+   "10K",
+   "R",
+   "LED resistor"
+  ],
+  [
+   "LED1",
+   "LED",
+   "LED",
+   "red"
+  ],
+  [
+   "Q3",
+   "MPSA18",
+   "Q",
+   "LFO"
+  ],
+  [
+   "C7",
+   "100n",
+   "C",
+   "LFO to Depth"
+  ],
+  [
+   "R9",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "Freq",
+   "25K",
+   "POT",
+   ""
+  ],
+  [
+   "Depth",
+   "500K",
+   "POT",
+   ""
+  ]
+ ]
+}

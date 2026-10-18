@@ -203,6 +203,12 @@
 			{#if marked}
 				<p class="src-legend dim"><span class="src">ocr</span> read from an image · <span class="src">sch</span> paired from the schematic · <span class="src fixed">fixed</span> corrected by hand. Check marked values against the build document.</p>
 			{/if}
+			{#if c.fixes?.length}
+				<div class="fixes">
+					<p class="label strong">Fixes to the schematic, from {VENDOR_KIND[c.vendor] === 'blog' ? 'the post' : 'the source'}</p>
+					<ul>{#each c.fixes as f}<li>{f}</li>{/each}</ul>
+				</div>
+			{/if}
 			{#if c.uncertain?.length}
 				<details class="unsure" open={c.uncertain.length <= 4}>
 					<summary><span class="warn">Check before you build</span> <span class="dim">· {c.uncertain.length} {c.uncertain.length === 1 ? 'value' : 'values'} the reader of this {isLayout ? 'layout' : 'schematic'} was not sure of</span></summary>
@@ -301,6 +307,9 @@
 	.src-legend { font-size: 12.5px; margin: 0 0 8px; }
 	.unsure { margin: 0 0 12px; padding: 8px 12px; border: 1px solid var(--rule-strong); border-left: 3px solid var(--warn); border-radius: var(--radius); }
 	.unsure summary { cursor: pointer; }
+	.fixes { margin: 0 0 12px; padding: 8px 12px; border: 1px solid var(--rule-strong); border-left: 3px solid var(--coat); border-radius: var(--radius); }
+	.fixes ul { margin: 6px 0 2px; padding-left: 18px; max-width: 90ch; }
+	.fixes li { margin-bottom: 4px; color: var(--ink-2); font-size: 14px; }
 	.unsure ul { margin: 8px 0 2px; padding-left: 18px; max-width: 90ch; }
 	.unsure li { margin-bottom: 4px; color: var(--ink-2); font-size: 14px; }
 	.src-legend .src { margin-left: 0; cursor: default; }

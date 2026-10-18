@@ -1,0 +1,84 @@
+{
+ "id": "revolutiondeux:2012-03-dallas-rangemaster-dam-red-rooster-red-rooster",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "No schematic in the post; parts read from Lee Weiss's vero layout replicating the D*A*M board (image 5). The layout has no designators, so the parts are numbered here.",
+ "uncertain": [
+  "The layout labels the Boost pot 10KA; the post text says 10KB.",
+  "The trimmer can be 5K or 10K."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "C1",
+   "10n",
+   "C",
+   "output"
+  ],
+  [
+   "C2",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C3",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C4",
+   "2.2u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C5",
+   "5n",
+   "C",
+   ""
+  ],
+  [
+   "Q1",
+   "OC140",
+   "Q",
+   "NPN germanium; or CV7112"
+  ],
+  [
+   "Trim",
+   "10K",
+   "POT",
+   "trimmer, 5K or 10K, set for 6.66V on the collector"
+  ],
+  [
+   "Boost",
+   "10K",
+   "POT",
+   "10KA on the layout, 10KB in the post"
+  ],
+  [
+   "Range",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ]
+}

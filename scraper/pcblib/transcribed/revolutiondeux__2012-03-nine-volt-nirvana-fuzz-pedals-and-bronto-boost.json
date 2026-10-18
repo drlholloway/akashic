@@ -1,0 +1,185 @@
+{
+ "id": "revolutiondeux:2012-03-nine-volt-nirvana-fuzz-pedals-and-bronto-boost",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Joe Gagan's own production drawing (version 3.0, rev 4 19 03). No designators drawn; parts numbered here left to right.",
+ "uncertain": [
+  "The second 3PDT switch (the one beside the tone network) appears to switch the input buffer and tone stage in or out (single-stage mode); its exact wiring is hard to follow."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "3.3u",
+   "C",
+   "electrolytic, input"
+  ],
+  [
+   "R1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "Q1",
+   "2N3906",
+   "Q",
+   ""
+  ],
+  [
+   "R3",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "C2",
+   "3.3u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C3",
+   "4.7n",
+   "C",
+   ""
+  ],
+  [
+   "C4",
+   "4.7n",
+   "C",
+   ""
+  ],
+  [
+   "Tone",
+   "100K",
+   "POT",
+   "dual gang"
+  ],
+  [
+   "C5",
+   "1u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C6",
+   "3.3u",
+   "C",
+   ""
+  ],
+  [
+   "R4",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "Q2",
+   "2N3906",
+   "Q",
+   ""
+  ],
+  [
+   "R5",
+   "10K",
+   "R",
+   "collector"
+  ],
+  [
+   "Bias trim",
+   "10K",
+   "POT",
+   "trimmer, emitter"
+  ],
+  [
+   "C7",
+   "1u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Gain 1",
+   "250K",
+   "POT",
+   ""
+  ],
+  [
+   "R6",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R7",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "R8",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "Q3",
+   "2SB54",
+   "Q",
+   "germanium"
+  ],
+  [
+   "R9",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "C8",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Gain 2",
+   "25K",
+   "POT",
+   ""
+  ],
+  [
+   "C9",
+   "1u",
+   "C",
+   ""
+  ],
+  [
+   "D1",
+   "1N4002",
+   "D",
+   ""
+  ],
+  [
+   "D2",
+   "1N4002",
+   "D",
+   ""
+  ],
+  [
+   "Volume",
+   "100K",
+   "POT",
+   ""
+  ],
+  [
+   "Stage switch",
+   "3PDT",
+   "SW",
+   "third row not used"
+  ]
+ ]
+}

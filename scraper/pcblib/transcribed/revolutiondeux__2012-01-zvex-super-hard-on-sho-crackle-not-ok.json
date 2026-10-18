@@ -1,0 +1,83 @@
+{
+ "id": "revolutiondeux:2012-01-zvex-super-hard-on-sho-crackle-not-ok",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Soulsonic's Eagle schematic (MadSoul), with designators.",
+ "uncertain": [
+  "D1 is labeled '1N400x'."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "D1",
+   "1N4001",
+   "D",
+   "drawn 1N400x"
+  ],
+  [
+   "C1",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R4",
+   "1M",
+   "R",
+   "input pulldown"
+  ],
+  [
+   "C2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "Crackle",
+   "1M",
+   "POT",
+   ""
+  ],
+  [
+   "R2",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "R5",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "Z1",
+   "1N5242",
+   "D",
+   "zener"
+  ],
+  [
+   "Q1",
+   "BS170",
+   "Q",
+   ""
+  ],
+  [
+   "R1",
+   "5.1K",
+   "R",
+   ""
+  ],
+  [
+   "C3",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R3",
+   "100K",
+   "R",
+   ""
+  ]
+ ]
+}

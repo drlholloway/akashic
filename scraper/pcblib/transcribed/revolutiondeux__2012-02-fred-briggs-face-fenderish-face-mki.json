@@ -1,0 +1,143 @@
+{
+ "id": "revolutiondeux:2012-02-fred-briggs-face-fenderish-face-mki",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Hand-drawn schematic, f.briggs '12, MKI. No designators; parts numbered here. The charge pump (MAX1044 or ICL7660S) doubles 9V to about 18V.",
+ "uncertain": [
+  "Which way round the two series 1N4148s and the single anti-parallel 1N4148 sit is hard to read on the photo of the drawing."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "22n",
+   "C",
+   "input"
+  ],
+  [
+   "R1",
+   "10K",
+   "R",
+   "input"
+  ],
+  [
+   "C2",
+   "47p",
+   "C",
+   "bright cap across Vol"
+  ],
+  [
+   "C3",
+   "3.3n",
+   "C",
+   "tone"
+  ],
+  [
+   "Q1",
+   "2N5457",
+   "Q",
+   "or MPF102"
+  ],
+  [
+   "Q2",
+   "2N5457",
+   "Q",
+   "or MPF102"
+  ],
+  [
+   "Trim",
+   "4.7K",
+   "POT",
+   "trimmer between the JFETs"
+  ],
+  [
+   "R2",
+   "1K",
+   "R",
+   "source"
+  ],
+  [
+   "C4",
+   "10u",
+   "C",
+   "source bypass, switched by Bias"
+  ],
+  [
+   "C5",
+   "100n",
+   "C",
+   "output"
+  ],
+  [
+   "D1",
+   "1N4148",
+   "D",
+   "clipping"
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   "clipping"
+  ],
+  [
+   "D3",
+   "1N4148",
+   "D",
+   "clipping"
+  ],
+  [
+   "D4",
+   "?",
+   "D",
+   "low voltage drop silicon"
+  ],
+  [
+   "D5",
+   "?",
+   "D",
+   "low voltage drop silicon"
+  ],
+  [
+   "C6",
+   "10u",
+   "C",
+   "charge pump, electrolytic"
+  ],
+  [
+   "C7",
+   "10u",
+   "C",
+   "charge pump, electrolytic"
+  ],
+  [
+   "IC1",
+   "MAX1044",
+   "IC",
+   "or ICL7660S"
+  ],
+  [
+   "Vol",
+   "A1M",
+   "POT",
+   ""
+  ],
+  [
+   "Tone",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Master",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Bias",
+   "SPST",
+   "SW",
+   ""
+  ]
+ ]
+}

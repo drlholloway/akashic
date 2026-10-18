@@ -1,0 +1,123 @@
+{
+ "id": "revolutiondeux:2009-01-fred-briggs-overdrive",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Hand-drawn by the author, 2008. No designators; parts are numbered by me in signal order. Q1 can be a 2N7000 or BS170; the clipping diodes 1N270 or BAT46.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "47n",
+   "C",
+   "input"
+  ],
+  [
+   "R1",
+   "1M",
+   "R",
+   "gate to drain"
+  ],
+  [
+   "R2",
+   "1M",
+   "R",
+   "gate to ground"
+  ],
+  [
+   "D1",
+   "LED",
+   "LED",
+   "red, in the bias network"
+  ],
+  [
+   "Q1",
+   "2N7000",
+   "Q",
+   "MOSFET; or BS170"
+  ],
+  [
+   "R3",
+   "4.7K",
+   "R",
+   "drain"
+  ],
+  [
+   "C2",
+   "47u",
+   "C",
+   "electrolytic, supply filter"
+  ],
+  [
+   "R4",
+   "62",
+   "R",
+   "source"
+  ],
+  [
+   "R5",
+   "330",
+   "R",
+   ""
+  ],
+  [
+   "Structure",
+   "B1K",
+   "POT",
+   "rheostat"
+  ],
+  [
+   "C3",
+   "47u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Nature",
+   "B1K",
+   "POT",
+   ""
+  ],
+  [
+   "C4",
+   "470n",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C5",
+   "100n",
+   "C",
+   "output"
+  ],
+  [
+   "C6",
+   "82n",
+   "C",
+   "in series with the clipping diodes"
+  ],
+  [
+   "D2",
+   "1N270",
+   "D",
+   "germanium; or BAT46"
+  ],
+  [
+   "D3",
+   "1N270",
+   "D",
+   "germanium; or BAT46"
+  ],
+  [
+   "C7",
+   "33n",
+   "C",
+   ""
+  ],
+  [
+   "R6",
+   "470K",
+   "R",
+   "output pulldown"
+  ]
+ ]
+}

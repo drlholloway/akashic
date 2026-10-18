@@ -1,0 +1,65 @@
+{
+ "id": "revolutiondeux:2012-03-vintage-treblebass-boosters-i-cant-find-hornby-skewes-treble-booster",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Drawn by bassplayer (rev beta 0.2, 2008-02-15), 2N4061 version, with measured voltages. Designators as drawn.",
+ "uncertain": [
+  "C1 (10n) and C2 (22n) are marked as assumed values on the drawing."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "62K",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "3.9K",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "R5",
+   "100K",
+   "R",
+   "not present on all units"
+  ],
+  [
+   "C1",
+   "10n",
+   "C",
+   "assumed value, Mullard mustard"
+  ],
+  [
+   "C2",
+   "22n",
+   "C",
+   "assumed value, Mullard mustard"
+  ],
+  [
+   "C3",
+   "80u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N4061",
+   "Q",
+   ""
+  ]
+ ]
+}

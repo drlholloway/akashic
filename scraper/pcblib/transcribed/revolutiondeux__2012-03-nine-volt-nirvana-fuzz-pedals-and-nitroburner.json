@@ -1,0 +1,135 @@
+{
+ "id": "revolutiondeux:2012-03-nine-volt-nirvana-fuzz-pedals-and-nitroburner",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Joe Gagan's drawing, version 1, 6-3-01. Passives undesignated; numbered here.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "Fuel",
+   "500K",
+   "POT",
+   ""
+  ],
+  [
+   "R1",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "C1",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C2",
+   "5n",
+   "C",
+   ""
+  ],
+  [
+   "Tone",
+   "100K",
+   "POT",
+   ""
+  ],
+  [
+   "C3",
+   "2.2u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "2N3906",
+   "Q",
+   ""
+  ],
+  [
+   "R2",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "100K",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "C4",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q2",
+   "2SB172",
+   "Q",
+   "germanium"
+  ],
+  [
+   "R5",
+   "390",
+   "R",
+   ""
+  ],
+  [
+   "Bias trim",
+   "10K",
+   "POT",
+   "trimmer"
+  ],
+  [
+   "Bias",
+   "5K",
+   "POT",
+   ""
+  ],
+  [
+   "C5",
+   "1u",
+   "C",
+   ""
+  ],
+  [
+   "Volume",
+   "500K",
+   "POT",
+   ""
+  ],
+  [
+   "Q3",
+   "2N3906",
+   "Q",
+   "meter driver"
+  ],
+  [
+   "R6",
+   "2.7K",
+   "R",
+   ""
+  ],
+  [
+   "M1",
+   "automotive voltmeter",
+   "OTHER",
+   ""
+  ],
+  [
+   "Test",
+   "SPST",
+   "SW",
+   "test switch"
+  ]
+ ]
+}

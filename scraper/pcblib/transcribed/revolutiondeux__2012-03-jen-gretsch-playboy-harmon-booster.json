@@ -1,0 +1,305 @@
+{
+ "id": "revolutiondeux:2012-03-jen-gretsch-playboy-harmon-booster",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Schematic uploaded by Soniciv, drawn by Daniel Means (7/2009). Vero layout by Sinner (turretboard.org), which names the Gain pot 'Sustain' and adds an LED with a 3k3 resistor. Only the transistors have designators; resistors and caps are numbered here left to right. The 5K is an emitter trimmer on Q5.",
+ "uncertain": [
+  "The post says 8 transistors, but the schematic shows seven (Q1-Q7)."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "3.3K",
+   "R",
+   "under the Gain pot"
+  ],
+  [
+   "C1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "R2",
+   "1M",
+   "R",
+   "Q1"
+  ],
+  [
+   "C2",
+   "100p",
+   "C",
+   "Q1"
+  ],
+  [
+   "R3",
+   "10K",
+   "R",
+   "Q1 emitter"
+  ],
+  [
+   "C3",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "R4",
+   "560K",
+   "R",
+   "Q2"
+  ],
+  [
+   "R5",
+   "56K",
+   "R",
+   "Q2"
+  ],
+  [
+   "R6",
+   "27K",
+   "R",
+   "Q2 collector"
+  ],
+  [
+   "C4",
+   "100p",
+   "C",
+   "Q2"
+  ],
+  [
+   "R7",
+   "1.6K",
+   "R",
+   "Q2 emitter"
+  ],
+  [
+   "C5",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "R8",
+   "1M",
+   "R",
+   "Q3"
+  ],
+  [
+   "C6",
+   "100p",
+   "C",
+   "Q3"
+  ],
+  [
+   "R9",
+   "10K",
+   "R",
+   "Q3 emitter"
+  ],
+  [
+   "C7",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "R10",
+   "22K",
+   "R",
+   "Q4 base"
+  ],
+  [
+   "R11",
+   "22K",
+   "R",
+   "Q4 base"
+  ],
+  [
+   "R12",
+   "22K",
+   "R",
+   "Q4 collector"
+  ],
+  [
+   "R13",
+   "47K",
+   "R",
+   "Q4 emitter"
+  ],
+  [
+   "C8",
+   "2.2n",
+   "C",
+   ".0022uF"
+  ],
+  [
+   "R14",
+   "22K",
+   "R",
+   "Q5 base"
+  ],
+  [
+   "R15",
+   "22K",
+   "R",
+   "Q5 collector"
+  ],
+  [
+   "R16",
+   "18K",
+   "R",
+   "Q5 emitter"
+  ],
+  [
+   "Trim",
+   "5K",
+   "POT",
+   "trimmer, Q5 emitter"
+  ],
+  [
+   "C9",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "R17",
+   "1M",
+   "R",
+   "Q6"
+  ],
+  [
+   "C10",
+   "100p",
+   "C",
+   "Q6"
+  ],
+  [
+   "R18",
+   "10K",
+   "R",
+   "Q6 emitter"
+  ],
+  [
+   "C11",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "C12",
+   "3.9n",
+   "C",
+   "tone"
+  ],
+  [
+   "R19",
+   "33K",
+   "R",
+   "tone"
+  ],
+  [
+   "C13",
+   "10n",
+   "C",
+   "tone"
+  ],
+  [
+   "R20",
+   "33K",
+   "R",
+   "tone"
+  ],
+  [
+   "C14",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "R21",
+   "1M",
+   "R",
+   "Q7"
+  ],
+  [
+   "C15",
+   "100p",
+   "C",
+   "Q7"
+  ],
+  [
+   "R22",
+   "10K",
+   "R",
+   "Q7 emitter"
+  ],
+  [
+   "C16",
+   "100n",
+   "C",
+   "output"
+  ],
+  [
+   "Q1",
+   "BC318C",
+   "Q",
+   "or CIP5172"
+  ],
+  [
+   "Q2",
+   "BC318C",
+   "Q",
+   "or CIP5172"
+  ],
+  [
+   "Q3",
+   "BC318C",
+   "Q",
+   "or CIP5172"
+  ],
+  [
+   "Q4",
+   "BC318C",
+   "Q",
+   "or CIP5172"
+  ],
+  [
+   "Q5",
+   "BC318C",
+   "Q",
+   "or CIP5172"
+  ],
+  [
+   "Q6",
+   "BC318C",
+   "Q",
+   "or CIP5172"
+  ],
+  [
+   "Q7",
+   "BC318C",
+   "Q",
+   "or CIP5172"
+  ],
+  [
+   "Gain",
+   "B100K",
+   "POT",
+   "'Sustain' on the vero"
+  ],
+  [
+   "Tone",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Volume",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ]
+}

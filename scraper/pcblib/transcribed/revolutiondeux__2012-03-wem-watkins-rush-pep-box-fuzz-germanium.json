@@ -1,0 +1,93 @@
+{
+ "id": "revolutiondeux:2012-03-wem-watkins-rush-pep-box-fuzz-germanium",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "No designators on the drawing; parts numbered here left to right. Image 7 is Sinner's (turretboard.org) vero layout for this germanium version.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "25u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "16K",
+   "R",
+   ""
+  ],
+  [
+   "Q1",
+   "ACY41",
+   "Q",
+   "PNP germanium"
+  ],
+  [
+   "R3",
+   "1.5K",
+   "R",
+   ""
+  ],
+  [
+   "C2",
+   "25u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R4",
+   "820K",
+   "R",
+   ""
+  ],
+  [
+   "Effect",
+   "A10K",
+   "POT",
+   ""
+  ],
+  [
+   "R5",
+   "100",
+   "R",
+   ""
+  ],
+  [
+   "Q2",
+   "ACY41",
+   "Q",
+   "PNP germanium"
+  ],
+  [
+   "R6",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "C3",
+   "3.3n",
+   "C",
+   ""
+  ],
+  [
+   "R7",
+   "56K",
+   "R",
+   ""
+  ],
+  [
+   "Level",
+   "500K",
+   "POT",
+   ""
+  ]
+ ]
+}

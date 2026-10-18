@@ -1,0 +1,123 @@
+{
+ "id": "revolutiondeux:2012-03-sola-sound-ltd-tonebender-mki-hornby-zonk-machine-jonaz",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Schematic drawn by Jonaz from his unit. No designators; parts are numbered in signal order. Q1 A02650, Q2 OC75, Q3 OC44, all PNP germanium. The vero (image 14) is Sinner's 'Zonk Machine Version I' from turretboard.org and matches this drawing.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "1n",
+   "C",
+   "input"
+  ],
+  [
+   "R1",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "Q1",
+   "A02650",
+   "Q",
+   "germanium PNP"
+  ],
+  [
+   "R2",
+   "4.7K",
+   "R",
+   "Q1 emitter"
+  ],
+  [
+   "C2",
+   "25u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R3",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "2.2K",
+   "R",
+   ""
+  ],
+  [
+   "R5",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "Fuzz",
+   "A50K",
+   "POT",
+   ""
+  ],
+  [
+   "Q2",
+   "OC75",
+   "Q",
+   "germanium PNP"
+  ],
+  [
+   "R6",
+   "3.3K",
+   "R",
+   "Q2 collector"
+  ],
+  [
+   "C3",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "R7",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "Q3",
+   "OC44",
+   "Q",
+   "germanium PNP"
+  ],
+  [
+   "R8",
+   "10K",
+   "R",
+   "Q3 collector"
+  ],
+  [
+   "C4",
+   "47n",
+   "C",
+   "output"
+  ],
+  [
+   "R9",
+   "56K",
+   "R",
+   ""
+  ],
+  [
+   "R10",
+   "2.2M",
+   "R",
+   ""
+  ],
+  [
+   "Swell",
+   "A500K",
+   "POT",
+   ""
+  ]
+ ]
+}

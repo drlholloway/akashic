@@ -1,0 +1,63 @@
+{
+ "id": "revolutiondeux:2012-03-vintage-treblebass-boosters-i-cant-find-rangemaster",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Fuzz Central drawing. No designators except Q1; parts numbered here left to right.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "47u",
+   "C",
+   "supply filter, electrolytic"
+  ],
+  [
+   "C2",
+   "5n",
+   "C",
+   "input (0.005uF)"
+  ],
+  [
+   "R1",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "68K",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "3.9K",
+   "R",
+   ""
+  ],
+  [
+   "C3",
+   "47u",
+   "C",
+   "emitter bypass, electrolytic"
+  ],
+  [
+   "C4",
+   "10n",
+   "C",
+   "output"
+  ],
+  [
+   "Q1",
+   "OC44",
+   "Q",
+   "germanium PNP; or OC71"
+  ],
+  [
+   "Boost",
+   "A10K",
+   "POT",
+   ""
+  ]
+ ]
+}

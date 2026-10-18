@@ -1,0 +1,117 @@
+{
+ "id": "revolutiondeux:2010-06-zvex-fuzz-factory",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "M. Chittum's (The Illuminist, solgrind) Rev 1.1 drawing from 2008. The schematic has no designators, so the refs follow the vero layout parts list (image 8), whose values match.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "5.1K",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "220K",
+   "R",
+   "output pulldown"
+  ],
+  [
+   "R3",
+   "470",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "R5",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R6",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "C1",
+   "10u",
+   "C",
+   "electrolytic, output"
+  ],
+  [
+   "C2",
+   "10u",
+   "C",
+   "electrolytic, power filter"
+  ],
+  [
+   "C3",
+   "10u",
+   "C",
+   "electrolytic, input"
+  ],
+  [
+   "C4",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "Q1",
+   "AC128",
+   "Q",
+   "germanium PNP; some units 2N404"
+  ],
+  [
+   "Q2",
+   "AC128",
+   "Q",
+   "germanium PNP; some units 2N404"
+  ],
+  [
+   "Q3",
+   "2N3904",
+   "Q",
+   ""
+  ],
+  [
+   "Volume",
+   "B5K",
+   "POT",
+   ""
+  ],
+  [
+   "Gate",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Comp",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Drive",
+   "B10K",
+   "POT",
+   ""
+  ],
+  [
+   "Stab",
+   "B5K",
+   "POT",
+   ""
+  ]
+ ]
+}

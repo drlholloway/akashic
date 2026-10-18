@@ -1,0 +1,101 @@
+{
+ "id": "revolutiondeux:2012-02-fred-briggs-e11even-marshallesque",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Hand-drawn schematic by Fred Briggs, 2012, with no designators; parts numbered here left to right. Controls numbered on the drawing: 1 Body, 2 Gain, 3 Bias, 4 Master.",
+ "uncertain": [
+  "The Gain pot (1K) has no taper on the drawing; the second clipping diode is drawn with a different symbol and is assumed to be a BAT41 like the first."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "2.2M",
+   "R",
+   "gate bias"
+  ],
+  [
+   "R2",
+   "10K",
+   "R",
+   "drain"
+  ],
+  [
+   "R3",
+   "1M",
+   "R",
+   "gate to ground"
+  ],
+  [
+   "C1",
+   "22n",
+   "C",
+   "input"
+  ],
+  [
+   "C2",
+   "470p",
+   "C",
+   ""
+  ],
+  [
+   "C3",
+   "4.7n",
+   "C",
+   "drain to ground"
+  ],
+  [
+   "C4",
+   "100n",
+   "C",
+   "output"
+  ],
+  [
+   "Q1",
+   "BS170",
+   "Q",
+   "MOSFET"
+  ],
+  [
+   "D1",
+   "BAT41",
+   "D",
+   "clipping"
+  ],
+  [
+   "D2",
+   "BAT41",
+   "D",
+   "clipping"
+  ],
+  [
+   "D3",
+   "?",
+   "D",
+   "protection diode: 12V zener or red LED"
+  ],
+  [
+   "Body",
+   "B470K",
+   "POT",
+   "drawn 470K; the post uses linear"
+  ],
+  [
+   "Gain",
+   "1K",
+   "POT",
+   "source to ground"
+  ],
+  [
+   "Bias",
+   "B10K",
+   "POT",
+   "saturation of the clipping diodes"
+  ],
+  [
+   "Master",
+   "B100K",
+   "POT",
+   ""
+  ]
+ ]
+}

@@ -1,0 +1,10 @@
+{
+ "id": "revolutiondeux:2012-05-maxon-ibanez-super-tube-screamer-st-9-st-9",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Layout only: a hand-sketched PCB layout by Boris (gaja) with two 4558 op-amps and a dual 20K Bite pot.",
+ "uncertain": [
+  "Dirk Hendrik's ST-9 schematic is embedded in the post but is not available; the only drawing saved is Boris's hand-sketched layout (image 2), which is too unclear to read the part values reliably, so no rows are given."
+ ],
+ "fixes": [],
+ "rows": []
+}

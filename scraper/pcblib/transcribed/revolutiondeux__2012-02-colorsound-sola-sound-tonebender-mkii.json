@@ -1,0 +1,105 @@
+{
+ "id": "revolutiondeux:2012-02-colorsound-sola-sound-tonebender-mkii",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "A clean redrawn schematic with transistor designators only; resistors and capacitors are numbered here left to right (R1-R6, C1-C5). Transistors are OC75, with OC81D given as the alternative.",
+ "uncertain": [],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "100K",
+   "R",
+   "Q1 base to ground"
+  ],
+  [
+   "R2",
+   "10K",
+   "R",
+   "Q1 collector"
+  ],
+  [
+   "R3",
+   "33K",
+   "R",
+   "Q2 collector"
+  ],
+  [
+   "R4",
+   "100K",
+   "R",
+   "feedback, Q3 emitter to Q2 base"
+  ],
+  [
+   "R5",
+   "470",
+   "R",
+   "supply"
+  ],
+  [
+   "R6",
+   "8.2K",
+   "R",
+   "Q3 collector"
+  ],
+  [
+   "C1",
+   "10n",
+   "C",
+   "input to ground"
+  ],
+  [
+   "C2",
+   "5u",
+   "C",
+   "electrolytic, input coupling"
+  ],
+  [
+   "C3",
+   "50u",
+   "C",
+   "electrolytic, supply filter"
+  ],
+  [
+   "C4",
+   "5u",
+   "C",
+   "electrolytic, on the Attack pot"
+  ],
+  [
+   "C5",
+   "10n",
+   "C",
+   "output coupling"
+  ],
+  [
+   "Q1",
+   "OC75",
+   "Q",
+   "germanium PNP (or OC81D)"
+  ],
+  [
+   "Q2",
+   "OC75",
+   "Q",
+   "germanium PNP (or OC81D)"
+  ],
+  [
+   "Q3",
+   "OC75",
+   "Q",
+   "germanium PNP (or OC81D)"
+  ],
+  [
+   "Level",
+   "100K",
+   "POT",
+   ""
+  ],
+  [
+   "Attack",
+   "1K",
+   "POT",
+   ""
+  ]
+ ]
+}

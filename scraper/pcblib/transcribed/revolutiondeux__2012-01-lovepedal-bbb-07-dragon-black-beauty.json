@@ -1,0 +1,89 @@
+{
+ "id": "revolutiondeux:2012-01-lovepedal-bbb-07-dragon-black-beauty",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Drawn by Greg_G for freestompboxes.org, 03/04/2011; this version uses high gain PNP germanium transistors (types not given). Image 3 is Lovepedal's BBB07 settings sheet (Driver, Master Vol, Blend); image 2 is a gutshot.",
+ "uncertain": [
+  "R3 reads 280R on the drawing, an unusual value."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "33K",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "280",
+   "R",
+   ""
+  ],
+  [
+   "C1",
+   "1u",
+   "C",
+   ""
+  ],
+  [
+   "C2",
+   "4.7n",
+   "C",
+   ""
+  ],
+  [
+   "C3",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "C4",
+   "22u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "Q1",
+   "?",
+   "Q",
+   "high gain PNP germanium"
+  ],
+  [
+   "Q2",
+   "?",
+   "Q",
+   "high gain PNP germanium"
+  ],
+  [
+   "Blend",
+   "B100K",
+   "POT",
+   ""
+  ],
+  [
+   "Fuzz",
+   "B500",
+   "POT",
+   "labeled Driver on the BBB07"
+  ],
+  [
+   "Volume",
+   "B1M",
+   "POT",
+   "labeled Master Vol"
+  ],
+  [
+   "Bias trim",
+   "10K",
+   "POT",
+   "trimmer on Q2 collector"
+  ]
+ ]
+}

@@ -1,0 +1,125 @@
+{
+ "id": "revolutiondeux:2012-06-jordan-vico-vibe-tremolo",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "A hand-painted sketch schematic with values but no designators, alongside an annotated photo of the original board (image 4). Designators follow Renegadarian's vero layout of 29.04.2010 (image 6). The post says both transistors are 2N5088 and both pots are 100kA.",
+ "uncertain": [
+  "The sketch does not name the two 100kA pots; the one feeding the oscillator into the shunt transistor is listed as Depth and the rheostat in the oscillator is listed as Speed."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "560K",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "560K",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "220K",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "R5",
+   "3.3K",
+   "R",
+   ""
+  ],
+  [
+   "R6",
+   "39K",
+   "R",
+   ""
+  ],
+  [
+   "R7",
+   "27K",
+   "R",
+   "input"
+  ],
+  [
+   "R8",
+   "27K",
+   "R",
+   "output"
+  ],
+  [
+   "C1",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "C2",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "C3",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "C4",
+   "100n",
+   "C",
+   ""
+  ],
+  [
+   "D1",
+   "6.8V",
+   "D",
+   "zener"
+  ],
+  [
+   "Q1",
+   "2N5088",
+   "Q",
+   "shunt transistor"
+  ],
+  [
+   "Q2",
+   "2N5088",
+   "Q",
+   "oscillator"
+  ],
+  [
+   "VR1",
+   "1M",
+   "POT",
+   "trimmer, bias of the shunt transistor"
+  ],
+  [
+   "Depth",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "Speed",
+   "A100K",
+   "POT",
+   ""
+  ],
+  [
+   "On/Off",
+   "SPDT",
+   "SW",
+   "oscillator on/off"
+  ]
+ ]
+}

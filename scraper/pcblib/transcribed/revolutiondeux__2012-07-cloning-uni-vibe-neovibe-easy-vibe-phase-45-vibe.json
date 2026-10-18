@@ -1,0 +1,312 @@
+{
+ "id": "revolutiondeux:2012-07-cloning-uni-vibe-neovibe-easy-vibe-phase-45-vibe",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Justin Philpott's Phase 45 drawing redrawn by JC Maillet (2003) with his five numbered mods. No designators, so parts are numbered here left to right, audio path first, then the LFO.",
+ "uncertain": [
+  "The resistors drawn in italic in the LFO and at the output are small and read as 150k; the one from +9V is the least clear.",
+  "The second stage's cap pair reads .047 and .1 (the first stage .047 and .01)."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "C1",
+   "10n",
+   "C",
+   "input, .01"
+  ],
+  [
+   "R1",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R2",
+   "22K",
+   "R",
+   ""
+  ],
+  [
+   "R3",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "10K",
+   "R",
+   "bias supply"
+  ],
+  [
+   "D1",
+   "5.1V zener",
+   "D",
+   "bias reference"
+  ],
+  [
+   "C2",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C3",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R5",
+   "10K",
+   "R",
+   "input buffer feedback"
+  ],
+  [
+   "R6",
+   "10K",
+   "R",
+   "stage 1"
+  ],
+  [
+   "R7",
+   "10K",
+   "R",
+   "stage 1"
+  ],
+  [
+   "C4",
+   "47n",
+   "C",
+   "stage 1, .047"
+  ],
+  [
+   "C5",
+   "10n",
+   "C",
+   "stage 1, .01, switched alternative"
+  ],
+  [
+   "Q1",
+   "2N5458",
+   "Q",
+   "matched with Q2"
+  ],
+  [
+   "R8",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R9",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "C6",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "R10",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "R11",
+   "10K",
+   "R",
+   "stage 2"
+  ],
+  [
+   "R12",
+   "10K",
+   "R",
+   "stage 2"
+  ],
+  [
+   "C7",
+   "47n",
+   "C",
+   "stage 2, .047"
+  ],
+  [
+   "C8",
+   "100n",
+   "C",
+   "stage 2, .1, switched alternative"
+  ],
+  [
+   "Q2",
+   "2N5458",
+   "Q",
+   "matched with Q1"
+  ],
+  [
+   "R13",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R14",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "C9",
+   "10n",
+   "C",
+   ""
+  ],
+  [
+   "R15",
+   "470K",
+   "R",
+   ""
+  ],
+  [
+   "C10",
+   "47n",
+   "C",
+   ""
+  ],
+  [
+   "R16",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "R17",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "R18",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "Bias",
+   "100K",
+   "POT",
+   "mod 3"
+  ],
+  [
+   "R19",
+   "3.9M",
+   "R",
+   ""
+  ],
+  [
+   "R20",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "C11",
+   "10n",
+   "C",
+   ".01"
+  ],
+  [
+   "R21",
+   "150K",
+   "R",
+   "from +9V; hard to read"
+  ],
+  [
+   "R22",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "R23",
+   "150K",
+   "R",
+   ""
+  ],
+  [
+   "R24",
+   "8.2K",
+   "R",
+   "mod 4, two 8k2 in parallel"
+  ],
+  [
+   "R25",
+   "8.2K",
+   "R",
+   "mod 4, two 8k2 in parallel"
+  ],
+  [
+   "Speed",
+   "500K",
+   "POT",
+   ""
+  ],
+  [
+   "C12",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "R26",
+   "2.4K",
+   "R",
+   "mod 2, LED"
+  ],
+  [
+   "LED1",
+   "LED",
+   "LED",
+   "rate indicator"
+  ],
+  [
+   "C13",
+   "47n",
+   "C",
+   "output, .047"
+  ],
+  [
+   "Mix",
+   "22K",
+   "POT",
+   "mod 5"
+  ],
+  [
+   "R27",
+   "150K",
+   "R",
+   "output pulldown"
+  ],
+  [
+   "Cap switch",
+   "DPDT",
+   "SW",
+   "mod 1"
+  ],
+  [
+   "IC1",
+   "NE5532",
+   "IC",
+   ""
+  ],
+  [
+   "IC2",
+   "NE5532",
+   "IC",
+   ""
+  ]
+ ]
+}

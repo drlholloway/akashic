@@ -1,0 +1,191 @@
+{
+ "id": "revolutiondeux:2012-01-xotic-ep-booster-ep-booster",
+ "read": "2026-10-18, by eye from the schematic in the Revolution Deux post",
+ "comment": "Traced by the freestompboxes.org crowd (Greg's initial tracing). Designators as drawn; the switch on Q1's source (the bass-boost DIP switch) has no visible designator and is called SW1 here.",
+ "uncertain": [
+  "The drawing shows Q1 as a J201 and Q2 as a 2N5088; the post says the originals are supposedly a 2N5457 and a 2SC1815."
+ ],
+ "fixes": [],
+ "rows": [
+  [
+   "R1",
+   "4.7K",
+   "R",
+   "source"
+  ],
+  [
+   "R2",
+   "8.2K",
+   "R",
+   "drain"
+  ],
+  [
+   "R3",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "R4",
+   "33K",
+   "R",
+   "input"
+  ],
+  [
+   "R5",
+   "1M",
+   "R",
+   "input pull-down"
+  ],
+  [
+   "R6",
+   "1K",
+   "R",
+   ""
+  ],
+  [
+   "R7",
+   "15K",
+   "R",
+   ""
+  ],
+  [
+   "R8",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R9",
+   "10K",
+   "R",
+   ""
+  ],
+  [
+   "R10",
+   "1M",
+   "R",
+   ""
+  ],
+  [
+   "R11",
+   "10K",
+   "R",
+   "emitter"
+  ],
+  [
+   "R12",
+   "47K",
+   "R",
+   ""
+  ],
+  [
+   "R13",
+   "100",
+   "R",
+   "output"
+  ],
+  [
+   "R14",
+   "33K",
+   "R",
+   "LED resistor"
+  ],
+  [
+   "C1",
+   "47n",
+   "C",
+   "input (0.047)"
+  ],
+  [
+   "C2",
+   "10u",
+   "C",
+   "electrolytic, source bypass"
+  ],
+  [
+   "C3",
+   "100u",
+   "C",
+   "electrolytic, switched by SW1"
+  ],
+  [
+   "C4",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C5",
+   "10u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C6",
+   "4.7u",
+   "C",
+   "electrolytic"
+  ],
+  [
+   "C7",
+   "47u",
+   "C",
+   "electrolytic, supply filter"
+  ],
+  [
+   "C8",
+   "10u",
+   "C",
+   "electrolytic, output"
+  ],
+  [
+   "C9",
+   "3.3n",
+   "C",
+   "3300pF"
+  ],
+  [
+   "D1",
+   "LED",
+   "LED",
+   "3mm"
+  ],
+  [
+   "D2",
+   "1N4148",
+   "D",
+   "polarity protection"
+  ],
+  [
+   "Q1",
+   "J201",
+   "Q",
+   "said to be 2N5457 in the original"
+  ],
+  [
+   "Q2",
+   "2N5088",
+   "Q",
+   "said to be 2SC1815 in the original"
+  ],
+  [
+   "Boost",
+   "C10K",
+   "POT",
+   ""
+  ],
+  [
+   "SW1",
+   "DIP",
+   "SW",
+   "internal, bass boost"
+  ],
+  [
+   "SW2",
+   "DIP",
+   "SW",
+   "internal, EQ"
+  ]
+ ]
+}
