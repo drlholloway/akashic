@@ -18,10 +18,13 @@
 	const makerBoard = $derived(siblings.find((s) => s.own_design));
 	const clones = $derived(siblings.filter((s) => !s.own_design).length); // the maker's own board is no clone of itself
 	const variants = $derived(c.variants ?? []);
-	let variant = $state('');
+	// The variant picked with the buttons; until then (and in the prerendered page) the first one.
+	let picked = $state('');
 	$effect(() => {
-		variant = variants[0] ?? '';
+		variants; // a new circuit: back to its first variant
+		picked = '';
 	});
+	const variant = $derived(variants.includes(picked) ? picked : (variants[0] ?? ''));
 	const rows = $derived(variants.length ? c.bom.filter((r) => !r.variant || r.variant === variant) : c.bom);
 	const groups = $derived.by(() => {
 		const m = new Map<string, BomRow[]>();
@@ -173,6 +176,8 @@
 				<p>No schematic or board file is shared with this board. <a href={c.url} target="_blank" rel="noopener">Open the project at {VENDOR_FAB[c.vendor] ?? VENDOR_NAMES[c.vendor]}</a>.</p>
 			{:else if VENDOR_KIND[c.vendor] === 'projects'}
 				<p>The schematic image is on the project page. <a href={c.url} target="_blank" rel="noopener">Open it at {VENDOR_FAB[c.vendor] ?? VENDOR_NAMES[c.vendor]}</a>.</p>
+			{:else if c.extra_docs['KiCad schematic']}
+				<p>The schematic is in {VENDOR_NAMES[c.vendor]}'s own KiCad project: <a href={c.extra_docs['KiCad schematic']} target="_blank" rel="noopener">open the KiCad schematic</a>{#if c.extra_docs['Schematic PDF']} or <a href={c.extra_docs['Schematic PDF']} target="_blank" rel="noopener">its PDF</a>{/if}, or <a href={c.extra_docs['KiCad project'] ?? c.url} target="_blank" rel="noopener">get the whole project</a> to modify it.</p>
 			{:else}
 				<p>The schematic is in the vendor's build document{#if c.schematic_page}, page {c.schematic_page}{/if}. <a href={c.doc_url} target="_blank" rel="noopener">Open the build document</a>. No KiCad fragment has been drawn for this circuit yet.</p>
 			{/if}
@@ -190,7 +195,7 @@
 			<div class="variants" role="group" aria-label="Build variant">
 				<span class="label">Variant</span>
 				{#each variants as v}
-					<button type="button" class="btn ghost" class:on={v === variant} aria-pressed={v === variant} onclick={() => (variant = v)}>{v}</button>
+					<button type="button" class="btn ghost" class:on={v === variant} aria-pressed={v === variant} onclick={() => (picked = v)}>{v}</button>
 				{/each}
 			</div>
 		{/if}

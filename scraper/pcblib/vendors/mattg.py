@@ -5,7 +5,9 @@ holds the MIT-licensed firmware that runs on the module's microcontroller, relea
 per microcontroller and switching scheme. Each module is a circuit (a "quasi-IC" that plugs into the
 effect's PCB and handles the buffers, the switching, the footswitch and the LED); its parts are read
 from the placed symbols of the KiCad schematic, and it links the firmware image that it takes. The
-forum thread follows the design from the CD40106/CD4053 prototype to the ATtiny modules."""
+DIYStompBoxes and PedalPCB threads follow the design from the CD40106/CD4053 prototype to the ATtiny modules.
+Each project's 'Fabrication and Assembly' section lists the files Matt ordered with (gerbers; BOM and
+placement file for the SMD modules) and his caveats about them, which are linked and quoted."""
 from __future__ import annotations
 
 import json
@@ -21,7 +23,9 @@ USER = "https://github.com/matt-garman"
 HW = "matt-garman/mcu-bypass-hardware"
 FW = "matt-garman/mcu-bypass-firmware"
 RAW = f"https://raw.githubusercontent.com/{HW}/main"
-THREAD = "https://forum.pedalpcb.com/threads/buffer-bypass-quasi-ic-module.29247/"
+# The two discussion threads about the quasi-IC modules, as Matt names them (the DIYStompBoxes one came first).
+THREADS = {"Discussion: DIYStompBoxes thread": "https://www.diystompboxes.com/smfforum/index.php?topic=134155.0",
+           "Discussion: PedalPCB forum thread": "https://forum.pedalpcb.com/threads/buffer-bypass-quasi-ic-module.29247/"}
 # What each module is, in a sentence the READMEs give across several sections; a module added later
 # falls back to its README's first paragraph.
 _ABOUT = {
@@ -47,6 +51,7 @@ _FOOTPRINT = [(r"^R_(\d{4})_", r"SMD \1"), (r"^C_(\d{4})_", r"SMD \1"), (r"^L_(\
 
 
 def _adoc_text(s: str) -> str:
+    s = re.sub(r"link:([^\s\[]+)\[(https?://[^\]]*)\]", r"\1", s)  # 'link:JLCPCB[https://www.jlcpcb.com]': name and target swapped
     s = re.sub(r"link:\S+?\[([^\]]*)\]", r"\1", s)
     s = re.sub(r"https?://\S+?\[([^\]]*)\]", r"\1", s)
     return clean_text(re.sub(r"[_*`]", "", s))
@@ -144,6 +149,26 @@ class MattG(Adapter):
         c.tags.append("SMD assembly" if smd > len(c.bom) / 2 else "through-hole")
         if f"{folder}/{sch_file.rsplit('/', 1)[-1][:-10]}.pdf" in files:
             c.extra_docs["Schematic PDF"] = f"https://github.com/{HW}/blob/main/{sch_file[:-10]}.pdf"
+        # The designer's own KiCad project (README 'Modifying'): the circuit page links it in place of a drawn fragment.
+        c.extra_docs["KiCad schematic"] = f"https://github.com/{HW}/blob/main/{sch_file}"
+        c.extra_docs["KiCad project"] = tree
+        # 'Fabrication and Assembly': the files Matt ordered with (gerbers, and for the SMD modules the BOM with LCSC part
+        # numbers and the placement file), with his caveats, which go on the page with them.
+        fab = re.search(r"^== Fabrication and Assembly\s*\n(.+?)(?=^== |\Z)", readme, re.S | re.M)
+        if fab:
+            caveats, _, listing = fab.group(1).partition("The files:")
+            for target, label in re.findall(r"link:(\S+?)\[[^\]]*\]:\s*(.+?)(?=\n\s*\*|\Z)", listing, re.S):
+                if target.startswith("http") or f"{folder}/{target}" not in files:
+                    continue
+                label = re.sub(r"\s*\((?:_?see warning above_?)\)", "", _adoc_text(re.sub(r"\s+", " ", label))).strip()
+                label = {"Gerber files": "Gerbers"}.get(label, label)
+                path = f"{folder}/{target}"
+                c.extra_docs[label] = f"https://github.com/{HW}/raw/refs/heads/main/{path}" if target.endswith(".zip") else f"https://github.com/{HW}/blob/main/{path}"
+                if target.endswith(".zip"):
+                    c.tags.append("gerbers")
+            points = [_adoc_text(re.sub(r"\s+", " ", b)).rstrip(".") for b in re.findall(r"^\s*\*\s+(.+?)(?=^\s*\*|\Z)", caveats, re.S | re.M)]
+            if points:
+                c.description += "\n\nFabrication notes from the designer: " + " ".join(f"{p[0].upper()}{p[1:]}." for p in points)
         c.extra_docs["Firmware (mcu-bypass-firmware)"] = f"https://github.com/{FW}"
         tag = self.release.get("tag_name", "")
         assets = {a["name"]: a["browser_download_url"] for a in self.release.get("assets", [])}
@@ -155,7 +180,7 @@ class MattG(Adapter):
         if tag:
             c.doc_version = f"firmware {tag}"
         c.extra_docs["Flashing the firmware"] = f"https://github.com/{FW}/blob/main/FLASHING.md"
-        c.extra_docs["Forum thread (PedalPCB)"] = THREAD
+        c.extra_docs.update(THREADS)
         for url, label in re.findall(r"link:(https://forum\.pedalpcb\.com/threads/\S+?)\[([^\]]+)\]", readme):
             c.extra_docs.setdefault(f"Build report: {_adoc_text(label)}", url)
         return c

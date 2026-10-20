@@ -19,6 +19,7 @@ export function wrongParseUrl(boardName: string, pageUrl: string): string {
 export const MAKER_CONTACTS: { maker: string; url: string; where: string; vendor?: string; lead?: string; handle?: string; also?: string; reach?: string }[] = [
 	{ maker: 'Aleph Null', url: 'https://forum.pedalpcb.com/members/aleph-null.30287/', where: 'the PedalPCB forum' },
 	{ maker: 'Naegele Audio', handle: 'PedalBuilder', url: 'https://forum.pedalpcb.com/members/pedalbuilder.487/', where: 'the PedalPCB forum', vendor: 'pedalbuilder', lead: 'laid out a PCB for this circuit and sells boards', also: 'relay bypass and I/O boards' },
+	{ maker: 'HotKits', url: 'https://www.facebook.com/profile.php?id=61574483621561', where: 'Facebook', vendor: 'hotkits', lead: 'sells this PCB from a price list, ordered by message (or by email to alex.hotkits@gmail.com)' },
 	{ maker: 'EfektPol', handle: '@efektpol', url: 'https://www.instagram.com/efektpol/', where: 'Instagram', vendor: 'efektpol', reach: 'Questions about this layout? EfektPol drew it' }
 ];
 

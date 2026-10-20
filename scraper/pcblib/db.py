@@ -157,6 +157,10 @@ VENDORS = {
                      "and I/O boards by direct message; "
                      "indexed and linked. Parts read by eye from the schematics in the posts, which are not served. Two free boards "
                      "(circuits by Chuck D. Bones) are hosted with permission on the Cryptid Effects layouts wiki."),
+    "hotkits": ("HotKits", "https://drive.google.com/file/d/1ygK7SWRpdzh3sskf5sgB9wa6OdG-bmi9/view",
+                "PCBs, kits and assembled boards for pedals and tube preamps, ordered by Facebook Messenger or email from a price list "
+                "on Google Drive (prices in USD). Build documents are Google Drive PDFs; indexed and linked, not redistributed. Their parts "
+                "lists give type, value and count, no designators."),
     "mattg": ("Matt Garman", "https://github.com/matt-garman",
               "MattG on the PedalPCB forum. Microcontroller bypass modules shared on GitHub: KiCad hardware under CERN-OHL-P-2.0 "
               "(mcu-bypass-hardware) and MIT firmware (mcu-bypass-firmware); indexed and linked, not redistributed. Parts read from the KiCad schematics."),

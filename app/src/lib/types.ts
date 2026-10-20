@@ -1,4 +1,4 @@
-export type Vendor = 'pedalpcb' | 'aionfx' | 'madbean' | 'guitarpcb' | 'fuzzdog' | 'sheepylove' | 'deadendfx' | 'moonn' | 'fivecats' | 'parasit' | 'pcbway-gtu' | 'pcbguitarmania' | 'deadastronaut' | 'bentfishbowl' | 'ggg' | 'lectricfx' | 'expanon' | 'zerogiod' | 'otrfx' | 'dirtmonger' | 'maskaudio' | 'effectslayouts' | 'jmk' | 'eae' | 'c2c' | 'deadair' | 'rwlpedal' | 'sheepygit' | 'otherpedals' | 'godcity' | 'effects1776' | 'rullywow' | 'mas' | 'tonepad' | 'wraa' | 'frog' | 'thcustom' | 'guitarelectronics' | 'opelectronics' | 'griffin' | 'coda' | 'delyk' | 'tayda' | 'schalltechnik' | 'electricdruid' | 'zeppelin' | 'moody' | 'gigahearts' | 'scientificguitarist' | 'holyisland' | 'cryptid' | 'effdub' | 'tagboardeffects' | 'dirtbox' | 'effectslayouts-blog' | 'modelectronics' | 'verop2p' | 'pedalbuilder' | 'efektpol' | 'midwayfair' | 'amplifiedparts' | 'revolutiondeux' | 'mattg';
+export type Vendor = 'pedalpcb' | 'aionfx' | 'madbean' | 'guitarpcb' | 'fuzzdog' | 'sheepylove' | 'deadendfx' | 'moonn' | 'fivecats' | 'parasit' | 'pcbway-gtu' | 'pcbguitarmania' | 'deadastronaut' | 'bentfishbowl' | 'ggg' | 'lectricfx' | 'expanon' | 'zerogiod' | 'otrfx' | 'dirtmonger' | 'maskaudio' | 'effectslayouts' | 'jmk' | 'eae' | 'c2c' | 'deadair' | 'rwlpedal' | 'sheepygit' | 'otherpedals' | 'godcity' | 'effects1776' | 'rullywow' | 'mas' | 'tonepad' | 'wraa' | 'frog' | 'thcustom' | 'guitarelectronics' | 'opelectronics' | 'griffin' | 'coda' | 'delyk' | 'tayda' | 'schalltechnik' | 'electricdruid' | 'zeppelin' | 'moody' | 'gigahearts' | 'scientificguitarist' | 'holyisland' | 'cryptid' | 'effdub' | 'tagboardeffects' | 'dirtbox' | 'effectslayouts-blog' | 'modelectronics' | 'verop2p' | 'pedalbuilder' | 'efektpol' | 'midwayfair' | 'amplifiedparts' | 'revolutiondeux' | 'mattg' | 'hotkits';
 
 export interface IndexEntry {
 	id: string;
@@ -171,6 +171,7 @@ export const VENDOR_NAMES: Record<Vendor, string> = {
 	amplifiedparts: 'Amplified Parts',
 	revolutiondeux: 'Revolution Deux',
 	mattg: 'Matt Garman',
+	hotkits: 'HotKits',
 	efektpol: 'EfektPol',
 	tonepad: 'Tonepad',
 	wraa: 'WRAA Labs',
@@ -202,11 +203,14 @@ export const VENDOR_KIND: Partial<Record<Vendor, VendorKind>> = { 'pcbway-gtu': 
 export const VENDOR_FAB: Partial<Record<Vendor, string>> = { 'pcbway-gtu': 'PCBWay', midwayfair: 'OSH Park' };
 /** Where a source's bare PCBs (tagged 'PCB only') are sold, when it is not the source itself. */
 /** What a 'repo' source shares, when it is not gerbers. */
-export const VENDOR_FILES: Partial<Record<Vendor, string>> = { mattg: 'the KiCad project' };
+export const VENDOR_FILES: Partial<Record<Vendor, string>> = { mattg: 'the gerbers and KiCad project' };
+/** The primary button's words, for a source whose 'shop' is not a web store. */
+export const VENDOR_ACTION: Partial<Record<Vendor, string>> = { hotkits: 'See the HotKits price list' };
 export const VENDOR_STORE: Partial<Record<Vendor, string>> = { modelectronics: 'Amplified Parts' };
 
 export function primaryAction(v: Vendor): string {
 	const k = VENDOR_KIND[v] ?? 'shop';
+	if (VENDOR_ACTION[v]) return VENDOR_ACTION[v];
 	return k === 'kit' ? `See the kit at ${VENDOR_NAMES[v]}` : k === 'layout' ? `Open the layout at ${VENDOR_NAMES[v]}` : k === 'blog' ? `Read the post at ${VENDOR_NAMES[v]}` : k === 'archive' ? `Open the schematic at ${VENDOR_NAMES[v]}` : k === 'projects' ? `Order the board at ${VENDOR_FAB[v] ?? VENDOR_NAMES[v]}` : k === 'repo' ? `Get ${VENDOR_FILES[v] ?? 'the gerbers'} at ${VENDOR_NAMES[v]}` : `Buy the PCB at ${VENDOR_NAMES[v]}`;
 }
 
