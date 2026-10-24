@@ -2,6 +2,7 @@
 # Weekly refresh of the live site: re-fetch every vendor's pages (prices, stock, new boards; cached
 # build documents are kept), audit the parts lists, and deploy only when the audit found no new flags
 # on boards that were already there. Boards a vendor no longer lists are kept and marked delisted.
+# Also rebuilds graphify-out/graph.json for the akashic-graph MCP server.
 # Run by launchd (scripts/akashic-refresh.plist); safe to run by hand. Logs: data/cache/refresh/.
 set -uo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
@@ -30,6 +31,13 @@ export LOG_DIR FAILED
 grep -h "no longer listed\|far fewer than the library" "$LOG_DIR"/*.log 2>/dev/null | sed 's/\x1b\[[0-9;]*m//g' | sort -u
 
 .venv/bin/pcblib stats | tail -3
+# Rebuild the graph Claude queries (akashic-graph in .mcp.json), whether or not the site deploys.
+GRAPHIFY_PY="$HOME/.local/share/uv/tools/graphifyy/bin/python"
+if [ -x "$GRAPHIFY_PY" ]; then
+  "$GRAPHIFY_PY" "$ROOT/scripts/graphify_export.py" || echo "=== graph rebuild failed"
+else
+  echo "=== graphify not installed: graph not rebuilt"
+fi
 .venv/bin/pcblib audit --fail-on-added
 status=$?
 if [ "$status" -eq 3 ]; then

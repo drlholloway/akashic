@@ -32,3 +32,6 @@ data/transistors.sqlite*
 # Swift build output (Package.swift builds the Vision OCR helper)
 .build/
 .swiftpm/
+
+# Graph of the library for Claude (rebuilt by scripts/graphify_export.py)
+graphify-out/

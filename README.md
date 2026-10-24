@@ -151,7 +151,7 @@ uv venv .venv && uv pip install -e .
 ### Keeping it current
 
 `scripts/refresh.sh` re-fetches every vendor's pages (`scrape --refresh-pages`: prices, stock and
-new boards; cached build documents are kept), runs `stats` and `audit`, and deploys only when the
+new boards; cached build documents are kept), runs `stats`, rebuilds the Claude graph (below), runs `audit`, and deploys only when the
 audit found no new problems on boards that were already there. A board a vendor stops listing is
 kept and shown as no longer listed, with the date. `scripts/install-refresh.sh` installs it as a
 launchd agent that runs Sundays at 04:00 (or at the next wake); logs go to `data/cache/refresh/`.
@@ -183,6 +183,19 @@ npm run dev        # development server
 npm run build      # static site in app/build (prerenders every circuit and part page)
 npm run preview    # serve the build locally
 ```
+
+## Graph for Claude
+
+`scripts/graphify_export.py` turns the library into a [graphify](https://pypi.org/project/graphifyy/)
+graph (boards, vendors, the originals they're based on, and their ICs, transistors and
+diodes) at `graphify-out/graph.json`, which `.mcp.json` serves to Claude Code as the
+`akashic-graph` MCP server. Run it with graphify's interpreter after a scrape:
+
+```sh
+~/.local/share/uv/tools/graphifyy/bin/python scripts/graphify_export.py
+```
+
+The weekly `scripts/refresh.sh` rebuilds it too, whether or not the audit lets the site deploy.
 
 ## Deploying
 

@@ -36,12 +36,30 @@ cd scraper && .venv/bin/pcblib scrape <vendor> [--only slug] [--limit N] [--rese
 .venv/bin/pcblib export                                  # never --images for a public deploy
 cd app && npm run check && npm run build && npm run preview   # restart preview after each build
 npm run deploy                                             # export, build, wrangler deploy
-scripts/refresh.sh                                         # weekly: refresh pages, audit, deploy if clean
+scripts/refresh.sh                                         # weekly: refresh pages, rebuild graph, audit, deploy if clean
 ```
 
 Scrapes are cached, so re-running a vendor after a parser change costs no network. Several
 vendors can run in parallel (WAL mode). The preview server caches its file list at startup,
 so restart it after rebuilding.
+
+## Look boards up in the graph
+
+To answer questions about the library's contents (what a board is based on, which boards
+copy a pedal, which use a part), query the graph instead of reading the database or the
+JSON export. The `akashic-graph` MCP server (graphify, `.mcp.json`) serves
+`graphify-out/graph.json`; rebuild it after a scrape with
+`~/.local/share/uv/tools/graphifyy/bin/python scripts/graphify_export.py` (about 3 s);
+`scripts/refresh.sh` rebuilds it every week.
+
+- Nodes: boards ("<Vendor> <name>"), vendors, originals (what boards are based on, with
+  spelling variants merged) and parts (ICs, transistors, diodes by normalized value).
+- `get_node`: a board's facts in `attributes` (akashic_id, vendor, based_on, effect, price,
+  status, url); `get_neighbors` on an original lists every board based on it, on a part
+  every board using it. `query_graph` is fuzzy keyword search; keep `token_budget` small.
+- Shell equivalents: `graphify explain "<label>"`, `graphify query "<q>" --budget 800`.
+
+The graph is a read-only view; the database stays the source of truth.
 
 ## Conventions
 
