@@ -47,7 +47,7 @@ Test on one product first, then the whole vendor:
 
 ```sh
 .venv/bin/pcblib scrape <vendor> --only <slug> --limit 1
-.venv/bin/pcblib scrape <vendor> --reset
+.venv/bin/pcblib scrape <vendor>
 .venv/bin/pcblib stats
 ```
 
@@ -55,8 +55,8 @@ Test on one product first, then the whole vendor:
 
 - The vendor's stats line (circuits, with BOM, with schematic) in the description, before
   and after if you changed a parser.
-- Parser changes checked against at least two other vendors (`pcblib scrape <vendor>
-  --reset` runs from cache, so this is quick).
+- Parser changes checked against at least two other vendors (`pcblib scrape <vendor>`
+  runs from cache, so this is quick).
 - A line under **Unreleased** in `CHANGELOG.md` if users would notice.
 - Nothing that republishes a vendor's documents: metadata, part values and links are
   indexed; PDFs and schematic images stay in the git-ignored cache. The only exception is

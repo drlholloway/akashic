@@ -31,7 +31,7 @@ decisions and `DESIGN.md` for the visual system. `CHANGELOG.md` becomes the rele
 ## Commands
 
 ```sh
-cd scraper && .venv/bin/pcblib scrape <vendor> [--only slug] [--limit N] [--reset] [--refresh-pages|--refresh]
+cd scraper && .venv/bin/pcblib scrape <vendor> [--only substring] [--limit N] [--reset] [--refresh-pages|--refresh]
 .venv/bin/pcblib stats && .venv/bin/pcblib audit          # audit: flags added since the last run
 .venv/bin/pcblib export                                  # never --images for a public deploy
 cd app && npm run check && npm run build && npm run preview   # restart preview after each build
@@ -68,18 +68,23 @@ The graph is a read-only view; the database stays the source of truth.
   have closed.
 - Every parser change: re-run the affected vendors from cache and compare `pcblib stats`
   before and after, then run `pcblib audit` and read the flags it says were added before
-  deploying. The three table parsers all run and the one with the most designators wins, so a
-  new layout should not regress an old one. Hand fixes for one-off misreads go in
+  deploying. The table parsers in `pdf.text_bom` all run and the one with the most rows wins (a
+  per-variant table takes over when it covers most of the refs), so a new layout should not
+  regress an old one. Hand fixes for one-off misreads go in
   `scraper/pcblib/corrections.py`.
 - Boards are never deleted when a vendor stops listing them: a full scrape marks them `delisted`
   (with the date) and the site says so. `--refresh-pages` re-fetches listings and product pages but
   keeps cached documents; a scrape that finds far fewer boards than before marks nothing.
+  `--reset` only drops boards still listed that the run did not store (the adapter now skips or
+  renames them), after a full run with no errors; it never touches delisted boards and refuses
+  `--only`/`--limit`. A plain rescrape is enough to check a parser change.
 - Adapters return `None` for products that are not circuits (kits, parts, faceplates,
   bundles) and dedupe regional or older-version listings of the same board.
 - New vendor: adapter, `vendors/__init__.py`, `db.py`, `app/src/lib/types.ts`, README table,
   CHANGELOG line. Vendor kinds: `shop` (buy the PCB), `projects` (order at a fab), `repo` (download the
-  gerbers from a code repository), `blog` (read the post), `archive` (open the schematic), `layout` (build from a vero, perfboard,
+  gerbers from a code repository), `blog` (read the post), `archive` (open the schematic), `kit` (a complete kit), `layout` (build from a vero, perfboard,
   tagboard or turret drawing; `vendors/blogger.py` is the shared base, `layouts.py` reads the legend).
+  `VENDOR_KIND` is kept in both `db.py` and `types.ts`; update both.
   A layout the same vendor publishes beside its PCB is attached to that circuit (`layout.also`), not a second entry.
 - OCR is best effort and marked `OCR` or `from schematic` in the row notes; never let it
   overwrite a row that came from a text table.

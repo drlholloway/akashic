@@ -139,8 +139,9 @@ Requires Python 3.12+, [uv](https://docs.astral.sh/uv/), poppler (`brew install 
 
 ```sh
 cd scraper
-uv venv .venv && uv pip install -e .
-.venv/bin/pcblib scrape pedalpcb      # each vendor: pedalpcb aionfx madbean guitarpcb fuzzdog sheepylove deadendfx moonn fivecats parasit pcbguitarmania deadastronaut bentfishbowl ggg lectricfx expanon zerogiod otrfx dirtmonger pcbway-gtu
+uv sync                              # or: uv venv .venv && uv pip install -e .
+.venv/bin/pcblib vendors              # every vendor id (about 64)
+.venv/bin/pcblib scrape pedalpcb      # one vendor at a time
 .venv/bin/pcblib stats
 .venv/bin/pcblib audit                # flags parts rows that look invalid; report in data/cache/audit/, compared with the last run
 .venv/bin/pcblib export               # writes app/static/data/*.json
@@ -159,9 +160,9 @@ Remove it with `launchctl bootout gui/$(id -u)/com.cryptideffects.akashic-refres
 
 `export` also fetches USD exchange rates for EUR, GBP and CAD from the European Central Bank feed (frankfurter.dev) into `rates.json`, so the app can show every vendor's price in one currency; the app defaults to USD and offers EUR, GBP, or the vendor's own listing.
 
-Every HTTP response and PDF is cached, so re-running a scrape after a parser change costs no network. Use `--reset` to drop a vendor's rows first, `--only <substring>` and `--limit N` to test on a few products, `--refresh-pages` to re-fetch the vendor's pages but keep cached documents, and `--refresh` to bypass the cache entirely. Requests to each host are spaced 1.5 s apart.
+Every HTTP response and PDF is cached, so re-running a scrape after a parser change costs no network. Use `--only <substring>` (matched against each product's URL or handle) and `--limit N` to test on a few products, `--refresh-pages` to re-fetch the vendor's pages but keep cached documents, and `--refresh` to bypass the cache entirely. `--reset` also drops boards the vendor still lists that a full, error-free run did not store, such as products the adapter now skips; delisted boards are never dropped. Requests to each host are spaced 1.5 s apart.
 
-Running all five scrapers in parallel is fine: the database is in WAL mode and each circuit commits on its own.
+Running several vendors' scrapes in parallel is fine: the database is in WAL mode and each circuit commits on its own.
 
 ## Attaching a KiCad schematic
 
@@ -207,7 +208,7 @@ npx wrangler login      # once; opens the browser
 npm run deploy          # export data, build, publish
 ```
 
-`npm run deploy` runs `scripts/deploy.sh`, which exports the data bundle (never with `--images`), builds the site, and runs `wrangler deploy` with the config in `app/wrangler.toml`. The site is served at `https://pcb-schematic-library.<account>.workers.dev`; add a custom domain in the Cloudflare dashboard under the Worker's settings. `static/_headers` sets long cache lifetimes for the hashed assets and fonts and a short one for the data bundle.
+`npm run deploy` runs `scripts/deploy.sh`, which exports the data bundle (never with `--images`), builds the site, and runs `wrangler deploy` with the config in `app/wrangler.toml`. The Worker is named `akashic` and serves the custom domain `akashic.cryptideffects.com`, set in `wrangler.toml` (`workers_dev` is off). `static/_headers` sets long cache lifetimes for the hashed assets and fonts and a short one for the data bundle.
 
 Deploy `app/build` to any other static host the same way.
 

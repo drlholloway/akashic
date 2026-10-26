@@ -29,17 +29,16 @@ def scrape(vendor: str, limit: int = 0, refresh: bool = False, refresh_pages: bo
            dump: bool = False, reset: bool = False) -> None:
     """Scrape one vendor into data/library.sqlite (network responses are cached).
     --refresh-pages re-fetches the vendor's pages (prices, stock, new boards) but keeps cached
-    documents; --refresh re-fetches everything. --reset drops the vendor's existing rows first."""
+    documents; --refresh re-fetches everything. --reset also drops the boards the vendor still lists
+    that the run did not store (ones the adapter now skips or renames); delisted boards are always kept."""
     if vendor not in REGISTRY:
         raise typer.BadParameter(f"unknown vendor {vendor!r}; choose from {list(REGISTRY)}")
+    if reset and (only or limit):
+        raise typer.BadParameter("--reset needs a full scrape; drop --only and --limit")
     adapter = REGISTRY[vendor](Fetcher(vendor=vendor, refresh=refresh, refresh_pages=refresh_pages))
     n_ok = n_skip = n_err = 0
     seen: set[str] = set()
     with dbm.connect() as conn:
-        if reset and not only and not limit:
-            conn.execute("DELETE FROM bom WHERE circuit_id IN (SELECT id FROM circuits WHERE vendor=?)", (vendor,))
-            conn.execute("DELETE FROM circuits WHERE vendor=?", (vendor,))
-            conn.commit()
         for i, target in enumerate(adapter.list_targets()):
             if only and only not in target:
                 continue
@@ -76,6 +75,16 @@ def scrape(vendor: str, limit: int = 0, refresh: bool = False, refresh_pages: bo
                           f"(check the scrape)[/]")
             elif gone:
                 con.print(f"[yellow]{vendor}: {gone} boards no longer listed (kept, marked delisted)[/]")
+            if reset and applied:
+                stale, removed = dbm.remove_stale(conn, vendor, seen)
+                conn.commit()
+                if removed:
+                    con.print(f"[yellow]{vendor}: removed {len(stale)} stale boards: {', '.join(stale)}[/]")
+                elif stale:
+                    con.print(f"[red]{vendor}: {len(stale)} listed boards were not stored, too many to be stale; "
+                              f"removing none (check the adapter): {', '.join(stale[:20])}[/]")
+        elif reset:
+            con.print(f"[red]{vendor}: --reset skipped: the run had {n_err} errors[/]")
     con.print(f"[bold]{vendor}[/]: {n_ok} circuits stored, {n_skip} targets skipped")
 
 
@@ -190,7 +199,7 @@ def datasheets(add: list[str] = typer.Option(None, help="'CAT:PART=URL', a link 
     """Find manufacturer datasheet links for the parts cross-reference (run after export).
     Candidates on hosts that answer scripts (TI, Microchip, Vishay, Nisshinbo, Diodes) are fetched
     and kept when they are a PDF; a copy is cached in data/cache/datasheets/ for your own use and
-    never exported. Candidates on hosts that block scripts (onsemi, Analog Devices, ST, Nexperia)
+    never exported. Candidates on hosts that block scripts (onsemi, Analog Devices, Renesas, Nexperia)
     are written to data/cache/datasheets/to-check.json for checking in a browser; record a good one
     with --add 'Q:2N3904=https://...'."""
     import json

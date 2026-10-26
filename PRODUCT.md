@@ -11,13 +11,13 @@ SvelteKit static PWA (user's choice), data as a prebuilt JSON bundle with client
 Primary: the owner, a DIY guitar-pedal builder and KiCad user, at the bench or desk while designing, choosing, or building a circuit. Secondary: the wider DIY pedal community browsing for what to build next; the site is open to them and in use (September 2026), with an About page that explains the sources, the machine-read values and how to report errors. Personal use is still optimized first; public visitors need the data to be explained, not simplified.
 
 ## Product Purpose
-A searchable reference library of guitar-pedal circuits aggregated from DIY PCB vendors (PedalPCB, Aion FX, Madbean, GuitarPCB, Fuzz Dog). For each circuit: what commercial pedal it clones, the vendor, price and buy link, the build document, controls, enclosure, a schematic preview (local only), and a fully parsed, value-normalized bill of materials. Success: any circuit or part can be found in seconds, and the cross-reference "which circuits use part X" answers questions no vendor site can.
+A searchable reference library of guitar-pedal circuits aggregated from DIY PCB vendors (PedalPCB, Aion FX, Madbean, GuitarPCB, Fuzz Dog and some 60 more), free layout sites, blogs and schematic archives. For each circuit: what commercial pedal it clones, the vendor, price and buy link, the build document, controls, enclosure, a schematic preview (local only), and a fully parsed, value-normalized bill of materials. Success: any circuit or part can be found in seconds, and the cross-reference "which circuits use part X" answers questions no vendor site can.
 
 ## Positioning
 The only place that unifies BOMs across vendors with normalized part values, so "every Rat derivative", "everything using an LM308", and "125B three-knob boards" are one query each. Vendors can each only show their own catalog.
 
 ## Operating Context
-Data is scraped on the owner's machine, cached, and exported as static JSON. Circuit records link out to vendor product pages (purchase) and vendor build-document PDFs. Vendor schematic images are cached locally and are not redistributed publicly; the public build shows metadata, BOM, and links. Each circuit has an optional KiCad schematic fragment slot (owner-drawn), rendered with `kicad-cli`, which is the redistributable schematic. Roughly 1,500 circuits across five vendors; BOMs of 20 to 110 rows.
+Data is scraped on the owner's machine, cached, and exported as static JSON. Circuit records link out to vendor product pages (purchase) and vendor build-document PDFs. Vendor schematic images are cached locally and are not redistributed publicly; the public build shows metadata, BOM, and links. Each circuit has an optional KiCad schematic fragment slot (owner-drawn), rendered with `kicad-cli`, which is the redistributable schematic. About 9,500 circuits from 64 sources (October 2026); BOMs of 20 to 110 rows.
 
 ## Capabilities and Constraints
 - One search box leads: it matches circuit names, cloned originals, part values and part numbers, categories, vendors, and enclosures together.
@@ -25,7 +25,7 @@ Data is scraped on the owner's machine, cached, and exported as static JSON. Cir
 - Circuit detail: metadata, controls, BOM table with normalized values, schematic preview when available, links to buy and to the build doc.
 - Parts cross-reference page: part value or number -> every circuit using it.
 - Static output, offline-capable, installable on macOS, Linux, Android, iOS via PWA.
-- Prices are vendor list prices in vendor currency (USD or GBP); no live pricing yet.
+- Prices are vendor list prices in the vendor's currency (USD, EUR, GBP, CAD, SEK), shown converted at ECB rates or as listed; refreshed weekly, no live pricing.
 - GuitarPCB BOMs are raster-only in the source and are empty unless OCR is run.
 - Terminology: "circuit" (a vendor PCB project), "based on" (the commercial original), "BOM" (parts list), "ref" (designator).
 

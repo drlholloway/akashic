@@ -251,6 +251,7 @@ GitHub Release notes.
   and pots are grouped by taper (A, B, C, W, none) and ordered by resistance.
 
 ### Fixed
+- `pcblib scrape --reset` no longer deletes a vendor's boards before the run, which lost every board the vendor had stopped listing for good. It now waits for a full run with no errors and then drops only the boards the vendor still lists that the run did not store, such as products the adapter now skips, never a delisted board, and none at all if more than a tenth of the listing would go. With `--only` or `--limit` it now stops with an error instead of being ignored.
 - A circuit with build variants (several Big Muff or Fuzz Face versions on one board) shows the first variant's parts as the page opens, not only the parts every variant shares until the page's script has run.
 - A circuit page shows its My bench button only once the bench has been read, so a saved circuit is never shown as unsaved while the page is still loading. Circuit and part pages come from the network first, and from the offline copy only when offline or slow: a copy kept from an earlier release named scripts that no longer exist, and the page never came to life.
 - A circuit with one knob said '1 knobs' under its faceplate.

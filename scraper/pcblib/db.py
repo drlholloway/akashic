@@ -186,7 +186,8 @@ VENDORS = {
 }
 
 
-# What the vendor sells: "shop" (a PCB), "projects" (order the board from a fab), "blog" (a schematic to read),
+# What the vendor sells: "shop" (a PCB), "projects" (order the board from a fab), "repo" (gerbers in a code
+# repository), "blog" (a schematic to read), "archive" (a schematic file to open),
 # "layout" (a stripboard, tag strip, turret or perfboard drawing to build from), "kit" (a complete kit: parts,
 # enclosure and instructions).
 VENDOR_KIND = {"pcbway-gtu": "projects", "cryptid": "repo", "rwlpedal": "repo", "scientificguitarist": "repo", "sheepygit": "repo", "bentfishbowl": "blog", "effdub": "blog", "expanon": "archive", "schalltechnik": "blog",
@@ -369,6 +370,22 @@ def mark_listing(conn: sqlite3.Connection, vendor: str, seen: set[str], today: s
     for cid in gone:
         conn.execute("UPDATE circuits SET delisted=? WHERE id=?", (today, cid))
     return len(seen), len(gone), True
+
+
+def remove_stale(conn: sqlite3.Connection, vendor: str, seen: set[str]) -> tuple[list[str], bool]:
+    """After a full, clean scrape and mark_listing: drop the boards the vendor still lists that this
+    run did not store, because the adapter now skips them (a kit, a duplicate listing) or files them
+    under a new id. Delisted boards are never dropped: the run cannot bring them back. More than a
+    tenth of the listing stale looks like an adapter bug, not a cleanup, so nothing is dropped then.
+    Returns (stale ids, removed)."""
+    stale = [r[0] for r in conn.execute("SELECT id FROM circuits WHERE vendor=? AND COALESCE(delisted,'')=''", (vendor,))
+             if r[0] not in seen]
+    if not stale or len(stale) > max(3, 0.1 * len(seen)):
+        return stale, False
+    for cid in stale:
+        conn.execute("DELETE FROM bom WHERE circuit_id=?", (cid,))
+        conn.execute("DELETE FROM circuits WHERE id=?", (cid,))
+    return stale, True
 
 
 def _page_alive(url: str) -> bool:
