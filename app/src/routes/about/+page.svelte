@@ -42,6 +42,7 @@
 			<li><a href="{base}/parts">Parts</a>: which circuits use a part (every LM308, every 2N5088, every A100k).</li>
 			<li><a href="{base}/workbench">Workbench</a>: a builder's notes on where to buy parts, how to build a board, and helpful sites and tools. <a href="{base}/workbench/build">What can I build</a> matches the parts you have against every parts list.</li>
 		</ul>
+		<p>New here? The <a href="{base}/guide">guide</a> walks through searching, reading a circuit page and the Workbench tools.</p>
 	</section>
 
 	<section>
