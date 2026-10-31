@@ -17,7 +17,7 @@ A searchable reference library of guitar-pedal circuits aggregated from DIY PCB 
 The only place that unifies BOMs across vendors with normalized part values, so "every Rat derivative", "everything using an LM308", and "125B three-knob boards" are one query each. Vendors can each only show their own catalog.
 
 ## Operating Context
-Data is scraped on the owner's machine, cached, and exported as static JSON. Circuit records link out to vendor product pages (purchase) and vendor build-document PDFs. Vendor schematic images are cached locally and are not redistributed publicly; the public build shows metadata, BOM, and links. Each circuit has an optional KiCad schematic fragment slot (owner-drawn), rendered with `kicad-cli`, which is the redistributable schematic. About 9,500 circuits from 64 sources (October 2026); BOMs of 20 to 110 rows.
+Data is scraped on the owner's machine, cached, and exported as static JSON. Circuit records link out to vendor product pages (purchase) and vendor build-document PDFs. Vendor schematic images are cached locally and are not redistributed publicly; the public build shows metadata, BOM, and links. Each circuit has an optional KiCad schematic fragment slot (owner-drawn), rendered with `kicad-cli`, which is the redistributable schematic. About 9,700 circuits from 65 sources (October 2026); BOMs of 20 to 110 rows.
 
 ## Capabilities and Constraints
 - One search box leads: it matches circuit names, cloned originals, part values and part numbers, categories, vendors, and enclosures together.

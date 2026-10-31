@@ -1,4 +1,4 @@
-export type Vendor = 'pedalpcb' | 'aionfx' | 'madbean' | 'guitarpcb' | 'fuzzdog' | 'sheepylove' | 'deadendfx' | 'moonn' | 'fivecats' | 'parasit' | 'pcbway-gtu' | 'pcbguitarmania' | 'deadastronaut' | 'bentfishbowl' | 'ggg' | 'lectricfx' | 'expanon' | 'zerogiod' | 'otrfx' | 'dirtmonger' | 'maskaudio' | 'effectslayouts' | 'jmk' | 'eae' | 'c2c' | 'deadair' | 'rwlpedal' | 'sheepygit' | 'otherpedals' | 'godcity' | 'effects1776' | 'rullywow' | 'mas' | 'tonepad' | 'wraa' | 'frog' | 'thcustom' | 'guitarelectronics' | 'opelectronics' | 'griffin' | 'coda' | 'delyk' | 'tayda' | 'schalltechnik' | 'electricdruid' | 'zeppelin' | 'moody' | 'gigahearts' | 'scientificguitarist' | 'holyisland' | 'cryptid' | 'effdub' | 'tagboardeffects' | 'dirtbox' | 'effectslayouts-blog' | 'modelectronics' | 'verop2p' | 'pedalbuilder' | 'efektpol' | 'midwayfair' | 'amplifiedparts' | 'revolutiondeux' | 'mattg' | 'hotkits';
+export type Vendor = 'pedalpcb' | 'aionfx' | 'madbean' | 'guitarpcb' | 'fuzzdog' | 'sheepylove' | 'deadendfx' | 'moonn' | 'fivecats' | 'parasit' | 'pcbway-gtu' | 'pcbguitarmania' | 'deadastronaut' | 'bentfishbowl' | 'ggg' | 'lectricfx' | 'expanon' | 'zerogiod' | 'otrfx' | 'dirtmonger' | 'maskaudio' | 'effectslayouts' | 'jmk' | 'eae' | 'c2c' | 'deadair' | 'rwlpedal' | 'sheepygit' | 'otherpedals' | 'godcity' | 'effects1776' | 'rullywow' | 'mas' | 'tonepad' | 'wraa' | 'frog' | 'thcustom' | 'guitarelectronics' | 'opelectronics' | 'griffin' | 'coda' | 'delyk' | 'tayda' | 'schalltechnik' | 'electricdruid' | 'zeppelin' | 'moody' | 'gigahearts' | 'scientificguitarist' | 'holyisland' | 'cryptid' | 'effdub' | 'tagboardeffects' | 'dirtbox' | 'effectslayouts-blog' | 'modelectronics' | 'verop2p' | 'pedalbuilder' | 'efektpol' | 'midwayfair' | 'amplifiedparts' | 'revolutiondeux' | 'mattg' | 'hotkits' | 'turretboard';
 
 export interface IndexEntry {
 	id: string;
@@ -166,6 +166,7 @@ export const VENDOR_NAMES: Record<Vendor, string> = {
 	mas: 'MAS Effects',
 	modelectronics: 'Mod Electronics',
 	verop2p: 'Vero P2P',
+	turretboard: 'turretboard.org',
 	pedalbuilder: 'Naegele Audio',
 	midwayfair: 'Jon Patton',
 	amplifiedparts: 'Amplified Parts',
@@ -198,7 +199,7 @@ export const VENDOR_NAMES: Record<Vendor, string> = {
 };
 
 export type VendorKind = 'shop' | 'projects' | 'repo' | 'blog' | 'archive' | 'layout' | 'kit';
-export const VENDOR_KIND: Partial<Record<Vendor, VendorKind>> = { 'pcbway-gtu': 'projects', rwlpedal: 'repo', sheepygit: 'repo', scientificguitarist: 'repo', cryptid: 'repo', bentfishbowl: 'blog', effdub: 'blog', expanon: 'archive', schalltechnik: 'blog', tagboardeffects: 'layout', dirtbox: 'layout', 'effectslayouts-blog': 'layout', modelectronics: 'kit', verop2p: 'layout', pedalbuilder: 'blog', efektpol: 'layout', midwayfair: 'projects', amplifiedparts: 'layout', revolutiondeux: 'blog', mattg: 'repo' };
+export const VENDOR_KIND: Partial<Record<Vendor, VendorKind>> = { 'pcbway-gtu': 'projects', rwlpedal: 'repo', sheepygit: 'repo', scientificguitarist: 'repo', cryptid: 'repo', bentfishbowl: 'blog', effdub: 'blog', expanon: 'archive', schalltechnik: 'blog', tagboardeffects: 'layout', dirtbox: 'layout', 'effectslayouts-blog': 'layout', modelectronics: 'kit', verop2p: 'layout', pedalbuilder: 'blog', efektpol: 'layout', midwayfair: 'projects', amplifiedparts: 'layout', revolutiondeux: 'blog', mattg: 'repo', turretboard: 'layout' };
 /** The fab a 'projects' source's boards are ordered from, when it is not the source's own name. */
 export const VENDOR_FAB: Partial<Record<Vendor, string>> = { 'pcbway-gtu': 'PCBWay', midwayfair: 'OSH Park' };
 /** Where a source's bare PCBs (tagged 'PCB only') are sold, when it is not the source itself. */
