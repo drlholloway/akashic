@@ -149,9 +149,6 @@ VENDORS = {
     "effectslayouts-blog": ("Effects Layouts (blog)", "https://effectslayouts.blogspot.com",
                             "Perfboard and home-etch layouts posted free by storyboardist; indexed and linked, not redistributed. "
                             "Layout images are read locally for the parts they name."),
-    "verop2p": ("Vero P2P", "https://vero-p2p.blogspot.com",
-                "Stripboard, point-to-point, tag board and turret layouts posted free on the Guitar Related Ramblings blog; "
-                "indexed and linked, not redistributed. Layout images are read locally for the board size and the parts they name."),
     "pedalbuilder": ("Naegele Audio", "https://forum.pedalpcb.com/members/pedalbuilder.487/",
                      "Build reports by Naegele Audio (PedalBuilder on the PedalPCB forum), who sells PCBs of these circuits, relay bypass "
                      "and I/O boards by direct message; "
@@ -195,7 +192,7 @@ VENDORS = {
 # "layout" (a stripboard, tag strip, turret or perfboard drawing to build from), "kit" (a complete kit: parts,
 # enclosure and instructions).
 VENDOR_KIND = {"pcbway-gtu": "projects", "cryptid": "repo", "rwlpedal": "repo", "scientificguitarist": "repo", "sheepygit": "repo", "bentfishbowl": "blog", "effdub": "blog", "expanon": "archive", "schalltechnik": "blog",
-               "tagboardeffects": "layout", "dirtbox": "layout", "effectslayouts-blog": "layout", "modelectronics": "kit", "verop2p": "layout", "pedalbuilder": "blog", "efektpol": "layout", "midwayfair": "projects", "amplifiedparts": "layout", "revolutiondeux": "blog", "mattg": "repo", "turretboard": "layout"}
+               "tagboardeffects": "layout", "dirtbox": "layout", "effectslayouts-blog": "layout", "modelectronics": "kit", "pedalbuilder": "blog", "efektpol": "layout", "midwayfair": "projects", "amplifiedparts": "layout", "revolutiondeux": "blog", "mattg": "repo", "turretboard": "layout"}
 
 # The site owner's own designs: their schematic and photo are served, not only linked.
 OWNER_VENDORS = {"cryptid"}

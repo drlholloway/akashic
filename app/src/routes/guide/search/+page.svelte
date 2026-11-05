@@ -52,7 +52,7 @@
 	<p>The column on the left (above the list on a narrow screen) filters the list. Each choice is a chip; press it again to turn it off.</p>
 	<dl class="terms">
 		<div><dt class="label">My bench</dt><dd>Only the circuits you have kept. See <a href="{base}/guide/workbench">My bench</a>.</dd></div>
-		<div><dt class="label">Build</dt><dd>PCB, Vero, Perfboard, Tagboard, Turret board, Point to point. <em>Verified layouts</em> keeps layouts their source marks as built and working.</dd></div>
+		<div><dt class="label">Build</dt><dd>PCB, Vero, Perfboard, Tagboard, Turret board. <em>Verified layouts</em> keeps layouts their source marks as built and working.</dd></div>
 		<div><dt class="label">Vendor</dt><dd>The source of the circuit.</dd></div>
 		<div><dt class="label">Category</dt><dd>Overdrive, Fuzz, Delay, Utility and the rest.</dd></div>
 		<div><dt class="label">Enclosure</dt><dd>The eight most common box sizes in the current list.</dd></div>

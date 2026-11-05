@@ -46,7 +46,7 @@
 		<div><dt class="label">Circuit</dt><dd>One board, layout or schematic from one source. The same pedal from two vendors is two circuits.</dd></div>
 		<div><dt class="label">Based on</dt><dd>The commercial pedal a circuit clones or adapts, the <em>original</em>. Sources spell them differently; Akashic files “Pro Co RAT Distortion” and “ProCo RAT” under one original.</dd></div>
 		<div><dt class="label">Source</dt><dd>Where a circuit comes from: a PCB shop, a layout blog, a code repository, a schematic archive. The <a href="{base}/guide/questions">Questions</a> page lists the kinds.</dd></div>
-		<div><dt class="label">Build</dt><dd>What you build it on: a bought PCB, or vero (stripboard), perfboard, tagboard, turret board or point to point from a layout drawing.</dd></div>
+		<div><dt class="label">Build</dt><dd>What you build it on: a bought PCB, or vero (stripboard), perfboard, tagboard or turret board from a layout drawing.</dd></div>
 		<div><dt class="label">Parts list</dt><dd>The bill of materials (BOM), one row per part. <em>Ref</em> is the designator printed on the board (R1, C4, Q2).</dd></div>
 		<div><dt class="label">Normalized</dt><dd>A value rewritten one way, so 4k7, 4.7K and 4700 all read 4k7 and match each other across every source.</dd></div>
 		<div><dt class="label">Box</dt><dd>The enclosure size, in Hammond's names (1590A, 1590B, 125B, 1590BB…).</dd></div>
