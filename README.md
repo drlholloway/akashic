@@ -138,7 +138,13 @@ or catalog goes in `SELECTOR`: the part page calls it a selector table, the work
 "Has a selector sheet, not a datasheet", and a full datasheet replaces it when one is hosted. `COVERED_BY` lists the other parts a hosted file covers, checked
 by eye, since OCR misses rows in small catalog print.
 
-Names, prices, part values, controls, enclosures and the original circuit are indexed as facts and every record links back to the vendor's product page and build document. Build documents and their schematic images are copyrighted by the vendors: the scraper caches them locally under `data/raw/` and `data/cache/` (git-ignored) for personal reference, and the public export does not include them. Aion FX explicitly permits commercial use of its projects; GuitarPCB and Fuzz Dog explicitly forbid republishing their documents. The redistributable schematic is the optional KiCad fragment you draw yourself (see below).
+### What the site shows, and what it doesn't
+
+Akashic is an index: every entry links back to the vendor's product page or the author's post and to the build document, and the source stays the place to build from. A circuit page shows the name, what it is based on, the effect category, controls and enclosure, the price and stock, the parts list, a layout's build type and board size and, for a blog or layout site, the opening text of the post. Build documents, schematic images, layout drawings and photos are never published: the scraper caches them on the maintainer's computer under `data/raw/` and `data/cache/` (git-ignored) to read the parts list, board size and control names, and the export leaves them out. The scraper identifies itself, spaces its requests 1.5 seconds apart per host and refreshes once a week. Aion FX explicitly permits commercial use of its projects; GuitarPCB and Fuzz Dog explicitly forbid republishing their documents, and Akashic only links them. The redistributable schematic is the optional KiCad fragment you draw yourself (see below). The details are in the wiki's [How the data is made](https://github.com/drlholloway/akashic/wiki/How-the-data-is-made#what-the-site-shows-and-what-it-doesnt).
+
+### Leaving Akashic
+
+If you publish circuits, layouts or build documents and don't want them in Akashic, [open an issue](https://github.com/drlholloway/akashic/issues) or get in touch through GitHub. Your entries come off the site, the cached copies are deleted and your site is not fetched again. A plain link to your site can stay on the Workbench links page if you'd like.
 
 ## Layout
 
