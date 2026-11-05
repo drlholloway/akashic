@@ -8,6 +8,8 @@ Outputs (in app/static/data/):
                     circuit page: one file per circuit would pass the host's 20,000-file limit
   parts.json     – part value -> circuit ids (the cross-reference index)
   needs.json     – what each board takes (alternatives and how many), for 'What can I build'
+  subs.json      – transistor substitutes, from data/transistors.sqlite
+  specsubs.json  – IC, diode and opto substitutes, from the datasheet figures in partspecs.json
   vendors.json
   images/<vendor>/<slug>.png – schematic previews (only when --include-images)
 """
@@ -336,6 +338,12 @@ def run(images: bool = False) -> None:
                      for cid, (need, unread) in needs.items()},
     }, separators=(",", ":")))
     (EXPORT_DIR / "subs.json").write_text(json.dumps(_transistor_subs(conn), ensure_ascii=False))
+    from .partspecs import aliases, load as load_specs, substitutes as spec_subs  # ICs, diodes, optos: figures read off the datasheets
+    specs, known = load_specs(), {p["key"] for p in parts_out}
+    (EXPORT_DIR / "specsubs.json").write_text(json.dumps({
+        "parts": spec_subs(specs, {p["key"]: len(p["circuits"]) for p in parts_out}),
+        "same": {k: v for k, v in aliases(specs).items() if k in known},
+    }, ensure_ascii=False, separators=(",", ":")))
     (EXPORT_DIR / "index.json").write_text(json.dumps(index, ensure_ascii=False))
     (EXPORT_DIR / "parts.json").write_text(json.dumps(parts_out, ensure_ascii=False))
     (EXPORT_DIR / "vendors.json").write_text(json.dumps(vendors, ensure_ascii=False))

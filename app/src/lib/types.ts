@@ -265,6 +265,37 @@ export interface SubsEntry {
 	closest: TransistorSpec[];
 }
 
+/** Figures read off an IC, diode or opto datasheet (scraper/pcblib/partspecs.json); units as on the
+ * parts page: volts, MHz, V/µs, nV/√Hz, mA, nA, A, ns, pF, ohms, ms. */
+export interface PartSpec {
+	pn: string;
+	boards?: number;
+	score?: number;
+	diff?: string[];
+	notes?: string;
+	vmin?: number; vmax?: number; gbw?: number; slew?: number; noise?: number; iq?: number; ib?: number;
+	input?: string; rr?: string; single?: boolean; amps?: number; pins158?: string;
+	vout?: number; iout?: number; vdrop?: number; fosc?: number; stages?: number; clock?: number;
+	vf?: number; vf_if?: number; vf_hi?: number; vf_hi_if?: number; ifmax?: number; vr?: number; trr?: number;
+	cj?: number; ir?: number; ir_vr?: number; pd?: number; package?: string; vz?: number;
+	ron?: number; ron_if?: number; roff?: number; rise?: number; fall?: number; iled?: number;
+}
+
+export interface SpecSubsEntry {
+	kind: 'ic' | 'diode' | 'opto';
+	group: string; // the socket: parts of one group drop into each other's place
+	spec: PartSpec;
+	boards: number;
+	notes?: string;
+	page?: number; // the datasheet page the figures came from
+	subs: PartSpec[];
+}
+
+export interface SpecSubs {
+	parts: Record<string, SpecSubsEntry>;
+	same: Record<string, string>; // a spelling that is the same part -> the key its entry is under
+}
+
 /** One week of the changelog (Monday to Sunday), built from the commit history at export. */
 export interface ChangeWeek {
 	week: string;

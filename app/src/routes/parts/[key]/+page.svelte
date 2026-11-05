@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import CircuitTable from '$lib/CircuitTable.svelte';
-	import { PART_CATEGORY_NAMES, type TransistorSpec } from '$lib/types';
+	import { PART_CATEGORY_NAMES, type PartSpec, type TransistorSpec } from '$lib/types';
 	let { data } = $props();
 	const subs = $derived(data.subs);
 	const isFet = $derived(subs?.kind === 'jfet' || subs?.kind === 'mosfet');
@@ -25,6 +25,65 @@
 					{ h: 'fT', f: (s: TransistorSpec) => fmt(s.ft, ' MHz') }
 				]
 	);
+	// Datasheet substitutes: the columns that matter for each kind of socket
+	const ss = $derived(data.specSubs);
+	const g = $derived(ss?.group ?? '');
+	const num = (v: number | undefined, unit = '') => (v == null ? '' : `${Number(v.toPrecision(3))}${unit}`);
+	const supply = (s: PartSpec) => (s.vmin == null && s.vmax == null ? '' : `${s.vmin ?? '?'}–${s.vmax ?? '?'} V`);
+	const ohms = (v: number | undefined) => (v == null ? '' : v >= 1e6 ? `${num(v / 1e6)}M` : v >= 1e3 ? `${num(v / 1e3)}k` : `${num(v)}`);
+	const specCols = $derived.by((): { h: string; f: (s: PartSpec) => string; text?: boolean }[] => {
+		if (/^(opamp|ota|cmp)/.test(g))
+			return [
+				{ h: 'Input', f: (s) => [s.input === 'jfet' ? 'JFET' : s.input === 'cmos' ? 'CMOS' : s.input ?? '', s.rr ? `RR ${s.rr}` : ''].filter(Boolean).join(', '), text: true },
+				{ h: 'Supply', f: supply },
+				{ h: 'GBW', f: (s) => num(s.gbw, ' MHz') },
+				{ h: 'Slew', f: (s) => num(s.slew, ' V/µs') },
+				{ h: 'Noise', f: (s) => num(s.noise, ' nV') },
+				{ h: 'Iq', f: (s) => num(s.iq, ' mA') }
+			];
+		if (g.startsWith('reg'))
+			return [
+				{ h: 'Vout', f: (s) => num(s.vout, ' V') },
+				{ h: 'Iout', f: (s) => num(s.iout, ' A') },
+				{ h: 'Dropout', f: (s) => num(s.vdrop, ' V') },
+				{ h: 'Vin max', f: (s) => num(s.vmax, ' V') }
+			];
+		if (g.startsWith('chargepump'))
+			return [
+				{ h: 'Supply', f: supply },
+				{ h: 'Iout', f: (s) => num(s.iout, ' mA') },
+				{ h: 'Osc', f: (s) => num(s.fosc, ' kHz') }
+			];
+		if (g.startsWith('bbd'))
+			return [
+				{ h: 'Stages', f: (s) => num(s.stages) },
+				{ h: 'Supply', f: supply },
+				{ h: 'Clock max', f: (s) => num(s.clock, ' kHz') }
+			];
+		if (g.startsWith('zener'))
+			return [
+				{ h: 'Vz', f: (s) => num(s.vz, ' V') },
+				{ h: 'Power', f: (s) => num(s.pd, ' W') },
+				{ h: 'Package', f: (s) => s.package ?? '', text: true }
+			];
+		if (ss?.kind === 'diode')
+			return [
+				{ h: 'Vf', f: (s) => (s.vf == null ? '' : `${num(s.vf, ' V')}${s.vf_if != null ? ` @ ${num(s.vf_if)} mA` : ''}`) },
+				{ h: 'If max', f: (s) => num(s.ifmax, ' A') },
+				{ h: 'Vr', f: (s) => num(s.vr, ' V') },
+				{ h: 'trr', f: (s) => num(s.trr, ' ns') },
+				{ h: 'Cj', f: (s) => num(s.cj, ' pF') },
+				{ h: 'Package', f: (s) => s.package ?? '', text: true }
+			];
+		if (ss?.kind === 'opto')
+			return [
+				{ h: 'On', f: (s) => (s.ron == null ? '' : `${ohms(s.ron)}${s.ron_if != null ? ` @ ${num(s.ron_if)} mA` : ''}`) },
+				{ h: 'Dark', f: (s) => ohms(s.roff) },
+				{ h: 'Rise', f: (s) => num(s.rise, ' ms') },
+				{ h: 'Decay', f: (s) => num(s.fall, ' ms') }
+			];
+		return [{ h: 'Supply', f: supply }];
+	});
 	const slugOf = (pn: string) => (data.partSlugs as Record<string, string>)[pn.toUpperCase()];
 </script>
 
@@ -86,6 +145,33 @@
 			</div>
 		</section>
 	{/if}
+	{#if ss}
+		<section class="subs">
+			<h2 class="label strong">Substitutes <span class="dim">{ss.kind === 'ic' ? 'same socket' : g.startsWith('zener') ? 'same voltage' : 'same kind'}</span></h2>
+			<p class="note">{#if ss.kind === 'ic'}Parts that fit the same socket: the same function, pin count and pinout.{:else if g.startsWith('zener')}Zeners of the same voltage.{:else if ss.kind === 'opto'}Optocouplers and photoresistors of the same construction; the response speed and resistance range set how an effect sounds.{:else}Diodes of the same kind; for clipping, the forward drop is what you hear.{/if}
+				The figures are read off each part's datasheet{ss.page ? ` (this one's from page ${ss.page})` : ''}, typical where the sheet gives a typical value, otherwise the maximum. Closest first; the last column says what differs. A different part can change the sound, and a circuit may lean on one particular figure, so read the build document's notes before you swap.</p>
+			{#snippet specTable(rows: PartSpec[], other: boolean)}
+				<div class="scroll"><table class="sheet-table subs-table">
+					<thead><tr><th>Part</th>{#each specCols as c}<th class={c.text ? '' : 'num'}>{c.h}</th>{/each}<th class="num">Boards</th>{#if other}<th>Differs</th>{/if}</tr></thead>
+					<tbody>
+						{#each rows as s}
+							<tr>
+								<td class="mono">{#if slugOf(s.pn) && s.pn !== data.part.value}<a href="{base}/parts/{slugOf(s.pn)}">{s.pn}</a>{:else}{s.pn}{/if}</td>
+								{#each specCols as c}<td class="mono" class:num={!c.text}>{c.f(s)}</td>{/each}
+								<td class="mono num">{s.boards || ''}</td>
+								{#if other}<td class="diff">{(s.diff ?? []).join('; ')}{#if s.notes}<span class="dim">{s.diff?.length ? '. ' : ''}{s.notes}</span>{/if}</td>{/if}
+							</tr>
+						{/each}
+					</tbody>
+				</table></div>
+			{/snippet}
+			<h3 class="label">This part</h3>
+			{@render specTable([{ ...ss.spec, boards: ss.boards }], false)}
+			{#if ss.notes}<p class="note">{ss.notes}</p>{/if}
+			<h3 class="label">{ss.kind === 'ic' ? 'Fits the same socket' : 'Alternatives'}</h3>
+			{@render specTable(ss.subs, true)}
+		</section>
+	{/if}
 	{#if data.part.zeners?.length}
 		<section class="subs">
 			<h2 class="label strong">Zeners for {data.part.value.replace('V', '.').replace(/\.$/, '')} V</h2>
@@ -124,4 +210,9 @@
 	.subs-table td.num, .subs-table th.num { text-align: right; }
 	.subs-table { width: 100%; }
 	.scroll { overflow-x: auto; }
+	.subs h3 { margin: 12px 0 6px; }
+	/* short tables in a horizontal scroller: a sticky header would stick to the scroller, not the page */
+	.subs .scroll .subs-table th { position: static; }
+	.subs-table td.num { white-space: nowrap; }
+	.subs-table td.diff { color: var(--ink-2); font-size: 13px; min-width: 18ch; }
 </style>

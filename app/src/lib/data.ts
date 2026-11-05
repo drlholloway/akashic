@@ -1,11 +1,12 @@
 import { browser } from '$app/environment';
 import { base } from '$app/paths';
-import type { ChangeWeek, Circuit, IndexEntry, Needs, PartEntry, SubsEntry, VendorInfo } from './types';
+import type { ChangeWeek, Circuit, IndexEntry, Needs, PartEntry, SpecSubs, SpecSubsEntry, SubsEntry, VendorInfo } from './types';
 
 let indexPromise: Promise<IndexEntry[]> | null = null;
 let partsPromise: Promise<PartEntry[]> | null = null;
 let vendorsPromise: Promise<Record<string, VendorInfo>> | null = null;
 let subsPromise: Promise<Record<string, SubsEntry>> | null = null;
+let specSubsPromise: Promise<SpecSubs> | null = null;
 const circuitCache = new Map<string, Promise<Circuit>>();
 
 type Fetch = typeof fetch;
@@ -98,6 +99,13 @@ export function loadCircuit(fileId: string, fetchFn: Fetch = fetch): Promise<Cir
 		p.catch(() => circuitCache.delete(fileId)); // a failed fetch (offline) is tried again on the next visit
 	}
 	return p;
+}
+
+/** Datasheet substitutes for an IC, diode or opto part key, through the spellings that are the same part. */
+export async function loadSpecSubs(key: string, fetchFn: Fetch = fetch): Promise<SpecSubsEntry | null> {
+	specSubsPromise ??= getJson<SpecSubs>(fetchFn, 'specsubs.json').catch(() => ({ parts: {}, same: {} }));
+	const { parts, same } = await specSubsPromise;
+	return parts[same[key] ?? key] ?? null;
 }
 
 export function loadSubs(fetchFn: Fetch = fetch): Promise<Record<string, SubsEntry>> {

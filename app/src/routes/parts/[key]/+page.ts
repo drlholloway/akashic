@@ -1,5 +1,5 @@
 import { error } from '@sveltejs/kit';
-import { loadIndex, loadParts, loadSubs } from '$lib/data';
+import { loadIndex, loadParts, loadSpecSubs, loadSubs } from '$lib/data';
 import type { EntryGenerator, PageLoad } from './$types';
 
 export const entries: EntryGenerator = async () => {
@@ -14,6 +14,9 @@ export const load: PageLoad = async ({ params, fetch }) => {
 	if (!part) error(404, 'No such part');
 	const ids = new Set(part.circuits);
 	const subs = part.category === 'Q' ? (await loadSubs(fetch))[part.value.toUpperCase()] ?? null : null;
+	// ICs, diodes and optos: substitutes from the datasheet figures; a zener given only by voltage has its own table
+	const found = part.category === 'Q' ? null : await loadSpecSubs(part.key, fetch);
+	const specSubs = found?.subs.length && !(found.group.startsWith('zener') && part.zeners?.length) ? found : null;
 	const bySlug = new Map(parts.map((p) => [p.value.toUpperCase(), p.slug]));
 	// a zener's other grades and spellings are the same part here: 1N4739, 1N4739A; BZX79C9V1, BZX79-C9V1
 	const same = (pn: string) => {
@@ -25,5 +28,5 @@ export const load: PageLoad = async ({ params, fetch }) => {
 		const found = same(z.pn).sort((a, b) => b.count - a.count);
 		return [z.pn, { boards: new Set(found.flatMap((p) => p.circuits)).size, slug: found.find((p) => p.value.toUpperCase() === z.pn)?.slug ?? found[0]?.slug ?? '' }];
 	}));
-	return { part, rows: index.filter((e) => ids.has(e.id)), subs, partSlugs: Object.fromEntries(bySlug), zeners };
+	return { part, rows: index.filter((e) => ids.has(e.id)), subs, specSubs, partSlugs: Object.fromEntries(bySlug), zeners };
 };

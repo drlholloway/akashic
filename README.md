@@ -95,6 +95,21 @@ cd scraper && .venv/bin/pcblib import-transistors ../transistor-dump   # once; b
 The dump and the SQLite file stay out of git (`transistor-dump/`, `data/transistors.sqlite`);
 the export ships only the limits of the few hundred transistors the library names.
 
+### IC, diode and optocoupler substitutes
+
+ICs, diodes and optocouplers have no parameter database, so their figures are read off the
+datasheets the library links and kept in `scraper/pcblib/partspecs.json`: about 290 parts, each
+with the spellings that are the same part, the datasheet page the figures came from and a
+`group`. For an IC the group is a socket: the same function, pin count and pinout, so a dual
+op-amp sits with the other standard-pinout duals, a 7660 with the TC1044, and buffered and
+unbuffered CMOS inverters apart. For a diode it is the kind (silicon signal, rectifier,
+Schottky, germanium, zener by voltage), and for an opto the construction (Vactrol, bare LDR).
+`partspecs.py` ranks the rest of the group by the figures that matter for that kind
+(bandwidth, slew, noise and input type for an op-amp; forward drop for a clipping diode;
+on resistance and decay for a Vactrol) and states what differs: a JFET input, a 16 V supply
+limit, an external compensation capacitor, a higher forward drop. A part without a datasheet in
+hand has no entry. `pcblib export` writes `app/static/data/specsubs.json`.
+
 ### What is indexed and what is not
 
 When a build document gives one value column per version of the circuit, every column is

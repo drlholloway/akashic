@@ -27,6 +27,8 @@ decisions and `DESIGN.md` for the visual system. `CHANGELOG.md` becomes the rele
   by `pcblib import-transistors` from the MySQL dump in `transistor-dump/`), all git-ignored;
   `archive/` is committed and holds the documentation of closed stores. `transistors.py`
   holds the import, the tolerant part-number lookup and the substitute scoring.
+  `partspecs.json` holds IC, diode and opto figures read by hand off the linked datasheets, with
+  each part's socket (`group`); `partspecs.py` ranks substitutes within a group.
 
 ## Commands
 

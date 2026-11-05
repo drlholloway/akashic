@@ -4,7 +4,7 @@
 
 <svelte:head>
 	<title>Originals and parts · Guide · Akashic</title>
-	<meta name="description" content="Compare every board based on one pedal, find every circuit that uses a part, and read a part's datasheets and transistor substitutes." />
+	<meta name="description" content="Compare every board based on one pedal, find every circuit that uses a part, and read a part's datasheets and its substitutes." />
 </svelte:head>
 
 <header class="head">
@@ -70,6 +70,15 @@
 	<p>
 		The database has no pinouts or packages. Before you drop a substitute in, check its datasheet: a different pin order means turning
 		it on the board, and a different gain changes the sound, which is the point in a fuzz and a problem in a buffer.
+	</p>
+
+	<h3>IC, diode and opto substitutes</h3>
+	<p>
+		An IC's page, such as the <a href="{base}/parts/ic-tl072">TL072</a> or the <a href="{base}/parts/ic-lm308">LM308</a>, lists the
+		parts that fit the same socket: the same function, pin count and pinout. A diode's page, such as the
+		<a href="{base}/parts/d-1n34a">1N34A</a>, lists diodes of the same kind, and a Vactrol's lists the other Vactrols. The figures
+		are read off each part's datasheet, and the last column says what differs: a JFET or CMOS input, a supply limit below 18 V, a
+		compensation capacitor the original did not need, a higher forward drop. Only parts with a datasheet in hand are compared.
 	</p>
 
 	<h3>Zeners</h3>
