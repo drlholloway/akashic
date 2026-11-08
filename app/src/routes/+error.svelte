@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { base } from '$app/paths';
 </script>
 
 <svelte:head><title>{page.status} · Akashic</title></svelte:head>
@@ -8,7 +7,7 @@
 <div class="error">
 	<h1>{page.status === 503 ? 'Not available' : page.status}</h1>
 	<p>{page.error?.message}</p>
-	<p><a href="{base}/">Back to the circuits</a></p>
+	<p><a href="/">Back to the circuits</a></p>
 </div>
 
 <style>

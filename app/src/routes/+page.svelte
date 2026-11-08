@@ -1,17 +1,16 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
+	import { browser } from '$app/env';
 	import { goto } from '$app/navigation';
-	import { base } from '$app/paths';
 	import { page } from '$app/state';
-	import CircuitTable from '$lib/CircuitTable.svelte';
-	import { applyFilters, buildSearch, EMPTY_FILTERS, filtersFromParams, paramsFromFilters, type Filters } from '$lib/search';
-	import { BUILD_NAMES, BUILD_ORDER, VENDOR_NAMES, buildsOf, type Build, type IndexEntry } from '$lib/types';
-	import { currency } from '$lib/currency.svelte';
+	import CircuitTable from '#lib/CircuitTable.svelte';
+	import { applyFilters, buildSearch, EMPTY_FILTERS, filtersFromParams, paramsFromFilters, type Filters } from '#lib/search.ts';
+	import { BUILD_NAMES, BUILD_ORDER, VENDOR_NAMES, buildsOf, type Build, type IndexEntry } from '#lib/types.ts';
+	import { currency } from '#lib/currency.svelte.ts';
 	import { untrack } from 'svelte';
-	import CurrencySelect from '$lib/CurrencySelect.svelte';
-	import { controlLabels } from '$lib/controls';
-	import { folds } from '$lib/fold.svelte';
-	import { bench } from '$lib/bench.svelte';
+	import CurrencySelect from '#lib/CurrencySelect.svelte';
+	import { controlLabels } from '#lib/controls.ts';
+	import { folds } from '#lib/fold.svelte.ts';
+	import { bench } from '#lib/bench.svelte.ts';
 
 	let { data } = $props();
 	$effect.pre(() => buildSearch(data.index));
@@ -29,7 +28,7 @@
 
 	function update(patch: Partial<Filters>) {
 		const next = { ...filters, ...patch };
-		goto(`${base}/?${paramsFromFilters(next).toString()}`, { keepFocus: true, noScroll: true, replaceState: false });
+		goto(`/?${paramsFromFilters(next).toString()}`, { reset: false, replaceState: false });
 	}
 	function toggle(key: 'vendor' | 'category' | 'enclosure' | 'build', value: string) {
 		const cur = filters[key];
@@ -126,9 +125,9 @@
 				<h2 class="label strong">My bench</h2>
 				{#if bench.count || filters.bench}
 					<button type="button" class="chip" aria-pressed={filters.bench} title="Only the circuits you keep on your bench, in this browser" onclick={() => update({ bench: !filters.bench })}>On my bench <span class="count">{benchCount}</span></button>
-					<a class="bench-link" href="{base}/workbench/bench">Notes, export and sharing</a>
+					<a class="bench-link" href="/workbench/bench">Notes, export and sharing</a>
 				{:else}
-					<p class="bench-empty">Nothing on your bench yet. Search for a circuit, open it and press <span class="mono">+ My bench</span> to keep it. Your saved circuits show up here as a filter, and under <a href="{base}/workbench/bench">Workbench → My bench</a> with your notes.</p>
+					<p class="bench-empty">Nothing on your bench yet. Search for a circuit, open it and press <span class="mono">+ My bench</span> to keep it. Your saved circuits show up here as a filter, and under <a href="/workbench/bench">Workbench → My bench</a> with your notes.</p>
 				{/if}
 			</div>
 		{/if}
@@ -203,7 +202,7 @@
 				{#if filters.q}<button type="button" class="chip on" onclick={() => update({ q: '' })}>“{filters.q}” ×</button>{/if}
 				{#if filters.basedOn}<button type="button" class="chip on" onclick={() => update({ basedOn: '' })}>Based on {filters.basedOn} ×</button>{/if}
 				{#if filters.part}<button type="button" class="chip on" onclick={() => update({ part: '' })}>Uses {filters.part} ×</button>{/if}
-				{#if active || filters.q}<button type="button" class="chip" onclick={() => goto(`${base}/`)}>Clear all</button>{/if}
+				{#if active || filters.q}<button type="button" class="chip" onclick={() => goto('/')}>Clear all</button>{/if}
 			</div>
 			<CurrencySelect />
 			<label class="sort">
@@ -216,7 +215,7 @@
 				</select>
 			</label>
 		</div>
-		<p class="hint">Got parts in a drawer? <a href="{base}/workbench/build">See what you can build with them</a>.</p>
+		<p class="hint">Got parts in a drawer? <a href="/workbench/build">See what you can build with them</a>.</p>
 		<CircuitTable rows={results} onOriginal={(b) => update({ basedOn: b })} />
 	</section>
 </div>

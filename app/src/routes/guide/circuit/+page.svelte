@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { base } from '$app/paths';
 </script>
 
 <svelte:head>
@@ -11,7 +10,7 @@
 	<h1>Reading a circuit page</h1>
 	<p class="lede">
 		Every circuit has a page with what it is, where to get it and what goes on it. From top to bottom, this is what each part tells
-		you. <a href="{base}/circuit/pedalpcb-pcb012">PedalPCB's Muffin Fuzz</a> is a good one to keep open beside this.
+		you. <a href="/circuit/pedalpcb-pcb012">PedalPCB's Muffin Fuzz</a> is a good one to keep open beside this.
 	</p>
 </header>
 
@@ -90,7 +89,7 @@
 	</dl>
 	<p>
 		Check any marked value against the build document before you order. A box headed <em>Check before you build</em> lists the
-		values the reader was not sure of, as on <a href="{base}/circuit/bentfishbowl-clearglass-some-new-glass-for-your-bass">Bent Fishbowl's Clearglass</a>.
+		values the reader was not sure of, as on <a href="/circuit/bentfishbowl-clearglass-some-new-glass-for-your-bass">Bent Fishbowl's Clearglass</a>.
 		Where a blog post corrects its own schematic, the corrections are applied to the list and listed above it as <em>Fixes to the
 		schematic</em>.
 	</p>

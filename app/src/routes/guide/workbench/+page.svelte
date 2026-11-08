@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { base } from '$app/paths';
 </script>
 
 <svelte:head>
@@ -10,7 +9,7 @@
 <header class="head">
 	<h1>My bench and What can I build</h1>
 	<p class="lede">
-		Two tools under <a href="{base}/workbench">Workbench</a> for when you are choosing a build: a bench to keep the circuits you are
+		Two tools under <a href="/workbench">Workbench</a> for when you are choosing a build: a bench to keep the circuits you are
 		considering, and a parts matcher that shows what the parts you already have can build. Both are kept in your browser. Akashic has
 		no accounts and nothing you enter leaves your device unless you export it or share a link.
 	</p>
@@ -23,7 +22,7 @@
 		want to remember (“try 2N5088s”, “order with the Klon parts”), up to 300 characters. Kept circuits are tagged <em>Bench</em> in
 		every circuits table, and <em>On my bench</em> at the top of the Circuits filters lists only them.
 	</p>
-	<p><a href="{base}/workbench/bench">Workbench → My bench</a> lists them with their notes and the date you added each, and lets you:</p>
+	<p><a href="/workbench/bench">Workbench → My bench</a> lists them with their notes and the date you added each, and lets you:</p>
 	<ul>
 		<li><strong>Open in Circuits</strong>, to filter and sort your bench like any other list,</li>
 		<li><strong>What can I build from it</strong>, to match your parts against only these circuits,</li>
@@ -40,7 +39,7 @@
 <section>
 	<h2 class="label strong">What can I build</h2>
 	<p>
-		<a href="{base}/workbench/build">What can I build</a> takes the parts in your drawers and checks them against every parts list in
+		<a href="/workbench/build">What can I build</a> takes the parts in your drawers and checks them against every parts list in
 		the library.
 	</p>
 	<h3>Listing your parts</h3>
@@ -70,9 +69,9 @@
 <section>
 	<h2 class="label strong">The rest of the Workbench</h2>
 	<p>
-		<a href="{base}/workbench/sourcing">Sourcing</a>, <a href="{base}/workbench/building">Building</a> and
-		<a href="{base}/workbench/links">Links</a> are one builder's notes: where to buy which parts, the order to build a board in, and
+		<a href="/workbench/sourcing">Sourcing</a>, <a href="/workbench/building">Building</a> and
+		<a href="/workbench/links">Links</a> are one builder's notes: where to buy which parts, the order to build a board in, and
 		the books, forums and calculators worth keeping open. Unlike the rest of Akashic, they are opinion. If this is your first pedal,
-		start with the <a href="{base}/workbench">Workbench overview</a>.
+		start with the <a href="/workbench">Workbench overview</a>.
 	</p>
 </section>

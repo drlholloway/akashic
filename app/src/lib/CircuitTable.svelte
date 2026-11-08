@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { base } from '$app/paths';
 	import Faceplate from './Faceplate.svelte';
 	import { currency } from './currency.svelte';
 	import { bench } from './bench.svelte';
@@ -44,7 +43,7 @@
 				<tr>
 					<td class="glyph"><Faceplate enclosure={e.enclosure} controls={e.controls} size={30} /></td>
 					<td class="name">
-						<a href="{base}/circuit/{e.file_id}">{e.name}</a>
+						<a href="/circuit/{e.file_id}">{e.name}</a>
 						{#if e.subtitle}<span class="sub">{e.subtitle}</span>{/if}
 						{#each buildsOf(e).filter((b) => b !== 'pcb') as b}<span class="build" title={e.verified === true ? 'Layout marked verified by its source' : e.verified === false ? 'Layout not yet verified by a build' : undefined}>{BUILD_NAMES[b]}{#if e.board && b === buildsOf(e)[0]} {e.board.replace('x', '×')}{/if}</span>{/each}
 						{#if bench.has(e.id)}<span class="build on-bench" title="On my bench">Bench</span>{/if}
@@ -59,7 +58,7 @@
 								{#if onOriginal}
 									<button type="button" class="linkish" onclick={() => onOriginal(o)} title="Show every circuit based on the {o}">{o}</button>
 								{:else}
-									<a href="{base}/?based={encodeURIComponent(o)}">{o}</a>
+									<a href="/?based={encodeURIComponent(o)}">{o}</a>
 								{/if}
 							{/each}
 						{:else if e.based_on}

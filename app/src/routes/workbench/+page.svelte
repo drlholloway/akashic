@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { base } from '$app/paths';
 </script>
 
 <svelte:head>
@@ -15,11 +14,11 @@
 <section>
 	<h2 class="label strong">What's here</h2>
 	<ul>
-		<li><a href="{base}/workbench/sourcing">Sourcing</a>: which shop I use for which part, and the brands I stick to, from resistors to wire.</li>
-		<li><a href="{base}/workbench/building">Building</a>: the soldering iron and solder, setting up, and the order the parts go on the board.</li>
-		<li><a href="{base}/workbench/bench">My bench</a>: the circuits you keep, with a note on each, saved in your browser. Export it or share it as a link.</li>
-		<li><a href="{base}/workbench/build">What can I build</a>: list the parts in your drawers and see which circuits they cover, and which are a part or two away.</li>
-		<li><a href="{base}/workbench/links">Links</a>: books, courses, forums, calculators and guides for having your own boards made.</li>
+		<li><a href="/workbench/sourcing">Sourcing</a>: which shop I use for which part, and the brands I stick to, from resistors to wire.</li>
+		<li><a href="/workbench/building">Building</a>: the soldering iron and solder, setting up, and the order the parts go on the board.</li>
+		<li><a href="/workbench/bench">My bench</a>: the circuits you keep, with a note on each, saved in your browser. Export it or share it as a link.</li>
+		<li><a href="/workbench/build">What can I build</a>: list the parts in your drawers and see which circuits they cover, and which are a part or two away.</li>
+		<li><a href="/workbench/links">Links</a>: books, courses, forums, calculators and guides for having your own boards made.</li>
 	</ul>
 </section>
 
@@ -29,7 +28,7 @@
 		Start with a kit, not a bare board. The
 		<a href="https://shop.mas-effects.com/products/ultimate-beginner-pedal-kit" target="_blank" rel="noopener">Ultimate Beginner Pedal Kit</a>
 		from Mas Effects has everything but the soldering iron and takes you from zero to a working pedal. After that, pick a
-		board from the <a href="{base}/">circuits</a>, read <a href="{base}/workbench/building">Building</a>, and order parts with
-		<a href="{base}/workbench/sourcing">Sourcing</a> open.
+		board from the <a href="/">circuits</a>, read <a href="/workbench/building">Building</a>, and order parts with
+		<a href="/workbench/sourcing">Sourcing</a> open.
 	</p>
 </section>

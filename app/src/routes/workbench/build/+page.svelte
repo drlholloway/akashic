@@ -1,9 +1,8 @@
 <script lang="ts">
-	import { base } from '$app/paths';
 	import { goto } from '$app/navigation';
 	import { page } from '$app/state';
-	import { bench } from '$lib/bench.svelte';
-	import { PART_CATEGORY_NAMES, PART_ORDER, VENDOR_NAMES, type IndexEntry, type PartEntry } from '$lib/types';
+	import { bench } from '#lib/bench.svelte.ts';
+	import { PART_CATEGORY_NAMES, PART_ORDER, VENDOR_NAMES, type IndexEntry, type PartEntry } from '#lib/types.ts';
 
 	let { data } = $props();
 
@@ -150,7 +149,7 @@
 	});
 	// Surprise me: one circuit from the list on screen (this tab, narrowed by the filter), opened.
 	const pickRandom = () => {
-		if (view.length) goto(`${base}/circuit/${view[Math.floor(Math.random() * view.length)].e.file_id}`);
+		if (view.length) goto(`/circuit/${view[Math.floor(Math.random() * view.length)].e.file_id}`);
 	};
 	const TABS = ['Ready to build', '1 part away', '2 parts away', '3 parts away'];
 	const gapText = (g: Gap) => g.alts.slice(0, 2).map((p) => p.value).join(' or ') + (g.alts.length > 2 ? ' or …' : '') + (g.n > 1 ? ` ×${g.n}` : '');
@@ -159,7 +158,7 @@
 <svelte:head><title>What can I build · Akashic</title></svelte:head>
 
 <h1>What can I build?</h1>
-<p class="lede">List the parts you have and see which circuits they cover, and which are a part or two away. Parts come from the <a href="{base}/parts">catalog</a>: transistors, ICs, diodes, pots and the rest of what a parts list names by number. Resistors, capacitors, LEDs, jacks and the footswitch are not counted, since they go in everything. Your list is kept in this browser and goes nowhere else.</p>
+<p class="lede">List the parts you have and see which circuits they cover, and which are a part or two away. Parts come from the <a href="/parts">catalog</a>: transistors, ICs, diodes, pots and the rest of what a parts list names by number. Resistors, capacitors, LEDs, jacks and the footswitch are not counted, since they go in everything. Your list is kept in this browser and goes nowhere else.</p>
 
 <div class="bench">
 	<div class="mine">
@@ -194,7 +193,7 @@
 						{#each items as k (k)}
 							{@const p = data.parts[at.get(k)!]}
 							<li>
-								<a class="mono val" href="{base}/parts/{p.slug}">{p.value}</a>
+								<a class="mono val" href="/parts/{p.slug}">{p.value}</a>
 								<input type="number" min="1" inputmode="numeric" placeholder="any" value={inv[k] ?? ''} oninput={(ev) => setQty(k, ev.currentTarget.value)} aria-label="How many {p.value}" title="How many you have; empty means enough for any board" />
 								<button type="button" class="x" onclick={() => remove(k)} aria-label="Remove {p.value}">×</button>
 							</li>
@@ -249,7 +248,7 @@
 						{#each view.slice(0, shown) as r (r.e.id)}
 							<tr>
 								<td>
-									<a class="name" href="{base}/circuit/{r.e.file_id}">{r.e.name}</a>
+									<a class="name" href="/circuit/{r.e.file_id}">{r.e.name}</a>
 									{#if r.e.original && r.e.original !== r.e.name}<span class="dim orig">{r.e.original}</span>{/if}
 									{#if r.unread}<span class="dim orig" title="Rows of this parts list that name no part the catalog knows. Check the build document.">+{r.unread} unread {r.unread === 1 ? 'row' : 'rows'}</span>{/if}
 								</td>

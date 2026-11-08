@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { base } from '$app/paths';
 </script>
 
 <svelte:head>
@@ -19,7 +18,7 @@
 <section>
 	<h2 class="label strong">A first look</h2>
 	<ol>
-		<li>Type a pedal, a part or a kind of effect in the search box at the top, for example <a href="{base}/?q=rat">Rat</a>, and press Enter.</li>
+		<li>Type a pedal, a part or a kind of effect in the search box at the top, for example <a href="/?q=rat">Rat</a>, and press Enter.</li>
 		<li>Narrow the list with the filters on the left: vendor, category, enclosure, knob count, controls, how it is built.</li>
 		<li>Open a circuit. Its page has the vendor and price, the build document, the controls and the full parts list.</li>
 		<li>Press <span class="mono">+ My bench</span> to keep it, then buy the board from the vendor with the button at the top of the page.</li>
@@ -31,11 +30,11 @@
 	<table class="sheet-table try">
 		<thead><tr><th>Go to</th><th>What you get</th></tr></thead>
 		<tbody>
-			<tr><td><a href="{base}/?based=ProCo%20RAT">Based on the ProCo RAT</a></td><td>Every board and layout that clones one pedal, from every source, in one list.</td></tr>
-			<tr><td><a href="{base}/parts/ic-lm308">LM308</a></td><td>Every circuit whose parts list names a part, with its datasheet.</td></tr>
-			<tr><td><a href="{base}/?enc=125B&knobs=3">125B, 3 knobs</a></td><td>Boards that fit the enclosure you have drilled.</td></tr>
-			<tr><td><a href="{base}/workbench/build">What can I build</a></td><td>The circuits the parts in your drawers already cover, and the ones a part or two away.</td></tr>
-			<tr><td><a href="{base}/originals">Originals</a></td><td>The commercial pedals behind the boards, with how many clones each has.</td></tr>
+			<tr><td><a href="/?based=ProCo%20RAT">Based on the ProCo RAT</a></td><td>Every board and layout that clones one pedal, from every source, in one list.</td></tr>
+			<tr><td><a href="/parts/ic-lm308">LM308</a></td><td>Every circuit whose parts list names a part, with its datasheet.</td></tr>
+			<tr><td><a href="/?enc=125B&knobs=3">125B, 3 knobs</a></td><td>Boards that fit the enclosure you have drilled.</td></tr>
+			<tr><td><a href="/workbench/build">What can I build</a></td><td>The circuits the parts in your drawers already cover, and the ones a part or two away.</td></tr>
+			<tr><td><a href="/originals">Originals</a></td><td>The commercial pedals behind the boards, with how many clones each has.</td></tr>
 		</tbody>
 	</table>
 </section>
@@ -45,7 +44,7 @@
 	<dl class="terms">
 		<div><dt class="label">Circuit</dt><dd>One board, layout or schematic from one source. The same pedal from two vendors is two circuits.</dd></div>
 		<div><dt class="label">Based on</dt><dd>The commercial pedal a circuit clones or adapts, the <em>original</em>. Sources spell them differently; Akashic files “Pro Co RAT Distortion” and “ProCo RAT” under one original.</dd></div>
-		<div><dt class="label">Source</dt><dd>Where a circuit comes from: a PCB shop, a layout blog, a code repository, a schematic archive. The <a href="{base}/guide/questions">Questions</a> page lists the kinds.</dd></div>
+		<div><dt class="label">Source</dt><dd>Where a circuit comes from: a PCB shop, a layout blog, a code repository, a schematic archive. The <a href="/guide/questions">Questions</a> page lists the kinds.</dd></div>
 		<div><dt class="label">Build</dt><dd>What you build it on: a bought PCB, or vero (stripboard), perfboard, tagboard or turret board from a layout drawing.</dd></div>
 		<div><dt class="label">Parts list</dt><dd>The bill of materials (BOM), one row per part. <em>Ref</em> is the designator printed on the board (R1, C4, Q2).</dd></div>
 		<div><dt class="label">Normalized</dt><dd>A value rewritten one way, so 4k7, 4.7K and 4700 all read 4k7 and match each other across every source.</dd></div>
@@ -67,10 +66,10 @@
 <section>
 	<h2 class="label strong">In this guide</h2>
 	<ul>
-		<li><a href="{base}/guide/search">Searching and filtering</a>: what the search box matches, the filters, sorting, and sharing a search.</li>
-		<li><a href="{base}/guide/circuit">Reading a circuit page</a>: the header, the buttons, the schematic and the parts list with its marks.</li>
-		<li><a href="{base}/guide/parts">Originals and parts</a>: comparing clones of one pedal, a part's page, datasheets and substitutes.</li>
-		<li><a href="{base}/guide/workbench">My bench and What can I build</a>: keeping circuits, notes, sharing, and matching your parts.</li>
-		<li><a href="{base}/guide/questions">Questions</a>: prices, sources, missing schematics, privacy and reporting a mistake.</li>
+		<li><a href="/guide/search">Searching and filtering</a>: what the search box matches, the filters, sorting, and sharing a search.</li>
+		<li><a href="/guide/circuit">Reading a circuit page</a>: the header, the buttons, the schematic and the parts list with its marks.</li>
+		<li><a href="/guide/parts">Originals and parts</a>: comparing clones of one pedal, a part's page, datasheets and substitutes.</li>
+		<li><a href="/guide/workbench">My bench and What can I build</a>: keeping circuits, notes, sharing, and matching your parts.</li>
+		<li><a href="/guide/questions">Questions</a>: prices, sources, missing schematics, privacy and reporting a mistake.</li>
 	</ul>
 </section>

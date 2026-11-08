@@ -126,7 +126,7 @@ export function applyFilters(entries: IndexEntry[], f: Filters): IndexEntry[] {
 	return out;
 }
 
-export function filtersFromParams(p: URLSearchParams): Filters {
+export function filtersFromParams(p: Pick<URLSearchParams, 'get' | 'getAll'>): Filters {
 	const list = (k: string) => p.getAll(k).flatMap((v) => v.split(',')).filter(Boolean);
 	const knobs = p.get('knobs');
 	return {

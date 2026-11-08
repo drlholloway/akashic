@@ -1,5 +1,4 @@
-import { browser } from '$app/environment';
-import { base } from '$app/paths';
+import { browser } from '$app/env';
 import type { ChangeWeek, Circuit, IndexEntry, Needs, PartEntry, SpecSubs, SpecSubsEntry, SubsEntry, VendorInfo } from './types';
 
 let indexPromise: Promise<IndexEntry[]> | null = null;
@@ -12,7 +11,7 @@ const circuitCache = new Map<string, Promise<Circuit>>();
 type Fetch = typeof fetch;
 
 async function getJson<T>(fetchFn: Fetch, path: string): Promise<T> {
-	const res = await fetchFn(`${base}/data/${path}`);
+	const res = await fetchFn(`/data/${path}`);
 	if (!res.ok) throw new Error(`${path}: ${res.status}`);
 	return (await res.json()) as T;
 }
@@ -81,7 +80,7 @@ export function loadCircuit(fileId: string, fetchFn: Fetch = fetch): Promise<Cir
 	let p = circuitCache.get(fileId);
 	if (!p) {
 		const path = `circuits/${fileId}.json`;
-		const inPage = browser && !embedded.has(fileId) && document.querySelector(`script[data-sveltekit-fetched][data-url="${base}/data/${path}"]`);
+		const inPage = browser && !embedded.has(fileId) && document.querySelector(`script[data-sveltekit-fetched][data-url="/data/${path}"]`);
 		if (!browser || inPage) {
 			embedded.add(fileId);
 			p = getJson<Circuit>(fetchFn, path);

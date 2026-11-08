@@ -1,7 +1,6 @@
 <script lang="ts">
-	import { base } from '$app/paths';
-	import CircuitTable from '$lib/CircuitTable.svelte';
-	import { PART_CATEGORY_NAMES, type PartSpec, type TransistorSpec } from '$lib/types';
+	import CircuitTable from '#lib/CircuitTable.svelte';
+	import { PART_CATEGORY_NAMES, type PartSpec, type TransistorSpec } from '#lib/types.ts';
 	let { data } = $props();
 	const subs = $derived(data.subs);
 	const isFet = $derived(subs?.kind === 'jfet' || subs?.kind === 'mosfet');
@@ -91,17 +90,17 @@
 
 <div class="part">
 	<header class="head">
-		<p class="label"><a href="{base}/parts">Parts</a> · {PART_CATEGORY_NAMES[data.part.category] ?? data.part.category}</p>
+		<p class="label"><a href="/parts">Parts</a> · {PART_CATEGORY_NAMES[data.part.category] ?? data.part.category}</p>
 		<h1 class="mono">{data.part.value}</h1>
 		<p class="lede">{#if data.part.desc}{data.part.desc}. {/if}{data.rows.length} {data.rows.length === 1 ? 'circuit uses' : 'circuits use'} this part{#if data.part.types.length}. Listed as: {data.part.types.join('; ')}{/if}.</p>
 		{#if (data.part.datasheets?.length ?? 0) > 1}
 			{@const sheets = data.part.datasheets ?? []}
 			{@const reissued = /^https?:/.test(sheets[0].href)}
-			<p class="sheet">Datasheets: {#each sheets as d, i}{#if i}<span class="dim">{' · '}</span>{/if}<a href={/^https?:/.test(d.href) ? d.href : `${base}/${d.href}`} target="_blank" rel="noopener">{d.maker || `copy ${i + 1}`}{d.selector ? ' (selector table)' : ''}</a>{/each} <span class="dim">· {reissued ? 'the original is discontinued and made again under another number; its archived sheet follows' : `archived copies from ${sheets.length} fabs; the part is discontinued and the makers no longer publish it`}</span></p>
+			<p class="sheet">Datasheets: {#each sheets as d, i}{#if i}<span class="dim">{' · '}</span>{/if}<a href={/^https?:/.test(d.href) ? d.href : `/${d.href}`} target="_blank" rel="noopener">{d.maker || `copy ${i + 1}`}{d.selector ? ' (selector table)' : ''}</a>{/each} <span class="dim">· {reissued ? 'the original is discontinued and made again under another number; its archived sheet follows' : `archived copies from ${sheets.length} fabs; the part is discontinued and the makers no longer publish it`}</span></p>
 		{:else if data.part.datasheet}
 			{@const maker = data.part.datasheets?.[0]?.maker}
 			{@const hosted = !/^https?:/.test(data.part.datasheet)}
-			<p class="sheet"><a href={hosted ? `${base}/${data.part.datasheet}` : data.part.datasheet} target="_blank" rel="noopener">{data.part.selector ? 'Selector table' : 'Datasheet'}</a> <span class="dim">· {data.part.selector ? 'a row in a maker\'s catalog, not a full datasheet; the part is discontinued' : hosted ? `archived copy${maker ? ` from ${maker}` : ''}; ${data.part.sheet_only ? 'kept here as it was not found on the maker\'s own site' : 'the part is discontinued and the maker no longer publishes it'}` : `${maker ? `${maker} · ` : ''}from ${new URL(data.part.datasheet).hostname.replace(/^www\./, '')}`}</span></p>
+			<p class="sheet"><a href={hosted ? `/${data.part.datasheet}` : data.part.datasheet} target="_blank" rel="noopener">{data.part.selector ? 'Selector table' : 'Datasheet'}</a> <span class="dim">· {data.part.selector ? 'a row in a maker\'s catalog, not a full datasheet; the part is discontinued' : hosted ? `archived copy${maker ? ` from ${maker}` : ''}; ${data.part.sheet_only ? 'kept here as it was not found on the maker\'s own site' : 'the part is discontinued and the maker no longer publishes it'}` : `${maker ? `${maker} · ` : ''}from ${new URL(data.part.datasheet).hostname.replace(/^www\./, '')}`}</span></p>
 		{/if}
 	</header>
 	{#if subs}
@@ -114,7 +113,7 @@
 					<tbody>
 						{#each rows as s}
 							<tr>
-								<td class="mono">{#if slugOf(s.pn)}<a href="{base}/parts/{slugOf(s.pn)}">{s.pn}</a>{:else}{s.pn}{/if}</td>
+								<td class="mono">{#if slugOf(s.pn)}<a href="/parts/{slugOf(s.pn)}">{s.pn}</a>{:else}{s.pn}{/if}</td>
 								{#each cols as c}<td class="mono num">{c.f(s)}</td>{/each}
 								{#if showBoards}<td class="mono num">{s.boards}</td>{/if}
 							</tr>
@@ -156,7 +155,7 @@
 					<tbody>
 						{#each rows as s}
 							<tr>
-								<td class="mono">{#if slugOf(s.pn) && s.pn !== data.part.value}<a href="{base}/parts/{slugOf(s.pn)}">{s.pn}</a>{:else}{s.pn}{/if}</td>
+								<td class="mono">{#if slugOf(s.pn) && s.pn !== data.part.value}<a href="/parts/{slugOf(s.pn)}">{s.pn}</a>{:else}{s.pn}{/if}</td>
 								{#each specCols as c}<td class="mono" class:num={!c.text}>{c.f(s)}</td>{/each}
 								<td class="mono num">{s.boards || ''}</td>
 								{#if other}<td class="diff">{(s.diff ?? []).join('; ')}{#if s.notes}<span class="dim">{s.diff?.length ? '. ' : ''}{s.notes}</span>{/if}</td>{/if}
@@ -181,7 +180,7 @@
 				<tbody>
 					{#each data.part.zeners as z}
 						<tr>
-							<td class="mono">{#if data.zeners[z.pn]?.slug}<a href="{base}/parts/{data.zeners[z.pn].slug}">{z.pn}</a>{:else}{z.pn}{/if}</td>
+							<td class="mono">{#if data.zeners[z.pn]?.slug}<a href="/parts/{data.zeners[z.pn].slug}">{z.pn}</a>{:else}{z.pn}{/if}</td>
 							<td class="mono">{z.series}</td>
 							<td class="mono">{z.power}</td>
 							<td class="mono">{z.package}</td>

@@ -1,4 +1,4 @@
-import { loadIndex, loadNeeds, loadParts } from '$lib/data';
+import { loadIndex, loadNeeds, loadParts } from '#lib/data.ts';
 import type { PageLoad } from './$types';
 
 export const load: PageLoad = async ({ fetch }) => {

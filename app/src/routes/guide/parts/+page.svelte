@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { base } from '$app/paths';
 </script>
 
 <svelte:head>
@@ -18,7 +17,7 @@
 <section>
 	<h2 class="label strong">Originals</h2>
 	<p>
-		<a href="{base}/originals">Originals</a> lists the commercial pedals the circuits are based on, by brand and then pedal, with:
+		<a href="/originals">Originals</a> lists the commercial pedals the circuits are based on, by brand and then pedal, with:
 	</p>
 	<ul>
 		<li><strong>Circuits</strong>: how many boards, layouts and schematics copy or adapt it,</li>
@@ -28,7 +27,7 @@
 	<p>
 		Type in <em>Filter</em> to find a pedal (<span class="mono">klon</span>, <span class="mono">tube screamer</span>), then pick it to open
 		every circuit based on it in the Circuits table. From there the usual filters apply: only the ones in a 1590B, only the ones in
-		stock, only the vero layouts. <a href="{base}/?based=Electro-Harmonix%20Big%20Muff%20Pi">Every Big Muff Pi</a> is a good place to
+		stock, only the vero layouts. <a href="/?based=Electro-Harmonix%20Big%20Muff%20Pi">Every Big Muff Pi</a> is a good place to
 		see how far the boards of one pedal differ.
 	</p>
 	<p>
@@ -40,7 +39,7 @@
 <section>
 	<h2 class="label strong">The parts cross-reference</h2>
 	<p>
-		<a href="{base}/parts">Parts</a> lists every part named by number across all the parts lists, grouped by kind: diodes, pots
+		<a href="/parts">Parts</a> lists every part named by number across all the parts lists, grouped by kind: diodes, pots
 		(by taper, then value), ICs, transistors, switches, trimmers, optocouplers, inductors, transformers and crystals. The number beside
 		each is how many circuits use it. Resistors and capacitors are left out, since every circuit has them. <em>Filter</em> matches the
 		part number and its description, so <span class="mono">delay</span> finds the delay chips and <span class="mono">jfet</span> the JFETs.
@@ -49,7 +48,7 @@
 
 <section>
 	<h2 class="label strong">A part's page</h2>
-	<p>Open a part, such as the <a href="{base}/parts/ic-lm308">LM308</a>, and you get:</p>
+	<p>Open a part, such as the <a href="/parts/ic-lm308">LM308</a>, and you get:</p>
 	<ul>
 		<li><strong>What it is</strong> and how the parts lists describe it.</li>
 		<li>
@@ -62,7 +61,7 @@
 
 	<h3>Transistor substitutes</h3>
 	<p>
-		A transistor's page, such as the <a href="{base}/parts/q-2n5088">2N5088</a>, suggests substitutes from a database of transistor
+		A transistor's page, such as the <a href="/parts/q-2n5088">2N5088</a>, suggests substitutes from a database of transistor
 		limits. Candidates share the material (silicon or germanium) and the polarity or channel, and are ranked by how close their gain,
 		voltage, current, power and speed are. They come in two lists: parts that other boards in the library already use, and the
 		closest by the numbers.
@@ -74,16 +73,16 @@
 
 	<h3>IC, diode and opto substitutes</h3>
 	<p>
-		An IC's page, such as the <a href="{base}/parts/ic-tl072">TL072</a> or the <a href="{base}/parts/ic-lm308">LM308</a>, lists the
+		An IC's page, such as the <a href="/parts/ic-tl072">TL072</a> or the <a href="/parts/ic-lm308">LM308</a>, lists the
 		parts that fit the same socket: the same function, pin count and pinout. A diode's page, such as the
-		<a href="{base}/parts/d-1n34a">1N34A</a>, lists diodes of the same kind, and a Vactrol's lists the other Vactrols. The figures
+		<a href="/parts/d-1n34a">1N34A</a>, lists diodes of the same kind, and a Vactrol's lists the other Vactrols. The figures
 		are read off each part's datasheet, and the last column says what differs: a JFET or CMOS input, a supply limit below 18 V, a
 		compensation capacitor the original did not need, a higher forward drop. Only parts with a datasheet in hand are compared.
 	</p>
 
 	<h3>Zeners</h3>
 	<p>
-		A parts list that gives only a zener's voltage, such as <a href="{base}/parts/d-9v1">9V1</a>, gets a page listing the zener parts
+		A parts list that gives only a zener's voltage, such as <a href="/parts/d-9v1">9V1</a>, gets a page listing the zener parts
 		of that voltage, their power rating and package, with a note on which size fits a pedal board.
 	</p>
 </section>
@@ -93,6 +92,6 @@
 	<p>
 		On any circuit page, the <em>Normalized</em> column of the parts list links each numbered part to its page, so you can go from a
 		board you like to every other board that uses its chip. From a part's page, <em>What can I build</em> on the
-		<a href="{base}/guide/workbench">Workbench</a> takes the next step: which circuits the parts you have would finish.
+		<a href="/guide/workbench">Workbench</a> takes the next step: which circuits the parts you have would finish.
 	</p>
 </section>
