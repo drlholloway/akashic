@@ -1,6 +1,6 @@
-import { browser } from '$app/environment';
+import { browser } from '$app/env';
 import { error } from '@sveltejs/kit';
-import { loadCircuit, loadIndex } from '$lib/data';
+import { loadCircuit, loadIndex } from '#lib/data.ts';
 import type { EntryGenerator, PageLoad } from './$types';
 
 export const entries: EntryGenerator = async () => {

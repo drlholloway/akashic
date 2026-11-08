@@ -1,12 +1,11 @@
 <script lang="ts">
-	import { controlGroup } from '$lib/controls';
-	import { base } from '$app/paths';
+	import { controlGroup } from '#lib/controls.ts';
 	import { page } from '$app/state';
-	import { makerContact, wrongParseUrl } from '$lib/site';
-	import Faceplate from '$lib/Faceplate.svelte';
-	import { currency } from '$lib/currency.svelte';
-	import { bench } from '$lib/bench.svelte';
-	import { BUILD_NAMES, PART_CATEGORY_NAMES, PART_ORDER, VENDOR_FAB, VENDOR_NAMES, VENDOR_STORE, VENDOR_KIND, originalsOf, primaryAction, type BomRow } from '$lib/types';
+	import { makerContact, wrongParseUrl } from '#lib/site.ts';
+	import Faceplate from '#lib/Faceplate.svelte';
+	import { currency } from '#lib/currency.svelte.ts';
+	import { bench } from '#lib/bench.svelte.ts';
+	import { BUILD_NAMES, PART_CATEGORY_NAMES, PART_ORDER, VENDOR_FAB, VENDOR_NAMES, VENDOR_STORE, VENDOR_KIND, originalsOf, primaryAction, type BomRow } from '#lib/types.ts';
 
 	let { data } = $props();
 	const c = $derived(data.circuit);
@@ -81,10 +80,10 @@
 			<p class="label face-cap">{c.enclosure || 'Enclosure not stated'}{knobs.length ? ` · ${knobs.length} ${knobs.length === 1 ? 'knob' : 'knobs'}` : ''}</p>
 		</div>
 		<div class="title">
-			<p class="label"><a href="{base}/?vendor={c.vendor}">{VENDOR_NAMES[c.vendor]}</a>{#if c.sku} · <span class="mono">{c.sku}</span>{/if}</p>
+			<p class="label"><a href="/?vendor={c.vendor}">{VENDOR_NAMES[c.vendor]}</a>{#if c.sku} · <span class="mono">{c.sku}</span>{/if}</p>
 			<h1>{c.name}{#if c.subtitle}<span class="sub">{c.subtitle}</span>{/if}{#if lay.verified === true}<span class="vtag" title="{VENDOR_NAMES[c.vendor]} marks this layout as verified: someone has built it and it works">Verified</span>{/if}</h1>
 			{#if c.original}
-				<p class="based">{c.own_design ? 'The original ' : 'Based on the '}{#each originalsOf(c) as o, n}{#if n}{' and the '}{/if}<a href="{base}/?based={encodeURIComponent(o)}">{o}</a>{/each}{#if clones}<span class="dim"> · {clones} other {clones === 1 ? (c.own_design ? 'board or layout builds' : 'board clones') : (c.own_design ? 'boards and layouts build' : 'boards clone')} {originalsOf(c).length > 1 ? 'one of them' : 'it'}</span>{/if}{#if makerBoard}<span class="dim"> · the maker's own board is</span>{' '}<a href="{base}/circuit/{makerBoard.file_id}">{makerBoard.name} by {VENDOR_NAMES[makerBoard.vendor]}</a>{/if}</p>
+				<p class="based">{c.own_design ? 'The original ' : 'Based on the '}{#each originalsOf(c) as o, n}{#if n}{' and the '}{/if}<a href="/?based={encodeURIComponent(o)}">{o}</a>{/each}{#if clones}<span class="dim"> · {clones} other {clones === 1 ? (c.own_design ? 'board or layout builds' : 'board clones') : (c.own_design ? 'boards and layouts build' : 'boards clone')} {originalsOf(c).length > 1 ? 'one of them' : 'it'}</span>{/if}{#if makerBoard}<span class="dim"> · the maker's own board is</span>{' '}<a href="/circuit/{makerBoard.file_id}">{makerBoard.name} by {VENDOR_NAMES[makerBoard.vendor]}</a>{/if}</p>
 			{:else if c.based_on}
 				<p class="based dim">Based on {c.based_on}</p>
 			{/if}
@@ -96,14 +95,14 @@
 				<p class="contact">{contact.maker} also sells {contact.also}: <a href={contact.url} target="_blank" rel="noopener">message {contact.handle ?? contact.maker} on {contact.where}</a>.</p>
 			{/if}
 			<dl class="specs">
-				<div><dt class="label">Category</dt><dd><a href="{base}/?cat={encodeURIComponent(c.category)}">{c.category}</a>{#if c.effect_type && c.effect_type !== c.category} <span class="dim">· {c.effect_type}</span>{/if}</dd></div>
-				{#if knobs.length}<div><dt class="label">Controls</dt><dd>{#each knobs as k, i}{#if i}{' · '}{/if}{@const g = controlGroup(k)}{#if g}<a href="{base}/?ctl={encodeURIComponent(g.label)}" title="Circuits with a {g.label} control">{k}</a>{:else}{k}{/if}{/each}</dd></div>{/if}
+				<div><dt class="label">Category</dt><dd><a href="/?cat={encodeURIComponent(c.category)}">{c.category}</a>{#if c.effect_type && c.effect_type !== c.category} <span class="dim">· {c.effect_type}</span>{/if}</dd></div>
+				{#if knobs.length}<div><dt class="label">Controls</dt><dd>{#each knobs as k, i}{#if i}{' · '}{/if}{@const g = controlGroup(k)}{#if g}<a href="/?ctl={encodeURIComponent(g.label)}" title="Circuits with a {g.label} control">{k}</a>{:else}{k}{/if}{/each}</dd></div>{/if}
 				{#if c.difficulty}<div><dt class="label">Difficulty</dt><dd>{c.difficulty}</dd></div>{/if}
 				{#if isLayout}
-					<div><dt class="label">Build</dt><dd><a href="{base}/?build={lay.build}">{BUILD_NAMES[lay.build ?? 'vero']}</a>{#if lay.board} <span class="mono">· {lay.board.replace('x', '×')}</span>{/if}{#if lay.cuts != null} <span class="dim">· {lay.cuts} cuts{#if lay.links != null}, {lay.links} links{/if}</span>{/if}</dd></div>
+					<div><dt class="label">Build</dt><dd><a href="/?build={lay.build}">{BUILD_NAMES[lay.build ?? 'vero']}</a>{#if lay.board} <span class="mono">· {lay.board.replace('x', '×')}</span>{/if}{#if lay.cuts != null} <span class="dim">· {lay.cuts} cuts{#if lay.links != null}, {lay.links} links{/if}</span>{/if}</dd></div>
 					{#if lay.verified != null}<div><dt class="label">Layout</dt><dd>{#if lay.verified}Verified <span class="dim">· {VENDOR_NAMES[c.vendor]} marks it as built and working</span>{:else}<span class="warn">Unverified</span> <span class="dim">· no build reported at {VENDOR_NAMES[c.vendor]} yet</span>{/if}</dd></div>{/if}
 				{:else}
-				{#if lay.build}<div><dt class="label">Build</dt><dd><a href="{base}/?build={lay.build}">{BUILD_NAMES[lay.build]}</a>{#if VENDOR_KIND[c.vendor] === 'kit'} <span class="dim">· point to point on terminal strips</span>{/if}</dd></div>{/if}
+				{#if lay.build}<div><dt class="label">Build</dt><dd><a href="/?build={lay.build}">{BUILD_NAMES[lay.build]}</a>{#if VENDOR_KIND[c.vendor] === 'kit'} <span class="dim">· point to point on terminal strips</span>{/if}</dd></div>{/if}
 				<div><dt class="label">Price</dt><dd class="mono">{currency.format(c.price, c.currency) || 'see vendor'}{#if c.price != null && currency.convert(c.price, c.currency).converted}<span class="dim native">{currency.native(c.price, c.currency)} listed</span>{/if}{#if c.delisted}<span class="warn stock">no longer listed</span>{:else if c.in_stock === false}<span class="warn stock">out of stock</span>{:else if c.in_stock}<span class="dim stock">in stock</span>{/if}</dd></div>
 					{#if lay.also?.length}<div><dt class="label">Also as</dt><dd>{#each lay.also as a, i}{i ? ' · ' : ''}<a href={a.url} target="_blank" rel="noopener">{BUILD_NAMES[a.build]} layout</a>{/each} <span class="dim">· from {VENDOR_NAMES[c.vendor]}</span></dd></div>{/if}
 				{/if}
@@ -127,7 +126,7 @@
 				<label class="bench-note">
 					<span class="label">Bench note</span>
 					<input type="text" value={bench.items[c.id]?.note ?? ''} oninput={(e) => bench.setNote(c.id, e.currentTarget.value)} placeholder="Try 2N5088s, order the board in May…" maxlength="300" />
-					<a class="label" href="{base}/workbench/bench">My bench</a>
+					<a class="label" href="/workbench/bench">My bench</a>
 				</label>
 			{/if}
 			{#if vendorWarning}
@@ -155,13 +154,13 @@
 	<section class="schem">
 		<h2 class="label strong">Schematic</h2>
 		{#if c.owner_schematic}
-			<img src="{base}/data/{c.owner_schematic}" alt="Schematic of {c.name}" loading="lazy" />
+			<img src="/data/{c.owner_schematic}" alt="Schematic of {c.name}" loading="lazy" />
 			<p class="small">Drawn by {VENDOR_NAMES[c.vendor]}, <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>. <a href={c.url} target="_blank" rel="noopener">Gerbers{c.tags?.includes('faceplate') ? ' and faceplate' : ''} on GitHub</a>.</p>
 		{:else if c.has_kicad}
-			<img src="{base}/kicad/{c.file_id}.svg" alt="KiCad schematic of {c.name}" loading="lazy" />
-			<p class="small">Redrawn in KiCad. <a href="{base}/kicad/{c.file_id}.kicad_sch" download>Download the .kicad_sch fragment</a> to drop into your own project.</p>
+			<img src="/kicad/{c.file_id}.svg" alt="KiCad schematic of {c.name}" loading="lazy" />
+			<p class="small">Redrawn in KiCad. <a href="/kicad/{c.file_id}.kicad_sch" download>Download the .kicad_sch fragment</a> to drop into your own project.</p>
 		{:else if schematicImage}
-			<img src="{base}/data/{schematicImage}" alt="Schematic page from the {VENDOR_NAMES[c.vendor]} build document" loading="lazy" />
+			<img src="/data/{schematicImage}" alt="Schematic page from the {VENDOR_NAMES[c.vendor]} build document" loading="lazy" />
 			<p class="dim small">Cached from the vendor build document for local reference. Not for redistribution.</p>
 		{:else}
 			{#if isLayout}
@@ -190,7 +189,7 @@
 			{#if c.bom.length}<button type="button" class="btn ghost" onclick={copyBom}>{copied ? 'Copied' : 'Copy as TSV'}</button>{/if}
 			<a class="btn ghost report-link" href={wrongParseUrl(c.name, page.url.href)} target="_blank" rel="noopener" title="Open a GitHub issue with this circuit filled in">Report a wrong parse</a>
 		</div>
-		{#if c.bom.length}<p class="hint">Got parts in a drawer? <a href="{base}/workbench/build">See what you can build with them</a>.</p>{/if}
+		{#if c.bom.length}<p class="hint">Got parts in a drawer? <a href="/workbench/build">See what you can build with them</a>.</p>{/if}
 		{#if variants.length > 1}
 			<div class="variants" role="group" aria-label="Build variant">
 				<span class="label">Variant</span>
@@ -232,9 +231,9 @@
 								<td class="mono val">{r.value}{#if s.src}<span class="src" class:fixed={s.src.key === 'fixed'} title={s.src.title}>{s.src.label}</span>{/if}</td>
 								<td class="mono norm">
 									{#if r.xref?.length === 1}
-										<a href="{base}/parts/{r.xref[0][1]}" title="Every circuit using {r.xref[0][0]}">{r.norm_value || r.xref[0][0]}</a>
+										<a href="/parts/{r.xref[0][1]}" title="Every circuit using {r.xref[0][0]}">{r.norm_value || r.xref[0][0]}</a>
 									{:else if r.xref?.length}
-										{#each r.xref as [part, slug], i}{i ? ' / ' : ''}<a href="{base}/parts/{slug}" title="Every circuit using {part}">{part}</a>{/each}
+										{#each r.xref as [part, slug], i}{i ? ' / ' : ''}<a href="/parts/{slug}" title="Every circuit using {part}">{part}</a>{/each}
 									{:else}{r.norm_value}{/if}
 								</td>
 								<td>{r.part_type}</td>
@@ -252,7 +251,7 @@
 			<h2 class="label strong">Other boards based on the {originalsOf(c).join(' or the ')}</h2>
 			<ul>
 				{#each siblings as s}
-					<li><Faceplate enclosure={s.enclosure} controls={s.controls} size={26} /> <a href="{base}/circuit/{s.file_id}">{s.name}</a> <span class="dim">{s.own_design ? 'the original · ' : ''}{VENDOR_NAMES[s.vendor]}{s.enclosure ? ` · ${s.enclosure}` : ''}{s.price != null ? ` · ${currency.format(s.price, s.currency)}` : ''}</span></li>
+					<li><Faceplate enclosure={s.enclosure} controls={s.controls} size={26} /> <a href="/circuit/{s.file_id}">{s.name}</a> <span class="dim">{s.own_design ? 'the original · ' : ''}{VENDOR_NAMES[s.vendor]}{s.enclosure ? ` · ${s.enclosure}` : ''}{s.price != null ? ` · ${currency.format(s.price, s.currency)}` : ''}</span></li>
 				{/each}
 			</ul>
 		</section>

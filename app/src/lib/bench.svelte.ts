@@ -1,4 +1,4 @@
-import { browser } from '$app/environment';
+import { browser } from '$app/env';
 
 /** My bench: the circuits a visitor keeps, by circuit id ('cryptid:3pdt-led-board'), each with the day it was
  * added and a note. Kept in this browser only; an export file or a share link carries it elsewhere. */

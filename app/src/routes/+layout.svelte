@@ -2,14 +2,13 @@
 	import '../app.css';
 	import { page } from '$app/state';
 	import { goto } from '$app/navigation';
-	import { base } from '$app/paths';
 	import type { Snippet } from 'svelte';
-	import { currency } from '$lib/currency.svelte';
-	import { bench } from '$lib/bench.svelte';
+	import { currency } from '#lib/currency.svelte.ts';
+	import { bench } from '#lib/bench.svelte.ts';
 
-	import type { VendorInfo } from '$lib/types';
-	import { COFFEE_URL, ISSUES_URL, MAKER_NAME, MAKER_URL } from '$lib/site';
-	import Mark from '$lib/Mark.svelte';
+	import type { VendorInfo } from '#lib/types.ts';
+	import { COFFEE_URL, ISSUES_URL, MAKER_NAME, MAKER_URL } from '#lib/site.ts';
+	import Mark from '#lib/Mark.svelte';
 	import { pwaInfo } from 'virtual:pwa-info';
 	import { onMount } from 'svelte';
 
@@ -21,7 +20,7 @@
 		registerSW({ immediate: true });
 	});
 
-	let { children, data }: { children: Snippet; data: { rates: import('$lib/currency.svelte').Rates | null; vendors: Record<string, VendorInfo> } } = $props();
+	let { children, data }: { children: Snippet; data: { rates: import('#lib/currency.svelte.ts').Rates | null; vendors: Record<string, VendorInfo> } } = $props();
 	const vendorList = $derived(Object.values(data.vendors ?? {}).sort((a, b) => a.name.localeCompare(b.name)));
 	$effect.pre(() => {
 		currency.init(data.rates);
@@ -41,22 +40,22 @@
 	});
 	$effect(() => {
 		// keep the global field in sync with the index page's query
-		q = page.url.pathname === `${base}/` ? (page.url.searchParams.get('q') ?? '') : q;
+		q = page.url.pathname === '/' ? (page.url.searchParams.get('q') ?? '') : q;
 	});
 	function submit(e: SubmitEvent) {
 		e.preventDefault();
-		const p = new URLSearchParams(page.url.pathname === `${base}/` ? page.url.searchParams : undefined);
+		const p = new URLSearchParams(page.url.pathname === '/' ? page.url.searchParams.toString() : undefined);
 		if (q.trim()) p.set('q', q.trim());
 		else p.delete('q');
-		goto(`${base}/?${p.toString()}`, { keepFocus: true, noScroll: true });
+		goto(`/?${p.toString()}`, { reset: false });
 	}
 	const nav = [
-		{ href: `${base}/`, label: 'Circuits', match: (p: string) => p === `${base}/` || p.startsWith(`${base}/circuit/`) },
-		{ href: `${base}/originals`, label: 'Originals', match: (p: string) => p.startsWith(`${base}/originals`) },
-		{ href: `${base}/parts`, label: 'Parts', match: (p: string) => p.startsWith(`${base}/parts`) },
-		{ href: `${base}/workbench`, label: 'Workbench', match: (p: string) => p.startsWith(`${base}/workbench`) },
-		{ href: `${base}/guide`, label: 'Guide', match: (p: string) => p.startsWith(`${base}/guide`) },
-		{ href: `${base}/about`, label: 'About', match: (p: string) => p.startsWith(`${base}/about`) }
+		{ href: '/', label: 'Circuits', match: (p: string) => p === '/' || p.startsWith('/circuit/') },
+		{ href: '/originals', label: 'Originals', match: (p: string) => p.startsWith('/originals') },
+		{ href: '/parts', label: 'Parts', match: (p: string) => p.startsWith('/parts') },
+		{ href: '/workbench', label: 'Workbench', match: (p: string) => p.startsWith('/workbench') },
+		{ href: '/guide', label: 'Guide', match: (p: string) => p.startsWith('/guide') },
+		{ href: '/about', label: 'About', match: (p: string) => p.startsWith('/about') }
 	];
 </script>
 
@@ -66,7 +65,7 @@
 </svelte:head>
 
 <header class="titleblock" bind:this={titleblock}>
-	<a class="brand" href="{base}/">
+	<a class="brand" href="/">
 		<Mark size={34} />
 		<span class="brand-text">
 			<span class="brand-name">Akashic</span>
@@ -109,7 +108,7 @@
 		<p>A parts list that reads wrong, a vendor to add, a bug or an idea: open an issue on GitHub. Every circuit page has a link that fills in the board for you.</p>
 		<a class="btn ghost" href={ISSUES_URL} target="_blank" rel="noopener">Open an issue</a>
 	</div>
-	<p class="colophon">Made by <a href={MAKER_URL} target="_blank" rel="noopener">{MAKER_NAME}</a>. <a href="{base}/guide">Guide</a> · <a href="{base}/about">About</a> · <a href="{base}/changes">Changelog</a>.</p>
+	<p class="colophon">Made by <a href={MAKER_URL} target="_blank" rel="noopener">{MAKER_NAME}</a>. <a href="/guide">Guide</a> · <a href="/about">About</a> · <a href="/changes">Changelog</a>.</p>
 </footer>
 
 <style>

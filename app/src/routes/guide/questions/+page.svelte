@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { base } from '$app/paths';
-	import { ISSUES_URL, REPO_URL } from '$lib/site';
+	import { ISSUES_URL, REPO_URL } from '#lib/site.ts';
 </script>
 
 <svelte:head>
@@ -65,7 +64,7 @@
 	<h2 class="label strong">A parts list is wrong</h2>
 	<p>
 		Check whether the value is marked <span class="src">ocr</span> or <span class="src">sch</span>: those were read by machine from
-		an image (see <a href="{base}/guide/circuit">Reading a circuit page</a>). Then press <em>Report a wrong parse</em> above the
+		an image (see <a href="/guide/circuit">Reading a circuit page</a>). Then press <em>Report a wrong parse</em> above the
 		parts list. It opens a GitHub issue with the circuit filled in; add the rows that are wrong and what the build document says.
 		Corrections go into the library and stay fixed through every refresh. You need a free GitHub account to open an issue.
 	</p>
@@ -85,7 +84,7 @@
 	<p>
 		Nothing. There are no accounts. My bench, your notes, your What can I build list and your currency choice are kept in your
 		browser and go nowhere unless you export them or send a share link. Clearing the site's data erases them, so
-		<a href="{base}/guide/workbench">export your bench</a> if you want to keep it.
+		<a href="/guide/workbench">export your bench</a> if you want to keep it.
 	</p>
 </section>
 
@@ -93,7 +92,7 @@
 	<h2 class="label strong">How often does it change?</h2>
 	<p>
 		Every week: prices, stock and new boards from every source, plus whatever was fixed or added. The
-		<a href="{base}/changes">changelog</a> lists each week's changes.
+		<a href="/changes">changelog</a> lists each week's changes.
 	</p>
 </section>
 

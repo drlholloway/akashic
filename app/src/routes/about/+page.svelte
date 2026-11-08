@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { base } from '$app/paths';
-	import { COFFEE_URL, ISSUES_URL, MAKER_NAME, MAKER_URL, REPO_URL } from '$lib/site';
+	import { COFFEE_URL, ISSUES_URL, MAKER_NAME, MAKER_URL, REPO_URL } from '#lib/site.ts';
 
 	let { data } = $props();
 	const m = $derived(data.meta);
@@ -37,12 +36,12 @@
 			across every vendor.
 		</p>
 		<ul>
-			<li><a href="{base}/">Circuits</a>: search by name, original, part, category, vendor or enclosure, and filter the list.</li>
-			<li><a href="{base}/originals">Originals</a>: every board based on the same commercial pedal, side by side.</li>
-			<li><a href="{base}/parts">Parts</a>: which circuits use a part (every LM308, every 2N5088, every A100k).</li>
-			<li><a href="{base}/workbench">Workbench</a>: a builder's notes on where to buy parts, how to build a board, and helpful sites and tools. <a href="{base}/workbench/build">What can I build</a> matches the parts you have against every parts list.</li>
+			<li><a href="/">Circuits</a>: search by name, original, part, category, vendor or enclosure, and filter the list.</li>
+			<li><a href="/originals">Originals</a>: every board based on the same commercial pedal, side by side.</li>
+			<li><a href="/parts">Parts</a>: which circuits use a part (every LM308, every 2N5088, every A100k).</li>
+			<li><a href="/workbench">Workbench</a>: a builder's notes on where to buy parts, how to build a board, and helpful sites and tools. <a href="/workbench/build">What can I build</a> matches the parts you have against every parts list.</li>
 		</ul>
-		<p>New here? The <a href="{base}/guide">guide</a> walks through searching, reading a circuit page and the Workbench tools.</p>
+		<p>New here? The <a href="/guide">guide</a> walks through searching, reading a circuit page and the Workbench tools.</p>
 	</section>
 
 	<section>
@@ -91,7 +90,7 @@
 		<h2 class="label strong">Who makes it</h2>
 		<p>
 			Akashic is made by <a href={MAKER_URL} target="_blank" rel="noopener">{MAKER_NAME}</a> on evenings and weekends. The code
-			is on <a href={REPO_URL} target="_blank" rel="noopener">GitHub</a>, and the <a href="{base}/changes">changelog</a> lists what
+			is on <a href={REPO_URL} target="_blank" rel="noopener">GitHub</a>, and the <a href="/changes">changelog</a> lists what
 			changed each week. It works offline once loaded and can be installed as an app from your browser's menu. My bench and your parts list in What can I build stay in
 			your browser: Akashic has no accounts and keeps nothing about you. If it saved
 			you a build, <a href={COFFEE_URL} target="_blank" rel="noopener">buy me a coffee</a>.

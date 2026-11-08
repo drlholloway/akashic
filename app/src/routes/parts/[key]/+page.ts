@@ -1,5 +1,5 @@
 import { error } from '@sveltejs/kit';
-import { loadIndex, loadParts, loadSpecSubs, loadSubs } from '$lib/data';
+import { loadIndex, loadParts, loadSpecSubs, loadSubs } from '#lib/data.ts';
 import type { EntryGenerator, PageLoad } from './$types';
 
 export const entries: EntryGenerator = async () => {

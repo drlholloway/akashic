@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { base } from '$app/paths';
 
 	const AION_GUIDE = 'https://aionfx.com/resources/parts-sourcing-where-to-buy-what/';
 	const TAYDA = 'https://www.taydaelectronics.com';
@@ -14,7 +13,7 @@
 </script>
 
 {#snippet x(href: string, text: string)}<a {href} target="_blank" rel="noopener">{text}</a>{/snippet}
-{#snippet parts(key: string, text: string)}<p class="more"><a href="{base}/parts#sec-{key}">{text}</a></p>{/snippet}
+{#snippet parts(key: string, text: string)}<p class="more"><a href="/parts#sec-{key}">{text}</a></p>{/snippet}
 
 <svelte:head>
 	<title>Sourcing · Workbench · Akashic</title>

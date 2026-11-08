@@ -1,53 +1,67 @@
-import { sveltekit } from '@sveltejs/kit/vite';
-import { SvelteKitPWA } from '@vite-pwa/sveltekit';
+import adapter from '@sveltejs/adapter-static';
+import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import { withPwa } from '@vite-pwa/sveltekit';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
 	plugins: [
-		sveltekit(),
-		SvelteKitPWA({
-			registerType: 'autoUpdate',
-			manifest: {
-				name: 'Akashic: Guitar Effects Circuit Lookup',
-				short_name: 'Akashic',
-				description: 'Guitar effects circuit lookup: every DIY pedal circuit, its parts list, and where to buy the board or find the layout.',
-				theme_color: '#1c1f22',
-				background_color: '#f4f2ee',
-				display: 'standalone',
-				start_url: '/',
-				icons: [
-					{ src: 'icon-192.png', sizes: '192x192', type: 'image/png' },
-					{ src: 'icon-512.png', sizes: '512x512', type: 'image/png' },
-					{ src: 'icon-maskable-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' }
-				]
+		withPwa(
+			{
+				preprocess: vitePreprocess(),
+				adapter: adapter({ fallback: '404.html' }),
+				paths: { origin: 'https://akashic.cryptideffects.com' },
+				// Circuit and part pages come from the exported data; an empty export (as in CI)
+				// legitimately produces none, so unseen dynamic routes are not an error.
+				prerender: { handleHttpError: 'warn', handleMissingId: 'ignore', handleUnseenRoutes: 'ignore' }
 			},
-			workbox: {
-				// Precached for every visitor: the app, the five top pages and the library's indexes. The 8,700
-				// circuit pages, the part pages and the bundles of circuit records are cached as they are opened
-				// (precaching them all cost a new visitor some 28,000 requests and 800 MB).
-				globPatterns: ['**/*.{js,css,html,svg,png,woff2,json}'],
-				globIgnores: ['**/circuit/**', '**/parts/**', '**/data/circuits/**', '**/data/sets/**', '**/data/owner/**'],
+			{
+				registerType: 'autoUpdate',
+				// Kit builds with relative paths, which would make the manifest and service worker URLs, and the
+				// worker's scope, relative to each page (/parts/manifest.webmanifest); the site is served from the root.
+				buildBase: '/',
+				scope: '/',
+				manifest: {
+					name: 'Akashic: Guitar Effects Circuit Lookup',
+					short_name: 'Akashic',
+					description: 'Guitar effects circuit lookup: every DIY pedal circuit, its parts list, and where to buy the board or find the layout.',
+					theme_color: '#1c1f22',
+					background_color: '#f4f2ee',
+					display: 'standalone',
+					start_url: '/',
+					icons: [
+						{ src: 'icon-192.png', sizes: '192x192', type: 'image/png' },
+						{ src: 'icon-512.png', sizes: '512x512', type: 'image/png' },
+						{ src: 'icon-maskable-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' }
+					]
+				},
 				maximumFileSizeToCacheInBytes: 16 * 1024 * 1024, // data/index.json is 7 MB
-				// A page that is not precached comes from the network, never the home page in its place.
-				navigateFallbackDenylist: [/^\/circuit\//, /^\/parts\//, /^\/data\//, /^\/datasheets\//, /^\/kicad\//],
-				// Pages read their query in the browser (?share=, ?bench=1), so a precached page answers with any query:
-				// otherwise /workbench/bench?share=… misses the cache and gets the home page as the fallback.
-				ignoreURLParametersMatching: [/.*/],
-				runtimeCaching: [
-					{
-						urlPattern: ({ url }) => url.pathname.startsWith('/data/sets/') || url.pathname.startsWith('/data/owner/'),
-						handler: 'StaleWhileRevalidate',
-						options: { cacheName: 'circuits', expiration: { maxEntries: 2000 } }
-					},
-					{
-						// Network first: a cached page from an earlier deploy names scripts that are gone, so it would never
-						// come to life. The cached copy is for offline, or a network slower than three seconds.
-						urlPattern: ({ url, request }) => request.mode === 'navigate' && (url.pathname.startsWith('/circuit/') || url.pathname.startsWith('/parts/')),
-						handler: 'NetworkFirst',
-						options: { cacheName: 'pages', networkTimeoutSeconds: 3, expiration: { maxEntries: 1000 } }
-					}
-				]
+				generateSW: {
+					// Precached for every visitor: the app, the five top pages and the library's indexes. The 8,700
+					// circuit pages, the part pages and the bundles of circuit records are cached as they are opened
+					// (precaching them all cost a new visitor some 28,000 requests and 800 MB).
+					globPatterns: ['**/*.{js,css,html,svg,png,woff2,json}'],
+					globIgnores: ['**/circuit/**', '**/parts/**', '**/data/circuits/**', '**/data/sets/**', '**/data/owner/**'],
+					// A page that is not precached comes from the network, never the home page in its place.
+					navigateFallbackDenylist: [/^\/circuit\//, /^\/parts\//, /^\/data\//, /^\/datasheets\//, /^\/kicad\//],
+					// Pages read their query in the browser (?share=, ?bench=1), so a precached page answers with any query:
+					// otherwise /workbench/bench?share=… misses the cache and gets the home page as the fallback.
+					ignoreURLParametersMatching: [/.*/],
+					runtimeCaching: [
+						{
+							urlPattern: ({ url }) => url.pathname.startsWith('/data/sets/') || url.pathname.startsWith('/data/owner/'),
+							handler: 'StaleWhileRevalidate',
+							options: { cacheName: 'circuits', expiration: { maxEntries: 2000 } }
+						},
+						{
+							// Network first: a cached page from an earlier deploy names scripts that are gone, so it would never
+							// come to life. The cached copy is for offline, or a network slower than three seconds.
+							urlPattern: ({ url, request }) => request.mode === 'navigate' && (url.pathname.startsWith('/circuit/') || url.pathname.startsWith('/parts/')),
+							handler: 'NetworkFirst',
+							options: { cacheName: 'pages', networkTimeoutSeconds: 3, expiration: { maxEntries: 1000 } }
+						}
+					]
+				}
 			}
-		})
+		)
 	]
 });

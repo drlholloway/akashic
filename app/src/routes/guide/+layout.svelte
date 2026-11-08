@@ -1,17 +1,16 @@
 <script lang="ts">
 	import { page } from '$app/state';
-	import { base } from '$app/paths';
 	import type { Snippet } from 'svelte';
-	import { ISSUES_URL } from '$lib/site';
+	import { ISSUES_URL } from '#lib/site.ts';
 
 	let { children }: { children: Snippet } = $props();
 	const pages = [
-		{ href: `${base}/guide`, label: 'Start here' },
-		{ href: `${base}/guide/search`, label: 'Searching' },
-		{ href: `${base}/guide/circuit`, label: 'A circuit page' },
-		{ href: `${base}/guide/parts`, label: 'Originals and parts' },
-		{ href: `${base}/guide/workbench`, label: 'Bench and build' },
-		{ href: `${base}/guide/questions`, label: 'Questions' }
+		{ href: '/guide', label: 'Start here' },
+		{ href: '/guide/search', label: 'Searching' },
+		{ href: '/guide/circuit', label: 'A circuit page' },
+		{ href: '/guide/parts', label: 'Originals and parts' },
+		{ href: '/guide/workbench', label: 'Bench and build' },
+		{ href: '/guide/questions', label: 'Questions' }
 	];
 	const here = $derived(page.url.pathname.replace(/\/$/, ''));
 	const at = $derived(pages.findIndex((p) => p.href === here));

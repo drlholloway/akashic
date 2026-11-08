@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { REPO_URL } from '$lib/site';
+	import { REPO_URL } from '#lib/site.ts';
 
 	let { data } = $props();
 	const total = $derived(data.weeks.reduce((n, w) => n + w.items.length, 0));

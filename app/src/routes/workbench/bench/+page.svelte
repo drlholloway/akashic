@@ -1,10 +1,9 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import { base } from '$app/paths';
+	import { browser } from '$app/env';
 	import { page } from '$app/state';
-	import { bench } from '$lib/bench.svelte';
-	import { currency } from '$lib/currency.svelte';
-	import { VENDOR_NAMES, type IndexEntry } from '$lib/types';
+	import { bench } from '#lib/bench.svelte.ts';
+	import { currency } from '#lib/currency.svelte.ts';
+	import { VENDOR_NAMES, type IndexEntry } from '#lib/types.ts';
 
 	let { data } = $props();
 	const byId = $derived(new Map(data.index.map((e) => [e.id, e])));
@@ -26,7 +25,7 @@
 		setTimeout(() => status === msg && (status = ''), 4000);
 	};
 	async function copyLink() {
-		const url = `${location.origin}${base}/workbench/bench?share=${rows.map((e) => e.file_id).join(',')}`;
+		const url = `${location.origin}/workbench/bench?share=${rows.map((e) => e.file_id).join(',')}`;
 		try {
 			await navigator.clipboard.writeText(url);
 			say(`Link to ${rows.length} ${rows.length === 1 ? 'circuit' : 'circuits'} copied. Notes stay here.`);
@@ -76,7 +75,7 @@
 		<p class="label strong">A shared bench · {shared.length} {shared.length === 1 ? 'circuit' : 'circuits'}{#if sharedNew.length < shared.length}, {sharedNew.length} not on yours{/if}</p>
 		<ul>
 			{#each sharedNew as e (e.id)}
-				<li><a href="{base}/circuit/{e.file_id}">{e.name}</a> <span class="dim">{VENDOR_NAMES[e.vendor]}</span></li>
+				<li><a href="/circuit/{e.file_id}">{e.name}</a> <span class="dim">{VENDOR_NAMES[e.vendor]}</span></li>
 			{/each}
 		</ul>
 		<button type="button" class="btn" onclick={() => sharedNew.forEach((e) => bench.add(e.id))}>Add {sharedNew.length === 1 ? 'it' : `all ${sharedNew.length}`} to my bench</button>
@@ -86,8 +85,8 @@
 <div class="tools">
 	<span class="label strong count">{rows.length} {rows.length === 1 ? 'circuit' : 'circuits'}</span>
 	{#if rows.length}
-		<a class="btn ghost" href="{base}/?bench=1">Open in Circuits</a>
-		<a class="btn ghost" href="{base}/workbench/build?bench=1">What can I build from it</a>
+		<a class="btn ghost" href="/?bench=1">Open in Circuits</a>
+		<a class="btn ghost" href="/workbench/build?bench=1">What can I build from it</a>
 		<button type="button" class="btn ghost" onclick={copyLink}>Copy share link</button>
 		<button type="button" class="btn ghost" onclick={exportFile}>Export</button>
 	{/if}
@@ -104,7 +103,7 @@
 			{#each rows as e (e.id)}
 				<tr>
 					<td>
-						<a class="name" href="{base}/circuit/{e.file_id}">{e.name}</a>
+						<a class="name" href="/circuit/{e.file_id}">{e.name}</a>
 						{#if e.original && e.original !== e.name}<span class="dim orig">{e.original}</span>{/if}
 						{#if e.delisted}<span class="warn orig">No longer listed</span>{/if}
 					</td>
@@ -121,7 +120,7 @@
 {:else}
 	<div class="empty">
 		<p class="label strong">Nothing on the bench yet</p>
-		<p>Find a circuit you like in <a href="{base}/">Circuits</a> and press <span class="mono">+ My bench</span> on its page. It shows up here, marked in the circuits table, and as a filter there and in What can I build.</p>
+		<p>Find a circuit you like in <a href="/">Circuits</a> and press <span class="mono">+ My bench</span> on its page. It shows up here, marked in the circuits table, and as a filter there and in What can I build.</p>
 	</div>
 {/if}
 

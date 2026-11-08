@@ -1,7 +1,6 @@
 <script lang="ts">
-	import { base } from '$app/paths';
-	import { normalizeOriginal } from '$lib/search';
-	import { BUILD_NAMES, BUILD_ORDER, VENDOR_NAMES, buildsOf, originalsOf, type Build, type Vendor } from '$lib/types';
+	import { normalizeOriginal } from '#lib/search.ts';
+	import { BUILD_NAMES, BUILD_ORDER, VENDOR_NAMES, buildsOf, originalsOf, type Build, type Vendor } from '#lib/types.ts';
 
 	let { data } = $props();
 	let q = $state('');
@@ -51,9 +50,9 @@
 		<tbody>
 			{#each groups.slice(0, shown) as g (g.label)}
 				<tr>
-					<td><a href="{base}/?based={encodeURIComponent(g.label)}" class="name">{g.label}</a></td>
+					<td><a href="/?based={encodeURIComponent(g.label)}" class="name">{g.label}</a></td>
 					<td class="n mono">{g.count}</td>
-					<td class="how">{#each BUILD_ORDER.filter((b) => g.builds.has(b)) as b, i}{i ? ' · ' : ''}<a href="{base}/?based={encodeURIComponent(g.label)}&build={b}"><span class="mono">{g.builds.get(b)}</span> {BUILD_NAMES[b]}</a>{/each}</td>
+					<td class="how">{#each BUILD_ORDER.filter((b) => g.builds.has(b)) as b, i}{i ? ' · ' : ''}<a href="/?based={encodeURIComponent(g.label)}&build={b}"><span class="mono">{g.builds.get(b)}</span> {BUILD_NAMES[b]}</a>{/each}</td>
 					<td class="src dim">{[...g.vendors].map((v) => VENDOR_NAMES[v]).join(', ')}</td>
 					<td class="cat dim">{[...g.categories].join(', ')}</td>
 				</tr>

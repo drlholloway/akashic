@@ -1,7 +1,6 @@
 <script lang="ts">
-	import { base } from '$app/paths';
-	import { folds } from '$lib/fold.svelte';
-	import { PART_CATEGORY_NAMES, PART_ORDER } from '$lib/types';
+	import { folds } from '#lib/fold.svelte.ts';
+	import { PART_CATEGORY_NAMES, PART_ORDER } from '#lib/types.ts';
 
 	let { data } = $props();
 	let q = $state('');
@@ -61,8 +60,8 @@
 <div class="parts-index">
 	<header class="head">
 		<h1>Parts cross-reference</h1>
-		<p class="lede">Every active part value across all vendors' parts lists, with the number of circuits that use it. Pick a part to see what you could build with it, or list everything you have under <a class="inline" href="{base}/workbench/build">What can I build</a>. Resistors and capacitors are omitted: they are in everything.</p>
-		<p class="lede">A part's page links its datasheet when one is available: the maker's own copy, or an archived copy for a discontinued part the maker no longer publishes. Transistors also list possible substitutes, matched on material, polarity and ratings. Where to buy them is under <a class="inline" href="{base}/workbench/sourcing">Workbench</a>.</p>
+		<p class="lede">Every active part value across all vendors' parts lists, with the number of circuits that use it. Pick a part to see what you could build with it, or list everything you have under <a class="inline" href="/workbench/build">What can I build</a>. Resistors and capacitors are omitted: they are in everything.</p>
+		<p class="lede">A part's page links its datasheet when one is available: the maker's own copy, or an archived copy for a discontinued part the maker no longer publishes. Transistors also list possible substitutes, matched on material, polarity and ratings. Where to buy them is under <a class="inline" href="/workbench/sourcing">Workbench</a>.</p>
 		<label class="filter">
 			<span class="label">Filter</span>
 			<input type="search" bind:value={q} placeholder="LM308, 2N5088, PT2399, A100k…" autocomplete="off" spellcheck="false" />
@@ -85,7 +84,7 @@
 					<ul style={cols(g.items)}>
 						{#each sub.items as p}
 							<li>
-								<a href="{base}/parts/{p.slug}"><span class="mono val">{p.value}</span><span class="mono n">{p.count}</span></a>
+								<a href="/parts/{p.slug}"><span class="mono val">{p.value}</span><span class="mono n">{p.count}</span></a>
 								{#if p.desc ?? p.types[0]}<span class="type">{p.desc ?? p.types[0]}</span>{/if}
 							</li>
 						{/each}
@@ -95,7 +94,7 @@
 				<ul style={cols(g.items)}>
 					{#each g.items as p}
 						<li>
-							<a href="{base}/parts/{p.slug}"><span class="mono val">{p.value}</span><span class="mono n">{p.count}</span></a>
+							<a href="/parts/{p.slug}"><span class="mono val">{p.value}</span><span class="mono n">{p.count}</span></a>
 							{#if p.desc ?? p.types[0]}<span class="type">{p.desc ?? p.types[0]}</span>{/if}
 						</li>
 					{/each}

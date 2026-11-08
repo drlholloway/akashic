@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { base } from '$app/paths';
 </script>
 
 <svelte:head>
@@ -40,8 +39,8 @@
 	<p>
 		It sounds obvious, but we often jump in and start soldering, only to find we have messed something up. Read the build
 		document through a few times, so you know which parts you need and what the PCB and the schematic look like. Every
-		<a href="{base}/">circuit</a> here links its build document and lists its parts; where to order them is under
-		<a href="{base}/workbench/sourcing">Sourcing</a>.
+		<a href="/">circuit</a> here links its build document and lists its parts; where to order them is under
+		<a href="/workbench/sourcing">Sourcing</a>.
 	</p>
 </section>
 
