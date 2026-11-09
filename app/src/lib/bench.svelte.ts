@@ -5,6 +5,18 @@ import { browser } from '$app/env';
 export interface BenchItem {
 	added: string; // YYYY-MM-DD
 	note: string;
+	/** How many to build, for the order list; absent is one. */
+	count?: number;
+	/** The build variant the order list takes; absent is the circuit's first. */
+	variant?: string;
+}
+
+/** A stored item, keeping only fields of the right type. */
+function clean(it: Partial<BenchItem>, added: string): BenchItem {
+	const out: BenchItem = { added: typeof it.added === 'string' ? it.added : added, note: typeof it.note === 'string' ? it.note : '' };
+	if (typeof it.count === 'number' && Number.isInteger(it.count) && it.count >= 0 && it.count !== 1) out.count = Math.min(it.count, 99);
+	if (typeof it.variant === 'string' && it.variant) out.variant = it.variant;
+	return out;
 }
 
 const KEY = 'akashic-bench';
@@ -16,7 +28,7 @@ function read(): Record<string, BenchItem> {
 		if (!v || typeof v.items !== 'object') return {};
 		const out: Record<string, BenchItem> = {};
 		for (const [id, it] of Object.entries(v.items as Record<string, Partial<BenchItem>>)) {
-			if (it && typeof it === 'object') out[id] = { added: typeof it.added === 'string' ? it.added : '', note: typeof it.note === 'string' ? it.note : '' };
+			if (it && typeof it === 'object') out[id] = clean(it, '');
 		}
 		return out;
 	} catch {
@@ -69,6 +81,21 @@ class Bench {
 		this.items[id].note = note;
 		this.save();
 	}
+	/** How many of a circuit to build: 0 keeps it on the bench but out of the order list. */
+	setCount(id: string, n: number) {
+		const it = this.items[id];
+		if (!it) return;
+		if (Number.isInteger(n) && n >= 0 && n !== 1) it.count = Math.min(n, 99);
+		else delete it.count;
+		this.save();
+	}
+	setVariant(id: string, variant: string) {
+		const it = this.items[id];
+		if (!it) return;
+		if (variant) it.variant = variant;
+		else delete it.variant;
+		this.save();
+	}
 	clear() {
 		this.items = {};
 		this.save();
@@ -101,7 +128,7 @@ class Bench {
 			if (!known(id)) continue;
 			const note = typeof it?.note === 'string' ? it.note : '';
 			if (!(id in this.items)) {
-				this.items[id] = { added: typeof it?.added === 'string' ? it.added : new Date().toISOString().slice(0, 10), note };
+				this.items[id] = clean(it ?? {}, new Date().toISOString().slice(0, 10));
 				circuits++;
 			} else if (!this.items[id].note && note) this.items[id].note = note;
 		}

@@ -9,6 +9,7 @@
 		{ href: '/workbench/sourcing', label: 'Sourcing' },
 		{ href: '/workbench/building', label: 'Building' },
 		{ href: '/workbench/bench', label: 'My bench' },
+		{ href: '/workbench/order', label: 'Order list' },
 		{ href: '/workbench/build', label: 'What can I build' },
 		{ href: '/workbench/links', label: 'Links' }
 	];
@@ -23,7 +24,7 @@
 		{/each}
 	</nav>
 	{@render children()}
-	{#if here !== '/workbench/build' && here !== '/workbench/bench'}<p class="voice dim">The Workbench is one builder's notes, from {MAKER_NAME}: what I buy, where and why. The rest of Akashic is reference; this part is opinion.</p>{/if}
+	{#if !['/workbench/build', '/workbench/bench', '/workbench/order'].includes(here)}<p class="voice dim">The Workbench is one builder's notes, from {MAKER_NAME}: what I buy, where and why. The rest of Akashic is reference; this part is opinion.</p>{/if}
 </div>
 
 <style>

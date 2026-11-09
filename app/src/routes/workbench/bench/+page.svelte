@@ -87,6 +87,7 @@
 	{#if rows.length}
 		<a class="btn ghost" href="/?bench=1">Open in Circuits</a>
 		<a class="btn ghost" href="/workbench/build?bench=1">What can I build from it</a>
+		<a class="btn ghost" href="/workbench/order">Order list</a>
 		<button type="button" class="btn ghost" onclick={copyLink}>Copy share link</button>
 		<button type="button" class="btn ghost" onclick={exportFile}>Export</button>
 	{/if}

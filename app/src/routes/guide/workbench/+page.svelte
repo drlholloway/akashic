@@ -26,6 +26,7 @@
 	<ul>
 		<li><strong>Open in Circuits</strong>, to filter and sort your bench like any other list,</li>
 		<li><strong>What can I build from it</strong>, to match your parts against only these circuits,</li>
+		<li><strong>Order list</strong>, every part the bench needs added up (see below),</li>
 		<li><strong>Copy share link</strong>, a link that opens the same circuits for someone else, who can add them to their own bench. The link carries the circuits, not your notes.</li>
 		<li><strong>Export</strong> and <strong>Import</strong>, a file holding your bench, your notes and your What can I build parts list. Importing merges: circuits already on the bench keep their note unless it is empty, and parts are added to your list.</li>
 	</ul>
@@ -33,6 +34,25 @@
 		Because the bench lives in this browser, it is gone if you clear the site's data, and it does not follow you to another device or
 		browser. Safari also clears it after seven days without a visit unless Akashic is added to the home screen or the Dock. Export it
 		now and then if it matters to you.
+	</p>
+</section>
+
+<section>
+	<h2 class="label strong">Order list</h2>
+	<p>
+		<a href="/workbench/order">Workbench → Order list</a> adds up the parts lists of every circuit on your bench into one list to
+		order from: resistors and capacitors by value, the semiconductors, pots, switches, jacks and the rest, each with how many and
+		which circuits use it. Electrolytic and tantalum capacitors are listed apart from film and ceramic ones of the same value.
+	</p>
+	<ul>
+		<li>Set <strong>how many</strong> of each circuit you are building; 0 keeps it on the bench but out of the order. A circuit with build variants has a <strong>variant</strong> to pick.</li>
+		<li><strong>Get</strong> links to the board, kit or layout, with its price; the enclosures are counted at the end of the list.</li>
+		<li><strong>Leave out what I have</strong> takes off the parts on your What can I build list, and every kind of part you take as on hand there. A part with no quantity on that list counts as enough.</li>
+		<li><strong>Download CSV</strong> for a spreadsheet, or <strong>Copy as text</strong> for a note or a message to a parts shop.</li>
+	</ul>
+	<p>
+		The list is only as good as the parts lists Akashic read, and a circuit with no parts list adds nothing (the page names it).
+		Check it against each build document before you order, and buy a few spares of the cheap parts.
 	</p>
 </section>
 
