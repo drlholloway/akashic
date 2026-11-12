@@ -21,14 +21,14 @@
 		"@sveltejs/kit": "^3.1.1",
 		"@sveltejs/vite-plugin-svelte": "^7.3.1",
 		"@types/node": "^26.6.6",
-		"@unplugin-pwa/core": "^0.0.4",
-		"@vite-pwa/sveltekit": "^2.0.1",
+		"@unplugin-pwa/core": "^0.0.5",
+		"@vite-pwa/sveltekit": "^2.0.2",
 		"magicast": "^0.5.5",
 		"svelte": "^5.57.3",
 		"svelte-check": "^4.7.8",
 		"typescript": "^6.0.3",
-		"vite": "^8.3.6",
-		"wrangler": "^4.158.0"
+		"vite": "^8.3.7",
+		"wrangler": "^4.159.0"
 	},
 	"dependencies": {
 		"minisearch": "^7.2.0"
