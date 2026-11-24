@@ -240,6 +240,9 @@ GitHub Release notes.
   Designator / Qty / Name export; spreadsheet readers accept a Name column as the value.
 
 ### Changed
+- **License:** now free software under the GNU Affero General Public
+  License, version 3 only (AGPL-3.0-only). Earlier releases remain under
+  the PolyForm Shield License 1.0.0.
 - Circuits: My bench sits at the top of the filters. With circuits saved it is the 'On my bench' filter and a link to the bench page; with none, a note says how to add one and where the bench is.
 - Circuit pages open without loading the whole library index (7 MB), which they used to wait for before any button worked: slow on a phone. Each circuit's record now carries the other boards based on its original, the same list in the same order, so a page opened directly is ready in a fraction of a second.
 - Circuit records load in 512 bundles when you move between circuits in the app (a page opened directly still carries its own), which keeps the site under the host's 20,000-file limit.
@@ -558,7 +561,6 @@ GitHub Release notes.
 
 ### Fixed
 - FuzzDog Bearhug Compressor is listed under the Jon Patton Bearhug with its two layouts, not under the Torn's Peaker; FuzzDog Slate Drive IC1 reads TL051. 14 posts on the layout blogs that are news or tool guides, not circuits, are gone.
-
 ## 0.1.0 — 2026-09-17
 
 Initial public release.

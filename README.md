@@ -245,7 +245,7 @@ Vendor suggestions, wrong-parse reports and fixes are welcome; see [CONTRIBUTING
 
 ## License
 
-[PolyForm Shield 1.0.0](LICENSE): free to use, copy, modify and share, but not to build a competing product. The vendors' documents remain theirs; see the source table above.
+[GNU Affero General Public License, version 3 only](LICENSE) (AGPL-3.0-only), with the copyright notice in [NOTICE](NOTICE): free to use, copy, modify and share, and if you distribute a changed version, or run one as a service for others, you must publish your changes under the same license. The vendors' documents remain theirs and aren't covered by it; see the source table above. Releases before 24 November 2026 were under PolyForm Shield 1.0.0.
 
 ## Conclusion
 
