@@ -12,7 +12,26 @@ export default defineConfig({
 				paths: { origin: 'https://akashic.cryptideffects.com' },
 				// Circuit and part pages come from the exported data; an empty export (as in CI)
 				// legitimately produces none, so unseen dynamic routes are not an error.
-				prerender: { handleHttpError: 'warn', handleMissingId: 'ignore', handleUnseenRoutes: 'ignore' }
+				prerender: { handleHttpError: 'warn', handleMissingId: 'ignore', handleUnseenRoutes: 'ignore' },
+				// Written into each prerendered page as a meta tag, with the hash of Kit's start-up script, so no other
+				// script runs. Styles stay inline (style= attributes); images include the owner's photos, on https hosts.
+				// frame-ancestors cannot go in a meta tag: static/_headers sends it.
+				csp: {
+					mode: 'hash',
+					directives: {
+						'default-src': ['self'],
+						'script-src': ['self'],
+						'style-src': ['self', 'unsafe-inline'],
+						'img-src': ['self', 'https:', 'data:'],
+						'font-src': ['self'],
+						'connect-src': ['self'],
+						'manifest-src': ['self'],
+						'worker-src': ['self'],
+						'object-src': ['none'],
+						'base-uri': ['self'],
+						'form-action': ['self']
+					}
+				}
 			},
 			{
 				registerType: 'autoUpdate',

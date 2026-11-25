@@ -34,6 +34,24 @@ from .paths import EXPORT_DIR, owner_schematic
 SETS = 512
 
 
+# A link the browser would run rather than open: javascript:, vbscript: or a data: URL, which browsers read
+# past leading spaces and through tabs and newlines. No source has one, but scraped text reaches href attributes.
+_C0_SPACE = "".join(map(chr, range(0x21)))  # what browsers strip from the start of a URL
+_SCRIPT_URL = re.compile(r"(?:javascript|vbscript):|data:(?:[\w.+-]+/[\w.+-]+)?[;,]", re.I)
+
+
+def _unscripted(o):
+    """o with every string that is a script link emptied, in place; the scraped records reach the page as links."""
+    items = o.items() if isinstance(o, dict) else enumerate(o) if isinstance(o, list) else ()
+    for k, v in items:
+        if isinstance(v, str):
+            if _SCRIPT_URL.match(re.sub(r"[\t\n\r]", "", v).lstrip(_C0_SPACE)):
+                o[k] = ""
+        else:
+            _unscripted(v)
+    return o
+
+
 def set_of(file_id: str) -> str:
     """The bundle a circuit's record is in: FNV-1a of its id, as setOf in app/src/lib/data.ts computes it."""
     h = 0x811C9DC5
@@ -315,6 +333,7 @@ def run(images: bool = False) -> None:
         for b in c["bom"]:
             if "xref" in b:
                 b["xref"] = [page[k] for k in b["xref"] if k in page]
+        _unscripted(c)
         (EXPORT_DIR / "circuits" / f"{c['file_id']}.json").write_text(json.dumps(c, ensure_ascii=False))
         sets[set_of(c["file_id"])][c["file_id"]] = c
     shutil.rmtree(EXPORT_DIR / "sets", ignore_errors=True)
@@ -344,9 +363,9 @@ def run(images: bool = False) -> None:
         "parts": spec_subs(specs, {p["key"]: len(p["circuits"]) for p in parts_out}),
         "same": {k: v for k, v in aliases(specs).items() if k in known},
     }, ensure_ascii=False, separators=(",", ":")))
-    (EXPORT_DIR / "index.json").write_text(json.dumps(index, ensure_ascii=False))
-    (EXPORT_DIR / "parts.json").write_text(json.dumps(parts_out, ensure_ascii=False))
-    (EXPORT_DIR / "vendors.json").write_text(json.dumps(vendors, ensure_ascii=False))
+    (EXPORT_DIR / "index.json").write_text(json.dumps(_unscripted(index), ensure_ascii=False))
+    (EXPORT_DIR / "parts.json").write_text(json.dumps(_unscripted(parts_out), ensure_ascii=False))
+    (EXPORT_DIR / "vendors.json").write_text(json.dumps(_unscripted(vendors), ensure_ascii=False))
     write_rates()
     write_changes()
     # Counts and the export time for the About page, so it stays true after every refresh.

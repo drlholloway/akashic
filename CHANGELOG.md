@@ -256,6 +256,8 @@ GitHub Release notes.
   and pots are grouped by taper (A, B, C, W, none) and ordered by resistance.
 
 ### Fixed
+- Security: every page now carries a content security policy (scripts only from the site, and Kit's start-up script by its hash) and is sent with headers that stop other sites framing it, stop content-type sniffing, trim the referrer, turn off camera, microphone, location, payment and USB, and keep browsers on https. The export also empties any link that would run script (`javascript:`, `vbscript:` or a `data:` URL) before a scraped value can reach a page; no source has one today.
+- The Amplified Parts parser's 'Q1 & Q2' pattern no longer slows down exponentially on long runs of transistor designators.
 - HotKits boards also sold as a kit or an assembled board lost their PCB price to the kit's price text, and their pages were missing from the site since the 1 November refresh.
 - `pcblib scrape --reset` no longer deletes a vendor's boards before the run, which lost every board the vendor had stopped listing for good. It now waits for a full run with no errors and then drops only the boards the vendor still lists that the run did not store, such as products the adapter now skips, never a delisted board, and none at all if more than a tenth of the listing would go. With `--only` or `--limit` it now stops with an error instead of being ignored.
 - A circuit with build variants (several Big Muff or Fuzz Face versions on one board) shows the first variant's parts as the page opens, not only the parts every variant shares until the page's script has run.
