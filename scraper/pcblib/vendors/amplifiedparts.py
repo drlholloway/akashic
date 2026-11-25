@@ -124,7 +124,7 @@ def item_row(item: dict) -> BomRow | None:
     if not section:  # a table with no section headings: the row says what it is
         section = ("POT" if re.search(r"\bpot|potentiometer", kind, re.I) else "R" if re.search(r"resistor", kind, re.I) or "Ω" in value
                    else "C" if re.search(r"\bcap", kind, re.I) or re.search(r"\d\s?[pnuµμ]F\b", value) else "")
-    if (refs := re.fullmatch(r"(?:Q\d+\s*(?:&|,|and)?\s*)+", value)) and (m := re.fullmatch(r"P-Q(\w+)", sku)):
+    if (refs := re.fullmatch(r"(?:Q\d+\s*(?:(?:[&,]|and)\s*)?)+", value)) and (m := re.fullmatch(r"P-Q(\w+)", sku)):
         item = {**item, "value": m.group(1), "qty": len(re.findall(r"Q\d+", value))}  # 'Q1 & Q2' with the part in the SKU
         value, section = item["value"], "Q"
     if section == "OTHER" or not section:

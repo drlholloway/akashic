@@ -33,18 +33,18 @@ grep -h "no longer listed\|far fewer than the library" "$LOG_DIR"/*.log 2>/dev/n
 .venv/bin/pcblib stats | tail -3
 # Rebuild the graph Claude queries (akashic-graph in .mcp.json), whether or not the site deploys.
 GRAPHIFY_PY="$HOME/.local/share/uv/tools/graphifyy/bin/python"
-if [ -x "$GRAPHIFY_PY" ]; then
+if [[ -x "$GRAPHIFY_PY" ]]; then
   "$GRAPHIFY_PY" "$ROOT/scripts/graphify_export.py" || echo "=== graph rebuild failed"
 else
   echo "=== graphify not installed: graph not rebuilt"
 fi
 .venv/bin/pcblib audit --fail-on-added
 status=$?
-if [ "$status" -eq 3 ]; then
+if [[ "$status" -eq 3 ]]; then
   echo "=== audit added flags on existing boards: not deploying; see data/cache/audit/parts-audit.html"
   notify "Not deployed: the audit found new problems on existing boards. See data/cache/refresh/$(date +%F).log"
   exit 3
-elif [ "$status" -ne 0 ]; then
+elif [[ "$status" -ne 0 ]]; then
   echo "=== audit failed ($status): not deploying"
   notify "Not deployed: the audit failed. See the refresh log."
   exit "$status"
@@ -53,7 +53,7 @@ fi
 cd "$ROOT/app"
 if npm run deploy; then
   msg="Deployed."
-  [ -s "$FAILED" ] && msg="Deployed; these vendors failed to refresh and kept last week's data: $(tr '\n' ' ' <"$FAILED")"
+  [[ -s "$FAILED" ]] && msg="Deployed; these vendors failed to refresh and kept last week's data: $(tr '\n' ' ' <"$FAILED")"
   echo "=== $msg $(date)"
   notify "$msg"
 else
